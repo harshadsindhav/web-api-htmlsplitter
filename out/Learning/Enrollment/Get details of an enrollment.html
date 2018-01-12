@@ -1,0 +1,1049 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all enrollments, learning components, find the details of the enrollments, find the details of the enrollments, search enrollments based on given criteria, search enrollments based on given criteria, search enrollments based on given criteria, get the details of an enrollment, get the details of an enrollment, get existing registration details or auto enroll user and get registration details, get existing registration details or auto enroll user and get registration details, create a new enrollment, create a new enrollment, enroll for other user/self, enroll for other user/self, enroll for other user/self with payment, enroll for other user/self with payment, mark an enrollment complete, mark an enrollment complete, cancel an enrollment, add or update the custom fields of an enrollment, add or update the custom fields of an enrollment, mark a task/registration module complete, mark a task/registration module complete">
+  <meta name="keywords" content="learning, restful web services, get all enrollments, learning components, find the details of the enrollments, find the details of the enrollments, search enrollments based on given criteria, search enrollments based on given criteria, search enrollments based on given criteria, get the details of an enrollment, get the details of an enrollment, get existing registration details or auto enroll user and get registration details, get existing registration details or auto enroll user and get registration details, create a new enrollment, create a new enrollment, enroll for other user/self, enroll for other user/self, enroll for other user/self with payment, enroll for other user/self with payment, mark an enrollment complete, mark an enrollment complete, cancel an enrollment, add or update the custom fields of an enrollment, add or update the custom fields of an enrollment, mark a task/registration module complete, mark a task/registration module complete">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Enrollment</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title6">GET DETAILS OF AN ENROLLMENT</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the details of the enrollment.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <div class="p">
+     https://
+     <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/enrollments/:id/sections:regdetail,classdetail,actions,sessionsdetail,learningAssignments,lessonDetail
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> lessonDetail, will return the details for content module which is attempted by user. In case the user has not attempted the content then this API will not return an empty detail. Only the active/suspended attempt details of a particular content will be returned. In case more than one active attempt is found (which is usually not the case) then an exception will be thrown.
+      <p class="p">The following table indicates the attribute mapping for the lessonDetail section:</p>
+      <div class="p"> 
+       <table id="reference_fzz_nnx_fp__table_irh_yly_jw" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+        <caption></caption>
+        <colgroup>
+         <col>
+         <col>
+        </colgroup>
+        <thead class="thead"> 
+         <tr> 
+          <th class="entry" id="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1"> UI</th> 
+          <th class="entry" id="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2"> JSON</th> 
+         </tr> 
+        </thead>
+        <tbody class="tbody"> 
+         <tr> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1 "> Lesson Name</td> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2 "> title</td> 
+         </tr> 
+         <tr> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1 "> Internal Lesson Id</td> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2 "> attemptId </td> 
+         </tr> 
+         <tr> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1 "> Internal Id for learner-module-lesson association </td> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2 "> contentContextId , subscriptionId </td> 
+         </tr> 
+         <tr> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1 "> Lesson Status</td> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2 "> lessonStatus <p class="p"> The following are the possible values:</p>
+           <div class="p"> 
+            <table id="reference_fzz_nnx_fp__table_tyb_fmy_jw" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+             <caption></caption>
+             <colgroup>
+              <col>
+              <col>
+             </colgroup>
+             <tbody class="tbody"> 
+              <tr> 
+               <td class="entry"> p </td> 
+               <td class="entry"> passed </td> 
+              </tr> 
+              <tr> 
+               <td class="entry"> c </td> 
+               <td class="entry"> completed </td> 
+              </tr> 
+              <tr> 
+               <td class="entry"> f </td> 
+               <td class="entry"> failed </td> 
+              </tr> 
+              <tr> 
+               <td class="entry"> i </td> 
+               <td class="entry"> incomplete </td> 
+              </tr> 
+              <tr> 
+               <td class="entry"> b </td> 
+               <td class="entry"> browsed </td> 
+              </tr> 
+              <tr> 
+               <td class="entry"> n </td> 
+               <td class="entry"> not attempted </td> 
+              </tr> 
+             </tbody>
+            </table> 
+           </div></td> 
+         </tr> 
+         <tr> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1 "> Total Attempts</td> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2 "> totalAttempts </td> 
+         </tr> 
+         <tr> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1 "> Last Accessed Date/Time with timezone</td> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2 "> updatedOn&nbsp; (This will be in millisecond) </td> 
+         </tr> 
+         <tr> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1 "> Time Spent </td> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2 "> timeSpent (HH:MM:SS) </td> 
+         </tr> 
+         <tr> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1 "> Score </td> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2 "> score </td> 
+         </tr> 
+         <tr> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1 "> Lesson Location </td> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2 "> lessonLocation </td> 
+         </tr> 
+         <tr> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1 "> Completion status </td> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2 "> completionStatus <p class="p"> The following are the possible values:</p>
+           <div class="p"> 
+            <table id="reference_fzz_nnx_fp__table_zrk_gmy_jw" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+             <caption></caption>
+             <colgroup>
+              <col>
+              <col>
+             </colgroup>
+             <tbody class="tbody"> 
+              <tr> 
+               <td class="entry"> completed </td> 
+              </tr> 
+              <tr> 
+               <td class="entry"> incomplete </td> 
+              </tr> 
+              <tr> 
+               <td class="entry"> not attempted </td> 
+              </tr> 
+              <tr> 
+               <td class="entry"> unknown </td> 
+              </tr> 
+             </tbody>
+            </table> 
+           </div></td> 
+         </tr> 
+         <tr> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1 "> createdOn </td> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2 "> Date in UTC timezone </td> 
+         </tr> 
+         <tr> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__1 "> updatedOn </td> 
+          <td class="entry" headers="reference_fzz_nnx_fp__table_irh_yly_jw__entry__2 "> Date in UTC timezone </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div>
+     </div>
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL (User-friendly)</h5>You can use a user-friendly URL which accepts the 
+    <strong class="ph b">reg_no</strong> instead of the internal Registration's ID.
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/enrollments/reg_no%3D<em class="ph i">&lt;RegistrationNo&gt;</em></p>
+    <p class="p">/sections:regdetail,classdetail,actions,sessionsdetail,learningAssignments,lessonDetail</p>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_fzz_nnx_fp__table_d11_4nx_fp" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 4. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_fzz_nnx_fp__table_d11_4nx_fp__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_fzz_nnx_fp__table_d11_4nx_fp__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_fzz_nnx_fp__table_d11_4nx_fp__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_fzz_nnx_fp__table_d11_4nx_fp__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_fzz_nnx_fp__table_d11_4nx_fp__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fzz_nnx_fp__table_d11_4nx_fp__entry__1 ">id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fzz_nnx_fp__table_d11_4nx_fp__entry__2 ">Registration's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fzz_nnx_fp__table_d11_4nx_fp__entry__3 ">regdw000000000004020</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fzz_nnx_fp__table_d11_4nx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fzz_nnx_fp__table_d11_4nx_fp__entry__5 ">Yes</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "@type": "com.saba.learning.services.registration.ClassRegistrationDetail",
+    "instructors": null,
+    "blockersBySequencing": null,
+    "hideLaunchBySequencing": false,
+    "group": null,
+    "lessonDetail": ["list", [{
+	  "@type": "map",
+	  "N10010": {
+	   "@type": "map",
+	   "attemptId": "aireg000000000200701",
+	   "title": "Conduct of Vessels in any Condition of Visibility",
+	   "contentContextId": "ctctx000000000005905",
+	   "subscriptionId": "ctnsr000000000001738",
+	   "totalAttempts": 1,
+	   "lessonStatus": "c",
+	   "completionStatus": "completed",
+	   "createdOn": "2016/10/22T11:19:37UTC",
+	   "updatedOn": "2016/10/22T11:20:37UTC",
+	   "timeSpent": "00:00:00",
+	   "score": 100,
+	   "lessonLocation": "a001_test_1.html"
+	  },
+	  "N10161": {
+	   "@type": "map",
+	   "attemptId": "aireg000000000200702",
+	   "title": "Learning Object R_A3",
+	   "contentContextId": "ctctx000000000005905",
+	   "subscriptionId": "ctnsr000000000001738",
+	   "totalAttempts": 2,
+	   "lessonStatus": "n",
+	   "completionStatus": "not attempted",
+	   "createdOn": "2016/10/22T11:19:37UTC",
+	   "updatedOn": "2016/10/22T11:20:37UTC",
+	   "timeSpent": "00:00:00",
+	   "score": null,
+	   "lessonLocation": "a001_test_2.html"
+	  },
+	  "N1017A": {
+	   "@type": "map",
+	   "attemptId": "aireg000000000200705",
+	   "title": "Learning Object R_A4",
+	   "contentContextId": " ctctx000000000005905",
+	   "subscriptionId": " ctnsr000000000001738",
+	   "totalAttempts": 2,
+	   "lessonStatus": "n",
+	   "completionStatus": "not attempted",
+	   "createdOn": "2016/10/22T11:19:37UTC",
+	   "updatedOn": "2016/10/22T11:20:37UTC",
+	   "timeSpent": "00:00:00",
+	   "score": null,
+	   "lessonLocation": "a002_test_1.html"
+	  }
+	 }]],
+    "learningAssignments": [
+        "list",
+        [
+            {
+                "@type": "com.saba.learning.services.activities.RegistrationModule",
+                "required": true,
+                "endDate": null,
+                "startDate": null,
+                "expirationDate": null,
+                "title": "pre test content1- Hila hoop",
+                "masteryScore": 100,
+                "maxAttempts": 0,
+                "completionStatus": 100,
+                "contentFormat": 7,
+                "contentFormatVersion": "1.2",
+                "subscriptionId": "ctnsr000000000004105",
+                "launchURL": "https://&lt;hostname&gt;/Saba/Web_spf/ATHDB1/wizard/player/
+                  ?contextid=ctctx000000000461929&amp;subscriptionid=ctnsr000000000004105
+                    &amp;templateid=pltpt000000000000001",
+                "signedOff": false,
+                "additionalAttempts": 0,
+                "learnerAttempts": 0,
+                "offeringId": null,
+                "completedOn": null,
+                "assignmentId": "cninv000000000001160",
+                "signOffRequired": false,
+                "regId": "regdw000000000269310",
+                "regModId": "regmd000000000224540",
+                "instructors": [
+                    "list",
+                    []
+                ],
+                "contentFileExtension": null,
+                "mstartDate": null,
+                "mendDate": null,
+                "compStatusDesc": "Not Evaluated",
+                "madhocSessionInfo": null,
+                "appliedTimeZone": null,
+                "mcompletedOn": null,
+                "contentContextId": "ctctx000000000461929",
+                "learnerScore": null,
+                "regModuleStatus": "NOT_EVALUATED",
+                "classRooms": [
+                    "list",
+                    []
+                ],
+                "hasNextActivity": false,
+                "offeringName": null,
+                "canViewLearnerResult": "true",
+                "hasPin": false,
+                "contentInfo": {
+                    "@type": "com.saba.services.model.ContentInfo",
+                    "fileExtension": null,
+                    "title": "pre test content1- Hila hoop",
+                    "contentFormat": 7,
+                    "contentFormatVersion": "1.2",
+                    "ioscompatibility": "notCompatible",
+                    "playerTemplateId": "pltpt000000000000001",
+                    "showExitOptions": true,
+                    "showExitWithoutSaving": true,
+                    "contentStatus": 0,
+                    "relaxSCORM2004": false,
+                    "dirty": false,
+                    "id": "cninv000000000001160"
+                },
+                "sequence": 0,
+                "actions": [
+                    "list",
+                    [
+                        {
+                            "@type": "com.saba.learning.services.common.actions.ContentResultAction",
+                            "enabled": null,
+                            "name": "View Content Result",
+                            "method": "GET",
+                            "id": 16
+                        }
+                    ]
+                ],
+                "type": 100
+            }
+        ]
+    ],
+    "actionsForRegistration": [
+        "list",
+        [
+            {
+                "@type": "com.saba.services.actionservice.Action",
+                "enabled": false,
+                "reference": "regdw000000000001090",
+                "primaryAction": false,
+                "actionKey": "LEARNINGEVENT_SHARE"
+            },
+            {
+                "@type": "com.saba.services.actionservice.Action",
+                "enabled": false,
+                "reference": "regdw000000000001090",
+                "primaryAction": false,
+                "actionKey": "REGISTRATION_DROP"
+            },
+            {
+                "@type": "com.saba.services.actionservice.Action",
+                "enabled": false,
+                "reference": "regdw000000000001090",
+                "primaryAction": false,
+                "actionKey": "REGISTRATION_MARK_COMPLETE"
+            },
+            {
+                "@type": "com.saba.services.actionservice.Action",
+                "enabled": false,
+                "reference": "regdw000000000001090",
+                "primaryAction": false,
+                "actionKey": "REGISTRATION_VIEW_ASSIGNMENTS"
+            },
+            {
+                "@type": "com.saba.services.actionservice.Action",
+                "enabled": false,
+                "reference": "regdw000000000001090",
+                "primaryAction": false,
+                "actionKey": "OFFERING_BUY_FOR_OTHERS"
+            }
+        ]
+    ],
+    "registrationId": "regdw000000000001090",
+    "otherRegistrationsForCourse": null,
+    "learningEventDetail": {
+        "@type": "LearningEventDetail",
+        "registered": false,
+        "actions": null,
+        "id": null,
+        "owner": null,
+        "version": null,
+        "description": null,
+        "suppressscore": false,
+        "preRequisitesAndEquivalents": null,
+        "learningEventOwners": null,
+        "consumptionStats": null,
+        "assignmentDetails": null,
+        "customFieldsValue": null,
+        "learnerCreditsString": "",
+        "numberOfRequiredCourses": null,
+        "learningEventConsumers": null,
+        "blockersBySequencing": null,
+        "hideLaunchBySequencing": null,
+        "continuousLaunchEnabled": false,
+        "oneClickRegEnabled": false,
+        "group": null,
+        "completed": false,
+        "status": null,
+        "children": null,
+        "learnerCredits": null,
+        "associatedLearning": null,
+        "tags": null,
+        "tagDetails": null,
+        "availableFrom": null,
+        "learningEventType": null,
+        "validTillFrequency": null,
+        "validTillDayMonth": null,
+        "validTillStartDayMonth": null,
+        "discontinuedFrom": null,
+        "consumeWithinCert": false,
+        "targetDays": null,
+        "discontinued": false,
+        "ratings": null,
+        "socialProfile": null,
+        "owners": null,
+        "imageURL": "",
+        "notes": null,
+        "licencePlans": null,
+        "recertWindow": 0,
+        "inactivePaths": null,
+        "offeredAs": null,
+        "practiceArea": null,
+        "practiceType": null,
+        "licenseType": null,
+        "errorMessages": null,
+        "fosDetails": null,
+        "cpfDetail": null,
+        "hideClassMates": false,
+        "customValues": null,
+        "paths": null,
+        "securityDomain": null,
+        "componentName": null,
+        "title": null,
+        "validTill": 0,
+        "notifyBefore": 0,
+        "validTillType": 0,
+        "sensitive": false,
+        "validTillUnit": 0,
+        "vendor": null,
+        "recurring": false,
+        "publishToCatalog": false,
+        "recertWindowUnit": 0,
+        "learningEventId": null,
+        "historyLookupPolicy": null,
+        "pastCreditDays": 0,
+        "displayName": null,
+        "locale": null,
+        "primaryKey": null,
+        "factoryName": "com.saba.learning.services.learningevent.LearningEventDetail",
+        "updateMetadata": null,
+        "tagName": null,
+        "auditReason": "audit with reason"
+    },
+    "classAttachments": null,
+    "consumptionData": null,
+    "courseRequirers": null,
+    "registrationInfo": {
+        "@type": "com.saba.learning.services.registration.RegistrationInfo",
+        "location": null,
+        "actions": null,
+        "id": {
+            "@type": "ServiceObjectReference",
+            "id": "regdw000000000001090",
+            "displayName": ""
+        },
+        "className": null,
+        "organization": null,
+        "duration": "00:00",
+        "orderId": {
+            "@type": "ServiceObjectReference",
+            "id": "intor000000000200067",
+            "displayName": ""
+        },
+        "classSessionId": null,
+        "orderApprovalStatus": 200,
+        "evaluationCount": 0,
+        "studentCourseId": null,
+        "learner": {
+            "@type": "ServiceObjectReference",
+            "id": "persn000000000001000",
+            "displayName": "Client One"
+        },
+        "trainingUnits": null,
+        "score": 0,
+        "grade": null,
+        "recurringCourse": false,
+        "completionDate": null,
+        "completionStatus": {
+            "key": 100,
+            "desc": "Not Evaluated"
+        },
+        "email": null,
+        "attendance": "00:00",
+        "orderStatus": 100,
+        "orderItemId": {
+            "@type": "ServiceObjectReference",
+            "id": "iodwn000000000001026",
+            "displayName": ""
+        },
+        "partNo": null,
+        "money": {
+            "@type": "com.saba.currency.Money",
+            "amount": [
+                "java.math.BigDecimal",
+                350
+            ],
+            "currency": {
+                "@type": "com.saba.currency.SabaCurrencyReference",
+                "id": "crncy000000000000001",
+                "displayName": "US Dollars"
+            },
+            "string": "350 USD",
+            "isocode": "USD"
+        },
+        "credits": 0,
+        "offeringId": {
+            "@type": "ServiceObjectReference",
+            "id": "dowbt000000000001022",
+            "displayName": ""
+        },
+        "participationStatus": 100,
+        "offeringActionId": "ofapr000000000001110",
+        "regOrderId": {
+            "@type": "ServiceObjectReference",
+            "id": "intor000000000200067",
+            "displayName": ""
+        },
+        "regWaitList": null,
+        "learner_no": null,
+        "qrCodeURL": null,
+        "classRegisteredBeforeReacquisition": false,
+        "createdOn": {
+            "@type": "com.saba.customtypes.DateWithLocale",
+            "date": 998474292000,
+            "locale": "22.08.2001",
+            "dateInUserTimeZone": "22.08.2001",
+            "timeInUserTimeZone": "2:58 AM",
+            "timeInCustomTimeZone": null,
+            "dateInCustomTimeZone": null,
+            "customTimeZoneDate": 0,
+            "timeInStandardFormat": "3:28 PM",
+            "dateInStandardFormat": "08/22/2001",
+            "timeInLocale": "3:28 PM"
+        },
+        "customValues": {
+            "@type": "map",
+            "custom9": null,
+            "custom0": "customValue",
+            "custom3": null,
+            "custom4": null,
+            "custom1": null,
+            "custom2": null,
+            "custom7": null,
+            "custom8": null,
+            "custom5": null,
+            "custom6": "2015-09-21T18:30:00.000+0530"
+        },
+        "startDate": null,
+        "noShow": false,
+        "walkIn": false,
+        "orderNo": null,
+        "offeringTemplateId": {
+            "@type": "ServiceObjectReference",
+            "id": "cours000000000200028",
+            "displayName": ""
+        },
+        "approvalStatus": null,
+        "orderItemStatus": 100,
+        "registrationStatus": 100,
+        "deliveryType": null,
+        "attendanceInMinutesString": null,
+        "canViewLearnerResult": "true",
+        "cancelledRegistrationsCount": null,
+        "statusDescription": "In Progress",
+        "learnerPictureURL": "http://&lt;hostname&gt;/assets/spf/skin/wireframe/media/icons/summit/39ProfileMale.png",
+        "unassignedLearner": false,
+        "languageDetails": null,
+        "audienceTypeSubType": null,
+        "orderStatusName": null,
+        "regOrderItemId": {
+            "@type": "ServiceObjectReference",
+            "id": "iodwn000000000001026",
+            "displayName": ""
+        },
+        "enrollmentStatus": {
+            "name": "INPROGRESS",
+            "statusValue": "100"
+        }
+    },
+    "courseSocialProfile": {
+        "@type": "com.saba.social.service.SocialProfile",
+        "averageRating": 0,
+        "totalComments": 0,
+        "rate": null,
+        "totalViewCount": 0,
+        "totalPeopleRated": 0
+    },
+    "classSessions": null,
+    "classDetail": {
+        "@type": "com.saba.learning.services.offering.OfferingDetail",
+        "name": "Skillsoft testing - Introduction",
+        "language": {
+            "@type": "ServiceObjectReference",
+            "id": "lange000000000000001",
+            "displayName": "English"
+        },
+        "location": null,
+        "resources": [
+            "list",
+            []
+        ],
+        "actions": null,
+        "id": "dowbt000000000001022",
+        "description": "\r\n\t\t",
+        "duration": 0,
+        "offeringlocked": false,
+        "delivery_id": {
+            "@type": "ServiceObjectReference",
+            "id": "eqcat000000000000005",
+            "displayName": "Web-Based"
+        },
+        "location_id": null,
+        "max_ct": 0,
+        "max_book": 0,
+        "min_ct": 0,
+        "csr_id": null,
+        "language_id": {
+            "@type": "ServiceObjectReference",
+            "id": "lange000000000000001",
+            "displayName": "English"
+        },
+        "disp_for_web": true,
+        "facility_id": null,
+        "vendor_id": null,
+        "open_enroll": null,
+        "enroll_close": null,
+        "post_order": null,
+        "vleInfo": null,
+        "start_date": null,
+        "avail_from": {
+            "@type": "com.saba.customtypes.DateWithLocale",
+            "date": 998418600000,
+            "locale": "22.08.2001",
+            "dateInUserTimeZone": "21.08.2001",
+            "timeInUserTimeZone": "11:30 AM",
+            "timeInCustomTimeZone": null,
+            "dateInCustomTimeZone": null,
+            "customTimeZoneDate": 0,
+            "timeInStandardFormat": "12:00 AM",
+            "dateInStandardFormat": "08/22/2001",
+            "timeInLocale": "12:00 AM"
+        },
+        "disc_from": null,
+        "skip_days_map": null,
+        "has_community": false,
+        "wbt_no": "00200007",
+        "enforced_seq": null,
+        "customFieldsValue": [
+            "list",
+            [
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom0",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom0"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom1",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom1"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom2",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom2"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom3",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom3"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom4",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom4"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom5",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom5"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom6",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom6"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom7",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom7"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom8",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom8"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom9",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom9_for MRG0357654"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "ExCustom1",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "ExCustom1"
+                }
+            ]
+        ],
+        "status": null,
+        "session_template": null,
+        "disp_for_call_center": true,
+        "open_enroll_for_all": null,
+        "post_completion": null,
+        "stop_auto_promotion": null,
+        "do_not_drop_post": null,
+        "manufacturer_id": null,
+        "learningAssignments": null,
+        "offering_temp_id": {
+            "@type": "ServiceObjectReference",
+            "id": "cours000000000200028",
+            "displayName": "Skillsoft testing - Introduction"
+        },
+        "creditsCollection": null,
+        "facility": null,
+        "trainingUnits": null,
+        "groupAssociatedWithCourse": null,
+        "availabilityDetails": {
+            "@type": "com.saba.learning.services.offering.OfferingDetail$OfferingRegistrationAvailabilityDetailsSection",
+            "availableSeats": -1,
+            "offeringPriceDisplay": "350 USD",
+            "offeringPrice": {
+                "@type": "com.saba.learning.services.common.Money",
+                "currency": {
+                    "@type": "ServiceObjectReference",
+                    "id": "crncy000000000000001",
+                    "displayName": null
+                },
+                "isocode": "USD",
+                "amount": [
+                    "java.math.BigDecimal",
+                    350
+                ],
+                "amountString": "350 USD"
+            }
+        },
+        "offeringTemplate": {
+            "@type": "ServiceObjectReference",
+            "id": "cours000000000200028",
+            "displayName": "Skillsoft testing - Introduction"
+        },
+        "availableSeats": -1,
+        "sessionTemplate": null,
+        "offeringNumber": "00200007",
+        "consumeWithinCert": false,
+        "abstract": "For testing Skillsoft Content\r\n\t\t",
+        "audienceTypes": [
+            "list",
+            []
+        ],
+        "cpf": false,
+        "customValues": [
+            "list",
+            [
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom0",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom0"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom1",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom1"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom2",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom2"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom3",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom3"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom4",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom4"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom5",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom5"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom6",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom6"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom7",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom7"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom8",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom8"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "custom9",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "Custom9_for MRG0357654"
+                },
+                {
+                    "@type": "CustomAttributeValueDetail",
+                    "name": "ExCustom1",
+                    "datatype": {
+                        "@type": "CustomAttributeDatatype",
+                        "value": 18
+                    },
+                    "value": null,
+                    "displayName": "ExCustom1"
+                }
+            ]
+        ],
+        "endDate": null,
+        "startDate": null,
+        "securityDomain": {
+            "@type": "ServiceObjectReference",
+            "id": "domin000000000000001",
+            "displayName": "world"
+        },
+        "class_no": "00200007",
+        "locationDetail": null,
+        "price": {
+            "@type": "com.saba.learning.services.common.Money",
+            "currency": {
+                "@type": "ServiceObjectReference",
+                "id": "crncy000000000000001",
+                "displayName": null
+            },
+            "isocode": "USD",
+            "amount": [
+                "java.math.BigDecimal",
+                350
+            ],
+            "amountString": "350 USD"
+        },
+        "componentName": "ComponentName",
+        "deliveryType": {
+            "@type": "ServiceObjectReference",
+            "id": "eqcat000000000000005",
+            "displayName": "Web-Based"
+        },
+        "baseDeliveryType": 200,
+        "calendarExportURL": null,
+        "priceDisplayString": "350 USD",
+        "dropPolicyInfo": {
+            "@type": "com.saba.learning.services.catalog.DropPolicyInfo",
+            "allEffectivePolicies": [
+                "list",
+                [
+                    {
+                        "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+                        "displayString": "Cancellation charge of 10.0 % for all other days.",
+                        "charge": 10,
+                        "currency": {
+                            "@type": "ServiceObjectReference",
+                            "id": "crncy000000000000001",
+                            "displayName": null
+                        },
+                        "chargeType": 1,
+                        "daysFrom": -99999,
+                        "daysTo": 99999
+                    }
+                ]
+            ],
+            "lastDateToDropWithoutCharge": null,
+            "trainingUnitDropPolicyInfo": null
+        },
+        "durationString": "00:00",
+        "offering_temp_no": null,
+        "registeredCount": 0,
+        "waitListedCount": 0,
+        "statusNumValue": null,
+        "suppressScoreForOT": false,
+        "publishStatusMessage": null,
+        "publishEndDate": null,
+        "publishStartDate": null,
+        "customFields": {
+            "@type": "map",
+            "custom9": null,
+            "custom0": null,
+            "custom3": null,
+            "custom4": null,
+            "custom1": null,
+            "custom2": null,
+            "custom7": null,
+            "custom8": null,
+            "custom5": null,
+            "custom6": null,
+            "ExCustom1": null
+        },
+        "publishStatus": null,
+        "group_id": null,
+        "endDateI18n": null,
+        "startDateI18n": null,
+        "courseVersion": null,
+        "cpfMins": 0
+    }
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

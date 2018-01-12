@@ -1,0 +1,1690 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all offerings, learning components, find the details of the offerings, find the details of the offerings, get the meta details of a blended class, get the meta details of a blended class, get the meta details of an ilt class, get the meta details of an ilt class, get the details of a class, get the details of a class, get the meta details of a virtual class, get the meta details of a virtual class, get the meta details of a wbt class, get the meta details of a wbt class, create a new blended class, create a new blended class, create a new ilt class, create a new ilt class, create a new virtual class, create a new virtual class, create a new wbt class, create a new wbt class, update a blended class, update a blended class, update a ilt class, update a virtual class, update a virtual class, update a wbt class, get all the offerings of the instructor, get all the offerings of the instructor, retrieve all learning assignments of a class, retrieves all learning assignments of an class, add learning assignments to a class, add learning assignments to a class, update learning assignments of a class, update learning assignments of a class, publish learning assignments of a class, publish learning assignments of a class, mark class as delivered/cancelled, mark class as delivered/cancelled, cancel all enrollments of a class, cancel all enrollments of a class, retrieve all sessions of an offering, retrieve all sessions of an offering, mark class registration as no_show/walk_in, mark class registration as no_show/walk_in, add drop policy to class, delete drop policy from class, delete drop policy from class">
+  <meta name="keywords" content="learning, restful web services, get all offerings, learning components, find the details of the offerings, find the details of the offerings, get the meta details of a blended class, get the meta details of a blended class, get the meta details of an ilt class, get the meta details of an ilt class, get the details of a class, get the details of a class, get the meta details of a virtual class, get the meta details of a virtual class, get the meta details of a wbt class, get the meta details of a wbt class, create a new blended class, create a new blended class, create a new ilt class, create a new ilt class, create a new virtual class, create a new virtual class, create a new wbt class, create a new wbt class, update a blended class, update a blended class, update a ilt class, update a virtual class, update a virtual class, update a wbt class, get all the offerings of the instructor, get all the offerings of the instructor, retrieve all learning assignments of a class, retrieves all learning assignments of an class, add learning assignments to a class, add learning assignments to a class, update learning assignments of a class, update learning assignments of a class, publish learning assignments of a class, publish learning assignments of a class, mark class as delivered/cancelled, mark class as delivered/cancelled, cancel all enrollments of a class, cancel all enrollments of a class, retrieve all sessions of an offering, retrieve all sessions of an offering, mark class registration as no_show/walk_in, mark class registration as no_show/walk_in, add drop policy to class, delete drop policy from class, delete drop policy from class">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Class</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title6">GET DETAILS OF A CLASS</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the details of a class.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/:offeringId</p> 
+    <p class="p">You can alter the URL as below to retrieve all prices in offeringPrices field:</p> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/:offeringId<strong class="ph b">?context=admin</strong></p> 
+    <div class="p"> 
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> 
+      <p class="p">The following is a <strong class="ph b">deprecated</strong> URL for this REST Web service and will be discontinued in the next few updates:</p>https://
+      <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/learning/offering/:offeringId
+     </div> 
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL (User-friendly)</h5>You can use a user-friendly URL which accepts the 
+    <strong class="ph b">offeringNumber</strong> instead of the internal Offering's ID.
+    <div class="p">
+     https://
+     <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/
+     <em class="ph i">&lt;offeringType&gt;</em>/
+     <em class="ph i">&lt;offeringNumber&gt;</em>
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> For custom delivery types, 
+      <u class="ph u">delivery type name</u> itself would be considered as offering type.
+      <p class="p">For offeringType, you can pass ilt for ILT Offering, wbt for WBT Offering, vc for Virtual Class Offering and blended for Blended Offering.</p>
+     </div>
+    </div>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_vfc_qnx_fp__table_ggc_qnx_fp" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 4. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__1 ">offeringId</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__2 ">Class's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__3 ">class000000000201503</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__1 ">context</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__2 ">Context </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__3 ">admin</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+  "@type": "com.saba.learning.services.offering.OfferingDetail",
+  "classDescription": "",
+  "price": null,
+  "deliveryType": {
+    "@type": "ServiceObjectReference",
+    "id": "eqcat000000000000004",
+    "displayName": "Instructor-Led"
+  },
+  "offeringTemplate": {
+    "@type": "ServiceObjectReference",
+    "id": "cours000000000201505",
+    "displayName": "merge1"
+  },
+  "sessionTemplate": "SesTemplate2 3M/24hr",
+  "facility": null,
+  "availableSeats": 0,
+  "offeringNumber": "UPDATE5",
+  "groupAssociatedWithCourse": null,
+  "availabilityDetails": {
+    "@type": "com.saba.learning.services.offering.OfferingDetail$OfferingRegistrationAvailabilityDetailsSection",
+    "availableSeats": 0,
+    "offeringPrice": null,
+    "offeringPriceDisplay": ""
+  },
+  "baseDeliveryType": 100,
+  "learningAssignments": null,
+  "creditsCollection": null,
+  "securityDomain": {
+    "@type": "ServiceObjectReference",
+    "id": "domin000000000000001",
+    "displayName": "world"
+  },
+  "componentName": "ComponentName",
+  "publishStartDate": null,
+  "publishEndDate": null,
+  "publishStatus": null,
+  "publishStatusMessage": null,
+  "group_id": null,
+  "endDateI18n": "01/23/2017",
+  "startDateI18n": "01/09/2017",
+  "priceDisplayString": null,
+  "dropPolicyInfo": {
+    "@type": "com.saba.learning.services.catalog.DropPolicyInfo",
+    "notifyDropCondition": "",
+    "lastDateToDropWithoutCharge": null,
+    "allEffectivePolicies": [
+      "list",
+      [
+        {
+          "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+          "charge": 35,
+          "daysFrom": 7,
+          "daysTo": 15,
+          "timeEntryId": "",
+          "chargeType": 1,
+          "displayString": "Cancellation charge of 35.0 % if dropped between 12/25/2016 and 01/02/2017.",
+          "currency": {
+            "@type": "ServiceObjectReference",
+            "id": "crncy000000000000001",
+            "displayName": null
+          }
+        },
+        {
+          "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+          "charge": 47,
+          "daysFrom": 0,
+          "daysTo": 6,
+          "timeEntryId": "",
+          "chargeType": 1,
+          "displayString": "Cancellation charge of 47.0 % if dropped between 01/03/2017 and 01/09/2017.",
+          "currency": {
+            "@type": "ServiceObjectReference",
+            "id": "crncy000000000000001",
+            "displayName": null
+          }
+        },
+        {
+          "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+          "charge": 10,
+          "daysFrom": -99999,
+          "daysTo": 99999,
+          "timeEntryId": "",
+          "chargeType": 1,
+          "displayString": "Cancellation charge of 10.0 % for all other days.",
+          "currency": {
+            "@type": "ServiceObjectReference",
+            "id": "crncy000000000000001",
+            "displayName": null
+          }
+        }
+      ]
+    ],
+    "trainingUnitDropPolicyInfo": null
+  },
+  "courseVersion": null,
+  "offeringPrices": [
+    "list",
+    [
+      {
+        "@type": "com.saba.learning.services.common.Money",
+        "amountString": "30 USD",
+        "isocode": "USD",
+        "amount": [
+          "java.math.BigDecimal",
+          30
+        ],
+        "currency": {
+          "@type": "ServiceObjectReference",
+          "id": "crncy000000000000001",
+          "displayName": null
+        }
+      },
+      {
+        "@type": "com.saba.learning.services.common.Money",
+        "amountString": "123 Rs ",
+        "isocode": "Rs ",
+        "amount": [
+          "java.math.BigDecimal",
+          123
+        ],
+        "currency": {
+          "@type": "ServiceObjectReference",
+          "id": "crncy000000000200968",
+          "displayName": null
+        }
+      }
+    ]
+  ],
+  "durationString": "00:00",
+  "offering_temp_no": null,
+  "cpfMins": 0,
+  "registeredCount": 0,
+  "waitListedCount": 0,
+  "statusNumValue": 100,
+  "suppressScoreForOT": false,
+  "customFieldsSetOnCourse": false,
+  "inheritedTrainingUnits": null,
+  "courseDescription": "",
+  "courseCustomValues": [
+    "list",
+    [
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom0",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom0"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom2"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom3",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom3"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom4",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom4"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom5",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom5"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom6",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom6"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom7",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom7"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom8",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom8"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom9",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom9"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom10",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom10"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom11",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom11"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom12",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom12"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom13",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom13"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom14",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom14"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "excustom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 10
+        },
+        "value": null,
+        "displayName": "excustom2"
+      }
+    ]
+  ],
+  "creditString": null,
+  "vleinfoDetail": {
+    "@type": "map"
+  },
+  "customFieldsValue": [
+    "list",
+    [
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom0",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom0"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom2"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom3",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom3"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom4",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom4"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom5",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom5"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom6",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom6"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom7",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom7"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom8",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom8"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom9",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom9"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom10",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom10"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 10
+        },
+        "value": null,
+        "displayName": "excustom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "excustom2"
+      }
+    ]
+  ],
+  "ownersValue": null,
+  "audienceTypes": [
+    "list",
+    []
+  ],
+  "customFields": {
+    "@type": "map",
+    "custom0": null,
+    "excustom2": null,
+    "excustom1": null,
+    "custom10": null,
+    "custom9": null,
+    "custom3": null,
+    "custom4": null,
+    "custom1": null,
+    "custom2": null,
+    "custom7": null,
+    "custom8": null,
+    "custom5": null,
+    "custom6": null
+  },
+  "customValues": [
+    "list",
+    [
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom0",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom0"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom2"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom3",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom3"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom4",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom4"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom5",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom5"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom6",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom6"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom7",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom7"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom8",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom8"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom9",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom9"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom10",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom10"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 10
+        },
+        "value": null,
+        "displayName": "excustom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "excustom2"
+      }
+    ]
+  ],
+  "class_no": "UPDATE5",
+  "calendarExportURL": null,
+  "consumeWithinCert": false,
+  "trainingUnits": null,
+  "locationDetail": {
+    "@type": "com.saba.learning.services.resource.LocationDetail",
+    "eeoMandatory": null,
+    "locationContact": {
+      "@type": "ServiceObjectReference",
+      "id": "emplo000000000001001",
+      "displayName": "UTWO"
+    },
+    "addressInfo": {
+      "@type": "com.saba.learning.services.common.AddressDetail",
+      "city": "lo2city",
+      "zipCode": "lo2zip",
+      "addressLine2": "lo2address2",
+      "addressLine3": null,
+      "addressLine1": "lo2address1",
+      "state": "lo2state",
+      "country": "lo2country"
+    },
+    "locationName": "Location2",
+    "locationId": "001001",
+    "timezone": {
+      "@type": "ServiceObjectReference",
+      "id": "tzone000000000000003",
+      "displayName": "(GMT-10:00) Hawaii"
+    },
+    "contactInfo": {
+      "@type": "com.saba.learning.services.common.ContactDetail",
+      "fax": "lo2fax",
+      "email": "lo2@sabaqa.com",
+      "primaryPhone": "lo2pphone",
+      "secondaryPhone": "lo2sphone"
+    },
+    "attachments": [
+      "list",
+      [
+        {
+          "@type": "com.saba.learning.services.common.AttachmentDetail",
+          "documentType": ".htm",
+          "locale": "English",
+          "categoryDescription": "Map",
+          "attachmentType": "text/html",
+          "attachmentURL": "http://localhost/Saba/Web/Main?ssp=pageIsIgnored&amp;doIt=showAttachment&amp;showbinary=true&amp;attachId=.-.779ED963D976CA0A4A6DDED64B7CA1F85CB4FBD79FB188E20341C4AD8FE33FBD-.-&amp;mimeType=text/html&amp;deepLinkCertificate=31353937336561353639385E235E7574776F5E235E53616261536974655E235E656E5F55535E235E536162615E235E2D315E235E24414240302C021456B3099FE1FB55735908B25FE95DFB70A0412853021478223462CD4192D2D8A5AF502A6A79534D836217&amp;isAttachment=true",
+          "name": "location2's map",
+          "private": false
+        },
+        {
+          "@type": "com.saba.learning.services.common.AttachmentDetail",
+          "documentType": ".txt",
+          "locale": "English",
+          "categoryDescription": "Setup",
+          "attachmentType": "text/plain",
+          "attachmentURL": "http://localhost/Saba/Web/Main?ssp=pageIsIgnored&amp;doIt=showAttachment&amp;showbinary=true&amp;attachId=.-.779ED963D976CA0A4A6DDED64B7CA1F85641003FF0D4A51DC9AE5D52698F6BE4-.-&amp;mimeType=text/plain&amp;deepLinkCertificate=31353937336561353639665E235E7574776F5E235E53616261536974655E235E656E5F55535E235E536162615E235E2D315E235E24414240302C0214417BCA0252A20AE891B2BADABE9CDA0464B0E242021449D3372E79C7A69A2417DB0C40C6464DB4CE4EAF&amp;isAttachment=true",
+          "name": "location2's setup",
+          "private": false
+        }
+      ]
+    ],
+    "organization": {
+      "@type": "ServiceObjectReference",
+      "id": "bisut000000000001001",
+      "displayName": "BusinessUnit2"
+    }
+  },
+  "endDate": {
+    "@type": "com.saba.customtypes.DateWithLocale",
+    "dateInUserTimeZone": "01/23/2017",
+    "timeInUserTimeZone": "3:00 AM",
+    "timeInCustomTimeZone": null,
+    "dateInCustomTimeZone": null,
+    "customTimeZoneDate": 0,
+    "timeInStandardFormat": "5:00 AM",
+    "dateInStandardFormat": "01/23/2017",
+    "timeInLocale": "5:00 AM",
+    "locale": "01/23/2017",
+    "date": 1485176400000
+  },
+  "startDate": {
+    "@type": "com.saba.customtypes.DateWithLocale",
+    "dateInUserTimeZone": "01/09/2017",
+    "timeInUserTimeZone": "3:00 AM",
+    "timeInCustomTimeZone": null,
+    "dateInCustomTimeZone": null,
+    "customTimeZoneDate": 0,
+    "timeInStandardFormat": "5:00 AM",
+    "dateInStandardFormat": "01/09/2017",
+    "timeInLocale": "5:00 AM",
+    "locale": "01/09/2017",
+    "date": 1483966800000
+  },
+  "abstract": "",
+  "cpf": false,
+  "replaceExistingSessions": false,
+  "manufacturer_id": null,
+  "avail_from": null,
+  "disc_from": null,
+  "skip_days_map": "0000000",
+  "offering_temp_id": {
+    "@type": "ServiceObjectReference",
+    "id": "cours000000000201505",
+    "displayName": "merge1"
+  },
+  "has_community": false,
+  "wbt_no": "UPDATE5",
+  "offeringlocked": false,
+  "delivery_id": {
+    "@type": "ServiceObjectReference",
+    "id": "eqcat000000000000004",
+    "displayName": "Instructor-Led"
+  },
+  "offeringSessions": null,
+  "resourceCancellationType": null,
+  "session_template": "SesTemplate2 3M/24hr",
+  "location_id": {
+    "@type": "ServiceObjectReference",
+    "id": "locat000000000001001",
+    "displayName": "Location2"
+  },
+  "csr_id": null,
+  "language_id": {
+    "@type": "ServiceObjectReference",
+    "id": "lange000000000000001",
+    "displayName": "English"
+  },
+  "facility_id": null,
+  "vendor_id": null,
+  "max_ct": 0,
+  "max_book": 0,
+  "min_ct": 0,
+  "disp_for_web": true,
+  "disp_for_call_center": true,
+  "open_enroll": null,
+  "open_enroll_for_all": null,
+  "enroll_close": null,
+  "post_order": null,
+  "post_completion": null,
+  "stop_auto_promotion": null,
+  "vleInfo": null,
+  "do_not_drop_post": null,
+  "enforced_seq": "100",
+  "start_date": {
+    "@type": "com.saba.customtypes.DateWithLocale",
+    "dateInUserTimeZone": "01/09/2017",
+    "timeInUserTimeZone": "3:00 AM",
+    "timeInCustomTimeZone": null,
+    "dateInCustomTimeZone": null,
+    "customTimeZoneDate": 0,
+    "timeInStandardFormat": "5:00 AM",
+    "dateInStandardFormat": "01/09/2017",
+    "timeInLocale": "5:00 AM",
+    "locale": "01/09/2017",
+    "date": 1483966800000
+  },
+  "duration": 0,
+  "name": "merge1",
+  "language": {
+    "@type": "ServiceObjectReference",
+    "id": "lange000000000000001",
+    "displayName": "English"
+  },
+  "resources": [
+    "list",
+    []
+  ],
+  "location": {
+    "@type": "ServiceObjectReference",
+    "id": "locat000000000001001",
+    "displayName": "Location2"
+  },
+  "actions": null,
+  "id": "class000000000201505",
+  "description": "",
+  "status": "Open - Normal"
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values (?context=admin)</h5> 
+    <pre class="pre codeblock"><code>{
+  "@type": "com.saba.learning.services.offering.OfferingDetail",
+  "classDescription": "",
+  "price": null,
+  "deliveryType": {
+    "@type": "ServiceObjectReference",
+    "id": "eqcat000000000000004",
+    "displayName": "Instructor-Led"
+  },
+  "offeringTemplate": {
+    "@type": "ServiceObjectReference",
+    "id": "cours000000000201505",
+    "displayName": "merge1"
+  },
+  "sessionTemplate": "SesTemplate2 3M/24hr",
+  "facility": null,
+  "availableSeats": 0,
+  "offeringNumber": "UPDATE5",
+  "groupAssociatedWithCourse": null,
+  "availabilityDetails": {
+    "@type": "com.saba.learning.services.offering.OfferingDetail$OfferingRegistrationAvailabilityDetailsSection",
+    "availableSeats": 0,
+    "offeringPrice": null,
+    "offeringPriceDisplay": ""
+  },
+  "baseDeliveryType": 100,
+  "learningAssignments": null,
+  "creditsCollection": null,
+  "securityDomain": {
+    "@type": "ServiceObjectReference",
+    "id": "domin000000000000001",
+    "displayName": "world"
+  },
+  "componentName": "ComponentName",
+  "publishStartDate": null,
+  "publishEndDate": null,
+  "publishStatus": null,
+  "publishStatusMessage": null,
+  "group_id": null,
+  "endDateI18n": "01/23/2017",
+  "startDateI18n": "01/09/2017",
+  "priceDisplayString": null,
+  "dropPolicyInfo": {
+    "@type": "com.saba.learning.services.catalog.DropPolicyInfo",
+    "notifyDropCondition": "",
+    "lastDateToDropWithoutCharge": null,
+    "allEffectivePolicies": [
+      "list",
+      [
+        {
+          "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+          "charge": 35,
+          "daysFrom": 7,
+          "daysTo": 15,
+          "timeEntryId": "",
+          "chargeType": 1,
+          "displayString": "Cancellation charge of 35.0 % if dropped between 12/25/2016 and 01/02/2017.",
+          "currency": {
+            "@type": "ServiceObjectReference",
+            "id": "crncy000000000000001",
+            "displayName": null
+          }
+        },
+        {
+          "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+          "charge": 47,
+          "daysFrom": 0,
+          "daysTo": 6,
+          "timeEntryId": "",
+          "chargeType": 1,
+          "displayString": "Cancellation charge of 47.0 % if dropped between 01/03/2017 and 01/09/2017.",
+          "currency": {
+            "@type": "ServiceObjectReference",
+            "id": "crncy000000000000001",
+            "displayName": null
+          }
+        },
+        {
+          "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+          "charge": 10,
+          "daysFrom": -99999,
+          "daysTo": 99999,
+          "timeEntryId": "",
+          "chargeType": 1,
+          "displayString": "Cancellation charge of 10.0 % for all other days.",
+          "currency": {
+            "@type": "ServiceObjectReference",
+            "id": "crncy000000000000001",
+            "displayName": null
+          }
+        }
+      ]
+    ],
+    "trainingUnitDropPolicyInfo": null
+  },
+  "courseVersion": null,
+  "offeringPrices": [
+    "list",
+    [
+      {
+        "@type": "com.saba.learning.services.common.Money",
+        "amountString": "30 USD",
+        "isocode": "USD",
+        "amount": [
+          "java.math.BigDecimal",
+          30
+        ],
+        "currency": {
+          "@type": "ServiceObjectReference",
+          "id": "crncy000000000000001",
+          "displayName": null
+        }
+      },
+      {
+        "@type": "com.saba.learning.services.common.Money",
+        "amountString": "123 Rs ",
+        "isocode": "Rs ",
+        "amount": [
+          "java.math.BigDecimal",
+          123
+        ],
+        "currency": {
+          "@type": "ServiceObjectReference",
+          "id": "crncy000000000200968",
+          "displayName": null
+        }
+      }
+    ]
+  ],
+  "durationString": "00:00",
+  "offering_temp_no": null,
+  "cpfMins": 0,
+  "registeredCount": 0,
+  "waitListedCount": 0,
+  "statusNumValue": 100,
+  "suppressScoreForOT": false,
+  "customFieldsSetOnCourse": false,
+  "inheritedTrainingUnits": null,
+  "courseDescription": "",
+  "courseCustomValues": [
+    "list",
+    [
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom0",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom0"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom2"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom3",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom3"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom4",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom4"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom5",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom5"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom6",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom6"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom7",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom7"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom8",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom8"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom9",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom9"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom10",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom10"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom11",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom11"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom12",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom12"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom13",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom13"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom14",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom14"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "excustom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 10
+        },
+        "value": null,
+        "displayName": "excustom2"
+      }
+    ]
+  ],
+  "creditString": null,
+  "vleinfoDetail": {
+    "@type": "map"
+  },
+  "customFieldsValue": [
+    "list",
+    [
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom0",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom0"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom2"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom3",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom3"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom4",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom4"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom5",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom5"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom6",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom6"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom7",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom7"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom8",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom8"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom9",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom9"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom10",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom10"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 10
+        },
+        "value": null,
+        "displayName": "excustom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "excustom2"
+      }
+    ]
+  ],
+  "ownersValue": null,
+  "audienceTypes": [
+    "list",
+    []
+  ],
+  "customFields": {
+    "@type": "map",
+    "custom0": null,
+    "excustom2": null,
+    "excustom1": null,
+    "custom10": null,
+    "custom9": null,
+    "custom3": null,
+    "custom4": null,
+    "custom1": null,
+    "custom2": null,
+    "custom7": null,
+    "custom8": null,
+    "custom5": null,
+    "custom6": null
+  },
+  "customValues": [
+    "list",
+    [
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom0",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom0"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom2"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom3",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom3"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom4",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom4"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom5",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom5"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom6",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom6"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom7",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom7"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom8",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom8"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom9",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom9"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom10",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom10"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 10
+        },
+        "value": null,
+        "displayName": "excustom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "excustom2"
+      }
+    ]
+  ],
+  "class_no": "UPDATE5",
+  "calendarExportURL": null,
+  "consumeWithinCert": false,
+  "trainingUnits": null,
+  "locationDetail": {
+    "@type": "com.saba.learning.services.resource.LocationDetail",
+    "eeoMandatory": null,
+    "locationContact": {
+      "@type": "ServiceObjectReference",
+      "id": "emplo000000000001001",
+      "displayName": "UTWO"
+    },
+    "addressInfo": {
+      "@type": "com.saba.learning.services.common.AddressDetail",
+      "city": "lo2city",
+      "zipCode": "lo2zip",
+      "addressLine2": "lo2address2",
+      "addressLine3": null,
+      "addressLine1": "lo2address1",
+      "state": "lo2state",
+      "country": "lo2country"
+    },
+    "locationName": "Location2",
+    "locationId": "001001",
+    "timezone": {
+      "@type": "ServiceObjectReference",
+      "id": "tzone000000000000003",
+      "displayName": "(GMT-10:00) Hawaii"
+    },
+    "contactInfo": {
+      "@type": "com.saba.learning.services.common.ContactDetail",
+      "fax": "lo2fax",
+      "email": "lo2@sabaqa.com",
+      "primaryPhone": "lo2pphone",
+      "secondaryPhone": "lo2sphone"
+    },
+    "attachments": [
+      "list",
+      [
+        {
+          "@type": "com.saba.learning.services.common.AttachmentDetail",
+          "documentType": ".htm",
+          "locale": "English",
+          "categoryDescription": "Map",
+          "attachmentType": "text/html",
+          "attachmentURL": "http://localhost/Saba/Web/Main?ssp=pageIsIgnored&amp;doIt=showAttachment&amp;showbinary=true&amp;attachId=.-.779ED963D976CA0A4A6DDED64B7CA1F85CB4FBD79FB188E20341C4AD8FE33FBD-.-&amp;mimeType=text/html&amp;deepLinkCertificate=31353937336561353639385E235E7574776F5E235E53616261536974655E235E656E5F55535E235E536162615E235E2D315E235E24414240302C021456B3099FE1FB55735908B25FE95DFB70A0412853021478223462CD4192D2D8A5AF502A6A79534D836217&amp;isAttachment=true",
+          "name": "location2's map",
+          "private": false
+        },
+        {
+          "@type": "com.saba.learning.services.common.AttachmentDetail",
+          "documentType": ".txt",
+          "locale": "English",
+          "categoryDescription": "Setup",
+          "attachmentType": "text/plain",
+          "attachmentURL": "http://localhost/Saba/Web/Main?ssp=pageIsIgnored&amp;doIt=showAttachment&amp;showbinary=true&amp;attachId=.-.779ED963D976CA0A4A6DDED64B7CA1F85641003FF0D4A51DC9AE5D52698F6BE4-.-&amp;mimeType=text/plain&amp;deepLinkCertificate=31353937336561353639665E235E7574776F5E235E53616261536974655E235E656E5F55535E235E536162615E235E2D315E235E24414240302C0214417BCA0252A20AE891B2BADABE9CDA0464B0E242021449D3372E79C7A69A2417DB0C40C6464DB4CE4EAF&amp;isAttachment=true",
+          "name": "location2's setup",
+          "private": false
+        }
+      ]
+    ],
+    "organization": {
+      "@type": "ServiceObjectReference",
+      "id": "bisut000000000001001",
+      "displayName": "BusinessUnit2"
+    }
+  },
+  "endDate": {
+    "@type": "com.saba.customtypes.DateWithLocale",
+    "dateInUserTimeZone": "01/23/2017",
+    "timeInUserTimeZone": "3:00 AM",
+    "timeInCustomTimeZone": null,
+    "dateInCustomTimeZone": null,
+    "customTimeZoneDate": 0,
+    "timeInStandardFormat": "5:00 AM",
+    "dateInStandardFormat": "01/23/2017",
+    "timeInLocale": "5:00 AM",
+    "locale": "01/23/2017",
+    "date": 1485176400000
+  },
+  "startDate": {
+    "@type": "com.saba.customtypes.DateWithLocale",
+    "dateInUserTimeZone": "01/09/2017",
+    "timeInUserTimeZone": "3:00 AM",
+    "timeInCustomTimeZone": null,
+    "dateInCustomTimeZone": null,
+    "customTimeZoneDate": 0,
+    "timeInStandardFormat": "5:00 AM",
+    "dateInStandardFormat": "01/09/2017",
+    "timeInLocale": "5:00 AM",
+    "locale": "01/09/2017",
+    "date": 1483966800000
+  },
+  "abstract": "",
+  "cpf": false,
+  "replaceExistingSessions": false,
+  "manufacturer_id": null,
+  "avail_from": null,
+  "disc_from": null,
+  "skip_days_map": "0000000",
+  "offering_temp_id": {
+    "@type": "ServiceObjectReference",
+    "id": "cours000000000201505",
+    "displayName": "merge1"
+  },
+  "has_community": false,
+  "wbt_no": "UPDATE5",
+  "offeringlocked": false,
+  "delivery_id": {
+    "@type": "ServiceObjectReference",
+    "id": "eqcat000000000000004",
+    "displayName": "Instructor-Led"
+  },
+  "offeringSessions": null,
+  "resourceCancellationType": null,
+  "session_template": "SesTemplate2 3M/24hr",
+  "location_id": {
+    "@type": "ServiceObjectReference",
+    "id": "locat000000000001001",
+    "displayName": "Location2"
+  },
+  "csr_id": null,
+  "language_id": {
+    "@type": "ServiceObjectReference",
+    "id": "lange000000000000001",
+    "displayName": "English"
+  },
+  "facility_id": null,
+  "vendor_id": null,
+  "max_ct": 0,
+  "max_book": 0,
+  "min_ct": 0,
+  "disp_for_web": true,
+  "disp_for_call_center": true,
+  "open_enroll": null,
+  "open_enroll_for_all": null,
+  "enroll_close": null,
+  "post_order": null,
+  "post_completion": null,
+  "stop_auto_promotion": null,
+  "vleInfo": null,
+  "do_not_drop_post": null,
+  "enforced_seq": "100",
+  "start_date": {
+    "@type": "com.saba.customtypes.DateWithLocale",
+    "dateInUserTimeZone": "01/09/2017",
+    "timeInUserTimeZone": "3:00 AM",
+    "timeInCustomTimeZone": null,
+    "dateInCustomTimeZone": null,
+    "customTimeZoneDate": 0,
+    "timeInStandardFormat": "5:00 AM",
+    "dateInStandardFormat": "01/09/2017",
+    "timeInLocale": "5:00 AM",
+    "locale": "01/09/2017",
+    "date": 1483966800000
+  },
+  "duration": 0,
+  "name": "merge1",
+  "language": {
+    "@type": "ServiceObjectReference",
+    "id": "lange000000000000001",
+    "displayName": "English"
+  },
+  "resources": [
+    "list",
+    []
+  ],
+  "location": {
+    "@type": "ServiceObjectReference",
+    "id": "locat000000000001001",
+    "displayName": "Location2"
+  },
+  "actions": null,
+  "id": "class000000000201505",
+  "description": "",
+  "status": "Open - Normal"
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

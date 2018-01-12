@@ -1,0 +1,229 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="copyright" content="(C) Copyright 2018">
+    <meta name="DC.rights.owner" content="(C) Copyright 2018">
+    <meta name="DC.Type" content="topic">
+    <meta name="DC.Coverage" content="DRAFT">
+    <meta name="DC.subject" content="common, restful web services">
+    <meta name="keywords" content="common, restful web services">
+    <meta name="DC.Relation" scheme="URI" content="../developer/part-restwebservices.html">
+    <meta name="prodname" content="REST API Reference">
+    <meta name="version" content="">
+    <meta name="release" content="">
+    <meta name="modification" content="">
+    <meta name="DC.Creator" content="">
+    <meta name="DC.Format" content="XHTML">
+    <meta name="DC.Identifier" content="d0e656">
+	  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../commonltr.css">
+	<style>
+	table {
+		line-height:28px;
+	}
+
+	h5 {
+		font-weight : bold;
+		color : darkcyan;
+		letter-spacing: 1px;
+	}
+	article .topic {
+		margin-top:20px;
+	}
+	tr th {
+		padding-left:10px;
+	}
+	tr td {
+		padding-left:10px;
+	}
+
+  </style>
+    <title>Common</title>
+</head>
+
+<body id="d0e656">
+    <main role="main">
+        <article role="article" aria-labelledby="ariaid-title1">
+            <article class="topic nested1" aria-labelledby="ariaid-title2" id="topic_rcd_c3y_nh">
+                <h4 class="title topictitle2" id="ariaid-title2">Extracting Component Privileges</h4>
+                <article class="topic nested2" aria-labelledby="ariaid-title3" id="topic_jpn_55m_qj">
+                    <h5 class="title topictitle3" id="ariaid-title3">Retrieve all privileges for a component</h5>
+                    <div class="body">
+                        <p class="p">To extract all the privileges&nbsp;the user has for a particular component invoke the following URL
+                            using the
+                            <strong class="ph b">GET</strong> method:</p>
+                        <p class="p">https://
+                            <span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>/v1/
+                            <span class="keyword parmname">&lt;component_name&gt;</span>/meta/privileges </p>
+                        <div class="p">
+                            <strong class="ph b">Output:</strong>
+                            <pre class="pre codeblock"><code>{ "privileges" : [ { 
+        "name" : "view",
+        "sequence" : "6"
+      } ] 
+}</code></pre>
+                        </div>
+                        <p class="p">For example, to extract all the privileges for the
+                            <em class="ph i">people</em> (internal) component:
+                        </p>
+                        <p class="p">https://
+                            <span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>/v1/people/meta/privileges?type=internal </p>
+                    </div>
+                </article>
+                <article class="topic nested2" aria-labelledby="ariaid-title4" id="topic_yrd_zp2_gk">
+                    <h5 class="title topictitle3" id="ariaid-title4">Retrieve all privileges for a component in the given domain</h5>
+                    <div class="body">
+                        <p class="p">To extract all the privileges the user has&nbsp;for a particular component in the given domain invoke
+                            the following URL using the
+                            <strong class="ph b">GET</strong> method:</p>
+                        <p class="p">https://
+                            <span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>/v1/
+                            <span class="keyword parmname">&lt;component_name&gt;</span>/meta/privileges?domain=
+                            <span class="keyword parmname">&lt;domain_id&gt;</span>
+                        </p>
+                        <div class="p">
+                            <strong class="ph b">Output:</strong>
+                            <pre class="pre codeblock"><code>{ "privileges" : [ { 
+        "granted" : "true",
+        "name" : "view",
+        "sequence" : "6"
+      } ] 
+}</code></pre>
+                        </div>
+                        <p class="p">For example, to extract all the privileges for the
+                            <em class="ph i">people</em>
+                            (
+                            <em class="ph i">internal</em>) component in the domain
+                            <em class="ph i">domin000000000000001</em>:</p>
+                        <p class="p">https://
+                            <span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>/v1/people/meta/privileges?type=internal&amp;domain=domin000000000000001
+                            </p>
+                    </div>
+                </article>
+                <article class="topic nested2" aria-labelledby="ariaid-title5" id="topic_k4r_rq2_gk">
+                    <h5 class="title topictitle3" id="ariaid-title5">Retrieve specific privileges for a component in the given domain</h5>
+                    <div class="body">
+                        <p class="p">To extract only specific privileges the user has&nbsp;for a particular component in the given domain
+                            invoke the following URL using the
+                            <strong class="ph b">GET</strong> method:</p>
+                        <p class="p">https://
+                            <span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>/v1/
+                            <span class="keyword parmname">&lt;component_name&gt;</span>/meta/privileges:(
+                            <span class="keyword parmname">&lt;priv_sequence1&gt;</span>,
+                            <span class="keyword parmname">&lt;priv_sequence2..&gt;</span>)?domain=
+                            <span class="keyword parmname">&lt;domain_id&gt;</span>
+                        </p>
+                        <div class="p">
+                            <strong class="ph b">Output:</strong>
+                            <pre class="pre codeblock"><code>{ "privileges" : [ { 
+        "granted" : "true",
+        "name" : "view",
+        "sequence" : "6"
+      } ] 
+}</code></pre>
+                        </div>
+                        <p class="p">For example, to extract the privileges
+                            <em class="ph i">1,2,7</em> for the
+                            <em class="ph i">people</em>
+                            (internal) component in the domain
+                            <em class="ph i">domin00000000000000</em>:</p>
+                        <p class="p">https://
+                            <span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>/v1/people/meta/privileges:(1,2,7)?type=internal&amp;domain=domin00000000000000
+                            </p>
+                    </div>
+                </article>
+                <article class="topic nested2" aria-labelledby="ariaid-title6" id="topic_l2v_sr2_gk">
+                    <h5 class="title topictitle3" id="ariaid-title6">Retrieve privileges for a particular instance of a component</h5>
+                    <div class="body">
+                        <p class="p">To extract privileges the user has&nbsp;for a particular instance of a given component invoke the
+                            following URL using the
+                            <strong class="ph b">GET</strong> method:</p>
+                        <p class="p">https://
+                            <span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>/v1/
+                            <span class="keyword parmname">&lt;component_name&gt;</span>/
+                            <span class="keyword parmname">
+                                /&lt;instance_id&gt;</span>/meta/privileges:(
+                            <span class="keyword parmname">&lt;priv_sequence1&gt;</span>,
+                            <span class="keyword parmname">&lt;priv_sequence2..&gt;</span>)</p>
+                        <div class="p">
+                            <strong class="ph b">Output:</strong>
+                            <pre class="pre codeblock"><code>{ "privileges" : [ { 
+        "granted" : "true",
+        "name" : "view",
+        "sequence" : "6"
+      } ] 
+}</code></pre>
+                        </div>
+                        <p class="p">For example, to extract the privileges
+                            <em class="ph i">2,6</em> for the employee (instance)
+                            <em class="ph i">emplo000000000001000</em> belonging to the
+                            <em class="ph i">people</em> component in the domain
+                            <em class="ph i">domin000000000000001</em>:</p>
+                        <p class="p">https://
+                            <span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>/v1/people/emplo000000000001000/meta/privileges:(2,6)?domain=
+                            domin000000000000001 </p>
+                    </div>
+                </article>
+                <article class="topic nested2" aria-labelledby="ariaid-title7" id="topic_yjd_xs2_gk">
+                    <h5 class="title topictitle3" id="ariaid-title7">Retrieve access control for specific attributes of a component </h5>
+                    <div class="body">
+                        <p class="p">To extract access control for specific attributes of a component invoke the following URL using the
+                            <strong class="ph b">GET</strong> method:</p>
+                        <div class="p">https://
+                            <span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>/v1/
+                            <span class="keyword parmname">&lt;component_name&gt;</span>/
+                            <span class="keyword parmname">
+                                /&lt;instance_id&gt;</span>/meta/privileges:(
+                            <span class="keyword parmname">&lt;priv_sequence1&gt;:&lt;attr_name&gt;</span>,
+                            <span class="keyword parmname">&lt;priv_sequence2:&lt;attr_name&gt;..&gt;</span>)
+                            <div class="note note note_note">
+                                <span class="note__title">Note:</span> This REST web service throws an error if an attribute name is incorrect.
+                            </div>
+                        </div>
+                        <div class="p">
+                            <strong class="ph b">Output:</strong>
+                            <pre class="pre codeblock"><code>{ "privileges" : [ { 
+        "attribute" : "fname",
+        "granted" : true,
+        "name" : "Edit",
+        "sequence" : 2
+      },
+      { "attribute" : "addr1",
+        "granted" : true,
+        "name" : "View",
+        "sequence" : 6
+      }
+    ] 
+}</code></pre>
+                        </div>
+                        <p class="p">For example, to extract the access control for the
+                            <em class="ph i">fname</em> and
+                            <em class="ph i">addr1</em>
+                            attributes of the privileges
+                            <em class="ph i">2,6</em> for the employee (instance)
+                            <em class="ph i">emplo000000000001000</em> belonging to the
+                            <em class="ph i">people</em> component in the domain
+                            <em class="ph i">domin000000000000001</em>:</p>
+                        <p class="p">https://
+                            <span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>/v1/people/emplo000000000001000/meta/privileges:(2:fname,6:addr1)?domain=
+                            domin000000000000001
+                        </p>
+                        <div class="p">
+                            <div class="note note note_note">
+                                <span class="note__title">Note:</span> Refer to
+                                <a class="xref" href="restwebservices-people-get-started.html#topic_lzm_zmv_z4">Attributes for the People end point</a> for attributes that can be used with this REST web
+                                service.</div>
+                        </div>
+                    </div>
+                </article>
+            </article>
+        </article>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="platform, restful web services, get the list of data extract jobs, platform components, get the list of data extract jobs, schedule data extract job, schedule data extract job">
+  <meta name="keywords" content="platform, restful web services, get the list of data extract jobs, platform components, get the list of data extract jobs, schedule data extract job, schedule data extract job">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-platform.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Data Extract</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title3">SCHEDULE DATA EXTRACT JOB</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Allows scheduling a data extract job.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">POST</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/dataextract/job/:id/scheduleJob</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_n5w_5lx_fp__table_u5w_5lx_fp" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 2. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__1 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__2 ">@type of request body</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__3 ">deschedule</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__1 ">id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__2 ">Data Extract Job's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__1 ">occurenceType</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__2 "> <p class="p">Frequency of data extract. </p> 
+        <div class="p"> 
+         <table id="reference_n5w_5lx_fp__table_emb_mvm_w5" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+          <caption></caption>
+          <colgroup>
+           <col style="width:31.25%">
+           <col style="width:19.53125%">
+           <col style="width:22.460937499999996%">
+           <col style="width:26.7578125%">
+          </colgroup>
+          <thead class="thead"> 
+           <tr> 
+            <th class="entry" id="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__1"> <strong class="ph b">Input Fields</strong> </th> 
+            <th class="entry" id="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2" colspan="3"> <strong class="ph b">Frequency</strong> </th> 
+           </tr> 
+          </thead>
+          <tbody class="tbody"> 
+           <tr> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__1 "> occurenceType </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> DAILY </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> WEEKLY </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> MONTHLY </td> 
+           </tr> 
+           <tr> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__1 "> startDate </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> Required </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> Required </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> Required </td> 
+           </tr> 
+           <tr> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__1 "> endDate </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> Required </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> Required </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> Required </td> 
+           </tr> 
+           <tr> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__1 "> weeklyMask </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> null </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> Required </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> null </td> 
+           </tr> 
+           <tr> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__1 "> dayOfMonth </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> 0 </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> 0 </td> 
+            <td class="entry" headers="reference_n5w_5lx_fp__table_emb_mvm_w5__entry__2 "> Required </td> 
+           </tr> 
+          </tbody>
+         </table> 
+        </div> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__3 ">[ "DAILY", "WEEKLY", "MONTHLY" ]</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__4 ">enumerated</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__1 ">startDate</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__2 "> <p class="p">Start Date of data extract</p> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__3 ">{"@type":"date", <p class="p">"datetime":"2016-01-22 7:30:00"}</p></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__1 ">endDate</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__2 "> <p class="p">End Date of data extract</p> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__3 ">{"@type":"date", <p class="p">"datetime":"2017-01-22 7:30:00"} </p></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__1 ">dayOfMonth</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__2 "> <p class="p">Used only for monthly extract. Value can be from 1 to 31</p> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__3 ">0</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__1 ">weeklyMask</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__2 "> <p class="p">Used only for weekly extract. First bit represents Monday and last bit represents Sunday. Use only for weekly occurrence, otherwise the value should be null.</p> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__3 ">0,0,0,0,0,0,0</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5> 
+    <pre class="pre codeblock"><code>{
+ "@type": "deschedule",
+ "occurenceType": "WEEKLY",
+ "startDate": {
+  "@type": "date",
+  "datetime": "2016-01-20 8:30:00"
+ },
+ "endDate": {
+  "@type": "date",
+  "datetime": "2016-01-28 00:00:00"
+ },
+ "weeklyMask": "0,0,0,0,0,0,1,",
+"dayOfMonth": 0
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "@type": "com.saba.integration.dataextract.presentation.DataExtractJobInfo",
+    "name": "test3",
+    "id": "exdfn0000001e8a663a0152449cd6ff00658c",
+    "fileName": "test3.csv",
+    "separator": ",",
+    "description": "test",
+    "encryptEnabled": true,
+    "status": "ENABLED",
+    "schedule": {
+        "@type": "com.saba.integration.dataextract.presentation.DataExtractJobScheduleInfo",
+        "timeZone": "India Standard Time",
+        "nextFireTime": {
+            "@type": "com.saba.customtypes.DateWithLocale",
+            "date": 1458784800000,
+            "locale": "03/24/2016",
+            "timeInLocale": "7:30 AM",
+            "dateInUserTimeZone": "03/23/2016",
+            "timeInUserTimeZone": "7:00 PM",
+            "timeInCustomTimeZone": null,
+            "dateInCustomTimeZone": null,
+            "customTimeZoneDate": 0,
+            "timeInStandardFormat": "7:30 AM",
+            "dateInStandardFormat": "03/24/2016"
+        },
+        "prevFireTime": {
+            "@type": "com.saba.customtypes.DateWithLocale",
+            "date": -1,
+            "locale": "01/01/1970",
+            "timeInLocale": "5:29 AM",
+            "dateInUserTimeZone": "12/31/1969",
+            "timeInUserTimeZone": "3:59 PM",
+            "timeInCustomTimeZone": null,
+            "dateInCustomTimeZone": null,
+            "customTimeZoneDate": 0,
+            "timeInStandardFormat": "5:29 AM",
+            "dateInStandardFormat": "01/01/1970"
+        },
+        "cronExprMessage": "At 7:30 AM, only on Thursday",
+        "endDate": {
+            "@type": "com.saba.customtypes.DateWithLocale",
+            "date": 1485050400000,
+            "locale": "01/22/2017",
+            "timeInLocale": "7:30 AM",
+            "dateInUserTimeZone": "01/21/2017",
+            "timeInUserTimeZone": "6:00 PM",
+            "timeInCustomTimeZone": null,
+            "dateInCustomTimeZone": null,
+            "customTimeZoneDate": 0,
+            "timeInStandardFormat": "7:30 AM",
+            "dateInStandardFormat": "01/22/2017"
+        },
+        "startDate": {
+            "@type": "com.saba.customtypes.DateWithLocale",
+            "date": 1458612000000,
+            "locale": "03/22/2016",
+            "timeInLocale": "7:30 AM",
+            "dateInUserTimeZone": "03/21/2016",
+            "timeInUserTimeZone": "7:00 PM",
+            "timeInCustomTimeZone": null,
+            "dateInCustomTimeZone": null,
+            "customTimeZoneDate": 0,
+            "timeInStandardFormat": "7:30 AM",
+            "dateInStandardFormat": "03/22/2016"
+        }
+    },
+    "queries": [
+        "list",
+        [
+            {
+                "@type": "com.saba.integration.dataextract.presentation.DataExtractQueryInfo",
+                "id": "exjqy0000001e8a663a0152449cd6ff00658b",
+                "queryId": "exqry00000000e827efc014936b79a2101fc1",
+                "queryName": "Course Details"
+            }
+        ]
+    ],
+    "siteName": "SabaSite",
+    "createdOn": {
+        "@type": "com.saba.customtypes.DateWithLocale",
+        "date": 1452855541000,
+        "locale": "01/15/2016",
+        "timeInLocale": "4:29 PM",
+        "dateInUserTimeZone": "01/15/2016",
+        "timeInUserTimeZone": "2:59 AM",
+        "timeInCustomTimeZone": null,
+        "dateInCustomTimeZone": null,
+        "customTimeZoneDate": 0,
+        "timeInStandardFormat": "4:29 PM",
+        "dateInStandardFormat": "01/15/2016"
+    },
+    "updatedBy": "admin",
+    "updatedOn": {
+        "@type": "com.saba.customtypes.DateWithLocale",
+        "date": 1452855541000,
+        "locale": "01/15/2016",
+        "timeInLocale": "4:29 PM",
+        "dateInUserTimeZone": "01/15/2016",
+        "timeInUserTimeZone": "2:59 AM",
+        "timeInCustomTimeZone": null,
+        "dateInCustomTimeZone": null,
+        "customTimeZoneDate": 0,
+        "timeInStandardFormat": "4:29 PM",
+        "dateInStandardFormat": "01/15/2016"
+    },
+    "createdBy": "admin"
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

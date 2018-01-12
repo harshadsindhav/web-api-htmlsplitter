@@ -1,0 +1,508 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all courses, learning components, find the details of the courses, find the details of the courses, find the details of the course (using post - range based search), find the details of the course (using post - range based search), get the details of a particular course, get the details of a particular course, get the meta details of course, get the meta details of course, create a new course, update the details of a course, update the details of a course">
+  <meta name="keywords" content="learning, restful web services, get all courses, learning components, find the details of the courses, find the details of the courses, find the details of the course (using post - range based search), find the details of the course (using post - range based search), get the details of a particular course, get the details of a particular course, get the meta details of course, get the meta details of course, create a new course, update the details of a course, update the details of a course">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Course</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title8">UPDATE DETAILS OF A COURSE</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Update a course</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">PUT</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course/:courseid</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_vlg_lnx_fp__table_nmg_lnx_fp" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 5. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">courseid</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Course's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">cours000000000202108</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">featured</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Whether featured?</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">validTill</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Valid till</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">description</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Description</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">TestCourse12</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">avail_web</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Available for web?</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">true</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">training_units</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Training Units</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">notifyBefore</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Notify Before</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">1</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">avail_call_center</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Available for Call Center?</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">true</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">price</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Price</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">"null"</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">avail_from</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Available From</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">2013-11-12T00:00:00</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">recertWindow</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Recertification window</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">disc_from</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Discontinued from</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">2017-11-12T00:00:00</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">min_ct</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Min Count</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">version</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Version</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">title</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Title</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">tets</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">published</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Published?</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">max_ct</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Max Count</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">abstrac</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Abstract</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">"null"</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">audienceType</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Audience Type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">target_days</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Target Days As Int</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">course_no</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Course No</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">00006713</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">discontinued</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Discontinued?</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">displayName</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Display Name</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">"null"</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">domain</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Security Domain</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 "> <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">field_of_study</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Field of study</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 "> <pre class="pre codeblock"><code>{
+        "fosId": {
+            "id": "fldst000000000001001"
+        },
+        "credits": "2"
+}</code></pre> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">required_prerequisites</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Required prerequisites</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 "> <pre class="pre codeblock"><code>{
+        "courseId": {
+            "id": "cours000000000202785"
+}</code></pre> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">recommended_prerequisites</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Recommended prerequisites</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 "> <pre class="pre codeblock"><code>{
+        "courseId": {
+            "id": "cours000000000202785"
+}</code></pre> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">customValues</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Custom fields</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">"custom0": "1"</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">csr_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Customer Service Representative</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">{ "id": "emplo000000000533317", "displayName": "user one" }</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">showRegCustom</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Allows you to determine if custom fields must be displayed to users during registration of a particular course. Accepts true/false.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">showDropCustom</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Allows you to determine if custom fields must be displayed to users during cancellation of a particular course. Accepts true/false.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">language</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Allows adding associated languages.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">"language":[ { "language_id":{ "id":"lange000000000000029", "displayName":"Arabic" } }, { "language_id":{ "id":"lange000000000000001", "displayName":"English" } }]</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    Enabling fields on registration and cancellation and making them required is only supported, if a default value is present in the field. 
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> Enabling required fields on courses that previously did not require additional information will result in errors when dropping classes registered for prior to enablement.
+    </div>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5>
+    <pre class="pre codeblock"><code>{  
+   "featured":"false",
+   "validTill":"0",
+   "type":"0",
+   "domain":{  
+      "displayName":"Domain2"
+   },
+   "audienceType":[  
+      {  
+         "audience_type_id":{  
+            "id":"audie000000000200000",
+            "displayName":"CustomerType1"
+         }
+      }
+   ],
+   "required_prerequisites":[  
+      {  
+         "courseId":{  
+            "id":"cours000000000202785"
+         }
+      },
+      {  
+         "courseNumber":"A"
+      }
+   ],
+   "recommended_prerequisites":[  
+      {  
+         "courseNumber":"WBT_BASE"
+      },
+      {  
+         "courseId":{  
+            "id":"cours000000000200026"
+         }
+      },
+      {  
+         "courseNumber":"EMAY"
+      }
+   ],
+   "field_of_study":[  
+      {  
+         "fosId":{  
+            "id":"fldst000000000001001"
+         },
+         "credits":"2"
+      },
+      {  
+         "fosId":{  
+            "displayName":"FOS1"
+         },
+         "credits":"5"
+      }
+   ],
+   "version":"v15",
+   "customValues":{  
+      "@type":"map",
+      "custom0":"1",
+      "custom11":null,
+      "custom10":null,
+      "custom9":null,
+      "custom13":null,
+      "custom12":null,
+      "custom14":null,
+      "custom3":null,
+      "custom4":null,
+      "custom1":null,
+      "custom2":null,
+      "custom7":null,
+      "custom8":null,
+      "custom5":null,
+      "custom6":null
+   },
+   "language":[  
+   {  
+      "language_id":{  
+         "id":"lange000000000000029",
+         "displayName":"Arabic"
+      }
+   },
+   {  
+      "language_id":{  
+         "id":"lange000000000000001",
+         "displayName":"English"
+      }
+   }],
+   "description":"hi, this is interesting",
+   "avail_web":"true",
+   "traininig_units":"12",
+   "avail_call_center":"true",
+   "avail_from":"2013-08-12T00:00:00",
+   "recertWindow":"0",
+   "disc_from":"2018-11-12T00:00:00",
+   "title":"New_sept15",
+   "abstrac":"null",
+   "target_days":"0",
+   "course_no":"00006728",
+   "published":"false",
+   "discontinued":"false",
+   "allPrices":[  
+      {  
+         "amount":200,
+         "curr_id":{  
+            "id":"crncy000000000000070",
+            "displayName":"Indian Rupees"
+         }
+      },
+      {  
+         "amount":10,
+         "curr_id":{  
+            "id":"crncy000000000001189",
+            "displayName":"Currency1"
+         }
+      }
+   ],
+   "showRegCustom": "false",
+   "showDropCustom": "false"
+}</code></pre>The lookup support is now available for this REST API.
+    <table id="reference_vlg_lnx_fp__table_jbt_yrn_kx" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption></caption>
+     <colgroup>
+      <col>
+      <col>
+      <col>
+     </colgroup>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry"> <strong class="ph b">JSON Attribute</strong> </td> 
+       <td class="entry"> <strong class="ph b">UI Attribute</strong> </td> 
+       <td class="entry"> <strong class="ph b">Component Name</strong> </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> securityDomain </td> 
+       <td class="entry"> Domain name </td> 
+       <td class="entry"> Domain </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> vendor_id </td> 
+       <td class="entry"> Vendor </td> 
+       <td class="entry"> Organization, External </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Field_of_study </td> 
+       <td class="entry"> Field Of Study </td> 
+       <td class="entry"> FieldOfStudy </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> required_prerequisites </td> 
+       <td class="entry"> Catalog Prerequisites </td> 
+       <td class="entry"> Course </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Csr_id </td> 
+       <td class="entry"> Customer Service Representative </td> 
+       <td class="entry"> Person, Internal </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Recommended_prerequisites </td> 
+       <td class="entry"> Catalog Prerequisites </td> 
+       <td class="entry"> Course </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> audienceType </td> 
+       <td class="entry"> Audience Type / Audience Sub Type </td> 
+       <td class="entry"> Audience Type </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> allPrices </td> 
+       <td class="entry"> Price </td> 
+       <td class="entry"> Currency </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> language_id</td> 
+       <td class="entry"> Language</td> 
+       <td class="entry"> Language</td> 
+      </tr> 
+     </tbody>
+    </table>
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> Even if the 
+     <strong class="ph b">suppress_score</strong> field is passed as part of the Request Body, it will not be updated. This also does not raise any exception. 
+    </div>
+   </section> 
+  </div>
+ </body>
+</html>

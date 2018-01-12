@@ -1,0 +1,219 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all training unit agreements, learning components, get all training unit agreements, get the details of a particular training unit agreement, get the details of a particular training unit agreement, get the meta details of training unit agreement, get the meta details of training unit agreement, find the details of the training unit agreement, find the details of the training unit agreement, create a new training unit agreement, create a new training unit agreement, update the details of a training unit agreement, update the details of a training unit agreement, delete a particular training unit agreement, delete a particular training unit agreement">
+  <meta name="keywords" content="learning, restful web services, get all training unit agreements, learning components, get all training unit agreements, get the details of a particular training unit agreement, get the details of a particular training unit agreement, get the meta details of training unit agreement, get the meta details of training unit agreement, find the details of the training unit agreement, find the details of the training unit agreement, create a new training unit agreement, create a new training unit agreement, update the details of a training unit agreement, update the details of a training unit agreement, delete a particular training unit agreement, delete a particular training unit agreement">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Training Unit Agreement</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title6">CREATE A NEW TRAINING UNIT AGREEMENT</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Allows creating a new training unit agreement.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">POST</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/tuagreement</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_msd_l4x_fp__table_wsd_l4x_fp" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 3. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__1 ">owner_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__2 ">Organization for Training Unit Agreement</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__3 ">{"id": "cmpny000000000001001","displayName": "ExtOrganization"}</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__1 ">order_contact</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__2 ">Order contact for Training Unit Agreement</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__3 ">{"id": "persn000000000200327","displayName": "aaa"}" </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__1 ">expiration_date</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__2 ">Expiration date for Training Unit Agreement</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__1 ">trainingunit_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__2 ">Trainingunit for Training Unit Agreement</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__3 ">{"id": "tunit000000000001020","displayName": "Training_unit_1"} </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__1 ">no_unit</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__2 ">No of units for Training Unit Agreement</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__3 ">1</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__1 ">currency</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__2 ">Currency</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__3 "> {"id": "crncy000000000000001","displayName": "US Dollars"} </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__1 ">paymentType</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__2 ">Payment Type for Training Unit Agreement
+        <div class="note note note_note">
+         <span class="note__title">Note:</span> Acceptable values: 
+         <ul class="ul" id="reference_msd_l4x_fp__ul_q4q_qdm_mv"> 
+          <li class="li">creditCard</li> 
+          <li class="li">paypal </li> 
+          <li class="li">invoiceMe </li> 
+         </ul>
+        </div></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__3 ">creditCard</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__1 ">paymentTransactionId</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__2 ">Payment Transaction ID for Training Unit Agreement</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__3 ">axxccssxx1001</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__1 ">invoiceRequest </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__2 ">Payment using InvoiceMe for Training Unit Agreement </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__3 ">{"details":"Payment by invoice","custom0":"abc","custom1":"def","custom2":"Ok","custom9":"9th"}</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_msd_l4x_fp__table_wsd_l4x_fp__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5>
+    <pre class="pre codeblock"><code>{  
+   "currency":{  
+      "displayName":"USD"
+   },
+   "expiration_date":"2016-11-20T04:00:00.000-0400",
+   "no_unit":"2",
+   "owner_id":{  
+      "id":"cmpny000000000001003"
+   },
+   "paymentTransactionId":"SURF Non Credit Card",
+   "paymentType":"invoiceMe",
+   "invoiceRequest":{  
+      "details":"Payment by invoice",
+      "custom0":"0",
+      "custom1":"1",
+      "custom2":"2",
+      "custom3":"3",
+      "custom4":"4",
+      "custom5":"5",
+      "custom6":"6",
+      "custom7":"7",
+      "custom8":"8",
+      "custom9":"9"
+   },
+   "trainingunit_id":{  
+      "id":"tunit000000000001401"
+   }
+}</code></pre>The lookup support is now available for this REST API.
+    <table id="reference_msd_l4x_fp__table_lzy_d5n_kx" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption></caption>
+     <colgroup>
+      <col>
+      <col>
+      <col>
+     </colgroup>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry"> <strong class="ph b">JSON Attribute</strong> </td> 
+       <td class="entry"> <strong class="ph b">UI Attribute</strong> </td> 
+       <td class="entry"> <strong class="ph b">Component Name</strong> </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> owner_Id </td> 
+       <td class="entry"> Organisation </td> 
+       <td class="entry"> Organization, External </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> order_contact </td> 
+       <td class="entry"> Order_contact </td> 
+       <td class="entry"> Person </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> trainingunit_id </td> 
+       <td class="entry"> Training Unit </td> 
+       <td class="entry"> Training Unit </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> currency </td> 
+       <td class="entry"> Currency </td> 
+       <td class="entry"> Currency </td> 
+      </tr> 
+     </tbody>
+    </table>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+  "id": "tutpo000000000001407",
+  "displayName": null,
+  "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/tuagreement/tutpo000000000001407"
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

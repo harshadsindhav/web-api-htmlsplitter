@@ -1,0 +1,181 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get held certification/curriculum activity details, learning components, get held certification/curriculum activity details, get completion and lesson details of the learning event, get completion and lesson details of the learning event, get held certification/curriculum details along with all the activities, get held certification/curriculum details along with all the activities, search all the certifications/curricula assigned to a learner based on the status, timestamp, search all the certifications/curricula assigned to a learner based on the status, timestamp, search certifications/curricula of the logged in user, search certifications/curricula of the logged in user, auto-enroll learners into courses inside the certification/curriculum, auto-enroll learners into courses inside the certification/curriculum, assign certification/curriculum to a person, assign certification/curriculum to a person, grant certification/curriculum to a learner, grant certification/curriculum to a learner, update the target days/date for the assigned certification/curriculum activity, update the target days/date for the assigned certification/curriculum activity, update the expiration date of the held certification, update the expiration date of the held certification, remove the certification/curriculum activity of a learner, remove the certification/curriculum activity of a learner, get the meta details of the course activity, get the meta details of the course activity, get the details of a particular course activity, get the details of a particular course activity, get all the course activities of the logged in user, get all the course activities of the logged in user, find the details of the course activities based on criteria, find the details of the course activities based on criteria, assign a course to a person, assign a course to a person, update the details of a course activity, update the details of a course activity, remove a course from a learner, remove a course from a learner">
+  <meta name="keywords" content="learning, restful web services, get held certification/curriculum activity details, learning components, get held certification/curriculum activity details, get completion and lesson details of the learning event, get completion and lesson details of the learning event, get held certification/curriculum details along with all the activities, get held certification/curriculum details along with all the activities, search all the certifications/curricula assigned to a learner based on the status, timestamp, search all the certifications/curricula assigned to a learner based on the status, timestamp, search certifications/curricula of the logged in user, search certifications/curricula of the logged in user, auto-enroll learners into courses inside the certification/curriculum, auto-enroll learners into courses inside the certification/curriculum, assign certification/curriculum to a person, assign certification/curriculum to a person, grant certification/curriculum to a learner, grant certification/curriculum to a learner, update the target days/date for the assigned certification/curriculum activity, update the target days/date for the assigned certification/curriculum activity, update the expiration date of the held certification, update the expiration date of the held certification, remove the certification/curriculum activity of a learner, remove the certification/curriculum activity of a learner, get the meta details of the course activity, get the meta details of the course activity, get the details of a particular course activity, get the details of a particular course activity, get all the course activities of the logged in user, get all the course activities of the logged in user, find the details of the course activities based on criteria, find the details of the course activities based on criteria, assign a course to a person, assign a course to a person, update the details of a course activity, update the details of a course activity, remove a course from a learner, remove a course from a learner">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Learning Event</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title7">AUTO-ENROLL LEARNERS INTO COURSES INSIDE THE CERTIFICATION/CURRICULUM</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5>
+    <div class="p">
+     Auto-enrolls the learners into courses inside the certification/curriculum.
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> The logic used for determining which offerings to enroll in is based on the UI workflow of the application.
+     </div>
+    </div>Auto-enrolling is applicable only to: 
+    <ul class="ul" id="reference_yv4_3h5_zx__ul_ckn_zl3_zx"> 
+     <li class="li">Certifications and curricula that have one-click learning enabled. </li> 
+     <li class="li">Both internal and external orders. </li> 
+     <li class="li">Certifications/Curricula containing a blended program that is applicable to the learner being registered. </li> 
+     <li class="li">Zero cost orders. For external orders, this is the effective cost of the order after considering any discounts. This does not apply to internal orders. </li> 
+    </ul>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">POST</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/autoenroll</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_yv4_3h5_zx__table_qw4_3h5_zx" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 6. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__1 ">learningEvent</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__2 ">Learning Event Input. Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Certification/Curriculum).</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__3 ">{\"id\":\"crtfy000000000200994\", \"displayName\":\"cert_zero_order_error\", \"type\" : \"certification\"}</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__1 ">orderContact</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__2 ">Order Contact. Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Person).</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__3 "> {\"id\":\"persn000000000001028\", \"displayName\":\"cfour\"} </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__1 ">learner</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__2 ">Learner to which the learning event would be enrolled and course enrolled. Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Person).</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__3 ">{\"id\":\"persn000000000001028\", \"displayName\":\"cfour\"} </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__1 ">targetDate</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__2 ">Target Date</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__3 ">2016-11-29</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h5_zx__table_qw4_3h5_zx__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5> 
+    <pre class="pre codeblock"><code>{
+ "learningEvent" : {
+  "id" : "crtfy000000000200994",
+  "displayName" : "cert_1",
+  "type" : "certification"
+ },
+ "orderContact" : {
+  "id" : "persn000000000001028",
+  "displayName" : "cfour"
+ },
+ "learner" : {
+  "id" : "persn000000000001028",
+  "displayName" : "cfour"
+ },
+ "targetDate" : "2016-11-29"
+}</code></pre> 
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> Lookup is supported in the input JSON for "learningEvent", "orderContact" and "learner".
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+  "order": {
+    "orderItemDetail": [
+      {
+        "orderItem": {
+          "id": "iodwn000000000007656",
+          "status": "Pending Approval"
+        },
+        "part": {
+          "displayName": "course_zero_order_1",
+          "id": "dowbt000000000003386",
+          "href": "http://&lt;hostname-api.sabacloud.com&gt;/offering/dowbt000000000003386"
+        },
+        "registration": {
+          "id": "regdw000000000006341",
+          "href": "http://&lt;hostname-api.sabacloud.com&gt;/enrollment/regdw000000000006341"
+        }
+      }
+    ],
+    "heldLearningEvent": {
+      "id": "stuce000000000202759",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/learning/heldlearningevent/stuce000000000202759"
+    },
+    "warnings": [
+      {
+        "message": " Approval is required to register.",
+        "key": "140507"
+      }
+    ],
+    "orderStatus": {
+      "description": "Confirmed",
+      "key": "100"
+    },
+    "id": "intor000000000209258",
+    "href": "http://&lt;hostname-api.sabacloud.com&gt;/learning/order/intor000000000209258"
+  }
+}</code></pre> 
+    <div class="p">
+     In case of an error while creating the order, the transaction is rolled back and the error message is given as the output:
+     <pre class="pre codeblock"><code>{
+  "errorMessage":  " You are not authorized to perform this action."
+} </code></pre>
+    </div> 
+   </section> 
+  </div>
+ </body>
+</html>

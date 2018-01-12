@@ -1,0 +1,111 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="foundation, restful web services, like or dislike a resource, foundation components, like or dislike a resource, delete likes or dislikes of a resource, delete likes or dislikes of a resource, get comment details of a resource, get comment details of a resource, get like details of a resource, get like details of a resource, post a comment on a resource, post a comment on a resource, get social interactions of a user, get social interactions of a user">
+  <meta name="keywords" content="foundation, restful web services, like or dislike a resource, foundation components, like or dislike a resource, delete likes or dislikes of a resource, delete likes or dislikes of a resource, get comment details of a resource, get comment details of a resource, get like details of a resource, get like details of a resource, post a comment on a resource, post a comment on a resource, get social interactions of a user, get social interactions of a user">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-social.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Interactions</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title5">GET LIKE DETAILS OF A RESOURCE</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Gets like details of a resource.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/:resourceId/likes?summary=:summary</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_vhk_tgv_py__table_whk_tgv_py" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 4. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vhk_tgv_py__table_whk_tgv_py__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vhk_tgv_py__table_whk_tgv_py__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vhk_tgv_py__table_whk_tgv_py__entry__3">Default Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vhk_tgv_py__table_whk_tgv_py__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_vhk_tgv_py__table_whk_tgv_py__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__1 ">resourceId </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__2 ">ID of the resource</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__1 ">summary</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__2 ">Show only Summary. Accepts true/false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "likeDetails": [
+        {
+            "createdOn": "2016-12-02T12:31:04.473+0000",
+            "personDetail": {
+                "emailId": "uuuu@111.com",
+                "jobTitle": "gytfhhh",
+                "firstName": "user",
+                "lastName": "one",
+                "personNo": "UONE",
+                "actorId": "emplo000000000533317",
+                "uri": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000533317",
+                "username": "UONE"
+            },
+            "id": "fbbas000000000030031"
+        }
+    ],
+    "totalLikes": 1,
+    "totalDislikes": 0
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

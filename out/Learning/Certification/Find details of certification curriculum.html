@@ -1,0 +1,499 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get the details of a certification, learning components, get the details of a certification, find the details of the certification/curriculum, find the details of the certification/curriculum, find the details of the certification/curriculum (using post - range based search), find the details of the certification/curriculum (using post - range based search), create a new certification, create a new certification, update the details of a certification, update the details of a certification">
+  <meta name="keywords" content="learning, restful web services, get the details of a certification, learning components, get the details of a certification, find the details of the certification/curriculum, find the details of the certification/curriculum, find the details of the certification/curriculum (using post - range based search), find the details of the certification/curriculum (using post - range based search), create a new certification, create a new certification, update the details of a certification, update the details of a certification">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Certification</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title3">FIND DETAILS OF CERTIFICATION/CURRICULUM</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the details of the Certification/Curriculum along with the ID, Name and the Deeplink URL based on the provided search criteria.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/:componentName?q=(:criteria_field==:field_value)&amp;count=:count&amp;startPage=:startPage</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 2. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__1 ">componentName</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__2 ">The name of the desired component (certification or curriculum).</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__3 ">certification</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__4 ">enumerated</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__1 ">criteria_field</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__2 ">The search criteria i.e. the field name.
+        <div class="p">
+         You can use any field with "isSearchFilter": true.
+         <div class="note note note_note">
+          <span class="note__title">Note:</span> To find out the fields that have "isSearchFilter": true, invoke the "Get the Meta details" REST APIs.
+         </div>
+        </div></td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__3 ">name</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__1 ">field_value</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__2 ">The search value for the specified search criteria.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__3 ">abc</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__1 ">count</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__2 ">The number of records per page.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__3 ">10</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__1 ">startPage</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__2 ">The start page number for the list of records.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__3 ">1</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_sn5_dgh_24__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Fields covered under search criteria (criteria_field)</h5> 
+    <table id="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption></caption>
+     <colgroup>
+      <col style="width:15.625%">
+      <col style="width:37.34375%">
+      <col style="width:16.40625%">
+      <col style="width:30.624999999999996%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry" id="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1">Field name</th> 
+       <th class="entry" id="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2">Field description</th> 
+       <th class="entry" id="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3">Possible values</th> 
+       <th class="entry" id="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4">Example</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_name </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Name of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_name%3D%3Dabc </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_target_days </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Target days of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_target_days%3D%3D </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_valid_till </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Valid till value of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_valid_till%3D%3d100 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_disc_from </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Discountinuation date of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_disc_from </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_avl_from </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Certification available from date. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_avl_from </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_notify_before </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Notify before of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_notify_before%3d%3d130 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_custom0 </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Custom 0 field of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_custom0%3D%3D This%20is%20custom0 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_custom1 </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Custom 1 field of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_custom1%3D%3D This%20is%20custom1 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_custom2 </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Custom 2 field of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_custom2%3D%3D This%20is%20custom2 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_custom3 </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Custom 3 field of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_custom3%3D%3D This%20is%20custom3 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_custom4 </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Custom 4 field of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_custom4%3D%3D This%20is%20custom4 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_created_by </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Created by field of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_created_by%3D%3Duone </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_created_on </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Created on field of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_created_on%3D%3D 5/8/2002 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_updated_by </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Updated by field of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_updated_by%3D%3Duone </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_updated_on </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Updated on field of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_updated_on%3D%3D 5/8/2002 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_status </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Status of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_status%3D%3D100 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> version </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Version of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> version%3D%3d1.0 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_description </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Description of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_description%3D%3D descr000000000103641 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> base_type </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Distinguishes whether its certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> 0 - Certification<p class="p">1 - Curriculum </p></td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> base_type%3D%3D0 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> audience_type_id </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Associated Audience type id of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> audience_type_id%3D%3D audie000000000001021 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_recert_window </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Number of days before expiration after which learner can start re-certification work by pursuing a recertification path. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_recert_window%3D%3D certi_recert_window </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> certi_past_credit_days </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Number of days before certification assignment, upto which, system would consider completed learning element while doing certification completion check. If this field is null then window is infinite i.e. learning elements completed any time in the past is valid for this certification. If this field is 0 then system would not look back i.e. any learning element completed before certification assignment is not valid for this certification.</td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> certi_past_credit_days%3D%3D1 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> aud_type_outer_search </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Returns all those certification which has audience type as a given value or null. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> aud_type_outer_search%3D%3D audie000000000001021 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> gov_owner </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Owner id of component. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> gov_owner%3D%3Demplo000000000200100 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> learningevent_id </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Id(not internal id) of certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> learningevent_id%3D%3D 200056 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> name </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Name of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> Name%3D%3Dabc </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> student_id </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Learner Id for whom the held certification belongs &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> student_id%3D%3D emplo000000000200020 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> hide_discontinued_event </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Returns all certification except those which are discontinued. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> hide_discontinued_event%3D%3D 5/8/2002 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> category_comppicker </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Parent or own category id associated with the certification </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> category_comppicker%3D%3D ddcls000000000001480 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> category_hierarchy </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Returns full hierarchy of category associated with the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> 0 - No full hierarchy <p class="p">1 - Full hierarchy </p></td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> category_hierarchy%3D%3D category_hierarchy </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> csvinput &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> Name of the certification. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> &nbsp; </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> category_id </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> If this field is passed all those certification will be returned which has category with given category id. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> category_id%3D%3D categ000000000001125 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 "> category_name </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 "> If this field is passed all those certification will be returned which has category with given category name. </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 "> &nbsp; </td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 "> category_id%3D%3D A10008 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__1 ">at_check</td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__2 ">Adding this condition peforms an Audience Type check and only the certifications / curricula matching the Audience Type of the learner will be returned. 
+        <div class="note note note_note">
+         <span class="note__title">Note:</span> Irrespective of the value of the 
+         <strong class="ph b">at_check</strong> query parameter, the Audience Type check will be done if it is added in search query.
+        </div></td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__3 ">true or false</td> 
+       <td class="entry" headers="get-find-the-details-of-the-certification-curriculum-N1007B__table_gvf_mqk_m5__entry__4 ">at_check%3D%3Dtrue</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "updated_on": "2016-02-02T00:00:00.000-0500",
+      "created_by": "superuser",
+      "updated_by": "UONE",
+      "created_on": "2014-10-27T05:06:41.000-0400",
+      "keywords": [
+        {
+          "id": "kywrd000000000006265",
+          "displayName": "skill"
+        },
+        {
+          "id": "kywrd000000000006263",
+          "displayName": "course_keyword"
+        },
+        {
+          "id": "kywrd000000000006264",
+          "displayName": "k100"
+        },
+        {
+          "id": "kywrd000000000006266",
+          "displayName": "java"
+        }
+      ],
+      "reAssignedTargetDays": 0,
+      "deepLinkUrls": [
+        "https://&lt;hostname&gt;/Saba/Web_spf/ATHDB1/common/learningeventdetail/crtfy000000000004464"
+      ],
+      "past_credit_days": null,
+      "history_lookup_policy": "CheckHistoryUptoExpiredRevoked",
+      "parent": null,
+      "description": "description updateddasdas",
+      "name": "!000111cert_content",
+      "paths": [
+        {
+          "learningModules": [
+            {
+              "is_reqd": true,
+              "learningInterventions": [
+                {
+                  "is_reqd": false,
+                  "owner_id": null,
+                  "part_id": {
+                    "id": "cours000000000017197",
+                    "displayName": "course_con1"
+                  },
+                  "is_waiver": false,
+                  "sequence": 1,
+                  "id": "edupl000000000006512"
+                },
+                {
+                  "is_reqd": false,
+                  "owner_id": null,
+                  "part_id": {
+                    "id": "cours000000000017198",
+                    "displayName": "course_con2"
+                  },
+                  "is_waiver": false,
+                  "sequence": 2,
+                  "id": "edupl000000000006513"
+                },
+                {
+                  "is_reqd": false,
+                  "owner_id": null,
+                  "part_id": {
+                    "id": "cours000000000037404",
+                    "displayName": "Test for eq"
+                  },
+                  "is_waiver": false,
+                  "sequence": 3,
+                  "id": "edupl000000000011680"
+                }
+              ],
+              "notes": null,
+              "reqd_no_of_items": 2,
+              "is_waiver": true,
+              "track_id": null,
+              "sequence": 1,
+              "name": "!000111cert_content_p1_m1",
+              "id": "cegrp000000000004930"
+            }
+          ],
+          "isrecertification_track": false,
+          "is_default_path": true,
+          "is_path_recalculation_done": false,
+          "name": "!000111cert_content_p123",
+          "id": "track000000000004850"
+        }
+      ],
+      "disp_learner": true,
+      "disp_callcenter": true,
+      "self_register": true,
+      "featured": false,
+      "valid_till": null,
+      "notify_before": null,
+      "vendor_id": null,
+      "avl_from": "2014-10-27T00:00:00.000-0400",
+      "disc_from": null,
+      "createGroupPolicyVal": true,
+      "target_days": 0,
+      "learningevent_id": "00012706",
+      "version": null,
+      "group": {
+        "id": "teams000000000010877",
+        "displayName": "!000111cert_content"
+      },
+      "status": "INEFFECT",
+      "customValues": {
+        "custom9": null,
+        "ExCustom4": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000059758",
+        "displayName": "Domain_IndiaQE"
+      },
+      "id": "crtfy000000000004464",
+      "expiryType": "duration",
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": "English"
+      },
+      "recertifyDays": 0
+    }
+  ],
+  "hasMoreResults": true,
+  "itemsPerPage": 1,
+  "totalResults": 1569,
+  "OneClickRegistration": false,
+  "auto_launch": false
+}</code></pre> 
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> The following attributes are only available when the value of 'expiryType' is 'dayOfMonth'. This is only available for certification:
+     <ul class="ul" id="get-find-the-details-of-the-certification-curriculum-N1007B__ul_it3_klt_fx"> 
+      <li class="li">expiresOnDay</li> 
+      <li class="li">expiresOnMonth</li> 
+      <li class="li">expiresOnFrequency</li> 
+      <li class="li">nextExpiryStartsOnDay</li> 
+      <li class="li">nextExpiryStartsOnMonth</li> 
+     </ul>
+    </div> 
+   </section> 
+  </div>
+ </body>
+</html>

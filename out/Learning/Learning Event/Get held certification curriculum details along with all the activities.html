@@ -1,0 +1,355 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get held certification/curriculum activity details, learning components, get held certification/curriculum activity details, get completion and lesson details of the learning event, get completion and lesson details of the learning event, get held certification/curriculum details along with all the activities, get held certification/curriculum details along with all the activities, search all the certifications/curricula assigned to a learner based on the status, timestamp, search all the certifications/curricula assigned to a learner based on the status, timestamp, search certifications/curricula of the logged in user, search certifications/curricula of the logged in user, auto-enroll learners into courses inside the certification/curriculum, auto-enroll learners into courses inside the certification/curriculum, assign certification/curriculum to a person, assign certification/curriculum to a person, grant certification/curriculum to a learner, grant certification/curriculum to a learner, update the target days/date for the assigned certification/curriculum activity, update the target days/date for the assigned certification/curriculum activity, update the expiration date of the held certification, update the expiration date of the held certification, remove the certification/curriculum activity of a learner, remove the certification/curriculum activity of a learner, get the meta details of the course activity, get the meta details of the course activity, get the details of a particular course activity, get the details of a particular course activity, get all the course activities of the logged in user, get all the course activities of the logged in user, find the details of the course activities based on criteria, find the details of the course activities based on criteria, assign a course to a person, assign a course to a person, update the details of a course activity, update the details of a course activity, remove a course from a learner, remove a course from a learner">
+  <meta name="keywords" content="learning, restful web services, get held certification/curriculum activity details, learning components, get held certification/curriculum activity details, get completion and lesson details of the learning event, get completion and lesson details of the learning event, get held certification/curriculum details along with all the activities, get held certification/curriculum details along with all the activities, search all the certifications/curricula assigned to a learner based on the status, timestamp, search all the certifications/curricula assigned to a learner based on the status, timestamp, search certifications/curricula of the logged in user, search certifications/curricula of the logged in user, auto-enroll learners into courses inside the certification/curriculum, auto-enroll learners into courses inside the certification/curriculum, assign certification/curriculum to a person, assign certification/curriculum to a person, grant certification/curriculum to a learner, grant certification/curriculum to a learner, update the target days/date for the assigned certification/curriculum activity, update the target days/date for the assigned certification/curriculum activity, update the expiration date of the held certification, update the expiration date of the held certification, remove the certification/curriculum activity of a learner, remove the certification/curriculum activity of a learner, get the meta details of the course activity, get the meta details of the course activity, get the details of a particular course activity, get the details of a particular course activity, get all the course activities of the logged in user, get all the course activities of the logged in user, find the details of the course activities based on criteria, find the details of the course activities based on criteria, assign a course to a person, assign a course to a person, update the details of a course activity, update the details of a course activity, remove a course from a learner, remove a course from a learner">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Learning Event</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title4">GET HELD CERTIFICATION/CURRICULUM DETAILS ALONG WITH ALL THE ACTIVITIES</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Gets held Certification/Curriculum details along with all the activities</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/:heldCertId</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 3. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__1 ">heldCertId</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__2 ">Held Certification/Curriculum's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__5 ">Yes</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5>
+    <p class="p"><strong class="ph b">Certification:</strong></p>
+    <pre class="pre codeblock"><code>{
+  "percentcompleted": 0,
+  "requirers": [
+    {
+      "required": true,
+      "assignment": {
+        "id": "stuce000000000392151",
+        "displayName": null
+      },
+      "activityContext": null,
+      "assignee": {
+        "sourceType": "InternalPerson",
+        "activitySourceType": {
+          "sourceType": 0,
+          "listId": "sysli000000000003037",
+          "key": "0",
+          "displayName": "Person"
+        },
+        "locale": {
+          "id": "local000000000000001",
+          "displayName": null
+        },
+        "id": "persn000000000233981",
+        "displayName": "client 01"
+      },
+      "targetDate": 1473059249000,
+      "learningEvent": {
+        "id": "crtfy000000000010611",
+        "displayName": "Test_Certification_123"
+      },
+      "jobTypeId": null,
+      "listIds": null,
+      "assignedOn": 1472022450000,
+      "source": {
+        "sourceType": "InternalPerson",
+        "activitySourceType": {
+          "sourceType": 0,
+          "listId": "sysli000000000003037",
+          "key": "0",
+          "displayName": "Person"
+        },
+        "locale": {
+          "id": "local000000000000001",
+          "displayName": null
+        },
+        "id": "emplo000000000001000",
+        "displayName": "Charles Foster"
+      },
+      "actions": null,
+      "id": "certh000000003030707"
+    }
+  ],
+  "basicdetail": {
+    "updatedOn": 1472022451000,
+    "createdBy": "superuser",
+    "updatedBy": "superuser",
+    "createdOn": 1472022450000,
+    "person": {
+      "sourceType": "InternalPerson",
+      "activitySourceType": {
+        "sourceType": 0,
+        "listId": "sysli000000000003037",
+        "key": "0",
+        "displayName": "Person"
+      },
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": null
+      },
+      "id": "persn000000000233981",
+      "displayName": "client 01"
+    },
+    "certification_id": {
+      "id": "crtfy000000000010611",
+      "displayName": "Test_Certification_123"
+    },
+    "expired_on": null,
+    "reassign": true,
+    "inRecertification": false,
+    "profileElementType": "InternalCert",
+    "revoked_on": null,
+    "need_recert_ot": false,
+    "need_recert_eq": false,
+    "recertificationType": [],
+    "type": "CERTIFICATION",
+    "path": {
+      "id": "track000000000010508",
+      "displayName": "Test_Path_1"
+    },
+    "status": {
+      "intStatus": 400,
+      "description": "Assigned",
+      "key": "400",
+      "displayName": "Assigned"
+    },
+    "id": "stuce000000000392151",
+    "acquiredOn": null,
+    "assignee": {
+      "sourceType": "InternalPerson",
+      "activitySourceType": {
+        "sourceType": 0,
+        "listId": "sysli000000000003037",
+        "key": "0",
+        "displayName": "Person"
+      },
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": null
+      },
+      "id": "persn000000000233981",
+      "displayName": "client 01"
+    },
+    "targetDate": 1473059249000,
+    "need_recert": false,
+    "startedOn": null,
+    "assignedOnDate": 1472022450000,
+    "recert_window_starts_on": null,
+    "heldCertNo": "00448808  ",
+    "owner": {
+      "sourceType": "InternalPerson",
+      "activitySourceType": {
+        "sourceType": 0,
+        "listId": "sysli000000000003037",
+        "key": "0",
+        "displayName": "Person"
+      },
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": null
+      },
+      "id": "persn000000000233981",
+      "displayName": "client 01"
+    },
+    "assigneeAdditionalDetails": {
+      "person_no": "00010831",
+      "username": "CONE01"
+    },
+    "need_recert_cert": false
+  },
+  "isgranted": null
+}</code></pre>
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> 
+     <strong class="ph b">assignedOnDate</strong> and 
+     <strong class="ph b">acquiredOn</strong> have date values in timestamp format.
+    </div>
+    <strong class="ph b">Curriculum:</strong>
+    <pre class="pre codeblock"><code>{
+  "percentcompleted": 0,
+  "requirers": [
+    {
+      "required": true,
+      "assignment": {
+        "id": "stcur000000000043418",
+        "displayName": null
+      },
+      "activityContext": null,
+      "assignee": {
+        "sourceType": "InternalPerson",
+        "activitySourceType": {
+          "sourceType": 0,
+          "listId": "sysli000000000003037",
+          "key": "0",
+          "displayName": "Person"
+        },
+        "locale": {
+          "id": "local000000000000001",
+          "displayName": null
+        },
+        "id": "emplo000000000275911",
+        "displayName": "Sean O'coner"
+      },
+      "targetDate": null,
+      "learningEvent": {
+        "id": "curra000000000001941",
+        "displayName": "25 Curricula"
+      },
+      "jobTypeId": null,
+      "listIds": null,
+      "assignedOn": 1412037159000,
+      "source": {
+        "componentName": "Prescription Rule",
+        "activitySourceType": {
+          "sourceType": 3,
+          "listId": "sysli000000000003037",
+          "key": "3",
+          "displayName": "Prescriptive Rule"
+        },
+        "primaryKey": {
+          "prefix": "prule",
+          "id": "prule000000000004647"
+        },
+        "locale": {
+          "id": "local000000000000001",
+          "displayName": null
+        },
+        "id": "prule000000000004647",
+        "displayName": "u27"
+      },
+      "actions": null,
+      "id": "currh000000001416138"
+    }
+  ],
+  "basicdetail": {
+    "updatedOn": 1445816994000,
+    "createdBy": "bwillis@saba.com",
+    "updatedBy": "admin",
+    "createdOn": 1412037159000,
+    "need_recert": false,
+    "curriculum": {
+      "id": "curra000000000001941",
+      "displayName": "25 Curricula"
+    },
+    "recert_window_starts_on": null,
+    "revokedOn": null,
+    "type": "CURRICULUM",
+    "path": null,
+    "status": {
+      "intStatus": 400,
+      "description": "Assigned",
+      "displayName": "Assigned"
+    },
+    "acquiredOn": null,
+    "assignee": {
+      "sourceType": "InternalPerson",
+      "activitySourceType": {
+        "sourceType": 0,
+        "listId": "sysli000000000003037",
+        "key": "0",
+        "displayName": "Person"
+      },
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": null
+      },
+      "id": "emplo000000000275911",
+      "displayName": "Sean O'coner"
+    },
+    "targetDate": null,
+    "startedOn": null,
+    "assignedOnDate": 1412037159000,
+    "heldCertNo": "00262446  ",
+    "owner": {
+      "sourceType": "InternalPerson",
+      "activitySourceType": {
+        "sourceType": 0,
+        "listId": "sysli000000000003037",
+        "key": "0",
+        "displayName": "Person"
+      },
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": null
+      },
+      "id": "emplo000000000275911",
+      "displayName": "Sean O'coner"
+    },
+    "id": "stcur000000000043418",
+    "assigneeAdditionalDetails": {
+      "person_no": "00006160",
+      "username": "O'CONER@GMAIL.COM"
+    }
+  },
+  "isgranted": null
+}</code></pre>
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> 
+     <strong class="ph b">assignedOnDate</strong> and 
+     <strong class="ph b">acquiredOn</strong> have date values in timestamp format.
+    </div>
+   </section> 
+  </div>
+ </body>
+</html>

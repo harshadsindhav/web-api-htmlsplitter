@@ -1,0 +1,236 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="foundation, restful web services, get details of a social resource, foundation components, get details of a social resource, find social resources, find social resources (using post - range based search), find social resources (using post - range based search), find social resource of a group, find social resource of a group, find social resource of a group (using post - range based search), find social resource of a group (using post - range based search), post idea to saba activity stream., post idea to saba activity stream., post issue to saba activity stream., post issue to saba activity stream., post link to saba activity stream., post link to saba activity stream., post file to saba activity stream., post file to saba activity stream., update idea posted on saba activity stream., update idea posted on saba activity stream., update issue posted on saba activity stream., update issue posted on saba activity stream., update link posted on saba activity stream., update link posted on saba activity stream., update file posted on saba activity stream., update file posted on saba activity stream., delete idea posted on saba activity stream., delete idea posted on saba activity stream., delete issue posted on saba activity stream., delete issue posted on saba activity stream., delete link posted on saba activity stream., delete link posted on saba activity stream., delete file posted on saba activity stream., delete file posted on saba activity stream.">
+  <meta name="keywords" content="foundation, restful web services, get details of a social resource, foundation components, get details of a social resource, find social resources, find social resources (using post - range based search), find social resources (using post - range based search), find social resource of a group, find social resource of a group, find social resource of a group (using post - range based search), find social resource of a group (using post - range based search), post idea to saba activity stream., post idea to saba activity stream., post issue to saba activity stream., post issue to saba activity stream., post link to saba activity stream., post link to saba activity stream., post file to saba activity stream., post file to saba activity stream., update idea posted on saba activity stream., update idea posted on saba activity stream., update issue posted on saba activity stream., update issue posted on saba activity stream., update link posted on saba activity stream., update link posted on saba activity stream., update file posted on saba activity stream., update file posted on saba activity stream., delete idea posted on saba activity stream., delete idea posted on saba activity stream., delete issue posted on saba activity stream., delete issue posted on saba activity stream., delete link posted on saba activity stream., delete link posted on saba activity stream., delete file posted on saba activity stream., delete file posted on saba activity stream.">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-social.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Resource</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title11">UPDATE IDEA POSTED ON SABA ACTIVITY STREAM</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Updates an issue posted on the Saba Activity Stream.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">PUT</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/:resourceId</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_acg_pd5_ww__table_idg_pd5_ww" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 10. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_acg_pd5_ww__table_idg_pd5_ww__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_acg_pd5_ww__table_idg_pd5_ww__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_acg_pd5_ww__table_idg_pd5_ww__entry__3">Default Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_acg_pd5_ww__table_idg_pd5_ww__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_acg_pd5_ww__table_idg_pd5_ww__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__1 ">name</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__2 ">Idea title</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__1 ">owner</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__2 ">Owner of the Idea.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__1 ">description</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__2 ">Description of the Idea.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__1 ">implementationLead</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__2 ">Implementation Leader of the Idea.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__1 ">state</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__2 ">State of idea.<p class="p">Possible status:</p>
+        <div class="p"> 
+         <table id="reference_acg_pd5_ww__table_vv3_ff5_ww" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+          <caption></caption>
+          <colgroup>
+           <col>
+           <col>
+           <col>
+          </colgroup>
+          <tbody class="tbody"> 
+           <tr> 
+            <td class="entry"><strong class="ph b">State</strong> </td> 
+            <td class="entry"> <strong class="ph b">Value</strong> </td> 
+            <td class="entry"> <strong class="ph b">Description</strong> </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> New </td> 
+            <td class="entry"> 1 </td> 
+            <td class="entry"> New </td> 
+           </tr> 
+           <tr> 
+            <td class="entry" rowspan="5"> Open </td> 
+            <td class="entry"> 101 </td> 
+            <td class="entry"> Being Reviewed </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> 102 </td> 
+            <td class="entry"> Reviewed </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> 103 </td> 
+            <td class="entry"> Accepted </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> 104 </td> 
+            <td class="entry"> In Progress </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> 105 </td> 
+            <td class="entry"> Partially Implemented </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> Onhold </td> 
+            <td class="entry"> 201 </td> 
+            <td class="entry"> On Hold </td> 
+           </tr> 
+           <tr> 
+            <td class="entry" rowspan="3"> closed </td> 
+            <td class="entry"> 301 </td> 
+            <td class="entry"> Fully Implemented </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> 302 </td> 
+            <td class="entry"> Closed </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> 303 </td> 
+            <td class="entry"> Rejected </td> 
+           </tr> 
+          </tbody>
+         </table> 
+        </div></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__3 ">New</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__4 ">enumerated</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__1 ">status</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__2 ">Status of idea. Though its validity depends on the status selected for the idea .</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__3 ">1</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__4 ">enumerated</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__1 ">disableSharing</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__2 ">Disable users to share this idea.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__4 ">Boolean</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__1 ">notify</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__2 ">Whom to notify, it's value could be person, group or peopleandgroup.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__4 ">enumerated</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__1 ">language</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__2 ">Language of the idea.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__1 ">resourceId</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__2 ">resourceId is the ID of idea id </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_acg_pd5_ww__table_idg_pd5_ww__entry__5 ">Yes</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5> 
+    <pre class="pre codeblock"><code>{  
+ "name":"Idea_test_08_01_010",
+ "description":"Idea_test_08_01_010 updated4",
+ "owner":{  
+  "id":"emplo000000000001000",
+  "displayName":"Uone"
+ },
+ "language":{  
+  "id":"lange000000000000001",
+  "displayName":"English"
+ },
+ "shareWith":[  
+  {  
+   "id":"",
+   "displayName":"cone",
+   "type":"person",
+   "role":"co-owner"
+  }
+ ],
+ "state":"open",
+ "status":"201",
+ "implementationLead":{  
+  "id":"persn000000000001005",
+  "displayName":"csindhav6"
+ },
+ "disableSharing":false,
+ "notify":"people"
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="authentication, restful web services"><meta name="keywords" content="authentication, restful web services"><meta name="DC.Relation" scheme="URI" content="../developer/part-restwebservices.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0e2818"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Authentication</title></head><body id="d0e2818"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Authentication </h1>
+  
+  <div class="body">
+    <p class="p">This section describes the Authentication options that are available:</p>
+  </div>
+  <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-restwebservices.html">REST Web Services</a></div></div></nav><article class="topic nested1" aria-labelledby="ariaid-title2" id="d0e2828">
+    <h2 class="title topictitle2" id="ariaid-title2">Using Certificate based Authentication</h2>
+    <article class="topic nested2" aria-labelledby="ariaid-title3" id="topic_kq4_ppc_1s">
+      <h3 class="title topictitle3" id="ariaid-title3">Overview</h3>
+      <div class="body">
+        <p class="p">Saba's Authentication web service accepts a user name, password and the site name and
+          returns a certificate for that user. Authentication certificates must be included in calls
+          to Saba web services to indicate to the web services what permissions the user has.</p>
+        <div class="note note note_note"><span class="note__title">Note:</span> The Authentication web service is not a true business web service. The
+          service is required to obtain a valid certificate when calling a business web
+          service.</div>
+      </div>
+    </article>
+    <article class="topic nested2" aria-labelledby="ariaid-title4" id="d0e2855">
+      <h3 class="title topictitle3" id="ariaid-title4">Usage</h3>
+      <div class="body">
+        <p class="p">The Authentication web service is passed a username, password and the site name. It
+          returns an authentication certificate.</p>
+      </div>
+      <article class="topic nested3" aria-labelledby="ariaid-title5" id="id_kdh_dny_nh">
+        <h4 class="title topictitle4" id="ariaid-title5">URL</h4>
+        <div class="body">
+          <div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/login<div class="note note note_note"><span class="note__title">Note:</span> <strong class="ph b">hostname</strong>
+              is your Saba site name.</div></div>
+        </div>
+      </article>
+      <article class="topic nested3" aria-labelledby="ariaid-title6" id="d0e2186">
+        <h4 class="title topictitle4" id="ariaid-title6">Calling Options</h4>
+        <div class="body">
+          <p class="p">The Authentication web service is passed the following <strong class="ph b">header</strong> parameters:</p>
+          <table class="table frame-all" id="d0e2186__table_shx_rvw_rh"><caption><span class="table--title-label">Table 1. </span><span class="title">Authentication Web Service Calling Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                <tr class="row rowsep-1">
+                  <th class="entry colsep-1 rowsep-1" id="d0e2186__table_shx_rvw_rh__entry__1">Header Parameters Passed</th>
+                  <th class="entry colsep-1 rowsep-1" id="d0e2186__table_shx_rvw_rh__entry__2">Description</th>
+                </tr>
+              </thead><tbody class="tbody">
+                <tr class="row rowsep-0">
+                  <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__1 ">
+                    <p class="p"><code class="ph codeph">user</code></p>
+                  </td>
+                  <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__2 ">
+                    <p class="p">The Saba username to authenticate.</p>
+                  </td>
+                </tr>
+                <tr class="row">
+                  <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__1 "><code class="ph codeph">password</code></td>
+                  <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__2 ">The password for that username.</td>
+                </tr>
+                <tr class="row">
+                  <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__1 "><code class="ph codeph">site</code></td>
+                  <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__2 ">The Saba site name. <p class="p">This is <strong class="ph b">mandatory</strong> and only applicable
+                          <strong class="ph b"><u class="ph u">when the vanity URL is switched OFF</u></strong> i.e. if you are using
+                      the old URL, for example:
+                        http://<var class="keyword varname">&lt;hostname.sabacloud.com&gt;</var>/Saba/api/login.
+                    </p></td>
+                </tr>
+                <tr class="row">
+                  <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__1 "><code class="ph codeph">site_name</code></td>
+                  <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__2 ">The Saba site name. <p class="p">This is <strong class="ph b">optional</strong> and only applicable
+                          <strong class="ph b"><u class="ph u">when the vanity URL is switched ON</u></strong> i.e. if you are using the
+                      new URL, for example:
+                        https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/login.
+                    </p></td>
+                </tr>
+              </tbody></table>
+        </div>
+      </article>
+      <article class="topic nested3" aria-labelledby="ariaid-title7" id="d0e2884">
+        <h4 class="title topictitle4" id="ariaid-title7">Return Values</h4>
+        <div class="body">
+          <div class="p">The web service returns a <code class="ph codeph">&lt;SabaCertificate&gt;</code> JSON object, which
+            contains a <code class="ph codeph">&lt;certificate&gt;</code> object. That object contains the
+            authentication certificate (a string).<div class="note note note_note"><span class="note__title">Note:</span> This certificate is valid for 24 hours. If
+              an API call fails with an Invalid Certificate error, you can get a new certificate,
+              which remains valid for the next 24 hours. </div></div>
+          <section class="section"><h5 class="title sectiontitle">Sample Returned JSON Document</h5>
+            
+            <div class="p">
+              <pre class="pre codeblock"><code>31336132353061666330315E235E756F6E6555E6261536974655E 
+235E656E5F55535E235E536162615E235E24414021463393C6935
+8BE384802BA1BBEAD3B4661862F193021435F7E28A30F7540FE66
+1B9C5F30FDB06C  </code></pre>
+            </div>
+          </section>
+        </div>
+      </article>
+    </article>
+  </article>
+  <article class="topic nested1" aria-labelledby="ariaid-title8" id="d0eee2818">
+    <h2 class="title topictitle2" id="ariaid-title8">Using OAuth 2.0</h2>
+    <div class="body">
+      <p class="p">This section describes the steps involved in using the OAuth Authentication flow.</p>
+    </div>
+    <article class="topic nested2" aria-labelledby="ariaid-title9" id="id_3bbc1d60-0b65-4d1c-a85d-4f5c3c268529">
+      <h3 class="title topictitle3" id="ariaid-title9">Overview</h3>
+      <div class="body">
+        <div class="p">Saba uses OAuth2 as its authentication method. OAuth is an authentication protocol that
+          allows users to approve application to act on their behalf without sharing their password.
+          More information about OAuth2 can be found at:<ul class="ul" id="id_3bbc1d60-0b65-4d1c-a85d-4f5c3c268529__ul_92c6f41f-6e8f-4f3c-acf2-34eb07745e78">
+            <li class="li">http://oauth.net/2/</li>
+            <li class="li">http://tools.ietf.org/html/draft-ietf-oauth-v2-21#section-4.1</li>
+            <li class="li">http://docs.opensocial.org/display/OSREF/OAuth+2.0+Flow+Support</li>
+          </ul></div>
+      </div>
+    </article>
+    <article class="topic nested2" aria-labelledby="ariaid-title10" id="d0ess1">
+      <h3 class="title topictitle3" id="ariaid-title10">Getting a Consumer key</h3>
+      <div class="body">
+        <div class="p">Before you can start making Saba API requests, you need to get a Consumer key and the
+          Consumer Secret from the <strong class="ph b">Provider</strong>, in this case being Saba. This is provided by
+          Saba support. <div class="note note note_note"><span class="note__title">Note:</span> To get the Consumer key/secret, you need to submit a
+            support request along with the redirect URL to be configured based on which the Saba Support will come back with Consumer key/secret that you can use for invoking
+            the REST APIs using OAuth. For assistance, contact Saba Support.</div></div>
+        <p class="p">After you get the Consumer key, you need to get the <a class="xref" href="#topic_nzg_kzb_1s">Authorization code</a>.</p>
+      </div>
+      <article class="topic nested3" aria-labelledby="ariaid-title11" id="id_7ef40e64-d2f5-4fda-a41d-5d30ea599acd">
+        <h4 class="title topictitle4" id="ariaid-title11">Generating Consumer key And Consumer secret</h4>
+        <div class="body">
+          <p class="p">This is something that the Cloud Engineering team does, on a per Tenant basis. Hence,
+            the Consumer key is always the Tenant or Site name.</p>
+          <p class="p">To generate the Consumer Secret, a batch file called <strong class="ph b">oauthKeyGenerator.bat</strong> is
+            invoked. This file accepts the Tenant or the Site name as a parameter. Based on the
+            parameter value, this batch file generates a unique random Consumer Secret.</p>
+          <p class="p">This file is available under: <strong class="ph b">saba_installpath\SabaWeb\bin\</strong></p>
+          <p class="p">The following code shows how the batch file is invoked:</p>
+          <div class="p">
+            <pre class="pre codeblock"><code><strong class="ph b">D:\Saba-Build\Saba-People-Cloud\SabaWeb\bin&gt;</strong>oauthKeyGenerator.bat SabaSite</code></pre>
+          </div>
+          <p class="p"><strong class="ph b">Output:</strong></p>
+          <div class="p">
+            <pre class="pre codeblock"><code>OAuth2 Client Secret Key forSabaSite: <strong class="ph b">uwYeFgHvzwoOoGbB03ACFMU2fRA=</strong></code></pre>
+          </div>
+          <p class="p">The output shows the generated consumer secret, in this case being:
+              <strong class="ph b">uwYeFgHvzwoOoGbB03ACFMU2fRA=</strong></p>
+          <p class="p">Saba stores the consumer key and the secret in the <strong class="ph b">oauth2config.xml</strong>&nbsp;file
+            available under <strong class="ph b">saba_installpath\SabaWeb\config\oauth2</strong></p>
+          <p class="p">A <strong class="ph b">Consumer Key</strong> and the <strong class="ph b">Secret</strong> identifies you to Saba. Both are required
+            when asking for a <strong class="ph b">Request Token</strong>. </p>
+        </div>
+      </article>
+    </article>
+    <article class="topic nested2" aria-labelledby="ariaid-title12" id="topic_nzg_kzb_1s">
+      <h3 class="title topictitle3" id="ariaid-title12">Getting the Authorization code</h3>
+      <div class="body">
+        <p class="p">This Authorization code is client specific and hence all the users will share and send
+          the same authorization code in subsequent calls to get the access token.</p>
+        <p class="p">To get the Authorization code you need to invoke the following REST end point:</p>
+      </div>
+      <article class="topic nested3" aria-labelledby="ariaid-title13" id="topic_sfx_xzb_1s">
+        <h4 class="title topictitle4" id="ariaid-title13">URL</h4>
+        <div class="body">
+          <div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/
+                v1/oauth2/authorize<div class="note note note_note"><span class="note__title">Note:</span> <strong class="ph b">hostname</strong> is your Saba site name.</div></div>
+        </div>
+      </article>
+      <article class="topic nested3" aria-labelledby="ariaid-title14" id="topic_ufx_xzb_1s">
+        <h4 class="title topictitle4" id="ariaid-title14">Calling Options</h4>
+        <div class="body">
+          <p class="p">The authorize web service is passed the following <strong class="ph b">header</strong> parameters:</p>
+          <table class="table frame-all" id="topic_ufx_xzb_1s__table_zfx_xzb_1s"><caption><span class="table--title-label">Table 2. </span><span class="title">Authorize Web Service Calling Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                <tr class="row rowsep-1">
+                  <th class="entry colsep-1 rowsep-1" id="topic_ufx_xzb_1s__table_zfx_xzb_1s__entry__1">Header Parameters Passed</th>
+                  <th class="entry colsep-1 rowsep-1" id="topic_ufx_xzb_1s__table_zfx_xzb_1s__entry__2">Description</th>
+                </tr>
+              </thead><tbody class="tbody">
+                <tr class="row rowsep-0">
+                  <td class="entry colsep-1 rowsep-1" headers="topic_ufx_xzb_1s__table_zfx_xzb_1s__entry__1 ">
+                    <p class="p"><code class="ph codeph">client_id</code></p>
+                  </td>
+                  <td class="entry colsep-1 rowsep-1" headers="topic_ufx_xzb_1s__table_zfx_xzb_1s__entry__2 ">
+                    <p class="p">The Saba site name. </p>
+                  </td>
+                </tr>
+                <tr class="row">
+                  <td class="entry colsep-1 rowsep-1" headers="topic_ufx_xzb_1s__table_zfx_xzb_1s__entry__1 "><code class="ph codeph">client_secret</code></td>
+                  <td class="entry colsep-1 rowsep-1" headers="topic_ufx_xzb_1s__table_zfx_xzb_1s__entry__2 ">The Consumer secret that you received from Saba Support.</td>
+                </tr>
+                <tr class="row">
+                  <td class="entry colsep-1 rowsep-1" headers="topic_ufx_xzb_1s__table_zfx_xzb_1s__entry__1 "><code class="ph codeph">response_type</code></td>
+                  <td class="entry colsep-1 rowsep-1" headers="topic_ufx_xzb_1s__table_zfx_xzb_1s__entry__2 ">
+                    <p class="p">The type of response: <strong class="ph b">code</strong></p>
+                  </td>
+                </tr>
+              </tbody></table>
+        </div>
+      </article>
+      <article class="topic nested3" aria-labelledby="ariaid-title15" id="topic_egx_xzb_1s">
+        <h4 class="title topictitle4" id="ariaid-title15">Return Values</h4>
+        <div class="body">
+          <div class="p">The web service returns the authentication code (JSON).<div class="note note note_note"><span class="note__title">Note:</span> You will use this
+              authorization code to <a class="xref" href="#topic_qgm_dbc_1s">get the access
+                token</a> which you can use to invoke Saba REST APIs.</div></div>
+          <section class="section"><h5 class="title sectiontitle">Sample Returned JSON Document</h5>
+            
+            <div class="p">
+              <pre class="pre codeblock"><code>{
+    "@type": "com.saba.rest.dto.SabaOAuth2Code",
+    "client": {
+        "@type": "com.saba.rest.dto.SabaOAuth2Client",
+        "id": "PMSite"
+    },
+    "redirectURI": null,
+    "relatedAuthCode": null,
+    "relatedRefreshToken": null,
+    "relatedAccessToken": null,
+    "scope": null,
+    "expiration": 0,
+    "value": "19632da8-37b6-4446-85ec-30ee42d010c9",
+    "state": null,
+    "type": "AUTHORIZATION_CODE"
+} </code></pre>
+            </div>
+          </section>
+        </div>
+      </article>
+    </article>
+    <article class="topic nested2" aria-labelledby="ariaid-title16" id="topic_qgm_dbc_1s">
+      <h3 class="title topictitle3" id="ariaid-title16">Getting the Access Token</h3>
+      <div class="body">
+        <div class="p">To get the access token you need to invoke the Get Access Token API using one of the
+          following options:<ul class="ul" id="topic_qgm_dbc_1s__ul_wdl_nbc_1s">
+            <li class="li">Web </li>
+            <li class="li">REST API (SOURCE=RESTAPI) &nbsp;</li>
+          </ul></div>
+      </div>
+      <article class="topic nested3" aria-labelledby="ariaid-title17" id="topic_o4c_ccc_1s">
+        <h4 class="title topictitle4" id="ariaid-title17">Using the Web option</h4>
+        <div class="body">
+          <div class="p">To use the Web option, you need to pass the following query parameters to
+              accessToken.jsp:<ul class="ul" id="topic_o4c_ccc_1s__ul_jwk_ydc_1s">
+              <li class="li">siteName</li>
+              <li class="li">code</li>
+              <li class="li">redirectUrl</li>
+              <li class="li">state</li>
+            </ul></div>
+        </div>
+        <article class="topic nested4" aria-labelledby="ariaid-title18" id="topic_zgm_dbc_1s">
+          <h5 class="title topictitle5" id="ariaid-title18">URL</h5>
+          <div class="body">
+            <p class="p">https://<var class="keyword varname">&lt;hostname.sabacloud.com&gt;</var>/Saba/accessToken.jsp?siteName=&lt;sitename&gt;</p>
+            <p class="p">&amp;code=&lt;authorization_code&gt;&amp;redirectUrl=&lt;URLToRedirectTo&gt;&amp;state=&lt;state&gt;</p>
+            <p class="p">Invoking this URL displays a web page that accepts the username and password and
+              prompts. </p>
+            <div class="p"><figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>Getting the Access Token</figcaption>
+                
+                <br><div class="imageleft"><img class="image imageleft" id="topic_zgm_dbc_1s__image_ndn_crv_h3" longdesc="Getting the Access Token" src="images/restapi-GettingTheAccessToken.png" alt="Getting the Access Token"></div><br>
+              </figure>On submitting you will be redirected to the specified redirected URL along with
+              the response as part of the URL:</div>
+            <div class="p">https://<var class="keyword varname">&lt;hostname&gt;</var>//OAuthClient/OAuthClient.jsp?access_token=&lt;&lt;encryptedAccessTokenJSON&gt;&gt;&amp;state=6<div class="note note note_note"><span class="note__title">Note:</span> encryptedAccessTokenJSON
+                holds the <strong class="ph b">SabaCertifcate</strong> and the authorization
+                code.<pre class="pre codeblock"><code>{
+   "value":"31346165626663346639665E235E756F6E655E235E53616261536974655E235E6A615F4
+            A505E235E536162615E235E24414240302C02146DB617609E00CBE3A98E49698774D739
+            E0DAF68D02145F635096636F3C05C37FD412CA06058F4BAE3DDA",
+   "state":null,
+   "type":"ACCESS_TOKEN",
+   "expiration":604800000,
+   "scope":null,
+   "client":null,
+   "redirectURI":null,
+   "relatedAuthCode":{
+      "value":"2af2183f-ab84-4dfb-9302-902696c971f3",
+      "state":null,
+      "type":"AUTHORIZATION_CODE",
+      "expiration":0,
+      "scope":null,
+      "client":{
+         "id":"SabaSite",
+         "type":null,
+         "secret":"DZXHw4+yAZPM1b/2HchbGtwCzXY=",
+         "redirectURI":[
+            "https://&lt;hostname&gt;/shindig/oauth2/authorize",
+            "http://&lt;hostname&gt;/Saba/accesstoken.jsp",
+            "http://&lt;hostname&gt;:8989/OAuthClient/OAuthClient.jsp",
+            "http://&lt;hostname&gt;/accesstoken.html"
+         ],
+         "flow":null
+      },
+      "redirectURI":null,
+      "relatedAuthCode":null,
+      "relatedRefreshToken":null,
+      "relatedAccessToken":null
+   },
+   "relatedRefreshToken":null,
+   "relatedAccessToken":null
+}</code></pre></div></div>
+          </div>
+        </article>
+      </article>
+      <article class="topic nested3" aria-labelledby="ariaid-title19" id="topic_upj_mhc_1s">
+        <h4 class="title topictitle4" id="ariaid-title19">Using the REST API option</h4>
+        <div class="body">
+          <p class="p">To use the REST API option, you need to invoke the token REST API.</p>
+        </div>
+        <article class="topic nested4" aria-labelledby="ariaid-title20" id="topic_wpj_mhc_1s">
+          <h5 class="title topictitle5" id="ariaid-title20">URL</h5>
+          <div class="body">
+            <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/
+                v1/oauth2/token?grant_type=<strong class="ph b">authorization_code</strong>&amp;client_id=&lt;SiteName&gt;&amp;source=RESTAPI&amp;state=8</p>
+          </div>
+          <article class="topic nested5" aria-labelledby="ariaid-title21" id="topic_fqj_mhc_1s">
+            <h6 class="title topictitle6" id="ariaid-title21">Calling Options</h6>
+            <div class="body">
+              <p class="p">The authorize web service is passed the following <strong class="ph b">header</strong> parameters:</p>
+              <table class="table frame-all" id="topic_fqj_mhc_1s__table_shx_rvw_rh"><caption><span class="table--title-label">Table 3. </span><span class="title">Token Web Service Calling Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                    <tr class="row rowsep-1">
+                      <th class="entry colsep-1 rowsep-1" id="topic_fqj_mhc_1s__table_shx_rvw_rh__entry__1">Header Parameters Passed</th>
+                      <th class="entry colsep-1 rowsep-1" id="topic_fqj_mhc_1s__table_shx_rvw_rh__entry__2">Description</th>
+                    </tr>
+                  </thead><tbody class="tbody">
+                    <tr class="row rowsep-0">
+                      <td class="entry colsep-1 rowsep-1" headers="topic_fqj_mhc_1s__table_shx_rvw_rh__entry__1 ">
+                        <p class="p"><code class="ph codeph">username</code></p>
+                      </td>
+                      <td class="entry colsep-1 rowsep-1" headers="topic_fqj_mhc_1s__table_shx_rvw_rh__entry__2 ">
+                        <p class="p">The Saba username to authenticate.</p>
+                      </td>
+                    </tr>
+                    <tr class="row">
+                      <td class="entry colsep-1 rowsep-1" headers="topic_fqj_mhc_1s__table_shx_rvw_rh__entry__1 "><code class="ph codeph">password</code></td>
+                      <td class="entry colsep-1 rowsep-1" headers="topic_fqj_mhc_1s__table_shx_rvw_rh__entry__2 ">The password for that username.</td>
+                    </tr>
+                    <tr class="row">
+                      <td class="entry colsep-1 rowsep-1" headers="topic_fqj_mhc_1s__table_shx_rvw_rh__entry__1 "><code class="ph codeph">authorization_code</code></td>
+                      <td class="entry colsep-1 rowsep-1" headers="topic_fqj_mhc_1s__table_shx_rvw_rh__entry__2 ">The <a class="xref" href="#topic_nzg_kzb_1s">authorization</a>
+                        code. </td>
+                    </tr>
+                  </tbody></table>
+            </div>
+          </article>
+          <article class="topic nested5" aria-labelledby="ariaid-title22" id="topic_oqj_mhc_1s">
+            <h6 class="title topictitle6" id="ariaid-title22">Return Values</h6>
+            <div class="body">
+              <p class="p">The web service returns the token code (JSON).</p>
+              <section class="section"><h6 class="title sectiontitle">Sample Returned JSON Document</h6>
+                
+                <div class="p">
+                  <pre class="pre codeblock"><code>{
+    "@type": "com.saba.dto.AccessTokenDTO",
+    "state": "8",
+    "refresh_token": "yBHUZSAO6uqtXe+EDtLv+gVH3U3+bqGEDrEWGlGUSpt6ObRf8ohn2h5X1LWmcaPc",
+    "expires_in": 604800000,
+    "access_token": “&lt;&lt;encryptedData&gt;&gt;",
+    "token_type": “Bearer”
+}</code></pre>
+                </div>
+              </section>
+              <div class="note note note_note"><span class="note__title">Note:</span> This token is valid for 7 days. If an API call fails due to an Invalid Token,
+                you can get a new token, which remains valid for the next 7 days using the <a class="xref" href="#topic_lst_nkc_1s">Refresh Token</a>. </div>
+            </div>
+          </article>
+          <article class="topic nested5" aria-labelledby="ariaid-title23" id="topic_lst_nkc_1s">
+            <h6 class="title topictitle6" id="ariaid-title23">Using the Refresh Token</h6>
+            <div class="body">
+              <p class="p">When you invoke the token REST API, it returns the access token along with the
+                  <strong class="ph b">refresh token</strong>. After the access token expires you can use the refresh token
+                to get a new access token.</p>
+            </div>
+          </article>
+          <article class="topic nested5" aria-labelledby="ariaid-title24" id="topic_ryz_1lc_1s">
+            <h6 class="title topictitle6" id="ariaid-title24">URL</h6>
+            <div class="body">
+              <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/
+                  v1/oauth2/token?grant_type=<strong class="ph b">refresh_token</strong>&amp;client_id=&lt;SiteName&gt;</p>
+              <div class="p">The following are the required header parameters that the user needs to provide:<ul class="ul" id="topic_ryz_1lc_1s__ul_qqg_2rl_my">
+                  <li class="li"><strong class="ph b">refresh_token</strong> = refresh_token received in access_token call</li>
+                  <li class="li"><strong class="ph b">client_secret</strong> = consumer secret shared while configuration</li>
+                </ul></div>
+              <section class="section"><h6 class="title sectiontitle">Sample Returned JSON Document</h6>
+                
+                <div class="p">
+                  <pre class="pre codeblock"><code>{
+    "@type": "com.saba.dto.AccessTokenDTO",
+    "state": null,
+    "refresh_token": null,
+    "expires_in": 604800000,
+    "access_token": "&lt;&lt;encryptedData&gt;&gt;",
+    "token_type": "Bearer"
+}</code></pre>
+                </div>
+              </section>
+            </div>
+          </article>
+        </article>
+      </article>
+    </article>
+    <article class="topic nested2" aria-labelledby="ariaid-title25" id="d0e28355">
+      <h3 class="title topictitle3" id="ariaid-title25">Invoking REST APIs</h3>
+      <div class="body">
+        <div class="p">You can invoke Rest APIs using one of the following methods:<ol class="ol" id="d0e28355__ol_o5g_hlc_1s">
+            <li class="li">Using <a class="xref" href="#d0e2828">SabaCertificate</a></li>
+            <li class="li">Using OAuth i.e. <a class="xref" href="#topic_qgm_dbc_1s">ACCESS_TOKEN</a></li>
+          </ol>For OAuth, while invoking a REST API you need to pass the access token as the
+          Authorization header parameter. <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 2. </span>Access Token in the Authorization header parameter</figcaption>
+            
+            <br><div class="imageleft"><img class="image imageleft" id="d0e28355__image_bwm_zlc_1s" longdesc="Access Token in the Authorization header parameter" src="images/restapi-SetAccessToken.png" alt="Access Token in the Authorization header parameter"></div><br>
+          </figure></div>
+        <div class="p">The format of the Authorization header is as specified below: Since the access token type
+          is Bearer, the value of the Authorization header should start with Bearer followed by a
+          space followed by the access_token
+          value:<pre class="pre codeblock"><code>Authorization = Bearer 1*SP ACCESS_TOKEN</code></pre></div>
+      </div>
+    </article>
+  </article>
+</article></main></body></html>

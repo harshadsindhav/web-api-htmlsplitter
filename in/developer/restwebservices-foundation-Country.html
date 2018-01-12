@@ -1,0 +1,563 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="foundation, restful web services, find the details of the country, foundation components, find the details of the country, get all countries, get the details of a particular country, get the details of a particular country, get the meta details of the country, get the meta details of the country, create a new country, create a new country, update the details of a country, update the details of a country, delete country"><meta name="keywords" content="foundation, restful web services, find the details of the country, foundation components, find the details of the country, get all countries, get the details of a particular country, get the details of a particular country, get the meta details of the country, get the meta details of the country, create a new country, create a new country, update the details of a country, update the details of a country, delete country"><meta name="DC.Relation" scheme="URI" content="../developer/part-foundation.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0e656"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Country</title></head><body id="d0e656"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Country</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-foundation.html">Foundation</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-find-the-details-of-the-country-N10098">
+        <h2 class="title topictitle2" id="ariaid-title2">FIND DETAILS OF COUNTRY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the Country along with the ID, Name and the Deeplink URL
+                    based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/country?q=(:criteria_field%3D%3D:field_value)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__1 ">criteria_field</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__2 ">The search criteria i.e. the field name.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__3 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__1 ">field_value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__2 ">The search value for the specified search
+                                    criteria.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__3 ">abc</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-country-N10098__table_zqg_gv4_bx__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "totalResults": 1,
+    "hasMoreResults": false,
+    "itemsPerPage": 10,
+    "results": [
+        {
+            "id": "cntry000000000001000",
+            "href": "http://&lt;host_name&gt;/v1/country/cntry000000000001000"
+        }
+    ],
+    "startIndex": 1
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_fng_gv4_bx">
+        <h2 class="title topictitle2" id="ariaid-title3">GET ALL COUNTRIES</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all Countries for which the user has access.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/country?count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_fng_gv4_bx__table_ong_gv4_bx"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_fng_gv4_bx__table_ong_gv4_bx__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_fng_gv4_bx__table_ong_gv4_bx__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_fng_gv4_bx__table_ong_gv4_bx__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_fng_gv4_bx__table_ong_gv4_bx__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_fng_gv4_bx__table_ong_gv4_bx__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fng_gv4_bx__table_ong_gv4_bx__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fng_gv4_bx__table_ong_gv4_bx__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fng_gv4_bx__table_ong_gv4_bx__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fng_gv4_bx__table_ong_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fng_gv4_bx__table_ong_gv4_bx__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fng_gv4_bx__table_ong_gv4_bx__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fng_gv4_bx__table_ong_gv4_bx__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fng_gv4_bx__table_ong_gv4_bx__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fng_gv4_bx__table_ong_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fng_gv4_bx__table_ong_gv4_bx__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "totalResults": 239,
+    "hasMoreResults": true,
+    "itemsPerPage": 10,
+    "results": [
+        {
+            "id": "cntry000000000001000",
+            "href": "http://&lt;host_name&gt;/v1/country/cntry000000000001000"
+        },
+        {
+            "id": "cntry000000000001010",
+            "href": "http://&lt;host_name&gt;/v1/country/cntry000000000001010"
+        },
+        {
+            "id": "cntry000000000001100",
+            "href": "http://&lt;host_name&gt;/v1/country/cntry000000000001100"
+        },
+        {
+            "id": "cntry000000000001110",
+            "href": "http://&lt;host_name&gt;/v1/country/cntry000000000001110"
+        },
+        {
+            "id": "cntry000000000001120",
+            "href": "http://&lt;host_name&gt;/v1/country/cntry000000000001120"
+        },
+        {
+            "id": "cntry000000000001130",
+            "href": "http://&lt;host_name&gt;/v1/country/cntry000000000001130"
+        },
+        {
+            "id": "cntry000000000001140",
+            "href": "http://&lt;host_name&gt;/v1/country/cntry000000000001140"
+        },
+        {
+            "id": "cntry000000000001150",
+            "href": "http://&lt;host_name&gt;/v1/country/cntry000000000001150"
+        },
+        {
+            "id": "cntry000000000001160",
+            "href": "http://&lt;host_name&gt;/v1/country/cntry000000000001160"
+        },
+        {
+            "id": "cntry000000000001170",
+            "href": "http://&lt;host_name&gt;/v1/country/cntry000000000001170"
+        }
+    ],
+    "startIndex": 1
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_ijg_gv4_bx">
+        <h2 class="title topictitle2" id="ariaid-title4">GET DETAILS OF A PARTICULAR COUNTRY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a country based on the Country's ID that is
+                    passed as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/country/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_ijg_gv4_bx__table_wjg_gv4_bx"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_ijg_gv4_bx__table_wjg_gv4_bx__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ijg_gv4_bx__table_wjg_gv4_bx__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ijg_gv4_bx__table_wjg_gv4_bx__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ijg_gv4_bx__table_wjg_gv4_bx__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ijg_gv4_bx__table_wjg_gv4_bx__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ijg_gv4_bx__table_wjg_gv4_bx__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ijg_gv4_bx__table_wjg_gv4_bx__entry__2 ">Country's Id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ijg_gv4_bx__table_wjg_gv4_bx__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ijg_gv4_bx__table_wjg_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ijg_gv4_bx__table_wjg_gv4_bx__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "name": "new23",
+    "shortName": "USA",
+    "isoCode": "NM",
+    "active": false,
+    "id": "cntry000000000001000"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_igg_gv4_bx">
+        <h2 class="title topictitle2" id="ariaid-title5">GET META DETAILS OF COUNTRY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of the country</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/country/meta:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_igg_gv4_bx__table_qgg_gv4_bx"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_igg_gv4_bx__table_qgg_gv4_bx__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_igg_gv4_bx__table_qgg_gv4_bx__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_igg_gv4_bx__table_qgg_gv4_bx__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_igg_gv4_bx__table_qgg_gv4_bx__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_igg_gv4_bx__table_qgg_gv4_bx__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igg_gv4_bx__table_qgg_gv4_bx__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igg_gv4_bx__table_qgg_gv4_bx__entry__2 ">Indicate what additional details needs to be
+                                    returned. Acceptable values are (case-sensitive)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igg_gv4_bx__table_qgg_gv4_bx__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igg_gv4_bx__table_qgg_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igg_gv4_bx__table_qgg_gv4_bx__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "sampleData": {
+    "name": null,
+    "shortName": null,
+    "active": false,
+    "isoCode": null,
+    "id": null,
+    "href": "http://&lt;host_name&gt;/v1/country/cntry000000000000001"
+  },
+  "name": "Country",
+  "displayName": "Country",
+  "attributes": [
+    {
+      "name": "active",
+      "displayName": "Active",
+      "description": "Status of the country",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "boolean",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "id",
+      "displayName": "kI18nALCountry_id(Missing resource)",
+      "description": "Saba internal id",
+      "isRequired": true,
+      "isAutoGenerated": true,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "isoCode",
+      "displayName": "ISO Code",
+      "description": "ISO code of the country",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 2,
+      "maximumLength": 2,
+      "isSearchFilter": true
+    },
+    {
+      "name": "name",
+      "displayName": "Name",
+      "description": "Name of the country",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "shortName",
+      "displayName": "Short name",
+      "description": "Short name of the country",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "maximumLength": 10,
+      "isSearchFilter": true
+    }
+  ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_ecg_gv4_bx">
+        <h2 class="title topictitle2" id="ariaid-title6">CREATE A NEW COUNTRY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows creating a new Country.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/country</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_ecg_gv4_bx__table_pcg_gv4_bx"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__2 ">The name of the Country</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__3 ">Country1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__1 ">isoCode</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__2 ">The ISO code for the country</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__3 ">IS</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__1 ">shortName</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__2 ">The short name for the country</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__1 ">active</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__2 ">Is active</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ecg_gv4_bx__table_pcg_gv4_bx__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+ "name": "India",
+ "isoCode":"IN",
+ "shortName":"IND",
+ "active":true
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "cntry000000000004630",
+    "displayName": null,
+    "href": "http://&lt;host_name&gt;/v1/country/cntry000000000004630"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_lzf_gv4_bx">
+        <h2 class="title topictitle2" id="ariaid-title7">UPDATE DETAILS OF A COUNTRY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows updating an existing country based on the Role ID.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/country/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_lzf_gv4_bx__table_tzf_gv4_bx"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__2 ">Country's Id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__2 ">The name of the country</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__3 ">new23</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__1 ">isoCode</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__2 ">The ISO code of country</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__3 ">nm</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__1 ">shortName</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__2 ">shortName</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__1 ">active</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__2 ">Is active</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lzf_gv4_bx__table_tzf_gv4_bx__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+ "active":true
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="reference_dxf_gv4_bx">
+        <h2 class="title topictitle2" id="ariaid-title8">DELETE COUNTRY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Deletes Country</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/country/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_dxf_gv4_bx__table_mxf_gv4_bx"><caption><span class="table--title-label">Table 7. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_dxf_gv4_bx__table_mxf_gv4_bx__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_dxf_gv4_bx__table_mxf_gv4_bx__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_dxf_gv4_bx__table_mxf_gv4_bx__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_dxf_gv4_bx__table_mxf_gv4_bx__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_dxf_gv4_bx__table_mxf_gv4_bx__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dxf_gv4_bx__table_mxf_gv4_bx__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dxf_gv4_bx__table_mxf_gv4_bx__entry__2 ">Country's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dxf_gv4_bx__table_mxf_gv4_bx__entry__3 ">cntry000000000003520</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dxf_gv4_bx__table_mxf_gv4_bx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dxf_gv4_bx__table_mxf_gv4_bx__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

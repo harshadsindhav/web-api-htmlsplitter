@@ -1,0 +1,72 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2017">
+  <meta name="DC.rights.owner" content="(C) Copyright 2017">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-restwebservices.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e430">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <link href="./../../../styles.css" rel="stylesheet">
+    <style>
+	table {
+		line-height:28px;
+	}
+
+	h5 {
+		font-weight : bold;
+		color : darkcyan;
+		letter-spacing: 1px;
+	}
+	article .topic {
+		margin-top:20px;
+	}
+	tr th {
+		text-align:center;
+	}
+	tr td {
+		padding-left:10px;
+	}
+
+  </style>
+  <title>Introduction</title>
+</head>
+
+<body id="d0e430">
+  <main role="main">
+    <article role="article" aria-labelledby="ariaid-title1">
+      <div class="body">
+        <p class="p">This section provides an overview of writing client code that accesses Saba's RESTful web services.
+        </p>
+      </div>
+      <article class="topic nested1" aria-labelledby="ariaid-title2" id="topic_dvh_vxv_sw">
+        <h4 class="title topictitle2" id="ariaid-title2">Before you begin</h4>
+        <div class="body">
+          <p class="p">This document describes the REST API and resources provided by Saba. The REST APIs are for developers who want
+            to integrate Saba into their application.</p>
+          <p class="p">Saba's REST APIs provide access to resources via URI paths. To use a REST API, your application will make an HTTP
+            request and parse the response. The response format is JSON. Your methods will be the standard HTTP methods like
+            GET, PUT, POST and DELETE. </p>
+          <p class="p">The Input (Request Body) and Output (Return Values) JSON can change from release to release.
+            <strong class="ph b">Changes may include addition of new fields to the existing REST APIs</strong>, hence the client side code (refer
+            to our
+            <a class="xref" href="#topic_wzm_xyv_sw">example</a>) should be written in a manner that will not break on such changes. </p>
+        </div>
+      </article>
+	  </article>
+	  </main>
+	  </body>
+	  </html>

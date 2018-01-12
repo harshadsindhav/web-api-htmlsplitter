@@ -1,0 +1,491 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="cif, restful web services, get all content inventory, cif components, find the details of the content inventory, find the details of the content inventory, get the content's details along with the metadata, get the content's details along with the metadata, publish content"><meta name="keywords" content="cif, restful web services, get all content inventory, cif components, find the details of the content inventory, find the details of the content inventory, get the content's details along with the metadata, get the content's details along with the metadata, publish content"><meta name="DC.Relation" scheme="URI" content="../developer/part-cif.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0e656"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Content Inventory</title></head><body id="d0e656"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Content Inventory</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-cif.html">CIF</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-get-all-content-inventory-N10044">
+        <h2 class="title topictitle2" id="ariaid-title2">GET ALL CONTENT INVENTORY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all content inventory for which the user has access.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/content</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "hasMoreResults": false,
+    "facets": [],
+    "itemsPerPage": 10,
+    "results": [
+        {
+            "name": "1213",
+            "id": "cninv000000000001172",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/content/cninv000000000001172"
+        }
+    ],
+    "totalResults": 1,
+    "startIndex": 1
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_evc_npx_fp">
+        <h2 class="title topictitle2" id="ariaid-title3">FIND DETAILS OF CONTENT INVENTORY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the content inventory along with the ID, Name and the
+                    Deeplink URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/content?q=(:criteria_field==:field_value)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_evc_npx_fp__table_lvc_npx_fp"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_evc_npx_fp__table_lvc_npx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_evc_npx_fp__table_lvc_npx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_evc_npx_fp__table_lvc_npx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_evc_npx_fp__table_lvc_npx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_evc_npx_fp__table_lvc_npx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__1 ">criteria_field</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__2 ">The search criteria i.e. the field name.<div class="p">You
+                                        can use any field with "isSearchFilter": true.<div class="note note note_note"><span class="note__title">Note:</span> To find
+                                            out the fields that have "isSearchFilter": true, invoke
+                                            the "Get the Meta details" REST APIs.</div></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__3 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__1 ">field_value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__2 ">The search value for the specified search
+                                    criteria.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__3 ">abc</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_evc_npx_fp__table_lvc_npx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "hasMoreResults": false,
+    "facets": [],
+    "itemsPerPage": 10,
+    "results": [
+        {
+            "name": "1213",
+            "id": "cninv000000000001172",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/content/cninv000000000001172"
+        }
+    ],
+    "totalResults": 1,
+    "startIndex": 1
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_itc_npx_fp">
+        <h2 class="title topictitle2" id="ariaid-title4">GET CONTENT'S DETAILS ALONG WITH THE METADATA </h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Obtains the details of a specific content. It also returns the content's
+                    metadata. </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/content/:<span class="keyword parmname">id</span></p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_itc_npx_fp__table_otc_npx_fp"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_itc_npx_fp__table_otc_npx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_itc_npx_fp__table_otc_npx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_itc_npx_fp__table_otc_npx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_itc_npx_fp__table_otc_npx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_itc_npx_fp__table_otc_npx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_itc_npx_fp__table_otc_npx_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_itc_npx_fp__table_otc_npx_fp__entry__2 ">Content's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_itc_npx_fp__table_otc_npx_fp__entry__3 ">cnfld000000000000001</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_itc_npx_fp__table_otc_npx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_itc_npx_fp__table_otc_npx_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "name": "File server 17 Rest test 101",
+    "parent_id": null,
+    "status": 0,
+    "content_location": "sabacr199226328307763861",
+    "upload_info": "content.jpg",
+    "security_context": null,
+    "external_id": null,
+    "available_from": null,
+    "available_offline": false,
+    "use_aicc_bridge": false,
+    "require_esignature": false,
+    "file_display_name": "Chrysanthemum.jpg",
+    "delivery_vendor": {
+        "id": "cnven000000000000001",
+        "displayName": "Saba"
+    },
+    "url": "https://&lt;hostname-api.sabacloud.com&gt;/production_content_server/
+            sabacr199226328307763861/content.jpg",
+    "stage_content_id": null,
+    "content_format": "3",
+    "content_format_version": null,
+    "toc": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48aW1zY3
+     AtbWFuaWZlc3Qgc2FiYWludGVybmFsPSJ5ZXMiIGlkZW50aWZpZXI9IjAuMTk1OTQ
+     yMjk5Mzg5MDMyNCIgdmVyc2lvbj0iMS4xIj4NCgk8aW1zY3AtbWV0YWRhdGE+DQoJ
+     CTxpbXNjcC1zY2hlbWE+SU1TIENvbnRlbnQ8L2ltc2NwLXNjaGVtYT4NCjxpbXNjc
+     C1zY2hlbWF2ZXJzaW9uPjEuMDwvaW1zY3Atc2NoZW1hdmVyc2lvbj4NCjwvaW1zY3",
+    "is_secure": false,
+    "valid_till": null,
+    "is_dirty": false,
+    "is_scoring": false,
+    "player_template": {
+        "id": "pltpt000000000000002",
+        "displayName": "Simple Content Player Template"
+    },
+    "is_hide_exit_option": false,
+    "ios_compatibility": "notCompatible",
+    "content_provider": null,
+    "is_hide_exit_without_saving": false,
+    "is_eval": false,
+    "folder_id": {
+        "id": "cnfld000000000001230",
+        "displayName": "abc"
+    },
+    "version_no": null,
+    "is_public": false,
+    "id": "cninv000000000001461",
+    "customValues": {
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom0": null
+    },
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+    }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_orc_npx_fp">
+        <h2 class="title topictitle2" id="ariaid-title5">PUBLISH CONTENT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3><p class="p">Creates content in the Saba repository based on the
+                    location specified in the metadata.</p>This Web service supports the following
+                content formats:<ol class="ol" id="reference_orc_npx_fp__ol_xd1_tqy_45">
+                    <li class="li">URL </li>
+                    <li class="li">AICC</li>
+                    <li class="li">SCORM package</li>
+                    <li class="li">Deployed SCORM</li>
+                    <li class="li">File</li>
+                </ol>It consumes content type: form-data i.e. the request body should contain
+                form-data. It produces response in application/json format. </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/contentinventory/contentimport<div class="note note note_note"><span class="note__title">Note:</span> <p class="p">The
+                            following is a <strong class="ph b">deprecated</strong> URL for this REST Web service and will
+                            be discontinued in the next few
+                            updates:</p>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/content/contentinventory/contentimport</div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <p class="p">The request body requires the following input:</p>
+                <ol class="ol" id="reference_orc_npx_fp__ol_xl2_zqy_45">
+                    <li class="li"><strong class="ph b">detail</strong>: The Detail object must be of type 'text'.<p class="p"><strong class="ph b">List of
+                                attributes for the Detail object:</strong></p><div class="p">
+                            <table class="table" id="reference_orc_npx_fp__table_p1p_sry_45"><caption></caption><colgroup><col><col><col></colgroup><thead class="thead">
+                                        <tr class="row">
+                                            <th class="entry" id="reference_orc_npx_fp__table_p1p_sry_45__entry__1">
+                                                <strong class="ph b">Attribute Name</strong>
+                                            </th>
+                                            <th class="entry" id="reference_orc_npx_fp__table_p1p_sry_45__entry__2">
+                                                <strong class="ph b">Required / Optional</strong>
+                                            </th>
+                                            <th class="entry" id="reference_orc_npx_fp__table_p1p_sry_45__entry__3">
+                                                <strong class="ph b">Possible Value</strong>
+                                            </th>
+                                        </tr>
+                                    </thead><tbody class="tbody">
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> contentName</td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Required </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 ">
+                                                <strong class="ph b">…</strong>
+                                            </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> version</td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> isAICC </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Required</td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> true / false </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> isURL </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Required</td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> true / false</td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> isEval </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> True / false </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> urlContent </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Required for URL<strong class="ph b"></strong>
+                                            </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> contentFolderName </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> parentFolderId </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional</td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> expiryDate</td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional</td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> availableFrom </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> &nbsp; </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> status </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> 0,1,2,3,4,5,6,7 </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> serverId </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> &nbsp; </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> availableOffline </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> true / false </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> esignatureRequired </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> true / false </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> isScoring </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> true / false </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> isDeployedScorm </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> true / false </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> domain </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> Saba internal 20 digit&nbsp;ID </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> compatability </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> notCompatible, iPhone, iPad , AndroidSmall,
+                                                AndroidNormal, bothContentCompatability,
+                                                AndroidLargeAndAbove, AllDevices </td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__1 "> customValues </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__2 "> Optional </td>
+                                            <td class="entry" headers="reference_orc_npx_fp__table_p1p_sry_45__entry__3 "> Custom fields value as per configured data type
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                        </div><div class="note note note_note"><span class="note__title">Note:</span> The <strong class="ph b">serverId</strong> attribute is used to set the content server.
+                            If this is not passed in the request body, then the default content
+                            server is used.<p class="p">The default <strong class="ph b">status</strong> will be
+                            published.</p></div></li>
+                    <li class="li"><strong class="ph b">files</strong>: Depending on type of content the number of files will very.<ul class="ul" id="reference_orc_npx_fp__ul_p5z_fry_45">
+                            <li class="li">For the AICC content, 4 files .au, .crs, .cst and .des files are
+                                required.</li>
+                            <li class="li">For the SCORM package and File, 1 file is required. <div class="note note note_note"><span class="note__title">Note:</span> If more
+                                    than 1 file is passed in the request body, the Web service
+                                    throws an exception "Invalid import details provided for Content
+                                    Import."</div></li>
+                        </ul></li>
+                    <li class="li">For URL, the file attachment will be ignored.</li>
+                </ol>
+                <p class="p">The content format type is decided at run time based on the value of attribute
+                    isURL, isAICC and type of file attachments in request. The default Content
+                    player template is set based on the content format type.</p>
+                <table class="table" id="reference_orc_npx_fp__table_yrc_npx_fp"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_orc_npx_fp__table_yrc_npx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_orc_npx_fp__table_yrc_npx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_orc_npx_fp__table_yrc_npx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_orc_npx_fp__table_yrc_npx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_orc_npx_fp__table_yrc_npx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_orc_npx_fp__table_yrc_npx_fp__entry__1 ">contentName</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_orc_npx_fp__table_yrc_npx_fp__entry__2 ">Content's Name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_orc_npx_fp__table_yrc_npx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_orc_npx_fp__table_yrc_npx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_orc_npx_fp__table_yrc_npx_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body (Form data)</h3>
+                
+                <pre class="pre codeblock"><code>Content-Type: form-data,
+Detail: 
+	{
+	"contentName": "test aicc r2",
+	"isAICC": true,
+	"isURL": false,
+	"contentFolderName": "cnfld000000000001182",
+	"serverId": "media000000000001020",
+	"customValues": [{
+		"name": "custom0",
+		"datatype": {
+			"value": 18
+		},
+		"value": null,
+		"displayName": "Custom0"
+	}, {
+		"name": "custom1",
+		"datatype": {
+			"value": 18
+		},
+		"value": null,
+		"displayName": "Custom1"
+	}]
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body (For File)</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "contentName": "URL test7", 
+    "isURL": false, 
+    "contentFolderName": "abc"
+}  </code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body (For URL)</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "contentName":"testAICC",
+   "isAICC":false,
+   "isURL":true,
+   "urlContent":"http://www.google.com",
+   "contentFolderName":"test_file_AICC",
+   "serverId":"media000000000000001",
+   "compatability":3,
+   "version":"1.1",
+   "availableOffline":true,
+   "playerTemplateId":"pltpt000000000000401"
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>Content-Type: application/json
+{
+  "success": true,
+  "id": "cninv000000000001470",
+  "displayName": "test aicc r2",
+  "scoring": "true",
+  "contentFormat": "0",
+  "mediaRepository": "null",
+  "playerTemplate": "null"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

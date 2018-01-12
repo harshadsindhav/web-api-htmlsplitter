@@ -1,0 +1,518 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="foundation, restful web services, like or dislike a resource, foundation components, like or dislike a resource, delete likes or dislikes of a resource, delete likes or dislikes of a resource, get comment details of a resource, get comment details of a resource, get like details of a resource, get like details of a resource, post a comment on a resource, post a comment on a resource, get social interactions of a user, get social interactions of a user"><meta name="keywords" content="foundation, restful web services, like or dislike a resource, foundation components, like or dislike a resource, delete likes or dislikes of a resource, delete likes or dislikes of a resource, get comment details of a resource, get comment details of a resource, get like details of a resource, get like details of a resource, post a comment on a resource, post a comment on a resource, get social interactions of a user, get social interactions of a user"><meta name="DC.Relation" scheme="URI" content="../developer/part-social.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0e656"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Interactions</title></head><body id="d0e656"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Interactions</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-social.html">Social</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="reference_xnn_gvn_3y">
+        <h2 class="title topictitle2" id="ariaid-title2">LIKE OR DISLIKE A RESOURCE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows liking or disliking a resource.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/:resourceId/likes?thumbsDown=:thumbsDown</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_xnn_gvn_3y__table_x4n_gvn_3y"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__1 ">resourceId </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__2 ">ID of the resource. A resource can be: Idea,
+                                    Issue, Link, File and Discussion. Pages, workspaces, blogs are
+                                    not supported as of now.<div class="note note note_note"><span class="note__title">Note:</span> 
+                                        <p class="p">This API also allows to like and unlike the comments of a
+                                            resource using the ID of comments by invoking the <strong class="ph b">Get
+                                                comment details of a resource</strong> REST API.</p>
+                                    </div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__1 ">thumbsDown</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__2 ">Like or dislike a resource. Accepts
+                                        true/false<div class="note note note_note"><span class="note__title">Note:</span> Dislike is supported only for Issue and Idea
+                                        resource types. </div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnn_gvn_3y__table_x4n_gvn_3y__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{"success":true}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_hlk_tgv_py">
+        <h2 class="title topictitle2" id="ariaid-title3">DELETE LIKES OR DISLIKES OF A RESOURCE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows deleting likes or dislikes of a resource.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/:resourceId/likes</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_hlk_tgv_py__table_ilk_tgv_py"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_hlk_tgv_py__table_ilk_tgv_py__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hlk_tgv_py__table_ilk_tgv_py__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hlk_tgv_py__table_ilk_tgv_py__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hlk_tgv_py__table_ilk_tgv_py__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hlk_tgv_py__table_ilk_tgv_py__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hlk_tgv_py__table_ilk_tgv_py__entry__1 ">resourceId </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hlk_tgv_py__table_ilk_tgv_py__entry__2 ">ID of the resource. A resource can be: Idea,
+                                    Issue, Link, File and Discussion. Pages, workspaces, blogs are
+                                    not supported as of now.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hlk_tgv_py__table_ilk_tgv_py__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hlk_tgv_py__table_ilk_tgv_py__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hlk_tgv_py__table_ilk_tgv_py__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{"success":true}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_jjk_tgv_py">
+        <h2 class="title topictitle2" id="ariaid-title4">GET COMMENT DETAILS OF A RESOURCE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Gets comment details of a resource such as Idea, Issue, Link, File and
+                    Discussion.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/:resourceId/comment</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling
+                    Options</h3><strong class="ph b">Example:</strong><p class="p">Getting comment details of a
+                    discussion:</p><p class="p">https://&lt;hostname-api.sabacloud.com&gt;/v1/social/resource/bbmsg000000000001311/comment</p><table class="table frame-all" id="reference_jjk_tgv_py__table_tjk_tgv_py"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_jjk_tgv_py__table_tjk_tgv_py__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_jjk_tgv_py__table_tjk_tgv_py__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_jjk_tgv_py__table_tjk_tgv_py__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_jjk_tgv_py__table_tjk_tgv_py__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_jjk_tgv_py__table_tjk_tgv_py__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jjk_tgv_py__table_tjk_tgv_py__entry__1 ">resourceId </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jjk_tgv_py__table_tjk_tgv_py__entry__2 ">ID of the resource (Idea, Issue, Link, File and
+                                    Discussion)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jjk_tgv_py__table_tjk_tgv_py__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jjk_tgv_py__table_tjk_tgv_py__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jjk_tgv_py__table_tjk_tgv_py__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table></section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "commentDetail": [
+    {
+      "createdOn": "2016-12-14T06:00:16.000+0000",
+      "personDetail": {
+        "jobTitle": "cc",
+        "firstName": "user",
+        "lastName": "öztürk",
+        "personNo": "UONE",
+        "emailId": "vthomasdoppleganger@saba.com",
+        "actorId": "emplo000000000533317",
+        "uri": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000533317",
+        "username": "UONE"
+      },
+      "parentId": "bbmsg000000000018227",
+      "likeCount": 1,
+      "likeDetail": [
+        {
+          "createdOn": "2016-12-16T09:25:22.670+0000",
+          "personDetail": {
+            "jobTitle": "cc",
+            "firstName": "user",
+            "lastName": "öztürk",
+            "personNo": "UONE",
+            "emailId": "vthomasdoppleganger@saba.com",
+            "actorId": "emplo000000000533317",
+            "uri": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000533317",
+            "username": "UONE"
+          },
+          "id": "fbbas000000000030389"
+        }
+      ],
+      "replyCount": 0,
+      "id": "bbmsg000000000018228",
+      "comment": "comment-text"
+    }
+  ],
+  "count": 1
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_vhk_tgv_py">
+        <h2 class="title topictitle2" id="ariaid-title5">GET LIKE DETAILS OF A RESOURCE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Gets like details of a resource.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/:resourceId/likes?summary=:summary</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_vhk_tgv_py__table_whk_tgv_py"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_vhk_tgv_py__table_whk_tgv_py__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vhk_tgv_py__table_whk_tgv_py__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vhk_tgv_py__table_whk_tgv_py__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vhk_tgv_py__table_whk_tgv_py__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vhk_tgv_py__table_whk_tgv_py__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__1 ">resourceId </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__2 ">ID of the resource</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__1 ">summary</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__2 ">Show only Summary. Accepts true/false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vhk_tgv_py__table_whk_tgv_py__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "likeDetails": [
+        {
+            "createdOn": "2016-12-02T12:31:04.473+0000",
+            "personDetail": {
+                "emailId": "uuuu@111.com",
+                "jobTitle": "gytfhhh",
+                "firstName": "user",
+                "lastName": "one",
+                "personNo": "UONE",
+                "actorId": "emplo000000000533317",
+                "uri": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000533317",
+                "username": "UONE"
+            },
+            "id": "fbbas000000000030031"
+        }
+    ],
+    "totalLikes": 1,
+    "totalDislikes": 0
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_xfk_tgv_py">
+        <h2 class="title topictitle2" id="ariaid-title6">POST A COMMENT ON A RESOURCE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Posts a comment on resources (all types), discussions and comments (made on
+                    resources and discussions). </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/:resourceId/comment
+                </p>
+            </section>
+            <section class="section"><strong class="ph b">Example:</strong><p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/issue000000000001044/comment</p><p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/bbmsg000000000001311/comment</p></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_xfk_tgv_py__table_rgk_tgv_py"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_xfk_tgv_py__table_rgk_tgv_py__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xfk_tgv_py__table_rgk_tgv_py__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xfk_tgv_py__table_rgk_tgv_py__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xfk_tgv_py__table_rgk_tgv_py__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xfk_tgv_py__table_rgk_tgv_py__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xfk_tgv_py__table_rgk_tgv_py__entry__1 ">resourceId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xfk_tgv_py__table_rgk_tgv_py__entry__2 ">ID of the resource or the parent comment ID of
+                                    the discussion</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xfk_tgv_py__table_rgk_tgv_py__entry__3 ">bbmsg000000000001516<p class="p">issue000000000001044</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xfk_tgv_py__table_rgk_tgv_py__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xfk_tgv_py__table_rgk_tgv_py__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xfk_tgv_py__table_rgk_tgv_py__entry__1 ">comment</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xfk_tgv_py__table_rgk_tgv_py__entry__2 ">Comment to be posted on the resource</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xfk_tgv_py__table_rgk_tgv_py__entry__3 ">test comment</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xfk_tgv_py__table_rgk_tgv_py__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xfk_tgv_py__table_rgk_tgv_py__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "comment":"comment1"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_g3g_qgq_xw">
+        <h2 class="title topictitle2" id="ariaid-title7">GET SOCIAL INTERACTIONS OF A USER</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Retrieves the social interactions such as clicks, likes, comments and shares of a
+                    user.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/metrics/:personId?resource=(:resources)&amp;from_date=:from_date&amp;to_date=:to_date
+                </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (using lookup)</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/metrics/username=&lt;username&gt;?resource=(:resources)&amp;from_date=:from_date&amp;to_date=:to_date
+                </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_g3g_qgq_xw__table_w3g_qgq_xw"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__1 ">personId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__2 ">ID of the user</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__1 ">resources</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__2 ">List of resources:<ul class="ul" id="reference_g3g_qgq_xw__ul_kyy_gwq_xw">
+                                        <li class="li">idea </li>
+                                        <li class="li">file </li>
+                                        <li class="li">url </li>
+                                        <li class="li">blog </li>
+                                        <li class="li">contributions </li>
+                                        <li class="li">discussions </li>
+                                        <li class="li">feedback </li>
+                                        <li class="li">workspace </li>
+                                        <li class="li">connections </li>
+                                        <li class="li">views </li>
+                                        <li class="li">videos</li>
+                                    </ul></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__1 ">from_date</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__2 ">From date<div class="note note note_note"><span class="note__title">Note:</span> The supported date format:
+                                        YYYY-MM-DD.</div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__1 ">to_date</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__2 ">To date<div class="note note note_note"><span class="note__title">Note:</span> The supported date format:
+                                        YYYY-MM-DD.</div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_g3g_qgq_xw__table_w3g_qgq_xw__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Detail of metrics fields for each resource type in output</h3> The
+                following are the fields for each resource type in output:<ol class="ol" id="reference_g3g_qgq_xw__ol_ksg_nhq_xw">
+                    <li class="li">Connections <ol class="ol" type="a" id="reference_g3g_qgq_xw__ol_kl4_nhq_xw">
+                            <li class="li">Total followers </li>
+                            <li class="li">Total followed </li>
+                            <li class="li">Grand total of followers (regardless of date range)</li>
+                            <li class="li">Grand total of followed (regardless of date range)</li>
+                        </ol></li>
+                    <li class="li">Contributions<ol class="ol" type="a" id="reference_g3g_qgq_xw__ol_w2x_4hq_xw">
+                            <li class="li">Total ideas contributed </li>
+                            <li class="li">Total bookmarks contributed</li>
+                            <li class="li">Total discussion initiated</li>
+                            <li class="li">Total file contributed</li>
+                            <li class="li">Total url contributed</li>
+                            <li class="li">Total blog contributed</li>
+                            <li class="li">Total video contributed</li>
+                        </ol></li>
+                    <li class="li">Discussions<ol class="ol" type="a" id="reference_g3g_qgq_xw__ol_rrk_qhq_xw">
+                            <li class="li">Total votes for discussion </li>
+                            <li class="li">Total number of replies on discussion</li>
+                            <li class="li">Total number of tags on discussion</li>
+                        </ol></li>
+                    <li class="li">Ideas <ol class="ol" type="a" id="reference_g3g_qgq_xw__ol_kj5_rhq_xw">
+                            <li class="li">Total number of tags on ideas</li>
+                            <li class="li">Total number of Votes for idea<div class="note note note_note"><span class="note__title">Note:</span> If a user gives two positive
+                                    votes and two negative votes, then this value appears as 0. It
+                                    is also 0, if the user does not have any votes. </div></li>
+                            <li class="li">Total number of Views for idea</li>
+                            <li class="li">Total number of comments for idea</li>
+                        </ol></li>
+                    <li class="li">File<ol class="ol" type="a" id="reference_g3g_qgq_xw__ol_cwv_shq_xw">
+                            <li class="li">Number of tags on file</li>
+                            <li class="li">Count of Ratings for File</li>
+                            <li class="li">Total comments for File</li>
+                        </ol></li>
+                    <li class="li">URL<ol class="ol" type="a" id="reference_g3g_qgq_xw__ol_m55_thq_xw">
+                            <li class="li">Number of tags on URL</li>
+                            <li class="li">Count of Ratings for URL</li>
+                            <li class="li">Total comments for URL</li>
+                        </ol></li>
+                    <li class="li">Blogs<ol class="ol" type="a" id="reference_g3g_qgq_xw__ol_izr_5hq_xw">
+                            <li class="li">Number of tags on Blogs</li>
+                            <li class="li">Number of Ratings for Blog</li>
+                            <li class="li">Total comments for Blog</li>
+                        </ol></li>
+                    <li class="li">Video<ol class="ol" type="a" id="reference_g3g_qgq_xw__ol_m4n_vhq_xw">
+                            <li class="li">Number of Tags on Video</li>
+                            <li class="li">Count of Ratings for Video</li>
+                            <li class="li">Total comments for Video</li>
+                        </ol></li>
+                    <li class="li">Workspace<ol class="ol" type="a" id="reference_g3g_qgq_xw__ol_fgl_whq_xw">
+                            <li class="li">Number of Tags on Workspaces</li>
+                            <li class="li">Count of Ratings for Workspaces</li>
+                        </ol></li>
+                    <li class="li">Feedback<ol class="ol" type="a" id="reference_g3g_qgq_xw__ol_h4f_xhq_xw">
+                            <li class="li">Positive votes by person </li>
+                            <li class="li">Negative votes by person</li>
+                        </ol></li>
+                    <li class="li">Views<ol class="ol" type="a" id="reference_g3g_qgq_xw__ol_uwc_yhq_xw">
+                            <li class="li">Number of Views by person for videos, page and blogpost. </li>
+                        </ol></li>
+                </ol></section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "followers":10,
+   "followed":5,
+   "total_followers":20,
+   "total_followed":15,
+   "total_ideas_contributed":2,
+   "total_bookmarks_contributed":5,
+   "total_discussion_initiated":2,
+   "total_files_contributed":2,
+   "total_urls_contributed":2,
+   "total_blogs_contributed":3,
+   "total_videos_contributed":5,
+   "total_issues_contributed":7,
+   "total_votes_for_discussion":7,
+   "total_replies_on_discussion":9,
+   "count_tags_on_discussion":5,
+   "total_votes_for_idea":5,
+   "total_comment_for_idea":4,
+   "total_tags_for_idea":8,
+   "total_views_on_idea":10,
+   "number_of_tags_on_file":0,
+   "count_of_ratings_for_file":0,
+   "file_comment_count":0,
+   "number_of_tags_on_url":0,
+   "count_of_ratings_for_url":0,
+   "url_comment_count":0,
+   "number_of_tags_on_blogs":0,
+   "count_of_blog_ratings":0,
+   "blog_count_of_comments":0,
+   "number_of_tags_on_videos":0,
+   "count_of_video_ratings":0,
+   "video_count_of_comments":0,
+   "count_tags_on_workspaces":0,
+   "count_of_workspace_ratings":0,
+   "count_positivevotes_by_psn":30,
+   "count_negativevotes_by_psn":10,
+   "total_views":25
+}</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

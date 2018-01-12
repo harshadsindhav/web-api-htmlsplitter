@@ -1,0 +1,320 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="cif, restful web services, get version details of the product, cif components, get version details of the product, get a list of sites, get a cif certificate, get the initial system values for contenttypes, contentformats, contentservers, get the initial system values for contenttypes, contentformats, contentservers">
+  <meta name="keywords" content="cif, restful web services, get version details of the product, cif components, get version details of the product, get a list of sites, get a cif certificate, get the initial system values for contenttypes, contentformats, contentservers, get the initial system values for contenttypes, contentformats, contentservers">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-cif.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Core Services</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title5">GET INITIAL SYSTEM VALUES FOR CONTENTTYPES, CONTENTFORMATS, CONTENTSERVERS</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the initial system values for contentTypes, contentFormats, contentServers for a particular site based the CIF certificate passed as a parameter value.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <div class="p">
+     https://
+     <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/coreservice/certificate/
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> 
+      <p class="p">The following is a <strong class="ph b">deprecated</strong> URL for this REST Web service and will be discontinued in the next few updates:</p>https://
+      <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/content/coreservice/certificate/
+     </div>
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_jrp_ppx_fp__table_rrp_ppx_fp" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 2. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jrp_ppx_fp__table_rrp_ppx_fp__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jrp_ppx_fp__table_rrp_ppx_fp__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jrp_ppx_fp__table_rrp_ppx_fp__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jrp_ppx_fp__table_rrp_ppx_fp__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jrp_ppx_fp__table_rrp_ppx_fp__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrp_ppx_fp__table_rrp_ppx_fp__entry__1 ">certificate</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrp_ppx_fp__table_rrp_ppx_fp__entry__2 ">The CIF certificate</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrp_ppx_fp__table_rrp_ppx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrp_ppx_fp__table_rrp_ppx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrp_ppx_fp__table_rrp_ppx_fp__entry__5 ">Yes</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section"> 
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> This parameter needs to be passed as a Header Parameter.
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "@type": "com.saba.services.dto.CIFCoreDTO",
+    "repositories": [
+        "java.util.Arrays$ArrayList",
+        [
+            "Production"
+        ]
+    ],
+    "system-name": "SabaSite",
+    "locales": [
+        "list",
+        [
+            {
+                "@type": "com.saba.services.dto.SabaLocaleDTO",
+                "locale-name": "Deutsch (German)",
+                "locale-id": "local000000000000003",
+                "is-default-locale": false,
+                "java-locale": "de_DE"
+            },
+            {
+                "@type": "com.saba.services.dto.SabaLocaleDTO",
+                "locale-name": "English",
+                "locale-id": "local000000000000001",
+                "is-default-locale": true,
+                "java-locale": "en_US"
+            },
+            {
+                "@type": "com.saba.services.dto.SabaLocaleDTO",
+                "locale-name": "Français (French)",
+                "locale-id": "local000000000000002",
+                "is-default-locale": false,
+                "java-locale": "fr_FR"
+            },
+            {
+                "@type": "com.saba.services.dto.SabaLocaleDTO",
+                "locale-name": "日本語 (Japanese)",
+                "locale-id": "local000000000000011",
+                "is-default-locale": false,
+                "java-locale": "ja_JP"
+            }
+        ]
+    ],
+    "major-version": "6",
+    "minor-version": "5",
+    "system-locale": {
+        "@type": "com.saba.services.dto.SabaLocaleDTO",
+        "locale-name": "English",
+        "locale-id": "local000000000000001",
+        "is-default-locale": true,
+        "java-locale": "en_US"
+    },
+    "package-format-types": [
+        "java.util.Arrays$ArrayList",
+        [
+            "Deployed SCORM",
+            "Deployed SCORM",
+            "SCORM Package",
+            "IMS Package",
+            "Zip File",
+            "AICC",
+            "TEST",
+            "Saba Offline",
+            "Folder",
+            "File",
+            "Saba Publisher Title",
+            "File",
+            "URL",
+            "Centra Recording",
+            "TinCan",
+            "unknown"
+        ]
+    ],
+    "player-templates": [
+        "list",
+        [
+            {
+                "@type": "com.saba.services.dto.SimpleDetailDTO",
+                "name": "Standard Content Player Template",
+                "id": "pltpt000000000000001"
+            }
+        ]
+    ],
+    "content-servers": [
+        "list",
+        [
+            {
+                "@type": "com.saba.services.dto.ContentServerDTO",
+                "name": "Default Content Server",
+                "id": "media000000000001020",
+                "url": "https://&lt;hostname-api.sabacloud.com&gt;/production_content_server/"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentServerDTO",
+                "name": "Qaamd28",
+                "id": "media000000000001040",
+                "url": "https://&lt;hostname-api.sabacloud.com&gt;/production"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentServerDTO",
+                "name": "ojt_content",
+                "id": "media000000000001060",
+                "url": "https://&lt;hostname-api.sabacloud.com&gt;/production"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentServerDTO",
+                "name": "vathavale",
+                "id": "media000000000001100",
+                "url": "https://&lt;hostname-api.sabacloud.com&gt;/production"
+            }
+        ]
+    ],
+    "content-formats": [
+        "list",
+        [
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "11",
+                "description": "Deployed SCORM"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "11",
+                "description": "Deployed SCORM"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "6",
+                "description": "SCORM Package"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "5",
+                "description": "IMS Package"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "12",
+                "description": "Zip File"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "7",
+                "description": "AICC"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "99",
+                "description": "TEST"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "10",
+                "description": "Saba Offline"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "0",
+                "description": "Folder"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "1",
+                "description": "File"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "13",
+                "description": "Saba Publisher Title"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "1",
+                "description": "File"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "8",
+                "description": "URL"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "14",
+                "description": "Centra Recording"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "15",
+                "description": "TinCan"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "99",
+                "description": "unknown"
+            }
+        ]
+    ],
+    "system-url": null,
+    "content-types": [
+        "list",
+        [
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "0",
+                "description": "Test"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "1",
+                "description": "Course"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "2",
+                "description": "Information"
+            },
+            {
+                "@type": "com.saba.services.dto.ContentTypeDTO",
+                "key": "3",
+                "description": "Assessment"
+            }
+        ]
+    ]
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

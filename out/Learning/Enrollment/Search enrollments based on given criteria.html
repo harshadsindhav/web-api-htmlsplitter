@@ -1,0 +1,350 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all enrollments, learning components, find the details of the enrollments, find the details of the enrollments, search enrollments based on given criteria, search enrollments based on given criteria, search enrollments based on given criteria, get the details of an enrollment, get the details of an enrollment, get existing registration details or auto enroll user and get registration details, get existing registration details or auto enroll user and get registration details, create a new enrollment, create a new enrollment, enroll for other user/self, enroll for other user/self, enroll for other user/self with payment, enroll for other user/self with payment, mark an enrollment complete, mark an enrollment complete, cancel an enrollment, add or update the custom fields of an enrollment, add or update the custom fields of an enrollment, mark a task/registration module complete, mark a task/registration module complete">
+  <meta name="keywords" content="learning, restful web services, get all enrollments, learning components, find the details of the enrollments, find the details of the enrollments, search enrollments based on given criteria, search enrollments based on given criteria, search enrollments based on given criteria, get the details of an enrollment, get the details of an enrollment, get existing registration details or auto enroll user and get registration details, get existing registration details or auto enroll user and get registration details, create a new enrollment, create a new enrollment, enroll for other user/self, enroll for other user/self, enroll for other user/self with payment, enroll for other user/self with payment, mark an enrollment complete, mark an enrollment complete, cancel an enrollment, add or update the custom fields of an enrollment, add or update the custom fields of an enrollment, mark a task/registration module complete, mark a task/registration module complete">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Enrollment</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title4">SEARCH ENROLLMENTS BASED ON GIVEN CRITERIA</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <div class="p">
+     Returns the details of the enrollments based on the provided search criteria.
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> Using this API, the user can view his own enrollments by passing student_id as the criteria. The user needs the people admin privilege to access other's enrollments. 
+     </div>
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search</p> 
+    <p class="p">?q=(:criteria_field%3D%3D:field_value)&amp;count=:count&amp;startPage=:startPage&amp;includeDetails=:isDetail</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_afq_xlc_ht__table_kfq_xlc_ht" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 2. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__1 ">criteria_field</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__2 ">The search criteria i.e. the field name.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__3 "> <p class="p">Such as:</p> 
+        <ul class="ul" id="reference_afq_xlc_ht__ul_dhv_hvb_v5"> 
+         <li class="li">student_username</li> 
+         <li class="li">student_id</li> 
+         <li class="li">student_email</li> 
+         <li class="li">student_number</li> 
+         <li class="li">offering_temp_no</li> 
+         <li class="li">offering_temp_id</li> 
+         <li class="li">offering_temp_name</li> 
+         <li class="li">offering_temp_version</li> 
+         <li class="li">is_walk_in </li> 
+         <li class="li">is_no_show</li> 
+         <li class="li">custom0 and other custom fields</li> 
+         <li class="li">created_on</li> 
+         <li class="li">updated_on </li> 
+         <li class="li">reg_status </li> 
+         <li class="li">part_number </li> 
+         <li class="li">end_date </li> 
+         <li class="li">start_date</li> 
+         <li class="li">class_id</li> 
+        </ul> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__1 ">field_value</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__2 ">The search value for the specified search criteria.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__3 ">emplo000000000001000</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__1 ">count</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__2 ">The number of records per page.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__3 ">10</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__1 ">startPage</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__2 ">The start page number for the list of records.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__3 ">1</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__1 ">isDetail</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__2 ">Do you want enrollment details (true | false)</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_afq_xlc_ht__table_kfq_xlc_ht__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "facets": [],
+    "hasMoreResults": true,
+    "totalResults": 17,
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "results": [
+        {
+            "id": "regdw000000000003201",
+            "displayName": "00003225",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/enrollments/regdw000000000003201"
+        },
+        {
+            "id": "regdw000000000003501",
+            "displayName": "00003525",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/enrollments/regdw000000000003501"
+        },
+        {
+            "id": "regdw000000000003502",
+            "displayName": "00003526",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/enrollments/regdw000000000003502"
+        },
+        {
+            "id": "regdw000000000005670",
+            "displayName": "00005614",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/enrollments/regdw000000000005670"
+        },
+        {
+            "id": "regdw000000000005585",
+            "displayName": "00005529",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/enrollments/regdw000000000005585"
+        },
+        {
+            "id": "regdw000000000005633",
+            "displayName": "00005577",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/enrollments/regdw000000000005633"
+        },
+        {
+            "id": "regdw000000000005634",
+            "displayName": "00005578",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/enrollments/regdw000000000005634"
+        },
+        {
+            "id": "regdw000000000005691",
+            "displayName": "00005635",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/enrollments/regdw000000000005691"
+        },
+        {
+            "id": "regdw000000000003200",
+            "displayName": "00003224",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/enrollments/regdw000000000003200"
+        },
+        {
+            "id": "regdw000000000005625",
+            "displayName": "00005569",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/enrollments/regdw000000000005625"
+        }
+    ]
+ }</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Examples</h5>
+    <p class="p"><strong class="ph b">To search using the Saba internal id for student:</strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=(student_id==persn000000000202215) </p>
+    <p class="p"><strong class="ph b">To search using the student’s username:</strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=(student_username==UONE)</p>
+    <p class="p"><strong class="ph b">To search using the students person no:</strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=(student_number==036009) </p>
+    <p class="p"><strong class="ph b">To search using the student’s email:</strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=( student_email==abc@xyz.com)</p>
+    <p class="p"><strong class="ph b">To search using the Course ID:</strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=(offering_temp_no==ABC)</p>
+    <p class="p"><strong class="ph b">To search using the Saba Internal course ID:</strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=(offering_temp_id==cours000000000200186)</p>
+    <p class="p"><strong class="ph b">To search using the Saba internal class ID:</strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=(class_id==class000000000200166)</p>
+    <p class="p"><strong class="ph b">To search enrollents for a class: </strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=(class_id%3D%3Ddowbt000000000002151)&amp;count=10&amp;startPage=1&amp;includeDetails=false</p>
+    <p class="p"><strong class="ph b">To search enrollments with no show records: </strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <div class="p">
+     ?q=(is_no_show%3D%3D1)&amp;count=10&amp;startPage=1&amp;includeDetails=false
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> The following are the possible values for 
+      <strong class="ph b">is_no_show</strong>: 
+      <ul class="ul" id="reference_afq_xlc_ht__ul_pf2_wvq_ht"> 
+       <li class="li">true or 1</li> 
+       <li class="li">false or 0</li> 
+      </ul>
+     </div>
+    </div>
+    <p class="p"><strong class="ph b">To search enrollments with walk in records:</strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <div class="p">
+     ?q=(is_walk_in%3D%3D1)&amp;count=10&amp;startPage=1&amp;includeDetails=false
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> The following are the possible values for 
+      <strong class="ph b">is_walk_in</strong>: 
+      <ul class="ul" id="reference_afq_xlc_ht__ul_tdy_yvq_ht"> 
+       <li class="li">true or 1</li> 
+       <li class="li">false or 0</li> 
+      </ul>
+     </div>
+    </div>
+    <p class="p"><strong class="ph b">To search enrollments based on custom fields: </strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=(custom0%3D%3Dcustom0Val)&amp;count=10&amp;startPage=1&amp;includeDetails=false</p>
+    <p class="p"><strong class="ph b">To search enrollments with details: </strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=(custom0%3D%3Dcustom0Val)&amp;count=10&amp;startPage=1&amp;includeDetails=true</p>
+    <p class="p"><strong class="ph b">Return Values:</strong></p>
+    <pre class="pre codeblock"><code>{
+    "facets": [],
+    "hasMoreResults": false,
+    "totalResults": 1,
+    "itemsPerPage": 10,
+    "startIndex": 1
+    "results": [
+        {
+            "class_id": {
+                "id": "class000000000200443",
+                "displayName": "CE04ILT04"
+            },
+            "student_id": {
+                "id": "emplo000000000200099",
+                "displayName": "Ajay Tripathi"
+            },
+            "status": "100",
+            "offering_action_id": {
+                "id": "ofapr000000000001400",
+                "displayName": "00001382"
+            },
+            "delivery_id": {
+                "id": "eqcat000000000000004",
+                "displayName": "Instructor-Led"
+            },
+            "offering_temp_id": {
+                "id": "cours000000000200446",
+                "displayName": "CE04"
+            },
+            "created_on":"2016-06-22T08:45:24.000+0000",
+            "elements_to_complete": 0,
+            "reg_no": "00001385",
+            "wlist_on": null,
+            "wlist_priority": 5,
+            "Max_Count": null,
+            "Current_Count": null,
+            "is_no_show": false,
+            "is_walk_in": false,
+            "customValues": {
+                "custom9": null,
+                "custom0": "custom0Val",
+                "custom3": null,
+                "custom4": null,
+                "custom1": null,
+                "custom2": null,
+                "custom7": null,
+                "custom8": null,
+                "custom5": null,
+                "custom6": null
+            },
+            "id": "regdw000000000001340"
+        }
+    ]
+}</code></pre>
+    <p class="p"><strong class="ph b">To search enrollments based on updated_on date: </strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=(updated_on%3Dge%3D2015-08-27T16%3A16%3A00.000%2B0530)&amp;count=10&amp;startPage=1</p>
+    <p class="p"><strong class="ph b">Return Values:</strong></p>
+    <pre class="pre codeblock"><code>{
+    "facets": [],
+    "hasMoreResults": true,
+    "totalResults": 1,
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "results": [
+        {
+            "id": ""regdw000000000003201",
+            "displayName": ""00003225",
+            "href": ""https://&lt;hostname-api.sabacloud.com&gt;/v1/enrollments/regdw000000000003201"
+        }
+    ]
+ }</code></pre>
+    <p class="p"><strong class="ph b">To search enrollments based on registration status: </strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <div class="p">
+     ?q=(reg_status%3D%3D100,student_id%3D%3Dpersn000000000200273)&amp;count=10&amp;startPage=1
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> The following are the possible values for 
+      <strong class="ph b">reg_status</strong>: 
+      <ul class="ul" id="reference_afq_xlc_ht__ul_uvf_lvq_ht"> 
+       <li class="li">Confirmed: 100 </li> 
+       <li class="li">Waitlisted: 101 </li> 
+       <li class="li">Offered: 103 </li> 
+       <li class="li">Cancelled: 600 </li> 
+      </ul>
+     </div>
+    </div>
+    <p class="p"><strong class="ph b">To search enrollments based on class number or part number: </strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=(part_number%3D%3DPG1DNWLD1)&amp;count=10&amp;startPage=1</p>
+    <p class="p"><strong class="ph b">To search enrollments based on student username: </strong></p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/enroll/search
+    <p class="p">?q=(student_username%3D%3DCONE)&amp;count=10&amp;startPage=1</p>
+   </section> 
+  </div>
+ </body>
+</html>

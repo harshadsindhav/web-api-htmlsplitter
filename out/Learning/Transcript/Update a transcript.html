@@ -1,0 +1,303 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all transcripts, learning components, find the details of the transcripts, find the details of the transcripts, find the transcripts that have changed over a given period of time, find the transcripts that have changed over a given period of time, find the details of the transcripts (using post - range based search), find the details of the transcripts (using post - range based search), get the details of transcript, get the details of transcript, get the meta details of the transcript, get the meta details of the transcript, create a new transcript, create a new transcript, update a transcript, update the custom fields of a transcript, update the custom fields of a transcript, delete a transcript">
+  <meta name="keywords" content="learning, restful web services, get all transcripts, learning components, find the details of the transcripts, find the details of the transcripts, find the transcripts that have changed over a given period of time, find the transcripts that have changed over a given period of time, find the details of the transcripts (using post - range based search), find the details of the transcripts (using post - range based search), get the details of transcript, get the details of transcript, get the meta details of the transcript, get the meta details of the transcript, create a new transcript, create a new transcript, update a transcript, update the custom fields of a transcript, update the custom fields of a transcript, delete a transcript">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Transcript</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title10">UPDATE A TRANSCRIPT</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <div class="p">
+     Updates a transcript.
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> This API does not support partial updates. You must provide all the required fields to perform the update operation.
+     </div>
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">PUT</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <div class="p">
+     https://
+     <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/transcript/:transcriptId
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> 
+      <p class="p">The following is a <strong class="ph b">deprecated</strong> URL for this REST Web service and will be discontinued in the next few updates:</p>https://
+      <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/learning/transcript/:transcriptId
+     </div>
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL (User-friendly)</h5>You can use a user-friendly URL which accepts the 
+    <strong class="ph b">action_no</strong> instead of the internal Transcript's ID.
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/transcript/action_no%3D<em class="ph i">&lt;TranscriptsActionNo&gt;</em></p>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_mj5_xnx_fp__table_bk5_xnx_fp" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 9. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 ">com.saba.offering.offeringaction.OfferingActionProfileDetail</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">transcriptId</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Transcript's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 ">ofapr000000000015122</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">durationStr</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Duration</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 ">00:00</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">completionDate</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Completion Date</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "> 2013-11-18 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">completionStatusValue</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Completion Status Value</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 ">700</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">totalProviderCredits</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Total Provider Credits</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">totalCredits</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Total Credits</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">Pending Approval</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Completion Status Display</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">grade</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Grade</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">startTime</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Start Time</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">endTime</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">End Time</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">offeringStartDate</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Offering Start Date</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">offeringEndDate</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Offering End Date</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">score</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Score</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">deliveryTypeReference</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Delivery Type Reference</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">ceCourseCredits</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Course Credits</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">courseCompetencies</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Course Competencies</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__1 ">customValues</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__2 ">Custom values</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__3 ">[\"list\",[{\"@type\": \"CustomAttributeValueDetail\",\"name\": \"custom0\",\"datatype\": {\"@type\": \"CustomAttributeDatatype\",\"value\": 18},\"value\": null, \"displayName\": \"custom0\"},{\"@type\": \"CustomAttributeValueDetail\",\"name\":\"custom1\", \"datatype\": {\"@type\": \"CustomAttributeDatatype\",\"value\": 18}, \"value\": null,\"displayName\": \"custom1\"},{ \"@type\": \"CustomAttributeValueDetail\",\"name\": \"custom2\",\"datatype\": {\"@type\": \"CustomAttributeDatatype\",\"value\": 18}, \"value\": null,\"displayName\": \"custom2\"},{ \"@type\": \"CustomAttributeValueDetail\",\"name\": \"custom3\",\"datatype\": { \"@type\": \"CustomAttributeDatatype\",\"value\": 18 }, \"value\": null,\"displayName\": \"custom3\"} ]]</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_mj5_xnx_fp__table_bk5_xnx_fp__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5>
+    <pre class="pre codeblock"><code>{
+  "@type": "com.saba.offering.offeringaction.OfferingActionProfileDetail",
+  "durationStr": "00:00",
+  "completionDate": {
+    "@type": "date",
+    "time": "2013-11-18"
+  },
+  "grade": "",
+  "startTime": null,
+  "endTime": null,
+  "offeringStartDate": null,
+  "offeringEndDate": null,
+  "score": [
+    "java.math.BigDecimal",
+    55
+  ],
+  "customValues": [
+  "list",
+  [
+    {
+      "@type": "CustomAttributeValueDetail",
+      "name": "custom0",
+      "value": "aaaa"
+    },
+    {
+      "@type": "CustomAttributeValueDetail",
+      "name": "custom9",
+      "value": "custom9999999"
+    }
+  ]
+],
+
+  "deliveryTypeReference": {
+    "@type": "Delivery",
+    "id": ""
+  }
+}</code></pre>The lookup support is now available for this REST API.
+    <table id="reference_mj5_xnx_fp__table_mmx_rwn_kx" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption></caption>
+     <colgroup>
+      <col>
+      <col>
+      <col>
+     </colgroup>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry"> <strong class="ph b">JSON Attribute</strong> </td> 
+       <td class="entry"> <strong class="ph b">UI Attribute</strong> </td> 
+       <td class="entry"> <strong class="ph b">Component Name</strong> </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> transcriptId </td> 
+       <td class="entry"> Action No </td> 
+       <td class="entry"> Transcript </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> learners </td> 
+       <td class="entry"> Learner </td> 
+       <td class="entry"> Person ,External </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Location </td> 
+       <td class="entry"> Location </td> 
+       <td class="entry"> Location </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Competancies </td> 
+       <td class="entry"> Competancies </td> 
+       <td class="entry"> CompetencyProfile </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Fos </td> 
+       <td class="entry"> Field Of Study </td> 
+       <td class="entry"> Field Of Study </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> deliveryType </td> 
+       <td class="entry"> Delivery Type </td> 
+       <td class="entry"> Category Definition </td> 
+      </tr> 
+     </tbody>
+    </table>
+   </section> 
+  </div>
+ </body>
+</html>

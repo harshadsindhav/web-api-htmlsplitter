@@ -1,0 +1,1426 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="foundation, restful web services, get the meta details of positions, foundation components, get the meta details of positions, find the details of the positions, find the details of the positions, find the details of the positions (using post - range based search), learning components, find the details of the positions (using post - range based search), get all positions, get the details of a particular position, get the details of a particular position, create a new position, create a new position, update the details of a position, update the details of a position, delete position of a person, delete position of a person, assign position for a person, people components, assign position for a person"><meta name="keywords" content="foundation, restful web services, get the meta details of positions, foundation components, get the meta details of positions, find the details of the positions, find the details of the positions, find the details of the positions (using post - range based search), learning components, find the details of the positions (using post - range based search), get all positions, get the details of a particular position, get the details of a particular position, create a new position, create a new position, update the details of a position, update the details of a position, delete position of a person, delete position of a person, assign position for a person, people components, assign position for a person"><meta name="DC.Relation" scheme="URI" content="../developer/part-foundation.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0e656"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Positions</title></head><body id="d0e656"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Positions</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-foundation.html">Foundation</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-get-the-meta-details-of-positions-N1000A">
+        <h2 class="title topictitle2" id="ariaid-title2">GET META DETAILS OF POSITIONS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of the Position.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/positions/meta:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-the-meta-details-of-positions-N1000A__table_en2_jx5_5t"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-meta-details-of-positions-N1000A__table_en2_jx5_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-meta-details-of-positions-N1000A__table_en2_jx5_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-meta-details-of-positions-N1000A__table_en2_jx5_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-meta-details-of-positions-N1000A__table_en2_jx5_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-meta-details-of-positions-N1000A__table_en2_jx5_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-meta-details-of-positions-N1000A__table_en2_jx5_5t__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-meta-details-of-positions-N1000A__table_en2_jx5_5t__entry__2 ">Indicate what additional details needs to be
+                                    returned</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-meta-details-of-positions-N1000A__table_en2_jx5_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-meta-details-of-positions-N1000A__table_en2_jx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-meta-details-of-positions-N1000A__table_en2_jx5_5t__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "sampleData": {
+        "descriptor": null,
+        "location": null,
+        "organization": null,
+        "sharedPosition": false,
+        "sharedPeopleCount": 1,
+        "leadershipPosition": false,
+        "status": null,
+        "notes": null,
+        "jobType": null,
+        "fillableDate": null,
+        "reportsTo": null,
+        "createdDate": null,
+        "positionId": null,
+        "positionTitle": null,
+        "keyPosition": false,
+        "fteValue": null,
+        "atRisk": 0,
+        "endDate": null,
+        "customValues": {
+            "custom9": null,
+            "custom0": null,
+            "custom3": null,
+            "custom4": null,
+            "custom1": null,
+            "custom2": null,
+            "custom7": null,
+            "custom8": null,
+            "custom5": null,
+            "custom6": null
+        },
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": null
+        },
+        "id": null,
+        "href": "https://{hostname}-api.sabacloud.com/v1/positions/postn000000000000001"
+    },
+    "name": "Position",
+    "displayName": "Position",
+    "attributes": [
+        {
+            "name": "atRisk",
+            "displayName": "At Risk",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "choices": {
+                "href": "https://{hostname}-api.sabacloud.com/v1/list/sysli000000000003055/values"
+            },
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "ciTitle",
+            "displayName": "CI Title",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "createdDate",
+            "displayName": "Created Date ",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "descriptor",
+            "displayName": "Descriptor",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 1000,
+            "maximumLength": 1000,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "endDate",
+            "displayName": "End Date",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "fillableDate",
+            "displayName": "Date Fillable",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "flags",
+            "displayName": "Flags",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "fteValue",
+            "displayName": "FTE Value",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "id",
+            "displayName": "kI18nALPosition_id(Missing resource)",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "jobType",
+            "displayName": "Job",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "keyPosition",
+            "displayName": "kI18nALPosition_keyPosition(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "leadershipPosition",
+            "displayName": "kI18nALPosition_leadershipPosition(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "location",
+            "displayName": "Location",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "notes",
+            "displayName": "Notes",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 1000,
+            "maximumLength": 1000,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "organization",
+            "displayName": "Organization",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "positionId",
+            "displayName": "Position ID",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 20,
+            "maximumLength": 20,
+            "isSearchFilter": true
+        },
+        {
+            "name": "positionTitle",
+            "displayName": "Position Title",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "reportsTo",
+            "displayName": "Reports to Position",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "sharedPeopleCount",
+            "displayName": "Number of incumbents",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "sharedPosition",
+            "displayName": "Shared Position",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "securityDomain",
+            "displayName": "Domain",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "status",
+            "displayName": "Status",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "choices": {
+                "href": "https://{hostname}-api.sabacloud.com/v1/list/sysli000000000003054/values"
+            },
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom0",
+            "displayName": "Custom 0",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom1",
+            "displayName": "Custom 1",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom2",
+            "displayName": "Custom 2",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom3",
+            "displayName": "Custom 3",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom4",
+            "displayName": "Custom 4",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom5",
+            "displayName": "Custom 5",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom6",
+            "displayName": "Custom 6",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom7",
+            "displayName": "Custom 7",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom8",
+            "displayName": "Custom 8",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom9",
+            "displayName": "Custom 9",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="get-find-the-details-of-the-positions-N100A9">
+        <h2 class="title topictitle2" id="ariaid-title3">FIND DETAILS OF POSITIONS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the positions along with the ID, Name and the Deeplink URL
+                    based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/positions?q=(:criteria_field%3D%3D:field_value)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__1 ">criteria_field</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__2 ">The search criteria i.e. the field name.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__3 ">status</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__1 ">field_value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__2 ">The search value for the specified search
+                                    criteria.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__3 ">100</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-positions-N100A9__table_jl2_jx5_5t__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "hasMoreResults": false,
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "totalResults": 1,
+    "facets": [],
+    "results": [
+        {
+            "id": "postn000000000001302",
+            "href": "https://{hostname}-api.sabacloud.com/v1/positions/postn000000000001302"
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_z25_vnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title4">FIND DETAILS OF POSITIONS (Using POST - Range based search)</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the positions along with the ID, Name and the Deeplink URL
+                    based on the provided range based search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/positions/searchQuery?count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_z25_vnx_fp__table_if5_vnx_fp"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">conditions &gt; name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The search conditions.<div class="p">You can use any field
+                                        with "isSearchFilter": true.<div class="note note note_note"><span class="note__title">Note:</span> To find out the fields
+                                            that have "isSearchFilter": true, invoke the "Get the
+                                            Meta details" REST APIs.</div>You can use search
+                                        operators such as:<ul class="ul" id="reference_z25_vnx_fp__ul_of5_vnx_fp">
+                                            <li class="li">=gt=</li>
+                                            <li class="li">=ge=</li>
+                                            <li class="li">=lt=</li>
+                                            <li class="li">=le=</li>
+                                            <li class="li">=eq=</li>
+                                            <li class="li">=ne=</li>
+                                        </ul></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "conditions":[
+        {
+            "name":"status",
+            "operator":"==",
+            "value":"300"
+        },
+        {
+            "name":"positionTitle",
+            "operator":"==",
+            "value":"new position 001"
+        }
+    ]
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "hasMoreResults": false,
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "totalResults": 1,
+    "facets": [],
+    "results": [
+        {
+            "id": "postn000000000001302",
+            "href": "https://{hostname}-api.sabacloud.com/v1/positions/postn000000000001302"
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="get-get-all-positions-N1006D">
+        <h2 class="title topictitle2" id="ariaid-title5">GET ALL POSITIONS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all Positions for which the user has access.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/positions?count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-all-positions-N1006D__table_km2_jx5_5t"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-positions-N1006D__table_km2_jx5_5t__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "hasMoreResults": false,
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "totalResults": 1,
+    "facets": [],
+    "results": [
+        {
+            "id": "postn000000000001302",
+            "href": "https://{hostname}-api.sabacloud.com/v1/positions/postn000000000001302"
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="get-get-the-details-of-a-particular-position-N10033">
+        <h2 class="title topictitle2" id="ariaid-title6">GET DETAILS OF A PARTICULAR POSITION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a Position based on the position's ID that is
+                    passed as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/position/:id:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">position_id</strong> instead of the internal Position's
+                        ID.<p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/position/position_id%3D&lt;PositionID
+                    see on UI&gt;</p></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__2 ">Position's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__2 ">Indicate what additional details needs to be
+                                    returned</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-position-N10033__table_um2_jx5_5t__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "@type": "com.saba.rest.position.RestPositionDTO",
+    "positionDetail": {
+        "@type": "com.saba.rest.position.RestPositionDetail",
+        "descriptor": null,
+        "location": null,
+        "id": null,
+        "domain": {
+            "@type": "com.saba.rest.RestReference",
+            "name": "world",
+            "id": "domin000000000000001"
+        },
+        "org": {
+            "@type": "com.saba.rest.RestReference",
+            "name": "BusinessUnit1",
+            "id": "bisut000000000001000"
+        },
+        "sharedPeopleCount": 1,
+        "status": "300",
+        "updateMetadata": null,
+        "job": {
+            "@type": "com.saba.rest.RestReference",
+            "name": "Engineer 2",
+            "id": "jobtp000000000200162"
+        },
+        "notes": "new position 001 notes changed",
+        "fillableDate": {
+            "@type": "com.saba.customtypes.DateWithLocale",
+            "date": 1444156200000,
+            "locale": "10/07/2015",
+            "dateInUserTimeZone": "10/06/2015",
+            "timeInUserTimeZone": "11:30 AM",
+            "timeInCustomTimeZone": null,
+            "dateInCustomTimeZone": null,
+            "customTimeZoneDate": 0,
+            "timeInStandardFormat": "12:00 AM",
+            "dateInStandardFormat": "10/07/2015",
+            "timeInLocale": "12:00 AM"
+        },
+        "reportsTo": null,
+        "createdDate": {
+            "@type": "com.saba.customtypes.DateWithLocale",
+            "date": 1444156200000,
+            "locale": "10/07/2015",
+            "dateInUserTimeZone": "10/06/2015",
+            "timeInUserTimeZone": "11:30 AM",
+            "timeInCustomTimeZone": null,
+            "dateInCustomTimeZone": null,
+            "customTimeZoneDate": 0,
+            "timeInStandardFormat": "12:00 AM",
+            "dateInStandardFormat": "10/07/2015",
+            "timeInLocale": "12:00 AM"
+        },
+        "positionTitle": "new position 001",
+        "effectiveOn": null,
+        "positionID": "newposition001",
+        "atRisk": 0,
+        "customValues": null,
+        "endDate": {
+            "@type": "com.saba.customtypes.DateWithLocale",
+            "date": 1480444200000,
+            "locale": "11/30/2016",
+            "dateInUserTimeZone": "11/29/2016",
+            "timeInUserTimeZone": "10:30 AM",
+            "timeInCustomTimeZone": null,
+            "dateInCustomTimeZone": null,
+            "customTimeZoneDate": 0,
+            "timeInStandardFormat": "12:00 AM",
+            "dateInStandardFormat": "11/30/2016",
+            "timeInLocale": "12:00 AM"
+        },
+        "leadershipPosition": false,
+        "sharedPosition": false,
+        "keyPosition": false,
+        "ineffective": false,
+        "fTEvalue": null
+    },
+    "positionCompensationDetail": {
+        "@type": "com.saba.rest.position.RestPositionCompensationDetail",
+        "id": "cmpsn000000000001302",
+        "position": {
+            "@type": "com.saba.rest.RestReference",
+            "name": "new position 001",
+            "id": "postn000000000001302"
+        },
+        "currency": null,
+        "targetBaseComp": 2,
+        "costCenter": null,
+        "salaryGrade": null,
+        "incentivePlan": null,
+        "totalBudgetComp": 2,
+        "targetTotalAnnualComp": 2,
+        "targetVariableComp": 2,
+        "minPayRange": 0,
+        "midPayRange": 0,
+        "maxPayRange": 0,
+        "amount": 0
+    },
+    "incumbentList": [
+        "list",
+        []
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="post-create-a-new-position-N10109">
+        <h2 class="title topictitle2" id="ariaid-title7">CREATE A NEW POSITION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Creates a new position</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/common/position/</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="post-create-a-new-position-N10109__table_txf_px5_5t"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="post-create-a-new-position-N10109__table_txf_px5_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-create-a-new-position-N10109__table_txf_px5_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-create-a-new-position-N10109__table_txf_px5_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-create-a-new-position-N10109__table_txf_px5_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-create-a-new-position-N10109__table_txf_px5_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__2 ">Input JSON class name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__3 ">com.saba.rest.position.RestPositionDTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__1 ">positionDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__2 ">Position details<div class="note note note_note"><span class="note__title">Note:</span> securityDomain - Supports
+                                            <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Domain).<p class="p">Organization -
+                                            Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a>
+                                            (Organization).</p><p class="p">location - Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Location).</p><p class="p">Job -
+                                            Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a>
+                                    (JobType).</p></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__1 ">positionCompensationDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__2 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-a-new-position-N10109__table_txf_px5_5t__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "@type": "com.saba.rest.position.RestPositionDTO",
+  "positionDetail": {
+    "@type": "com.saba.rest.position.RestPositionDetail",
+    "descriptor": null,
+    "location": null,
+    "id": null,
+    "domain": {
+      "@type": "com.saba.rest.RestReference",
+      "name": "world",
+      "id": "domin000000000000001"
+    },
+    "org": {
+      "@type": "com.saba.rest.RestReference",
+      "name": "businessunit1",
+      "id": "bisut000000000001000"
+    },
+    "sharedPeopleCount": 4,
+    "ineffective": false,
+    "fTEvalue": null,
+    "cITitle": "position for demo job01",
+    "keyPosition": false,
+    "sharedPosition": true,
+    "updateMetadata": null,
+    "job": {
+      "@type": "com.saba.rest.RestReference",
+      "name": "Demo job role",
+      "id": "jobtp000000000200280"
+    },
+    "notes": "note for demo job01",
+    "fillableDate": {
+      "@type": "date",
+      "time": "2015-10-10"
+    },
+    "reportsTo": null,
+    "createdDate": {
+      "@type": "date",
+      "time": "2015-10-09"
+    },
+    "status": 100,
+    "positionTitle": "position for demo job01",
+    "effectiveOn": null,
+    "positionID": "demopos01",
+    "atRisk": 100,
+    "customValues": null,
+    "endDate": {
+      "@type": "date",
+      "time": "2016-11-30"
+    },
+    "leadershipPosition": false
+  },
+  "positionCompensationDetail": {
+    "@type": "com.saba.rest.position.RestPositionCompensationDetail",
+    "id": null,
+    "position": null,
+    "currency": null,
+    "targetBaseComp": 2.0,
+    "amount": 2.0,
+    "minPayRange": 2.0,
+    "maxPayRange": 2.0,
+    "midPayRange": 2.0,
+    "costCenter": null,
+    "salaryGrade": null,
+    "incentivePlan": null,
+    "totalBudgetComp": 2.0,
+    "targetTotalAnnualComp": 2.0,
+    "targetVariableComp": 2.0
+  },
+  "incumbentList": null
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "@type": "com.saba.position.entity.PositionReference",
+    "componentName": "Position",
+    "sourceType": "Position",
+    "positionId": null,
+    "positionTitle": null,
+    "activitySourceType": {
+        "sourceType": 7,
+        "listId": "sysli000000000003037",
+        "key": "7",
+        "displayName": "Position"
+    },
+    "id": "postn000000000001322",
+    "displayName": "demopos01",
+    "locale": {
+        "@type": "loclref",
+        "id": "local000000000000001",
+        "displayName": null
+    },
+    "primaryKey": {
+        "@type": "com.saba.persist.ObjectId",
+        "id": "postn000000000001322",
+        "prefix": "postn"
+    }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="put-update-the-details-of-a-position-N10152">
+        <h2 class="title topictitle2" id="ariaid-title8">UPDATE DETAILS OF A POSITION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Updates an existing position based on the position's ID that is passed as a
+                    parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/common/position/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t"><caption><span class="table--title-label">Table 7. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__2 ">Position's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__2 ">Input JSON class name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__3 ">com.saba.rest.position.RestPositionDTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__1 ">positionDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__2 ">Position details<div class="note note note_note"><span class="note__title">Note:</span> securityDomain - Supports
+                                            <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Domain).<p class="p">Organization -
+                                            Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a>
+                                            (Organization).</p><p class="p">location - Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Location).</p><p class="p">Job -
+                                            Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a>
+                                    (JobType).</p></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__1 ">positionCompensationDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__2 ">position compensation details</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-position-N10152__table_ocw_rx5_5t__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "@type": "com.saba.rest.position.RestPositionDTO",
+  "positionDetail": {
+    "@type": "com.saba.rest.position.RestPositionDetail",
+    "descriptor": null,
+    "location": null,
+    "id": null,
+    "domain": {
+      "@type": "com.saba.rest.RestReference",
+      "name": "world",
+      "id": "domin000000000000001"
+    },
+    "org": {
+      "@type": "com.saba.rest.RestReference",
+      "name": "businessunit1",
+      "id": "bisut000000000001000"
+    },
+    "sharedPeopleCount": 4,
+    "ineffective": false,
+    "fTEvalue": null,
+    "cITitle": "position for demo job01",
+    "keyPosition": false,
+    "sharedPosition": true,
+    "updateMetadata": null,
+    "job": {
+      "@type": "com.saba.rest.RestReference",
+      "name": "Demo job role",
+      "id": "jobtp000000000200280"
+    },
+    "notes": "note for demo job01, end date changed",
+    "fillableDate": {
+      "@type": "date",
+      "time": "2015-10-10"
+    },
+    "reportsTo": null,
+    "createdDate": {
+      "@type": "date",
+      "time": "2015-10-09"
+    },
+    "status": 100,
+    "positionTitle": "position for demo job01",
+    "effectiveOn": null,
+    "positionID": "demopos01",
+    "atRisk": 100,
+    "customValues": null,
+    "endDate": {
+      "@type": "date",
+      "time": "2016-10-30"
+    },
+    "leadershipPosition": false
+  },
+  "positionCompensationDetail": {
+    "@type": "com.saba.rest.position.RestPositionCompensationDetail",
+    "id": null,
+    "position": null,
+    "currency": null,
+    "targetBaseComp": 2.0,
+    "amount": 2.0,
+    "minPayRange": 2.0,
+    "maxPayRange": 2.0,
+    "midPayRange": 2.0,
+    "costCenter": null,
+    "salaryGrade": null,
+    "incentivePlan": null,
+    "totalBudgetComp": 2.0,
+    "targetTotalAnnualComp": 2.0,
+    "targetVariableComp": 2.0
+  },
+  "incumbentList": null
+}
+</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title9" id="reference_dfh_11v_5t">
+        <h2 class="title topictitle2" id="ariaid-title9">DELETE POSITION OF A PERSON</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Deletes a position of a particular person based on the person's ID and the
+                    position's ID that are passed as parameter values.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/people/:personId/positions/:positionId</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_dfh_11v_5t__table_nfh_11v_5t"><caption><span class="table--title-label">Table 8. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_dfh_11v_5t__table_nfh_11v_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_dfh_11v_5t__table_nfh_11v_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_dfh_11v_5t__table_nfh_11v_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_dfh_11v_5t__table_nfh_11v_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_dfh_11v_5t__table_nfh_11v_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dfh_11v_5t__table_nfh_11v_5t__entry__1 ">positionId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dfh_11v_5t__table_nfh_11v_5t__entry__2 ">Position's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dfh_11v_5t__table_nfh_11v_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dfh_11v_5t__table_nfh_11v_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dfh_11v_5t__table_nfh_11v_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dfh_11v_5t__table_nfh_11v_5t__entry__1 ">personId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dfh_11v_5t__table_nfh_11v_5t__entry__2 ">ID of the Person whose position needs to be
+                                    deleted</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dfh_11v_5t__table_nfh_11v_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dfh_11v_5t__table_nfh_11v_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dfh_11v_5t__table_nfh_11v_5t__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "@type": "com.saba.rest.position.RestPositionDTO",
+  "positionDetail": {
+    "@type": "com.saba.rest.position.RestPositionDetail",
+    "descriptor": null,
+    "location": null,
+    "id": null,
+    "domain": {
+      "@type": "com.saba.rest.RestReference",
+      "name": "world",
+      "id": "domin000000000000001"
+    },
+    "org": {
+      "@type": "com.saba.rest.RestReference",
+      "name": "businessunit1",
+      "id": "bisut000000000001000"
+    },
+    "sharedPeopleCount": 4,
+    "ineffective": false,
+    "fTEvalue": null,
+    "cITitle": "position for demo job01",
+    "keyPosition": false,
+    "sharedPosition": true,
+    "updateMetadata": null,
+    "job": {
+      "@type": "com.saba.rest.RestReference",
+      "name": "Demo job role",
+      "id": "jobtp000000000200280"
+    },
+    "notes": "note for demo job01, end date changed",
+    "fillableDate": {
+      "@type": "date",
+      "time": "2015-10-10"
+    },
+    "reportsTo": null,
+    "createdDate": {
+      "@type": "date",
+      "time": "2015-10-09"
+    },
+    "status": 100,
+    "positionTitle": "position for demo job01",
+    "effectiveOn": null,
+    "positionID": "demopos01",
+    "atRisk": 100,
+    "customValues": null,
+    "endDate": {
+      "@type": "date",
+      "time": "2016-10-30"
+    },
+    "leadershipPosition": false
+  },
+  "positionCompensationDetail": {
+    "@type": "com.saba.rest.position.RestPositionCompensationDetail",
+    "id": null,
+    "position": null,
+    "currency": null,
+    "targetBaseComp": 2.0,
+    "amount": 2.0,
+    "minPayRange": 2.0,
+    "maxPayRange": 2.0,
+    "midPayRange": 2.0,
+    "costCenter": null,
+    "salaryGrade": null,
+    "incentivePlan": null,
+    "totalBudgetComp": 2.0,
+    "targetTotalAnnualComp": 2.0,
+    "targetVariableComp": 2.0
+  },
+  "incumbentList": null
+}
+</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title10" id="post-assign-position-for-a-person-N104DA">
+        <h2 class="title topictitle2" id="ariaid-title10">ASSIGN POSITION FOR A PERSON</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Adds positions for a particular person based on the person's ID that is passed as
+                    a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/people/:personId/positions</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t"><caption><span class="table--title-label">Table 9. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__1 ">positions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__2 ">Required Positions to be assigned to a
+                                    Person</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__3 ">{\"positions\":[{\"position_id\":{\"id\":\"postn000000000001322\",
+                                    \"displayName\":\"position for demo
+                                    job01\"},\"isPrimary\":false,
+                                    \"active\":true,\"end_date\":\"2016-09-21T00:00:00.000+0530\",\"shared_percent\":10}]}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__1 ">personId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__2 ">ID of the Person to whom the position is to be
+                                    assigned</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-position-for-a-person-N104DA__table_ymp_wx5_5t__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "positions":[
+        {
+            "position_id":{
+                "id":"postn000000000001303",
+                "displayName":"new position 002"
+            },
+            "isPrimary":false,
+            "active":true,
+            "end_date":"2015-10-15",
+            "shared_percent":20
+        },
+        {
+            "position_id":{
+                "id":"postn000000000001322",
+                "displayName":"position for demo job01"
+            },
+            "isPrimary":false,
+            "active":true,
+            "end_date":"2015-10-21T00:00:00.000+0530",
+            "shared_percent":10
+        }
+    ]
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "emplo000000000200908",
+    "displayName": null,
+    "href": "https://{hostname}-api.sabacloud.com/v1/people/emplo000000000200908:(positions)"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

@@ -1,0 +1,1745 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="recruiting, restful web services, find the details of the job requisition, recruiting components, find the details of the job requisition, find the details of the job requisition (using post - range based search), find the details of the job requisition (using post - range based search), get all job requisitions, get all job requisitions, get the details of a particular job requisition, get the details of a particular job requisition, get the meta details of job requisition, get the meta details of job requisition, create a new job requisition, create a new job requisition, update job requisition, update job requisition">
+  <meta name="keywords" content="recruiting, restful web services, find the details of the job requisition, recruiting components, find the details of the job requisition, find the details of the job requisition (using post - range based search), find the details of the job requisition (using post - range based search), get all job requisitions, get all job requisitions, get the details of a particular job requisition, get the details of a particular job requisition, get the meta details of job requisition, get the meta details of job requisition, create a new job requisition, create a new job requisition, update job requisition, update job requisition">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-recruiting.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Job Requisition</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title6">GET META DETAILS OF JOB REQUISITION</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the meta details of a job requisition component.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/job-requisition/meta</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+  "sampleData": {
+    "location": null,
+    "description": null,
+    "source": null,
+    "compensation": null,
+    "targetDate": null,
+    "salaryCurrency": {
+      "id": "crncy000000000000001",
+      "displayName": "US Dollars"
+    },
+    "sourceType": null,
+    "organization": null,
+    "status": "DRAFT",
+    "category": null,
+    "educationQualification": null,
+    "referralBonusCurr": {
+      "id": "crncy000000000000001",
+      "displayName": "US Dollars"
+    },
+    "isFeaturedJobInternal": null,
+    "isFeaturedJobExternal": false,
+    "minExperience": null,
+    "maxExperience": null,
+    "interviewers": null,
+    "recruiter": null,
+    "industry": null,
+    "applicantType": "INTERNAL-AND-EXTERNAL",
+    "closedDate": null,
+    "hrPartner": null,
+    "hiringManager": null,
+    "minimumSalary": null,
+    "maximumSalary": null,
+    "requisitionNo": null,
+    "qualification": null,
+    "salaryType": "YEARLY",
+    "regions": null,
+    "jobAdStyle": null,
+    "noOfOpenings": 1,
+    "isEEOCReq": false,
+    "unpublishType": null,
+    "hireType": "NEW-HIRE",
+    "googleMapWidget": null,
+    "submittedOn": null,
+    "approvedOn": null,
+    "jobFamily": null,
+    "title": null,
+    "requisitionTemplate": null,
+    "employmentType": null,
+    "requisitionStage": null,
+    "requiresTravel": false,
+    "requiresResume": true,
+    "requiresCoverLetter": false,
+    "companyDescription": null,
+    "requiresPreAssessment": null,
+    "employmentClassification": "NOT-MENTIONED",
+    "businessJustification": null,
+    "publishedOn": null,
+    "jobType": null,
+    "notes": null,
+    "costCenter": null,
+    "unpublishDays": null,
+    "endOfMonth": false,
+    "marketAverage": null,
+    "referralBonus": null,
+    "unpublishDate": null,
+    "plainTextSM": {
+      "type": null,
+      "owner": null,
+      "identifier": null,
+      "title": null,
+      "smartWidgetValues": null,
+      "smartWidget_visibility": "ANYONE",
+      "id": null
+    },
+    "pieChartSM": {
+      "type": null,
+      "owner": null,
+      "identifier": null,
+      "title": null,
+      "smartWidgetValues": null,
+      "smartWidget_visibility": "ANYONE",
+      "id": null
+    },
+    "barChartSM": {
+      "type": null,
+      "owner": null,
+      "identifier": null,
+      "title": null,
+      "smartWidgetValues": null,
+      "smartWidget_visibility": "ANYONE",
+      "id": null
+    },
+    "progressBarSM": {
+      "type": null,
+      "owner": null,
+      "identifier": null,
+      "title": null,
+      "smartWidgetValues": null,
+      "smartWidget_visibility": "ANYONE",
+      "id": null
+    },
+    "midSalary": null,
+    "midBudget": null,
+    "maxBudget": null,
+    "id": null,
+    "customValues": {
+      "custom9": null,
+      "custom0": null,
+      "custom3": null,
+      "custom4": null,
+      "custom1": null,
+      "custom2": null,
+      "custom7": null,
+      "custom8": null,
+      "custom5": null,
+      "custom6": null
+    },
+    "securityDomain": {
+      "id": "domin000000000000001",
+      "displayName": "world"
+    },
+    "jobboards": null,
+    "href": "http://&lt;hostname&gt;/Saba/api/component/job-requisition/jobrq000000000000001"
+  },
+  "name": "JobRequisition",
+  "displayName": "Job Requisition",
+  "attributes": [
+    {
+      "name": "applicantType",
+      "displayName": "Publish to",
+      "description": "Type of Applicant, can be Internal/External/Both",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "choices": {
+        "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000012004/values"
+      },
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "approvedOn",
+      "displayName": "Approved On",
+      "description": "Job Requisition approval date",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "date",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "barChartSM",
+      "displayName": "Bar Chart Type Smart Widgets",
+      "description": "Job Requisition Bar Chart Smart Widgets",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "component": {
+        "name": "SmartWidget",
+        "displayName": "Smart Widget",
+        "attributes": [
+          {
+            "name": "id",
+            "displayName": "Id",
+            "description": "Smart Widget Id",
+            "isRequired": false,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "identifier",
+            "displayName": "Unique Identifier",
+            "description": "Unique Identifier of Smart Widget on Template",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+          },
+          {
+            "name": "owner",
+            "displayName": "Owner of Smart Widget",
+            "description": "Requisition Id",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "smartWidgetValues",
+            "displayName": "Smart Widget Values",
+            "description": "SmartWidget Value Component",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "component": {
+              "name": "SmartWidgetValue",
+              "displayName": "Smart Widget Value",
+              "attributes": [
+                {
+                  "name": "id",
+                  "displayName": "Id",
+                  "description": "Smart Widget Value Id",
+                  "isRequired": false,
+                  "isAutoGenerated": true,
+                  "type": "string",
+                  "isReference": false,
+                  "isProtected": false,
+                  "display": true,
+                  "isSearchFilter": false
+                },
+                {
+                  "name": "name",
+                  "displayName": "Name of Smart Widget Value",
+                  "description": "Smart Widget Value Name",
+                  "isRequired": false,
+                  "isAutoGenerated": false,
+                  "type": "string",
+                  "isReference": false,
+                  "isProtected": false,
+                  "display": true,
+                  "length": 255,
+                  "maximumLength": 255,
+                  "isSearchFilter": false
+                },
+                {
+                  "name": "parent",
+                  "displayName": "Parent of Smart Widget Value",
+                  "description": "Smart Widget Id",
+                  "isRequired": false,
+                  "isAutoGenerated": false,
+                  "type": "object",
+                  "isReference": true,
+                  "isProtected": false,
+                  "display": true,
+                  "isSearchFilter": false
+                },
+                {
+                  "name": "value",
+                  "displayName": "Smart Widget Value",
+                  "description": "Smart Widget Value",
+                  "isRequired": false,
+                  "isAutoGenerated": false,
+                  "type": "string",
+                  "isReference": false,
+                  "isProtected": false,
+                  "display": true,
+                  "length": 255,
+                  "maximumLength": 255,
+                  "isSearchFilter": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "smartWidget_visibility",
+            "displayName": "Smart Widget Visibility",
+            "description": "Visibility Level for SmartWidgets",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+              "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000012011/values"
+            },
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "title",
+            "displayName": "Title",
+            "description": "Smart Widget Title",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+          },
+          {
+            "name": "type",
+            "displayName": "Smart Widget Type",
+            "description": "Smart Widget Type",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+              "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000003135/values"
+            },
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "businessJustification",
+      "displayName": "Business Justification",
+      "description": "Business Justification",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "category",
+      "displayName": "EEO Job Category",
+      "description": "Category",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "choices": {
+        "href": "http://&lt;hostname&gt;/Saba/api/list/listi000000000012001/values"
+      },
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isSearchFilter": true
+    },
+    {
+      "name": "closedDate",
+      "displayName": "Close date",
+      "description": "Date on which this job requisition is closed or cancelled",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "date",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "companyDescription",
+      "displayName": "Company Description",
+      "description": "Company Description",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 64000,
+      "maximumLength": 64000,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "compensation",
+      "displayName": "Compensation Displayed to Candidates (Public)",
+      "description": "Compensation displayed to candidate",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "costCenter",
+      "displayName": "Cost center",
+      "description": "Cost center to which this Job Requisition belongs to",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isSearchFilter": true
+    },
+    {
+      "name": "description",
+      "displayName": "Job Description",
+      "description": "Description of the Job Requisition",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 64000,
+      "maximumLength": 64000,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "educationQualification",
+      "displayName": "Education Qualification",
+      "description": "Minimum Educational Qualification required for the Applicant",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isSearchFilter": false
+    },
+    {
+      "name": "employmentClassification",
+      "displayName": "Employment Classification",
+      "description": "Employment Classification, can be Replacement Not Mentioned/Exempt/Non Exempt",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "choices": {
+        "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000012031/values"
+      },
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "employmentType",
+      "displayName": "Type of Employment",
+      "description": "Employment Type",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "choices": {
+        "href": "http://&lt;hostname&gt;/Saba/api/list/listi000000000001013/values"
+      },
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isSearchFilter": true
+    },
+    {
+      "name": "endOfMonth",
+      "displayName": "End Of Month",
+      "description": "Select unpublish date as end of month",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "boolean",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "googleMapWidget",
+      "displayName": "Google Map Widget",
+      "description": "Google Map Widget URL",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isSearchFilter": false
+    },
+    {
+      "name": "hireType",
+      "displayName": "Hire Type",
+      "description": "Hire Type, can be Replacement Hire/New Hire/Other",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "choices": {
+        "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000012030/values"
+      },
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "hiringManager",
+      "displayName": "Hiring Manager",
+      "description": "Hiring Manager",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "hrPartner",
+      "displayName": "HR Partner",
+      "description": "HR Partner",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "id",
+      "displayName": "Id",
+      "description": "Job Requisition Id",
+      "isRequired": true,
+      "isAutoGenerated": true,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "industry",
+      "displayName": "Industry",
+      "description": "Industry for Template",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "choices": {
+        "href": "http://&lt;hostname&gt;/Saba/api/list/listi000000000012002/values"
+      },
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isSearchFilter": false
+    },
+    {
+      "name": "interviewers",
+      "displayName": "Interviewers",
+      "description": "Requisition Interviewers",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "array",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "component": {
+        "name": "RequisitionStakeholder",
+        "displayName": "Requisition Stakeholder",
+        "attributes": [
+          {
+            "name": "id",
+            "displayName": "Id",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "requisition",
+            "displayName": "Requisition",
+            "description": "Requisition Id",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "stakeholder",
+            "displayName": "Stakeholder",
+            "description": "Id of the Stakeholder",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "stakeholderType",
+            "displayName": "Stakeholder Type",
+            "description": "Type of Stakeholder",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+              "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000012010/values"
+            },
+            "display": true,
+            "isSearchFilter": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "isEEOCReq",
+      "displayName": "Is EEOC Required",
+      "description": "Is EEOC component required",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "boolean",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "isFeaturedJobExternal",
+      "displayName": "Mark the external job posting featured",
+      "description": "Is this Job Requisition Featured on External Job Board",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "boolean",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "isFeaturedJobInternal",
+      "displayName": "Mark the internal job posting featured",
+      "description": "Is this Job Requisition Featured on Internal Job Board",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "boolean",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "jobAdStyle",
+      "displayName": "Job Advertisement Style",
+      "description": "Job Advertisement Style",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isSearchFilter": false
+    },
+    {
+      "name": "jobboards",
+      "displayName": "Job Boards",
+      "description": "Requisition Job Boards",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "array",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "component": {
+        "name": "RequisitionJobBoard",
+        "displayName": "Requisition Job Board",
+        "attributes": [
+          {
+            "name": "additionalInfo1",
+            "displayName": "Additional Info 1",
+            "description": "Additional Information for Requisition Job Board",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+          },
+          {
+            "name": "additionalInfo2",
+            "displayName": "Additional Info 2",
+            "description": "Additional Information for Requisition Job Board",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+          },
+          {
+            "name": "additionalInfo3",
+            "displayName": "Additional Info 3",
+            "description": "Additional Information for Requisition Job Board",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+          },
+          {
+            "name": "additionalInfo4",
+            "displayName": "Additional Info 4",
+            "description": "Additional Information for Requisition Job Board",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+          },
+          {
+            "name": "externalId",
+            "displayName": "External Id",
+            "description": "External Id of the Associated Job-Board",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+          },
+          {
+            "name": "externalServiceType",
+            "displayName": "kI18nALRequisitionJobBoard_externalServiceType(Missing resource)",
+            "description": "The type of vendor service",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+              "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000012025/values"
+            },
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "id",
+            "displayName": "Id",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "jobBoard",
+            "displayName": "Job Board",
+            "description": "Id of the JobBoard",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "postMessage",
+            "displayName": "Post Message",
+            "description": "Post Message for Requisition Job Board",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+          },
+          {
+            "name": "postStatus",
+            "displayName": "Post Status",
+            "description": "Post Status for Requisition Job Board",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "requisition",
+            "displayName": "Requisition",
+            "description": "Requisition Id",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "jobFamily",
+      "displayName": "Job Family",
+      "description": "Job Family for this requisition",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "jobType",
+      "displayName": "Job",
+      "description": "Job Type for this requisition",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "location",
+      "displayName": "Location",
+      "description": "Location where this Job Requisition is available",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "marketAverage",
+      "displayName": "Compensation Displayed to Candidates (Public)",
+      "description": "Market Average for this position",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isSearchFilter": false
+    },
+    {
+      "name": "maxBudget",
+      "displayName": "Budget (max)",
+      "description": "Maximum Budget",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "real",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "maxExperience",
+      "displayName": "Maximum Experience",
+      "description": "Maximum Experience of the applicant, in years",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "integer",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "maximumSalary",
+      "displayName": "To",
+      "description": "Maximum Salary",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "real",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "midBudget",
+      "displayName": "Budget (mid)",
+      "description": "Budget (mid)",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "real",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "midSalary",
+      "displayName": "Salary (mid)",
+      "description": "Salary (mid)",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "real",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "minExperience",
+      "displayName": "Minimum Experience",
+      "description": "Minimum Experience required for the applicant, in years",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "integer",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "minimumSalary",
+      "displayName": "From",
+      "description": "Minimum Salary",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "real",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "noOfOpenings",
+      "displayName": "Number of Hires",
+      "description": "No of openings available for this job requisition",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "integer",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "notes",
+      "displayName": "Notes",
+      "description": "Approval Notes for Job Requisition details",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 64000,
+      "maximumLength": 64000,
+      "isI18n": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "organization",
+      "displayName": "Organization",
+      "description": "Organization for which the hiring is required",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "pieChartSM",
+      "displayName": "Pie Chart Type Smart Widgets",
+      "description": "Job Requisition Pie Chart Smart Widgets",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "component": {
+        "componentName": "SmartWidget",
+        "href": "http://&lt;hostname&gt;/Saba/api/component/smart/meta?type=widget",
+        "description": "A Smart Widget used to associate with job requisition template and job requisition for various skills, experience and qualifications."
+      }
+    },
+    {
+      "name": "plainTextSM",
+      "displayName": "Plain Text Type Smart Widgets",
+      "description": "Job Requisition Plain Text Smart Widgets",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "component": {
+        "componentName": "SmartWidget",
+        "href": "http://&lt;hostname&gt;/Saba/api/component/smart/meta?type=widget",
+        "description": "A Smart Widget used to associate with job requisition template and job requisition for various skills, experience and qualifications."
+      }
+    },
+    {
+      "name": "progressBarSM",
+      "displayName": "Progress Bar Type Smart Widgets",
+      "description": "Job Requisition Progress Bar Smart Widgets",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "component": {
+        "componentName": "SmartWidget",
+        "href": "http://&lt;hostname&gt;/Saba/api/component/smart/meta?type=widget",
+        "description": "A Smart Widget used to associate with job requisition template and job requisition for various skills, experience and qualifications."
+      }
+    },
+    {
+      "name": "publishedOn",
+      "displayName": "Published On",
+      "description": "Published On (Active) Date for Job Requisition",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "date",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "qualification",
+      "displayName": "Qualifications",
+      "description": "Qualification required for this Job Requisition",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 64000,
+      "maximumLength": 64000,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "recruiter",
+      "displayName": "Recruiter",
+      "description": "Requisition Interviewers",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "array",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "component": {
+        "componentName": "RequisitionStakeholder",
+        "href": "http://&lt;hostname&gt;/Saba/api/component/requisition/meta?type=stakeholder",
+        "description": "Holds details about the requisition stakeholders such as Interviewers,Screeners and Recruiters"
+      }
+    },
+    {
+      "name": "referralBonus",
+      "displayName": "Referral Bonus",
+      "description": "Referral bonus amount to given out to Internal employee who is referring",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "real",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "referralBonusCurr",
+      "displayName": "Referral Bonus Currency",
+      "description": "Currency for the referral bonus",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "regions",
+      "displayName": "Career Sites",
+      "description": "Requisition Regions",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "array",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "component": {
+        "name": "JobRequisitionAssociate",
+        "displayName": "Requisition Regions",
+        "attributes": [
+          {
+            "name": "associate",
+            "displayName": "kI18nALJobRequisitionAssociate_associate(Missing resource)",
+            "description": "Id of the Associate",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "associateType",
+            "displayName": "kI18nALJobRequisitionAssociate_associateType(Missing resource)",
+            "description": "Type of Associate",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+              "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000012032/values"
+            },
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "id",
+            "displayName": "kI18nALJobRequisitionAssociate_id(Missing resource)",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "requisition",
+            "displayName": "kI18nALJobRequisitionAssociate_requisition(Missing resource)",
+            "description": "Requisition Id",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "requiresCoverLetter",
+      "displayName": "Allow Cover Letter",
+      "description": "Is Cover Letter required",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "boolean",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "requiresPreAssessment",
+      "displayName": "Requires Pre-Assessment",
+      "description": "Is Pre Assessment required",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "boolean",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "requiresResume",
+      "displayName": "Requires Resume",
+      "description": "Is Resume Required",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "boolean",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "requiresTravel",
+      "displayName": "Requires Travel",
+      "description": "Requires Travel",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "boolean",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "requisitionNo",
+      "displayName": "Requisition ID",
+      "description": "Unique identification auto generated number, can be changed manually if auto generation                         is OFF                     ",
+      "isRequired": true,
+      "isAutoGenerated": true,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isSearchFilter": true
+    },
+    {
+      "name": "requisitionStage",
+      "displayName": "Requisition Stage",
+      "description": "Requisition Stage Component",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "array",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "component": {
+        "name": "Requisition Stage",
+        "displayName": "Requisition Stage",
+        "attributes": [
+          {
+            "name": "assessment",
+            "displayName": "Assessment",
+            "description": "Assessment at Requisition Stage",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "id",
+            "displayName": "ID",
+            "description": "ID",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "isRequired",
+            "displayName": "Is Required",
+            "description": "Stage Required or Not",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "requisition",
+            "displayName": "Job Requisition",
+            "description": "Job Requisition",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "sequence",
+            "displayName": "Sequence",
+            "description": "Sequence of Stages",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "stageName",
+            "displayName": "Stage Name",
+            "description": "Stage Level Name",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+          },
+          {
+            "name": "type",
+            "displayName": "Stage Type",
+            "description": "Type of Stage",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+              "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000012002/values"
+            },
+            "display": true,
+            "length": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "requisitionTemplate",
+      "displayName": "Job Requisition Template",
+      "description": "Job Requisition Template from which this Job Requisition was created",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "salaryCurrency",
+      "displayName": "Salary Currency",
+      "description": "Currency for the Salary",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "salaryType",
+      "displayName": "Salary",
+      "description": "Salary Type",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "choices": {
+        "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000012012/values"
+      },
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "source",
+      "displayName": "Source",
+      "description": "Source of this requisition, it can be Person Id or Job Id or Job Family Id                     ",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "sourceType",
+      "displayName": "Source Type",
+      "description": "Prefix of the id stored in source",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "securityDomain",
+      "displayName": "Domain",
+      "description": "split",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "status",
+      "displayName": "Status",
+      "description": "Status",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "choices": {
+        "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000012003/values"
+      },
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "submittedOn",
+      "displayName": "Submitted On",
+      "description": "Submitted On Date for Job Requisition",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "date",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "targetDate",
+      "displayName": "Target date",
+      "description": "Target date by which it is expected to fill the job requisition",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "date",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "title",
+      "displayName": "Job Title",
+      "description": "Job Requisition Title",
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "unpublishDate",
+      "displayName": "Unpublish Date",
+      "description": "Date after which a job requisition will get unpublished",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "date",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "unpublishDays",
+      "displayName": "Unpublish Days",
+      "description": "No of days from the the date of publishing a job requisition after which it will get unpublished",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "integer",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "unpublishType",
+      "displayName": "Auto-Unpublish",
+      "description": "Unpublish Type, can be Date/Days/End Of Month",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "choices": {
+        "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000012028/values"
+      },
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "custom0",
+      "displayName": "Custom 0",
+      "description": "Custom 0",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom1",
+      "displayName": "Custom 1",
+      "description": "Custom 1",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom2",
+      "displayName": "Custom 2",
+      "description": "Custom 2",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom3",
+      "displayName": "Custom 3",
+      "description": "Custom 3",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom4",
+      "displayName": "Custom 4",
+      "description": "Custom 4",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom5",
+      "displayName": "Custom 5",
+      "description": "Custom 5",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom6",
+      "displayName": "Custom 6",
+      "description": "Custom 6",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom7",
+      "displayName": "Custom 7",
+      "description": "Custom 7",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom8",
+      "displayName": "Custom 8",
+      "description": "Custom 8",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom9",
+      "displayName": "Custom 9",
+      "description": "Custom 9",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+      "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    }
+  ]
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

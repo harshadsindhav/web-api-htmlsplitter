@@ -1,0 +1,490 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="foundation, restful web services, find the details of the currencies, foundation components, find the details of the currencies, find the meta details of the currency, find the meta details of the currency, get all currencies, get the details of a particular currency, get the details of a particular currency, find the details of currency (using post - range based search), find the details of currency (using post - range based search)"><meta name="keywords" content="foundation, restful web services, find the details of the currencies, foundation components, find the details of the currencies, find the meta details of the currency, find the meta details of the currency, get all currencies, get the details of a particular currency, get the details of a particular currency, find the details of currency (using post - range based search), find the details of currency (using post - range based search)"><meta name="DC.Relation" scheme="URI" content="../developer/part-foundation.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0e656"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Currency</title></head><body id="d0e656"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Currency</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-foundation.html">Foundation</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-find-the-details-of-the-currencies-N100A9">
+        <h2 class="title topictitle2" id="ariaid-title2">FIND DETAILS OF CURRENCIES</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the currencies along with the ID, Name and the Deeplink
+                    URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/currency?q=(:criteria_field%3D%3D:field_value)&amp;count=:count&amp;startPage=:startPage</p>
+                <p class="p"><strong class="ph b">Example:</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/currency?q=(default%3D%3D1,
+                    active%3D%3D1, iso_code%3D%3DUSD,
+                    name%3D%3DUS%20Dollars)&amp;includeDetails=true</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__1 ">criteria_field</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__2 ">The search criteria i.e. the field name.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__3 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__1 ">field_value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__2 ">The search value for the specified search
+                                    criteria.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-currencies-N100A9__table_s51_lkg_35__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "facets": [],
+  "hasMoreResults": false,
+  "totalResults": 1,
+  "itemsPerPage": 10,
+  "startIndex": 1,
+  "results": [
+    {
+      "name": "US Dollars",
+      "default": true,
+      "precision": 2,
+      "short_name": "USD",
+      "iso_code": "USD",
+      "active": true,
+      "id": "crncy000000000000001"
+    }
+  ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_as1_lkg_35">
+        <h2 class="title topictitle2" id="ariaid-title3">FIND META DETAILS OF CURRENCY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of the currency.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/currency/meta:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_as1_lkg_35__table_ks1_lkg_35"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_as1_lkg_35__table_ks1_lkg_35__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_as1_lkg_35__table_ks1_lkg_35__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_as1_lkg_35__table_ks1_lkg_35__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_as1_lkg_35__table_ks1_lkg_35__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_as1_lkg_35__table_ks1_lkg_35__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_as1_lkg_35__table_ks1_lkg_35__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_as1_lkg_35__table_ks1_lkg_35__entry__2 ">Indicate what additional details needs to be
+                                    returned. Acceptable values are (case-sensitive)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_as1_lkg_35__table_ks1_lkg_35__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_as1_lkg_35__table_ks1_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_as1_lkg_35__table_ks1_lkg_35__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "sampleData": {
+    "name": null,
+    "default": false,
+    "active": false,
+    "short_name": null,
+    "iso_code": null,
+    "precision": null,
+    "id": null,
+    "href": "http://localhost/Saba/api/component/currency/crncy000000000000001"
+  },
+  "name": "Currency",
+  "displayName": "Currency",
+  "attributes": [
+    {
+      "name": "active",
+      "displayName": "Active",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "boolean",
+      "isReference": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "default",
+      "displayName": "Default",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "boolean",
+      "isReference": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "id",
+      "displayName": "kI18nALCurrency_id(Missing resource)",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": true,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "iso_code",
+      "displayName": "Iso Code",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 3,
+            "maximumLength": 3,
+      "isSearchFilter": true
+    },
+    {
+      "name": "name",
+      "displayName": "Name",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 50,
+            "maximumLength": 50,
+      "isSearchFilter": true
+    },
+    {
+      "name": "precision",
+      "displayName": "Precision",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "integer",
+      "isReference": false,
+      "display": true,
+      "minimumValue": 0,
+      "isSearchFilter": true
+    },
+    {
+      "name": "short_name",
+      "displayName": "Short Name",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 10,
+            "maximumLength": 10,
+      "isSearchFilter": false
+    }
+  ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_ip1_lkg_35">
+        <h2 class="title topictitle2" id="ariaid-title4">GET ALL CURRENCIES</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all currencies available in the system.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/currency?count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_ip1_lkg_35__table_sp1_lkg_35"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_ip1_lkg_35__table_sp1_lkg_35__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ip1_lkg_35__table_sp1_lkg_35__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ip1_lkg_35__table_sp1_lkg_35__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ip1_lkg_35__table_sp1_lkg_35__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ip1_lkg_35__table_sp1_lkg_35__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ip1_lkg_35__table_sp1_lkg_35__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ip1_lkg_35__table_sp1_lkg_35__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ip1_lkg_35__table_sp1_lkg_35__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ip1_lkg_35__table_sp1_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ip1_lkg_35__table_sp1_lkg_35__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ip1_lkg_35__table_sp1_lkg_35__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ip1_lkg_35__table_sp1_lkg_35__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ip1_lkg_35__table_sp1_lkg_35__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ip1_lkg_35__table_sp1_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ip1_lkg_35__table_sp1_lkg_35__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "facets": [],
+  "results": [
+    {
+      "id": "crncy000000000000001",
+      "href": "http://localhost/Saba/api/component/currency/crncy000000000000001"
+    },
+    {
+      "id": "crncy000000000001005",
+      "href": "http://localhost/Saba/api/component/currency/crncy000000000001005"
+    },
+    {
+      "id": "crncy000000000001006",
+      "href": "http://localhost/Saba/api/component/currency/crncy000000000001006"
+    },
+    {
+      "id": "crncy000000000200968",
+      "href": "http://localhost/Saba/api/component/currency/crncy000000000200968"
+    }
+  ],
+  "startIndex": 1,
+  "hasMoreResults": false,
+  "totalResults": 4,
+  "itemsPerPage": 10
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_an1_lkg_35">
+        <h2 class="title topictitle2" id="ariaid-title5">GET DETAILS OF A PARTICULAR CURRENCY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a currency based on the currency's id that is
+                    passed as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/currency/:id:(:searchFields)</p>
+                <p class="p"><strong class="ph b">Example:</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/currency/crncy000000000000001?q=(iso_code%3D%3DUSD)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">iso_code</strong> instead of the internal Currency's
+                        ID.<p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/currency/iso_code%3D<em class="ph i">&lt;ISOCode&gt;</em></p></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_an1_lkg_35__table_bn1_lkg_35"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_an1_lkg_35__table_bn1_lkg_35__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_an1_lkg_35__table_bn1_lkg_35__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_an1_lkg_35__table_bn1_lkg_35__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_an1_lkg_35__table_bn1_lkg_35__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_an1_lkg_35__table_bn1_lkg_35__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_an1_lkg_35__table_bn1_lkg_35__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_an1_lkg_35__table_bn1_lkg_35__entry__2 ">Currency's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_an1_lkg_35__table_bn1_lkg_35__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_an1_lkg_35__table_bn1_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_an1_lkg_35__table_bn1_lkg_35__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_an1_lkg_35__table_bn1_lkg_35__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_an1_lkg_35__table_bn1_lkg_35__entry__2 ">Indicate what additional details needs to be
+                                    returned. Acceptable values are (case-sensitive)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_an1_lkg_35__table_bn1_lkg_35__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_an1_lkg_35__table_bn1_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_an1_lkg_35__table_bn1_lkg_35__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "name": "US Dollars",
+  "default": true,
+  "precision": 2,
+  "short_name": "USD",
+  "iso_code": "USD",
+  "active": true,
+  "id": "crncy000000000000001"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_ik1_lkg_35">
+        <h2 class="title topictitle2" id="ariaid-title6">FIND DETAILS OF CURRENCY (USING POST - RANGE BASED SEARCH)</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the currency along with the ID, Name and the Deeplink URL
+                    based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/currency/searchQuery?count=:count&amp;startPage=:startPage&amp;includeDetails=:includeDetails</p>
+                <p class="p"><strong class="ph b">Example:</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/currency/searchQuery?count=10&amp;startPage=1</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_ik1_lkg_35__table_sk1_lkg_35"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_ik1_lkg_35__table_sk1_lkg_35__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ik1_lkg_35__table_sk1_lkg_35__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ik1_lkg_35__table_sk1_lkg_35__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ik1_lkg_35__table_sk1_lkg_35__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ik1_lkg_35__table_sk1_lkg_35__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__1 ">conditions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__2 ">Conditions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__3 ">
+                                    <pre class="pre codeblock"><code>[{\"name\": \"iso_code\",
+\"operator\": \"==\",
+\"value\": \"USD\"}]</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__2 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__2 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__1 ">includeDetails</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__2 ">Returns the details of the currency in the
+                                    search</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ik1_lkg_35__table_sk1_lkg_35__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "conditions" :[{
+    "name": "iso_code",
+    "operator": "==",
+    "value": "USD"}]     
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "results": [
+        {
+            "name": "US Dollars",
+            "default": true,
+            "active": true,
+            "precision": 2,
+            "short_name": "USD",
+            "iso_code": "USD",
+            "id": "crncy000000000000001"
+        }
+    ],
+    "hasMoreResults": false,
+    "totalResults": 1,
+    "itemsPerPage": 10,
+    "startIndex": 1
+}</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

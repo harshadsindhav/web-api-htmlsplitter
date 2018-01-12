@@ -1,0 +1,155 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get held certification/curriculum activity details, learning components, get held certification/curriculum activity details, get completion and lesson details of the learning event, get completion and lesson details of the learning event, get held certification/curriculum details along with all the activities, get held certification/curriculum details along with all the activities, search all the certifications/curricula assigned to a learner based on the status, timestamp, search all the certifications/curricula assigned to a learner based on the status, timestamp, search certifications/curricula of the logged in user, search certifications/curricula of the logged in user, auto-enroll learners into courses inside the certification/curriculum, auto-enroll learners into courses inside the certification/curriculum, assign certification/curriculum to a person, assign certification/curriculum to a person, grant certification/curriculum to a learner, grant certification/curriculum to a learner, update the target days/date for the assigned certification/curriculum activity, update the target days/date for the assigned certification/curriculum activity, update the expiration date of the held certification, update the expiration date of the held certification, remove the certification/curriculum activity of a learner, remove the certification/curriculum activity of a learner, get the meta details of the course activity, get the meta details of the course activity, get the details of a particular course activity, get the details of a particular course activity, get all the course activities of the logged in user, get all the course activities of the logged in user, find the details of the course activities based on criteria, find the details of the course activities based on criteria, assign a course to a person, assign a course to a person, update the details of a course activity, update the details of a course activity, remove a course from a learner, remove a course from a learner">
+  <meta name="keywords" content="learning, restful web services, get held certification/curriculum activity details, learning components, get held certification/curriculum activity details, get completion and lesson details of the learning event, get completion and lesson details of the learning event, get held certification/curriculum details along with all the activities, get held certification/curriculum details along with all the activities, search all the certifications/curricula assigned to a learner based on the status, timestamp, search all the certifications/curricula assigned to a learner based on the status, timestamp, search certifications/curricula of the logged in user, search certifications/curricula of the logged in user, auto-enroll learners into courses inside the certification/curriculum, auto-enroll learners into courses inside the certification/curriculum, assign certification/curriculum to a person, assign certification/curriculum to a person, grant certification/curriculum to a learner, grant certification/curriculum to a learner, update the target days/date for the assigned certification/curriculum activity, update the target days/date for the assigned certification/curriculum activity, update the expiration date of the held certification, update the expiration date of the held certification, remove the certification/curriculum activity of a learner, remove the certification/curriculum activity of a learner, get the meta details of the course activity, get the meta details of the course activity, get the details of a particular course activity, get the details of a particular course activity, get all the course activities of the logged in user, get all the course activities of the logged in user, find the details of the course activities based on criteria, find the details of the course activities based on criteria, assign a course to a person, assign a course to a person, update the details of a course activity, update the details of a course activity, remove a course from a learner, remove a course from a learner">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Learning Event</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title13">GET META DETAILS OF COURSE ACTIVITY</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the meta details of the course activity.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/courseactivity/meta</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "sampleData": {
+        "id": null,
+        "targetDate": null,
+        "activityDefinition": null,
+        "assignee": null,
+        "status": null,
+        "source": null,
+        "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/courseactivity/"
+    },
+    "name": "CourseActivity",
+    "displayName": "kI18nCLCourseActivity(Missing resource)",
+    "attributes": [
+        {
+            "name": "activityDefinition",
+            "displayName": "kI18nALCourseActivity_activityDefinition(Missing resource)",
+            "description": "Reference to the Course Definition",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "assignee",
+            "displayName": "kI18nALCourseActivity_assignee(Missing resource)",
+            "description": "Holder of the Course",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "id",
+            "displayName": "kI18nALCourseActivity_id(Missing resource)",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "percentageCompleted",
+            "displayName": "kI18nALCourseActivity_percentageCompleted(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "source",
+            "displayName": "kI18nALCourseActivity_source(Missing resource)",
+            "description": "Source of the Course",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "status",
+            "displayName": "kI18nALCourseActivity_status(Missing resource)",
+            "description": "Status of course Activity                     ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "choices": {
+                "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/list/sysli000000000003036/values"
+            },
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "targetDate",
+            "displayName": "kI18nALCourseActivity_targetDate(Missing resource)",
+            "description": "Due date of the course assignment",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "targetDays",
+            "displayName": "kI18nALCourseActivity_targetDays(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        }
+    ]
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

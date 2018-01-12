@@ -1,0 +1,3028 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="performance, restful web services, find all reviews, performance components, find the details of the review cycles, find the details of the review cycles, find the details of the reviews, find the details of the reviews, get all review cycles, get the details of a particular review, get the details of a particular review, get the details of a particular review cycle, get the details of a particular review cycle, get the extended details of a particular review, get the extended details of a particular review, get the extended details of a particular review cycle, get the extended details of a particular review cycle, get the meta details of a review-cycle, get the meta details of a review-cycle, get the meta details of a component, get the meta details of a component, find the details of the reviews with post based search, find the details of the reviews with post based search"><meta name="keywords" content="performance, restful web services, find all reviews, performance components, find the details of the review cycles, find the details of the review cycles, find the details of the reviews, find the details of the reviews, get all review cycles, get the details of a particular review, get the details of a particular review, get the details of a particular review cycle, get the details of a particular review cycle, get the extended details of a particular review, get the extended details of a particular review, get the extended details of a particular review cycle, get the extended details of a particular review cycle, get the meta details of a review-cycle, get the meta details of a review-cycle, get the meta details of a component, get the meta details of a component, find the details of the reviews with post based search, find the details of the reviews with post based search"><meta name="DC.Relation" scheme="URI" content="../developer/part-performance.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Learning-apis"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Review</title></head><body id="Learning-apis"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Review</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-performance.html">Performance</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-find-all-reviews-N101E1">
+        <h2 class="title topictitle2" id="ariaid-title2">FIND ALL REVIEWS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Find the details of the reviews.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/review?f=(:display)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-find-all-reviews-N101E1__table_yrb_v42_yv"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__1 ">display</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__2 ">Acceptable values are (case-sensitive)
+                                    cycle_name, cycle_type, cycle_subtype, cycle_start_date,
+                                    cycle_end_date, name, description, status, calculation_method,
+                                    initiative_id, holder_name, period_start, period_end,
+                                    collect_date, due_date, rating_description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__3 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-all-reviews-N101E1__table_yrb_v42_yv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "totalResults": 294,
+    "hasMoreResults": true,
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "results": [
+        {
+            "name": "Review with (No e-signatures requries)",
+            "id": "revie000000000001057",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000001057"
+        },
+        {
+            "name": "Review with (No e-signatures requries)",
+            "id": "revie000000000001058",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000001058"
+        },
+        {
+            "name": "Review with (No e-signatures requries)",
+            "id": "revie000000000001059",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000001059"
+        },
+        {
+            "name": "Review requires 2 level managers",
+            "id": "revie000000000001060",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000001060"
+        },
+        {
+            "name": "Review requires 2 level managers",
+            "id": "revie000000000001061",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000001061"
+        },
+        {
+            "name": "Review requires 2 level managers",
+            "id": "revie000000000001062",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000001062"
+        },
+        {
+            "name": "Review requires 2 level managers",
+            "id": "revie000000000001063",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000001063"
+        },
+        {
+            "name": "For testing performance journal",
+            "id": "revie000000000001080",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000001080"
+        },
+        {
+            "name": "For testing performance journal",
+            "id": "revie000000000001081",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000001081"
+        },
+        {
+            "name": "For testing performance journal",
+            "id": "revie000000000001082",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000001082"
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_qkb_v42_yv">
+        <h2 class="title topictitle2" id="ariaid-title3">FIND DETAILS OF REVIEW CYCLES</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Find the details of the review cycles</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/review-cycle?q=(:criteria)&amp;f=(:display)&amp;count=:count&amp;startPage=:startPage&amp;includeDetails=:detailsFlag</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_qkb_v42_yv__table_klb_v42_yv"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_qkb_v42_yv__table_klb_v42_yv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_qkb_v42_yv__table_klb_v42_yv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_qkb_v42_yv__table_klb_v42_yv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_qkb_v42_yv__table_klb_v42_yv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_qkb_v42_yv__table_klb_v42_yv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__1 ">criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__2 ">Conditions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__3 ">type%3D%3DFocal</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__1 ">display</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__2 ">Comma separated list of attributes to be
+                                    displayed in output</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__3 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__1 ">detailsFlag</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__2 ">Flag to indicate if details needs to be
+                                    returned.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qkb_v42_yv__table_klb_v42_yv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "startIndex": 1,
+    "totalResults": 1,
+    "hasMoreResults": false,
+    "itemsPerPage": 10,
+    "facets": [],
+    "results": [
+        {
+            "name": "2015 Anual review",
+            "description": "&lt;p&gt;2015 Anual review dotnaway from Here.&lt;/p&gt;",
+            "period_end": "2016-03-31T00:00:00.000+0530",
+            "period_start": "2016-01-01T00:00:00.000+0530",
+            "status": "RELEASE",
+            "initiative_id": {
+                "id": "initv000000000001503",
+                "displayName": null
+            },
+            "calculation_method": {
+                "calculationMethodAccountability": [],
+                "calculationMethod": "Self, Manager"
+            },
+            "collect_date": null,
+            "due_date": "2016-05-06T00:00:00.000+0530",
+            "cycle_start_date": "2016-01-01T00:00:00.000+0530",
+            "cycle_name": "2015 Anual review",
+            "cycle_end_date": "2016-03-31T00:00:00.000+0530",
+            "id": "revie000000000001640",
+            "rating_description": "3.50 - Exceeds Expectations",
+            "cycle_type": "Focal",
+            "cycle_subtype": "Annual",
+            "holder_name": "User1 Two1",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000001640"
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_idb_v42_yv">
+        <h2 class="title topictitle2" id="ariaid-title4">FIND DETAILS OF REVIEWS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Find the details of the reviews</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/review?q=(:criteria)&amp;f=(:display)&amp;count=:count&amp;startPage=:startPage&amp;includeDetails=:detailsFlag</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_idb_v42_yv__table_c2b_v42_yv"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_idb_v42_yv__table_c2b_v42_yv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_idb_v42_yv__table_c2b_v42_yv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_idb_v42_yv__table_c2b_v42_yv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_idb_v42_yv__table_c2b_v42_yv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_idb_v42_yv__table_c2b_v42_yv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__1 ">criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__2 ">Conditions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__3 ">status%3D%3DCOMPLETE</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__1 ">display</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__2 ">Acceptable values are (case-sensitive)
+                                    cycle_name, cycle_type, cycle_subtype, cycle_start_date,
+                                    cycle_end_date, name, description, status, calculation_method,
+                                    initiative_id, holder_name, period_start, period_end,
+                                    collect_date, due_date, rating_description, holder_id, owner_id,
+                                    has_ack, owner_name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__3 ">cycle_name, cycle_type, cycle_subtype,
+                                    cycle_start_date, cycle_end_date, name, description, status,
+                                    calculation_method, initiative_id, holder_name, period_start,
+                                    period_end, collect_date, due_date, rating_description,
+                                    holder_id, owner_id, has_ack, owner_name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__1 ">detailsFlag</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__2 ">Flag to indicate if details needs to be
+                                    returned.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_idb_v42_yv__table_c2b_v42_yv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "startIndex": 1,
+    "totalResults": 1,
+    "hasMoreResults": false,
+    "itemsPerPage": 10,
+    "results": [
+        {
+            "name": "Cycle_accepts_goal from plan",
+            "status": "INCOMPLETE",
+            "initiative_id": {
+                "id": "initv000000000001484",
+                "displayName": null
+            },
+            "period_end": "2010-08-30T00:00:00.000+0530",
+            "period_start": "2009-01-01T00:00:00.000+0530",
+            "cycle_start_date": "2009-01-01T00:00:00.000+0530",
+            "cycle_name": "Cycle_accepts_goal from plan",
+            "cycle_end_date": "2010-08-30T00:00:00.000+0530",
+            "id": "revie000000000001623",
+            "rating_description": "Not Available",
+            "cycle_type": "Focal",
+            "cycle_subtype": "Annual",
+            "holder_name": "Paul Humm0",
+            "href": "https://&lt;hostname&gt;/v1/review/revie000000000001623"
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_yx1_v42_yv">
+        <h2 class="title topictitle2" id="ariaid-title5">GET ALL REVIEW CYCLES</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all review cycles.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/review-cycle?count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_yx1_v42_yv__table_iy1_v42_yv"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_yx1_v42_yv__table_iy1_v42_yv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_yx1_v42_yv__table_iy1_v42_yv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_yx1_v42_yv__table_iy1_v42_yv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_yx1_v42_yv__table_iy1_v42_yv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_yx1_v42_yv__table_iy1_v42_yv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yx1_v42_yv__table_iy1_v42_yv__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yx1_v42_yv__table_iy1_v42_yv__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yx1_v42_yv__table_iy1_v42_yv__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yx1_v42_yv__table_iy1_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yx1_v42_yv__table_iy1_v42_yv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yx1_v42_yv__table_iy1_v42_yv__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yx1_v42_yv__table_iy1_v42_yv__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yx1_v42_yv__table_iy1_v42_yv__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yx1_v42_yv__table_iy1_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yx1_v42_yv__table_iy1_v42_yv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "startIndex": 1,
+    "facets": [],
+    "totalResults": 56,
+    "hasMoreResults": true,
+    "itemsPerPage": 10,
+    "results": [
+        {
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review-cycle/rcycl000000000000002"
+        },
+        {
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review-cycle/rcycl000000000001001"
+        },
+        {
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review-cycle/rcycl000000000001000"
+        },
+        {
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review-cycle/rcycl000000000001011"
+        },
+        {
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review-cycle/rcycl000000000001013"
+        },
+        {
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review-cycle/rcycl000000000001280"
+        },
+        {
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review-cycle/rcycl000000000001260"
+        },
+        {
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review-cycle/rcycl000000000001241"
+        },
+        {
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review-cycle/rcycl000000000001240"
+        },
+        {
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review-cycle/rcycl000000000001025"
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_ys1_v42_yv">
+        <h2 class="title topictitle2" id="ariaid-title6">GET DETAILS OF A PARTICULAR REVIEW</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of a review.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/review/:id:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_ys1_v42_yv__table_st1_v42_yv"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_ys1_v42_yv__table_st1_v42_yv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ys1_v42_yv__table_st1_v42_yv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ys1_v42_yv__table_st1_v42_yv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ys1_v42_yv__table_st1_v42_yv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ys1_v42_yv__table_st1_v42_yv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ys1_v42_yv__table_st1_v42_yv__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ys1_v42_yv__table_st1_v42_yv__entry__2 ">The ID of the desired review</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ys1_v42_yv__table_st1_v42_yv__entry__3 ">revie000000000001629</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ys1_v42_yv__table_st1_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ys1_v42_yv__table_st1_v42_yv__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "due_date": "2013-06-30T00:00:00.000-0400",
+    "period_end": "2013-06-30T00:00:00.000-0400",
+    "period_start": "2013-06-11T00:00:00.000-0400",
+    "calculation_method": {
+        "calculationMethod": "1100000000",
+        "calculationMethodAccountability": [
+            {
+                "id": "aType000000000000001",
+                "displayName": "Self"
+            },
+            {
+                "id": "aType000000000000002",
+                "displayName": "Manager"
+            }
+        ]
+    },
+    "status": "DRAFT",
+    "cycle_id": {
+        "id": "rcycl000000000004016",
+        "displayName": "RC_14Jun2013"
+    },
+    "owner_id": {
+        "id": "emplo000000000052257",
+        "displayName": "Aparna Jadhav"
+    },
+    "holder_id": {
+        "id": "persn000000000001118",
+        "displayName": "Ben Jahansetan"
+    },
+    "initiative_id": {
+        "id": "initv000000000006406",
+        "displayName": "Review Template created in ES_mx locale"
+    },
+    "collect_date": null,
+    "one_on_one_date": null,
+    "value": null,
+    "minUsersPerAudience": 0,
+    "one_on_one_comments": "",
+    "has_ack": false,
+    "ack_date": null,
+    "description": "RC14Jun2013-&gt; annual(focal)\r\nPolicies:\r\nShow ratings given by all reviewers to reviewee.\r\nGenerate score. \r\nEnforce reviewer sequence.",
+    "name": "RC_14Jun2013",
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+    }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_i41_v42_yv">
+        <h2 class="title topictitle2" id="ariaid-title7">GET DETAILS OF A PARTICULAR REVIEW CYCLE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of a review-cycle.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/review-cycle/:id:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_i41_v42_yv__table_s41_v42_yv"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_i41_v42_yv__table_s41_v42_yv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_i41_v42_yv__table_s41_v42_yv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_i41_v42_yv__table_s41_v42_yv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_i41_v42_yv__table_s41_v42_yv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_i41_v42_yv__table_s41_v42_yv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_i41_v42_yv__table_s41_v42_yv__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_i41_v42_yv__table_s41_v42_yv__entry__2 ">The ID of the desired review cycle</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_i41_v42_yv__table_s41_v42_yv__entry__3 ">rcycl000000000001280</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_i41_v42_yv__table_s41_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_i41_v42_yv__table_s41_v42_yv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_i41_v42_yv__table_s41_v42_yv__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_i41_v42_yv__table_s41_v42_yv__entry__2 ">Indicate what additional details needs to be
+                                    returned. Acceptable values are (case-sensitive)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_i41_v42_yv__table_s41_v42_yv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_i41_v42_yv__table_s41_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_i41_v42_yv__table_s41_v42_yv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "name": "2015 Anual review",
+    "type": "Focal",
+    "description": "&lt;p&gt;2015 Anual review dotnaway from Here.&lt;/p&gt;",
+    "status": "ACTIVE",
+    "subType": "Annual",
+    "planName": null,
+    "systemList": null,
+    "canCreatePlan": false,
+    "reviewMode": "200",
+    "inverseCase": false,
+    "syncHeldLevel": false,
+    "flags": null,
+    "allowExtendDueDate": false,
+    "reviewScoreMethod": "CALCULATED",
+    "autoSetRevOwner": null,
+    "enforceRaterSequence": false,
+    "due_date": "2016-05-06T00:00:00.000+0530",
+    "period_start": "2016-01-01T00:00:00.000+0530",
+    "period_end": "2016-03-31T00:00:00.000+0530",
+    "showNARatingScale": true,
+    "minUsersPerAudience": 1,
+    "userCanInitiateReview": false,
+    "managersCanInitiateReview": true,
+    "approvalReqdToBeginRev": false,
+    "autoCloseAdhocReview": false,
+    "review_trigger_no_of_days": null,
+    "review_due_no_of_days": null,
+    "review_finalization_no_of_days": null,
+    "review_activation_no_of_days": null,
+    "review_approval_no_of_days": null,
+    "review_release_no_of_days": null,
+    "adminCanInitiateReview": false,
+    "userCanReAssignReview": false,
+    "calcMethodOnRater": true,
+    "allowMultipleReviews": false,
+    "startType": false,
+    "validUpto": null,
+    "validFrom": null,
+    "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+    },
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+    }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="reference_sj1_v42_yv">
+        <h2 class="title topictitle2" id="ariaid-title8">GET EXTENDED DETAILS OF A PARTICULAR REVIEW</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns extended details of a review.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/performance/reviews/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_sj1_v42_yv__table_ck1_v42_yv"><caption><span class="table--title-label">Table 7. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_sj1_v42_yv__table_ck1_v42_yv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_sj1_v42_yv__table_ck1_v42_yv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_sj1_v42_yv__table_ck1_v42_yv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_sj1_v42_yv__table_ck1_v42_yv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_sj1_v42_yv__table_ck1_v42_yv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_sj1_v42_yv__table_ck1_v42_yv__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_sj1_v42_yv__table_ck1_v42_yv__entry__2 ">The ID of the desired review</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_sj1_v42_yv__table_ck1_v42_yv__entry__3 ">revie000000000001629</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_sj1_v42_yv__table_ck1_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_sj1_v42_yv__table_ck1_v42_yv__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "ReviewCycleInfo": {
+        "@type": "com.saba.performance.services.review.reviewcycle.ReviewCycleInfo",
+        "ratingLevelDetailDTO": [
+            "list",
+            [
+                {
+                    "@type": "com.saba.performance.services.review.reviewtemplate.RatingLevelDetailDTO",
+                    "minimumScore": 1,
+                    "maximumScore": 1.49,
+                    "correlatedLvlId": null,
+                    "percentage": 5,
+                    "name": "Newbie Tester",
+                    "value": 1,
+                    "id": "rtlvl000000000001066",
+                    "correlatedLvlName": null,
+                    "actualDistribPercentage": 0,
+                    "numberOfReviews": 0
+                },
+                {
+                    "@type": "com.saba.performance.services.review.reviewtemplate.RatingLevelDetailDTO",
+                    "minimumScore": 1.5,
+                    "maximumScore": 2.49,
+                    "correlatedLvlId": null,
+                    "percentage": 15,
+                    "name": "Average Tester",
+                    "value": 2,
+                    "id": "rtlvl000000000001067",
+                    "correlatedLvlName": null,
+                    "actualDistribPercentage": 0,
+                    "numberOfReviews": 0
+                },
+                {
+                    "@type": "com.saba.performance.services.review.reviewtemplate.RatingLevelDetailDTO",
+                    "minimumScore": 2.5,
+                    "maximumScore": 3.49,
+                    "correlatedLvlId": null,
+                    "percentage": 60,
+                    "name": "Star Tester",
+                    "value": 3,
+                    "id": "rtlvl000000000001068",
+                    "correlatedLvlName": null,
+                    "actualDistribPercentage": 0,
+                    "numberOfReviews": 0
+                },
+                {
+                    "@type": "com.saba.performance.services.review.reviewtemplate.RatingLevelDetailDTO",
+                    "minimumScore": 3.5,
+                    "maximumScore": 4,
+                    "correlatedLvlId": null,
+                    "percentage": 20,
+                    "name": "Ace Tester",
+                    "value": 4,
+                    "id": "rtlvl000000000001069",
+                    "correlatedLvlName": null,
+                    "actualDistribPercentage": 0,
+                    "numberOfReviews": 0
+                }
+            ]
+        ],
+        "cycleDetailDTO": {
+            "@type": "com.saba.performance.services.review.reviewcycle.ReviewCycleDetailDTO",
+            "customValues": {
+                "@type": "map"
+            },
+            "subType": null,
+            "syncHeldLevel": false,
+            "reviewScoreMethod": "1",
+            "planName": null,
+            "systemList": null,
+            "autoSetRevOwner": null,
+            "reviewMode": {
+                "@type": "map",
+                "displayName": "Performance",
+                "id": "200"
+            },
+            "inverseCase": false,
+            "activation_date": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "5:27 AM",
+                    "dateInUserTimeZone": "14-DEC-2011",
+                    "timeInUserTimeZone": "3:57 PM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "5:27 AM",
+                    "dateInStandardFormat": "12/14/2011",
+                    "date": 1323858463000,
+                    "locale": "14-DEC-2011"
+                }
+            },
+            "activation_due_date": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "15-DEC-2011",
+                    "timeInUserTimeZone": "10:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "12/15/2011",
+                    "date": 1323925200000,
+                    "locale": "15-DEC-2011"
+                }
+            },
+            "owner_submission_due_date": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "03-JAN-2012",
+                    "timeInUserTimeZone": "10:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "01/03/2012",
+                    "date": 1325566800000,
+                    "locale": "03-JAN-2012"
+                }
+            },
+            "approval_due_date": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "04-JAN-2012",
+                    "timeInUserTimeZone": "10:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "01/04/2012",
+                    "date": 1325653200000,
+                    "locale": "04-JAN-2012"
+                }
+            },
+            "release_due_date": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "05-JAN-2012",
+                    "timeInUserTimeZone": "10:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "01/05/2012",
+                    "date": 1325739600000,
+                    "locale": "05-JAN-2012"
+                }
+            },
+            "approvalReqdToBeginRev": false,
+            "period_start": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "12-DEC-2011",
+                    "timeInUserTimeZone": "10:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "12/12/2011",
+                    "date": 1323666000000,
+                    "locale": "12-DEC-2011"
+                }
+            },
+            "period_end": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "31-DEC-2011",
+                    "timeInUserTimeZone": "10:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "12/31/2011",
+                    "date": 1325307600000,
+                    "locale": "31-DEC-2011"
+                }
+            },
+            "showNARatingScale": true,
+            "minUsersPerAudience": 0,
+            "review_trigger_no_of_days": 0,
+            "validUpto": null,
+            "validFrom": null,
+            "autoCloseAdhocReview": false,
+            "startType": false,
+            "review_activation_no_of_days": 0,
+            "review_due_no_of_days": 0,
+            "review_approval_no_of_days": 0,
+            "review_release_no_of_days": 0,
+            "due_date": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "06-JAN-2012",
+                    "timeInUserTimeZone": "10:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "01/06/2012",
+                    "date": 1325826000000,
+                    "locale": "06-JAN-2012"
+                }
+            },
+            "review_finalization_no_of_days": 0,
+            "enforceRaterSequence": false,
+            "userCanInitiateReview": false,
+            "userCanReAssignReview": false,
+            "managersCanInitiateReview": true,
+            "adminCanInitiateReview": true,
+            "canCreatePlan": false,
+            "allowMultipleReviews": false,
+            "allowExtendDueDate": false,
+            "relativeNoOfDays": 0,
+            "description": "",
+            "domain": {
+                "@type": "map",
+                "displayName": "world",
+                "id": "domin000000000000001"
+            },
+            "fixedDate": null,
+            "name": "Beta feedback",
+            "id": "rcycl000000000001034",
+            "status": "CANCEL",
+            "type": {
+                "@type": "map",
+                "displayName": "Focal",
+                "id": "Focal"
+            }
+        },
+        "requiredRaters": [
+            "list",
+            [
+                {
+                    "@type": "com.saba.performance.services.review.reviewtemplate.RequiredRaterDetailDTO",
+                    "accountabilityType": {
+                        "@type": "map",
+                        "displayName": null,
+                        "id": "aType000000000000001"
+                    },
+                    "requiredRaterList": {
+                        "@type": "map",
+                        "displayName": null,
+                        "id": "rcycl000000000001034"
+                    },
+                    "evaluationDueDate": {
+                        "DateWithLocale": {
+                            "@type": "com.saba.customtypes.DateWithLocale",
+                            "timeInLocale": "12:00 AM",
+                            "dateInUserTimeZone": "18-DEC-2011",
+                            "timeInUserTimeZone": "10:30 AM",
+                            "timeInCustomTimeZone": null,
+                            "dateInCustomTimeZone": null,
+                            "customTimeZoneDate": 0,
+                            "timeInStandardFormat": "12:00 AM",
+                            "dateInStandardFormat": "12/18/2011",
+                            "date": 1324184400000,
+                            "locale": "18-DEC-2011"
+                        }
+                    },
+                    "showResultsTo": "100",
+                    "resultAnonymous": false,
+                    "includeInFinalScore": null,
+                    "evaluationDueNoOfDays": null,
+                    "sequence": 1,
+                    "id": "rrate000000000001857",
+                    "displayName": null
+                }
+            ]
+        ],
+        "ratingLevelDetailsForCompany": null,
+        "associatedReviewForms": [
+            "list",
+            [
+                {
+                    "@type": "map",
+                    "approvalChainType": null,
+                    "targetAudienceId": null,
+                    "displayName": "Beta Feedback Template",
+                    "prId": null,
+                    "id": "initv000000000001019",
+                    "state": "CANCEL",
+                    "sectionsCount": "5"
+                }
+            ]
+        ],
+        "ratingScaleLocked": true
+    }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title9" id="reference_wf1_v42_yv">
+        <h2 class="title topictitle2" id="ariaid-title9">GET EXTENDED DETAILS OF A PARTICULAR REVIEW CYCLE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns extended details of a review-cycle.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/performance/reviews/reviewCycle/:id?expand=:searchFields</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_wf1_v42_yv__table_gg1_v42_yv"><caption><span class="table--title-label">Table 8. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_wf1_v42_yv__table_gg1_v42_yv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_wf1_v42_yv__table_gg1_v42_yv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_wf1_v42_yv__table_gg1_v42_yv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_wf1_v42_yv__table_gg1_v42_yv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_wf1_v42_yv__table_gg1_v42_yv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__2 ">The ID of the desired review cycle</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__3 ">rcycl000000000001280</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__2 ">Indicate what additional details needs to be
+                                    returned. Acceptable values are (case-sensitive)
+                                    reviewcycle,ratinglevels,requiredraters,orgratinglevels,reviewform</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__3 ">reviewcycle,ratinglevels</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "RestReviewDetail": {
+        "@type": "restrvdetail",
+        "attachments": [
+            "list",
+            []
+        ],
+        "ratingLevelDetails": null,
+        "reviewDetail": {
+            "@type": "com.saba.review.ReviewDetail",
+            "extendedAttributes": {
+                "@type": "map"
+            },
+            "endDate": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "30-JUN-2013",
+                    "timeInUserTimeZone": "9:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "06/30/2013",
+                    "date": 1372564800000,
+                    "locale": "30-JUN-2013"
+                }
+            },
+            "startDate": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "11-JUN-2013",
+                    "timeInUserTimeZone": "9:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "06/11/2013",
+                    "date": 1370923200000,
+                    "locale": "11-JUN-2013"
+                }
+            },
+            "auditDetail": {
+                "@type": "com.saba.ejb.AuditDetailImpl",
+                "updatedOn": {
+                    "DateWithLocale": {
+                        "@type": "com.saba.customtypes.DateWithLocale",
+                        "timeInLocale": "1:27 PM",
+                        "dateInUserTimeZone": "20-FEB-2014",
+                        "timeInUserTimeZone": "11:57 PM",
+                        "timeInCustomTimeZone": null,
+                        "dateInCustomTimeZone": null,
+                        "customTimeZoneDate": 0,
+                        "timeInStandardFormat": "1:27 PM",
+                        "dateInStandardFormat": "02/20/2014",
+                        "date": 1392920867000,
+                        "locale": "20-FEB-2014"
+                    }
+                },
+                "createdBy": "ajadhav",
+                "updatedBy": "ajadhav",
+                "createdOn": {
+                    "DateWithLocale": {
+                        "@type": "com.saba.customtypes.DateWithLocale",
+                        "timeInLocale": "1:27 PM",
+                        "dateInUserTimeZone": "20-FEB-2014",
+                        "timeInUserTimeZone": "11:57 PM",
+                        "timeInCustomTimeZone": null,
+                        "dateInCustomTimeZone": null,
+                        "customTimeZoneDate": 0,
+                        "timeInStandardFormat": "1:27 PM",
+                        "dateInStandardFormat": "02/20/2014",
+                        "date": 1392920867000,
+                        "locale": "20-FEB-2014"
+                    }
+                },
+                "createdId": "No created_id attribute"
+            },
+            "componentName": "Review",
+            "membersForScoping": [
+                "java.util.HashSet",
+                [
+                    {
+                        "@type": "persn",
+                        "sourceType": "InternalPerson",
+                        "activitySourceType": {
+                            "sourceType": 0,
+                            "listId": "sysli000000000003037",
+                            "key": "0",
+                            "displayName": "Person"
+                        },
+                        "locale": {
+                            "@type": "loclref",
+                            "id": "local000000000000001",
+                            "displayName": null
+                        },
+                        "id": "persn000000000001118",
+                        "displayName": "Ben Jahansetan"
+                    }
+                ]
+            ],
+            "scopeOperator": "ANY",
+            "dueDate": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "30-JUN-2013",
+                    "timeInUserTimeZone": "9:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "06/30/2013",
+                    "date": 1372564800000,
+                    "locale": "30-JUN-2013"
+                }
+            },
+            "calculationMethod": {
+                "calculationMethod": "1100000000",
+                "calculationMethodAccountability": [
+                    "list",
+                    [
+                        {
+                            "@type": "acnttyp",
+                            "primaryKey": {
+                                "@type": "com.saba.persist.ObjectId",
+                                "id": "aType000000000000001",
+                                "prefix": "aType"
+                            },
+                            "locale": null,
+                            "id": "aType000000000000001",
+                            "displayName": "Self"
+                        },
+                        {
+                            "@type": "acnttyp",
+                            "primaryKey": {
+                                "@type": "com.saba.persist.ObjectId",
+                                "id": "aType000000000000002",
+                                "prefix": "aType"
+                            },
+                            "locale": null,
+                            "id": "aType000000000000002",
+                            "displayName": "Manager"
+                        }
+                    ]
+                ]
+            },
+            "finalizationComments": " ",
+            "reviewState": {
+                "@type": "com.saba.review.ReviewState",
+                "listId": "sysli000000000006009",
+                "systemName": "DRAFT",
+                "key": "DRAFT",
+                "displayName": "Draft"
+            },
+            "reviewCycle": {
+                "@type": "rvcycle",
+                "primaryKey": {
+                    "@type": "com.saba.persist.ObjectId",
+                    "id": "rcycl000000000004016",
+                    "prefix": "rcycl"
+                },
+                "locale": {
+                    "@type": "loclref",
+                    "id": "local000000000000001",
+                    "displayName": null
+                },
+                "id": "rcycl000000000004016",
+                "displayName": "RC_14Jun2013"
+            },
+            "reviewer": {
+                "@type": "emplo",
+                "sourceType": "InternalPerson",
+                "activitySourceType": {
+                    "sourceType": 0,
+                    "listId": "sysli000000000003037",
+                    "key": "0",
+                    "displayName": "Person"
+                },
+                "locale": {
+                    "@type": "loclref",
+                    "id": "local000000000000001",
+                    "displayName": null
+                },
+                "id": "emplo000000000052257",
+                "displayName": "Aparna Jadhav"
+            },
+            "finalizationDate": null,
+            "reviewee": {
+                "@type": "persn",
+                "sourceType": "InternalPerson",
+                "activitySourceType": {
+                    "sourceType": 0,
+                    "listId": "sysli000000000003037",
+                    "key": "0",
+                    "displayName": "Person"
+                },
+                "locale": {
+                    "@type": "loclref",
+                    "id": "local000000000000001",
+                    "displayName": null
+                },
+                "id": "persn000000000001118",
+                "displayName": "Ben Jahansetan"
+            },
+            "reviewForm": {
+                "@type": "com.saba.review.entity.InitiativeReference",
+                "locale": {
+                    "@type": "loclref",
+                    "id": "local000000000000001",
+                    "displayName": null
+                },
+                "id": "initv000000000006406",
+                "displayName": "Review Template created in ES_mx locale"
+            },
+            "feedbackDueDate": null,
+            "sectionList": null,
+            "oneOnOneDate": null,
+            "finalOverallRating": null,
+            "reviewOwnerAccountability": {
+                "@type": "acnttyp",
+                "primaryKey": {
+                    "@type": "com.saba.persist.ObjectId",
+                    "id": "aType000000000000020",
+                    "prefix": "aType"
+                },
+                "locale": null,
+                "id": "aType000000000000020",
+                "displayName": "Stakeholder"
+            },
+            "minUsersPerAudience": 0,
+            "oneOnOneComments": "",
+            "revieweeAcknowledged": false,
+            "revieweeAcknowledgedDate": null,
+            "description": "RC14Jun2013-&gt; annual(focal)\r\nPolicies:\r\nShow ratings given by all reviewers to reviewee.\r\nGenerate score. \r\nEnforce reviewer sequence.",
+            "reference": {
+                "@type": "review",
+                "locale": null,
+                "id": "revie000000000008293",
+                "displayName": "RC_14Jun2013-Review Template created in ES_mx locale"
+            },
+            "name": "RC_14Jun2013-Review Template created in ES_mx locale",
+            "locale": {
+                "@type": "loclref",
+                "id": "local000000000000001",
+                "displayName": null
+            },
+            "id": "revie000000000008293",
+            "displayName": null,
+            "securityDomain": {
+                "@type": "com.saba.domain.entity.DomainReference",
+                "id": "domin000000000000001",
+                "displayName": "world",
+                "primaryKey": {
+                    "@type": "com.saba.persist.ObjectId",
+                    "id": "domin000000000000001",
+                    "prefix": "domin"
+                },
+                "locale": null
+            },
+            "auditReason": "audit with reason"
+        },
+        "reviewScoreMethod": "1",
+        "reviewRaterDetails": null,
+        "auditActions": null,
+        "reviewMilestones": null,
+        "reviewApprovers": null,
+        "associatedPlan": null,
+        "reviewUIActions": null,
+        "reviewObservations": null,
+        "policies": {
+            "@type": "map",
+            "canNotAccess": true,
+            "RATER_SEQUENCE_ENFORCED": true,
+            "showPercentRating": true,
+            "WEIGHTING_METHOD": true,
+            "IS_OFFLINE_REVIEW_ENABLED": false,
+            "IS_FILE_ATTACHMENT_ENABLED": false,
+            "rateSkillsByBI": false,
+            "IS_NUMERIC_RATING_ENABLED": true,
+            "aType000000000000003": false,
+            "ADD_ITEM_TO_ACTIVE_REVIEW": false,
+            "aType000000000000007": false,
+            "aType000000000000008": false,
+            "GENERATE_SCORE": true,
+            "FEEDBACK_MODE": false,
+            "aType000000000000009": false,
+            "IS_LANG_CHECK_BR_ON": true,
+            "aType000000000000020": false,
+            "aType000000000000001": true,
+            "aType000000000000002": true
+        },
+        "reviewObservationDetail": null,
+        "relatedURIs": {
+            "@type": "map"
+        },
+        "loggedInPersonRaterDetail": null,
+        "userRoles": [
+            "list",
+            []
+        ],
+        "revieweeProfileCard": null,
+        "reviewAutoSaveTime": null,
+        "formDescription": "",
+        "cycleDescription": "RC14Jun2013-&gt; annual(focal)\r\nPolicies:\r\nShow ratings given by all reviewers to reviewee.\r\nGenerate score. \r\nEnforce reviewer sequence.",
+        "cycleType": "Focal",
+        "isSuccessPlanExists": null,
+        "awaitingTurnWarning": false,
+        "resourceAttachments": null,
+        "canAddAttachment": false,
+        "reviewAttachments": [
+            "list",
+            []
+        ],
+        "restReviewSectionDetails": null
+    }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title10" id="reference_ed1_v42_yv">
+        <h2 class="title topictitle2" id="ariaid-title10">GET META DETAILS OF A REVIEW-CYCLE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of the review-detail component.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/review-cycle/meta:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_ed1_v42_yv__table_od1_v42_yv"><caption><span class="table--title-label">Table 9. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_ed1_v42_yv__table_od1_v42_yv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ed1_v42_yv__table_od1_v42_yv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ed1_v42_yv__table_od1_v42_yv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ed1_v42_yv__table_od1_v42_yv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ed1_v42_yv__table_od1_v42_yv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ed1_v42_yv__table_od1_v42_yv__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ed1_v42_yv__table_od1_v42_yv__entry__2 ">Indicate what additional details needs to be
+                                    returned. Acceptable values are (case-sensitive)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ed1_v42_yv__table_od1_v42_yv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ed1_v42_yv__table_od1_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ed1_v42_yv__table_od1_v42_yv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "sampleData": {
+        "name": null,
+        "type": null,
+        "description": null,
+        "status": null,
+        "subType": null,
+        "planName": null,
+        "systemList": null,
+        "canCreatePlan": false,
+        "reviewMode": "200",
+        "inverseCase": false,
+        "syncHeldLevel": false,
+        "flags": null,
+        "allowExtendDueDate": false,
+        "reviewScoreMethod": "CALCULATED",
+        "autoSetRevOwner": null,
+        "enforceRaterSequence": false,
+        "due_date": null,
+        "period_start": null,
+        "period_end": null,
+        "showNARatingScale": true,
+        "minUsersPerAudience": 0,
+        "userCanInitiateReview": false,
+        "managersCanInitiateReview": true,
+        "approvalReqdToBeginRev": false,
+        "autoCloseAdhocReview": false,
+        "review_trigger_no_of_days": null,
+        "review_due_no_of_days": null,
+        "review_finalization_no_of_days": null,
+        "review_activation_no_of_days": null,
+        "review_approval_no_of_days": null,
+        "review_release_no_of_days": null,
+        "adminCanInitiateReview": true,
+        "userCanReAssignReview": false,
+        "calcMethodOnRater": false,
+        "allowMultipleReviews": false,
+        "startType": false,
+        "validUpto": null,
+        "validFrom": null,
+        "customValues": {
+            "custom9": null,
+            "custom0": null,
+            "custom3": null,
+            "custom4": null,
+            "custom1": null,
+            "custom2": null,
+            "custom7": null,
+            "custom8": null,
+            "custom5": null,
+            "custom6": null
+        },
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": "world"
+        },
+        "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/review-cycle/rcycl000000000000001"
+    },
+    "name": "Review Cycle",
+    "displayName": "Review Cycle",
+    "attributes": [
+        {
+            "name": "acknowledgement_due_date",
+            "displayName": "Acknowledgement Due Date",
+            "description": "Ack Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "activation_date",
+            "displayName": "Activation Date",
+            "description": "Activation Date of cycle",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "activation_due_date",
+            "displayName": "Review Activation Due Date",
+            "description": "Activation Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "adminCanInitiateReview",
+            "displayName": "Administrator",
+            "description": "If true, admin(performance admin/HRBP) can use this cycle to create review(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "allowExtendDueDate",
+            "displayName": "Allow review owner to extend the due date.",
+            "description": "Allow review owner to extend due date of review(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "allowMultipleReviews",
+            "displayName": "Allow multiple reviews to be generated from this review cycle.",
+            "description": "Allow multiple reviews to be created from this review cycle(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "approval_due_date",
+            "displayName": "Review Approval",
+            "description": "Approval Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "approvalReqdToBeginRev",
+            "displayName": "Approval required to being review",
+            "description": "If true, review owner need to approve to begin review",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "autoCloseAdhocReview",
+            "displayName": "Auto-close review once all the reviewers finish their reviews.",
+            "description": "If true, close review automatically based on all raters submission(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "autoSetRevOwner",
+            "displayName": "Automatically set review owner",
+            "description": "Auto set review owner to Manager, Mentor or a specific person",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "calcMethodOnRater",
+            "displayName": "Calculation method on rater",
+            "description": "True - indicates newly created cycles for which calculation method is attached with required rater",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "canCreatePlan",
+            "displayName": "Create a To-Do List based on this review",
+            "description": "User can create plan based on the review",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "collect_date",
+            "displayName": "Feedback Due Date",
+            "description": "Review Feedback  Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "created_by",
+            "displayName": "Created By",
+            "description": "Created By",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 25,
+            "maximumLength": 25,
+            "isSearchFilter": true
+        },
+        {
+            "name": "created_on",
+            "displayName": "kI18nALReviewCycle_created_on(Missing resource)",
+            "description": "Created On",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "description",
+            "displayName": "Review Instructions",
+            "description": "Description for the review cycle",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 2000,
+            "maximumLength": 2000,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "due_date",
+            "displayName": "Review Finalization",
+            "description": "Due Date for cycle",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "enforceRaterSequence",
+            "displayName": "Enforce Reviewer Sequence",
+            "description": "If true, rater sequence is enforced",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "flags",
+            "displayName": "Flags",
+            "description": "Flags for policies introduced later",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 10,
+            "maximumLength": 10,
+            "isSearchFilter": false
+        },
+        {
+            "name": "goal_setting_due_date",
+            "displayName": "Goal Setting Due Date",
+            "description": "Goal Setting Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "id",
+            "displayName": "ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "inverseCase",
+            "displayName": "Inverse Case",
+            "description": "If true, rating scale has 1 as highest value",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "manager_eval_due_date",
+            "displayName": "Manager Evaluation Due Date",
+            "description": "Manager Eval Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "managersCanInitiateReview",
+            "displayName": "Managers / Alternate Managers",
+            "description": "If true, managers can use this cycle to create review(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "minUsersPerAudience",
+            "displayName": "Minimum number of users required per audience to display results",
+            "description": "A minimum of users required per audience to display results",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "name",
+            "displayName": "Review Name",
+            "description": "Unique name of the review cycle",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "owner_submission_due_date",
+            "displayName": "Review Owner Submission",
+            "description": "Owner Submission Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "period_end",
+            "displayName": "End Date",
+            "description": "Review Period End Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "period_start",
+            "displayName": "Start Date",
+            "description": "Review Period Start Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "planName",
+            "displayName": "System To-Do List Name",
+            "description": "Name for the plan created based on the review",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "release_due_date",
+            "displayName": "Review Release",
+            "description": "Release Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "review_activation_no_of_days",
+            "displayName": "Review Activation",
+            "description": "Number of days to ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "review_approval_no_of_days",
+            "displayName": "Review Approval",
+            "description": "Number of days to ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "review_due_no_of_days",
+            "displayName": "Review Owner Submission",
+            "description": "Number of days to ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "review_finalization_no_of_days",
+            "displayName": "Review Finalization",
+            "description": "Number of days to ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "reviewMode",
+            "displayName": "Mode",
+            "description": "Review Cycle Mode",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+                "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/list/sysli000000000006026/values"
+            },
+            "display": true,
+            "length": 50,
+            "maximumLength": 50,
+            "isSearchFilter": false
+        },
+        {
+            "name": "review_release_no_of_days",
+            "displayName": "Review Release",
+            "description": "Number of days to ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "reviewScoreMethod",
+            "displayName": "Generate Final Score",
+            "description": "1 = Calculated or overridden score; 2 = Manually set by owner; 3 = No overall score",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "review_trigger_no_of_days",
+            "displayName": "Review Trigger After",
+            "description": "Number of days to ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "self_eval_due_date",
+            "displayName": "Self Evaluation Due Date",
+            "description": "Self Eval Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "showNARatingScale",
+            "displayName": "Show N/A in the rating scale",
+            "description": "Show NA rating scale policy.",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "securityDomain",
+            "displayName": "Domain",
+            "description": "Domain for the review cycle",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "startType",
+            "displayName": "Trigger Based On",
+            "description": "Review Start type by hire or job start date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "status",
+            "displayName": "Status",
+            "description": "Status of Cycle",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+                "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/list/sysli000000000006018/values"
+            },
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "subType",
+            "displayName": "Sub Type",
+            "description": "Sub type of review cycle",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+                "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/list/sysli000000000006024/values"
+            },
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "syncHeldLevel",
+            "displayName": "Synchronize held skill level with review score",
+            "description": "Synchronize the held level of skill",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "systemList",
+            "displayName": "kI18nALReviewCycle_systemList(Missing resource)",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "type",
+            "displayName": "Type",
+            "description": "Type of Cycle",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+                "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/list/sysli000000000006019/values"
+            },
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "updated_by",
+            "displayName": "kI18nALReviewCycle_updated_by(Missing resource)",
+            "description": "Updated By",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 25,
+            "maximumLength": 25,
+            "isSearchFilter": false
+        },
+        {
+            "name": "updated_on",
+            "displayName": "kI18nALReviewCycle_updated_on(Missing resource)",
+            "description": "Updated On",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "userCanInitiateReview",
+            "displayName": "User",
+            "description": "If true, reviewee can use this cycle to create review(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "userCanReAssignReview",
+            "displayName": "User can re-assign",
+            "description": "If true, reviewee can reassign review(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validFrom",
+            "displayName": "Available from",
+            "description": "Date from which the review is valid(for ad hoc review only)",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validUpto",
+            "displayName": "Available to",
+            "description": "Date upto which the review is valid(for ad hoc review only)",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom0",
+            "displayName": "Custom0",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom1",
+            "displayName": "Custom1",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom2",
+            "displayName": "Custom2",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom3",
+            "displayName": "Custom3",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom4",
+            "displayName": "Custom4",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom5",
+            "displayName": "Custom5",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom6",
+            "displayName": "Custom6",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom7",
+            "displayName": "Custom7",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom8",
+            "displayName": "Custom8",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom9",
+            "displayName": "Custom9",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title11" id="reference_w11_v42_yv">
+        <h2 class="title topictitle2" id="ariaid-title11">GET META DETAILS OF A REVIEW</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of a review component.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/review/meta:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_w11_v42_yv__table_gb1_v42_yv"><caption><span class="table--title-label">Table 10. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_w11_v42_yv__table_gb1_v42_yv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_w11_v42_yv__table_gb1_v42_yv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_w11_v42_yv__table_gb1_v42_yv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_w11_v42_yv__table_gb1_v42_yv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_w11_v42_yv__table_gb1_v42_yv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w11_v42_yv__table_gb1_v42_yv__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w11_v42_yv__table_gb1_v42_yv__entry__2 ">Indicate what additional details needs to be
+                                    returned. Acceptable values are (case-sensitive)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w11_v42_yv__table_gb1_v42_yv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w11_v42_yv__table_gb1_v42_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w11_v42_yv__table_gb1_v42_yv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "sampleData": {
+        "name": null,
+        "description": null,
+        "period_end": null,
+        "period_start": null,
+        "status": null,
+        "cycle_id": null,
+        "owner_id": null,
+        "holder_id": null,
+        "initiative_id": null,
+        "one_on_one_date": null,
+        "calculation_method": null,
+        "collect_date": null,
+        "value": null,
+        "due_date": null,
+        "minUsersPerAudience": 0,
+        "one_on_one_comments": null,
+        "ack_date": null,
+        "has_ack": false,
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": null
+        },
+        "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000000001"
+    },
+    "name": "Review",
+    "displayName": "Review",
+    "attributes": [
+        {
+            "name": "ack_comments",
+            "displayName": "Ack Comments",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 500,
+            "maximumLength": 500,
+            "isSearchFilter": false
+        },
+        {
+            "name": "ack_date",
+            "displayName": "Ack Date",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "approver_list_id",
+            "displayName": "Approver List (not used)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "calculation_method",
+            "displayName": "Calculation Method",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 10,
+            "maximumLength": 10,
+            "isSearchFilter": true
+        },
+        {
+            "name": "collect_date",
+            "displayName": "Feedback Due Date",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "created_by",
+            "displayName": "Created by",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 25,
+            "maximumLength": 25,
+            "isSearchFilter": false
+        },
+        {
+            "name": "created_on",
+            "displayName": "Created on",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "cycle_id",
+            "displayName": "Review Cycle Name",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "description",
+            "displayName": "Description",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 2040,
+            "maximumLength": 2040,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "due_date",
+            "displayName": "Finalization Due Date",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "has_ack",
+            "displayName": "Reviewee acknowledged",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "holder_id",
+            "displayName": "Reviewee",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "id",
+            "displayName": "kI18nALReview_id(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "initiative_id",
+            "displayName": "Review Form",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "minUsersPerAudience",
+            "displayName": "Minimum number of users required per audience to display results",
+            "description": "A minimum of users required per audience to display results",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "name",
+            "displayName": "Review Name",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "next_review_date",
+            "displayName": "Next Review Date (not used)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "one_on_one_comments",
+            "displayName": "One on One Comments",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 2000,
+            "maximumLength": 2000,
+            "isSearchFilter": false
+        },
+        {
+            "name": "one_on_one_date",
+            "displayName": "One On One Date",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "owner_id",
+            "displayName": "Review Owner",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "period_end",
+            "displayName": "End Date",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "period_start",
+            "displayName": "Start Date",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "scale_id",
+            "displayName": "Scale (not used)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "section_list_id",
+            "displayName": "Section List ",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "securityDomain",
+            "displayName": "Domain",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "status",
+            "displayName": "Review Status",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "updated_by",
+            "displayName": "Updated by",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 25,
+            "maximumLength": 25,
+            "isSearchFilter": false
+        },
+        {
+            "name": "updated_on",
+            "displayName": "Updated on",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "value",
+            "displayName": "Overall Rating",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "real",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom0",
+            "displayName": "Custom0",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom1",
+            "displayName": "Custom1",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom2",
+            "displayName": "Custom2",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom3",
+            "displayName": "Custom3",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom4",
+            "displayName": "Custom4",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom5",
+            "displayName": "Custom5",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom6",
+            "displayName": "Custom6",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom7",
+            "displayName": "Custom7",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom8",
+            "displayName": "Custom8",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom9",
+            "displayName": "Custom9",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title12" id="reference_uxz_542_yv">
+        <h2 class="title topictitle2" id="ariaid-title12">FIND DETAILS OF REVIEWS WITH POST BASED SEARCH</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Find the details of the reviews</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/review/searchQuery?f=(:display)&amp;count=:count&amp;startPage=:startPage&amp;includeDetails=:detailsFlag</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_uxz_542_yv__table_oyz_542_yv"><caption><span class="table--title-label">Table 11. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_uxz_542_yv__table_oyz_542_yv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_uxz_542_yv__table_oyz_542_yv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_uxz_542_yv__table_oyz_542_yv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_uxz_542_yv__table_oyz_542_yv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_uxz_542_yv__table_oyz_542_yv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__1 ">conditions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__2 ">Conditions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__3 "> [{"name":"holder_id", "operator":"==",
+                                    "value":"emplo000000000200304"}] </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__1 ">display</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__2 ">Acceptable values are (case-sensitive)
+                                    cycle_name, cycle_type, cycle_subtype, cycle_start_date,
+                                    cycle_end_date, name, description, status, calculation_method,
+                                    initiative_id, holder_name, period_start, period_end,
+                                    collect_date, due_date, rating_description, holder_id, owner_id,
+                                    has_ack, owner_name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__3 ">cycle_name, cycle_type, cycle_subtype,
+                                    cycle_start_date, cycle_end_date, name, description, status,
+                                    calculation_method, initiative_id, holder_name, period_start,
+                                    period_end, collect_date, due_date, rating_description,
+                                    holder_id, owner_id, has_ack, owner_name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__1 ">detailsFlag</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__2 ">Flag to indicate if details needs to be
+                                    returned.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uxz_542_yv__table_oyz_542_yv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "conditions":[
+        {
+            "name":"holder_id",
+            "operator":"==",
+            "value":"emplo000000000200304"
+        },
+        {
+            "name":"cycle_id",
+            "operator":"==",
+            "value":"rcycl000000000001280"
+        }
+    ]
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "startIndex": 1,
+    "totalResults": 1,
+    "hasMoreResults": false,
+    "itemsPerPage": 10,
+    "facets": [],
+    "results": [
+        {
+            "name": "2015 Anual review",
+            "description": "&lt;p&gt;2015 Anual review dotnaway from Here.&lt;/p&gt;",
+            "period_end": "2016-03-31T00:00:00.000+0530",
+            "period_start": "2016-01-01T00:00:00.000+0530",
+            "status": "RELEASE",
+            "initiative_id": {
+                "id": "initv000000000001503",
+                "displayName": null
+            },
+            "calculation_method": {
+                "calculationMethodAccountability": [],
+                "calculationMethod": "Self, Manager"
+            },
+            "collect_date": null,
+            "due_date": "2016-05-06T00:00:00.000+0530",
+            "cycle_start_date": "2016-01-01T00:00:00.000+0530",
+            "cycle_name": "2015 Anual review",
+            "cycle_end_date": "2016-03-31T00:00:00.000+0530",
+            "id": "revie000000000001640",
+            "rating_description": "3.50 - Exceeds Expectations",
+            "cycle_type": "Focal",
+            "cycle_subtype": "Annual",
+            "holder_name": "User1 Two1",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/review/revie000000000001640"
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

@@ -1,0 +1,704 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all offerings, learning components, find the details of the offerings, find the details of the offerings, get the meta details of a blended class, get the meta details of a blended class, get the meta details of an ilt class, get the meta details of an ilt class, get the details of a class, get the details of a class, get the meta details of a virtual class, get the meta details of a virtual class, get the meta details of a wbt class, get the meta details of a wbt class, create a new blended class, create a new blended class, create a new ilt class, create a new ilt class, create a new virtual class, create a new virtual class, create a new wbt class, create a new wbt class, update a blended class, update a blended class, update a ilt class, update a virtual class, update a virtual class, update a wbt class, get all the offerings of the instructor, get all the offerings of the instructor, retrieve all learning assignments of a class, retrieves all learning assignments of an class, add learning assignments to a class, add learning assignments to a class, update learning assignments of a class, update learning assignments of a class, publish learning assignments of a class, publish learning assignments of a class, mark class as delivered/cancelled, mark class as delivered/cancelled, cancel all enrollments of a class, cancel all enrollments of a class, retrieve all sessions of an offering, retrieve all sessions of an offering, mark class registration as no_show/walk_in, mark class registration as no_show/walk_in, add drop policy to class, delete drop policy from class, delete drop policy from class">
+  <meta name="keywords" content="learning, restful web services, get all offerings, learning components, find the details of the offerings, find the details of the offerings, get the meta details of a blended class, get the meta details of a blended class, get the meta details of an ilt class, get the meta details of an ilt class, get the details of a class, get the details of a class, get the meta details of a virtual class, get the meta details of a virtual class, get the meta details of a wbt class, get the meta details of a wbt class, create a new blended class, create a new blended class, create a new ilt class, create a new ilt class, create a new virtual class, create a new virtual class, create a new wbt class, create a new wbt class, update a blended class, update a blended class, update a ilt class, update a virtual class, update a virtual class, update a wbt class, get all the offerings of the instructor, get all the offerings of the instructor, retrieve all learning assignments of a class, retrieves all learning assignments of an class, add learning assignments to a class, add learning assignments to a class, update learning assignments of a class, update learning assignments of a class, publish learning assignments of a class, publish learning assignments of a class, mark class as delivered/cancelled, mark class as delivered/cancelled, cancel all enrollments of a class, cancel all enrollments of a class, retrieve all sessions of an offering, retrieve all sessions of an offering, mark class registration as no_show/walk_in, mark class registration as no_show/walk_in, add drop policy to class, delete drop policy from class, delete drop policy from class">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Class</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title22">MARK CLASS AS DELIVERED/CANCELLED</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Marks the class as Delivered/Cancelled.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">POST</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/:offeringId/action</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_jrx_vt3_j5__table_krx_vt3_j5" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 18. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__3">Default Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__1 ">offeringId</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__2 ">Class's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__3 ">class000000000201503</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__1 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__2 ">@type </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__3 ">com.saba.learning.services.offering.<p class="p">DeliveryStatusDetail</p></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__1 ">actionName</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__2 ">Action: Delivered or Cancelled</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__3 ">Delivered</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__1 ">deliveryDate</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__2 ">DeliveryDate for Action Delivered</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__3 "> <pre class="pre codeblock"><code>{
+  "@type":"date",
+  "time":"2013-11-15"
+} </code></pre> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__1 ">doCreateOfferingRequest</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__2 ">Whether to create new offering or not</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__1 ">auditReason</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__2 ">Audit Reason</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__3 ">Reason</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jrx_vt3_j5__table_krx_vt3_j5__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body (Mark class as Delivered)</h5> 
+    <pre class="pre codeblock"><code>{
+    "@type" : "com.saba.learning.services.offering.DeliveryStatusDetail",
+    "actionName":"Delivered",
+    "deliveryDate": {"@type":"date", "time":"2013-11-15"},
+    "doCreateOfferingRequest":false,
+    "auditReason":"Class already delivered"
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body (Mark class as Cancelled)</h5> 
+    <pre class="pre codeblock"><code>{
+    "@type" : "com.saba.learning.services.offering.DeliveryStatusDetail",
+    "actionName":"Cancelled",
+    "doCreateOfferingRequest":false,
+    "auditReason":"Class not required"
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+  "@type": "com.saba.learning.services.offering.OfferingDetail",
+  "name": "AutomationCourse1",
+  "language": {
+    "@type": "ServiceObjectReference",
+    "id": "lange000000000000001",
+    "displayName": "English"
+  },
+  "location": {
+    "@type": "ServiceObjectReference",
+    "id": "locat000000000200040",
+    "displayName": "Bombay"
+  },
+  "resources": [
+    "list",
+    []
+  ],
+  "actions": null,
+  "id": "class000000000200300",
+  "description": "",
+  "duration": 0,
+  "price": {
+    "@type": "com.saba.learning.services.common.Money",
+    "amount": [
+      "java.math.BigDecimal",
+      10
+    ],
+    "currency": {
+      "@type": "ServiceObjectReference",
+      "id": "crncy000000000000001",
+      "displayName": null
+    },
+    "isocode": "USD",
+    "amountString": "10 USD"
+  },
+  "customValues": [
+    "list",
+    [
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom0",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom0"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom2"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom3",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom3"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom4",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom4"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom5",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom5"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom6",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom6"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom7",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom7"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom8",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom8"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom9",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom9"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom10",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom10"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 10
+        },
+        "value": null,
+        "displayName": "kI18nALILTOffering_c619749d-cc46-4f8c-b070-195ca2d8e7d2_domin000000000000001(Missing resource)"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "kI18nALILTOffering_ab137b04-c2f3-4003-b2e3-9b72f60a5167_domin000000000000001(Missing resource)"
+      }
+    ]
+  ],
+  "endDate": {
+    "@type": "com.saba.customtypes.DateWithLocale",
+    "date": 1113762600000,
+    "locale": "18.04.2005",
+    "dateInUserTimeZone": "17.04.2005",
+    "timeInUserTimeZone": "11:30 AM",
+    "timeInCustomTimeZone": null,
+    "dateInCustomTimeZone": null,
+    "customTimeZoneDate": 0,
+    "timeInStandardFormat": "12:00 AM",
+    "dateInStandardFormat": "04/18/2005",
+    "timeInLocale": "12:00 AM"
+  },
+  "startDate": {
+    "@type": "com.saba.customtypes.DateWithLocale",
+    "date": 1113762600000,
+    "locale": "18.04.2005",
+    "dateInUserTimeZone": "17.04.2005",
+    "timeInUserTimeZone": "11:30 AM",
+    "timeInCustomTimeZone": null,
+    "dateInCustomTimeZone": null,
+    "customTimeZoneDate": 0,
+    "timeInStandardFormat": "12:00 AM",
+    "dateInStandardFormat": "04/18/2005",
+    "timeInLocale": "12:00 AM"
+  },
+  "status": "Cancelled - Normal",
+  "session_template": "Monday (8 hrs.)",
+  "disp_for_call_center": true,
+  "open_enroll_for_all": null,
+  "post_completion": null,
+  "stop_auto_promotion": null,
+  "do_not_drop_post": null,
+  "manufacturer_id": null,
+  "learningAssignments": null,
+  "offering_temp_id": {
+    "@type": "ServiceObjectReference",
+    "id": "cours000000000200280",
+    "displayName": "AutomationCourse1"
+  },
+  "creditsCollection": null,
+  "offeringlocked": false,
+  "delivery_id": {
+    "@type": "ServiceObjectReference",
+    "id": "eqcat000000000000004",
+    "displayName": "Instructor-Led"
+  },
+  "location_id": {
+    "@type": "ServiceObjectReference",
+    "id": "locat000000000200040",
+    "displayName": "Bombay"
+  },
+  "max_ct": 10,
+  "max_book": 5,
+  "min_ct": 0,
+  "csr_id": null,
+  "language_id": {
+    "@type": "ServiceObjectReference",
+    "id": "lange000000000000001",
+    "displayName": "English"
+  },
+  "disp_for_web": true,
+  "facility_id": null,
+  "vendor_id": null,
+  "open_enroll": null,
+  "enroll_close": null,
+  "post_order": null,
+  "vleInfo": null,
+  "start_date": {
+    "@type": "com.saba.customtypes.DateWithLocale",
+    "date": 1113762600000,
+    "locale": "18.04.2005",
+    "dateInUserTimeZone": "17.04.2005",
+    "timeInUserTimeZone": "11:30 AM",
+    "timeInCustomTimeZone": null,
+    "dateInCustomTimeZone": null,
+    "customTimeZoneDate": 0,
+    "timeInStandardFormat": "12:00 AM",
+    "dateInStandardFormat": "04/18/2005",
+    "timeInLocale": "12:00 AM"
+  },
+  "avail_from": null,
+  "disc_from": null,
+  "skip_days_map": "0000000",
+  "has_community": false,
+  "wbt_no": "00200340",
+  "enforced_seq": "100",
+  "facility": null,
+  "trainingUnits": null,
+  "abstract": "",
+  "locationDetail": {
+    "@type": "com.saba.learning.services.resource.LocationDetail",
+    "attachments": [
+      "list",
+      []
+    ],
+    "timezone": {
+      "@type": "ServiceObjectReference",
+      "id": "tzone000000000000042",
+      "displayName": "(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi"
+    },
+    "organization": null,
+    "eeoMandatory": null,
+    "contactInfo": {
+      "@type": "com.saba.learning.services.common.ContactDetail",
+      "email": "",
+      "fax": "",
+      "primaryPhone": "",
+      "secondaryPhone": ""
+    },
+    "locationName": "Bombay",
+    "locationId": "00200040",
+    "addressInfo": {
+      "@type": "com.saba.learning.services.common.AddressDetail",
+      "state": "",
+      "country": "India",
+      "zipCode": "",
+      "city": "",
+      "addressLine2": "",
+      "addressLine3": null,
+      "addressLine1": ""
+    },
+    "locationContact": null
+  },
+  "audienceTypes": [
+    "list",
+    []
+  ],
+  "cpf": false,
+  "availabilityDetails": {
+    "@type": "com.saba.learning.services.offering.OfferingDetail$OfferingRegistrationAvailabilityDetailsSection",
+    "availableSeats": 10,
+    "offeringPriceDisplay": "10 USD",
+    "offeringPrice": {
+      "@type": "com.saba.learning.services.common.Money",
+      "amount": [
+        "java.math.BigDecimal",
+        10
+      ],
+      "currency": {
+        "@type": "ServiceObjectReference",
+        "id": "crncy000000000000001",
+        "displayName": null
+      },
+      "isocode": "USD",
+      "amountString": "10 USD"
+    }
+  },
+  "securityDomain": {
+    "@type": "ServiceObjectReference",
+    "id": "domin000000000000001",
+    "displayName": "world"
+  },
+  "groupAssociatedWithCourse": null,
+  "componentName": "ComponentName",
+  "deliveryType": {
+    "@type": "ServiceObjectReference",
+    "id": "eqcat000000000000004",
+    "displayName": "Instructor-Led"
+  },
+  "offeringTemplate": {
+    "@type": "ServiceObjectReference",
+    "id": "cours000000000200280",
+    "displayName": "AutomationCourse1"
+  },
+  "availableSeats": 10,
+  "sessionTemplate": "Monday (8 hrs.)",
+  "offeringNumber": "00200340",
+  "consumeWithinCert": false,
+  "class_no": "00200340",
+  "customFieldsValue": [
+    "list",
+    [
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom0",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom0"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom1"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom2"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom3",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom3"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom4",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom4"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom5",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom5"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom6",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom6"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom7",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom7"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom8",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom8"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom9",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom9"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "custom10",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "Custom10"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom1",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 10
+        },
+        "value": null,
+        "displayName": "kI18nALILTOffering_c619749d-cc46-4f8c-b070-195ca2d8e7d2_domin000000000000001(Missing resource)"
+      },
+      {
+        "@type": "CustomAttributeValueDetail",
+        "name": "excustom2",
+        "datatype": {
+          "@type": "CustomAttributeDatatype",
+          "value": 18
+        },
+        "value": null,
+        "displayName": "kI18nALILTOffering_ab137b04-c2f3-4003-b2e3-9b72f60a5167_domin000000000000001(Missing resource)"
+      }
+    ]
+  ],
+  "baseDeliveryType": 100,
+  "customFields": {
+    "@type": "map",
+    "custom0": null,
+    "excustom2": null,
+    "excustom1": null,
+    "custom10": null,
+    "custom9": null,
+    "custom3": null,
+    "custom4": null,
+    "custom1": null,
+    "custom2": null,
+    "custom7": null,
+    "custom8": null,
+    "custom5": null,
+    "custom6": null
+  },
+  "publishStatus": null,
+  "group_id": null,
+  "endDateI18n": "18.04.2005",
+  "startDateI18n": "18.04.2005",
+  "courseVersion": null,
+  "cpfMins": 0,
+  "calendarExportURL": null,
+  "priceDisplayString": "10 USD",
+  "dropPolicyInfo": {
+    "@type": "com.saba.learning.services.catalog.DropPolicyInfo",
+    "allEffectivePolicies": [
+      "list",
+      [
+        {
+          "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+          "displayString": "Cancellation charge of 35.0 % if dropped between 03.04.2005 and 11.04.2005.",
+          "currency": {
+            "@type": "ServiceObjectReference",
+            "id": "crncy000000000000001",
+            "displayName": null
+          },
+          "daysFrom": 7,
+          "daysTo": 15,
+          "charge": 35,
+          "chargeType": 1,
+          "timeEntryId": ""
+        },
+        {
+          "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+          "displayString": "Cancellation charge of 47.0 % if dropped between 12.04.2005 and 18.04.2005.",
+          "currency": {
+            "@type": "ServiceObjectReference",
+            "id": "crncy000000000000001",
+            "displayName": null
+          },
+          "daysFrom": 0,
+          "daysTo": 6,
+          "charge": 47,
+          "chargeType": 1,
+          "timeEntryId": ""
+        },
+        {
+          "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+          "displayString": "Cancellation charge of 10.0 % for all other days.",
+          "currency": {
+            "@type": "ServiceObjectReference",
+            "id": "crncy000000000000001",
+            "displayName": null
+          },
+          "daysFrom": -99999,
+          "daysTo": 99999,
+          "charge": 10,
+          "chargeType": 1,
+          "timeEntryId": ""
+        }
+      ]
+    ],
+    "lastDateToDropWithoutCharge": null,
+    "trainingUnitDropPolicyInfo": null
+  },
+  "durationString": "00:00",
+  "offering_temp_no": null,
+  "registeredCount": 0,
+  "waitListedCount": 0,
+  "statusNumValue": 500,
+  "suppressScoreForOT": false,
+  "inheritedTrainingUnits": null,
+  "publishStatusMessage": null,
+  "publishEndDate": null,
+  "publishStartDate": null
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

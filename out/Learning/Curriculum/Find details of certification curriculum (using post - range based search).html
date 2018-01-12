@@ -1,0 +1,232 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get the details of a curriculum, learning components, get the details of a curriculum, find the details of the certification/curriculum, find the details of the certification/curriculum, find the details of the certification/curriculum (using post - range based search), find the details of the certification/curriculum (using post - range based search), create a new curriculum, create a new curriculum, update the details of a curriculum, update the details of a curriculum">
+  <meta name="keywords" content="learning, restful web services, get the details of a curriculum, learning components, get the details of a curriculum, find the details of the certification/curriculum, find the details of the certification/curriculum, find the details of the certification/curriculum (using post - range based search), find the details of the certification/curriculum (using post - range based search), create a new curriculum, create a new curriculum, update the details of a curriculum, update the details of a curriculum">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Curriculum</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title4">FIND DETAILS OF CERTIFICATION/CURRICULUM (Using POST - Range based search)</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the details of the Certification/Curriculum along with the ID, Name and the Deeplink URL based on the provided search criteria.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">POST</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/:componentName/searchQuery?count=:count&amp;startPage=:startPage&amp;includeDetails=:includeDetails </p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_z25_vnx_fp__table_if5_vnx_fp" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 3. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">conditions</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The search conditions.
+        <div class="p">
+         You can use any field with "isSearchFilter": true.
+         <div class="note note note_note">
+          <span class="note__title">Note:</span> To find out the fields that have "isSearchFilter": true, invoke the "Get the Meta details" REST APIs.
+         </div>You can use search operators such as:
+         <ul class="ul" id="reference_z25_vnx_fp__ul_of5_vnx_fp"> 
+          <li class="li">=gt=</li> 
+          <li class="li">=ge=</li> 
+          <li class="li">=lt=</li> 
+          <li class="li">=le=</li> 
+          <li class="li">=eq=</li> 
+          <li class="li">=ne=</li> 
+         </ul>
+        </div></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 "> [{"name": "name","operator": "==","value": "Blendedcertveren_US"}] </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">componentName </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The name of the desired component.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">certification</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">enumerated <p class="p"> [ "certification", "curriculum" ] </p></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">count</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The number of records per page.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">10</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">startPage</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The start page number for the list of records.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">1</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">includeDetails</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">Returns the details of the Certification/Curriculum in the search.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">true</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5> 
+    <pre class="pre codeblock"><code>{
+"conditions": [
+{ 
+	"name": "category_name", 
+	"operator": "==", 
+	"value": "000001FeaturedCatenglish" 
+}]}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "keywords": [],
+      "deepLinkUrls": [
+        "https://&lt;hostname&gt;/Saba/Web_spf/ATHDB1/common/learningeventdetail/curra000000000005247"
+      ],
+      "description": "",
+      "name": "001",
+      "paths": [
+        {
+          "learningModules": [
+            {
+              "is_reqd": true,
+              "learningInterventions": [
+                {
+                  "is_reqd": false,
+                  "owner_id": null,
+                  "part_id": {
+                    "id": "cours000000000040747",
+                    "displayName": "Test1"
+                  },
+                  "is_waiver": false,
+                  "sequence": 1,
+                  "id": "edupl000000000013629"
+                }
+              ],
+              "notes": null,
+              "reqd_no_of_items": 1,
+              "is_waiver": true,
+              "track_id": null,
+              "sequence": 1,
+              "name": "001Module",
+              "id": "cegrp000000000009647"
+            }
+          ],
+          "isrecertification_track": false,
+          "is_default_path": true,
+          "is_path_recalculation_done": false,
+          "name": "001Module",
+          "id": "track000000000009288"
+        }
+      ],
+      "disp_learner": true,
+      "disp_callcenter": true,
+      "self_register": true,
+      "featured": false,
+      "vendor_id": null,
+      "avl_from": "2016-03-21T00:00:00.000-0400",
+      "disc_from": null,
+      "createGroupPolicyVal": false,
+      "target_days": 0,
+      "learningevent_id": "00032318",
+      "version": null,
+      "group": null,
+      "status": "DRAFT",
+      "customValues": {
+        "ExCustom6": null,
+        "ExCustom5": null,
+        "custom0": null,
+        "ExCustom8": null,
+        "ExCustom9": null,
+        "custom9": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "ExCustom2": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      },
+      "id": "curra000000000005247",
+      "updated_on": "2016-03-21T02:28:42.000-0400",
+      "created_on": "2016-03-21T02:23:51.000-0400",
+      "updated_by": "uone",
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": "English"
+      },
+      "created_by": "uone"
+    }
+  ],
+  "hasMoreResults": true,
+  "itemsPerPage": 1,
+  "totalResults": 478,
+  "OneClickRegistration": false,
+  "auto_launch": false
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

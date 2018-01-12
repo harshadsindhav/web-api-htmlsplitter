@@ -1,0 +1,129 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="foundation, restful web services, get a particular list value, foundation components, get a particular list value, get list value by list id and list value name, get list value by list id and list value name, search list values, add value to lov for an attribute, add value to lov for an attribute, update value of list, update value of list, delete item from list, delete item from list, delete item from list (by listid and name of the list value), delete item from list (by listid and name of the list value)">
+  <meta name="keywords" content="foundation, restful web services, get a particular list value, foundation components, get a particular list value, get list value by list id and list value name, get list value by list id and list value name, search list values, add value to lov for an attribute, add value to lov for an attribute, update value of list, update value of list, delete item from list, delete item from list, delete item from list (by listid and name of the list value), delete item from list (by listid and name of the list value)">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-foundation.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0er656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>List Value</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title5">ADD VALUE TO LOV FOR AN ATTRIBUTE</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Allows adding a value to the LOV for a particular attribute.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">POST</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/lov</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_k4p_52q_jv__table_u4p_52q_jv" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 4. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_k4p_52q_jv__table_u4p_52q_jv__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_k4p_52q_jv__table_u4p_52q_jv__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_k4p_52q_jv__table_u4p_52q_jv__entry__3">Default Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_k4p_52q_jv__table_u4p_52q_jv__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_k4p_52q_jv__table_u4p_52q_jv__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__1 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__2 ">Type list entry detail</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__3 ">com.saba.lov.ListEntryDetail</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__1 ">name</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__2 ">The name of the list value</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__3 ">TestListValue</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__1 ">description</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__2 ">Description of the list value</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__3 ">This is created for testing purpose</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__1 ">lovList</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__2 ">List ID and displayName</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__3 ">{\"@type\": \"java.util.HashMap\",\"id\": \"listi000000000010141\",\"displayName\":\"custom1:WBT Offering\"} </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__5 ">Yes</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5> 
+    <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.lov.ListEntryDetail",
+   "name":"ListItem1",
+   "description":"This is Test ListItem Value",
+   "lovList":{  
+      "@type":"java.util.HashMap",
+      "id":"listi000000000001006",
+      "displayName":"custom1:WBT Offering"
+   }
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.lov.RestLovDetail",
+   "name":"ListItem21",
+   "description":"This is Test ListItem21 Value",
+   "lovList":{  
+      "@type":"map",
+      "displayName":"custom1:WBT Offering",
+      "id":"listi000000000010141"
+   },
+   "id":"listv000000001003048"
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

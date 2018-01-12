@@ -1,0 +1,754 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all offerings, learning components, find the details of the offerings, find the details of the offerings, get the meta details of a blended class, get the meta details of a blended class, get the meta details of an ilt class, get the meta details of an ilt class, get the details of a class, get the details of a class, get the meta details of a virtual class, get the meta details of a virtual class, get the meta details of a wbt class, get the meta details of a wbt class, create a new blended class, create a new blended class, create a new ilt class, create a new ilt class, create a new virtual class, create a new virtual class, create a new wbt class, create a new wbt class, update a blended class, update a blended class, update a ilt class, update a virtual class, update a virtual class, update a wbt class, get all the offerings of the instructor, get all the offerings of the instructor, retrieve all learning assignments of a class, retrieves all learning assignments of an class, add learning assignments to a class, add learning assignments to a class, update learning assignments of a class, update learning assignments of a class, publish learning assignments of a class, publish learning assignments of a class, mark class as delivered/cancelled, mark class as delivered/cancelled, cancel all enrollments of a class, cancel all enrollments of a class, retrieve all sessions of an offering, retrieve all sessions of an offering, mark class registration as no_show/walk_in, mark class registration as no_show/walk_in, add drop policy to class, delete drop policy from class, delete drop policy from class">
+  <meta name="keywords" content="learning, restful web services, get all offerings, learning components, find the details of the offerings, find the details of the offerings, get the meta details of a blended class, get the meta details of a blended class, get the meta details of an ilt class, get the meta details of an ilt class, get the details of a class, get the details of a class, get the meta details of a virtual class, get the meta details of a virtual class, get the meta details of a wbt class, get the meta details of a wbt class, create a new blended class, create a new blended class, create a new ilt class, create a new ilt class, create a new virtual class, create a new virtual class, create a new wbt class, create a new wbt class, update a blended class, update a blended class, update a ilt class, update a virtual class, update a virtual class, update a wbt class, get all the offerings of the instructor, get all the offerings of the instructor, retrieve all learning assignments of a class, retrieves all learning assignments of an class, add learning assignments to a class, add learning assignments to a class, update learning assignments of a class, update learning assignments of a class, publish learning assignments of a class, publish learning assignments of a class, mark class as delivered/cancelled, mark class as delivered/cancelled, cancel all enrollments of a class, cancel all enrollments of a class, retrieve all sessions of an offering, retrieve all sessions of an offering, mark class registration as no_show/walk_in, mark class registration as no_show/walk_in, add drop policy to class, delete drop policy from class, delete drop policy from class">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Class</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title15">UPDATE A VIRTUAL CLASS</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <div class="p">
+     Updates a Virtual Class Class.
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> A partial update is not supported with this REST end point. All the fields should be provided with the updated values in Input JSON for updating a class. 
+     </div>
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">PUT</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <div class="p">
+     https://
+     <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/:offeringId
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> 
+      <p class="p">The following is a <strong class="ph b">deprecated</strong> URL for this REST Web service and will be discontinued in the next few updates:</p>https://
+      <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/learning/offering/:offeringId
+     </div>
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL (User-friendly)</h5>You can use a user-friendly URL which accepts the 
+    <strong class="ph b">offeringNumber</strong> instead of the internal Offering's ID.
+    <div class="p">
+     https://
+     <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/
+     <em class="ph i">&lt;offeringType&gt;</em>/
+     <em class="ph i">&lt;offeringNumber&gt;</em>
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> For custom delivery types, 
+      <u class="ph u">delivery type name</u> itself would be considered as offering type.
+      <p class="p">For offeringType, you can pass ilt for ILT Offering, wbt for WBT Offering, vc for Virtual Class Offering and blended for Blended Offering.</p>
+     </div>
+    </div>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_m3w_pnx_fp__table_ijw_pnx_fp" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 11. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">com.saba.learning.services.offering.OfferingDetail</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">Class's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">VC class's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">virtc000000000002884</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">abstract</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Abstract about the class</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">description</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Description</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">desc</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">duration</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Duration</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">avail_from</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Available from</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "> 2013-04-29 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">disc_from</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Discontinued from</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "> 2013-04-30 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">disp_for_web</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Display for web?</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">true</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">disp_for_call_center</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Display for call center?</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">trainingUnits</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Training Units</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">25</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">csr_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">CSR's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">customFields</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Custom Fields</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">delivery_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Delivery's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "> VC eqcat000000000000008 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">enroll_close</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Enroll close</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">facility_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Facility's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">language_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Language's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">{ "@type": "ServiceObjectReference", "id": "lange000000000000001", "displayName": "English" }</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">location_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Location's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "> locat000000000001202 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">max_book</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Max book</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">20</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">max_ct</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Max CT</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">20</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">min_ct</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Min CT</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">5</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">offering_temp_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Class temp ID. Only 20 Char Saba Id is supported for this attribute </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">{ "@type": "ServiceObjectReference", "id": "cours000000000006618", "displayName": "testCouse" }</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">securityDomain</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Security Domain</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "> <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">start_date</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Start date
+        <div class="note note note_note">
+         <span class="note__title">Note:</span> start_date will by default retain resource and ignore conflicts.
+        </div></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "> 2013-11-15 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">endDate</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">End Date</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "> 2013-11-15 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">name</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Course's name</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">name1</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">stop_auto_promotion</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Stop auto promotion</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">vendor_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Vendor's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "> Beta Customers cmpny000000000001020 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">do_not_drop_post</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Do not drop post</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "> 2013-05-03 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">vleInfo</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">VLE info</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">{"@type": "com.saba.vleprovider.VLEEventInfoDetail","eventType": "001","audioOptions": null,"teleconfCallNumber": null,"isLiveVideo": true,"isRecordVideo": true,"alternateTeleConfCallNumber": 700,"teleConfHostCode": null,"teleconfAccessCode": null,"welcomeUrl": null,"logoutUrl": null,"additionalSeats": 0,"publishLocation": null,"isDownloadPlayback": true,"isPreEnroll": true,"isPublicEvent": false,"isContributedEvent": false,"isRecordingAvailable": false,"isSecureEvent": false,"subjectGUID": null,"subjectName": null,"isAutoPublishEvent": false,"displayName": null}</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">session_template </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Name or the ID of the session template
+        <div class="note note note_note">
+         <span class="note__title">Note:</span> This needs to be unique.
+         <p class="p">session_template will by default retain resource and ignore conflicts.</p>
+        </div></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">Session 501</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">price</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Price of the class</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">{ "@type": "com.saba.learning.services.common.Money", "currency": { "@type": "ServiceObjectReference", "id": "crncy000000000000001", "displayName": "USD" }, "amount": [ "java.math.BigDecimal", 100 ]}</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">offeringSessions</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Offering Sessions. Contain a list of map. Each map element will contain following items: 
+        <ul class="ul" id="reference_m3w_pnx_fp__ul_dfg_xc3_gy"> 
+         <li class="li"> <p class="p">startDate: Start of a session. Note: Earliest start date from all sessions will be picked as start date of offering template. It will be date type attribute.</p> </li> 
+         <li class="li"> <p class="p">startTime: Start time of offering session. It will be of String type and will contain starting time in Hours and Minute of a session in 24 hours format. Like HH:MM.</p> </li> 
+         <li class="li"> <p class="p">endTime: End time of offering session. It will be of String type and will contain ending time in Hours and Minute of a session. Like HH:MM.</p> </li> 
+        </ul>
+        <div class="note note note_note">
+         <span class="note__title">Note:</span> Sessions of an offering can be changed by changing one of 3 attributes - start_date, session_template, offeringSessions. Out of these offeringSessions has the highest preference. 
+         <ul class="ul" id="reference_m3w_pnx_fp__ul_fcz_2tk_4y"> 
+          <li class="li">If offeringSessions attribute is passed, then the existing sessions associated to the class will be updated using the sessions specified in offeringSessions. You still need to provide a value for session_template, However, this value is only used as the new Session Template Name for the Offering.&nbsp;</li> 
+          <li class="li">If offeringSessions attribute is not passed, then API checks for any change in startDate or session_template attribute.&nbsp;In either of the cases, no session template gets created or updated as part of this API. </li> 
+         </ul>
+        </div>Apart from startDate, startTime and endTime attributes, the following attributes need to be passed with the normal update offering request payload:
+        <ol class="ol" id="reference_m3w_pnx_fp__ol_zvb_3d3_gy"> 
+         <li class="li">id: This is a time element id ( offering session id), indicating session to be updated.</li> 
+         <li class="li">action: This indicates action to be performed on a offering session. Its possible value would be as below:
+          <ol class="ol" type="a" id="reference_m3w_pnx_fp__ol_jwb_3d3_gy"> 
+           <li class="li">ADD: To add new session to an offering.</li> 
+           <li class="li">UPDATE: To update existing session of an offering.</li> 
+           <li class="li">DELETE: To delete existing session of a offering.
+            <div class="note note note_note">
+             <span class="note__title">Note:</span> Element id and action key is only required for the UPDATE AND DELETE operation. 
+            </div></li> 
+          </ol></li> 
+        </ol></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">[ "java.util.List", [ { "@type":"java.util.Map", "startDate":"12.12.2016", "startTime":"15:00", "endTime":"15:20", "action":"add" } ]</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">replaceExistingSessions</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Whether to replace the existing sessions of the offering with those specified in offeringSessions. If true is passed, you do not need to pass ACTION for the sessions. All existing sessions will be removed and replaced by the new ones.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__1 ">resourceCancellationType</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__2 ">Resource cancellation type, Possible values could be: cancelResources, retainResourcesFailConflict or retainResourcesIgnoreConflict </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__3 "> retainResources </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_m3w_pnx_fp__table_ijw_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5>
+    <pre class="pre codeblock"><code>{
+    "@type": "com.saba.learning.services.offering.OfferingDetail",
+    "abstract": "",
+    
+ "start_date": {
+    "@type": "date",
+    "time": "2013-11-15"
+  },
+  "endDate": {
+    "@type": "date",
+    "time": "2013-11-14"
+  },
+    "securityDomain": {
+        "@type": "ServiceObjectReference",
+        "id": "domin000000000000001",
+        "displayName": "world"
+    },   
+    "offeringNumber": "543234",    
+    "trainingUnits": 25,
+    "delivery_id": {
+        "@type": "ServiceObjectReference",
+        "id": "eqcat000000000000008",
+        "displayName": "Virtual Classroom"
+    },
+    "max_ct": 20,
+    "max_book": 20,
+    "min_ct": 5,
+    "csr_id": null,   
+    "disp_for_web": true,
+    "disp_for_call_center": false,
+    "facility_id": null,
+    "vendor_id": null,
+    "open_enroll": null,
+    "open_enroll_for_all": null,
+    "enroll_close": null,
+    "post_order": null,
+    "post_completion": null,
+    "stop_auto_promotion": null,
+    "avail_from": null,
+    "disc_from": null,
+    "skip_days_map": "0000000",
+    "learningAssignments": null,
+    "offering_temp_id": {
+        "@type": "ServiceObjectReference",
+        "id": "cours000000000006618",
+        "displayName": "testCouse"
+    },
+    
+    "baseDeliveryType": 100,
+    "publishStartDate": null,
+    "publishEndDate": null,
+    "publishStatus": null,
+    "publishStatusMessage": null,
+    "endDateI18n": "11/15/13",
+    "startDateI18n": "11/15/13",
+    
+    "courseVersion": null,
+    "customFields": {
+        "@type": "map"
+    },
+    "durationString": "00:00",
+    "offering_temp_no": null,
+    "diffHours": 0,
+    "name": "testCouse",
+    "language": {
+        "@type": "ServiceObjectReference",
+        "id": "lange000000000000001",
+        "displayName": "English"
+    },
+    "location": {
+        "@type": "ServiceObjectReference",
+        "id": "locat000000000001202",
+        "displayName": "Locationname"
+    },
+    "resources": [
+        "list",
+        []
+    ],
+    "description": "desc",
+    "duration": 0,
+  "session_template": "Session 501",
+  "price": {
+    "@type": "com.saba.learning.services.common.Money",
+    "currency": {
+      "@type": "ServiceObjectReference",
+      "id": "crncy000000000000001",
+      "displayName": "USD"
+    },
+    "amount": [
+      "java.math.BigDecimal",
+      100
+  ]},
+  "vleInfo":{"@type": "com.saba.vleprovider.VLEEventInfoDetail","eventType": "001","audioOptions": null,"teleconfCallNumber": null,"isLiveVideo": true,"isRecordVideo": true,"alternateTeleConfCallNumber": 700,"teleConfHostCode": null,"teleconfAccessCode": null,"welcomeUrl": null,"logoutUrl": null,"additionalSeats": 0,"publishLocation": null,"isDownloadPlayback": true,"isPreEnroll": true,"isPublicEvent": false,"isContributedEvent": false,"isRecordingAvailable": false,"isSecureEvent": false,"subjectGUID": null,"subjectName": null,"isAutoPublishEvent": false,"displayName": null} 
+}</code></pre>
+    <div class="p">
+     The following are the supported VLE vendors: 
+     <ol class="ol" id="reference_m3w_pnx_fp__ol_bpy_c2l_mx"> 
+      <li class="li">Saba Classroom
+       <div class="p">
+        The following is an example for the Meeting details for POST / PUT methods:
+        <pre class="pre codeblock"><code>"vleInfo":{
+   "@type":"com.saba.vleprovider.VLEEventInfoDetail",
+"vleProvider": {
+		"@type": "com.saba.vleprovider.entity.VLEProviderReference",
+		"id": "vlesp000000000001020",
+		"displayName": "Saba Classroom",
+		"locale": {
+			"@type": "loclref",
+			"id": "local000000000000001",
+			"displayName": null
+		},
+   "audioOptions":"telephone",
+   "teleconfCallNumber":"1800100200",
+   "isLiveVideo":true,
+   "isRecordVideo":true,
+   "alternateTeleConfCallNumber":"1800100201",
+   "teleConfHostCode":"123456",
+   "teleconfAccessCode":"8324567",
+   "welcomeUrl":"www.sabacloud.com",
+   "logoutUrl":"www.saba.com"
+}</code></pre>
+       </div></li> 
+      <li class="li">WebEx
+       <div class="p">
+        The following is an example for the Meeting details for POST / PUT methods:
+        <pre class="pre codeblock"><code>"vleInfo":{
+   "@type":"com.saba.vleprovider.VLEEventInfoDetail",
+"vleProvider": {
+		"@type": "com.saba.vleprovider.entity.VLEProviderReference",
+		"id": "vlesp000000000001060",
+		"displayName": "WebEx",
+		"locale": {
+			"@type": "loclref",
+			"id": "local000000000000001",
+			"displayName": null
+		},
+   "audioOptions":"voip",
+   "teleconfCallNumber":"1800100200",
+   "isLiveVideo":true,
+   "isRecordVideo":true,
+   "alternateTeleConfCallNumber":"1800100201",
+   "teleConfHostCode":"123456",
+   "teleconfAccessCode":"8324567",
+   "welcomeUrl":"www.sabacloud.com",
+   "logoutUrl":"www.saba.com"
+   "additionalSeats":0 
+}</code></pre>
+       </div></li> 
+      <li class="li">adobeconnect 
+       <div class="p">
+        The following is an example for the Meeting details for POST / PUT methods:
+        <pre class="pre codeblock"><code>"vleInfo":{
+   "@type":"com.saba.vleprovider.VLEEventInfoDetail",
+"vleProvider": {
+		"@type": "com.saba.vleprovider.entity.VLEProviderReference",
+		"id": "vlesp000000000001040",
+		"displayName": "Adobe Connect",
+		"locale": {
+			"@type": "loclref",
+			"id": "local000000000000001",
+			"displayName": null
+		},
+   
+"audioOptions":"voipAndTelephone",
+   "teleconfCallNumber":"1800100200",
+   "isLiveVideo":true,
+   "isRecordVideo":true,
+   "alternateTeleConfCallNumber":"1800100201",
+   "teleConfHostCode":"123456",
+   "teleconfAccessCode":"8324567",
+   "welcomeUrl":"www.sabacloud.com",
+   "logoutUrl":"www.saba.com"
+   "meetingTemplate":"test adobe template",
+   "additionalSeats":0
+}</code></pre>
+       </div></li> 
+      <li class="li">Non Integrated VLE Provider
+       <div class="p">
+        The following is an example for the Meeting details for POST / PUT methods:
+        <pre class="pre codeblock"><code>"vleInfo":{
+   "@type":"com.saba.vleprovider.VLEEventInfoDetail",
+"vleProvider": {
+		"@type": "com.saba.vleprovider.entity.VLEProviderReference",
+		"id": "vlesp000000000001080",
+		"displayName": "Non Integrated VLE Provider",
+		"locale": {
+			"@type": "loclref",
+			"id": "local000000000000001",
+			"displayName": null
+		},
+   "audioOptions":"telephone",
+   "teleconfCallNumber":"1800100200",
+   "isLiveVideo":true,
+   "isRecordVideo":true,
+   "alternateTeleConfCallNumber":"1800100201",
+   "teleConfHostCode":"123456",
+   "teleconfAccessCode":"8324567",
+   "welcomeUrl":"www.sabacloud.com",
+   "logoutUrl":"www.saba.com"
+   "guestAttendUrl":"www.google.com"
+}</code></pre>
+       </div></li> 
+     </ol>
+    </div>
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> For the PUT operation the vleProvider field 
+     <strong class="ph b">will be ignored</strong>, as vleProvider cannot be updated.
+    </div>The following table provides details about the 
+    <strong class="ph b">vleInfo</strong> attributes:
+    <div class="p"> 
+     <table id="reference_m3w_pnx_fp__table_x4r_jj3_lx" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+      <caption></caption>
+      <colgroup>
+       <col>
+       <col>
+       <col>
+       <col>
+      </colgroup>
+      <tbody class="tbody"> 
+       <tr> 
+        <td class="entry"> <strong class="ph b">Attribute in JSON</strong> </td> 
+        <td class="entry"> <strong class="ph b">UI Label </strong> </td> 
+        <td class="entry"> <strong class="ph b">Required</strong> </td> 
+        <td class="entry"> <strong class="ph b">Supported vendor / possible values / description</strong> </td> 
+       </tr> 
+       <tr> 
+        <td class="entry"> guestAttendUrl </td> 
+        <td class="entry"> Guest Attend URL </td> 
+        <td class="entry"> N </td> 
+        <td class="entry"> Public URL to attend session. Only for Non Integrated VLE Provider </td> 
+       </tr> 
+       <tr> 
+        <td class="entry"> meetingTemplate </td> 
+        <td class="entry"> Adobe meeting template </td> 
+        <td class="entry"> N </td> 
+        <td class="entry"> Only for adobeconnect. To Provide Meeting template details </td> 
+       </tr> 
+       <tr> 
+        <td class="entry"> teleconfCallNumber </td> 
+        <td class="entry"> Dial-in Number 1 </td> 
+        <td class="entry"> N </td> 
+        <td class="entry"> Conference Call No </td> 
+       </tr> 
+       <tr> 
+        <td class="entry"> alternateTeleConfCallNumber </td> 
+        <td class="entry"> Dial-in Number 2 </td> 
+        <td class="entry"> N </td> 
+        <td class="entry"> Alternate Conference Call No </td> 
+       </tr> 
+       <tr> 
+        <td class="entry"> teleConfHostCode </td> 
+        <td class="entry"> Host Code </td> 
+        <td class="entry"> N </td> 
+        <td class="entry"> Saba meeting Telephone Gateway Server Address </td> 
+       </tr> 
+       <tr> 
+        <td class="entry"> teleconfAccessCode </td> 
+        <td class="entry"> Access Code </td> 
+        <td class="entry"> N </td> 
+        <td class="entry"> Saba meeting Telephone Gateway Call Profile Config </td> 
+       </tr> 
+       <tr> 
+        <td class="entry"> audioOptions </td> 
+        <td class="entry"> Audio Options </td> 
+        <td class="entry"> Y </td> 
+        <td class="entry"> voip/ telephone / voipAndTelephone </td> 
+       </tr> 
+       <tr> 
+        <td class="entry"> isLiveVideo </td> 
+        <td class="entry"> Live Video </td> 
+        <td class="entry"> N </td> 
+        <td class="entry"> To show Video In session </td> 
+       </tr> 
+       <tr> 
+        <td class="entry"> isRecordVideo </td> 
+        <td class="entry"> Record Event </td> 
+        <td class="entry"> N </td> 
+        <td class="entry"> To record Live Video in Session </td> 
+       </tr> 
+       <tr> 
+        <td class="entry"> welcomeUrl </td> 
+        <td class="entry"> Welcome URL for Participants </td> 
+        <td class="entry"> N </td> 
+        <td class="entry"> When User launch Saba meeting Session, it loads welcome url in session </td> 
+       </tr> 
+       <tr> 
+        <td class="entry"> logoutUrl </td> 
+        <td class="entry"> Logout URL </td> 
+        <td class="entry"> N </td> 
+        <td class="entry"> logoutUrl redirects user outside Saba meeting Session when user exists session </td> 
+       </tr> 
+       <tr> 
+        <td class="entry"> additionalSeats </td> 
+        <td class="entry"> Additional Seats </td> 
+        <td class="entry"> N </td> 
+        <td class="entry"> Adobeconnect / Webex only. To provide additional seats insession </td> 
+       </tr> 
+      </tbody>
+     </table> 
+    </div>The lookup support is now available for this REST API.
+    <table id="reference_m3w_pnx_fp__table_jvh_rsn_kx" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption></caption>
+     <colgroup>
+      <col>
+      <col>
+      <col>
+     </colgroup>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry"> <strong class="ph b">JSON Attribute</strong> </td> 
+       <td class="entry"> <strong class="ph b">UI Attribute</strong> </td> 
+       <td class="entry"> <strong class="ph b">Component Name</strong> </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> securityDomain </td> 
+       <td class="entry"> Domain name </td> 
+       <td class="entry"> Domain </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> vendor_id </td> 
+       <td class="entry"> Vendor </td> 
+       <td class="entry"> Organization, External </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Csr_id </td> 
+       <td class="entry"> Customer Service Representative </td> 
+       <td class="entry"> Person, Internal </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> audienceType </td> 
+       <td class="entry"> Audience Type / Audience Sub Type </td> 
+       <td class="entry"> Audience Type </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Delivery_id </td> 
+       <td class="entry"> Delivery Type </td> 
+       <td class="entry"> Category Definition </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Language_id / Language </td> 
+       <td class="entry"> Language </td> 
+       <td class="entry"> Language </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Location_id / Location </td> 
+       <td class="entry"> Location </td> 
+       <td class="entry"> Location </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Facility_id / Facility </td> 
+       <td class="entry"> Facility </td> 
+       <td class="entry"> Facility </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Session_template </td> 
+       <td class="entry"> Session Template </td> 
+       <td class="entry"> Session Template </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Manufacturer_id </td> 
+       <td class="entry"> Manufacturer </td> 
+       <td class="entry"> Organization, External</td> 
+      </tr> 
+     </tbody>
+    </table>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Sample Request Body (without replacing all existing sessions)</h5> 
+    <pre class="pre codeblock"><code><strong class="ph b"> "replaceExistingSessions":false, "offeringSessions":[ "java.util.List", [ { "@type":"java.util.Map", "startDate":"12.12.2016", "startTime":"15:00", "endTime":"15:20", "action":"add" } ] ]</strong></code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Sample Request Body (replacing all existing sessions)</h5> 
+    <pre class="pre codeblock"><code><strong class="ph b"> "replaceExistingSessions":true, "offeringSessions":[ "java.util.List", [ { "@type":"java.util.Map", "startDate":"12.12.2016", "startTime":"15:00", "endTime":"15:20", "action":"add" }, { "@type":"java.util.Map", "startDate":"12.12.2016", "startTime":"18:00", "endTime":"18:20", "action":"add" } ] ]</strong></code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Sample Request Body (updating and deleting existing session)</h5> 
+    <pre class="pre codeblock"><code><strong class="ph b"> "replaceExistingSessions":false, "offeringSessions":[ "java.util.List", [ { "@type":"java.util.Map", "startDate":"12.12.2016", "startTime":"15:00", "endTime":"15:20", "action":"update", "id":"timel000000000001144" }, { "@type":"java.util.Map", "id":"timel000000000001146", "action":"delete" } ] ]</strong></code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

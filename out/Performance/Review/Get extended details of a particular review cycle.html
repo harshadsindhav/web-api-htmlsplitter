@@ -1,0 +1,409 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="performance, restful web services, find all reviews, performance components, find the details of the review cycles, find the details of the review cycles, find the details of the reviews, find the details of the reviews, get all review cycles, get the details of a particular review, get the details of a particular review, get the details of a particular review cycle, get the details of a particular review cycle, get the extended details of a particular review, get the extended details of a particular review, get the extended details of a particular review cycle, get the extended details of a particular review cycle, get the meta details of a review-cycle, get the meta details of a review-cycle, get the meta details of a component, get the meta details of a component, find the details of the reviews with post based search, find the details of the reviews with post based search">
+  <meta name="keywords" content="performance, restful web services, find all reviews, performance components, find the details of the review cycles, find the details of the review cycles, find the details of the reviews, find the details of the reviews, get all review cycles, get the details of a particular review, get the details of a particular review, get the details of a particular review cycle, get the details of a particular review cycle, get the extended details of a particular review, get the extended details of a particular review, get the extended details of a particular review cycle, get the extended details of a particular review cycle, get the meta details of a review-cycle, get the meta details of a review-cycle, get the meta details of a component, get the meta details of a component, find the details of the reviews with post based search, find the details of the reviews with post based search">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-performance.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Review</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title9">GET EXTENDED DETAILS OF A PARTICULAR REVIEW CYCLE</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns extended details of a review-cycle.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/performance/reviews/reviewCycle/:id?expand=:searchFields</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_wf1_v42_yv__table_gg1_v42_yv" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 8. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_wf1_v42_yv__table_gg1_v42_yv__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_wf1_v42_yv__table_gg1_v42_yv__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_wf1_v42_yv__table_gg1_v42_yv__entry__3">Default Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_wf1_v42_yv__table_gg1_v42_yv__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_wf1_v42_yv__table_gg1_v42_yv__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__1 ">id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__2 ">The ID of the desired review cycle</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__3 ">rcycl000000000001280</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__1 ">searchFields</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__2 ">Indicate what additional details needs to be returned. Acceptable values are (case-sensitive) reviewcycle,ratinglevels,requiredraters,orgratinglevels,reviewform</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__3 ">reviewcycle,ratinglevels</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wf1_v42_yv__table_gg1_v42_yv__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "RestReviewDetail": {
+        "@type": "restrvdetail",
+        "attachments": [
+            "list",
+            []
+        ],
+        "ratingLevelDetails": null,
+        "reviewDetail": {
+            "@type": "com.saba.review.ReviewDetail",
+            "extendedAttributes": {
+                "@type": "map"
+            },
+            "endDate": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "30-JUN-2013",
+                    "timeInUserTimeZone": "9:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "06/30/2013",
+                    "date": 1372564800000,
+                    "locale": "30-JUN-2013"
+                }
+            },
+            "startDate": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "11-JUN-2013",
+                    "timeInUserTimeZone": "9:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "06/11/2013",
+                    "date": 1370923200000,
+                    "locale": "11-JUN-2013"
+                }
+            },
+            "auditDetail": {
+                "@type": "com.saba.ejb.AuditDetailImpl",
+                "updatedOn": {
+                    "DateWithLocale": {
+                        "@type": "com.saba.customtypes.DateWithLocale",
+                        "timeInLocale": "1:27 PM",
+                        "dateInUserTimeZone": "20-FEB-2014",
+                        "timeInUserTimeZone": "11:57 PM",
+                        "timeInCustomTimeZone": null,
+                        "dateInCustomTimeZone": null,
+                        "customTimeZoneDate": 0,
+                        "timeInStandardFormat": "1:27 PM",
+                        "dateInStandardFormat": "02/20/2014",
+                        "date": 1392920867000,
+                        "locale": "20-FEB-2014"
+                    }
+                },
+                "createdBy": "ajadhav",
+                "updatedBy": "ajadhav",
+                "createdOn": {
+                    "DateWithLocale": {
+                        "@type": "com.saba.customtypes.DateWithLocale",
+                        "timeInLocale": "1:27 PM",
+                        "dateInUserTimeZone": "20-FEB-2014",
+                        "timeInUserTimeZone": "11:57 PM",
+                        "timeInCustomTimeZone": null,
+                        "dateInCustomTimeZone": null,
+                        "customTimeZoneDate": 0,
+                        "timeInStandardFormat": "1:27 PM",
+                        "dateInStandardFormat": "02/20/2014",
+                        "date": 1392920867000,
+                        "locale": "20-FEB-2014"
+                    }
+                },
+                "createdId": "No created_id attribute"
+            },
+            "componentName": "Review",
+            "membersForScoping": [
+                "java.util.HashSet",
+                [
+                    {
+                        "@type": "persn",
+                        "sourceType": "InternalPerson",
+                        "activitySourceType": {
+                            "sourceType": 0,
+                            "listId": "sysli000000000003037",
+                            "key": "0",
+                            "displayName": "Person"
+                        },
+                        "locale": {
+                            "@type": "loclref",
+                            "id": "local000000000000001",
+                            "displayName": null
+                        },
+                        "id": "persn000000000001118",
+                        "displayName": "Ben Jahansetan"
+                    }
+                ]
+            ],
+            "scopeOperator": "ANY",
+            "dueDate": {
+                "DateWithLocale": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "30-JUN-2013",
+                    "timeInUserTimeZone": "9:30 AM",
+                    "timeInCustomTimeZone": null,
+                    "dateInCustomTimeZone": null,
+                    "customTimeZoneDate": 0,
+                    "timeInStandardFormat": "12:00 AM",
+                    "dateInStandardFormat": "06/30/2013",
+                    "date": 1372564800000,
+                    "locale": "30-JUN-2013"
+                }
+            },
+            "calculationMethod": {
+                "calculationMethod": "1100000000",
+                "calculationMethodAccountability": [
+                    "list",
+                    [
+                        {
+                            "@type": "acnttyp",
+                            "primaryKey": {
+                                "@type": "com.saba.persist.ObjectId",
+                                "id": "aType000000000000001",
+                                "prefix": "aType"
+                            },
+                            "locale": null,
+                            "id": "aType000000000000001",
+                            "displayName": "Self"
+                        },
+                        {
+                            "@type": "acnttyp",
+                            "primaryKey": {
+                                "@type": "com.saba.persist.ObjectId",
+                                "id": "aType000000000000002",
+                                "prefix": "aType"
+                            },
+                            "locale": null,
+                            "id": "aType000000000000002",
+                            "displayName": "Manager"
+                        }
+                    ]
+                ]
+            },
+            "finalizationComments": " ",
+            "reviewState": {
+                "@type": "com.saba.review.ReviewState",
+                "listId": "sysli000000000006009",
+                "systemName": "DRAFT",
+                "key": "DRAFT",
+                "displayName": "Draft"
+            },
+            "reviewCycle": {
+                "@type": "rvcycle",
+                "primaryKey": {
+                    "@type": "com.saba.persist.ObjectId",
+                    "id": "rcycl000000000004016",
+                    "prefix": "rcycl"
+                },
+                "locale": {
+                    "@type": "loclref",
+                    "id": "local000000000000001",
+                    "displayName": null
+                },
+                "id": "rcycl000000000004016",
+                "displayName": "RC_14Jun2013"
+            },
+            "reviewer": {
+                "@type": "emplo",
+                "sourceType": "InternalPerson",
+                "activitySourceType": {
+                    "sourceType": 0,
+                    "listId": "sysli000000000003037",
+                    "key": "0",
+                    "displayName": "Person"
+                },
+                "locale": {
+                    "@type": "loclref",
+                    "id": "local000000000000001",
+                    "displayName": null
+                },
+                "id": "emplo000000000052257",
+                "displayName": "Aparna Jadhav"
+            },
+            "finalizationDate": null,
+            "reviewee": {
+                "@type": "persn",
+                "sourceType": "InternalPerson",
+                "activitySourceType": {
+                    "sourceType": 0,
+                    "listId": "sysli000000000003037",
+                    "key": "0",
+                    "displayName": "Person"
+                },
+                "locale": {
+                    "@type": "loclref",
+                    "id": "local000000000000001",
+                    "displayName": null
+                },
+                "id": "persn000000000001118",
+                "displayName": "Ben Jahansetan"
+            },
+            "reviewForm": {
+                "@type": "com.saba.review.entity.InitiativeReference",
+                "locale": {
+                    "@type": "loclref",
+                    "id": "local000000000000001",
+                    "displayName": null
+                },
+                "id": "initv000000000006406",
+                "displayName": "Review Template created in ES_mx locale"
+            },
+            "feedbackDueDate": null,
+            "sectionList": null,
+            "oneOnOneDate": null,
+            "finalOverallRating": null,
+            "reviewOwnerAccountability": {
+                "@type": "acnttyp",
+                "primaryKey": {
+                    "@type": "com.saba.persist.ObjectId",
+                    "id": "aType000000000000020",
+                    "prefix": "aType"
+                },
+                "locale": null,
+                "id": "aType000000000000020",
+                "displayName": "Stakeholder"
+            },
+            "minUsersPerAudience": 0,
+            "oneOnOneComments": "",
+            "revieweeAcknowledged": false,
+            "revieweeAcknowledgedDate": null,
+            "description": "RC14Jun2013-&gt; annual(focal)\r\nPolicies:\r\nShow ratings given by all reviewers to reviewee.\r\nGenerate score. \r\nEnforce reviewer sequence.",
+            "reference": {
+                "@type": "review",
+                "locale": null,
+                "id": "revie000000000008293",
+                "displayName": "RC_14Jun2013-Review Template created in ES_mx locale"
+            },
+            "name": "RC_14Jun2013-Review Template created in ES_mx locale",
+            "locale": {
+                "@type": "loclref",
+                "id": "local000000000000001",
+                "displayName": null
+            },
+            "id": "revie000000000008293",
+            "displayName": null,
+            "securityDomain": {
+                "@type": "com.saba.domain.entity.DomainReference",
+                "id": "domin000000000000001",
+                "displayName": "world",
+                "primaryKey": {
+                    "@type": "com.saba.persist.ObjectId",
+                    "id": "domin000000000000001",
+                    "prefix": "domin"
+                },
+                "locale": null
+            },
+            "auditReason": "audit with reason"
+        },
+        "reviewScoreMethod": "1",
+        "reviewRaterDetails": null,
+        "auditActions": null,
+        "reviewMilestones": null,
+        "reviewApprovers": null,
+        "associatedPlan": null,
+        "reviewUIActions": null,
+        "reviewObservations": null,
+        "policies": {
+            "@type": "map",
+            "canNotAccess": true,
+            "RATER_SEQUENCE_ENFORCED": true,
+            "showPercentRating": true,
+            "WEIGHTING_METHOD": true,
+            "IS_OFFLINE_REVIEW_ENABLED": false,
+            "IS_FILE_ATTACHMENT_ENABLED": false,
+            "rateSkillsByBI": false,
+            "IS_NUMERIC_RATING_ENABLED": true,
+            "aType000000000000003": false,
+            "ADD_ITEM_TO_ACTIVE_REVIEW": false,
+            "aType000000000000007": false,
+            "aType000000000000008": false,
+            "GENERATE_SCORE": true,
+            "FEEDBACK_MODE": false,
+            "aType000000000000009": false,
+            "IS_LANG_CHECK_BR_ON": true,
+            "aType000000000000020": false,
+            "aType000000000000001": true,
+            "aType000000000000002": true
+        },
+        "reviewObservationDetail": null,
+        "relatedURIs": {
+            "@type": "map"
+        },
+        "loggedInPersonRaterDetail": null,
+        "userRoles": [
+            "list",
+            []
+        ],
+        "revieweeProfileCard": null,
+        "reviewAutoSaveTime": null,
+        "formDescription": "",
+        "cycleDescription": "RC14Jun2013-&gt; annual(focal)\r\nPolicies:\r\nShow ratings given by all reviewers to reviewee.\r\nGenerate score. \r\nEnforce reviewer sequence.",
+        "cycleType": "Focal",
+        "isSuccessPlanExists": null,
+        "awaitingTurnWarning": false,
+        "resourceAttachments": null,
+        "canAddAttachment": false,
+        "reviewAttachments": [
+            "list",
+            []
+        ],
+        "restReviewSectionDetails": null
+    }
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

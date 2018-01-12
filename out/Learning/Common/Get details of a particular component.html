@@ -1,0 +1,382 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all the records of a component, learning components, get all the records of a component, get the details of a particular component, get the details of a particular component, get the meta details of a component, get the meta details of a component, delete a path, module or intervention, delete a path, module or intervention">
+  <meta name="keywords" content="learning, restful web services, get all the records of a component, learning components, get all the records of a component, get the details of a particular component, get the details of a particular component, get the meta details of a component, get the meta details of a component, delete a path, module or intervention, delete a path, module or intervention">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Common</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title3">GET DETAILS OF A PARTICULAR COMPONENT</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns complete information about a component [certification | curriculum | path | learningmodule | learningintervention] based on the component's ID that is passed as a parameter value.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/:name/:id:(:searchFields)</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_rcm_hnx_fp__table_adm_hnx_fp" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 2. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__1 ">name</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__2 ">The name of the component. Can be one of these:
+        <ul class="ul" id="reference_rcm_hnx_fp__ul_fdm_hnx_fp"> 
+         <li class="li">certification </li> 
+         <li class="li">curriculum </li> 
+         <li class="li">path </li> 
+         <li class="li">learningmodule</li> 
+         <li class="li">learningintervention</li> 
+        </ul></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__3 ">certification</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__1 ">id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__2 ">Component's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__3 ">crtfy000000000200021</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__1 ">searchFields</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__2 ">Fields to search: 
+        <ul class="ul" id="reference_rcm_hnx_fp__ul_gdm_hnx_fp"> 
+         <li class="li">paths </li> 
+         <li class="li">learningModules </li> 
+         <li class="li">learningInterventions</li> 
+        </ul></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <p class="p"><strong class="ph b">Certification</strong></p> 
+    <pre class="pre codeblock"><code>{
+    "parent": null,
+    "past_credit_days": null,
+    "history_lookup_policy": "CheckHistoryUptoExpiredRevoked",
+    "deepLinkUrls": [
+        "http://&lt;hostname-api.sabacloud.com&gt;/Saba/Web_spf/Social/common/learningeventdetail/crtfy000000000200180"
+    ],
+    "name": "abc",
+    "description": "",
+    "paths": [
+        {
+            "name": "path1",
+            "isrecertification_track": false,
+            "learningModules": [
+                {
+                    "name": "module1",
+                    "sequence": 1,
+                    "notes": null,
+                    "reqd_no_of_items": 1,
+                    "learningInterventions": [
+                        {
+                            "sequence": 1,
+                            "owner_id": null,
+                            "part_id": {
+                                "id": "cours000000000200705",
+                                "displayName": "course_for_le"
+                            },
+                            "is_reqd": false,
+                            "is_waiver": false,
+                            "id": "edupl000000000200340"
+                        }
+                    ],
+                    "is_reqd": true,
+                    "is_waiver": true,
+                    "track_id": null,
+                    "id": "cegrp000000000200200"
+                }
+            ],
+            "is_default_path": true,
+            "id": "track000000000200200"
+        }
+    ],
+    "version": null,
+    "group": null,
+    "status": "INEFFECT",
+    "learningevent_id": "200073",
+    "disc_from": null,
+    "createGroupPolicyVal": false,
+    "valid_till": null,
+    "notify_before": null,
+    "vendor_id": null,
+    "avl_from": "2009-07-10T00:00:00.000+0530",
+    "target_days": 0,
+    "featured": false,
+    "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+    },
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+    },</code></pre> 
+    <div class="p">
+     <strong class="ph b">Curriculum</strong>
+     <pre class="pre codeblock"><code>{
+    "deepLinkUrls": [
+        "http://&lt;hostname-api.sabacloud.com&gt;/Saba/Web_spf/Social/common/learningeventdetail/curra000000000001140"
+    ],
+    "name": "BlendedenrCurr1en_US",
+    "description": "",
+    "paths": [
+        {
+            "name": "P1",
+            "isrecertification_track": false,
+            "learningModules": [
+                {
+                    "name": "M1",
+                    "sequence": 1,
+                    "notes": null,
+                    "reqd_no_of_items": 1,
+                    "learningInterventions": [
+                        {
+                            "sequence": 1,
+                            "owner_id": null,
+                            "part_id": {
+                                "id": "cours000000000200486",
+                                "displayName": "111"
+                            },
+                            "is_reqd": false,
+                            "is_waiver": false,
+                            "id": "edupl000000000200980"
+                        }
+                    ],
+                    "is_reqd": true,
+                    "is_waiver": true,
+                    "track_id": null,
+                    "id": "cegrp000000000200820"
+                }
+            ],
+            "is_default_path": false,
+            "id": "track000000000200820"
+        },
+        {
+            "name": "P3",
+            "isrecertification_track": false,
+            "learningModules": [
+                {
+                    "name": "Module1",
+                    "sequence": 1,
+                    "notes": null,
+                    "reqd_no_of_items": 1,
+                    "learningInterventions": [
+                        {
+                            "sequence": 1,
+                            "owner_id": null,
+                            "part_id": {
+                                "id": "cours000000000201011",
+                                "displayName": "blendedp05en_US"
+                            },
+                            "is_reqd": false,
+                            "is_waiver": false,
+                            "id": "edupl000000000200981"
+                        }
+                    ],
+                    "is_reqd": true,
+                    "is_waiver": true,
+                    "track_id": null,
+                    "id": "cegrp000000000200821"
+                }
+            ],
+            "is_default_path": false,
+            "id": "track000000000200821"
+        },
+        {
+            "name": "Path1",
+            "isrecertification_track": false,
+            "learningModules": [
+                {
+                    "name": "Module1",
+                    "sequence": 1,
+                    "notes": null,
+                    "reqd_no_of_items": 1,
+                    "learningInterventions": [
+                        {
+                            "sequence": 1,
+                            "owner_id": null,
+                            "part_id": {
+                                "id": "cours000000000201011",
+                                "displayName": "blendedp05en_US"
+                            },
+                            "is_reqd": false,
+                            "is_waiver": false,
+                            "id": "edupl000000000200583"
+                        }
+                    ],
+                    "is_reqd": true,
+                    "is_waiver": true,
+                    "track_id": null,
+                    "id": "cegrp000000000200422"
+                }
+            ],
+            "is_default_path": true,
+            "id": "track000000000200422"
+        }
+    ],
+    "version": null,
+    "group": null,
+    "status": "INEFFECT",
+    "learningevent_id": "200204",
+    "disc_from": null,
+    "createGroupPolicyVal": false,
+    "vendor_id": null,
+    "avl_from": "2009-07-14T00:00:00.000+0530",
+    "target_days": 0,
+    "featured": false,
+    "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+    },
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+    },
+    "id": "curra000000000001140"
+}</code></pre>
+    </div> 
+    <div class="p">
+     <strong class="ph b">Path</strong>
+     <pre class="pre codeblock"><code>{
+    "name": "Path4-BB",
+    "learningModules": [
+        {
+            "name": "Module4-1-1",
+            "sequence": 1,
+            "notes": null,
+            "is_waiver": true,
+            "is_reqd": true,
+            "learningInterventions": [
+                {
+                    "sequence": 1,
+                    "is_waiver": false,
+                    "is_reqd": false,
+                    "part_id": {
+                        "id": "cours000000000001080",
+                        "displayName": "Attendance Check"
+                    },
+                    "id": "edupl000000000201142"
+                }
+            ],
+            "reqd_no_of_items": 1,
+            "id": "cegrp000000000200942"
+        }
+    ],
+    "is_default_path": true,
+    "isrecertification_track": false,
+    "id": "track000000000200962"
+}</code></pre>
+    </div> 
+    <div class="p">
+     <strong class="ph b">Learning Intervention</strong>
+     <pre class="pre codeblock"><code>{
+    "sequence": 1,
+    "is_waiver": false,
+    "is_reqd": false,
+    "part_id": {
+        "id": "cours000000000200002",
+        "displayName": "Downloadable Product 3"
+    },
+    "id": "edupl000000000201094"
+}</code></pre>
+    </div> 
+    <div class="p">
+     <strong class="ph b">Learning Module</strong>
+     <pre class="pre codeblock"><code>{
+    "name": "Module B mmmoddiiffiieedd",
+    "sequence": 2,
+    "notes": "hello yuppiiii",
+    "is_waiver": true,
+    "is_reqd": true,
+    "learningInterventions": [
+        {
+            "sequence": 1,
+            "is_waiver": false,
+            "is_reqd": false,
+            "part_id": {
+                "id": "cours000000000200002",
+                "displayName": "Downloadable Product 3"
+            },
+            "id": "edupl000000000201094"
+        }
+    ],
+    "reqd_no_of_items": 1,
+    "id": "cegrp000000000200902"
+}</code></pre>
+    </div> 
+   </section> 
+  </div>
+ </body>
+</html>

@@ -1,0 +1,1475 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="learning, restful web services, get all categories, learning components, get the details of a particular category, get the details of a particular category, get the details of a particular category along with its hierarchy (sub-categories), get the details of a particular category along with its hierarchy (sub-categories), remove a category, add categories to a course, add categories to a course, add categories to a course (lookup based), add categories to a course (lookup based), remove category from a course, remove category from a course, create a new category, update category, find the details of the categories, find the details of the categories, add tags to category, remove tags from category, remove tags from category"><meta name="keywords" content="learning, restful web services, get all categories, learning components, get the details of a particular category, get the details of a particular category, get the details of a particular category along with its hierarchy (sub-categories), get the details of a particular category along with its hierarchy (sub-categories), remove a category, add categories to a course, add categories to a course, add categories to a course (lookup based), add categories to a course (lookup based), remove category from a course, remove category from a course, create a new category, update category, find the details of the categories, find the details of the categories, add tags to category, remove tags from category, remove tags from category"><meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Learning-apis"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Categories</title></head><body id="Learning-apis"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Categories</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-learning.html">Learning</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-get-all-courses-N1088E">
+        <h2 class="title topictitle2" id="ariaid-title2">GET ALL CATEGORIES</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all categories in the system.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/category?count=:count&amp;startPage=:startPage<div class="note note note_note"><span class="note__title">Note:</span> To
+                        retrieve only the parent categories use the following query
+                        parameter:<pre class="pre codeblock"><code>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/category?q=(parent_id%3D%3Dnull)</code></pre></div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-all-courses-N1088E__table_iw4_r2z_rs"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-courses-N1088E__table_iw4_r2z_rs__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>[
+    {
+        "id": "categ000000000001042",
+        "displayName": "RJSampleCategory10",
+        "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/categ000000000001042"
+    },
+    {
+        "id": "categ000000000001041",
+        "displayName": "RJSampleCategory7",
+        "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/categ000000000001041"
+    },
+    {
+        "id": "categ000000000001040",
+        "displayName": "RJSampleCategory8",
+        "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/categ000000000001040"
+    }
+]</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_snh_lnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title3">GET DETAILS OF A PARTICULAR CATEGORY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a category based on the category's ID that is
+                    passed as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/category/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">name</strong> instead of the internal Category's
+                        ID.<p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/category/name%3D<em class="ph i">&lt;CategoryName&gt;</em></p></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_snh_lnx_fp__table_b4h_lnx_fp"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__2 ">Category's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__3 ">categ000000000001042</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "name": "RJSampleCategoryInsertwithTag11",
+  "language": {
+    "name": "English",
+    "id": "lange000000000000001",
+    "type": null
+  },
+  "context": null,
+  "id": "categ000000000001005",
+  "state": null,
+  "owner": {
+    "name": "User One112qj",
+    "id": "emplo000000000001000",
+    "type": null
+  },
+  "timestamp": null,
+  "description": "This is RJSampleCategory5",
+  "roles": [
+    {
+      "name": "a1 one1",
+      "id": "persn000000000200148",
+      "type": "Viewer"
+    },
+    {
+      "name": "User One112qj",
+      "id": "emplo000000000001000",
+      "type": "Owner"
+    }
+  ],
+  "forExternal": false,
+  "parentCategory": {
+    "name": "RJSampleCategoryInsert",
+    "id": "categ000000000001003",
+    "type": null
+  },
+  "tags": [
+    {
+      "name": "Tag5",
+      "tagId": "sbtag000000000001041",
+      "createdOn": "2015-07-14T14:55:33.000+0530",
+      "weight": 2
+    },
+    {
+      "name": "Tag6",
+      "tagId": "sbtag000000000001042",
+      "createdOn": "2015-07-14T15:04:12.000+0530",
+      "weight": 1
+    }
+  ],
+  "flags": "0000000000",
+  "atList": [
+    {
+      "name": "rs",
+      "id": "audie000000000001141",
+      "type": null
+    }
+  ],
+  "visibility": null,
+  "supportedTypes": null,
+  "createdOn": "2015-07-14T15:21:34.386+0530",
+  "updatedBy": "uone",
+  "updatedOn": "2015-07-14T15:21:34.386+0530",
+  "createdBy": "uone",
+  "createdId": "emplo000000000001000",
+  "split": {
+    "name": "world",
+    "id": "domin000000000000001",
+    "type": null
+  },
+  "recommendable": false,
+  "featured": true,
+  "totalItemCountInHierarchy": 0,
+  "totalSubListCount": 0,
+  "totalItemCount": 0
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_qwj_2l5_5r">
+        <h2 class="title topictitle2" id="ariaid-title4">GET DETAILS OF A PARTICULAR CATEGORY ALONG WITH ITS HIERARCHY
+            (SUB-CATEGORIES)</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a category along with its hierarchy
+                    (sub-categories) based on the category's ID that is passed as a parameter
+                    value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/category/:id?hierarchy=true</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_qwj_2l5_5r__table_xwj_2l5_5r"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_qwj_2l5_5r__table_xwj_2l5_5r__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_qwj_2l5_5r__table_xwj_2l5_5r__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_qwj_2l5_5r__table_xwj_2l5_5r__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_qwj_2l5_5r__table_xwj_2l5_5r__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_qwj_2l5_5r__table_xwj_2l5_5r__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qwj_2l5_5r__table_xwj_2l5_5r__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qwj_2l5_5r__table_xwj_2l5_5r__entry__2 ">Category's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qwj_2l5_5r__table_xwj_2l5_5r__entry__3 ">categ000000000001042</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qwj_2l5_5r__table_xwj_2l5_5r__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qwj_2l5_5r__table_xwj_2l5_5r__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>[
+    {
+        "name": "RJSampleCategory10",
+        "language": {
+            "name": "English",
+            "id": "lange000000000000001",
+            "type": null
+        },
+        "context": null,
+        "id": "categ000000000001042",
+        "state": null,
+        "owner": {
+            "name": "User One",
+            "id": "emplo000000000001000",
+            "type": null
+        },
+        "timestamp": null,
+        "description": "This is RJSampleCategory5",
+        "roles": [
+            {
+                "name": "a1 one1",
+                "id": "persn000000000200148",
+                "type": "Viewer"
+            },
+            {
+                "name": "User One",
+                "id": "emplo000000000001000",
+                "type": "Owner"
+            }
+        ],
+        "forExternal": false,
+        "createdOn": "2015-04-01T12:17:59.882+0530",
+        "updatedBy": "uone",
+        "updatedOn": "2015-04-01T12:17:59.882+0530",
+        "createdBy": "uone",
+        "createdId": "emplo000000000001000",
+        "split": {
+            "name": null,
+            "id": "domin000000000000001",
+            "type": null
+        },
+        "recommendable": false,
+        "flags": "0000000000",
+        "atList": [
+            {
+                "name": "RJTestAudType",
+                "id": "audie000000000001141",
+                "type": null
+            }
+        ],
+        "totalItemCountInHierarchy": 0,
+        "totalSubListCount": 0,
+        "totalItemCount": 0,
+        "featured": false,
+        "supportedTypes": null,
+        "parentCategory": null,
+        "visibility": null
+    },
+    {
+        "name": "RJSampleSubCategory10",
+        "language": {
+            "name": "English",
+            "id": "lange000000000000001",
+            "type": null
+        },
+        "context": null,
+        "id": "categ000000000001043",
+        "state": null,
+        "owner": {
+            "name": "User One",
+            "id": "emplo000000000001000",
+            "type": null
+        },
+        "timestamp": null,
+        "description": "This is RJSampleCategory5",
+        "roles": [
+            {
+                "name": "User One",
+                "id": "emplo000000000001000",
+                "type": "Owner"
+            },
+            {
+                "name": "a1 one1",
+                "id": "persn000000000200148",
+                "type": "Viewer"
+            }
+        ],
+        "forExternal": false,
+        "createdOn": "2015-04-01T12:18:00.679+0530",
+        "updatedBy": "uone",
+        "updatedOn": "2015-04-01T12:18:00.679+0530",
+        "createdBy": "uone",
+        "createdId": "emplo000000000001000",
+        "split": {
+            "name": null,
+            "id": "domin000000000000001",
+            "type": null
+        },
+        "recommendable": false,
+        "flags": "0000000000",
+        "atList": [
+            {
+                "name": "RJTestAudType",
+                "id": "audie000000000001141",
+                "type": null
+            }
+        ],
+        "totalItemCountInHierarchy": 0,
+        "totalSubListCount": 0,
+        "totalItemCount": 0,
+        "featured": false,
+        "supportedTypes": null,
+        "parentCategory": {
+            "name": "RJSampleCategory10",
+            "id": "categ000000000001042",
+            "type": null
+        },
+        "visibility": null
+    }
+]</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_vlg_lnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title5">REMOVE A CATEGORY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Removes a category.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/category/:categoryid?cascade=true</p>
+                <div class="note note note_note"><span class="note__title">Note:</span> cascade=true will remove all the sub-categories as well.</div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">name</strong> instead of the internal Category's
+                        ID.<p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/category/name%3D<em class="ph i">&lt;CategoryName&gt;</em>?cascade=true</p><div class="note note note_note"><span class="note__title">Note:</span> cascade=true
+                    will remove all the sub-categories as well.</div></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_vlg_lnx_fp__table_nmg_lnx_fp"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">categoryid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Category's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">categ000000000001039</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">cascade</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Cascade Delete</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_q43_rm5_5r">
+        <h2 class="title topictitle2" id="ariaid-title6">ADD CATEGORIES TO A COURSE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Adds categories to a course and returns a reference to the course to which the
+                    Categories were added.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/category/course/:courseid</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_q43_rm5_5r__table_y43_rm5_5r"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_q43_rm5_5r__table_y43_rm5_5r__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_q43_rm5_5r__table_y43_rm5_5r__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_q43_rm5_5r__table_y43_rm5_5r__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_q43_rm5_5r__table_y43_rm5_5r__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_q43_rm5_5r__table_y43_rm5_5r__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_q43_rm5_5r__table_y43_rm5_5r__entry__1 ">courseid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_q43_rm5_5r__table_y43_rm5_5r__entry__2 ">Course's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_q43_rm5_5r__table_y43_rm5_5r__entry__3 ">cours000000000202106</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_q43_rm5_5r__table_y43_rm5_5r__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_q43_rm5_5r__table_y43_rm5_5r__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>[
+ "java.util.List",
+  [
+  {
+   "@type": "com.saba.rest.service.RESTServiceObjectReference",
+   "id": "categ000000000001042",
+   displayName": "RJSampleCategory10"
+  },
+  {
+   "@type": "com.saba.rest.service.RESTServiceObjectReference", 
+   "id": "categ000000000001041",
+   "displayName": "RJSampleCategory7"
+  }
+  ]
+]</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "cours000000000202106",
+    "displayName": "",
+    "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/Course/cours000000000202106"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_t3f_hn5_5r">
+        <h2 class="title topictitle2" id="ariaid-title7">ADD CATEGORIES TO A COURSE (LOOKUP BASED)</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <div class="p">Adds categories to a course and returns a reference to the course to which the
+                    Categories were added.<div class="note note note_note"><span class="note__title">Note:</span> Using this API you can list the categories simply by
+                        using lookup i.e. "displayName" and "id" is not required.</div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/category/course/:courseid</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_t3f_hn5_5r__table_bjf_hn5_5r"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_t3f_hn5_5r__table_bjf_hn5_5r__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_t3f_hn5_5r__table_bjf_hn5_5r__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_t3f_hn5_5r__table_bjf_hn5_5r__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_t3f_hn5_5r__table_bjf_hn5_5r__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_t3f_hn5_5r__table_bjf_hn5_5r__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_t3f_hn5_5r__table_bjf_hn5_5r__entry__1 ">courseid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_t3f_hn5_5r__table_bjf_hn5_5r__entry__2 ">Course's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_t3f_hn5_5r__table_bjf_hn5_5r__entry__3 ">cours000000000202106</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_t3f_hn5_5r__table_bjf_hn5_5r__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_t3f_hn5_5r__table_bjf_hn5_5r__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>[
+ "java.util.List",
+  [
+  {
+   "@type": "com.saba.rest.service.RESTServiceObjectReference", 
+   "displayName": "RJSampleCategory10"
+  },
+  {
+   "@type": "com.saba.rest.service.RESTServiceObjectReference", 
+   "displayName": "RJSampleCategory7"
+  }
+  ]
+]</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "cours000000000202106",
+    "displayName": "",
+    "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/Course/cours000000000202106"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="reference_zyq_rn5_5r">
+        <h2 class="title topictitle2" id="ariaid-title8">REMOVE CATEGORY FROM A COURSE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Removes category from a course.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/category/:categoryid/course/:courseid</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_zyq_rn5_5r__table_gzq_rn5_5r"><caption><span class="table--title-label">Table 7. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__1 ">categoryid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__2 ">Category's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__3 ">
+                                    <p class="p">categ000000000002464</p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__1 ">courseid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__2 ">Course's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__3 ">cours000000000202106</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zyq_rn5_5r__table_gzq_rn5_5r__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title9" id="reference_xdb_sdz_rs">
+        <h2 class="title topictitle2" id="ariaid-title9">CREATE A NEW CATEGORY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Creates a new Category</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_xdb_sdz_rs__table_j2b_sdz_rs"><caption><span class="table--title-label">Table 8. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Category DTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 ">com.saba.rest.businesscomponent.impl.CategoryRESTDTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Category Name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 ">Sample Category</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">language</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Category Language</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 ">{\"@type\":
+                                    \"com.saba.social.service.SimpleDetail\",\"id\":
+                                    \"lange000000000000001\",\"name\": \"English\"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">owner</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Category Owner</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 ">{\"@type\":
+                                    \"com.saba.social.service.SimpleDetail\",\"id\":
+                                    \"emplo000000000001000\",\"name\": \"User One\"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">parentCategory</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Category Parent</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 ">{\"@type\":
+                                    \"com.saba.social.service.SimpleDetail\",\"id\":
+                                    \"categ000000000001042\",\"name\": \"Parent Category\"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">roles</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Category Roles</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">List</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Category Description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">split</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Category Domain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 ">{\"@type\":
+                                    \"com.saba.social.service.SimpleDetail\",\"id\":
+                                    \"domin000000000000001\",\"name\": \"world\"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">recommendable</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Is Category Recommendable</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">String</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">featured</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Is Category Featured</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">String</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">forExternal</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Is Category For External Person</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">String</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">atList</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Audience Types associated with Category</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 ">[\"java.util.ArrayList\",[{\"@type\":
+                                    \"com.saba.social.service.SimpleDetail\", \"id\":
+                                    \"audie000000000001141\",\"name\":
+                                    \"RJTestAudType\"},{\"@type\":
+                                    \"com.saba.social.service.SimpleDetail\", \"id\":
+                                    \"audie000000000200000\",\"name\": \"RJ\"}]]</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__1 ">tags</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__2 ">Tags associated with Category</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__3 ">[\"java.util.ArrayList\",[{\"@type\":
+                                    \"com.saba.social.service.TagDetail\",\"name\":
+                                    \"Tag5\"}]]</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xdb_sdz_rs__table_j2b_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request
+                Body</h3><pre class="pre codeblock"><code>{
+    "@type":"com.saba.rest.businesscomponent.impl.CategoryRESTDTO",
+    "name": "RJSampleCategoryInsertwithTag1",
+        "language": {
+           "@type": "com.saba.social.service.SimpleDetail",
+            "name": "English",
+            "id": "lange000000000000001"
+        },
+        "owner": {
+            "@type": "com.saba.social.service.SimpleDetail",
+            "name": "User One",
+            "id": "emplo000000000001000"
+        },
+    "parentCategory": {
+            "@type": "com.saba.social.service.SimpleDetail",
+            "name": "RJSampleCategory10",
+            "id": "categ000000000001003"
+        },
+    "roles": 
+            [
+              "java.util.ArrayList",
+              [
+              {
+                  "@type": "com.saba.social.service.SimpleDetail",
+                  "name": "a1 one1",
+                  "id": "persn000000000200148",
+                  "type": "Viewer"
+              }]
+   ],
+    "description": "This is RJSampleCategory5", 
+    "split": {
+            "@type": "com.saba.social.service.SimpleDetail",
+            "name": "world",
+            "id": "domin000000000000001"
+        },
+        "recommendable": true,
+        "flags": "0000000000",
+        "featured": true,
+        "forExternal": false,
+        "totalItemCountInHierarchy": 0,
+        "totalSubListCount": 0,
+        "totalItemCount": 0,
+        "atList": [
+           "java.util.ArrayList",
+            [{
+                "@type": "com.saba.social.service.SimpleDetail",
+               "name": "RJTestAudType",
+                "id": "audie000000000001141"
+            }]
+        ],
+        "tags": [
+    "java.util.ArrayList",
+    [
+      {
+        "@type": "com.saba.social.service.TagDetail",
+        "name": "Tag5"
+      },
+      {
+        "@type": "com.saba.social.service.TagDetail",
+        "name": "Tag6"
+      }
+    ]
+  ]
+}</code></pre>The
+                lookup support is now available for this REST API.<table class="table" id="reference_xdb_sdz_rs__table_wyq_zjn_kx"><caption></caption><colgroup><col><col><col></colgroup><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry">
+                                    <strong class="ph b">JSON Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">UI Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">Component Name</strong>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> language </td>
+                                <td class="entry"> Language </td>
+                                <td class="entry"> Language </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> parentCategory </td>
+                                <td class="entry"> Category Name </td>
+                                <td class="entry"> Category </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> Owner </td>
+                                <td class="entry"> Username of Person </td>
+                                <td class="entry"> Person, Internal/ Person, External </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> split </td>
+                                <td class="entry"> Domain name </td>
+                                <td class="entry"> Domain </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> atList </td>
+                                <td class="entry"> Audience Type Name </td>
+                                <td class="entry"> Audience Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> roles </td>
+                                <td class="entry"> Share with </td>
+                                <td class="entry"> Person / Team <div class="note note note_note"><span class="note__title">Note:</span> 
+                                        <div class="p">Lookup will be performed in following priority: <ol class="ol" id="reference_xdb_sdz_rs__ol_vx2_ckn_kx">
+                                                <li class="li">Person</li>
+                                                <li class="li">Team</li>
+                                            </ol></div>
+                                    </div></td>
+                            </tr>
+                        </tbody></table></section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "id": "categ000000000001005",
+  "displayName": "RJSampleCategoryInsertwithTag1",
+  "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/categ000000000001005"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title10" id="reference_mbb_sdz_rs">
+        <h2 class="title topictitle2" id="ariaid-title10">UPDATE CATEGORY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Updates a Category</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_mbb_sdz_rs__table_ybb_sdz_rs"><caption><span class="table--title-label">Table 9. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Category DTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 ">com.saba.rest.businesscomponent.impl.CategoryRESTDTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Category ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Category Name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 ">Sample Category</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">language</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Category Language</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 ">{\"@type\":
+                                    \"com.saba.social.service.SimpleDetail\",\"id\":
+                                    \"lange000000000000001\",\"name\": \"English\"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">owner</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Category Owner</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 ">{\"@type\":
+                                    \"com.saba.social.service.SimpleDetail\",\"id\":
+                                    \"emplo000000000001000\",\"name\": \"User One\"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">parentCategory</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Category Parent</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 ">{\"@type\":
+                                    \"com.saba.social.service.SimpleDetail\",\"id\":
+                                    \"categ000000000001042\",\"name\": \"Parent Category\"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">roles</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Category Roles</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">List</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Category Description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">split</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Category Domain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 ">{\"@type\":
+                                    \"com.saba.social.service.SimpleDetail\",\"id\":
+                                    \"domin000000000000001\",\"name\": \"world\"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">recommendable</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Is Category Recommendable</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">featured</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Is Category Featured</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">forExternal</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Is Category For External Person</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">atList</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Audience Types associated with Category</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 ">[\"java.util.ArrayList\",[{\"@type\":
+                                    \"com.saba.social.service.SimpleDetail\", \"id\":
+                                    \"audie000000000001141\",\"name\":
+                                    \"RJTestAudType\"},{\"@type\":
+                                    \"com.saba.social.service.SimpleDetail\", \"id\":
+                                    \"audie000000000200000\",\"name\": \"RJ\"}]]</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__1 ">tags</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__2 ">Tags associated with Category</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__3 ">[\"java.util.ArrayList\",[{\"@type\":
+                                    \"com.saba.social.service.TagDetail\",\"name\":
+                                    \"Tag5\"}]]</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mbb_sdz_rs__table_ybb_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request
+                Body</h3><pre class="pre codeblock"><code>{
+    "@type":"com.saba.rest.businesscomponent.impl.CategoryRESTDTO",
+    "id":"categ000000000001005",
+    "name": "RJSampleCategoryInsertwithTag11",
+        "language": {
+           "@type": "com.saba.social.service.SimpleDetail",
+            "name": "English",
+            "id": "lange000000000000001"
+        },
+        "owner": {
+            "@type": "com.saba.social.service.SimpleDetail",
+            "name": "User One",
+            "id": "emplo000000000001000"
+        },
+    "parentCategory": {
+            "@type": "com.saba.social.service.SimpleDetail",
+            "name": "RJSampleCategory10",
+            "id": "categ000000000001003"
+        },
+    "roles": 
+            [
+              "java.util.ArrayList",
+              [
+              {
+                  "@type": "com.saba.social.service.SimpleDetail",
+                  "name": "a1 one1",
+                  "id": "persn000000000200148",
+                  "type": "Viewer"
+              }]
+   ],
+    "description": "This is RJSampleCategory5", 
+    "split": {
+            "@type": "com.saba.social.service.SimpleDetail",
+            "name": "world",
+            "id": "domin000000000000001"
+        },
+        "recommendable": true,
+        "flags": "0000000000",
+        "featured": true,
+        "forExternal": false,
+        "totalItemCountInHierarchy": 0,
+        "totalSubListCount": 0,
+        "totalItemCount": 0,
+        "atList": [
+           "java.util.ArrayList",
+            [{
+                "@type": "com.saba.social.service.SimpleDetail",
+               "name": "RJTestAudType",
+                "id": "audie000000000001141"
+            }]
+        ],
+        "tags": [
+    "java.util.ArrayList",
+    [
+      {
+        "@type": "com.saba.social.service.TagDetail",
+        "name": "Tag5"
+      },
+       {
+        "@type": "com.saba.social.service.TagDetail",
+        "name": "Tag7"
+      }
+    ]
+  ]
+}</code></pre>The
+                lookup support is now available for this REST API.<table class="table" id="reference_mbb_sdz_rs__table_xb5_nmn_kx"><caption></caption><colgroup><col><col><col></colgroup><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry">
+                                    <strong class="ph b">JSON Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">UI Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">Component Name</strong>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> language </td>
+                                <td class="entry"> Language </td>
+                                <td class="entry"> Language </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> parentCategory </td>
+                                <td class="entry"> Category Name </td>
+                                <td class="entry"> Category </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> Owner </td>
+                                <td class="entry"> Username of Person </td>
+                                <td class="entry"> Person, Internal/ Person, External </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> split </td>
+                                <td class="entry"> Domain name </td>
+                                <td class="entry"> Domain </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> atList </td>
+                                <td class="entry"> Audience Type Name </td>
+                                <td class="entry"> Audience Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> roles </td>
+                                <td class="entry"> Share with </td>
+                                <td class="entry"> Person / Team <div class="note note note_note"><span class="note__title">Note:</span> 
+                                        <div class="p">Lookup will be performed in following priority: <ol class="ol" id="reference_mbb_sdz_rs__ol_hc5_nmn_kx">
+                                                <li class="li">Person</li>
+                                                <li class="li">Team</li>
+                                            </ol></div>
+                                    </div></td>
+                            </tr>
+                        </tbody></table></section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>204 - No Content</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title11" id="get-find-the-details-of-the-categories-N14188">
+        <h2 class="title topictitle2" id="ariaid-title11">FIND DETAILS OF CATEGORIES</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the Categories along with the ID, Name and the Deeplink
+                    URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category?q=(:criteria)&amp;count=:count&amp;startPage=:startPage</p>
+                <p class="p"><strong class="ph b">Examples:</strong></p>
+                <p class="p">http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category?q=(ci_name%3D%3D333) </p>
+                <p class="p">http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category?q=(id%3D%3Dcateg000000000001021) </p>
+                <p class="p">http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category?q=(owner_id%3D%3Dpersn000000000001006) </p>
+                <p class="p">http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category?q=(flags%3D%3D0000000000) </p>
+                <p class="p">http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category?q=(for_external%3D%3Dtrue) </p>
+                <p class="p">http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category?q=(featured%3D%3Dtrue) </p>
+                <p class="p">http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category?q=(parent_id%3D%3Dcateg000000000001021) </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs"><caption><span class="table--title-label">Table 10. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__1 ">criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__2 ">The search criteria i.e. the criteria field name
+                                    with search value. <p class="p">The list of search criteria supported are
+                                        listed below with examples.</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__3 ">tagName%3D%3DTag5</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-categories-N14188__table_wst_ldz_rs__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <table class="table" id="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5"><caption><span class="table--title-label">Table 11. </span><span class="title">Criteria fields</span></caption><colgroup><col><col><col><col></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry" id="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1"> Field name </th>
+                            <th class="entry" id="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2"> Field description </th>
+                            <th class="entry" id="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3"> Possible values </th>
+                            <th class="entry" id="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4"> Example </th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> ci_name </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If this field is passed, category matching that name will only
+                                returned </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 "> ci_name%3D%3Dtest &nbsp; </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> created_on &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If active field is passed, categories created on given date-time
+                                will be returned. </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 "> created_on%3D%3D 2016-02-02 &nbsp; </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> updated_on &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If active field is passed, categories updated on given date-time
+                                will be returned. </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 "> updated_on%3D%3D 2016-02-02 </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> created_id &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If active field is passed, categories with created id matching
+                                given value will be returned. </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 "> created_id%3D%3D emplo000000000001000 </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> flags &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If flags is passed, categories matching that flag will be
+                                returned. </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 "> Flags%3D%3D 0000000000 </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> visibility &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If visibility is passed as search criteria, categories having
+                                that visibility will be returned. </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> PRIVATE or &nbsp; PUBLIC </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 "> Visibility%3D%3D &nbsp; </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> owner_id &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If owner_id (owner of the list) is passed as a search criteria,
+                                all categories for that owner will be returned. </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 ">
+                                <pre class="pre">owner_id%3D%3D emplo000000000001001</pre>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> state &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If state is passed as a search criteria, all categories having
+                                that state will be returned. </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> ACTIVE EXPIRED </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 "> State%3D%3DACTIVE </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> supported_types &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If supported types is passed as a search criteria, all
+                                categories matching that type will be returned. </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 "> &nbsp; </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> context_id &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If context_id is passed as a search criteria, all categories
+                                having that context id will be returned. </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 "> context_id%3D%3D dummy000000000000002 </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> context_type &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If context_type is passed as a search context, all categories
+                                having that context_type will be returned. </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 "> context_type%3D%3DSYSTEM </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> parent_id &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If parent_id is passed as a search context, all categories
+                                having given id as a parent category id will be returned. </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 "> parent_id%3D%3D categ000000000001080 </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__1 "> featured &nbsp; </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__2 "> If featured is passed as a search criteria, it will return all
+                                categories having that featured value. </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__3 "> True False </td>
+                            <td class="entry" headers="get-find-the-details-of-the-categories-N14188__table_mwz_gq1_x5__entry__4 "> Featured%3D%3D true </td>
+                        </tr>
+                    </tbody></table>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "startIndex": 1,
+  "facets": [],
+  "totalResults": 3,
+  "hasMoreResults": false,
+  "itemsPerPage": 10,
+  "results": [
+    {
+      "id": "categ000000000001000",
+      "displayName": "test",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/categ000000000001000"
+    },
+    {
+      "id": "categ000000000001004",
+      "displayName": "RJSampleCategoryInsertwithTag",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/categ000000000001004"
+    },
+    {
+      "id": "categ000000000001005",
+      "displayName": "RJSampleCategoryInsertwithTag11",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/categ000000000001005"
+    }
+  ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title12" id="reference_igb_sdz_rs">
+        <h2 class="title topictitle2" id="ariaid-title12">ADD TAGS TO CATEGORY </h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Adds tags to the Category.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/:id/tags</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_igb_sdz_rs__table_pgb_sdz_rs"><caption><span class="table--title-label">Table 12. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__2 ">Category DTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__3 ">com.saba.rest.businesscomponent.impl.CategoryRESTDTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__2 ">Category ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__1 ">tags</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__2 ">Tags associated with Category</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__3 ">[\"java.util.ArrayList\",[{\"@type\":
+                                    \"com.saba.social.service.TagDetail\",\"name\":
+                                    \"Tag5\"}]]</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_igb_sdz_rs__table_pgb_sdz_rs__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "@type": "com.saba.rest.businesscomponent.impl.CategoryRESTDTO",
+  "tags": [
+    "java.util.ArrayList",
+    [
+      {
+        "@type": "com.saba.social.service.TagDetail",
+        "name": "Tagadd"
+      }
+    ]
+  ]
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "id": "categ000000000001000",
+  "displayName": "test",
+  "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/categ000000000001000"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title13" id="reference_jz1_sdz_rs">
+        <h2 class="title topictitle2" id="ariaid-title13">REMOVE TAGS FROM CATEGORY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Removes tags from a Category.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/:categoryId/tags/:tagId</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_jz1_sdz_rs__table_pz1_sdz_rs"><caption><span class="table--title-label">Table 13. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__1 ">categoryId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__2 ">Category ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__1 ">tagId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__2 ">Tag ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jz1_sdz_rs__table_pz1_sdz_rs__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "id": "categ000000000001000",
+  "displayName": "test",
+  "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/categ000000000001000"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

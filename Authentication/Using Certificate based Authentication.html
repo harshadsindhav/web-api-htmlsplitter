@@ -1,0 +1,184 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2017">
+  <meta name="DC.rights.owner" content="(C) Copyright 2017">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="foundation, restful web services, get all competencies, foundation components, find the details of the competencies, find the details of the competencies, get the details of a particular competency, get the details of a particular competency, get the meta details of competencies, get the meta details of competencies, create a new competency, create a new competency, update the details of a competency, update the details of a competency">
+  <meta name="keywords" content="foundation, restful web services, get all competencies, foundation components, find the details of the competencies, find the details of the competencies, get the details of a particular competency, get the details of a particular competency, get the meta details of competencies, get the meta details of competencies, create a new competency, create a new competency, update the details of a competency, update the details of a competency">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-foundation.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Competency</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <link href="./../../styles.css" rel="stylesheet">
+   <style>
+	table {
+		line-height:28px;
+	}
+
+	h5 {
+		font-weight : bold;
+		color : darkcyan;
+		letter-spacing: 1px;
+	}
+	article .topic {
+		margin-top:20px;
+	}
+	tr th {
+		padding-left:10px;
+	}
+	tr td {
+		padding-left:10px;
+	}
+
+  </style>
+ </head>
+
+<body id="d0e2818">
+  <main role="main">
+    <article role="article" aria-labelledby="ariaid-title1">
+      <article class="topic nested1" aria-labelledby="ariaid-title2" id="d0e2828">
+        <h4 class="title topictitle2" id="ariaid-title2">Using Certificate based Authentication</h4>
+        <article class="topic nested2" aria-labelledby="ariaid-title3" id="topic_kq4_ppc_1s">
+          <h5 class="title topictitle3" id="ariaid-title3">Overview</h5>
+          <div class="body">
+            <p class="p">Saba's Authentication web service accepts a user name, password and the site name and returns a certificate for
+              that user. Authentication certificates must be included in calls to Saba web services to indicate to the web
+              services what permissions the user has.</p>
+            <div class="note note note_note">
+              <span class="note__title">Note:</span> The Authentication web service is not a true business web service. The service is required to
+              obtain a valid certificate when calling a business web service.
+            </div>
+          </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title4" id="d0e2855">
+          <h5 class="title topictitle3" id="ariaid-title4">Usage</h5>
+          <div class="body">
+            <p class="p">The Authentication web service is passed a username, password and the site name. It returns an authentication
+              certificate.</p>
+          </div>
+          <article class="topic nested3" aria-labelledby="ariaid-title5" id="id_kdh_dny_nh">
+            <h4 class="title topictitle4" id="ariaid-title5">URL</h4>
+            <div class="body">
+              <div class="p">https://
+                <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/login
+                <div class="note note note_note">
+                  <span class="note__title">Note:</span>
+                  <strong class="ph b">hostname</strong>
+                  is your Saba site name.</div>
+              </div>
+            </div>
+          </article>
+          <article class="topic nested3" aria-labelledby="ariaid-title6" id="d0e2186">
+            <h4 class="title topictitle4" id="ariaid-title6">Calling Options</h4>
+            <div class="body">
+              <p class="p">The Authentication web service is passed the following
+                <strong class="ph b">header</strong> parameters:</p>
+              <table id="d0e2186__table_shx_rvw_rh">
+                <caption>
+                  <span class="table--title-label">Table 1. </span>
+                  <span class="title">Authentication Web Service Calling Parameters</span>
+                </caption>
+                <colgroup>
+                  <col style="width:26%">
+                  <col style="width:74%">
+                </colgroup>
+                <thead class="thead">
+                  <tr>
+                    <th class="entry colsep-1 rowsep-1" id="d0e2186__table_shx_rvw_rh__entry__1">Header Parameters Passed</th>
+                    <th class="entry colsep-1 rowsep-1" id="d0e2186__table_shx_rvw_rh__entry__2">Description</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody">
+                  <tr>
+                    <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__1 ">
+                      <p class="p">
+                        <code class="ph codeph">user</code>
+                      </p>
+                    </td>
+                    <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__2 ">
+                      <p class="p">The Saba username to authenticate.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__1 ">
+                      <code class="ph codeph">password</code>
+                    </td>
+                    <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__2 ">The password for that username.</td>
+                  </tr>
+                  <tr>
+                    <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__1 ">
+                      <code class="ph codeph">site</code>
+                    </td>
+                    <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__2 ">The Saba site name.
+                      <p class="p">This is
+                        <strong class="ph b">mandatory</strong> and only applicable
+                        <strong class="ph b">
+                          <u class="ph u">when the vanity URL is switched OFF</u>
+                        </strong> i.e. if you are using the old URL, for example: http://
+                        <var class="keyword varname">&lt;hostname.sabacloud.com&gt;</var>/Saba/api/login.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__1 ">
+                      <code class="ph codeph">site_name</code>
+                    </td>
+                    <td class="entry colsep-1 rowsep-1" headers="d0e2186__table_shx_rvw_rh__entry__2 ">The Saba site name.
+                      <p class="p">This is
+                        <strong class="ph b">optional</strong> and only applicable
+                        <strong class="ph b">
+                          <u class="ph u">when the vanity URL is switched ON</u>
+                        </strong> i.e. if you are using the new URL, for example: https://
+                        <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/login.
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <article class="topic nested3" aria-labelledby="ariaid-title7" id="d0e2884">
+            <h4 class="title topictitle4" id="ariaid-title7">Return Values</h4>
+            <div class="body">
+              <div class="p">The web service returns a
+                <code class="ph codeph">&lt;SabaCertificate&gt;</code> JSON object, which contains a
+                <code class="ph codeph">&lt;certificate&gt;</code> object. That object contains the authentication certificate (a string).
+                <div class="note note note_note">
+                  <span class="note__title">Note:</span> This certificate is valid for 24 hours. If an API call fails with an Invalid Certificate error,
+                  you can get a new certificate, which remains valid for the next 24 hours. </div>
+              </div>
+              <section class="section">
+                <h5 class="title sectiontitle">Sample Returned JSON Document</h5>
+
+                <div class="p">
+                  <pre class="pre codeblock"><code>31336132353061666330315E235E756F6E6555E6261536974655E 
+235E656E5F55535E235E536162615E235E24414021463393C6935
+8BE384802BA1BBEAD3B4661862F193021435F7E28A30F7540FE66
+1B9C5F30FDB06C  </code></pre>
+                </div>
+              </section>
+            </div>
+          </article>
+        </article>
+      </article>
+      
+      </article>
+    </article>
+  </main>
+</body>
+
+</html>

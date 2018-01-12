@@ -1,0 +1,1144 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="learning, restful web services, search resource based on type, learning components, search resource based on type, search resource based on type and criteria, search resource based on type and criteria, get resource details, search purpose list, get the purpose details, get resource for a given offering, get resource for a given offering, get session for a given offering, get session for a given offering, retrieve details of an individual session., retrieve details of an individual session., retrieve the assignment details, retrieve the assignment details, assign a resource to an offering, assign a resource to an offering, update an existing resource assignment, update an existing resource assignment, remove an existing assigned resource, remove an existing assigned resource"><meta name="keywords" content="learning, restful web services, search resource based on type, learning components, search resource based on type, search resource based on type and criteria, search resource based on type and criteria, get resource details, search purpose list, get the purpose details, get resource for a given offering, get resource for a given offering, get session for a given offering, get session for a given offering, retrieve details of an individual session., retrieve details of an individual session., retrieve the assignment details, retrieve the assignment details, assign a resource to an offering, assign a resource to an offering, update an existing resource assignment, update an existing resource assignment, remove an existing assigned resource, remove an existing assigned resource"><meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Learning-apis"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Resource</title></head><body id="Learning-apis"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Resource</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-learning.html">Learning</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="reference_zfp_fdg_ns">
+        <h2 class="title topictitle2" id="ariaid-title2">SEARCH RESOURCE BASED ON TYPE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Searches resource based on type.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resource?type=:resourcetype&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_zfp_fdg_ns__table_jgp_fdg_ns"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__1 ">resourcetype</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__2 ">Desired resourcetype<p class="p">Searching resource list
+                                        depends upon the specified resource type:</p><div class="p">
+                                        <ul class="ul" id="reference_zfp_fdg_ns__ul_hc2_rgg_ns">
+                                            <li class="li">person</li>
+                                            <li class="li">equipments</li>
+                                            <li class="li">inventory</li>
+                                            <li class="li">classrooms </li>
+                                        </ul>
+                                    </div><p class="p">The filter parameter are different for each type:
+                                            </p><p class="p"><strong class="ph b">Person:</strong></p><div class="p">
+                                        <ul class="ul" id="reference_zfp_fdg_ns__ul_btd_sgg_ns">
+                                            <li class="li"><strong class="ph b">resource_name</strong> is the name of person (username
+                                                / firstname / lname) <p class="p">q=(resource_name%3d%3dP001)
+                                                </p></li>
+                                            <li class="li"><strong class="ph b">location_name/location
+                                                  id</strong><p class="p">q=(location%3d%3dPune) </p></li>
+                                        </ul>
+                                        <ul class="ul" id="reference_zfp_fdg_ns__ul_xqp_tgg_ns">
+                                            <li class="li"><strong class="ph b">available_resources_offering</strong> is the offering
+                                                q=(available_resources_offering%3d%3dclass000000000001170)
+                                            </li>
+                                        </ul>
+                                    </div><strong class="ph b">Classrooms:</strong>
+                                    <div class="p"><ul class="ul" id="reference_zfp_fdg_ns__ul_mtc_wgg_ns">
+                                            <li class="li"><strong class="ph b">name</strong>
+                                                <p class="p">q=(name%3d%3dClassRomm101) </p></li>
+                                            <li class="li"><strong class="ph b">location_id/location_name</strong><p class="p">q=(location_id%3d%3dPune)</p></li>
+                                            <li class="li"><strong class="ph b">disabled</strong><p class="p">q=(disabled=false)
+                                                  </p><p class="p">Permissible values: true/false </p></li>
+                                            <li class="li"><strong class="ph b">capacity</strong><p class="p">q=(capacity%3d%3d30)</p></li>
+                                        </ul><strong class="ph b">Inventory:</strong>
+                                    </div><div class="p">
+                                        <ul class="ul" id="reference_zfp_fdg_ns__ul_gzc_zgg_ns">
+                                            <li class="li"><strong class="ph b">name</strong>
+                                                <p class="p">q=(name%3d%3dInventoryResource)</p></li>
+                                            <li class="li"><strong class="ph b">equip_cat_id</strong><p class="p">q=(equip_cat_id%3d%3dBook
+                                                  Offering)</p></li>
+                                            <li class="li"><strong class="ph b">manufacturer_id</strong><p class="p">q=(manufacturer_id%3d%3dManufacturer_Dell)</p></li>
+                                            <li class="li"><strong class="ph b">quantity</strong><p class="p">q=(quantity%3d%3d9)</p></li>
+                                            <li class="li"><strong class="ph b">avail_from</strong></li>
+                                            <li class="li"><strong class="ph b">disc_from</strong></li>
+                                            <li class="li"><strong class="ph b">vendor_id</strong></li>
+                                        </ul>
+                                    </div><p class="p"><strong class="ph b">Equipment:</strong>
+                                    </p><div class="p">
+                                        <ul class="ul" id="reference_zfp_fdg_ns__ul_j3q_dhg_ns">
+                                            <li class="li"><strong class="ph b">equip_no</strong>
+                                                <p class="p">q=(equip_no%3d%3dGUITAR_EQUIPMENT)</p></li>
+                                            <li class="li"><strong class="ph b">catalog_id</strong><p class="p">q=(catalog_id%3d%3dInstructor
+                                                  Laptop)</p></li>
+                                            <li class="li"><strong class="ph b">location_id</strong><p class="p">q=(location_id%3d%3dPune)</p></li>
+                                            <li class="li"><strong class="ph b">status</strong>
+                                                <p class="p">q=(status%3d%3dAVL) </p><p class="p">Permissible values:
+                                                  AVL/DON/REP/DIS/REC </p></li>
+                                            <li class="li"><strong class="ph b">manufacturer_id</strong></li>
+                                        </ul>
+                                    </div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__3 ">person</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__4 ">enumerated</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zfp_fdg_ns__table_jgp_fdg_ns__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "facets": null,
+  "startIndex": 1,
+  "results": [
+    {
+      "name": "user test1",
+      "id": "emplo000000000022475",
+      "href": "http:\\localhost\v1\learning\resource\emplo000000000022475"
+    }
+  ],
+  "totalResults": 1,
+  "hasMoreResults": false,
+  "itemsPerPage": 10
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_tbp_fdg_ns">
+        <h2 class="title topictitle2" id="ariaid-title3">SEARCH RESOURCE BASED ON TYPE AND CRITERIA</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Searches resource based on type and criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resource?type=:resourcetype&amp;q=(:criteria)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_tbp_fdg_ns__table_dcp_fdg_ns"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__1 ">resourcetype</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__2 ">Desired resourcetype.<p class="p">Searching resource list
+                                        depends upon the specified resource type:</p><div class="p">
+                                        <ul class="ul" id="reference_tbp_fdg_ns__ul_ym5_jhg_ns">
+                                            <li class="li">person</li>
+                                            <li class="li">equipments</li>
+                                            <li class="li">inventory</li>
+                                            <li class="li">classrooms </li>
+                                        </ul>
+                                    </div><p class="p">The filter parameter are different for each type:
+                                            </p><p class="p"><strong class="ph b">Person:</strong></p><div class="p">
+                                        <ul class="ul" id="reference_tbp_fdg_ns__ul_zm5_jhg_ns">
+                                            <li class="li"><strong class="ph b">resource_name</strong> is the name of person (username
+                                                / firstname / lname) <p class="p">q=(resource_name%3d%3dP001)
+                                                </p></li>
+                                            <li class="li"><strong class="ph b">location_name/location
+                                                  id</strong><p class="p">q=(location%3d%3dPune) </p></li>
+                                        </ul>
+                                        <ul class="ul" id="reference_tbp_fdg_ns__ul_an5_jhg_ns">
+                                            <li class="li"><strong class="ph b">available_resources_offering</strong> is the offering
+                                                q=(available_resources_offering%3d%3dclass000000000001170)
+                                            </li>
+                                        </ul>
+                                    </div><strong class="ph b">Classrooms:</strong>
+                                    <div class="p"><ul class="ul" id="reference_tbp_fdg_ns__ul_bn5_jhg_ns">
+                                            <li class="li"><strong class="ph b">name</strong>
+                                                <p class="p">q=(name%3d%3dClassRomm101) </p></li>
+                                            <li class="li"><strong class="ph b">location_id/location_name</strong><p class="p">q=(location_id%3d%3dPune)</p></li>
+                                            <li class="li"><strong class="ph b">disabled</strong><p class="p">q=(disabled=false)
+                                                  </p><p class="p">Permissible values: true/false </p></li>
+                                            <li class="li"><strong class="ph b">capacity</strong><p class="p">q=(capacity%3d%3d30)</p></li>
+                                        </ul><strong class="ph b">Inventory:</strong>
+                                    </div><div class="p">
+                                        <ul class="ul" id="reference_tbp_fdg_ns__ul_cn5_jhg_ns">
+                                            <li class="li"><strong class="ph b">name</strong>
+                                                <p class="p">q=(name%3d%3dInventoryResource)</p></li>
+                                            <li class="li"><strong class="ph b">equip_cat_id</strong><p class="p">q=(equip_cat_id%3d%3dBook
+                                                  Offering)</p></li>
+                                            <li class="li"><strong class="ph b">manufacturer_id</strong><p class="p">q=(manufacturer_id%3d%3dManufacturer_Dell)</p></li>
+                                            <li class="li"><strong class="ph b">quantity</strong><p class="p">q=(quantity%3d%3d9)</p></li>
+                                            <li class="li"><strong class="ph b">avail_from</strong></li>
+                                            <li class="li"><strong class="ph b">disc_from</strong></li>
+                                            <li class="li"><strong class="ph b">vendor_id</strong></li>
+                                        </ul>
+                                    </div><p class="p"><strong class="ph b">Equipment:</strong>
+                                    </p><div class="p">
+                                        <ul class="ul" id="reference_tbp_fdg_ns__ul_in5_jhg_ns">
+                                            <li class="li"><strong class="ph b">equip_no</strong>
+                                                <p class="p">q=(equip_no%3d%3dGUITAR_EQUIPMENT)</p></li>
+                                            <li class="li"><strong class="ph b">catalog_id</strong><p class="p">q=(catalog_id%3d%3dInstructor
+                                                  Laptop)</p></li>
+                                            <li class="li"><strong class="ph b">location_id</strong><p class="p">q=(location_id%3d%3dPune)</p></li>
+                                            <li class="li"><strong class="ph b">status</strong>
+                                                <p class="p">q=(status%3d%3dAVL) </p><p class="p">Permissible values:
+                                                  AVL/DON/REP/DIS/REC </p></li>
+                                            <li class="li"><strong class="ph b">manufacturer_id</strong></li>
+                                        </ul>
+                                    </div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__3 ">person</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__4 ">enumerated</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__1 ">criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__2 ">Search criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__3 ">location%3d%3dPune</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tbp_fdg_ns__table_dcp_fdg_ns__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "facets": null,
+  "startIndex": 1,
+  "results": [
+    {
+      "name": "user test1",
+      "id": "emplo000000000022475",
+      "href": "http:\\localhost\v1\learning\resource\emplo000000000022475"
+    }
+  ],
+  "totalResults": 1,
+  "hasMoreResults": false,
+  "itemsPerPage": 10
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="get-get-resource-details-N14374">
+        <h2 class="title topictitle2" id="ariaid-title4">GET RESOURCE DETAILS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Gets the resource details.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resource/:resourceId</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-resource-details-N14374__table_dbq_fdg_ns"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-resource-details-N14374__table_dbq_fdg_ns__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-resource-details-N14374__table_dbq_fdg_ns__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-resource-details-N14374__table_dbq_fdg_ns__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-resource-details-N14374__table_dbq_fdg_ns__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-resource-details-N14374__table_dbq_fdg_ns__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-resource-details-N14374__table_dbq_fdg_ns__entry__1 ">resourceId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-resource-details-N14374__table_dbq_fdg_ns__entry__2 ">Resource's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-resource-details-N14374__table_dbq_fdg_ns__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-resource-details-N14374__table_dbq_fdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-resource-details-N14374__table_dbq_fdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "@type": "com.saba.learning.services.resource.ResourceInfoDetail",
+  "resourceType": 200,
+  "qualified": false,
+  "personProfile": {
+    "@type": "persndto",
+    "personId": "emplo000000000022475",
+    "pictureURL": "http:\\&lt;hostname-api.sabacloud.com&gt;\assets\spf\skin\wireframe\media\icons\summit\39ProfileMale.png",
+    "timeDiff": 0,
+    "guid": "01FEBBE185B6BB6FE0530100007FB785",
+    "fullName": "user test1"
+  },
+  "addInfo": {
+    "@type": "map"
+  },
+  "resourceStartDate": {
+    "@type": "com.saba.customtypes.DateWithLocale",
+    "timeInUserTimeZone": "12:00 AM",
+    "timeInCustomTimeZone": null,
+    "dateInCustomTimeZone": null,
+    "customTimeZoneDate": 0,
+    "timeInLocale": "12:00 AM",
+    "dateInUserTimeZone": "06\24\1997",
+    "date": 867090600000,
+    "locale": "06\24\1997"
+  },
+  "resourceEndDate": null,
+  "resourcePictureURL": "http:\\&lt;hostname-api.sabacloud.com&gt;\assets\spf\skin\wireframe\media\icons\summit\39ProfileMale.png",
+  "resourceLocation": null,
+  "resourceFacility": null,
+  "resourceRates": [
+    "list",
+    [
+      {
+        "@type": "com.saba.currency.Money",
+        "amount": [
+          "java.math.BigDecimal",
+          100
+        ],
+        "currency": {
+          "@type": "com.saba.currency.SabaCurrencyReference",
+          "id": "crncy000000000000167",
+          "displayName": null
+        },
+        "isocode": "USD",
+        "string": "100 USD"
+      }
+    ]
+  ],
+  "resourceCatalog": null,
+  "disabled": false,
+  "resource": {
+    "@type": "ServiceObjectReference",
+    "id": "emplo000000000022475",
+    "displayName": "user test1"
+  },
+  "type": "TYPE_PERSON"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_tlp_fdg_ns">
+        <h2 class="title topictitle2" id="ariaid-title5">SEARCH PURPOSE LIST</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Retreives a list of purpose for the given type:
+                    person/equipments/inventory/classrooms.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resource/purpose?type=:resourcetype&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_tlp_fdg_ns__table_dmp_fdg_ns"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__1 ">resourcetype</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__2 ">The name of the desired component.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__3 ">person</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__4 ">enumerated</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tlp_fdg_ns__table_dmp_fdg_ns__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "totalResults": 1,
+  "startIndex": 1,
+  "itemsPerPage": 10,
+  "results": [
+    {
+      "name": "1- Instructor",
+      "id": "recat000000000000504",
+      "href": "https:\\&lt;hostname-api.sabacloud.com&gt;\Saba\api\businesscomponent\learning\resource\purpose\recat000000000000504"
+    }
+  ],
+  "facets": null,
+  "hasMoreResults": false
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_tqp_fdg_ns">
+        <h2 class="title topictitle2" id="ariaid-title6">GET PURPOSE DETAILS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Gets the purpose detail.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resource/purpose/:purposeId</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_tqp_fdg_ns__table_drp_fdg_ns"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_tqp_fdg_ns__table_drp_fdg_ns__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tqp_fdg_ns__table_drp_fdg_ns__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tqp_fdg_ns__table_drp_fdg_ns__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tqp_fdg_ns__table_drp_fdg_ns__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tqp_fdg_ns__table_drp_fdg_ns__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tqp_fdg_ns__table_drp_fdg_ns__entry__1 ">purposeId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tqp_fdg_ns__table_drp_fdg_ns__entry__2 ">Purpose's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tqp_fdg_ns__table_drp_fdg_ns__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tqp_fdg_ns__table_drp_fdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tqp_fdg_ns__table_drp_fdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code></code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_rxp_fdg_ns">
+        <h2 class="title topictitle2" id="ariaid-title7">GET RESOURCE FOR A GIVEN OFFERING</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Retreives a list of assigned resources IDs and the URLs for getting details about
+                    the resource. :offeringId refers to offering ID against whom resource list is to
+                    be fetched.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resourceassign/:offeringId/assignedresources</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">offeringNumber</strong> instead of the internal Offering's
+                        ID.<div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resourceassign/<em class="ph i">&lt;offeringType&gt;</em>/<em class="ph i">&lt;offeringNumber&gt;</em>/assignedresources<div class="note note note_note"><span class="note__title">Note:</span> For
+                        custom delivery types, <u class="ph u">delivery type name</u> itself would be considered
+                        as offering type.<p class="p">For offeringType, you can pass ilt for ILT Offering, wbt
+                            for WBT Offering, vc for Virtual Class Offering and blended for Blended
+                            Offering.</p></div></div></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_rxp_fdg_ns__table_byp_fdg_ns"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_rxp_fdg_ns__table_byp_fdg_ns__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rxp_fdg_ns__table_byp_fdg_ns__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rxp_fdg_ns__table_byp_fdg_ns__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rxp_fdg_ns__table_byp_fdg_ns__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rxp_fdg_ns__table_byp_fdg_ns__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rxp_fdg_ns__table_byp_fdg_ns__entry__1 ">offeringId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rxp_fdg_ns__table_byp_fdg_ns__entry__2 ">Offering's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rxp_fdg_ns__table_byp_fdg_ns__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rxp_fdg_ns__table_byp_fdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rxp_fdg_ns__table_byp_fdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>[
+  "list",
+  [
+    {
+      "@type": "org.codehaus.jackson.node.ObjectNode",
+      "id": "assnm000000000001050",
+      "offeringId": "class000000000002821",
+      "href": "http:\\&lt;hostname-api.sabacloud.com&gt;\v1\learning\resourceassign\assnm000000000001050"
+    }
+  ]
+]</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="reference_f5p_fdg_ns">
+        <h2 class="title topictitle2" id="ariaid-title8">GET SESSION FOR A GIVEN OFFERING</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Gets the session for a given offering.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resourceassign/:offeringId/session</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_f5p_fdg_ns__table_p5p_fdg_ns"><caption><span class="table--title-label">Table 7. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_f5p_fdg_ns__table_p5p_fdg_ns__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_f5p_fdg_ns__table_p5p_fdg_ns__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_f5p_fdg_ns__table_p5p_fdg_ns__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_f5p_fdg_ns__table_p5p_fdg_ns__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_f5p_fdg_ns__table_p5p_fdg_ns__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5p_fdg_ns__table_p5p_fdg_ns__entry__1 ">offeringId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5p_fdg_ns__table_p5p_fdg_ns__entry__2 ">Offering's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5p_fdg_ns__table_p5p_fdg_ns__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5p_fdg_ns__table_p5p_fdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5p_fdg_ns__table_p5p_fdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>[
+  "list",
+  [
+    {
+      "@type": "org.codehaus.jackson.node.ObjectNode",
+      "endDate": {
+        "timeInLocale": "12:00 AM",
+        "dateInUserTimeZone": "20.06.2016",
+        "timeInUserTimeZone": "9:30 AM",
+        "timeInCustomTimeZone": null,
+        "dateInCustomTimeZone": null,
+        "customTimeZoneDate": 0,
+        "date": 1466395200000,
+        "locale": "20.06.2016"
+      },
+      "startDate": {
+        "timeInLocale": "12:00 AM",
+        "dateInUserTimeZone": "20.06.2016",
+        "timeInUserTimeZone": "9:30 AM",
+        "timeInCustomTimeZone": null,
+        "dateInCustomTimeZone": null,
+        "customTimeZoneDate": 0,
+        "date": 1466395200000,
+        "locale": "20.06.2016"
+      },
+      "title": null,
+      "startTime": "09:00",
+      "endTime": "17:00",
+      "id": "timel000000000020637",
+      "href": "https:\\&lt;hostname-api.sabacloud.com&gt;\v1\learning\resourceassign\class000000000007886\session\timel000000000020637"
+    }
+  ]
+]</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title9" id="get-retrieve-details-of-an-individual-session.-N14475">
+        <h2 class="title topictitle2" id="ariaid-title9">RETRIEVE DETAILS OF AN INDIVIDUAL SESSION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Retrieves the details of an individual session.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resourceassign/:offeringId/session/:sessionId</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns"><caption><span class="table--title-label">Table 8. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__1 ">offeringId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__2 ">Offering's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__1 ">sessionId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__2 ">Session's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-details-of-an-individual-session.-N14475__table_k2k_qdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "@type": "com.saba.rest.businesscomponent.WeeklyTimeElementDetailDTO",
+  "endDate": {
+    "@type": "com.saba.customtypes.DateWithLocale",
+    "timeInLocale": "12:00 AM",
+    "dateInUserTimeZone": "20.06.2016",
+    "timeInUserTimeZone": "9:30 AM",
+    "timeInCustomTimeZone": null,
+    "dateInCustomTimeZone": null,
+    "customTimeZoneDate": 0,
+    "date": 1466395200000,
+    "locale": "20.06.2016"
+  },
+  "startDate": {
+    "@type": "com.saba.customtypes.DateWithLocale",
+    "timeInLocale": "12:00 AM",
+    "dateInUserTimeZone": "20.06.2016",
+    "timeInUserTimeZone": "9:30 AM",
+    "timeInCustomTimeZone": null,
+    "dateInCustomTimeZone": null,
+    "customTimeZoneDate": 0,
+    "date": 1466395200000,
+    "locale": "20.06.2016"
+  },
+  "title": null,
+  "startTime": "09:00",
+  "endTime": "17:00",
+  "id": "timel000000000020637"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title10" id="get-retrieve-the-assignment-details-N1455C">
+        <h2 class="title topictitle2" id="ariaid-title10">RETRIEVE ASSIGNMENT DETAILS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Retrieves the assignment details.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resourceassign/:assignId?ignoreConflicts=true
+                </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">offeringNumber</strong> instead of the internal Offering's ID and the
+                    <strong class="ph b">resourceName</strong> instead of the internal Assignment's
+                        ID.<div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resourceassign/<em class="ph i">&lt;offeringType&gt;</em>/<em class="ph i">&lt;offeringNumber&gt;</em>/<em class="ph i">&lt;resourceType&gt;</em>/<em class="ph i">&lt;resourceName&gt;</em>?ignoreConflicts=true
+                        <div class="note note note_note"><span class="note__title">Note:</span> Resource type can be (person, room, inventory or equipment). For
+                        custom delivery types, <u class="ph u">delivery type name</u> itself would be considered
+                        as offering type.<p class="p">For offeringType, you can pass ilt for ILT Offering, wbt
+                            for WBT Offering, vc for Virtual Class Offering and blended for Blended
+                            Offering.</p></div></div></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-retrieve-the-assignment-details-N1455C__table_l2k_qdg_ns"><caption><span class="table--title-label">Table 9. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-retrieve-the-assignment-details-N1455C__table_l2k_qdg_ns__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-retrieve-the-assignment-details-N1455C__table_l2k_qdg_ns__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-retrieve-the-assignment-details-N1455C__table_l2k_qdg_ns__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-retrieve-the-assignment-details-N1455C__table_l2k_qdg_ns__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-retrieve-the-assignment-details-N1455C__table_l2k_qdg_ns__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-the-assignment-details-N1455C__table_l2k_qdg_ns__entry__1 ">assignId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-the-assignment-details-N1455C__table_l2k_qdg_ns__entry__2 ">Assignment's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-the-assignment-details-N1455C__table_l2k_qdg_ns__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-the-assignment-details-N1455C__table_l2k_qdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-retrieve-the-assignment-details-N1455C__table_l2k_qdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "@type": "com.saba.rest.businesscomponent.impl.ResourceAssignmentRESTDTO",
+  "offering": {
+    "@type": "ServiceObjectReference",
+    "id": "class000000000002821",
+    "displayName": "VCLASSCC"
+  },
+  "purpose": {
+    "@type": "ServiceObjectReference",
+    "id": "recat000000000000503",
+    "displayName": "0- Unknown"
+  },
+  "quantity": 1,
+  "selectSessions": [
+    "java.util.HashSet",
+    [
+      {
+        "@type": "ServiceObjectReference",
+        "id": "timel000000000013671",
+        "displayName": ""
+      }
+    ]
+  ],
+  "unSelectSessions": [
+    "java.util.HashSet",
+    [
+      {
+        "@type": "ServiceObjectReference",
+        "id": "timel000000000013672",
+        "displayName": ""
+      }
+    ]
+  ],
+  "role": null,
+  "resource": {
+    "@type": "ServiceObjectReference",
+    "id": "emplo000000000022474",
+    "displayName": "TESTUSER04"
+  },
+  "id": "assnm000000000001215"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title11" id="post-assign-a-resource-to-an-offering-N144AF">
+        <h2 class="title topictitle2" id="ariaid-title11">ASSIGN A RESOURCE TO AN OFFERING</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Assigns a resource to an offering depending on the parameters provided in the
+                    request JSON.</p>
+                <div class="p">The Request Body should contain the following mandatory parameters:<ol class="ol" id="post-assign-a-resource-to-an-offering-N144AF__ol_ayr_gkg_ns">
+                        <li class="li">Purpose ID</li>
+                        <li class="li">Resource ID: person/inventory/classroom/equipment</li>
+                        <li class="li">Session Set: Set of IDs of the session within the offering. </li>
+                        <li class="li">Role: {100/200}. This is applicable for Blended offering to choose role
+                            for person resource as lead/copresentor </li>
+                        <li class="li">Quantity: 1 for person/classroom/equipment and positive value for
+                            inventory eg. quantity = 10 <div class="p">
+                                <div class="note note note_note"><span class="note__title">Note:</span> If a resource has conflict, it would not be assigned.To handle
+                                    such scenario use the "ignoreConflicts" flag to ignore conflicts
+                                    in sessions possible value for this flag are true/false.</div>
+                            </div></li>
+                    </ol></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resourceassign/:offeringId?ignoreConflicts=true
+                </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">offeringNumber</strong> instead of the internal Offering's
+                        ID.<div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resourceassign/<em class="ph i">&lt;offeringType&gt;</em>/<em class="ph i">&lt;offeringNumber&gt;</em>?ignoreConflicts=true
+                        <div class="note note note_note"><span class="note__title">Note:</span> For custom delivery types, <u class="ph u">delivery type name</u> itself would be
+                        considered as offering type.<p class="p">For offeringType, you can pass ilt for ILT
+                            Offering, wbt for WBT Offering, vc for Virtual Class Offering and
+                            blended for Blended Offering.</p></div></div></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns"><caption><span class="table--title-label">Table 10. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__1 ">offeringId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__2 ">Offering's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__1 ">purpose</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__2 ">Purpose</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__3 "> recat000000000000503 </td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__1 ">resource</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__2 ">Resource</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__3 "> Person User emplo000000000022474 </td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__1 ">selectSessions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__2 ">Select the sessions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__1 ">role</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__2 ">role</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__3 ">100</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__1 ">quantity</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__2 ">Quantity</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__2 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__3 ">com.saba.rest.businesscomponent.impl.ResourceAssignmentRESTDTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-resource-to-an-offering-N144AF__table_izv_gdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "quantity": 1,
+  "purpose": {
+    "@type": "ServiceObjectReference",
+    "displayName":"Instructor"    
+  },
+  "resource": {
+    "@type": "ServiceObjectReference",
+    "id":"emplo000000000001000"
+  },
+  "resourcetype":"Person",
+  "@type": "com.saba.rest.businesscomponent.impl.ResourceAssignmentRESTDTO",
+  "selectSessions": [
+    "java.util.HashSet",
+    [
+      {
+        "@type": "ServiceObjectReference",
+        "id": "timel000000000013671"
+      }
+    ]
+  ],
+ "role":100
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+@type: "org.codehaus.jackson.node.ObjectNode"
+id: "assnm000000000001215"
+offeringId: "class000000000002821"
+href: "http://localhost/Saba/api/businesscomponent/learning/resourceassign/assnm000000000001215"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title12" id="put-update-an-existing-resource-assignment-N14585">
+        <h2 class="title topictitle2" id="ariaid-title12">UPDATE AN EXISTING RESOURCE ASSIGNMENT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Updates an existing resource assignment.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resourceassign/:assignId?ignoreConflicts=true
+                </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">offeringNumber</strong> instead of the internal Offering's ID and the
+                    <strong class="ph b">resourceName</strong> instead of the internal Assignment's
+                        ID.<div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resourceassign/<em class="ph i">&lt;offeringType&gt;</em>/<em class="ph i">&lt;offeringNumber&gt;</em>/<em class="ph i">&lt;resourceType&gt;</em>/<em class="ph i">&lt;resourceName&gt;</em>?ignoreConflicts=true
+                        <div class="note note note_note"><span class="note__title">Note:</span> Resource type can be (person, room, inventory or equipment). For
+                        custom delivery types, <u class="ph u">delivery type name</u> itself would be considered
+                        as offering type.<p class="p">For offeringType, you can pass ilt for ILT Offering, wbt
+                            for WBT Offering, vc for Virtual Class Offering and blended for Blended
+                            Offering.</p></div></div></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns"><caption><span class="table--title-label">Table 11. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__1 ">assignId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__2 ">Assignment's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__1 ">purpose</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__2 ">Purpose</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__3 "> recat000000000000503 </td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__1 ">resource</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__2 ">Resource</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__3 "> Person User emplo000000000022474 </td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__1 ">selectSessions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__2 ">Select the sessions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__1 ">role</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__2 ">Role</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__3 ">100</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__1 ">quantity</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__2 ">Quantity</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__2 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__3 ">com.saba.rest.businesscomponent.impl.ResourceAssignmentRESTDTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-an-existing-resource-assignment-N14585__table_u2c_jdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "quantity": 1,
+  "purpose": {
+    "@type": "ServiceObjectReference",
+    "id": "recat000000000000503"
+  },
+  "resource": {
+    "@type": "ServiceObjectReference",
+    "displayName": "Person User",
+    "id": "emplo000000000022474"
+  },
+  "@type": "com.saba.rest.businesscomponent.impl.ResourceAssignmentRESTDTO",
+  "selectSessions": [
+    "java.util.HashSet",
+    [
+      {
+        "@type": "ServiceObjectReference",
+        "id": "timel000000000013671"
+      }
+    ]
+  ],
+ "role":100
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+@type: "org.codehaus.jackson.node.ObjectNode"
+id: "assnm000000000001215"
+offeringId: "class000000000002821"
+href: "http://localhost/Saba/api/businesscomponent/learning/resourceassign/assnm000000000001215"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title13" id="delete-remove-an-existing-assigned-resource-N14632">
+        <h2 class="title topictitle2" id="ariaid-title13">REMOVE AN EXISTING ASSIGNED RESOURCE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Deletes the existing assigned resource.It returns a status indicating successful
+                    deletion.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resourceassign/:assignId?ignoreConflicts=true
+                </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">offeringNumber</strong> instead of the internal Offering's ID and the
+                    <strong class="ph b">resourceName</strong> instead of the internal Assignment's
+                        ID.<div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/resourceassign/<em class="ph i">&lt;offeringType&gt;</em>/<em class="ph i">&lt;offeringNumber&gt;</em>/<em class="ph i">&lt;resourceType&gt;</em>/<em class="ph i">&lt;resourceName&gt;</em>?ignoreConflicts=true <div class="note note note_note"><span class="note__title">Note:</span> 
+                        <p class="p">Resource type can be (person, room, inventory or equipment). For custom
+                            delivery types, <u class="ph u">delivery type name</u> itself would be considered as
+                            offering type.</p>
+                        <p class="p">For offeringType, you can pass ilt for ILT Offering, wbt for WBT
+                            Offering, vc for Virtual Class Offering and blended for Blended
+                            Offering.</p>
+                    </div></div></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="delete-remove-an-existing-assigned-resource-N14632__table_eds_jdg_ns"><caption><span class="table--title-label">Table 12. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-an-existing-assigned-resource-N14632__table_eds_jdg_ns__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-an-existing-assigned-resource-N14632__table_eds_jdg_ns__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-an-existing-assigned-resource-N14632__table_eds_jdg_ns__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-an-existing-assigned-resource-N14632__table_eds_jdg_ns__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-an-existing-assigned-resource-N14632__table_eds_jdg_ns__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-an-existing-assigned-resource-N14632__table_eds_jdg_ns__entry__1 ">assignId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-an-existing-assigned-resource-N14632__table_eds_jdg_ns__entry__2 ">Assignment's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-an-existing-assigned-resource-N14632__table_eds_jdg_ns__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-an-existing-assigned-resource-N14632__table_eds_jdg_ns__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-an-existing-assigned-resource-N14632__table_eds_jdg_ns__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "@type":"org.codehaus.jackson.node.ObjectNode","status":"successful"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

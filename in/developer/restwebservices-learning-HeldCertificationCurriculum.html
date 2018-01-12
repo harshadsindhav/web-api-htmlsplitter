@@ -1,0 +1,3379 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="learning, restful web services, get held certification/curriculum activity details, learning components, get held certification/curriculum activity details, get completion and lesson details of the learning event, get completion and lesson details of the learning event, get held certification/curriculum details along with all the activities, get held certification/curriculum details along with all the activities, search all the certifications/curricula assigned to a learner based on the status, timestamp, search all the certifications/curricula assigned to a learner based on the status, timestamp, search certifications/curricula of the logged in user, search certifications/curricula of the logged in user, auto-enroll learners into courses inside the certification/curriculum, auto-enroll learners into courses inside the certification/curriculum, assign certification/curriculum to a person, assign certification/curriculum to a person, grant certification/curriculum to a learner, grant certification/curriculum to a learner, update the target days/date for the assigned certification/curriculum activity, update the target days/date for the assigned certification/curriculum activity, update the expiration date of the held certification, update the expiration date of the held certification, remove the certification/curriculum activity of a learner, remove the certification/curriculum activity of a learner, get the meta details of the course activity, get the meta details of the course activity, get the details of a particular course activity, get the details of a particular course activity, get all the course activities of the logged in user, get all the course activities of the logged in user, find the details of the course activities based on criteria, find the details of the course activities based on criteria, assign a course to a person, assign a course to a person, update the details of a course activity, update the details of a course activity, remove a course from a learner, remove a course from a learner"><meta name="keywords" content="learning, restful web services, get held certification/curriculum activity details, learning components, get held certification/curriculum activity details, get completion and lesson details of the learning event, get completion and lesson details of the learning event, get held certification/curriculum details along with all the activities, get held certification/curriculum details along with all the activities, search all the certifications/curricula assigned to a learner based on the status, timestamp, search all the certifications/curricula assigned to a learner based on the status, timestamp, search certifications/curricula of the logged in user, search certifications/curricula of the logged in user, auto-enroll learners into courses inside the certification/curriculum, auto-enroll learners into courses inside the certification/curriculum, assign certification/curriculum to a person, assign certification/curriculum to a person, grant certification/curriculum to a learner, grant certification/curriculum to a learner, update the target days/date for the assigned certification/curriculum activity, update the target days/date for the assigned certification/curriculum activity, update the expiration date of the held certification, update the expiration date of the held certification, remove the certification/curriculum activity of a learner, remove the certification/curriculum activity of a learner, get the meta details of the course activity, get the meta details of the course activity, get the details of a particular course activity, get the details of a particular course activity, get all the course activities of the logged in user, get all the course activities of the logged in user, find the details of the course activities based on criteria, find the details of the course activities based on criteria, assign a course to a person, assign a course to a person, update the details of a course activity, update the details of a course activity, remove a course from a learner, remove a course from a learner"><meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Learning-apis"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Learning Event</title></head><body id="Learning-apis"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Learning Event</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-learning.html">Learning</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-get-held-certification-curriculum-activity-details-N130DF">
+        <h2 class="title topictitle2" id="ariaid-title2">GET HELD CERTIFICATION/CURRICULUM ACTIVITY DETAILS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Gets held Certification/Curriculum activity details</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/activity/:activityId</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-held-certification-curriculum-activity-details-N130DF__table_fdl_3cm_wq"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-activity-details-N130DF__table_fdl_3cm_wq__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-activity-details-N130DF__table_fdl_3cm_wq__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-activity-details-N130DF__table_fdl_3cm_wq__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-activity-details-N130DF__table_fdl_3cm_wq__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-activity-details-N130DF__table_fdl_3cm_wq__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-activity-details-N130DF__table_fdl_3cm_wq__entry__1 ">activityId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-activity-details-N130DF__table_fdl_3cm_wq__entry__2 ">Held Certification/Curriculum activity ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-activity-details-N130DF__table_fdl_3cm_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-activity-details-N130DF__table_fdl_3cm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-activity-details-N130DF__table_fdl_3cm_wq__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return
+                    Values</h3><p class="p"><strong class="ph b">Certification:</strong></p><pre class="pre codeblock"><code>{
+    "id": "certh000000000008541",
+    "source": {
+        "id": "emplo000000000200095",
+        "displayName": "Shuchi111 Lau"
+    },
+    "status": null,
+    "assignment": {
+        "id": "stuce000000000201799",
+        "displayName": null
+    },
+    "assignee": {
+        "id": "emplo000000000200095",
+        "displayName": "Shuchi111 Lau"
+    },
+    "targetDate": 1440324105000,
+    "activityDefinition": {
+        "id": "crtfy000000000200360",
+        "displayName": "BlendedenrCert1en_US"
+    },
+    "assignedOn": 1421143305000,
+    "percentCompleted": 0
+}</code></pre><strong class="ph b">Curriculum:</strong><pre class="pre codeblock"><code>{
+    "id": "currh000000000008522",
+    "source": {
+        "id": "emplo000000000200095",
+        "displayName": "Shuchi111 Lau"
+    },
+    "status": null,
+    "assignment": {
+        "id": "stcur000000000002113",
+        "displayName": null
+    },
+    "assignee": {
+        "id": "emplo000000000200095",
+        "displayName": "Shuchi111 Lau"
+    },
+    "targetDate": 1440149790000,
+    "activityDefinition": {
+        "id": "curra000000000001000",
+        "displayName": "Curriculum1"
+    },
+    "assignedOn": 1420968990000,
+    "percentCompleted": 0
+}</code></pre></section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_spl_2rr_vw">
+        <h2 class="title topictitle2" id="ariaid-title3">GET COMPLETION AND LESSON DETAILS OF THE LEARNING EVENT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Gets completion and lesson details of the learning event. This API helps
+                    determine whether the elements of a certification were completed directly or by
+                    completing an equivalent.</p>
+                <div class="p">It can also return the lesson details (sections:(completiondetail,lessondetail))
+                    i.e. the HeldCertification/HeldCurriculum details along with the path, learning
+                    modules and learning interventions and the <strong class="ph b">lesson details</strong> with the
+                    information regarding the courses that are completed and whether they are
+                    completed by equivalence.<div class="note note note_note"><span class="note__title">Note:</span> If the learner has not registered for a course or
+                        if the learner has registered but never launched it, the lesson information
+                        will not be returned. </div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/:heldCertId/:pathId/sections:(:searchFields)
+                </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_spl_2rr_vw__table_cql_2rr_vw"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_spl_2rr_vw__table_cql_2rr_vw__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_spl_2rr_vw__table_cql_2rr_vw__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_spl_2rr_vw__table_cql_2rr_vw__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_spl_2rr_vw__table_cql_2rr_vw__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_spl_2rr_vw__table_cql_2rr_vw__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__1 ">heldCertId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__2 ">Held Certification/Curriculum activity ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__3 ">stuce000000000202608</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__1 ">pathId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__2 ">Path ID </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__3 ">track000000000201083</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__2 ">Completion Detail / Lesson Details of the
+                                    learning event</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__3 ">completiondetail<p class="p">lessondetail</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_spl_2rr_vw__table_cql_2rr_vw__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "owner": {
+        "id": "persn000000000016671",
+        "displayName": "testperson1 testperson1"
+    },
+    "percentCompleted": 100,
+    "acquiredOn": "2016/11/15T00:00:00UTC",
+    "revoked_on": null,
+    "assignedOnDate": "2016/11/15T11:37:40UTC",
+    "type": "CERTIFICATION",
+    "certification": {
+        "id": "crtfy000000000001601",
+        "displayName": "hotfix_Cert"
+    },
+    "path": {
+        "learningModules": [
+            {
+                "is_reqd": true,
+                "sequence": 1,
+                "learningInterventions": [
+                    {
+                        "sequence": 1,
+                        "id": "edupl000000000001861",
+                        "part_id": {
+                            "id": "cours000000000011164",
+                            "displayName": "hotfix_Course"
+                        },
+                        "completionStatus": {
+                            "key": 200,
+                            "desc": "Successful"
+                        },
+                        "type": "COURSE",
+                        "lessonDetails": {
+                            "class_id": "dowbt000000000010645",
+                            "registration_id": "regdw000000000007252",
+                            "class_no": "00011223--TEST_WBT_567",
+                            "contentDetails": [
+                                {
+                                    "lessonStatus": "N",
+                                    "lessonLocation": null,
+                                    "contextId": "ctctx000000000020603",
+                                    "contentTitle": "Access Configuration in ISA Server 2004",
+                                    "subscriptionId": "ctnsr000000000024072"
+                                },
+                                {
+                                    "lessonStatus": "N",
+                                    "lessonLocation": null,
+                                    "contextId": "ctctx000000000020603",
+                                    "contentTitle": "Access Control and Physical Security",
+                                    "subscriptionId": "ctnsr000000000024073"
+                                },
+                                {
+                                    "lessonStatus": "N",
+                                    "lessonLocation": null,
+                                    "contextId": "ctctx000000000020603",
+                                    "contentTitle": "airtel : CS Induction",
+                                    "subscriptionId": "ctnsr000000000024074"
+                                },
+                                {
+                                    "lessonStatus": "N",
+                                    "lessonLocation": null,
+                                    "contextId": "ctctx000000000020603",
+                                    "contentTitle": "airtel : CS Induction",
+                                    "subscriptionId": "ctnsr000000000024074"
+                                },
+                                {
+                                    "lessonStatus": "N",
+                                    "lessonLocation": null,
+                                    "contextId": "ctctx000000000020603",
+                                    "contentTitle": "Introduction to Selling Genesys Products and Solutions V3",
+                                    "subscriptionId": "ctnsr000000000024075"
+                                }
+                            ]
+                        },
+                        "is_completion_by_equivalent": false,
+                        "is_completed": true
+                    }
+                ],
+                "displayName": "hotfix_module",
+                "no_of_total_items": 1,
+                "no_of_reqd_items": 1,
+                "no_of_total_items_completed": 1,
+                "id": "cegrp000000000001741"
+            }
+        ],
+        "percentCompleted": 100,
+        "is_default_path": true,
+        "is_acquisition_path": true,
+        "no_of_reqd_modules": 1,
+        "displayName": "hotFix_Path",
+        "no_of_total_modules": 1,
+        "id": "track000000000001721",
+        "is_recert_path": false
+    },
+    "inRecertification": false,
+    "recert_window_starts_on": null,
+    "id": "stuce000000000008682",
+    "expired_on": null,
+    "status": {
+        "description": "Acquired",
+        "status": "100"
+    }
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Example (Get Completion Details and Lesson Details for a specific path
+                    within a specific held certification/curriculum)</h3><p class="p">To get the completion
+                    details and lesson details for a specific path within a specific held
+                    certification:</p>https://&lt;hosname-api.sabacloud.com
+                &gt;/v1/learning/heldlearningevent/stuce000000000389597/track000000000010049/sections:(completiondetail,lessondetail)
+                        <p class="p"><strong class="ph b">Return
+                    Values:</strong></p><pre class="pre codeblock"><code>{  
+   "id":"stuce000000000389597",
+   "type":"CERTIFICATION",
+   "certification":{  
+      "id":"crtfy000000000009911",
+      "displayName":"Test_Certification_001"
+   },
+   "owner":{  
+      "id":"emplo000000000285703",
+      "displayName":"uone17 uone17"
+   },
+   "acquiredOn":"2008-03-11T00:00:00.000+0530",
+   "assignedOnDate":"2008-03-11T11:07:07.000+0530",
+   "expired_on":"2008-03-13T00:00:00.000+0530",
+   "recert_window_starts_on":"2008-03-15T00:00:00.000+0530",
+   "revoked_on":null,
+   "inRecertification":false,
+   "status":{  
+      "intStatus":100,
+      "description":"Acquired"
+   },
+   "path":{  
+      "id":"track000000000010049",
+      "displayName":"Recertification Path",
+      "is_default_path":false,
+      "is_acquisition_path":false,
+      "percentcompleted":100,
+      "is_recert_path":true,
+      "no_of_total_modules":1,
+      "no_of_reqd_modules":1,
+      "learningModules":[  
+         {  
+            "sequence":1,
+            "name":"Java",
+            "id":"cegrp000000000200201",
+            "is_reqd":true,
+            "no_of_total_items":2,
+            "no_of_reqd_items":2,
+            "no_of_total_items_completed":2,
+            "learningInterventions":[  
+               {  
+                  "sequence":1,
+                  "type":"COURSE",
+                  "part_id":{  
+                     "id":"cours000000000200706",
+                     "course_no":"00004149",
+                     "displayName":"nc0508-1"
+                  },
+                  "is_completed":true,
+                  "is_completion_by_equivalent":false,
+                  "id":"edupl000000000200340",
+                  "lessonDetails":{  
+                     "class_id":"dowbt000000000039112",
+                     "registration_id":"regdw000000000310120",
+                     "class_no":"00016147",
+                     "contentDetails":[  
+                        {  
+                           "lessonStatus":"N",
+                           "lessonLocation":"",
+                           "contextId":"ctctx000000001258979",
+                           "contentTitle":"A001",
+                           "subscriptionId":"ctnsr000000000751124"
+                        },
+                        {  
+                           "lessonStatus":"N",
+                           "lessonLocation":"",
+                           "contextId":"ctctx000000001258979",
+                           "contentTitle":"A001",
+                           "subscriptionId":"ctnsr000000000751125"
+                        },
+                        {  
+                           "lessonStatus":"f",
+                           "lessonLocation":"a001_end.html",
+                           "contextId":"ctctx000000001258979",
+                           "contentTitle":"Assessment",
+                           "subscriptionId":"ctnsr000000000751126"
+                        },
+                        {  
+                           "lessonStatus":"f",
+                           "lessonLocation":"a001_end.html",
+                           "contextId":"ctctx000000001258979",
+                           "contentTitle":"Assessment",
+                           "subscriptionId":"ctnsr000000000751127"
+                        }
+                     ]
+                  },
+                  "completionStatus":{  
+                     "key":100,
+                     "desc":"Not Evaluated"
+                  }
+               }
+            ]
+         },
+         {  
+            "sequence":2,
+            "type":"CERTIFICATION",
+            "part_id":{  
+               "id":"crtfy000000000006671",
+               "displayName":"Test_Certification1"
+            },
+            "status":{  
+               "intStatus":100,
+               "description":"Acquired"
+            },
+            "id":"edupl000000000200150"
+         }
+      ]
+   }
+}</code></pre><p class="p">To
+                    get the completion details and lesson details for a specific path within a
+                    specific held curriculum:</p><p class="p">https://&lt;
+                    hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stcur000000000001744/track000000000201068/sections:(completiondetail,lessondetail)</p><p class="p"><strong class="ph b">Return
+                        Values:</strong></p><pre class="pre codeblock"><code>{  
+   "id":"stcur000000000001744",
+   "type":"CURRICULUM",
+   "curriculum":{  
+      "id":"curra000000000001028",
+      "displayName":"Curriculum1"
+   },
+   "owner":{  
+      "id":"emplo000000000285703",
+      "displayName":"uone17 uone17"
+   },
+   "acquiredOn":"2008-03-11T00:00:00.000+0530",
+   "assignedOnDate":"2008-03-11T11:07:07.000+0530",
+   "expired_on":"2008-03-13T00:00:00.000+0530",
+   "status":{  
+      "intStatus":400,
+      "description":"Assigned"
+   },
+   "path":{  
+      "id":"track000000000010049",
+      "displayName":"Recertification Path",
+      "is_default_path":false,
+      "is_acquisition_path":false,
+      "percentcompleted":100,
+      "is_recert_path":false,
+      "no_of_total_modules":1,
+      "no_of_reqd_modules":1,
+      "learningModules":[  
+         {  
+            "sequence":1,
+            "name":"Java",
+            "id":"cegrp000000000200201",
+            "is_reqd":true,
+            "no_of_total_items":1,
+            "no_of_reqd_items":1,
+            "no_of_total_items_completed":1,
+            "learningInterventions":[  
+               {  
+                  "sequence":1,
+                  "type":"COURSE",
+                  "part_id":{  
+                     "id":"cours000000000200709",
+                     "course_no":"00005678",
+                     "displayName":"Course_for_Curriculum"
+                  },
+                  "is_completed":true,
+                  "is_completion_by_equivalent":false,
+                  "id":"edupl000000000200342",
+                  "lessonDetails":{  
+                     "class_id":"dowbt000000000039122",
+                     "registration_id":"regdw000000000311120",
+                     "class_no":"00016148",
+                     "contentDetails":[  
+                        {  
+                           "lessonStatus":"N",
+                           "lessonLocation":"",
+                           "contextId":"ctctx000000011258979",
+                           "contentTitle":"A001",
+                           "subscriptionId":"ctnsr000000001751124"
+                        },
+                        {  
+                           "lessonStatus":"N",
+                           "lessonLocation":"",
+                           "contextId":"ctctx000000011258979",
+                           "contentTitle":"A001",
+                           "subscriptionId":"ctnsr000000001751125"
+                        },
+                        {  
+                           "lessonStatus":"f",
+                           "lessonLocation":"a001_end.html",
+                           "contextId":"ctctx000000011258979",
+                           "contentTitle":"Assessment",
+                           "subscriptionId":"ctnsr000000001751126"
+                        },
+                        {  
+                           "lessonStatus":"f",
+                           "lessonLocation":"a001_end.html",
+                           "contextId":"ctctx000000011258979",
+                           "contentTitle":"Assessment",
+                           "subscriptionId":"ctnsr000000001751127"
+                        }
+                     ]
+                  },
+                  "completionStatus":{  
+                     "key":100,
+                     "desc":"Not Evaluated"
+                  }
+               }
+            ]
+         }
+      ]
+   }
+}</code></pre></section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6">
+        <h2 class="title topictitle2" id="ariaid-title4">GET HELD CERTIFICATION/CURRICULUM DETAILS ALONG WITH ALL THE ACTIVITIES</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Gets held Certification/Curriculum details along with all the activities</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/:heldCertId</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__1 ">heldCertId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__2 ">Held Certification/Curriculum's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-held-certification-curriculum-details-along-with-all-the-activities-N130B6__table_idl_3cm_wq__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return
+                        Values</h3><p class="p"><strong class="ph b">Certification:</strong></p><pre class="pre codeblock"><code>{
+  "percentcompleted": 0,
+  "requirers": [
+    {
+      "required": true,
+      "assignment": {
+        "id": "stuce000000000392151",
+        "displayName": null
+      },
+      "activityContext": null,
+      "assignee": {
+        "sourceType": "InternalPerson",
+        "activitySourceType": {
+          "sourceType": 0,
+          "listId": "sysli000000000003037",
+          "key": "0",
+          "displayName": "Person"
+        },
+        "locale": {
+          "id": "local000000000000001",
+          "displayName": null
+        },
+        "id": "persn000000000233981",
+        "displayName": "client 01"
+      },
+      "targetDate": 1473059249000,
+      "learningEvent": {
+        "id": "crtfy000000000010611",
+        "displayName": "Test_Certification_123"
+      },
+      "jobTypeId": null,
+      "listIds": null,
+      "assignedOn": 1472022450000,
+      "source": {
+        "sourceType": "InternalPerson",
+        "activitySourceType": {
+          "sourceType": 0,
+          "listId": "sysli000000000003037",
+          "key": "0",
+          "displayName": "Person"
+        },
+        "locale": {
+          "id": "local000000000000001",
+          "displayName": null
+        },
+        "id": "emplo000000000001000",
+        "displayName": "Charles Foster"
+      },
+      "actions": null,
+      "id": "certh000000003030707"
+    }
+  ],
+  "basicdetail": {
+    "updatedOn": 1472022451000,
+    "createdBy": "superuser",
+    "updatedBy": "superuser",
+    "createdOn": 1472022450000,
+    "person": {
+      "sourceType": "InternalPerson",
+      "activitySourceType": {
+        "sourceType": 0,
+        "listId": "sysli000000000003037",
+        "key": "0",
+        "displayName": "Person"
+      },
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": null
+      },
+      "id": "persn000000000233981",
+      "displayName": "client 01"
+    },
+    "certification_id": {
+      "id": "crtfy000000000010611",
+      "displayName": "Test_Certification_123"
+    },
+    "expired_on": null,
+    "reassign": true,
+    "inRecertification": false,
+    "profileElementType": "InternalCert",
+    "revoked_on": null,
+    "need_recert_ot": false,
+    "need_recert_eq": false,
+    "recertificationType": [],
+    "type": "CERTIFICATION",
+    "path": {
+      "id": "track000000000010508",
+      "displayName": "Test_Path_1"
+    },
+    "status": {
+      "intStatus": 400,
+      "description": "Assigned",
+      "key": "400",
+      "displayName": "Assigned"
+    },
+    "id": "stuce000000000392151",
+    "acquiredOn": null,
+    "assignee": {
+      "sourceType": "InternalPerson",
+      "activitySourceType": {
+        "sourceType": 0,
+        "listId": "sysli000000000003037",
+        "key": "0",
+        "displayName": "Person"
+      },
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": null
+      },
+      "id": "persn000000000233981",
+      "displayName": "client 01"
+    },
+    "targetDate": 1473059249000,
+    "need_recert": false,
+    "startedOn": null,
+    "assignedOnDate": 1472022450000,
+    "recert_window_starts_on": null,
+    "heldCertNo": "00448808  ",
+    "owner": {
+      "sourceType": "InternalPerson",
+      "activitySourceType": {
+        "sourceType": 0,
+        "listId": "sysli000000000003037",
+        "key": "0",
+        "displayName": "Person"
+      },
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": null
+      },
+      "id": "persn000000000233981",
+      "displayName": "client 01"
+    },
+    "assigneeAdditionalDetails": {
+      "person_no": "00010831",
+      "username": "CONE01"
+    },
+    "need_recert_cert": false
+  },
+  "isgranted": null
+}</code></pre><div class="note note note_note"><span class="note__title">Note:</span> <strong class="ph b">assignedOnDate</strong>
+                    and <strong class="ph b">acquiredOn</strong> have date values in timestamp
+                    format.</div><strong class="ph b">Curriculum:</strong><pre class="pre codeblock"><code>{
+  "percentcompleted": 0,
+  "requirers": [
+    {
+      "required": true,
+      "assignment": {
+        "id": "stcur000000000043418",
+        "displayName": null
+      },
+      "activityContext": null,
+      "assignee": {
+        "sourceType": "InternalPerson",
+        "activitySourceType": {
+          "sourceType": 0,
+          "listId": "sysli000000000003037",
+          "key": "0",
+          "displayName": "Person"
+        },
+        "locale": {
+          "id": "local000000000000001",
+          "displayName": null
+        },
+        "id": "emplo000000000275911",
+        "displayName": "Sean O'coner"
+      },
+      "targetDate": null,
+      "learningEvent": {
+        "id": "curra000000000001941",
+        "displayName": "25 Curricula"
+      },
+      "jobTypeId": null,
+      "listIds": null,
+      "assignedOn": 1412037159000,
+      "source": {
+        "componentName": "Prescription Rule",
+        "activitySourceType": {
+          "sourceType": 3,
+          "listId": "sysli000000000003037",
+          "key": "3",
+          "displayName": "Prescriptive Rule"
+        },
+        "primaryKey": {
+          "prefix": "prule",
+          "id": "prule000000000004647"
+        },
+        "locale": {
+          "id": "local000000000000001",
+          "displayName": null
+        },
+        "id": "prule000000000004647",
+        "displayName": "u27"
+      },
+      "actions": null,
+      "id": "currh000000001416138"
+    }
+  ],
+  "basicdetail": {
+    "updatedOn": 1445816994000,
+    "createdBy": "bwillis@saba.com",
+    "updatedBy": "admin",
+    "createdOn": 1412037159000,
+    "need_recert": false,
+    "curriculum": {
+      "id": "curra000000000001941",
+      "displayName": "25 Curricula"
+    },
+    "recert_window_starts_on": null,
+    "revokedOn": null,
+    "type": "CURRICULUM",
+    "path": null,
+    "status": {
+      "intStatus": 400,
+      "description": "Assigned",
+      "displayName": "Assigned"
+    },
+    "acquiredOn": null,
+    "assignee": {
+      "sourceType": "InternalPerson",
+      "activitySourceType": {
+        "sourceType": 0,
+        "listId": "sysli000000000003037",
+        "key": "0",
+        "displayName": "Person"
+      },
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": null
+      },
+      "id": "emplo000000000275911",
+      "displayName": "Sean O'coner"
+    },
+    "targetDate": null,
+    "startedOn": null,
+    "assignedOnDate": 1412037159000,
+    "heldCertNo": "00262446  ",
+    "owner": {
+      "sourceType": "InternalPerson",
+      "activitySourceType": {
+        "sourceType": 0,
+        "listId": "sysli000000000003037",
+        "key": "0",
+        "displayName": "Person"
+      },
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": null
+      },
+      "id": "emplo000000000275911",
+      "displayName": "Sean O'coner"
+    },
+    "id": "stcur000000000043418",
+    "assigneeAdditionalDetails": {
+      "person_no": "00006160",
+      "username": "O'CONER@GMAIL.COM"
+    }
+  },
+  "isgranted": null
+}</code></pre><div class="note note note_note"><span class="note__title">Note:</span> <strong class="ph b">assignedOnDate</strong>
+                    and <strong class="ph b">acquiredOn</strong> have date values in timestamp format.</div></section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B">
+        <h2 class="title topictitle2" id="ariaid-title5">SEARCH ALL THE CERTIFICATIONS/CURRICULA ASSIGNED TO A LEARNER BASED ON THE STATUS,
+            TIMESTAMP</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Search all the certifications assigned to a learner based on the status or
+                    timestamps.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent?type=:type&amp;q=(:criteria)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (To search across all held CERTIFICATIONS/CURRICULA regardless of the
+                    learner)</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent?type=:type&amp;q=(:criteria)&amp;count=:count&amp;startPage=:startPage<strong class="ph b">&amp;isAdmin=true</strong></p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__1 ">type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__2 ">The desired component i.e. Certification or
+                                    Curriculum.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__3 ">certification</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__4 ">enumerated</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__1 ">criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__2 ">The search criteria:<ul class="ul" id="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__ul_qnz_j2h_dy">
+                                        <li class="li">cert_name (this attribute is used for both certification
+                                            name and curriculum name)</li>
+                                        <li class="li">cert_version </li>
+                                        <li class="li">target_date</li>
+                                        <li class="li">status_description_cert </li>
+                                        <li class="li">status_description_curr</li>
+                                        <li class="li">path_name </li>
+                                        <li class="li">acquired_on</li>
+                                        <li class="li">expired_on</li>
+                                        <li class="li">assigned_on</li>
+                                        <li class="li">revoked_on</li>
+                                        <li class="li">cancelled_on</li>
+                                        <li class="li">created_on</li>
+                                        <li class="li">updated_on</li>
+                                        <li class="li">assignee</li>
+                                        <li class="li">status</li>
+                                    </ul><div class="p">For CURRICULA the following are the possible
+                                            <strong class="ph b">values</strong> for the <strong class="ph b">status</strong> criteria:<ul class="ul" id="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__ul_djq_bpk_f5">
+                                            <li class="li">ACQUIRED : <strong class="ph b">100</strong>
+                                            </li>
+                                            <li class="li">INPROGRESS : <strong class="ph b">200</strong>
+                                            </li>
+                                            <li class="li">ASSIGNED : <strong class="ph b">400</strong>
+                                            </li>
+                                            <li class="li">DISCONTINUED: <strong class="ph b">500</strong>
+                                            </li>
+                                            <li class="li">OVERDUE : <strong class="ph b">600</strong>
+                                            </li>
+                                            <li class="li">CANCELLED :<strong class="ph b">800</strong>
+                                            </li>
+                                        </ul>For CERTIFICATIONS the following are the possible
+                                            <strong class="ph b">values</strong> for the <strong class="ph b">status</strong> criteria:</div><div class="p">
+                                        <ul class="ul">
+                                            <li class="li">ACQUIRED : <strong class="ph b">100</strong>
+                                            </li>
+                                            <li class="li">INPROGRESS : <strong class="ph b">200</strong>
+                                            </li>
+                                            <li class="li">ASSIGNED : <strong class="ph b">400</strong>
+                                            </li>
+                                            <li class="li">DISCONTINUED: <strong class="ph b">500</strong>
+                                            </li>
+                                            <li class="li">OVERDUE : <strong class="ph b">600</strong>
+                                            </li>
+                                            <li class="li">CANCELLED :<strong class="ph b">800</strong>
+                                            </li>
+                                            <li class="li">EXPIRED : <strong class="ph b">300</strong>
+                                            </li>
+                                            <li class="li">REVOKED : <strong class="ph b">700</strong>
+                                            </li>
+                                        </ul>
+                                    </div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__3 ">assignee%3D%3D emplo000000000001600,
+                                    status%3D%3D600, created_on%3Dge%3D2002-01-29 01:29:32 AM,
+                                    updated_on%3Dge%3D2002-01-29 01:29:32 AM</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__1 ">isAdmin</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__2 ">Accepts: true/false. true searches for all users. </td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-all-the-certifications-assigned-to-a-learner-based-on-the-status-N1313B__table_bn3_gcm_wq__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return
+                        Values</h3><strong class="ph b">Certification:</strong><pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "percentcompleted": 0,
+      "requirers": [
+        {
+          "required": true,
+          "assignment": {
+            "id": "stuce000000000266681",
+            "displayName": null
+          },
+          "activityContext": null,
+          "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "targetDate": 1442376060000,
+          "learningEvent": {
+            "id": "crtfy000000000002908",
+            "displayName": "copy of cert print 321"
+          },
+          "jobTypeId": null,
+          "listIds": null,
+          "assignedOn": 1441684901000,
+          "source": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "actions": null,
+          "id": "certh000000001692593"
+        }
+      ],
+      "basicdetail": {
+        "updatedOn": 1444388162000,
+        "createdBy": "admin",
+        "updatedBy": "admin",
+        "createdOn": 1441684901000,
+        "person": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "certification_id": {
+          "id": "crtfy000000000002908",
+          "displayName": "copy of cert print 321"
+        },
+        "expired_on": null,
+        "reassign": true,
+        "inRecertification": false,
+        "profileElementType": "InternalCert",
+        "revoked_on": null,
+        "recertificationType": [],
+        "need_recert_ot": false,
+        "need_recert_eq": false,
+        "type": "CERTIFICATION",
+        "path": {
+          "id": "track000000000003397",
+          "displayName": "Path1"
+        },
+        "status": {
+          "intStatus": 600,
+          "description": "Overdue",
+          "key": "600",
+          "displayName": "Overdue"
+        },
+        "id": "stuce000000000266681",
+        "acquiredOn": null,
+        "assignee": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "targetDate": 1442376060000,
+        "need_recert": false,
+        "startedOn": null,
+        "assignedOnDate": 1441684901000,
+        "recert_window_starts_on": null,
+        "heldCertNo": "00289700  ",
+        "owner": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "assigneeAdditionalDetails": {
+          "person_no": "00001000",
+          "username": "SUPERUSER"
+        },
+        "need_recert_cert": false
+      },
+      "isgranted": null
+    },
+    {
+      "percentcompleted": 0,
+      "requirers": [
+        {
+          "required": true,
+          "assignment": {
+            "id": "stuce000000000390011",
+            "displayName": null
+          },
+          "activityContext": null,
+          "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "targetDate": 1472045627000,
+          "learningEvent": {
+            "id": "crtfy000000000010331",
+            "displayName": "amtest_certif_mandatoryflag"
+          },
+          "jobTypeId": null,
+          "listIds": null,
+          "assignedOn": 1469453627000,
+          "source": {
+            "componentName": "Prescription Rule",
+            "activitySourceType": {
+              "sourceType": 3,
+              "listId": "sysli000000000003037",
+              "key": "3",
+              "displayName": "Prescriptive Rule"
+            },
+            "primaryKey": {
+              "prefix": "prule",
+              "id": "prule000000000011881"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "prule000000000011881",
+            "displayName": "amtest_certif_mandatoryflag"
+          },
+          "actions": null,
+          "id": "certh000000003020410"
+        }
+      ],
+      "basicdetail": {
+        "updatedOn": 1469453628000,
+        "createdBy": "admin",
+        "updatedBy": "admin",
+        "createdOn": 1469453627000,
+        "person": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "certification_id": {
+          "id": "crtfy000000000010331",
+          "displayName": "amtest_certif_mandatoryflag"
+        },
+        "expired_on": null,
+        "reassign": true,
+        "inRecertification": false,
+        "profileElementType": "InternalCert",
+        "revoked_on": null,
+        "recertificationType": [],
+        "need_recert_ot": false,
+        "need_recert_eq": false,
+        "type": "CERTIFICATION",
+        "path": {
+          "id": "track000000000010348",
+          "displayName": "amtestpath1"
+        },
+        "status": {
+          "intStatus": 400,
+          "description": "Assigned",
+          "key": "400",
+          "displayName": "Assigned"
+        },
+        "id": "stuce000000000390011",
+        "acquiredOn": null,
+        "assignee": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          }
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "targetDate": 1472045627000,
+        "need_recert": false,
+        "startedOn": null,
+        "assignedOnDate": 1469453627000,
+        "recert_window_starts_on": null,
+        "heldCertNo": "00447468  ",
+        "owner": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "assigneeAdditionalDetails": {
+          "person_no": "00001000",
+          "username": "SUPERUSER"
+        },
+        "need_recert_cert": false
+      },
+      "isgranted": null
+    }
+  ],
+  "hasMoreResults": true,
+  "itemsPerPage": 2,
+  "totalResults": 115
+}</code></pre><div class="p"><strong class="ph b">Curriculum:</strong><pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "percentcompleted": 100,
+      "requirers": [
+        {
+          "required": true,
+          "assignment": {
+            "id": "stcur000000000044164",
+            "displayName": null
+          },
+          "activityContext": null,
+          "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "targetDate": 1413259200000,
+          "learningEvent": {
+            "id": "curra000000000002924",
+            "displayName": "certemplateStory-Curriculum"
+          },
+          "jobTypeId": null,
+          "listIds": null,
+          "assignedOn": 1413270631000,
+          "source": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "actions": null,
+          "id": "currh000000001469537"
+        }
+      ],
+      "basicdetail": {
+        "updatedOn": 1413270631000,
+        "createdBy": "superuser",
+        "updatedBy": "superuser",
+        "createdOn": 1413270631000,
+        "need_recert": false,
+        "curriculum": {
+          "id": "curra000000000002924",
+          "displayName": "certemplateStory-Curriculum"
+        },
+        "recert_window_starts_on": null,
+        "revokedOn": null,
+        "type": "CURRICULUM",
+        "path": {
+          "id": "track000000000004746",
+          "displayName": "1"
+        },
+        "status": {
+          "intStatus": 100,
+          "description": "Acquired",
+          "displayName": "Acquired"
+        },
+        "acquiredOn": 1413259200000,
+        "assignee": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "targetDate": null,
+        "startedOn": 1413259200000,
+        "assignedOnDate": 1413270631000,
+        "heldCertNo": "00267097  ",
+        "owner": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "id": "stcur000000000044164",
+        "assigneeAdditionalDetails": {
+          "person_no": "00001000",
+          "username": "SUPERUSER"
+        }
+      },
+      "isgranted": null
+    },
+    {
+      "percentcompleted": 0,
+      "requirers": [
+        {
+          "required": true,
+          "assignment": {
+            "id": "stcur000000000028104",
+            "displayName": null
+          },
+          "activityContext": null,
+          "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "targetDate": 1409284800000,
+          "learningEvent": {
+            "id": "curra000000000002620",
+            "displayName": "\"Curriculum - 1\""
+          },
+          "jobTypeId": null,
+          "listIds": null,
+          "assignedOn": 1407999097000,
+          "source": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "actions": null,
+          "id": "currh000000000855027"
+        }
+      ],
+      "basicdetail": {
+        "updatedOn": 1415694199000,
+        "createdBy": "superuser",
+        "updatedBy": "admin",
+        "createdOn": 1407999097000,
+        "need_recert": false,
+        "curriculum": {
+          "id": "curra000000000002620",
+          "displayName": "\"Curriculum - 1\""
+        },
+        "recert_window_starts_on": null,
+        "revokedOn": null,
+        "type": "CURRICULUM",
+        "path": {
+          "id": "track000000000004289",
+          "displayName": "1"
+        },
+        "status": {
+          "intStatus": 600,
+          "description": "Overdue",
+          "displayName": "Overdue"
+        },
+        "acquiredOn": null,
+        "assignee": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "targetDate": 1409284800000,
+        "startedOn": null,
+        "assignedOnDate": 1407999097000,
+        "heldCertNo": "00206679  ",
+        "owner": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "id": "stcur000000000028104",
+        "assigneeAdditionalDetails": {
+          "person_no": "00001000",
+          "username": "SUPERUSER"
+        }
+      },
+      "isgranted": null
+    }
+  ],
+  "hasMoreResults": true,
+  "itemsPerPage": 2,
+  "totalResults": 36
+}</code></pre></div></section>
+            <section class="section"><h3 class="title sectiontitle">Search for all held learnings using isAdmin</h3><strong class="ph b">For
+                        example:</strong><p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent?type=certification&amp;count=10&amp;startPage=1&amp;isAdmin=true</p><div class="p"><strong class="ph b">Return
+                        Values:</strong><pre class="pre codeblock"><code>{
+  "startIndex": 1,
+  "results": [
+    {
+      "id": "stuce000000000001028",
+      "displayName": "Cert Reg",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stuce000000000001028"
+    },
+    {
+      "id": "stuce000000000002002",
+      "displayName": "Cert Reg",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stuce000000000002002"
+    },
+    {
+      "id": "stuce000000000001743",
+      "displayName": "Cert Reg",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stuce000000000001743"
+    },
+    {
+      "id": "stuce000000000002102",
+      "displayName": "Cert Reg",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stuce000000000002102"
+    },
+    {
+      "id": "stuce000000000001025",
+      "displayName": "Cert Reg",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stuce000000000001025"
+    },
+    {
+      "id": "stuce000000000045235",
+      "displayName": "Aks - Cert - 3",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stuce000000000045235"
+    },
+    {
+      "id": "stuce000000000009285",
+      "displayName": "Aks - Cert - 3",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stuce000000000009285"
+    },
+    {
+      "id": "stuce000000000045256",
+      "displayName": "Aks - Cert with exp and recert in month - 3",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stuce000000000045256"
+    },
+    {
+      "id": "stuce000000000006664",
+      "displayName": "Aks - Child cert",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stuce000000000006664"
+    },
+    {
+      "id": "stuce000000000003558",
+      "displayName": "Aks - Cert with exp and recert in month - 5",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stuce000000000003558"
+    }
+  ],
+  "hasMoreResults": true,
+  "itemsPerPage": 10,
+  "totalResults": 21242,
+  "facets": []
+}</code></pre></div><p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent?type=curriculum&amp;count=10&amp;startPage=1&amp;isAdmin=true</p><div class="p"><strong class="ph b">Return
+                        Values:</strong><pre class="pre codeblock"><code>{
+  "startIndex": 1,
+  "results": [
+    {
+      "id": "stcur000000000038472",
+      "displayName": "GBTEST0001",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stcur000000000038472"
+    },
+    {
+      "id": "stcur000000000038471",
+      "displayName": "GBTEST0001",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stcur000000000038471"
+    },
+    {
+      "id": "stcur000000000002932",
+      "displayName": "KQECurr1",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stcur000000000002932"
+    },
+    {
+      "id": "stcur000000000002790",
+      "displayName": "KQECurr1",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stcur000000000002790"
+    },
+    {
+      "id": "stcur000000000003058",
+      "displayName": "KQECurr1",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stcur000000000003058"
+    },
+    {
+      "id": "stcur000000000002930",
+      "displayName": "KQECurr1",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stcur000000000002930"
+    },
+    {
+      "id": "stcur000000000002794",
+      "displayName": "KQECurr1",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stcur000000000002794"
+    },
+    {
+      "id": "stcur000000000002910",
+      "displayName": "KQECurr1",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stcur000000000002910"
+    },
+    {
+      "id": "stcur000000000002950",
+      "displayName": "KQECurr1",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stcur000000000002950"
+    },
+    {
+      "id": "stcur000000000001472",
+      "displayName": "Curr for periodic PR",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stcur000000000001472"
+    }
+  ],
+  "totalResults": 14710,
+  "hasMoreResults": true,
+  "itemsPerPage": 10,
+  "facets": []
+}</code></pre></div></section>
+            <section class="section"><h3 class="title sectiontitle">Search for held learnings using isAdmin for a particular learner
+                    </h3><strong class="ph b">For
+                        example:</strong><p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent</p><p class="p">
+                    ?type=certification&amp;count=10&amp;startPage=1&amp;isAdmin=true&amp;q=(assignee%3D%3Dpersn000000000013501)</p><div class="p"><strong class="ph b">Return
+                        Values:</strong><pre class="pre codeblock"><code>{
+  "startIndex": 1,
+  "results": [
+    {
+      "id": "stuce000000000064564",
+      "displayName": "one_Click_cert_1",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stuce000000000064564"
+    }
+  ],
+  "hasMoreResults": false,
+  "itemsPerPage": 10,
+  "totalResults": 1,
+  "facets": []
+}</code></pre></div><p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent</p><p class="p">
+                    ?type=curriculum&amp;count=10&amp;startPage=1&amp;isAdmin=true&amp;q=(assignee%3D%3Dpersn000000000013501)</p><div class="p"><strong class="ph b">Return
+                        Values:</strong><pre class="pre codeblock"><code>{
+  "startIndex": 1,
+  "results": [
+    {
+      "id": "stcur000000000064567",
+      "displayName": "one_Click_curr",
+      "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learning/heldlearningevent/stcur000000000064567"
+    }
+  ],
+  "hasMoreResults": false,
+  "itemsPerPage": 10,
+  "totalResults": 1,
+  "facets": []
+}</code></pre></div></section>
+            <section class="section"><h3 class="title sectiontitle">Example (Student Certifications that have changed between two
+                    timestamps)</h3><p class="p">To find out all the student certifications that have
+                    changed between two timestamps (for example based on
+                    <strong class="ph b">updated_on</strong>):</p>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent?type=certification&amp;q=(updated_on%3Dge%3D2002-01-29
+                01:29:32 AM,updated_on%3Dle%3D2012-01-29 01:29:32 AM)<p class="p"><strong class="ph b">Return
+                    Values:</strong></p><pre class="pre codeblock"><code>{
+  "totalResults": 2,
+  "hasMoreResults": false,
+  "itemsPerPage": 10,
+  "facets": [],
+  "results": [
+    {
+      "id": "stuce000000000200300",
+      "displayName": "CertificationEW",
+      "href": "http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/stuce000000000200300"
+    },
+    {
+      "id": "stuce000000000200790",
+      "displayName": "Cert A3A 2P 2M 2L 2CRT 1REQ InEffect",
+      "href": "http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/stuce000000000200790"
+    }
+  ],
+  "startIndex": 1
+}</code></pre><p class="p">To
+                    find out all the student certifications that have changed between two timestamps
+                    (for example based on
+                    <strong class="ph b">created_on</strong>):</p>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningeven?type=certification&amp;q=(created_on%3Dge%3D2002-01-29
+                01:29:32 AM,created_on%3Dle%3D2012-01-29 01:29:32 AM)<p class="p"><strong class="ph b">Return
+                Values:</strong></p><pre class="pre codeblock"><code>{
+  "totalResults": 4,
+  "hasMoreResults": false,
+  "itemsPerPage": 10,
+  "facets": [],
+  "results": [
+    {
+      "id": "stuce000000000200300",
+      "displayName": "CertificationEW",
+      "href": "https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/stuce000000000200300"
+    },
+    {
+      "id": "stuce000000000200301",
+      "displayName": "UI Design",
+      "href": "https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/stuce000000000200301"
+    },
+    {
+      "id": "stuce000000000200283",
+      "displayName": "Automation - Adhoc",
+      "href": "https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/stuce000000000200283"
+    },
+    {
+      "id": "stuce000000000200790",
+      "displayName": "Cert A3A 2P 2M 2L 2CRT 1REQ InEffect",
+      "href": "https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/stuce000000000200790"
+    }
+  ],
+  "startIndex": 1
+}</code></pre></section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="get-search-certifications-curricula-of-the-logged-in-user-N13108">
+        <h2 class="title topictitle2" id="ariaid-title6">SEARCH CERTIFICATIONS/CURRICULA OF LOGGED IN USER</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Search Certifications/Curricula of the logged in user</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent?type=:type</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__1 ">type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__2 ">The desired component i.e. Certification or
+                                    Curriculum.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__3 ">certification</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__4 ">enumerated</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return
+                    Values</h3><p class="p"><strong class="ph b">Certification:</strong></p><pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "percentcompleted": 0,
+      "requirers": [
+        {
+          "required": true,
+          "assignment": {
+            "id": "stuce000000000266681",
+            "displayName": null
+          },
+          "activityContext": null,
+          "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "targetDate": 1442376060000,
+          "learningEvent": {
+            "id": "crtfy000000000002908",
+            "displayName": "copy of cert print 321"
+          },
+          "jobTypeId": null,
+          "listIds": null,
+          "assignedOn": 1441684901000,
+          "source": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "actions": null,
+          "id": "certh000000001692593"
+        }
+      ],
+      "basicdetail": {
+        "updatedOn": 1444388162000,
+        "createdBy": "admin",
+        "updatedBy": "admin",
+        "createdOn": 1441684901000,
+        "person": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "certification_id": {
+          "id": "crtfy000000000002908",
+          "displayName": "copy of cert print 321"
+        },
+        "expired_on": null,
+        "reassign": true,
+        "inRecertification": false,
+        "profileElementType": "InternalCert",
+        "revoked_on": null,
+        "recertificationType": [],
+        "need_recert_ot": false,
+        "need_recert_eq": false,
+        "type": "CERTIFICATION",
+        "path": {
+          "id": "track000000000003397",
+          "displayName": "Path1"
+        },
+        "status": {
+          "intStatus": 600,
+          "description": "Overdue",
+          "key": "600",
+          "displayName": "Overdue"
+        },
+        "id": "stuce000000000266681",
+        "acquiredOn": null,
+        "assignee": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "targetDate": 1442376060000,
+        "need_recert": false,
+        "startedOn": null,
+        "assignedOnDate": 1441684901000,
+        "recert_window_starts_on": null,
+        "heldCertNo": "00289700  ",
+        "owner": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "assigneeAdditionalDetails": {
+          "person_no": "00001000",
+          "username": "SUPERUSER"
+        },
+        "need_recert_cert": false
+      },
+      "isgranted": null
+    },
+    {
+      "percentcompleted": 0,
+      "requirers": [
+        {
+          "required": true,
+          "assignment": {
+            "id": "stuce000000000390011",
+            "displayName": null
+          },
+          "activityContext": null,
+          "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "targetDate": 1472045627000,
+          "learningEvent": {
+            "id": "crtfy000000000010331",
+            "displayName": "amtest_certif_mandatoryflag"
+          },
+          "jobTypeId": null,
+          "listIds": null,
+          "assignedOn": 1469453627000,
+          "source": {
+            "componentName": "Prescription Rule",
+            "activitySourceType": {
+              "sourceType": 3,
+              "listId": "sysli000000000003037",
+              "key": "3",
+              "displayName": "Prescriptive Rule"
+            },
+            "primaryKey": {
+              "prefix": "prule",
+              "id": "prule000000000011881"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "prule000000000011881",
+            "displayName": "amtest_certif_mandatoryflag"
+          },
+          "actions": null,
+          "id": "certh000000003020410"
+        }
+      ],
+      "basicdetail": {
+        "updatedOn": 1469453628000,
+        "createdBy": "admin",
+        "updatedBy": "admin",
+        "createdOn": 1469453627000,
+        "person": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "certification_id": {
+          "id": "crtfy000000000010331",
+          "displayName": "amtest_certif_mandatoryflag"
+        },
+        "expired_on": null,
+        "reassign": true,
+        "inRecertification": false,
+        "profileElementType": "InternalCert",
+        "revoked_on": null,
+        "recertificationType": [],
+        "need_recert_ot": false,
+        "need_recert_eq": false,
+        "type": "CERTIFICATION",
+        "path": {
+          "id": "track000000000010348",
+          "displayName": "amtestpath1"
+        },
+        "status": {
+          "intStatus": 400,
+          "description": "Assigned",
+          "key": "400",
+          "displayName": "Assigned"
+        },
+        "id": "stuce000000000390011",
+        "acquiredOn": null,
+        "assignee": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          }
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "targetDate": 1472045627000,
+        "need_recert": false,
+        "startedOn": null,
+        "assignedOnDate": 1469453627000,
+        "recert_window_starts_on": null,
+        "heldCertNo": "00447468  ",
+        "owner": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "assigneeAdditionalDetails": {
+          "person_no": "00001000",
+          "username": "SUPERUSER"
+        },
+        "need_recert_cert": false
+      },
+      "isgranted": null
+    }
+  ],
+  "hasMoreResults": true,
+  "itemsPerPage": 2,
+  "totalResults": 115
+}</code></pre><strong class="ph b">Curriculum:</strong><pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "percentcompleted": 100,
+      "requirers": [
+        {
+          "required": true,
+          "assignment": {
+            "id": "stcur000000000044164",
+            "displayName": null
+          },
+          "activityContext": null,
+          "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "targetDate": 1413259200000,
+          "learningEvent": {
+            "id": "curra000000000002924",
+            "displayName": "certemplateStory-Curriculum"
+          },
+          "jobTypeId": null,
+          "listIds": null,
+          "assignedOn": 1413270631000,
+          "source": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "actions": null,
+          "id": "currh000000001469537"
+        }
+      ],
+      "basicdetail": {
+        "updatedOn": 1413270631000,
+        "createdBy": "superuser",
+        "updatedBy": "superuser",
+        "createdOn": 1413270631000,
+        "need_recert": false,
+        "curriculum": {
+          "id": "curra000000000002924",
+          "displayName": "certemplateStory-Curriculum"
+        },
+        "recert_window_starts_on": null,
+        "revokedOn": null,
+        "type": "CURRICULUM",
+        "path": {
+          "id": "track000000000004746",
+          "displayName": "1"
+        },
+        "status": {
+          "intStatus": 100,
+          "description": "Acquired",
+          "displayName": "Acquired"
+        },
+        "acquiredOn": 1413259200000,
+        "assignee": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "targetDate": null,
+        "startedOn": 1413259200000,
+        "assignedOnDate": 1413270631000,
+        "heldCertNo": "00267097  ",
+        "owner": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "id": "stcur000000000044164",
+        "assigneeAdditionalDetails": {
+          "person_no": "00001000",
+          "username": "SUPERUSER"
+        }
+      },
+      "isgranted": null
+    },
+    {
+      "percentcompleted": 0,
+      "requirers": [
+        {
+          "required": true,
+          "assignment": {
+            "id": "stcur000000000028104",
+            "displayName": null
+          },
+          "activityContext": null,
+          "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "targetDate": 1409284800000,
+          "learningEvent": {
+            "id": "curra000000000002620",
+            "displayName": "\"Curriculum - 1\""
+          },
+          "jobTypeId": null,
+          "listIds": null,
+          "assignedOn": 1407999097000,
+          "source": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "actions": null,
+          "id": "currh000000000855027"
+        }
+      ],
+      "basicdetail": {
+        "updatedOn": 1415694199000,
+        "createdBy": "superuser",
+        "updatedBy": "admin",
+        "createdOn": 1407999097000,
+        "need_recert": false,
+        "curriculum": {
+          "id": "curra000000000002620",
+          "displayName": "\"Curriculum - 1\""
+        },
+        "recert_window_starts_on": null,
+        "revokedOn": null,
+        "type": "CURRICULUM",
+        "path": {
+          "id": "track000000000004289",
+          "displayName": "1"
+        },
+        "status": {
+          "intStatus": 600,
+          "description": "Overdue",
+          "displayName": "Overdue"
+        },
+        "acquiredOn": null,
+        "assignee": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "targetDate": 1409284800000,
+        "startedOn": null,
+        "assignedOnDate": 1407999097000,
+        "heldCertNo": "00206679  ",
+        "owner": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "id": "stcur000000000028104",
+        "assigneeAdditionalDetails": {
+          "person_no": "00001000",
+          "username": "SUPERUSER"
+        }
+      },
+      "isgranted": null
+    }
+  ],
+  "hasMoreResults": true,
+  "itemsPerPage": 2,
+  "totalResults": 36
+}</code></pre></section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_yv4_3h3_zx">
+        <h2 class="title topictitle2" id="ariaid-title7">AUTO-ENROLL LEARNERS INTO COURSES INSIDE THE CERTIFICATION/CURRICULUM</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3><div class="p">Auto-enrolls the learners into courses inside the
+                        certification/curriculum.<div class="note note note_note"><span class="note__title">Note:</span> The logic used for determining which
+                        offerings to enroll in is based on the UI workflow of the
+                        application.</div></div>Auto-enrolling is applicable only to: <ul class="ul" id="reference_yv4_3h3_zx__ul_ckn_zl3_zx">
+                    <li class="li">Certifications and curricula that have one-click learning enabled. </li>
+                    <li class="li">Both internal and external orders. </li>
+                    <li class="li">Certifications/Curricula containing a blended program that is applicable to
+                        the learner being registered. </li>
+                    <li class="li">Zero cost orders. For external orders, this is the effective cost of the
+                        order after considering any discounts. This does not apply to internal
+                        orders. </li>
+                </ul></section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/autoenroll</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_yv4_3h3_zx__table_qw4_3h3_zx"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__1 ">learningEvent</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__2 ">Learning Event Input. Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a>
+                                    (Certification/Curriculum).</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__3 ">{\"id\":\"crtfy000000000200994\",
+                                    \"displayName\":\"cert_zero_order_error\", \"type\" :
+                                    \"certification\"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__1 ">orderContact</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__2 ">Order Contact. Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Person).</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__3 "> {\"id\":\"persn000000000001028\",
+                                    \"displayName\":\"cfour\"} </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__1 ">learner</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__2 ">Learner to which the learning event would be
+                                    enrolled and course enrolled. Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Person).</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__3 ">{\"id\":\"persn000000000001028\",
+                                    \"displayName\":\"cfour\"} </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__1 ">targetDate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__2 ">Target Date</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__3 ">2016-11-29</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_yv4_3h3_zx__table_qw4_3h3_zx__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+ "learningEvent" : {
+  "id" : "crtfy000000000200994",
+  "displayName" : "cert_1",
+  "type" : "certification"
+ },
+ "orderContact" : {
+  "id" : "persn000000000001028",
+  "displayName" : "cfour"
+ },
+ "learner" : {
+  "id" : "persn000000000001028",
+  "displayName" : "cfour"
+ },
+ "targetDate" : "2016-11-29"
+}</code></pre>
+                <div class="note note note_note"><span class="note__title">Note:</span> Lookup is supported in the input JSON for "learningEvent", "orderContact" and
+                    "learner".</div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "order": {
+    "orderItemDetail": [
+      {
+        "orderItem": {
+          "id": "iodwn000000000007656",
+          "status": "Pending Approval"
+        },
+        "part": {
+          "displayName": "course_zero_order_1",
+          "id": "dowbt000000000003386",
+          "href": "http://&lt;hostname-api.sabacloud.com&gt;/offering/dowbt000000000003386"
+        },
+        "registration": {
+          "id": "regdw000000000006341",
+          "href": "http://&lt;hostname-api.sabacloud.com&gt;/enrollment/regdw000000000006341"
+        }
+      }
+    ],
+    "heldLearningEvent": {
+      "id": "stuce000000000202759",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/learning/heldlearningevent/stuce000000000202759"
+    },
+    "warnings": [
+      {
+        "message": " Approval is required to register.",
+        "key": "140507"
+      }
+    ],
+    "orderStatus": {
+      "description": "Confirmed",
+      "key": "100"
+    },
+    "id": "intor000000000209258",
+    "href": "http://&lt;hostname-api.sabacloud.com&gt;/learning/order/intor000000000209258"
+  }
+}</code></pre>
+                <div class="p">In case of an error while creating the order, the transaction is rolled back and
+                    the error message is given as the
+                    output:<pre class="pre codeblock"><code>{
+  "errorMessage":  " You are not authorized to perform this action."
+} </code></pre></div>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="post-assign-certification-curriculum-to-a-person-N13026">
+        <h2 class="title topictitle2" id="ariaid-title8">ASSIGN CERTIFICATION/CURRICULUM TO A PERSON</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Assigns certification/curriculum to a person</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/{certId}/person</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq"><caption><span class="table--title-label">Table 7. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__1 ">certId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__2 ">Certification/Curriculum ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__3 ">crtfy000000000200360</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__2 ">Input detail type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__3 ">com.saba.rest.businesscomponent.dto.CertCurrActivityDTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__1 ">targetDays</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__2 ">Target days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__1 ">source</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__2 ">Certification/Curriculum assigner</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__3 "> Shuchi Lau emplo000000000200095 </td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__1 ">assignee</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__2 ">Assignee</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__3 "> Shuchi Lau emplo000000000200095 </td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__1 ">targetDate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__2 ">Target Date</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-certification-curriculum-to-a-person-N13026__table_qq4_lcm_wq__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request
+                    Body</h3><p class="p"><strong class="ph b">Certification:</strong></p><pre class="pre codeblock"><code>{ "@type": "com.saba.rest.businesscomponent.dto.CertCurrActivityDTO",
+    "targetDays": 222,
+    "source": {
+      "@type": "com.saba.rest.service.RESTServiceObjectReference",
+        "id": "emplo000000000200095",
+        "displayName": "Shuchi Lau"
+    },
+    "targetDate": null,
+    "assignee": {
+      "@type": "com.saba.rest.service.RESTServiceObjectReference",
+        "id": "emplo000000000200095",
+        "displayName": "Shuchi Lau"
+    }
+}</code></pre><strong class="ph b">Curriculum:</strong><pre class="pre codeblock"><code>{ "@type": "com.saba.rest.businesscomponent.dto.CertCurrActivityDTO",
+    "targetDays": 222,
+    "source": {
+      "@type": "com.saba.rest.service.RESTServiceObjectReference",
+        "id": "emplo000000000200095",
+        "displayName": "Shuchi Lau"
+    },
+    "targetDate": null,
+    "assignee": {
+      "@type": "com.saba.rest.service.RESTServiceObjectReference",
+        "id": "emplo000000000200095",
+        "displayName": "Shuchi Lau"
+    }
+}</code></pre></section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "stcur000000000002113",
+    "displayName": null,
+    "href": "http://&lt;hostname&gt;/v1/&lt;componentName&gt;/stcur000000000002113"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title9" id="reference_ans_gg3_js">
+        <h2 class="title topictitle2" id="ariaid-title9">GRANT CERTIFICATION/CURRICULUM TO A LEARNER</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <div class="p">Allows the manager, alternate manager, position manager, people admin or group
+                    admin (Only Organization base (Criteria base cannot) ) to grant
+                    certification/curriculum to a learner. The status of such granted
+                    certification/curriculum will be shown as acquired for that learner.<div class="note note note_note"><span class="note__title">Note:</span> To
+                        grant an already assigned certification the <strong class="ph b">suppressWarning</strong> flag
+                        should be true. </div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/:cert_curr_Id/person?action=grant</p>
+                <p class="p">Using the <strong class="ph b">suppressWarning</strong> flag:</p>
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/:cert_curr_Id/person?action=grant&amp;suppressWarning=true</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_ans_gg3_js__table_mns_gg3_js"><caption><span class="table--title-label">Table 8. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_ans_gg3_js__table_mns_gg3_js__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ans_gg3_js__table_mns_gg3_js__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ans_gg3_js__table_mns_gg3_js__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ans_gg3_js__table_mns_gg3_js__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ans_gg3_js__table_mns_gg3_js__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__1 ">cert_curr_Id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__2 ">Certification/Curriculum ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__3 ">crtfy000000000200360</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__2 ">Input detail type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__3 ">com.saba.rest.businesscomponent.dto.CertCurrActivityDTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__1 ">acquiredOn</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__2 ">Date on which the certification/curriculum was
+                                    acquired</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__1 ">expiredOn</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__2 ">Date on which the certification expires.
+                                        <div class="note note note_note"><span class="note__title">Note:</span> Only applicable for certification.</div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__4 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__1 ">assignee</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__2 ">Assignee</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__3 ">{   "@type":
+                                    "com.saba.rest.service.RESTServiceObjectReference",   "id":
+                                    "emplo000000000206652",   "displayName": "Shuchi Lau"  }</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__1 ">auditReason</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__2 ">Audit reason for grant</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ans_gg3_js__table_mns_gg3_js__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <p class="p"><strong class="ph b">Certification:</strong></p>
+                <pre class="pre codeblock"><code>{
+ "@type": "com.saba.rest.businesscomponent.dto.CertCurrActivityDTO",
+ "acquiredOn": {"@type":"java.util.Date","time":"2015-05-12 
+ "expiredOn":{"@type":"java.util.Date","time":"2015-05-14"},
+ "assignee": {
+  "@type": "com.saba.rest.service.RESTServiceObjectReference",
+  "id": "emplo000000000206652",
+  "displayName": "Shuchi Lau"
+ },
+ "auditReason": "API test audit reason for grant"  
+}</code></pre>
+                <p class="p"><strong class="ph b">Curriculum:</strong></p>
+                <pre class="pre codeblock"><code>{
+
+ "@type": "com.saba.rest.businesscomponent.dto.CertCurrActivityDTO",
+ "acquiredOn": {"@type":"java.util.Date","time":"2015-05-12"},
+ "assignee": {
+  "@type": "com.saba.rest.service.RESTServiceObjectReference",
+  "id": "emplo000000000206652",
+  "displayName": "Shuchi Lau"
+ },
+ "auditReason": "API test audit reason for grant"  
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "stuce000000000202455",
+    "displayName": null,
+    "href": "http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/stuce000000000202455"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title10" id="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3">
+        <h2 class="title topictitle2" id="ariaid-title10">UPDATE TARGET DAYS/DATE FOR ASSIGNED CERTIFICATION/CURRICULUM
+            ACTIVITY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Updates the target days/date for the assigned certification/curriculum
+                    activity</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/activity/:activityId</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq"><caption><span class="table--title-label">Table 9. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__2 ">Input detail type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__3 ">com.saba.rest.businesscomponent.dto.
+                                    CertCurrActivityDTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__1 ">activityId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__2 ">Held Certification/Curriculum activity's
+                                    ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__1 ">targetDays</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__2 ">Target days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__1 ">targetDate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__2 ">Target Date</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__1 ">auditReason</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__2 ">Audit reason for grant</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-target-days-date-for-the-assigned-certification-curriculum-activity-N131A3__table_xgq_zbm_wq__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{ 
+    "@type": "com.saba.rest.businesscomponent.dto.CertCurrActivityDTO",
+	"targetDays": 375,
+	"auditReason":"Test target date change audit reason"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title11" id="reference_kw5_smt_rs">
+        <h2 class="title topictitle2" id="ariaid-title11">UPDATE EXPIRATION DATE OF HELD CERTIFICATION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Updates the expiration date of the held certification.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/expiry</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_kw5_smt_rs__table_uw5_smt_rs"><caption><span class="table--title-label">Table 10. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_kw5_smt_rs__table_uw5_smt_rs__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_kw5_smt_rs__table_uw5_smt_rs__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_kw5_smt_rs__table_uw5_smt_rs__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_kw5_smt_rs__table_uw5_smt_rs__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_kw5_smt_rs__table_uw5_smt_rs__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__2 ">Input detail type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__3 ">com.saba.rest.businesscomponent.dto.HeldCertDTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__1 ">heldCertId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__2 ">Held Certification's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__3 ">stuce000000000202341</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__1 ">expirationDate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__2 ">The expiration date of the held
+                                    certifiction</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__3 ">2015-07-20</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__1 ">auditReason</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__2 ">Audit reason for grant</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kw5_smt_rs__table_uw5_smt_rs__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>[
+	"list", [{
+			"@type": "com.saba.rest.businesscomponent.dto.HeldCertDTO",
+			"heldCertId": "stuce000000000203186",
+			"expirationDate": {
+				"@type": "java.util.Date",
+				"time": "2018-07-20"
+			},
+      		"auditReason":"Test RC API expiry reason"
+		}
+
+	]
+]</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>204 - No Content</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title12" id="delete-remove-the-certification-curriculum-activity-of-a-learner-N131EE">
+        <h2 class="title topictitle2" id="ariaid-title12">REMOVE CERTIFICATION/CURRICULUM ACTIVITY OF A LEARNER</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Removes the certification/curriculum activity of a learner</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent/activity/:activityId</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="delete-remove-the-certification-curriculum-activity-of-a-learner-N131EE__table_l55_wbm_wq"><caption><span class="table--title-label">Table 11. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-the-certification-curriculum-activity-of-a-learner-N131EE__table_l55_wbm_wq__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-the-certification-curriculum-activity-of-a-learner-N131EE__table_l55_wbm_wq__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-the-certification-curriculum-activity-of-a-learner-N131EE__table_l55_wbm_wq__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-the-certification-curriculum-activity-of-a-learner-N131EE__table_l55_wbm_wq__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-the-certification-curriculum-activity-of-a-learner-N131EE__table_l55_wbm_wq__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-the-certification-curriculum-activity-of-a-learner-N131EE__table_l55_wbm_wq__entry__1 ">activityId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-the-certification-curriculum-activity-of-a-learner-N131EE__table_l55_wbm_wq__entry__2 ">Held Certification/Curriculum activity's
+                                    ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-the-certification-curriculum-activity-of-a-learner-N131EE__table_l55_wbm_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-the-certification-curriculum-activity-of-a-learner-N131EE__table_l55_wbm_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-the-certification-curriculum-activity-of-a-learner-N131EE__table_l55_wbm_wq__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title13" id="get-get-the-meta-details-of-the-course-activity-N13223">
+        <h2 class="title topictitle2" id="ariaid-title13">GET META DETAILS OF COURSE ACTIVITY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of the course activity.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/courseactivity/meta</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "sampleData": {
+        "id": null,
+        "targetDate": null,
+        "activityDefinition": null,
+        "assignee": null,
+        "status": null,
+        "source": null,
+        "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/courseactivity/"
+    },
+    "name": "CourseActivity",
+    "displayName": "kI18nCLCourseActivity(Missing resource)",
+    "attributes": [
+        {
+            "name": "activityDefinition",
+            "displayName": "kI18nALCourseActivity_activityDefinition(Missing resource)",
+            "description": "Reference to the Course Definition",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "assignee",
+            "displayName": "kI18nALCourseActivity_assignee(Missing resource)",
+            "description": "Holder of the Course",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "id",
+            "displayName": "kI18nALCourseActivity_id(Missing resource)",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "percentageCompleted",
+            "displayName": "kI18nALCourseActivity_percentageCompleted(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "source",
+            "displayName": "kI18nALCourseActivity_source(Missing resource)",
+            "description": "Source of the Course",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "status",
+            "displayName": "kI18nALCourseActivity_status(Missing resource)",
+            "description": "Status of course Activity                     ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "choices": {
+                "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/list/sysli000000000003036/values"
+            },
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "targetDate",
+            "displayName": "kI18nALCourseActivity_targetDate(Missing resource)",
+            "description": "Due date of the course assignment",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "targetDays",
+            "displayName": "kI18nALCourseActivity_targetDays(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title14" id="get-get-the-details-of-a-particular-course-activity-N1323A">
+        <h2 class="title topictitle2" id="ariaid-title14">GET DETAILS OF A PARTICULAR COURSE ACTIVITY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a course activity based on the Course
+                    Activity's ID that is passed as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/courseactivity/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-the-details-of-a-particular-course-activity-N1323A__table_lp3_yzl_wq"><caption><span class="table--title-label">Table 12. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-course-activity-N1323A__table_lp3_yzl_wq__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-course-activity-N1323A__table_lp3_yzl_wq__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-course-activity-N1323A__table_lp3_yzl_wq__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-course-activity-N1323A__table_lp3_yzl_wq__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-course-activity-N1323A__table_lp3_yzl_wq__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-course-activity-N1323A__table_lp3_yzl_wq__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-course-activity-N1323A__table_lp3_yzl_wq__entry__2 ">Course activity's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-course-activity-N1323A__table_lp3_yzl_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-course-activity-N1323A__table_lp3_yzl_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-course-activity-N1323A__table_lp3_yzl_wq__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "coact000000000008517",
+    "source": {
+        "id": "emplo000000000200095",
+        "displayName": "Shuchi111 Lau"
+    },
+    "activityDefinition": {
+        "id": "cours000000000200172",
+        "displayName": "all_421_content"
+    },
+    "assignee": {
+        "id": "emplo000000000200095",
+        "displayName": "Shuchi111 Lau"
+    },
+    "targetDate": "2015-09-02T12:29:09.000+0530",
+    "status": "100"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title15" id="get-get-all-the-course-activities-of-the-logged-in-user-N13263">
+        <h2 class="title topictitle2" id="ariaid-title15">GET ALL COURSE ACTIVITIES OF LOGGED IN USER</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all the course activities of the logged in user</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/courseactivity</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "results": [
+        {
+            "id": "coact000000000008373",
+            "activityDefinition": {
+                "id": "cours000000000200811",
+                "displayName": "21ab"
+            },
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/courseactivity/coact000000000008373"
+        },
+        {
+            "id": "coact000000000008395",
+            "activityDefinition": {
+                "id": "cours000000000200744",
+                "displayName": "aaacou_for_package_with_no_price"
+            },
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/courseactivity/coact000000000008395"
+        },
+        {
+            "id": "coact000000000008517",
+            "activityDefinition": {
+                "id": "cours000000000200172",
+                "displayName": "all_421_content"
+            },
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/courseactivity/coact000000000008517"
+        },
+        {
+            "id": "coact000000000008355",
+            "activityDefinition": {
+                "id": "cours000000000200380",
+                "displayName": "BrownBag One day course on Java"
+            },
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/courseactivity/coact000000000008355"
+        },
+        {
+            "id": "coact000000000008390",
+            "activityDefinition": {
+                "id": "cours000000000200706",
+                "displayName": "c_def03306341"
+            },
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/courseactivity/coact000000000008390"
+        },
+        {
+            "id": "coact000000000008350",
+            "activityDefinition": {
+                "id": "cours000000000201505",
+                "displayName": "merge1"
+            },
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/courseactivity/coact000000000008350"
+        }
+    ],
+    "facets": [],
+    "totalResults": 6,
+    "hasMoreResults": false,
+    "itemsPerPage": 10,
+    "startIndex": 1
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title16" id="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A">
+        <h2 class="title topictitle2" id="ariaid-title16">FIND DETAILS OF COURSE ACTIVITIES BASED ON CRITERIA</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the course activities along with the ID, Name and the
+                    Deeplink URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/courseactivity?q=(:criteria)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq"><caption><span class="table--title-label">Table 13. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__1 ">criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__2 ">The search criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__3 ">assignee%3D%3D emplo000000000001600,
+                                    status%3D%3D200</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-course-activities-based-on-criteria-N1327A__table_vwm_zzl_wq__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "results": [],
+    "startIndex": 1,
+    "totalResults": 0,
+    "hasMoreResults": false,
+    "itemsPerPage": 10
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title17" id="post-assign-a-course-to-a-person-N132C7">
+        <h2 class="title topictitle2" id="ariaid-title17">ASSIGN A COURSE TO A PERSON</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Assigns a course to a person.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/courseactivity/</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq"><caption><span class="table--title-label">Table 14. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__1 ">source</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__2 ">Certification/Curriculum assigner</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__3 "> Shuchi Lau emplo000000000200095 </td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__1 ">assignee</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__2 ">Assignee</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__3 "> Shuchi Lau emplo000000000200095 </td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__1 ">activityDefinition</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__2 ">Course to assign</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__3 "> 21ab cours000000000200172 </td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__1 ">targetDate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__2 ">Target Date</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__1 ">targetDays</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__2 ">Target days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-assign-a-course-to-a-person-N132C7__table_ck1_21m_wq__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "targetDays": 234,
+    "source": {
+        "id": "emplo000000000200095",
+        "displayName": "Shuchi Lau"
+    },
+    "targetDate": null,
+    "activityDefinition": {
+        "id": "cours000000000200172",
+        "displayName": "21ab"
+    },
+    "assignee": {
+        "id": "emplo000000000200095",
+        "displayName": "Shuchi Lau"
+    }
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "coact000000000008517",
+    "displayName": "Quick Blended Course",
+    "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/courseactivity/coact000000000008517"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title18" id="put-update-the-details-of-a-course-activity-N1335B">
+        <h2 class="title topictitle2" id="ariaid-title18">UPDATE DETAILS OF A COURSE ACTIVITY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows updating an existing course activity based on the course activity's
+                    ID.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/courseactivity/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq"><caption><span class="table--title-label">Table 15. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__2 ">Course activity's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__1 ">targetDate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__2 ">Target date</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__1 ">targetDays</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__2 ">Target days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-course-activity-N1335B__table_iqx_f1m_wq__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "targetDays": 245
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title19" id="delete-remove-a-course-from-a-learner-N133A6">
+        <h2 class="title topictitle2" id="ariaid-title19">REMOVE A COURSE FROM A LEARNER</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Removes a course from a learner based on the course activity's ID.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/courseactivity/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="delete-remove-a-course-from-a-learner-N133A6__table_bzj_h1m_wq"><caption><span class="table--title-label">Table 16. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-a-course-from-a-learner-N133A6__table_bzj_h1m_wq__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-a-course-from-a-learner-N133A6__table_bzj_h1m_wq__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-a-course-from-a-learner-N133A6__table_bzj_h1m_wq__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-a-course-from-a-learner-N133A6__table_bzj_h1m_wq__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="delete-remove-a-course-from-a-learner-N133A6__table_bzj_h1m_wq__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-a-course-from-a-learner-N133A6__table_bzj_h1m_wq__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-a-course-from-a-learner-N133A6__table_bzj_h1m_wq__entry__2 ">Course activity's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-a-course-from-a-learner-N133A6__table_bzj_h1m_wq__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-a-course-from-a-learner-N133A6__table_bzj_h1m_wq__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="delete-remove-a-course-from-a-learner-N133A6__table_bzj_h1m_wq__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

@@ -1,0 +1,624 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get held certification/curriculum activity details, learning components, get held certification/curriculum activity details, get completion and lesson details of the learning event, get completion and lesson details of the learning event, get held certification/curriculum details along with all the activities, get held certification/curriculum details along with all the activities, search all the certifications/curricula assigned to a learner based on the status, timestamp, search all the certifications/curricula assigned to a learner based on the status, timestamp, search certifications/curricula of the logged in user, search certifications/curricula of the logged in user, auto-enroll learners into courses inside the certification/curriculum, auto-enroll learners into courses inside the certification/curriculum, assign certification/curriculum to a person, assign certification/curriculum to a person, grant certification/curriculum to a learner, grant certification/curriculum to a learner, update the target days/date for the assigned certification/curriculum activity, update the target days/date for the assigned certification/curriculum activity, update the expiration date of the held certification, update the expiration date of the held certification, remove the certification/curriculum activity of a learner, remove the certification/curriculum activity of a learner, get the meta details of the course activity, get the meta details of the course activity, get the details of a particular course activity, get the details of a particular course activity, get all the course activities of the logged in user, get all the course activities of the logged in user, find the details of the course activities based on criteria, find the details of the course activities based on criteria, assign a course to a person, assign a course to a person, update the details of a course activity, update the details of a course activity, remove a course from a learner, remove a course from a learner">
+  <meta name="keywords" content="learning, restful web services, get held certification/curriculum activity details, learning components, get held certification/curriculum activity details, get completion and lesson details of the learning event, get completion and lesson details of the learning event, get held certification/curriculum details along with all the activities, get held certification/curriculum details along with all the activities, search all the certifications/curricula assigned to a learner based on the status, timestamp, search all the certifications/curricula assigned to a learner based on the status, timestamp, search certifications/curricula of the logged in user, search certifications/curricula of the logged in user, auto-enroll learners into courses inside the certification/curriculum, auto-enroll learners into courses inside the certification/curriculum, assign certification/curriculum to a person, assign certification/curriculum to a person, grant certification/curriculum to a learner, grant certification/curriculum to a learner, update the target days/date for the assigned certification/curriculum activity, update the target days/date for the assigned certification/curriculum activity, update the expiration date of the held certification, update the expiration date of the held certification, remove the certification/curriculum activity of a learner, remove the certification/curriculum activity of a learner, get the meta details of the course activity, get the meta details of the course activity, get the details of a particular course activity, get the details of a particular course activity, get all the course activities of the logged in user, get all the course activities of the logged in user, find the details of the course activities based on criteria, find the details of the course activities based on criteria, assign a course to a person, assign a course to a person, update the details of a course activity, update the details of a course activity, remove a course from a learner, remove a course from a learner">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Learning Event</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title6">SEARCH CERTIFICATIONS/CURRICULA OF LOGGED IN USER</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Search Certifications/Curricula of the logged in user</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/heldlearningevent?type=:type</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 5. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__1 ">type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__2 ">The desired component i.e. Certification or Curriculum.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__3 ">certification</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__4 ">enumerated</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-search-certifications-curricula-of-the-logged-in-user-N13108__table_gn3_gcm_wq__entry__5 ">Yes</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5>
+    <p class="p"><strong class="ph b">Certification:</strong></p>
+    <pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "percentcompleted": 0,
+      "requirers": [
+        {
+          "required": true,
+          "assignment": {
+            "id": "stuce000000000266681",
+            "displayName": null
+          },
+          "activityContext": null,
+          "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "targetDate": 1442376060000,
+          "learningEvent": {
+            "id": "crtfy000000000002908",
+            "displayName": "copy of cert print 321"
+          },
+          "jobTypeId": null,
+          "listIds": null,
+          "assignedOn": 1441684901000,
+          "source": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "actions": null,
+          "id": "certh000000001692593"
+        }
+      ],
+      "basicdetail": {
+        "updatedOn": 1444388162000,
+        "createdBy": "admin",
+        "updatedBy": "admin",
+        "createdOn": 1441684901000,
+        "person": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "certification_id": {
+          "id": "crtfy000000000002908",
+          "displayName": "copy of cert print 321"
+        },
+        "expired_on": null,
+        "reassign": true,
+        "inRecertification": false,
+        "profileElementType": "InternalCert",
+        "revoked_on": null,
+        "recertificationType": [],
+        "need_recert_ot": false,
+        "need_recert_eq": false,
+        "type": "CERTIFICATION",
+        "path": {
+          "id": "track000000000003397",
+          "displayName": "Path1"
+        },
+        "status": {
+          "intStatus": 600,
+          "description": "Overdue",
+          "key": "600",
+          "displayName": "Overdue"
+        },
+        "id": "stuce000000000266681",
+        "acquiredOn": null,
+        "assignee": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "targetDate": 1442376060000,
+        "need_recert": false,
+        "startedOn": null,
+        "assignedOnDate": 1441684901000,
+        "recert_window_starts_on": null,
+        "heldCertNo": "00289700  ",
+        "owner": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "assigneeAdditionalDetails": {
+          "person_no": "00001000",
+          "username": "SUPERUSER"
+        },
+        "need_recert_cert": false
+      },
+      "isgranted": null
+    },
+    {
+      "percentcompleted": 0,
+      "requirers": [
+        {
+          "required": true,
+          "assignment": {
+            "id": "stuce000000000390011",
+            "displayName": null
+          },
+          "activityContext": null,
+          "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "targetDate": 1472045627000,
+          "learningEvent": {
+            "id": "crtfy000000000010331",
+            "displayName": "amtest_certif_mandatoryflag"
+          },
+          "jobTypeId": null,
+          "listIds": null,
+          "assignedOn": 1469453627000,
+          "source": {
+            "componentName": "Prescription Rule",
+            "activitySourceType": {
+              "sourceType": 3,
+              "listId": "sysli000000000003037",
+              "key": "3",
+              "displayName": "Prescriptive Rule"
+            },
+            "primaryKey": {
+              "prefix": "prule",
+              "id": "prule000000000011881"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "prule000000000011881",
+            "displayName": "amtest_certif_mandatoryflag"
+          },
+          "actions": null,
+          "id": "certh000000003020410"
+        }
+      ],
+      "basicdetail": {
+        "updatedOn": 1469453628000,
+        "createdBy": "admin",
+        "updatedBy": "admin",
+        "createdOn": 1469453627000,
+        "person": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "certification_id": {
+          "id": "crtfy000000000010331",
+          "displayName": "amtest_certif_mandatoryflag"
+        },
+        "expired_on": null,
+        "reassign": true,
+        "inRecertification": false,
+        "profileElementType": "InternalCert",
+        "revoked_on": null,
+        "recertificationType": [],
+        "need_recert_ot": false,
+        "need_recert_eq": false,
+        "type": "CERTIFICATION",
+        "path": {
+          "id": "track000000000010348",
+          "displayName": "amtestpath1"
+        },
+        "status": {
+          "intStatus": 400,
+          "description": "Assigned",
+          "key": "400",
+          "displayName": "Assigned"
+        },
+        "id": "stuce000000000390011",
+        "acquiredOn": null,
+        "assignee": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          }
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "targetDate": 1472045627000,
+        "need_recert": false,
+        "startedOn": null,
+        "assignedOnDate": 1469453627000,
+        "recert_window_starts_on": null,
+        "heldCertNo": "00447468  ",
+        "owner": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "assigneeAdditionalDetails": {
+          "person_no": "00001000",
+          "username": "SUPERUSER"
+        },
+        "need_recert_cert": false
+      },
+      "isgranted": null
+    }
+  ],
+  "hasMoreResults": true,
+  "itemsPerPage": 2,
+  "totalResults": 115
+}</code></pre>
+    <strong class="ph b">Curriculum:</strong>
+    <pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "percentcompleted": 100,
+      "requirers": [
+        {
+          "required": true,
+          "assignment": {
+            "id": "stcur000000000044164",
+            "displayName": null
+          },
+          "activityContext": null,
+          "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "targetDate": 1413259200000,
+          "learningEvent": {
+            "id": "curra000000000002924",
+            "displayName": "certemplateStory-Curriculum"
+          },
+          "jobTypeId": null,
+          "listIds": null,
+          "assignedOn": 1413270631000,
+          "source": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "actions": null,
+          "id": "currh000000001469537"
+        }
+      ],
+      "basicdetail": {
+        "updatedOn": 1413270631000,
+        "createdBy": "superuser",
+        "updatedBy": "superuser",
+        "createdOn": 1413270631000,
+        "need_recert": false,
+        "curriculum": {
+          "id": "curra000000000002924",
+          "displayName": "certemplateStory-Curriculum"
+        },
+        "recert_window_starts_on": null,
+        "revokedOn": null,
+        "type": "CURRICULUM",
+        "path": {
+          "id": "track000000000004746",
+          "displayName": "1"
+        },
+        "status": {
+          "intStatus": 100,
+          "description": "Acquired",
+          "displayName": "Acquired"
+        },
+        "acquiredOn": 1413259200000,
+        "assignee": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "targetDate": null,
+        "startedOn": 1413259200000,
+        "assignedOnDate": 1413270631000,
+        "heldCertNo": "00267097  ",
+        "owner": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "id": "stcur000000000044164",
+        "assigneeAdditionalDetails": {
+          "person_no": "00001000",
+          "username": "SUPERUSER"
+        }
+      },
+      "isgranted": null
+    },
+    {
+      "percentcompleted": 0,
+      "requirers": [
+        {
+          "required": true,
+          "assignment": {
+            "id": "stcur000000000028104",
+            "displayName": null
+          },
+          "activityContext": null,
+          "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "targetDate": 1409284800000,
+          "learningEvent": {
+            "id": "curra000000000002620",
+            "displayName": "\"Curriculum - 1\""
+          },
+          "jobTypeId": null,
+          "listIds": null,
+          "assignedOn": 1407999097000,
+          "source": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+              "sourceType": 0,
+              "listId": "sysli000000000003037",
+              "key": "0",
+              "displayName": "Person"
+            },
+            "locale": {
+              "id": "local000000000000001",
+              "displayName": null
+            },
+            "id": "emplo000000000001000",
+            "displayName": "Charles Foster"
+          },
+          "actions": null,
+          "id": "currh000000000855027"
+        }
+      ],
+      "basicdetail": {
+        "updatedOn": 1415694199000,
+        "createdBy": "superuser",
+        "updatedBy": "admin",
+        "createdOn": 1407999097000,
+        "need_recert": false,
+        "curriculum": {
+          "id": "curra000000000002620",
+          "displayName": "\"Curriculum - 1\""
+        },
+        "recert_window_starts_on": null,
+        "revokedOn": null,
+        "type": "CURRICULUM",
+        "path": {
+          "id": "track000000000004289",
+          "displayName": "1"
+        },
+        "status": {
+          "intStatus": 600,
+          "description": "Overdue",
+          "displayName": "Overdue"
+        },
+        "acquiredOn": null,
+        "assignee": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "targetDate": 1409284800000,
+        "startedOn": null,
+        "assignedOnDate": 1407999097000,
+        "heldCertNo": "00206679  ",
+        "owner": {
+          "sourceType": "InternalPerson",
+          "activitySourceType": {
+            "sourceType": 0,
+            "listId": "sysli000000000003037",
+            "key": "0",
+            "displayName": "Person"
+          },
+          "locale": {
+            "id": "local000000000000001",
+            "displayName": null
+          },
+          "id": "emplo000000000001000",
+          "displayName": "Charles Foster"
+        },
+        "id": "stcur000000000028104",
+        "assigneeAdditionalDetails": {
+          "person_no": "00001000",
+          "username": "SUPERUSER"
+        }
+      },
+      "isgranted": null
+    }
+  ],
+  "hasMoreResults": true,
+  "itemsPerPage": 2,
+  "totalResults": 36
+}</code></pre>
+   </section> 
+  </div>
+ </body>
+</html>

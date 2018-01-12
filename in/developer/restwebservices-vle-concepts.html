@@ -1,0 +1,996 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="virtual classroom, restful web services"><meta name="keywords" content="virtual classroom, restful web services"><meta name="DC.Relation" scheme="URI" content="../developer/part-integrationservices.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0e2818"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Virtual Classroom (For third party meeting connectors)</title></head><body id="d0e2818"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Virtual Classroom (For third party meeting connectors) </h1>
+    
+    <div class="body">
+        <p class="p">This section describes the specifications for the REST end points that a third party
+            meeting provider needs to adhere to in order to integrate with Saba.</p>
+    </div>
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-integrationservices.html">Integration APIs</a></div></div></nav><article class="topic nested1" aria-labelledby="ariaid-title2" id="d0e2828">
+        <h2 class="title topictitle2" id="ariaid-title2">Overview</h2>
+        <div class="body">
+            <p class="p">Saba provides Virtual Classroom connectors for meeting providers like Saba Meeting
+                and Webex. For any other meeting provider that Saba does not support as of now, the
+                meeting provider needs to develop the integration based on the specifications
+                provided in this section. </p>
+            <div class="p">This section provides:<ul class="ul" id="d0e2828__ul_s5s_4jz_bl">
+                    <li class="li">The REST end points that Saba invokes</li>
+                    <li class="li">The Request body that Saba will provide to the meeting provider's system for
+                        every call that it makes to the REST end points</li>
+                    <li class="li">The Reponse body that Saba expects in return from the meeting provider's
+                        system</li>
+                </ul></div>
+            <div class="note note note_note"><span class="note__title">Note:</span> In order to integrate a third party meeting connector Saba needs to be
+                aware of the URL to reach the meeting provider's system along with the username,
+                password or sitename, if applicable.</div>
+            <div class="p">This is how the Saba Virtual Classroom configuration and the connector process
+                    works:<ol class="ol" id="d0e2828__ol_rdc_1kz_bl">
+                    <li class="li">The third party meeting provider will provide their system's URL [username,
+                        password, sitename, etc.] that Saba can reach to create and manage meetings
+                        on it.</li>
+                    <li class="li">Saba will invoke the <a class="xref" href="#d0e2855">adapter
+                            configuration REST end point</a> to configure the adapter for this
+                        third party meeting provider. Once configured, Saba can now route all the
+                        meeting actions to this third party meeting provider.</li>
+                    <li class="li">For every action that an end user performs in relation to a meeting like
+                            <a class="xref" href="#topic_g3b_bzy_bl">creating</a>, <a class="xref" href="#topic_vzw_kcz_bl">updating</a>, <a class="xref" href="#topic_xtd_xcz_bl">deleting</a>, and so on, Saba
+                        will call an appropriate REST end point [as described below] and pass the
+                        required details to the meeting provider's system which is nothing but the
+                            <strong class="ph b">Request Body</strong> and a few <strong class="ph b">Header Params</strong>.<div class="note note note_note"><span class="note__title">Note:</span> Header param
+                            [serviceName] will indicate what action [CREATE_MEETING, UPDATE_MEETING,
+                            GET_MEETING, DELETE_MEETING, etc.] is being requested. Based on this,
+                            the meeting service provider understands what action it needs to
+                            perform.</div></li>
+                    <li class="li">After the meeting provider performs the necessary actions for the request it
+                        gets, it will return a response in the format that Saba requires [as
+                        specified below under <strong class="ph b">Reponse</strong>].</li>
+                    <li class="li">On receving this response from the meeting provider's system, Saba
+                        interprets it and performs the necessary actions on its end to fulfill the
+                        request.</li>
+                </ol></div>
+            <p class="p">The following REST end points are supported for a meeting connector:</p>
+            <ol class="ol" id="d0e2828__ol_mzb_2zy_bl">
+                <li class="li">Create Meeting</li>
+                <li class="li">Update Meeting</li>
+                <li class="li">Delete Meeting</li>
+                <li class="li">Get Meeting</li>
+                <li class="li">Create Meeting Attendee</li>
+                <li class="li">Delete Meeting Attendee</li>
+                <li class="li">Get Host URL</li>
+                <li class="li">Get Attendee URL</li>
+                <li class="li">Meeting attendance</li>
+            </ol>
+        </div>
+    </article>
+    <article class="topic nested1" aria-labelledby="ariaid-title3" id="d0e2855">
+        <h2 class="title topictitle2" id="ariaid-title3">Adapter Configuration</h2>
+        <div class="body">
+            <p class="p">This REST end point when invoked configures the adapter. This end point can be called
+                for <strong class="ph b">CREATE</strong> as well as <strong class="ph b">UPDATE</strong>.</p>
+        </div>
+        <article class="topic nested2" aria-labelledby="ariaid-title4" id="d0e2ww186">
+            <h3 class="title topictitle3" id="ariaid-title4">Request Body</h3>
+            <div class="body">
+                <pre class="pre codeblock"><code>{
+   "adapterName":"abc",
+   "adapterParameters":{
+      "username":"apuliyeril",
+      "sitename":"apidemoeu",
+      "password":"welcome@7"
+   }
+}</code></pre>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title5" id="d0e2884">
+            <h3 class="title topictitle3" id="ariaid-title5">Response</h3>
+            <div class="body">
+                <section class="section">
+                    <div class="p">
+                        <pre class="pre codeblock"><code>Status : 200    </code></pre>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </article>
+    <article class="topic nested1" aria-labelledby="ariaid-title6" id="topic_g3b_bzy_bl">
+        <h2 class="title topictitle2" id="ariaid-title6">Create Meeting</h2>
+        <div class="body">
+            <p class="p">This REST end point when invoked creates a meeting on the third party meeting
+                provider's system.</p>
+        </div>
+        <article class="topic nested2" aria-labelledby="ariaid-title7" id="id_kdh_dny_nh">
+            <h3 class="title topictitle3" id="ariaid-title7">Header Parameters</h3>
+            <div class="body">
+                <table class="table frame-all" id="id_kdh_dny_nh__table_q2c_spz_bl"><caption><span class="table--title-label">Table 1. </span><span class="title">Header Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="id_kdh_dny_nh__table_q2c_spz_bl__entry__1">Parameters Passed</th>
+                                <th class="entry colsep-1 rowsep-1" id="id_kdh_dny_nh__table_q2c_spz_bl__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-0">
+                                <td class="entry colsep-1 rowsep-1" headers="id_kdh_dny_nh__table_q2c_spz_bl__entry__1 ">
+                                    <p class="p"><code class="ph codeph">serviceName</code></p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="id_kdh_dny_nh__table_q2c_spz_bl__entry__2 ">
+                                    <p class="p">It will hold <strong class="ph b">CREATE_MEETING</strong>.</p>
+                                    <p class="p">It is the service name to indicate what action is being
+                                        requested.</p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="id_kdh_dny_nh__table_q2c_spz_bl__entry__1 "><code class="ph codeph">username</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="id_kdh_dny_nh__table_q2c_spz_bl__entry__2 ">The username of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="id_kdh_dny_nh__table_q2c_spz_bl__entry__1 "><code class="ph codeph">password</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="id_kdh_dny_nh__table_q2c_spz_bl__entry__2 ">The password of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="id_kdh_dny_nh__table_q2c_spz_bl__entry__1 "><code class="ph codeph">sitename</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="id_kdh_dny_nh__table_q2c_spz_bl__entry__2 ">The sitename of the meeting provider's system.</td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title8" id="topic_r3b_bzy_bl">
+            <h3 class="title topictitle3" id="ariaid-title8">Request Body</h3>
+            <div class="body">
+                <pre class="pre codeblock"><code>{
+   "chatEnabled":false,
+   "chatAllAttendees":false,
+   "chatHost":false,
+   "chatPresenter":false,
+   "serverRecordingEnabled":true,
+   "maxUsers":3,
+   "confNumber":"503-555-1234",
+   "startTime":1373468874119,
+   "endTime":1373468994119,
+   "publicEvent":true,
+   "createdBy":"Anil",
+   "maxCount":4,
+   "concurrentSpeakers":1,
+   "registeredOnly":true,
+   "liveVideo":true,
+   "recordVideoEnabled":true,
+   "downloadedPlayback":true,
+   "altConfNumber":"1234566",
+   "confCallHostCode":null,
+   "confCallAcessCode":"1234556",
+   "audioType":"voip",
+   "timeZone":"Asia/Kolkata",
+   "description":"Some Description",
+   "name":"anilsconf1373468874119",
+   "location":"Portland, Oregon, USA"
+}</code></pre>
+                <p class="p">The Create Meeting web service is passed the following parameters as the part of
+                    the Request Body:</p>
+                <table class="table frame-all" id="topic_r3b_bzy_bl__table_yyw_zzy_bl"><caption><span class="table--title-label">Table 2. </span><span class="title">Create Meeting Web Service Calling Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1">Parameters Passed</th>
+                                <th class="entry colsep-1 rowsep-1" id="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-0">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 ">
+                                    <p class="p"><code class="ph codeph">chatEnabled</code></p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">
+                                    <p class="p">Enable the chatting facility for the users.</p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">chatAllAttendees</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Enable chat for all the users.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">chatHost</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Enable chat for the host.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">chatPresenter</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Enable chat for the presenter.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">serverRecordingEnabled</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Record the session.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">maxUsers</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Maximum number of users allowed for the meeting.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">confNumber</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">The conference dial in number.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">startTime</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Meetings start time in milliseconds.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">endTime</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Meetings end time in milliseconds.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">publicEvent</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Whether it is a public meeting? <div class="note note note_note"><span class="note__title">Note:</span> People with the URL can
+                                        attend the meeting.</div></td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">createdBy</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">The meeting creator.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">maxCount</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">The maximum number of attendees including the host.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">concurrentSpeakers</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">The maximum number of  speakers allowed to speak
+                                    together.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">registeredOnly</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Only the registered users can attend the meeting.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">liveVideo</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Whether video sharing is allowed.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">recordVideoEnabled</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Enable Video recording.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">downloadedPlayback</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Download the video or playback the video.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">altConfNumber</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">Alternate conference number if the primary conference number
+                                    fails.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">confCallHostCode</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">The host code for the conference number.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">confCallAcessCode</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">The access code for all the users other than the
+                                    host.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">audioType</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">VOIP or Telephone</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">timeZone</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">The timezone.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">description</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">A description for the meeting.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">name</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">The meeting's name.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__1 "><code class="ph codeph">location</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_r3b_bzy_bl__table_yyw_zzy_bl__entry__2 ">The meeting's location.</td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title9" id="topic_t3b_bzy_bl">
+            <h3 class="title topictitle3" id="ariaid-title9">Response</h3>
+            <div class="body">
+                <section class="section">
+                    <div class="p">
+                        <pre class="pre codeblock"><code>{
+   "exception":null,
+   "meetingId":"698780921",
+   "meetingURLAttendee":"https://apidemoeu.abc.com/apidemoeu/j.php
+        ?ED=93010097&amp;UID=481258532&amp;ICS=MIFA&amp;ST=1",
+   "meetingURLHost":"https://apidemoeu.abc.com/apidemoeu/j.php
+        ?ED=93010097&amp;UID=481258532&amp;ICS=MIFH&amp;ST=1"
+}    </code></pre>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </article>
+    <article class="topic nested1" aria-labelledby="ariaid-title10" id="topic_vzw_kcz_bl">
+        <h2 class="title topictitle2" id="ariaid-title10">Update Meeting</h2>
+        <div class="body">
+            <p class="p">This REST end point when invoked updates an existing meeting on the third party
+                meeting provider's system.</p>
+        </div>
+        <article class="topic nested2" aria-labelledby="ariaid-title11" id="topic_hgq_2qz_bl">
+            <h3 class="title topictitle3" id="ariaid-title11">Header Parameters</h3>
+            <div class="body">
+                <table class="table frame-all" id="topic_hgq_2qz_bl__table_ogq_2qz_bl"><caption><span class="table--title-label">Table 3. </span><span class="title">Header Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="topic_hgq_2qz_bl__table_ogq_2qz_bl__entry__1">Parameters Passed</th>
+                                <th class="entry colsep-1 rowsep-1" id="topic_hgq_2qz_bl__table_ogq_2qz_bl__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-0">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_hgq_2qz_bl__table_ogq_2qz_bl__entry__1 ">
+                                    <p class="p"><code class="ph codeph">serviceName</code></p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_hgq_2qz_bl__table_ogq_2qz_bl__entry__2 ">
+                                    <p class="p">It will hold <strong class="ph b">UPDATE_MEETING</strong>.</p>
+                                    <p class="p">It is the service name to indicate what action is being
+                                        requested.</p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_hgq_2qz_bl__table_ogq_2qz_bl__entry__1 "><code class="ph codeph">username</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_hgq_2qz_bl__table_ogq_2qz_bl__entry__2 ">The username of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_hgq_2qz_bl__table_ogq_2qz_bl__entry__1 "><code class="ph codeph">password</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_hgq_2qz_bl__table_ogq_2qz_bl__entry__2 ">The password of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_hgq_2qz_bl__table_ogq_2qz_bl__entry__1 "><code class="ph codeph">sitename</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_hgq_2qz_bl__table_ogq_2qz_bl__entry__2 ">The sitename of the meeting provider's system.</td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title12" id="topic_q1x_kcz_bl">
+            <h3 class="title topictitle3" id="ariaid-title12">Request Body</h3>
+            <div class="body">
+                <pre class="pre codeblock"><code>{
+   "chatEnabled":false,
+   "chatAllAttendees":false,
+   "chatHost":false,
+   "chatPresenter":false,
+   "serverRecordingEnabled":true,
+   "maxUsers":4,
+   "confNumber":"503-555-1234",
+   "startTime":1373468874119,
+   "endTime":1373468994119,
+   "publicEvent":true,
+   "createdBy":"Anil",
+   "maxCount":4,
+   "concurrentSpeakers":1,
+   "registeredOnly":true,
+   "liveVideo":false,
+   "recordVideoEnabled":true,
+   "downloadedPlayback":true,
+   "altConfNumber":"1234566",
+   "confCallHostCode":null,
+   "confCallAcessCode":"1234556",
+   "audioType":"voip",
+   "timeZone":"Asia/Kolkata",
+   "description":"Some Description",
+   "name":"conf name updated",
+   "location":"Portland, Oregon, USA",
+   "id":"696223384"
+}</code></pre>
+                <p class="p">The Update Meeting web service is passed the following parameters as the part of
+                    the Request Body:</p>
+                <table class="table frame-all" id="topic_q1x_kcz_bl__table_ibx_kcz_bl"><caption><span class="table--title-label">Table 4. </span><span class="title">Update Meeting Web Service Calling Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1">Parameters Passed</th>
+                                <th class="entry colsep-1 rowsep-1" id="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-0">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 ">
+                                    <p class="p"><code class="ph codeph">chatEnabled</code></p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">
+                                    <p class="p">Enable the chatting facility for the users.</p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">chatAllAttendees</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Enable chat for all the users.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">chatHost</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Enable chat for the host.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">chatPresenter</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Enable chat for the presenter.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">serverRecordingEnabled</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Record the session.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">maxUsers</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Maximum number of users allowed for the meeting.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">confNumber</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">The conference dial in number.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">startTime</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Meetings start time in milliseconds.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">endTime</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Meetings end time in milliseconds.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">publicEvent</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Whether it is a public meeting? <div class="note note note_note"><span class="note__title">Note:</span> People with the URL can
+                                        attend the meeting.</div></td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">createdBy</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">The meeting creator.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">maxCount</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">The maximum number of attendees including the host.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">concurrentSpeakers</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">The maximum number of speakers allowed to speak
+                                    together.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">registeredOnly</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Only the registered users can attend the meeting.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">liveVideo</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Whether video sharing is allowed.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">recordVideoEnabled</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Enable Video recording.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">downloadedPlayback</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Download the video or playback the video.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">altConfNumber</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">Alternate conference number if the primary conference number
+                                    fails.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">confCallHostCode</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">The host code for the conference number.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">confCallAcessCode</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">The access code for all the users other than the
+                                    host.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">audioType</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">VOIP or Telephone</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">timeZone</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">The timezone.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">description</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">A description for the meeting.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">name</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">The meeting's name.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">location</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">The meeting's location.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__1 "><code class="ph codeph">id</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_q1x_kcz_bl__table_ibx_kcz_bl__entry__2 ">The meeting's ID.</td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title13" id="topic_acx_kcz_bl">
+            <h3 class="title topictitle3" id="ariaid-title13">Response</h3>
+            <div class="body">
+                <section class="section">
+                    <div class="p">
+                        <pre class="pre codeblock"><code>{
+   "meetingId":null,
+   "meetingURLAttendee":"https://apidemoeu.abc.com/apidemoeu/j.php
+        ?ED=93010167&amp;UID=481258532&amp;ICS=MIFA&amp;ST=1",
+   "meetingURLHost":"https://apidemoeu.abc.com/apidemoeu/j.php
+        ?ED=93010167&amp;UID=481258532&amp;ICS=MIFH&amp;ST=1",
+   "exception":null
+}</code></pre>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </article>
+    <article class="topic nested1" aria-labelledby="ariaid-title14" id="topic_xtd_xcz_bl">
+        <h2 class="title topictitle2" id="ariaid-title14">Delete Meeting</h2>
+        <div class="body">
+            <p class="p">This REST end point when invoked deletes an existing meeting on the third party
+                meeting provider's system.</p>
+        </div>
+        <article class="topic nested2" aria-labelledby="ariaid-title15" id="topic_z5r_fqz_bl">
+            <h3 class="title topictitle3" id="ariaid-title15">Header Parameters</h3>
+            <div class="body">
+                <table class="table frame-all" id="topic_z5r_fqz_bl__table_gvr_fqz_bl"><caption><span class="table--title-label">Table 5. </span><span class="title">Header Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="topic_z5r_fqz_bl__table_gvr_fqz_bl__entry__1">Parameters Passed</th>
+                                <th class="entry colsep-1 rowsep-1" id="topic_z5r_fqz_bl__table_gvr_fqz_bl__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-0">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_z5r_fqz_bl__table_gvr_fqz_bl__entry__1 ">
+                                    <p class="p"><code class="ph codeph">serviceName</code></p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_z5r_fqz_bl__table_gvr_fqz_bl__entry__2 ">
+                                    <p class="p">It will hold <strong class="ph b">DELETE_MEETING</strong>.</p>
+                                    <p class="p">It is the service name to indicate what action is being
+                                        requested.</p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_z5r_fqz_bl__table_gvr_fqz_bl__entry__1 "><code class="ph codeph">username</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_z5r_fqz_bl__table_gvr_fqz_bl__entry__2 ">The username of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_z5r_fqz_bl__table_gvr_fqz_bl__entry__1 "><code class="ph codeph">password</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_z5r_fqz_bl__table_gvr_fqz_bl__entry__2 ">The password of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_z5r_fqz_bl__table_gvr_fqz_bl__entry__1 "><code class="ph codeph">sitename</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_z5r_fqz_bl__table_gvr_fqz_bl__entry__2 ">The sitename of the meeting provider's system.</td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title16" id="topic_u5d_xcz_bl">
+            <h3 class="title topictitle3" id="ariaid-title16">Request Body</h3>
+            <div class="body">
+                <pre class="pre codeblock"><code>{   
+   "id":"699334470"
+}</code></pre>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title17" id="topic_gwd_xcz_bl">
+            <h3 class="title topictitle3" id="ariaid-title17">Response</h3>
+            <div class="body">
+                <section class="section">
+                    <div class="p">
+                        <pre class="pre codeblock"><code>Status: 200</code></pre>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </article>
+    <article class="topic nested1" aria-labelledby="ariaid-title18" id="topic_xzx_2dz_bl">
+        <h2 class="title topictitle2" id="ariaid-title18">Get Meeting</h2>
+        <div class="body">
+            <p class="p">This REST end point when invoked returns the details of an existing meeting from the
+                third party meeting provider's system.</p>
+        </div>
+        <article class="topic nested2" aria-labelledby="ariaid-title19" id="topic_gsp_gqz_bl">
+            <h3 class="title topictitle3" id="ariaid-title19">Header Parameters</h3>
+            <div class="body">
+                <table class="table frame-all" id="topic_gsp_gqz_bl__table_ssp_gqz_bl"><caption><span class="table--title-label">Table 6. </span><span class="title">Header Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="topic_gsp_gqz_bl__table_ssp_gqz_bl__entry__1">Parameters Passed</th>
+                                <th class="entry colsep-1 rowsep-1" id="topic_gsp_gqz_bl__table_ssp_gqz_bl__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-0">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_gsp_gqz_bl__table_ssp_gqz_bl__entry__1 ">
+                                    <p class="p"><code class="ph codeph">serviceName</code></p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_gsp_gqz_bl__table_ssp_gqz_bl__entry__2 ">
+                                    <p class="p">It will hold <strong class="ph b">GET_MEETING</strong>.</p>
+                                    <p class="p">It is the service name to indicate what action is being
+                                        requested.</p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_gsp_gqz_bl__table_ssp_gqz_bl__entry__1 "><code class="ph codeph">username</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_gsp_gqz_bl__table_ssp_gqz_bl__entry__2 ">The username of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_gsp_gqz_bl__table_ssp_gqz_bl__entry__1 "><code class="ph codeph">password</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_gsp_gqz_bl__table_ssp_gqz_bl__entry__2 ">The password of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_gsp_gqz_bl__table_ssp_gqz_bl__entry__1 "><code class="ph codeph">sitename</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_gsp_gqz_bl__table_ssp_gqz_bl__entry__2 ">The sitename of the meeting provider's system.</td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title20" id="topic_c1y_2dz_bl">
+            <h3 class="title topictitle3" id="ariaid-title20">Request Body</h3>
+            <div class="body">
+                <pre class="pre codeblock"><code>{   
+   "id":"699334470"
+}</code></pre>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title21" id="topic_d1y_2dz_bl">
+            <h3 class="title topictitle3" id="ariaid-title21">Response</h3>
+            <div class="body">
+                <section class="section">
+                    <div class="p">
+                        <pre class="pre codeblock"><code>{
+   "name":"conf name updated",
+   "location":"Portland, Oregon, USA",
+   "id":"691799652",
+   "timeZone":"Asia/Calcutta",
+   "description":"Some Description",
+   "startTime":1373468820054,
+   "endTime":1373468940054,
+   "createdBy":null,
+   "chatEnabled":false,
+   "chatAllAttendees":false,
+   "chatHost":false,
+   "chatPresenter":false,
+   "serverRecordingEnabled":true,
+   "maxUsers":4,
+   "confNumber":null,
+   "publicEvent":true,
+   "maxCount":4,
+   "concurrentSpeakers":1,
+   "registeredOnly":false,
+   "liveVideo":true,
+   "recordVideoEnabled":true,
+   "downloadedPlayback":true,
+   "altConfNumber":null,
+   "confCallHostCode":null,
+   "confCallAcessCode":null,
+   "audioType":"voip"
+}</code></pre>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </article>
+    <article class="topic nested1" aria-labelledby="ariaid-title22" id="topic_rln_jdz_bl">
+        <h2 class="title topictitle2" id="ariaid-title22">Create Meeting Attendee</h2>
+        <div class="body">
+            <p class="p">This REST end point when invoked creates a meeting attendee on the third party
+                meeting provider's system.</p>
+        </div>
+        <article class="topic nested2" aria-labelledby="ariaid-title23" id="topic_tbm_hqz_bl">
+            <h3 class="title topictitle3" id="ariaid-title23">Header Parameters</h3>
+            <div class="body">
+                <table class="table frame-all" id="topic_tbm_hqz_bl__table_ccm_hqz_bl"><caption><span class="table--title-label">Table 7. </span><span class="title">Header Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="topic_tbm_hqz_bl__table_ccm_hqz_bl__entry__1">Parameters Passed</th>
+                                <th class="entry colsep-1 rowsep-1" id="topic_tbm_hqz_bl__table_ccm_hqz_bl__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-0">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_tbm_hqz_bl__table_ccm_hqz_bl__entry__1 ">
+                                    <p class="p"><code class="ph codeph">serviceName</code></p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_tbm_hqz_bl__table_ccm_hqz_bl__entry__2 ">
+                                    <p class="p">It will hold <strong class="ph b">ADD_ATTENDEE</strong>.</p>
+                                    <p class="p">It is the service name to indicate what action is being
+                                        requested.</p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_tbm_hqz_bl__table_ccm_hqz_bl__entry__1 "><code class="ph codeph">username</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_tbm_hqz_bl__table_ccm_hqz_bl__entry__2 ">The username of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_tbm_hqz_bl__table_ccm_hqz_bl__entry__1 "><code class="ph codeph">password</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_tbm_hqz_bl__table_ccm_hqz_bl__entry__2 ">The password of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_tbm_hqz_bl__table_ccm_hqz_bl__entry__1 "><code class="ph codeph">sitename</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_tbm_hqz_bl__table_ccm_hqz_bl__entry__2 ">The sitename of the meeting provider's system.</td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title24" id="topic_wln_jdz_bl">
+            <h3 class="title topictitle3" id="ariaid-title24">Request Body</h3>
+            <div class="body">
+                <pre class="pre codeblock"><code>{
+   "role":"PARTICIPANT",
+   "meetingId":"697282777",
+   "firstName":"pankaj",
+   "lastName":"kathuria",
+   "emailId":"someuser@gmail.com",
+   "userId":"uId",
+   "loginName":"pan",
+   "displayName":"dNme"
+}</code></pre>
+                <div class="note note note_note"><span class="note__title">Note:</span> role can hold one of the following values:<ul class="ul" id="topic_wln_jdz_bl__ul_bwg_qdz_bl">
+                        <li class="li">PARTICIPANT (can attend meeting)</li>
+                        <li class="li">LEADER (can lead the meeting)</li>
+                        <li class="li">CO_PRESENTER (can present, share screen, etc.) </li>
+                    </ul></div>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title25" id="topic_xln_jdz_bl">
+            <h3 class="title topictitle3" id="ariaid-title25">Response</h3>
+            <div class="body">
+                <section class="section">
+                    <div class="p">
+                        <pre class="pre codeblock"><code>{
+   "exception":null,
+   "attendeeId":"38420577"
+}</code></pre>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </article>
+    <article class="topic nested1" aria-labelledby="ariaid-title26" id="topic_ag4_vdz_bl">
+        <h2 class="title topictitle2" id="ariaid-title26">Delete Meeting Attendee</h2>
+        <div class="body">
+            <p class="p">This REST end point when invoked deletes an existing meeting attendee from the third
+                party meeting provider's system.</p>
+        </div>
+        <article class="topic nested2" aria-labelledby="ariaid-title27" id="topic_o2x_jqz_bl">
+            <h3 class="title topictitle3" id="ariaid-title27">Header Parameters</h3>
+            <div class="body">
+                <table class="table frame-all" id="topic_o2x_jqz_bl__table_t2x_jqz_bl"><caption><span class="table--title-label">Table 8. </span><span class="title">Header Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="topic_o2x_jqz_bl__table_t2x_jqz_bl__entry__1">Parameters Passed</th>
+                                <th class="entry colsep-1 rowsep-1" id="topic_o2x_jqz_bl__table_t2x_jqz_bl__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-0">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_o2x_jqz_bl__table_t2x_jqz_bl__entry__1 ">
+                                    <p class="p"><code class="ph codeph">serviceName</code></p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_o2x_jqz_bl__table_t2x_jqz_bl__entry__2 ">
+                                    <p class="p">It will hold <strong class="ph b">REMOVE_ATTENDEE</strong>.</p>
+                                    <p class="p">It is the service name to indicate what action is being
+                                        requested.</p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_o2x_jqz_bl__table_t2x_jqz_bl__entry__1 "><code class="ph codeph">username</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_o2x_jqz_bl__table_t2x_jqz_bl__entry__2 ">The username of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_o2x_jqz_bl__table_t2x_jqz_bl__entry__1 "><code class="ph codeph">password</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_o2x_jqz_bl__table_t2x_jqz_bl__entry__2 ">The password of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_o2x_jqz_bl__table_t2x_jqz_bl__entry__1 "><code class="ph codeph">sitename</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_o2x_jqz_bl__table_t2x_jqz_bl__entry__2 ">The sitename of the meeting provider's system.</td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title28" id="topic_fg4_vdz_bl">
+            <h3 class="title topictitle3" id="ariaid-title28">Request Body</h3>
+            <div class="body">
+                <pre class="pre codeblock"><code>{
+   "meetingId":"697282777",
+   "emailId":"someuser@gmail.com"
+}</code></pre>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title29" id="topic_ig4_vdz_bl">
+            <h3 class="title topictitle3" id="ariaid-title29">Response</h3>
+            <div class="body">
+                <section class="section">
+                    <div class="p">
+                        <pre class="pre codeblock"><code>status: 200</code></pre>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </article>
+    <article class="topic nested1" aria-labelledby="ariaid-title30" id="topic_fkj_12z_bl">
+        <h2 class="title topictitle2" id="ariaid-title30">Get Host URL</h2>
+        <div class="body">
+            <p class="p">This REST end point when invoked returns the Host URL from the third party meeting
+                provider's system.</p>
+        </div>
+        <article class="topic nested2" aria-labelledby="ariaid-title31" id="topic_jjr_lqz_bl">
+            <h3 class="title topictitle3" id="ariaid-title31">Header Parameters</h3>
+            <div class="body">
+                <table class="table frame-all" id="topic_jjr_lqz_bl__table_pjr_lqz_bl"><caption><span class="table--title-label">Table 9. </span><span class="title">Header Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="topic_jjr_lqz_bl__table_pjr_lqz_bl__entry__1">Parameters Passed</th>
+                                <th class="entry colsep-1 rowsep-1" id="topic_jjr_lqz_bl__table_pjr_lqz_bl__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-0">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_jjr_lqz_bl__table_pjr_lqz_bl__entry__1 ">
+                                    <p class="p"><code class="ph codeph">serviceName</code></p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_jjr_lqz_bl__table_pjr_lqz_bl__entry__2 ">
+                                    <p class="p">It will hold <strong class="ph b">HOST_URL</strong>.</p>
+                                    <p class="p">It is the service name to indicate what action is being
+                                        requested.</p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_jjr_lqz_bl__table_pjr_lqz_bl__entry__1 "><code class="ph codeph">username</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_jjr_lqz_bl__table_pjr_lqz_bl__entry__2 ">The username of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_jjr_lqz_bl__table_pjr_lqz_bl__entry__1 "><code class="ph codeph">password</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_jjr_lqz_bl__table_pjr_lqz_bl__entry__2 ">The password of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_jjr_lqz_bl__table_pjr_lqz_bl__entry__1 "><code class="ph codeph">sitename</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_jjr_lqz_bl__table_pjr_lqz_bl__entry__2 ">The sitename of the meeting provider's system.</td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title32" id="topic_jkj_12z_bl">
+            <h3 class="title topictitle3" id="ariaid-title32">Request Body</h3>
+            <div class="body">
+                <pre class="pre codeblock"><code>{   
+   "id":"697282777"
+}</code></pre>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title33" id="topic_kkj_12z_bl">
+            <h3 class="title topictitle3" id="ariaid-title33">Response</h3>
+            <div class="body">
+                <section class="section">
+                    <div class="p">
+                        <pre class="pre codeblock"><code>{
+   "attendeeURL":"https://apidemoeu.abc.com/apidemoeu/p.php
+        ?AT=LI&amp;WID=apuliyeril&amp;TK=7514d7eeb0356af2628575969e22472536163c
+        3cb94f2dacf84906b30bf9bf2d&amp;MU=https%3A%2F%2Fapidemoeu.abc.com
+        %2Fapidemoeu%2Fm.php%3FAT%3DHM%26MK%3D699188867%26Rnd%3D0.2239381
+        1628800597",
+   "exception":null
+}</code></pre>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </article>
+    <article class="topic nested1" aria-labelledby="ariaid-title34" id="topic_kqj_l2z_bl">
+        <h2 class="title topictitle2" id="ariaid-title34">Get Attendee&nbsp;URL</h2>
+        <div class="body">
+            <p class="p">This REST end point when invoked returns the Attendee URL from the third party
+                meeting provider's system.</p>
+        </div>
+        <article class="topic nested2" aria-labelledby="ariaid-title35" id="topic_frp_nqz_bl">
+            <h3 class="title topictitle3" id="ariaid-title35">Header Parameters</h3>
+            <div class="body">
+                <table class="table frame-all" id="topic_frp_nqz_bl__table_lrp_nqz_bl"><caption><span class="table--title-label">Table 10. </span><span class="title">Header Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="topic_frp_nqz_bl__table_lrp_nqz_bl__entry__1">Parameters Passed</th>
+                                <th class="entry colsep-1 rowsep-1" id="topic_frp_nqz_bl__table_lrp_nqz_bl__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-0">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_frp_nqz_bl__table_lrp_nqz_bl__entry__1 ">
+                                    <p class="p"><code class="ph codeph">serviceName</code></p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_frp_nqz_bl__table_lrp_nqz_bl__entry__2 ">
+                                    <p class="p">It will hold <strong class="ph b">ATTENDEE_URL</strong>.</p>
+                                    <p class="p">It is the service name to indicate what action is being
+                                        requested.</p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_frp_nqz_bl__table_lrp_nqz_bl__entry__1 "><code class="ph codeph">username</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_frp_nqz_bl__table_lrp_nqz_bl__entry__2 ">The username of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_frp_nqz_bl__table_lrp_nqz_bl__entry__1 "><code class="ph codeph">password</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_frp_nqz_bl__table_lrp_nqz_bl__entry__2 ">The password of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_frp_nqz_bl__table_lrp_nqz_bl__entry__1 "><code class="ph codeph">sitename</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_frp_nqz_bl__table_lrp_nqz_bl__entry__2 ">The sitename of the meeting provider's system.</td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title36" id="topic_wqj_l2z_bl">
+            <h3 class="title topictitle3" id="ariaid-title36">Request Body</h3>
+            <div class="body">
+                <pre class="pre codeblock"><code>{
+   "meetingId":"696486050",
+   "emailId":"someuser@gmail.com",
+   "firstName":"test",
+   "lastName":"user1"
+}</code></pre>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title37" id="topic_xqj_l2z_bl">
+            <h3 class="title topictitle3" id="ariaid-title37">Response</h3>
+            <div class="body">
+                <section class="section">
+                    <div class="p">
+                        <pre class="pre codeblock"><code>{
+   "attendeeURL":" https://apidemoeu.abc.com/apidemoeu/m.php
+        ?AT=JM&amp;MK=693936501&amp;AN=test user1&amp;AE=someuser@gmail.com",
+   "exception":null
+}</code></pre>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </article>
+    <article class="topic nested1" aria-labelledby="ariaid-title38" id="topic_bnq_q2z_bl">
+        <h2 class="title topictitle2" id="ariaid-title38">Meeting attendance</h2>
+        <div class="body">
+            <p class="p">This REST end point when invoked returns the Attendee URL from the third party
+                meeting provider's system.</p>
+        </div>
+        <article class="topic nested2" aria-labelledby="ariaid-title39" id="topic_u3x_4qz_bl">
+            <h3 class="title topictitle3" id="ariaid-title39">Header Parameters</h3>
+            <div class="body">
+                <table class="table frame-all" id="topic_u3x_4qz_bl__table_ajx_4qz_bl"><caption><span class="table--title-label">Table 11. </span><span class="title">Header Parameters</span></caption><colgroup><col style="width:26%"><col style="width:74%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="topic_u3x_4qz_bl__table_ajx_4qz_bl__entry__1">Parameters Passed</th>
+                                <th class="entry colsep-1 rowsep-1" id="topic_u3x_4qz_bl__table_ajx_4qz_bl__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-0">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_u3x_4qz_bl__table_ajx_4qz_bl__entry__1 ">
+                                    <p class="p"><code class="ph codeph">serviceName</code></p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_u3x_4qz_bl__table_ajx_4qz_bl__entry__2 ">
+                                    <p class="p">It will hold <strong class="ph b">MEETING_ATTENDANCE</strong>.</p>
+                                    <p class="p">It is the service name to indicate what action is being
+                                        requested.</p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_u3x_4qz_bl__table_ajx_4qz_bl__entry__1 "><code class="ph codeph">username</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_u3x_4qz_bl__table_ajx_4qz_bl__entry__2 ">The username of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_u3x_4qz_bl__table_ajx_4qz_bl__entry__1 "><code class="ph codeph">password</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_u3x_4qz_bl__table_ajx_4qz_bl__entry__2 ">The password of the meeting provider's system URL.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="topic_u3x_4qz_bl__table_ajx_4qz_bl__entry__1 "><code class="ph codeph">sitename</code></td>
+                                <td class="entry colsep-1 rowsep-1" headers="topic_u3x_4qz_bl__table_ajx_4qz_bl__entry__2 ">The sitename of the meeting provider's system.</td>
+                            </tr>
+                        </tbody></table>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title40" id="topic_fnq_q2z_bl">
+            <h3 class="title topictitle3" id="ariaid-title40">Request Body</h3>
+            <div class="body">
+                <pre class="pre codeblock"><code>{   
+   "id":"699498484"
+}</code></pre>
+            </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title41" id="topic_gnq_q2z_bl">
+            <h3 class="title topictitle3" id="ariaid-title41">Response</h3>
+            <div class="body">
+                <section class="section">
+                    <div class="p">
+                        <pre class="pre codeblock"><code>{
+   "attendees":[
+      {
+         "duration":"13",         
+         "email":"apuliyeril@saba.com",
+         "participantType":null
+      }
+   ]
+}</code></pre>
+                    </div>
+                </section>
+                <div class="note note note_note"><span class="note__title">Note:</span> duration is the number of minutes for which the user attended the
+                        meeting.<p class="p">email is the email&nbsp;address&nbsp;of&nbsp;the&nbsp;attendee.</p><p class="p">participantType
+                        is the type of attendee: PARTICIPANT, LEADER, CO_PRESENTER</p></div>
+            </div>
+        </article>
+    </article>
+</article></main></body></html>

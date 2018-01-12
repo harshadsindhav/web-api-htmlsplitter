@@ -1,0 +1,186 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="foundation, restful web services, get details of a social resource, foundation components, get details of a social resource, find social resources, find social resources (using post - range based search), find social resources (using post - range based search), find social resource of a group, find social resource of a group, find social resource of a group (using post - range based search), find social resource of a group (using post - range based search), post idea to saba activity stream., post idea to saba activity stream., post issue to saba activity stream., post issue to saba activity stream., post link to saba activity stream., post link to saba activity stream., post file to saba activity stream., post file to saba activity stream., update idea posted on saba activity stream., update idea posted on saba activity stream., update issue posted on saba activity stream., update issue posted on saba activity stream., update link posted on saba activity stream., update link posted on saba activity stream., update file posted on saba activity stream., update file posted on saba activity stream., delete idea posted on saba activity stream., delete idea posted on saba activity stream., delete issue posted on saba activity stream., delete issue posted on saba activity stream., delete link posted on saba activity stream., delete link posted on saba activity stream., delete file posted on saba activity stream., delete file posted on saba activity stream.">
+  <meta name="keywords" content="foundation, restful web services, get details of a social resource, foundation components, get details of a social resource, find social resources, find social resources (using post - range based search), find social resources (using post - range based search), find social resource of a group, find social resource of a group, find social resource of a group (using post - range based search), find social resource of a group (using post - range based search), post idea to saba activity stream., post idea to saba activity stream., post issue to saba activity stream., post issue to saba activity stream., post link to saba activity stream., post link to saba activity stream., post file to saba activity stream., post file to saba activity stream., update idea posted on saba activity stream., update idea posted on saba activity stream., update issue posted on saba activity stream., update issue posted on saba activity stream., update link posted on saba activity stream., update link posted on saba activity stream., update file posted on saba activity stream., update file posted on saba activity stream., delete idea posted on saba activity stream., delete idea posted on saba activity stream., delete issue posted on saba activity stream., delete issue posted on saba activity stream., delete link posted on saba activity stream., delete link posted on saba activity stream., delete file posted on saba activity stream., delete file posted on saba activity stream.">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-social.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Resource</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title5">FIND SOCIAL RESOURCE OF A GROUP</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Retrieves the social resources of a group. It allows retrieving folder, resources within a folder (like idea, issue, file, link, blog, page, etc) and sub-folder of a given group.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/group/:groupId?count=:count&amp;startPage=:startPage&amp;includeDetails=:includeDetails </p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL (User-friendly)</h5>You can use a user-friendly URL which accepts the 
+    <strong class="ph b">groupName</strong> instead of the internal Group's ID.
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/group/groupName=<em class="ph i">&lt;GroupName&gt;</em></p>
+    <strong class="ph b">Retrieve all resources of a folder of a group:</strong>
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/group/groupName=group1?q=(folderid%3D%3Dcateg000000000001182)</p>
+    <p class="p">This will return sub-folders and resources within a given folder. </p>
+    <strong class="ph b">Retrieve all resources of a given type of a group:</strong>
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/group/groupName=group1?q=(resourceType%3D%3Didea)</p>
+    <p class="p">This will return bookmarked resources of a given group. </p>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_wy5_35p_gy__table_qz5_35p_gy" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 4. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_wy5_35p_gy__table_qz5_35p_gy__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_wy5_35p_gy__table_qz5_35p_gy__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_wy5_35p_gy__table_qz5_35p_gy__entry__3">Default Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_wy5_35p_gy__table_qz5_35p_gy__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_wy5_35p_gy__table_qz5_35p_gy__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__1 ">groupId </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__2 ">ID of the Group. You can also use 'groupName=&lt;GroupName&gt;'</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__3 ">teams000000000001123</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__1 ">count</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__2 ">Count</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__3 ">10</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__1 ">startPage</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__2 ">The start page number for the list of records.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__3 ">1</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__1 ">includeDetails</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__2 ">Include detail of ssocial resources found.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_wy5_35p_gy__table_qz5_35p_gy__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+  "startIndex": 1,
+  "results": [
+    {
+      "total_comments": 0,
+      "displayName": "group discussion1",
+      "id": "bbmsg000000000001564",
+      "resourceType": "discussions",
+      "href": null
+    },
+    {
+      "total_comments": 0,
+      "displayName": "discussion2",
+      "parent_folder_id": "categ000000000001200",
+      "id": "bbmsg000000000001565",
+      "resourceType": "discussions",
+      "href": null
+    },
+    {
+      "displayName": "folder1",
+      "id": "categ000000000001200",
+      "resourceType": "folder",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/learning/category/categ000000000001200"
+    },
+    {
+      "total_comments": 0,
+      "total_votes": 0,
+      "displayName": "group idea1",
+      "id": "idear000000000001400",
+      "resourceType": "idea",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/social/resource/idear000000000001400"
+    },
+    {
+      "total_comments": 0,
+      "total_votes": 0,
+      "displayName": "group issue1",
+      "id": "issue000000000001240",
+      "resourceType": "issue",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/social/resource/issue000000000001240"
+    },
+    {
+      "displayName": "group_workspace1",
+      "id": "pgcnt000000000001714",
+      "resourceType": "workspace",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/social/resource/pgcnt000000000001714"
+    },
+    {
+      "displayName": "group link1",
+      "id": "simrs000000000001520",
+      "resourceType": "file url",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/social/resource/simrs000000000001520"
+    },
+    {
+      "displayName": "group file1",
+      "id": "simrs000000000001521",
+      "resourceType": "file url",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/social/resource/simrs000000000001521"
+    },
+    {
+      "displayName": "group workspace1 page1",
+      "id": "spage000000000001120",
+      "resourceType": "page",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/social/resource/spage000000000001120"
+    }
+  ],
+  "facets": [],
+  "totalResults": 9,
+  "hasMoreResults": false,
+  "itemsPerPage": 10
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

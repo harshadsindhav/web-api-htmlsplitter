@@ -1,0 +1,241 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="analytics, restful web services, get report definition, foundation components, get report list, report async execution status, report async execution status, execute async report, execute async report, execute report">
+  <meta name="keywords" content="analytics, restful web services, get report definition, foundation components, get report list, report async execution status, report async execution status, execute async report, execute async report, execute report">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-analytics.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Reports</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title5">EXECUTE ASYNC REPORT</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">This API will fetch the data of the report which was executed in the async mode</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">POST</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/report/execute/:reportId/:chartId</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_pds_hkt_my__table_qds_hkt_my" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 4. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_pds_hkt_my__table_qds_hkt_my__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_pds_hkt_my__table_qds_hkt_my__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_pds_hkt_my__table_qds_hkt_my__entry__3">Default Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_pds_hkt_my__table_qds_hkt_my__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_pds_hkt_my__table_qds_hkt_my__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__1 ">reportId</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__2 ">Report ID.<p class="p">Starts with: ‘rptdf’</p></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__1 ">chartId</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__2 ">Chart ID.<p class="p">Starts with: ‘rppsd’</p></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__1 ">reportRunId</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__2 ">Report run id (Required to excute an async report) <p class="p">Mandatory: No (for synchronous execution)</p><p class="p">Mandatory: Yes (for asynchronous execution) </p></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pds_hkt_my__table_qds_hkt_my__entry__5 ">Yes</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5> 
+    <pre class="pre codeblock"><code>{
+  "reportRunId": "rpteh000000709600da01596928ba82007fdc"
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+  "currentPage": 1,
+  "isLastPage": false,
+  "resultSize": 6,
+  "executionStatus": "S",
+  "reportDefinitionEntity": {
+    "id": "rptdf000000392db88b015929f8b09c007fff",
+    "displayName": "RaaS test",
+    "entityType": "Flat List",
+    "isOOB": false,
+    "reportAsAServiceEnabled": true,
+    "category": "Compensation",
+    "filter": {
+      "logicalOperator": "AND",
+      "filters": [
+        {
+          "id": "rptfl000000392db88b015929f8b09c007ffd",
+          "attribute": {
+            "id": "rptra00000000000000000000000000009001",
+            "name": "course_name",
+            "displayName": "Course Title"
+          },
+          "attributeType": "DIMENSION",
+          "operator": "Contains",
+          "value": "a",
+          "supportedOperators": [
+            "Contains"
+          ],
+          "isOptional": false,
+          "isCaseSensitive": false,
+          "isEditable": true,
+          "isOperatorEditable": false
+        }
+      ],
+      "secondaryFilterGroup": [],
+      "exceptionFilterGroup": []
+    },
+    "displayAttributes": [
+      {
+        "attributeType": "DIMENSION",
+        "attribute": {
+          "id": "rptra00000000000000000000000000009001",
+          "name": "course_name",
+          "displayName": "Course Title"
+        }
+      },
+      {
+        "attributeType": "DIMENSION",
+        "timeRange": "MONTH",
+        "attribute": {
+          "id": "rptra00000000000000000000000000009006",
+          "name": "course_avail_from",
+          "displayName": "Course Available From"
+        }
+      },
+      {
+        "attributeType": "METRIC",
+        "attribute": {
+          "id": "rptra00000000000000000000000000009117",
+          "name": "Total_Number_of_Courses",
+          "displayName": "Total Number of Courses"
+        }
+      }
+    ],
+    "charts": [
+      {
+        "id": "rppsd000000392db88b015929f8b09c007ff4",
+        "displayName": "Total Number of Courses By Course Title",
+        "type": "PIECHART",
+        "chartAttributes": [
+          {
+            "attributeType": "DIMENSION",
+            "attribute": {
+              "id": "rptra00000000000000000000000000009001",
+              "name": "course_name",
+              "displayName": "Course Title"
+            }
+          },
+          {
+            "attributeType": "METRIC",
+            "attribute": {
+              "id": "rptra00000000000000000000000000009117",
+              "name": "Total_Number_of_Courses",
+              "displayName": "Total Number of Courses"
+            }
+          }
+        ]
+      },
+      {
+        "id": "rppsd0000003bcf439901593a4c2a16007fdb",
+        "displayName": "Crosstab chart",
+        "type": "CROSSTABCHART",
+        "chartAttributes": [
+          {
+            "attributeType": "DIMENSION",
+            "attribute": {
+              "id": "rptra00000000000000000000000000009001",
+              "name": "course_name",
+              "displayName": "Course Title"
+            }
+          },
+          {
+            "attributeType": "DIMENSION",
+            "timeRange": "MONTH",
+            "attribute": {
+              "id": "rptra00000000000000000000000000009006",
+              "name": "course_avail_from",
+              "displayName": "Course Available From"
+            }
+          },
+          {
+            "attributeType": "METRIC",
+            "attribute": {
+              "id": "rptra00000000000000000000000000009117",
+              "name": "Total_Number_of_Courses",
+              "displayName": "Total Number of Courses"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "data": [
+    [
+      "course_name": "#$%OTHERS#$%",   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      "Total_Number_of_Courses": "159"
+    ],
+    [
+      "course_name": "JavaCourse",   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      "Total_Number_of_Courses": "2"
+    ],
+    [
+      "course_name": "Domain_SabaSupport_course2en_US",   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      "Total_Number_of_Courses": "2"
+    ],
+  ]
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

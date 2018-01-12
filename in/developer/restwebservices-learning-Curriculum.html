@@ -1,0 +1,1262 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="learning, restful web services, get the details of a curriculum, learning components, get the details of a curriculum, find the details of the certification/curriculum, find the details of the certification/curriculum, find the details of the certification/curriculum (using post - range based search), find the details of the certification/curriculum (using post - range based search), create a new curriculum, create a new curriculum, update the details of a curriculum, update the details of a curriculum"><meta name="keywords" content="learning, restful web services, get the details of a curriculum, learning components, get the details of a curriculum, find the details of the certification/curriculum, find the details of the certification/curriculum, find the details of the certification/curriculum (using post - range based search), find the details of the certification/curriculum (using post - range based search), create a new curriculum, create a new curriculum, update the details of a curriculum, update the details of a curriculum"><meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Learning-apis"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Curriculum</title></head><body id="Learning-apis"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Curriculum</h1>
+    <div class="abstract">The deeplinks that the web services return will be based on the URL of the default
+        (SabaCloud) microsite. For
+        example:<pre class="pre codeblock"><code>https://&lt;hostname&gt;.sabacloud.com/Saba/Web_spf/ATHDB1/common/learningeventdetail/crtfy000000000200180  </code></pre></div>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-learning.html">Learning</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="reference_vfc_qnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title2">GET DETAILS OF A CURRICULUM</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of a curriculum.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/curriculum/:currId</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">name</strong> instead of the internal Curriculum's
+                        ID.<div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/curriculum/name%3D<em class="ph i">&lt;CurriculumName&gt;</em><div class="note note note_note"><span class="note__title">Note:</span> If
+                        there are multiple records for the name, the following error message will
+                        indicate the same: <p class="p">(120592) More than 1 record found for provided value
+                            'SomeCurriculum'</p></div></div></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_vfc_qnx_fp__table_ggc_qnx_fp"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__1 ">currId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__2 ">Curriculum's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__3 ">curra000000000005646</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vfc_qnx_fp__table_ggc_qnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "keywords": [],
+  "deepLinkUrls": [
+    "https://&lt;hostname&gt;/Saba/Web_spf/ATHDB1/common/learningeventdetail/curra000000000005646"
+  ],
+  "description": "Test_Curriculum_123",
+  "name": "Test_Curriculum_123",
+  "paths": [
+    {
+      "learningModules": [
+        {
+          "is_reqd": true,
+          "learningInterventions": [
+            {
+              "is_reqd": false,
+              "owner_id": null,
+              "part_id": {
+                "id": "cours000000000040633",
+                "displayName": "@$# $ 8-updated name_3_Testingw"
+              },
+              "is_waiver": false,
+              "sequence": 1,
+              "id": "edupl000000000015055"
+            },
+            {
+              "is_reqd": false,
+              "owner_id": null,
+              "part_id": {
+                "id": "cours000000000040636",
+                "displayName": "@$# $ 8-updated name_3_Testingw1"
+              },
+              "is_waiver": false,
+              "sequence": 2,
+              "id": "edupl000000000015056"
+            },
+            {
+              "is_reqd": false,
+              "owner_id": null,
+              "part_id": {
+                "id": "cours000000000006559",
+                "displayName": "!@#$%^*&amp;()äáº°óñïéê\""
+              },
+              "is_waiver": false,
+              "sequence": 3,
+              "id": "edupl000000000015057"
+            }
+          ],
+          "notes": "Module_12",
+          "reqd_no_of_items": 2,
+          "is_waiver": true,
+          "track_id": null,
+          "sequence": 1,
+          "name": "Module_12",
+          "id": "cegrp000000000010789"
+        }
+      ],
+      "isrecertification_track": false,
+      "is_default_path": true,
+      "is_path_recalculation_done": false,
+      "name": "Test_Path_1",
+      "id": "track000000000010510"
+    }
+  ],
+  "disp_learner": false,
+  "disp_callcenter": false,
+  "self_register": true,
+  "featured": false,
+  "vendor_id": null,
+  "avl_from": "2016-08-24T00:00:00.000-0400",
+  "disc_from": null,
+  "createGroupPolicyVal": false,
+  "target_days": 12,
+  "learningevent_id": "00046170",
+  "version": null,
+  "group": null,
+  "status": "INEFFECT",
+  "customValues": {
+    "ExCustom6": null,
+    "ExCustom5": null,
+    "custom0": null,
+    "ExCustom8": null,
+    "ExCustom9": null,
+    "custom9": null,
+    "custom3": false,
+    "custom4": null,
+    "custom1": null,
+    "custom2": null,
+    "custom7": null,
+    "ExCustom2": null,
+    "custom8": null,
+    "custom5": null,
+    "custom6": null
+  },
+  "securityDomain": {
+    "id": "domin000000000000001",
+    "displayName": "world"
+  },
+  "id": "curra000000000005646",
+  "updated_on": "2016-08-24T02:45:55.000-0400",
+  "created_on": "2016-08-24T02:45:48.000-0400",
+  "updated_by": "superuser",
+  "locale": {
+    "id": "local000000000000001",
+    "displayName": "English"
+  },
+  "created_by": "superuser",
+  "OneClickRegistration": false,
+  "auto_launch": false
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_dbc_lgh_24">
+        <h2 class="title topictitle2" id="ariaid-title3">FIND DETAILS OF CERTIFICATION/CURRICULUM</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the Certification/Curriculum along with the ID, Name and
+                    the Deeplink URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/:componentName?q=(:criteria_field==:field_value)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_dbc_lgh_24__table_mbc_lgh_24"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_dbc_lgh_24__table_mbc_lgh_24__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_dbc_lgh_24__table_mbc_lgh_24__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_dbc_lgh_24__table_mbc_lgh_24__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_dbc_lgh_24__table_mbc_lgh_24__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_dbc_lgh_24__table_mbc_lgh_24__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__1 ">componentName</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__2 ">The name of the desired component (certification
+                                    or curriculum).</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__3 ">curriculum</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__4 ">enumerated</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__1 ">criteria_field</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__2 ">The search criteria i.e. the field name.<div class="p">You
+                                        can use any field with "isSearchFilter": true.<div class="note note note_note"><span class="note__title">Note:</span> To find
+                                            out the fields that have "isSearchFilter": true, invoke
+                                            the "Get the Meta details" REST APIs.</div></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__3 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__1 ">field_value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__2 ">The search value for the specified search
+                                    criteria.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__3 ">abc</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_dbc_lgh_24__table_mbc_lgh_24__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Fields covered under search criteria (criteria_field)</h3>
+                
+                <table class="table" id="reference_dbc_lgh_24__table_yvw_bqk_m5"><caption></caption><colgroup><col><col><col><col></colgroup><thead class="thead">
+                            <tr class="row">
+                                <th class="entry" id="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1">Field name</th>
+                                <th class="entry" id="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2">Field description</th>
+                                <th class="entry" id="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3">Possible values</th>
+                                <th class="entry" id="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4">Example</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_name </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Name of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_name%3D%3Dabc </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_target_days </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Target days of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_target_days%3D%3D </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_valid_till </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Valid till value of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_valid_till%3D%3d100 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_disc_from </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Discountinuation date of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_disc_from </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_avl_from </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Certification available from date. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_avl_from </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_notify_before </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Notify before of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_notify_before%3d%3d130 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_custom0 </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Custom 0 field of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_custom0%3D%3D This%20is%20custom0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_custom1 </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Custom 1 field of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_custom1%3D%3D This%20is%20custom1 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_custom2 </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Custom 2 field of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_custom2%3D%3D This%20is%20custom2 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_custom3 </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Custom 3 field of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_custom3%3D%3D This%20is%20custom3 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_custom4 </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Custom 4 field of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_custom4%3D%3D This%20is%20custom4 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_created_by </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Created by field of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_created_by%3D%3Duone </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_created_on </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Created on field of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_created_on%3D%3D 5/8/2002 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_updated_by </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Updated by field of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_updated_by%3D%3Duone </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_updated_on </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Updated on field of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_updated_on%3D%3D 5/8/2002 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_status </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Status of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_status%3D%3D100 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> certi_description </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Description of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> certi_description%3D%3D descr000000000103641 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> base_type </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Distinguishes whether its certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 ">0 - Certification <p class="p">1- Curriculum </p></td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> base_type%3D%3D0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> audience_type_id </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Associated Audience type id of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> audience_type_id%3D%3D audie000000000001021 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> aud_type_outer_search </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Returns all those certification which has audience type as a
+                                    given value or null. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> aud_type_outer_search%3D%3D audie000000000001021 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> gov_owner </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Owner id of component. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> gov_owner%3D%3Demplo000000000200100 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> learningevent_id </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Id(not internal id) of certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> learningevent_id%3D%3D 200056 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> name </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Name of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> Name%3D%3Dabc </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> hide_discontinued_event </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Returns all certification except those which are
+                                    discontinued. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> hide_discontinued_event%3D%3D 5/8/2002 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> category_comppicker </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Parent or own category id associated with the certification </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> category_comppicker%3D%3D ddcls000000000001480 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> category_hierarchy </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Returns full hierarchy of category associated with the
+                                    certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> 0-&gt;No full hierarchy 1-&gt;Full hierarchy </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> category_hierarchy%3D%3D category_hierarchy </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> csvinput &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> Name of the certification. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> &nbsp; </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> category_id </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> If this field is passed all those certification will be
+                                    returned which has category with given category id. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> category_id%3D%3D categ000000000001125 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 "> category_name </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 "> If this field is passed all those certification will be
+                                    returned which has category with given category name. </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 "> &nbsp; </td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 "> category_id%3D%3D A10008 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__1 ">at_check</td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__2 ">Adding this condition peforms an Audience Type check and only
+                                    the certifications / curricula matching the Audience Type of the
+                                    learner will be returned. <div class="note note note_note"><span class="note__title">Note:</span> Irrespective of the value of the
+                                            <strong class="ph b">at_check</strong> query parameter, the Audience Type check
+                                        will be done if it is added in search query.</div></td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__3 ">true or false</td>
+                                <td class="entry" headers="reference_dbc_lgh_24__table_yvw_bqk_m5__entry__4 ">at_check%3D%3Dtrue</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "keywords": [],
+      "deepLinkUrls": [
+        "https://&lt;hostname&gt;/Saba/Web_spf/ATHDB1/common/learningeventdetail/curra000000000005247"
+      ],
+      "description": "",
+      "name": "001",
+      "paths": [
+        {
+          "learningModules": [
+            {
+              "is_reqd": true,
+              "learningInterventions": [
+                {
+                  "is_reqd": false,
+                  "owner_id": null,
+                  "part_id": {
+                    "id": "cours000000000040747",
+                    "displayName": "Test1"
+                  },
+                  "is_waiver": false,
+                  "sequence": 1,
+                  "id": "edupl000000000013629"
+                }
+              ],
+              "notes": null,
+              "reqd_no_of_items": 1,
+              "is_waiver": true,
+              "track_id": null,
+              "sequence": 1,
+              "name": "001Module",
+              "id": "cegrp000000000009647"
+            }
+          ],
+          "isrecertification_track": false,
+          "is_default_path": true,
+          "is_path_recalculation_done": false,
+          "name": "001Module",
+          "id": "track000000000009288"
+        }
+      ],
+      "disp_learner": true,
+      "disp_callcenter": true,
+      "self_register": true,
+      "featured": false,
+      "vendor_id": null,
+      "avl_from": "2016-03-21T00:00:00.000-0400",
+      "disc_from": null,
+      "createGroupPolicyVal": false,
+      "target_days": 0,
+      "learningevent_id": "00032318",
+      "version": null,
+      "group": null,
+      "status": "DRAFT",
+      "customValues": {
+        "ExCustom6": null,
+        "ExCustom5": null,
+        "custom0": null,
+        "ExCustom8": null,
+        "ExCustom9": null,
+        "custom9": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "ExCustom2": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      },
+      "id": "curra000000000005247",
+      "updated_on": "2016-03-21T02:28:42.000-0400",
+      "created_on": "2016-03-21T02:23:51.000-0400",
+      "updated_by": "uone",
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": "English"
+      },
+      "created_by": "uone"
+    }
+  ],
+  "hasMoreResults": true,
+  "itemsPerPage": 1,
+  "totalResults": 478,
+  "OneClickRegistration": false,
+  "auto_launch": false
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_z25_vnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title4">FIND DETAILS OF CERTIFICATION/CURRICULUM (Using POST - Range based
+            search)</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the Certification/Curriculum along with the ID, Name and
+                    the Deeplink URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/:componentName/searchQuery?count=:count&amp;startPage=:startPage&amp;includeDetails=:includeDetails
+                </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_z25_vnx_fp__table_if5_vnx_fp"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">conditions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The search conditions.<div class="p">You can use any field
+                                        with "isSearchFilter": true.<div class="note note note_note"><span class="note__title">Note:</span> To find out the fields
+                                            that have "isSearchFilter": true, invoke the "Get the
+                                            Meta details" REST APIs.</div>You can use search
+                                        operators such as:<ul class="ul" id="reference_z25_vnx_fp__ul_of5_vnx_fp">
+                                            <li class="li">=gt=</li>
+                                            <li class="li">=ge=</li>
+                                            <li class="li">=lt=</li>
+                                            <li class="li">=le=</li>
+                                            <li class="li">=eq=</li>
+                                            <li class="li">=ne=</li>
+                                        </ul></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 "> [{"name": "name","operator": "==","value":
+                                    "Blendedcertveren_US"}] </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">componentName </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The name of the desired component.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">certification</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">enumerated <p class="p"> [ "certification", "curriculum" ]
+                                    </p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">includeDetails</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">Returns the details of the
+                                    Certification/Curriculum in the search.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+"conditions": [
+{ 
+	"name": "category_name", 
+	"operator": "==", 
+	"value": "000001FeaturedCatenglish" 
+}]}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "keywords": [],
+      "deepLinkUrls": [
+        "https://&lt;hostname&gt;/Saba/Web_spf/ATHDB1/common/learningeventdetail/curra000000000005247"
+      ],
+      "description": "",
+      "name": "001",
+      "paths": [
+        {
+          "learningModules": [
+            {
+              "is_reqd": true,
+              "learningInterventions": [
+                {
+                  "is_reqd": false,
+                  "owner_id": null,
+                  "part_id": {
+                    "id": "cours000000000040747",
+                    "displayName": "Test1"
+                  },
+                  "is_waiver": false,
+                  "sequence": 1,
+                  "id": "edupl000000000013629"
+                }
+              ],
+              "notes": null,
+              "reqd_no_of_items": 1,
+              "is_waiver": true,
+              "track_id": null,
+              "sequence": 1,
+              "name": "001Module",
+              "id": "cegrp000000000009647"
+            }
+          ],
+          "isrecertification_track": false,
+          "is_default_path": true,
+          "is_path_recalculation_done": false,
+          "name": "001Module",
+          "id": "track000000000009288"
+        }
+      ],
+      "disp_learner": true,
+      "disp_callcenter": true,
+      "self_register": true,
+      "featured": false,
+      "vendor_id": null,
+      "avl_from": "2016-03-21T00:00:00.000-0400",
+      "disc_from": null,
+      "createGroupPolicyVal": false,
+      "target_days": 0,
+      "learningevent_id": "00032318",
+      "version": null,
+      "group": null,
+      "status": "DRAFT",
+      "customValues": {
+        "ExCustom6": null,
+        "ExCustom5": null,
+        "custom0": null,
+        "ExCustom8": null,
+        "ExCustom9": null,
+        "custom9": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "ExCustom2": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      },
+      "id": "curra000000000005247",
+      "updated_on": "2016-03-21T02:28:42.000-0400",
+      "created_on": "2016-03-21T02:23:51.000-0400",
+      "updated_by": "uone",
+      "locale": {
+        "id": "local000000000000001",
+        "displayName": "English"
+      },
+      "created_by": "uone"
+    }
+  ],
+  "hasMoreResults": true,
+  "itemsPerPage": 1,
+  "totalResults": 478,
+  "OneClickRegistration": false,
+  "auto_launch": false
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_uvq_mnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title5">CREATE A NEW CURRICULUM</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Creates a curriculum</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/curriculum</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_uvq_mnx_fp__table_gwq_mnx_fp"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Name of the curriculum</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 ">curra1011</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Description of the curriculum</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 ">desc</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">avl_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Curriculum Available from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 ">2002-05-01T00:00:00.000+0530</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">disc_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Curriculum Discontinued from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 ">2003-05-01T00:00:00.000+0530</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">version</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Version of the curriculum</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 ">1.2</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">status</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Status of the curriculum</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 ">INEFFECT</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">target_days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Target days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 ">123</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">vendor_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Vendor's ID<p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Person Ex).</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">featured</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Whether the curriculum is featured</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">learningevent_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Learning Event's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">securityDomain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">The domain for the certification<p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Domain).</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">paths</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Paths</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 ">
+                                    <ul class="ul" id="reference_uvq_mnx_fp__ul_pwq_mnx_fp">
+                                        <li class="li">Path4-BB</li>
+                                        <li class="li">Path4-1</li>
+                                    </ul>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">customValues</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Custom Values</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">part_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">ID of the part <p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Course).</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">group</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Group </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">parent</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">Parent<p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Curriculum).</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">OneClickRegistration</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">A flag to indicate the one click registration. accepts
+                                    true/false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__1 ">auto_launch</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__2 ">A flag to indicate auto launch. accepts true/false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_uvq_mnx_fp__table_gwq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request
+                Body</h3><pre class="pre codeblock"><code>{
+    "name": "Curriculum Rest Test 107",
+    "description": "\r\n\t\t\r\n\t\t\r\n\t\t\r\n\t\t",
+    "version": null,
+    "group": null,
+    "status": "INEFFECT",
+    "featured": false,
+ "paths": [
+        {
+            "name": "Path4-BB",
+            "isrecertification_track": false,
+            "is_default_path": true,
+             "learningModules": [
+        {
+            "name": "Module4-1-1",
+            "sequence": 1,
+            "is_reqd": true,
+            "notes": null,
+            "learningInterventions": [{
+            "sequence": 1,
+            "is_reqd": false,
+            "part_id": {
+                "id": "cours000000000001080",
+                "displayName": "Attendance Check"
+            },
+            "owner_id": null,
+            "is_waiver": false,
+            "id": "edupl000000000200022"
+        }],
+            "reqd_no_of_items": 1,
+            "is_waiver": true,
+            "id": "cegrp000000000200011"
+        }
+    ]
+        },{
+            "name": "Path4-1",
+            "isrecertification_track": false,
+            "is_default_path": true,
+             "learningModules": [
+        {
+            "name": "Module4-1-1",
+            "sequence": 1,
+            "is_reqd": true,
+            "notes": null,
+            "learningInterventions": [{
+            "sequence": 1,
+            "is_reqd": false,
+            "part_id": {
+                "id": "cours000000000001080",
+                "displayName": "Attendance Check"
+            },
+            "owner_id": null,
+            "is_waiver": false,
+            "id": "edupl000000000200022"
+        }],
+            "reqd_no_of_items": 1,
+            "is_waiver": true,
+            "id": "cegrp000000000200011"
+        }
+    ]
+        }
+    ],
+    "vendor_id": null,
+    "avl_from": "2001-08-01T00:00:00.000+0530",
+    "disc_from": "2001-09-24T00:00:00.000+0530",
+    "target_days": 0,
+    "customValues": {
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom0": null
+    },
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+    },
+    "id": "curra000000000001003",
+  "OneClickRegistration": false,
+  "auto_launch": false
+}</code></pre>The
+                lookup support is now available for this REST API.<table class="table" id="reference_uvq_mnx_fp__table_gwf_3rn_kx"><caption></caption><colgroup><col><col><col></colgroup><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry">
+                                    <strong class="ph b">JSON Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">UI Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">Component Name</strong>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> securityDomain </td>
+                                <td class="entry"> Domain name </td>
+                                <td class="entry"> Domain </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> vendor_id </td>
+                                <td class="entry"> Vendor </td>
+                                <td class="entry"> Organization, External </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> parent </td>
+                                <td class="entry"> Certification </td>
+                                <td class="entry"> Certification </td>
+                            </tr>
+                        </tbody></table></section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_zsq_mnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title6">UPDATE DETAILS OF A CURRICULUM</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Updates the details of a curriculum based on the Curriculum's ID.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/curriculum/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">name</strong> instead of the internal Curriculum's
+                        ID.<div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/curriculum/name%3D<em class="ph i">&lt;CurriculumName&gt;</em><div class="note note note_note"><span class="note__title">Note:</span> If
+                        there are multiple records for the name, the following error message will
+                        indicate the same: <p class="p">(120592) More than 1 record found for provided value
+                            'SomeCurriculum'</p></div></div></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_zsq_mnx_fp__table_ktq_mnx_fp"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Curriculum's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Name of the curriculum</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 ">cert1011</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Description of the curriculum</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 ">desc</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">avl_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Curriculum Available from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 ">2002-05-01T00:00:00.000+0530</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">disc_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Curriculum Discontinued from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 ">2003-05-01T00:00:00.000+0530</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">version</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Version of the curriculum</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 ">1.2</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">status</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Status of the curriculum</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 ">INEFFECT</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">target_days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Target days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 ">123</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">learningevent_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Learning Event's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">featured</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Whether the curriculum is featured</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">securityDomain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">The domain for the certification<p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Domain).</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">customValues</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Custom Values</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">part_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">ID of the part <p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Course).</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">vendor_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Vendor's ID<p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a>. (Person Ex)</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">group</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Group </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">parent</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">Parent<p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Curriculum).</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">OneClickRegistration</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">A flag to indicate the one click registration. accepts
+                                    true/false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__1 ">auto_launch</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__2 ">A flag to indicate auto launch. accepts true/false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zsq_mnx_fp__table_ktq_mnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request
+                Body</h3><pre class="pre codeblock"><code>{
+    "name": "Curriculum Rest Test 102 mmodified",
+    "description": "rggdgdgddd",
+    "version": "1.1",
+    "status": "OBSOLETE",
+    "avl_from": "2001-07-31T18:30:00.000+0530",
+    "disc_from": "2001-08-23T18:30:00.000+0530",
+    "featured": false,
+    "vendor_id": null,
+    "target_days": 0,
+    "customValues": {
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom0": null
+    },
+    "securityDomain": {
+        "id": "domin000000000201404",
+        "displayName": "world"
+    },
+    "id": "curra000000000001307",
+  "OneClickRegistration": false,
+  "auto_launch": false
+}</code></pre>The
+                lookup support is now available for this REST API.<table class="table" id="reference_zsq_mnx_fp__table_phb_jrn_kx"><caption></caption><colgroup><col><col><col></colgroup><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry">
+                                    <strong class="ph b">JSON Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">UI Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">Component Name</strong>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> securityDomain </td>
+                                <td class="entry"> Domain name </td>
+                                <td class="entry"> Domain </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> vendor_id </td>
+                                <td class="entry"> Vendor </td>
+                                <td class="entry"> Organization, External </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> parent </td>
+                                <td class="entry"> Certification </td>
+                                <td class="entry"> Certification </td>
+                            </tr>
+                        </tbody></table></section>
+        </div>
+    </article>
+</article></main></body></html>

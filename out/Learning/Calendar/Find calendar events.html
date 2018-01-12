@@ -1,0 +1,215 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, find the calendar events, learning components, find the calendar events">
+  <meta name="keywords" content="learning, restful web services, find the calendar events, learning components, find the calendar events">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Calendar</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title2">FIND CALENDAR EVENTS</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the details of the calendar events based on the provided search criteria.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">POST</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/calendar/search</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="post-find-the-calendar-events-N1000A__table_csj_qcl_hw" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 1. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__3">Default Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__1 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__2 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__3 ">com.saba.services.calendar.<p class="p">SabaCalendarViewFilter</p></td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__4 ">String</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__1 ">type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__2 "><p class="p">Accepts:</p>ILTCLASS, BLENDEDOFFERING, VIRTUALCLASS, SABAMEETING, COURSE, CERTIFICATION, CURRICULUM, RECURRINGCOURSE, APPOINTMENT, ALL</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__3 ">["ALL"]</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__4 ">String</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__1 ">context</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__2 ">Context. Accepts the following values:
+        <ul class="ul" id="post-find-the-calendar-events-N1000A__ul_ssw_z2c_jw"> 
+         <li class="li">LEARNER</li> 
+         <li class="li">CATALOG</li> 
+         <li class="li">INSTRUCTOR</li> 
+        </ul></td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__3 ">["LEARNER"] </td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__4 ">String</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__1 ">startDate</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__2 ">Start date</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__3 ">{"@type":"java.util.Date", "time":"2013-05-01"}</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__4 ">String</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__1 ">endDate</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__2 ">End date</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__3 ">{"@type":"java.util.Date", "time":"2013-07-31"} </td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__4 ">String</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__1 ">ownerID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__2 ">Person who is associated with the event</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__3 ">{"@type":"ServiceObjectReference", "id":"persn000000000001031", "displayName":"CTHREE2"}</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__4 ">String</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__1 ">title</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__2 ">Title</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__1 ">location</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__2 ">Location</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__3 ">{"@type":"ServiceObjectReference", "id":"locat000000000001000", "displayName":"Location1"} </td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-find-the-calendar-events-N1000A__table_csj_qcl_hw__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body </h5> 
+    <pre class="pre codeblock"><code>{
+    "@type":"com.saba.calendar.calendarelement.SabaCalendarViewFilter",
+    "type":[
+        "ILTCLASS"
+    ],
+    "context":[
+        "LEARNER"
+    ],
+    "endDate":{
+        "@type":"java.util.Date",
+        "time":"2016-07-31"
+    },
+    "startDate":{
+        "@type":"java.util.Date",
+        "time":"2013-05-01"
+    },
+    "location":{"@type":"ServiceObjectReference","id":"locat000000000001000"},
+    "ownerID":{"@type":"ServiceObjectReference","id":"emplo000000000001000"},
+    "title":"AdvancedJava"
+    
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>[
+  "list",
+  [
+    {
+      "@type": "com.saba.services.calendar.CalendarElementDetail",
+      "eventType": "ILTCLASS",
+      "elementName": "AdvancedJava",
+      "elementId": "class000000000201603",
+      "eventId": "timel000000000004503",
+      "ownerID": "emplo000000000001000",
+      "locationId": "locat000000000001000",
+      "locationName": "Location1",
+      "additionalData": {
+        "@type": "map",
+        "locationTimeZone": "tzone000000000000005",
+        "eventID": "class000000000201603",
+        "locationName": "Location1",
+        "locationId": "locat000000000001000",
+        "transcriptID": "ofapr000000000004523",
+        "registrationID": "regdw000000000004323",
+        "eventName": "AdvancedJava",
+        "moduleID": "regmd000000000003915",
+        "courseID": "cours000000000200564"
+      },
+      "endDate": {
+        "@type": "com.saba.customtypes.DateWithLocale",
+        "date": 1432553400000,
+        "locale": "25.05.2015",
+        "timeInLocale": "5:00 PM",
+        "dateInStandardFormat": "05/25/2015",
+        "timeInStandardFormat": "5:00 PM",
+        "customTimeZoneDate": 0,
+        "dateInCustomTimeZone": null,
+        "timeInCustomTimeZone": null,
+        "timeInUserTimeZone": "4:30 AM",
+        "dateInUserTimeZone": "25.05.2015"
+      },
+      "startDate": {
+        "@type": "com.saba.customtypes.DateWithLocale",
+        "date": 1432524600000,
+        "locale": "25.05.2015",
+        "timeInLocale": "9:00 AM",
+        "dateInStandardFormat": "05/25/2015",
+        "timeInStandardFormat": "9:00 AM",
+        "customTimeZoneDate": 0,
+        "dateInCustomTimeZone": null,
+        "timeInCustomTimeZone": null,
+        "timeInUserTimeZone": "8:30 PM",
+        "dateInUserTimeZone": "24.05.2015"
+      }
+    }
+  ]
+]</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

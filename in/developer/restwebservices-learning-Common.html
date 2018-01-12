@@ -1,0 +1,2588 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="learning, restful web services, get all the records of a component, learning components, get all the records of a component, get the details of a particular component, get the details of a particular component, get the meta details of a component, get the meta details of a component, delete a path, module or intervention, delete a path, module or intervention"><meta name="keywords" content="learning, restful web services, get all the records of a component, learning components, get all the records of a component, get the details of a particular component, get the details of a particular component, get the meta details of a component, get the meta details of a component, delete a path, module or intervention, delete a path, module or intervention"><meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Learning-apis"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Common</title></head><body id="Learning-apis"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Common</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-learning.html">Learning</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-get-all-the-records-of-a-component-N1007B">
+        <h2 class="title topictitle2" id="ariaid-title2">GET ALL RECORDS OF A COMPONENT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all the records of a component.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/:componentName</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-all-the-records-of-a-component-N1007B__table_k1x_wyj_1p"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-the-records-of-a-component-N1007B__table_k1x_wyj_1p__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-the-records-of-a-component-N1007B__table_k1x_wyj_1p__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-the-records-of-a-component-N1007B__table_k1x_wyj_1p__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-the-records-of-a-component-N1007B__table_k1x_wyj_1p__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-the-records-of-a-component-N1007B__table_k1x_wyj_1p__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-records-of-a-component-N1007B__table_k1x_wyj_1p__entry__1 ">componentName</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-records-of-a-component-N1007B__table_k1x_wyj_1p__entry__2 ">The name of the desired component.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-records-of-a-component-N1007B__table_k1x_wyj_1p__entry__3 ">certification</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-records-of-a-component-N1007B__table_k1x_wyj_1p__entry__4 ">enumerated</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-records-of-a-component-N1007B__table_k1x_wyj_1p__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code></code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_rcm_hnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title3">GET DETAILS OF A PARTICULAR COMPONENT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a component [certification | curriculum | path
+                    | learningmodule | learningintervention] based on the component's ID that is
+                    passed as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/:name/:id:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_rcm_hnx_fp__table_adm_hnx_fp"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__2 ">The name of the component. Can be one of
+                                        these:<ul class="ul" id="reference_rcm_hnx_fp__ul_fdm_hnx_fp">
+                                        <li class="li">certification </li>
+                                        <li class="li">curriculum </li>
+                                        <li class="li">path </li>
+                                        <li class="li">learningmodule</li>
+                                        <li class="li">learningintervention</li>
+                                    </ul></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__3 ">certification</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__2 ">Component's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__3 ">crtfy000000000200021</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__2 ">Fields to search: <ul class="ul" id="reference_rcm_hnx_fp__ul_gdm_hnx_fp">
+                                        <li class="li">paths </li>
+                                        <li class="li">learningModules </li>
+                                        <li class="li">learningInterventions</li>
+                                    </ul></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rcm_hnx_fp__table_adm_hnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <p class="p"><strong class="ph b">Certification</strong></p>
+                <pre class="pre codeblock"><code>{
+    "parent": null,
+    "past_credit_days": null,
+    "history_lookup_policy": "CheckHistoryUptoExpiredRevoked",
+    "deepLinkUrls": [
+        "http://&lt;hostname-api.sabacloud.com&gt;/Saba/Web_spf/Social/common/learningeventdetail/crtfy000000000200180"
+    ],
+    "name": "abc",
+    "description": "",
+    "paths": [
+        {
+            "name": "path1",
+            "isrecertification_track": false,
+            "learningModules": [
+                {
+                    "name": "module1",
+                    "sequence": 1,
+                    "notes": null,
+                    "reqd_no_of_items": 1,
+                    "learningInterventions": [
+                        {
+                            "sequence": 1,
+                            "owner_id": null,
+                            "part_id": {
+                                "id": "cours000000000200705",
+                                "displayName": "course_for_le"
+                            },
+                            "is_reqd": false,
+                            "is_waiver": false,
+                            "id": "edupl000000000200340"
+                        }
+                    ],
+                    "is_reqd": true,
+                    "is_waiver": true,
+                    "track_id": null,
+                    "id": "cegrp000000000200200"
+                }
+            ],
+            "is_default_path": true,
+            "id": "track000000000200200"
+        }
+    ],
+    "version": null,
+    "group": null,
+    "status": "INEFFECT",
+    "learningevent_id": "200073",
+    "disc_from": null,
+    "createGroupPolicyVal": false,
+    "valid_till": null,
+    "notify_before": null,
+    "vendor_id": null,
+    "avl_from": "2009-07-10T00:00:00.000+0530",
+    "target_days": 0,
+    "featured": false,
+    "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+    },
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+    },</code></pre>
+                <div class="p"><strong class="ph b">Curriculum</strong><pre class="pre codeblock"><code>{
+    "deepLinkUrls": [
+        "http://&lt;hostname-api.sabacloud.com&gt;/Saba/Web_spf/Social/common/learningeventdetail/curra000000000001140"
+    ],
+    "name": "BlendedenrCurr1en_US",
+    "description": "",
+    "paths": [
+        {
+            "name": "P1",
+            "isrecertification_track": false,
+            "learningModules": [
+                {
+                    "name": "M1",
+                    "sequence": 1,
+                    "notes": null,
+                    "reqd_no_of_items": 1,
+                    "learningInterventions": [
+                        {
+                            "sequence": 1,
+                            "owner_id": null,
+                            "part_id": {
+                                "id": "cours000000000200486",
+                                "displayName": "111"
+                            },
+                            "is_reqd": false,
+                            "is_waiver": false,
+                            "id": "edupl000000000200980"
+                        }
+                    ],
+                    "is_reqd": true,
+                    "is_waiver": true,
+                    "track_id": null,
+                    "id": "cegrp000000000200820"
+                }
+            ],
+            "is_default_path": false,
+            "id": "track000000000200820"
+        },
+        {
+            "name": "P3",
+            "isrecertification_track": false,
+            "learningModules": [
+                {
+                    "name": "Module1",
+                    "sequence": 1,
+                    "notes": null,
+                    "reqd_no_of_items": 1,
+                    "learningInterventions": [
+                        {
+                            "sequence": 1,
+                            "owner_id": null,
+                            "part_id": {
+                                "id": "cours000000000201011",
+                                "displayName": "blendedp05en_US"
+                            },
+                            "is_reqd": false,
+                            "is_waiver": false,
+                            "id": "edupl000000000200981"
+                        }
+                    ],
+                    "is_reqd": true,
+                    "is_waiver": true,
+                    "track_id": null,
+                    "id": "cegrp000000000200821"
+                }
+            ],
+            "is_default_path": false,
+            "id": "track000000000200821"
+        },
+        {
+            "name": "Path1",
+            "isrecertification_track": false,
+            "learningModules": [
+                {
+                    "name": "Module1",
+                    "sequence": 1,
+                    "notes": null,
+                    "reqd_no_of_items": 1,
+                    "learningInterventions": [
+                        {
+                            "sequence": 1,
+                            "owner_id": null,
+                            "part_id": {
+                                "id": "cours000000000201011",
+                                "displayName": "blendedp05en_US"
+                            },
+                            "is_reqd": false,
+                            "is_waiver": false,
+                            "id": "edupl000000000200583"
+                        }
+                    ],
+                    "is_reqd": true,
+                    "is_waiver": true,
+                    "track_id": null,
+                    "id": "cegrp000000000200422"
+                }
+            ],
+            "is_default_path": true,
+            "id": "track000000000200422"
+        }
+    ],
+    "version": null,
+    "group": null,
+    "status": "INEFFECT",
+    "learningevent_id": "200204",
+    "disc_from": null,
+    "createGroupPolicyVal": false,
+    "vendor_id": null,
+    "avl_from": "2009-07-14T00:00:00.000+0530",
+    "target_days": 0,
+    "featured": false,
+    "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+    },
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+    },
+    "id": "curra000000000001140"
+}</code></pre></div>
+                <div class="p"><strong class="ph b">Path</strong><pre class="pre codeblock"><code>{
+    "name": "Path4-BB",
+    "learningModules": [
+        {
+            "name": "Module4-1-1",
+            "sequence": 1,
+            "notes": null,
+            "is_waiver": true,
+            "is_reqd": true,
+            "learningInterventions": [
+                {
+                    "sequence": 1,
+                    "is_waiver": false,
+                    "is_reqd": false,
+                    "part_id": {
+                        "id": "cours000000000001080",
+                        "displayName": "Attendance Check"
+                    },
+                    "id": "edupl000000000201142"
+                }
+            ],
+            "reqd_no_of_items": 1,
+            "id": "cegrp000000000200942"
+        }
+    ],
+    "is_default_path": true,
+    "isrecertification_track": false,
+    "id": "track000000000200962"
+}</code></pre></div>
+                <div class="p"><strong class="ph b">Learning
+                    Intervention</strong><pre class="pre codeblock"><code>{
+    "sequence": 1,
+    "is_waiver": false,
+    "is_reqd": false,
+    "part_id": {
+        "id": "cours000000000200002",
+        "displayName": "Downloadable Product 3"
+    },
+    "id": "edupl000000000201094"
+}</code></pre></div>
+                <div class="p"><strong class="ph b">Learning
+                    Module</strong><pre class="pre codeblock"><code>{
+    "name": "Module B mmmoddiiffiieedd",
+    "sequence": 2,
+    "notes": "hello yuppiiii",
+    "is_waiver": true,
+    "is_reqd": true,
+    "learningInterventions": [
+        {
+            "sequence": 1,
+            "is_waiver": false,
+            "is_reqd": false,
+            "part_id": {
+                "id": "cours000000000200002",
+                "displayName": "Downloadable Product 3"
+            },
+            "id": "edupl000000000201094"
+        }
+    ],
+    "reqd_no_of_items": 1,
+    "id": "cegrp000000000200902"
+}</code></pre></div>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_stl_hnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title4">GET META DETAILS OF A COMPONENT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of a particular component [certification | curriculum |
+                    path | learningmodule | learningintervention].</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/:name/meta</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_stl_hnx_fp__table_gwl_hnx_fp"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_stl_hnx_fp__table_gwl_hnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_stl_hnx_fp__table_gwl_hnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_stl_hnx_fp__table_gwl_hnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_stl_hnx_fp__table_gwl_hnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_stl_hnx_fp__table_gwl_hnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_stl_hnx_fp__table_gwl_hnx_fp__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_stl_hnx_fp__table_gwl_hnx_fp__entry__2 ">The name of the component. Can be one of
+                                        these:<ul class="ul" id="reference_stl_hnx_fp__ul_jwl_hnx_fp">
+                                        <li class="li">certification </li>
+                                        <li class="li">curriculum </li>
+                                        <li class="li">path </li>
+                                        <li class="li">learningmodule</li>
+                                        <li class="li">learningintervention</li>
+                                    </ul></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_stl_hnx_fp__table_gwl_hnx_fp__entry__3 ">certification</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_stl_hnx_fp__table_gwl_hnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_stl_hnx_fp__table_gwl_hnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <p class="p"><strong class="ph b">Certification</strong></p>
+                <pre class="pre codeblock"><code>{
+    "sampleData": {
+        "past_credit_days": null,
+        "history_lookup_policy": "CheckHistoryUptoExpiredRevoked",
+        "parent": null,
+        "name": null,
+        "description": null,
+        "paths": null,
+        "featured": false,
+        "valid_till": null,
+        "notify_before": null,
+        "vendor_id": null,
+        "avl_from": "2014-08-08T02:27:55.613-0400",
+        "disc_from": null,
+        "target_days": 0,
+        "learningevent_id": null,
+        "version": null,
+        "group": null,
+        "status": "DRAFT",
+        "customValues": {
+            "custom1": null,
+            "custom2": null,
+            "custom3": null,
+            "custom4": null,
+            "custom5": null,
+            "custom6": null,
+            "custom7": null,
+            "custom8": null,
+            "custom9": null,
+            "custom0": null
+        },
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": null
+        },
+        "id": null,
+        "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/certification/crtfy000000000000001"
+    },
+    "name": "Certification",
+    "displayName": "Certification",
+    "attributes": [
+        {
+            "name": "avl_from",
+            "displayName": "Available From",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "created_by",
+            "displayName": "Created By",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "created_id",
+            "displayName": "Created ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "created_on",
+            "displayName": "Created On",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "description",
+            "displayName": "Description",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 2000,
+            "maximumLength": 2000,
+            "isSearchFilter": false
+        },
+        {
+            "name": "disc_from",
+            "displayName": "Discontinued From",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "featured",
+            "displayName": "Featured",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "group",
+            "displayName": "Group",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "history_lookup_policy",
+            "displayName": "Past Credit Days Policy",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "id",
+            "displayName": "ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "learningevent_id",
+            "displayName": "ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 25,
+            "maximumLength": 25,
+            "isSearchFilter": true
+        },
+        {
+            "name": "name",
+            "displayName": "Name",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "notify_before",
+            "displayName": "Notify Before (Days)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "parent",
+            "displayName": "Parent",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "past_credit_days",
+            "displayName": "Past Credit Days",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "paths",
+            "displayName": "Paths",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "Path",
+                "displayName": "Path",
+                "attributes": [
+                    {
+                        "name": "acq_within",
+                        "displayName": "Acquire Within",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "avl_from",
+                        "displayName": "Available From",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "date",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "certification_id",
+                        "displayName": "Certification ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true
+                    },
+                    {
+                        "name": "disc_from",
+                        "displayName": "Discontinued From",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "date",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "is_default_path",
+                        "displayName": "Is Default Path",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "isrecertification_track",
+                        "displayName": "Recertification Path",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "learningModules",
+                        "displayName": "Learning Modules",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "array",
+                        "isReference": false,
+                        "display": true,
+                        "component": {
+                            "name": "Certification Element Groups",
+                            "displayName": "Certification Element Groups",
+                            "attributes": [
+                                {
+                                    "name": "certification_id",
+                                    "displayName": "Certification ID",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "object",
+                                    "isReference": true,
+                                    "display": true
+                                },
+                                {
+                                    "name": "id",
+                                    "displayName": "ID",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": true,
+                                    "type": "string",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "is_reqd",
+                                    "displayName": "Required",
+                                    "description": null,
+                                    "isRequired": false,
+                                    "isAutoGenerated": false,
+                                    "type": "boolean",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "is_waiver",
+                                    "displayName": "Is Waiver",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "boolean",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "learningInterventions",
+                                    "displayName": "Learning Interventions",
+                                    "description": null,
+                                    "isRequired": false,
+                                    "isAutoGenerated": false,
+                                    "type": "array",
+                                    "isReference": false,
+                                    "display": true,
+                                    "component": {
+                                        "name": "Education Plan",
+                                        "displayName": "Education Plan",
+                                        "attributes": [
+                                            {
+                                                "name": "certification_id",
+                                                "displayName": "Certification ID",
+                                                "description": null,
+                                                "isRequired": true,
+                                                "isAutoGenerated": false,
+                                                "type": "object",
+                                                "isReference": true,
+                                                "display": true
+                                            },
+                                            {
+                                                "name": "id",
+                                                "displayName": "ID",
+                                                "description": null,
+                                                "isRequired": true,
+                                                "isAutoGenerated": true,
+                                                "type": "string",
+                                                "isReference": false,
+                                                "display": true,
+                                                "isSearchFilter": false
+                                            },
+                                            {
+                                                "name": "is_reqd",
+                                                "displayName": "Is Required",
+                                                "description": null,
+                                                "isRequired": false,
+                                                "isAutoGenerated": false,
+                                                "type": "boolean",
+                                                "isReference": false,
+                                                "display": true,
+                                                "isSearchFilter": false
+                                            },
+                                            {
+                                                "name": "is_waiver",
+                                                "displayName": "Is Waiver",
+                                                "description": null,
+                                                "isRequired": true,
+                                                "isAutoGenerated": false,
+                                                "type": "boolean",
+                                                "isReference": false,
+                                                "display": true,
+                                                "isSearchFilter": false
+                                            },
+                                            {
+                                                "name": "owner_id",
+                                                "displayName": "Certification Track",
+                                                "description": null,
+                                                "isRequired": true,
+                                                "isAutoGenerated": false,
+                                                "type": "object",
+                                                "isReference": true,
+                                                "display": true
+                                            },
+                                            {
+                                                "name": "part_id",
+                                                "displayName": "Product",
+                                                "description": null,
+                                                "isRequired": true,
+                                                "isAutoGenerated": false,
+                                                "type": "object",
+                                                "isReference": true,
+                                                "display": true
+                                            },
+                                            {
+                                                "name": "sequence",
+                                                "displayName": "Sequence",
+                                                "description": null,
+                                                "isRequired": true,
+                                                "isAutoGenerated": false,
+                                                "type": "integer",
+                                                "isReference": false,
+                                                "display": true,
+                                                "isSearchFilter": false
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "name",
+                                    "displayName": "Name",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "string",
+                                    "isReference": false,
+                                    "display": true,
+                                    "length": 80,
+            "maximumLength": 80,
+                                    "isSearchFilter": true
+                                },
+                                {
+                                    "name": "notes",
+                                    "displayName": "Notes",
+                                    "description": null,
+                                    "isRequired": false,
+                                    "isAutoGenerated": false,
+                                    "type": "string",
+                                    "isReference": false,
+                                    "display": true,
+                                    "length": 255,
+            "maximumLength": 255,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "reqd_no_of_items",
+                                    "displayName": "No of Choices to complete",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "integer",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "sequence",
+                                    "displayName": "Sequence",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "integer",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "track_id",
+                                    "displayName": "Track",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "object",
+                                    "isReference": true,
+                                    "display": true
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "displayName": "Name",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "length": 255,
+            "maximumLength": 255,
+                        "isSearchFilter": true
+                    }
+                ]
+            }
+        },
+        {
+            "name": "publish_to_catalog",
+            "displayName": "Publish To Catalog",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "recert_window",
+            "displayName": "Recertification Window",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "recertwindow_unit",
+            "displayName": "kI18nALCertification_recertwindow_unit(Missing resource)",
+            "description": "Recertification window Unit",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "choices": {
+                "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/sysli000000000004072/values"
+            },
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "securityDomain",
+            "displayName": "Domain",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "status",
+            "displayName": "Status",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "choices": {
+                "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/sysli000000000000182/values"
+            },
+            "display": true
+        },
+        {
+            "name": "target_days",
+            "displayName": "Target Days",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "updated_by",
+            "displayName": "Updated By",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "updated_on",
+            "displayName": "Updated On",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "valid_till",
+            "displayName": "Expires In (Days)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validtill_daymonth",
+            "displayName": "Expires On",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validtill_frequency",
+            "displayName": "Frequency (Yearly)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validtill_start_daymonth",
+            "displayName": "New Expiry Cycle Starts On",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validtill_type",
+            "displayName": "Expiry Type",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validtill_unit",
+            "displayName": "kI18nALCertification_validtill_unit(Missing resource)",
+            "description": "Valid Till Unit",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "choices": {
+                "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/sysli000000000004072/values"
+            },
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "vendor_id",
+            "displayName": "Vendor",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "version",
+            "displayName": "Version",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom0",
+            "displayName": "Custom0",
+            "description": "custom0",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom1",
+            "displayName": "Custom1",
+            "description": "custom1",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom2",
+            "displayName": "Custom2",
+            "description": "custom2",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom3",
+            "displayName": "Custom3",
+            "description": "custom3",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "choices": {
+                "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/listi000000000200188/values"
+            },
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom4",
+            "displayName": "Custom4",
+            "description": "custom4",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom5",
+            "displayName": "Custom5",
+            "description": "custom5",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom6",
+            "displayName": "Custom6",
+            "description": "custom6",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom7",
+            "displayName": "Custom7",
+            "description": "custom7",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom8",
+            "displayName": "Custom8",
+            "description": "custom8",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom9",
+            "displayName": "Custom9",
+            "description": "custom9",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        }
+    ]
+}</code></pre>
+                <div class="p"><strong class="ph b">Curriculum</strong><pre class="pre codeblock"><code>{
+    "sampleData": {
+        "name": null,
+        "description": null,
+        "paths": null,
+        "featured": false,
+        "vendor_id": null,
+        "avl_from": null,
+        "disc_from": null,
+        "target_days": 0,
+        "learningevent_id": null,
+        "version": null,
+        "group": null,
+        "status": null,
+        "customValues": {
+            "custom1": null,
+            "custom2": null,
+            "custom3": null,
+            "custom4": null,
+            "custom5": null,
+            "custom6": null,
+            "custom7": null,
+            "custom8": null,
+            "custom9": null,
+            "custom0": null
+        },
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": null
+        },
+        "id": null,
+        "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/curriculum/curra000000000000001"
+    },
+    "name": "Curriculum",
+    "displayName": "Curriculum",
+    "attributes": [
+        {
+            "name": "avl_from",
+            "displayName": "Available From",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "description",
+            "displayName": "Description",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 2000,
+            "maximumLength": 2000,
+            "isSearchFilter": false
+        },
+        {
+            "name": "disc_from",
+            "displayName": "Discontinued From",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "featured",
+            "displayName": "Featured",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "group",
+            "displayName": "Group",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "id",
+            "displayName": "ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "learningevent_id",
+            "displayName": "ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 25,
+            "maximumLength": 25,
+            "isSearchFilter": true
+        },
+        {
+            "name": "name",
+            "displayName": "Name",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "paths",
+            "displayName": "Paths",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "Path",
+                "displayName": "Path",
+                "attributes": [
+                    {
+                        "name": "acq_within",
+                        "displayName": "Acquire Within",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "avl_from",
+                        "displayName": "Available From",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "date",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "certification_id",
+                        "displayName": "Certification ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true
+                    },
+                    {
+                        "name": "disc_from",
+                        "displayName": "Discontinued From",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "date",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "is_default_path",
+                        "displayName": "Is Default Path",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "isrecertification_track",
+                        "displayName": "Recertification Path",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "learningModules",
+                        "displayName": "Learning Modules",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "array",
+                        "isReference": false,
+                        "display": true,
+                        "component": {
+                            "name": "Certification Element Groups",
+                            "displayName": "Certification Element Groups",
+                            "attributes": [
+                                {
+                                    "name": "certification_id",
+                                    "displayName": "Certification ID",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "object",
+                                    "isReference": true,
+                                    "display": true
+                                },
+                                {
+                                    "name": "id",
+                                    "displayName": "ID",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": true,
+                                    "type": "string",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "is_reqd",
+                                    "displayName": "Required",
+                                    "description": null,
+                                    "isRequired": false,
+                                    "isAutoGenerated": false,
+                                    "type": "boolean",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "is_waiver",
+                                    "displayName": "Is Waiver",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "boolean",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "learningInterventions",
+                                    "displayName": "Learning Interventions",
+                                    "description": null,
+                                    "isRequired": false,
+                                    "isAutoGenerated": false,
+                                    "type": "array",
+                                    "isReference": false,
+                                    "display": true,
+                                    "component": {
+                                        "name": "Education Plan",
+                                        "displayName": "Education Plan",
+                                        "attributes": [
+                                            {
+                                                "name": "certification_id",
+                                                "displayName": "Certification ID",
+                                                "description": null,
+                                                "isRequired": true,
+                                                "isAutoGenerated": false,
+                                                "type": "object",
+                                                "isReference": true,
+                                                "display": true
+                                            },
+                                            {
+                                                "name": "id",
+                                                "displayName": "ID",
+                                                "description": null,
+                                                "isRequired": true,
+                                                "isAutoGenerated": true,
+                                                "type": "string",
+                                                "isReference": false,
+                                                "display": true,
+                                                "isSearchFilter": false
+                                            },
+                                            {
+                                                "name": "is_reqd",
+                                                "displayName": "Is Required",
+                                                "description": null,
+                                                "isRequired": false,
+                                                "isAutoGenerated": false,
+                                                "type": "boolean",
+                                                "isReference": false,
+                                                "display": true,
+                                                "isSearchFilter": false
+                                            },
+                                            {
+                                                "name": "is_waiver",
+                                                "displayName": "Is Waiver",
+                                                "description": null,
+                                                "isRequired": true,
+                                                "isAutoGenerated": false,
+                                                "type": "boolean",
+                                                "isReference": false,
+                                                "display": true,
+                                                "isSearchFilter": false
+                                            },
+                                            {
+                                                "name": "owner_id",
+                                                "displayName": "Certification Track",
+                                                "description": null,
+                                                "isRequired": true,
+                                                "isAutoGenerated": false,
+                                                "type": "object",
+                                                "isReference": true,
+                                                "display": true
+                                            },
+                                            {
+                                                "name": "part_id",
+                                                "displayName": "Product",
+                                                "description": null,
+                                                "isRequired": true,
+                                                "isAutoGenerated": false,
+                                                "type": "object",
+                                                "isReference": true,
+                                                "display": true
+                                            },
+                                            {
+                                                "name": "sequence",
+                                                "displayName": "Sequence",
+                                                "description": null,
+                                                "isRequired": true,
+                                                "isAutoGenerated": false,
+                                                "type": "integer",
+                                                "isReference": false,
+                                                "display": true,
+                                                "isSearchFilter": false
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "name",
+                                    "displayName": "Name",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "string",
+                                    "isReference": false,
+                                    "display": true,
+                                    "length": 80,
+            "maximumLength": 80,
+                                    "isSearchFilter": true
+                                },
+                                {
+                                    "name": "notes",
+                                    "displayName": "Notes",
+                                    "description": null,
+                                    "isRequired": false,
+                                    "isAutoGenerated": false,
+                                    "type": "string",
+                                    "isReference": false,
+                                    "display": true,
+                                    "length": 255,
+            "maximumLength": 255,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "reqd_no_of_items",
+                                    "displayName": "No of Choices to complete",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "integer",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "sequence",
+                                    "displayName": "Sequence",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "integer",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "track_id",
+                                    "displayName": "Track",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "object",
+                                    "isReference": true,
+                                    "display": true
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "displayName": "Name",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "length": 255,
+            "maximumLength": 255,
+                        "isSearchFilter": true
+                    }
+                ]
+            }
+        },
+        {
+            "name": "publish_to_catalog",
+            "displayName": "Publish To Catalog",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "securityDomain",
+            "displayName": "Domain",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "status",
+            "displayName": "Status",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "choices": {
+                "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/sysli000000000000182/values"
+            },
+            "display": true
+        },
+        {
+            "name": "target_days",
+            "displayName": "Target Days",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "vendor_id",
+            "displayName": "Vendor",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "version",
+            "displayName": "Version",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom0",
+            "displayName": "Custom0",
+            "description": "custom0",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom1",
+            "displayName": "Custom1",
+            "description": "custom1",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom2",
+            "displayName": "Custom2",
+            "description": "custom2",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom3",
+            "displayName": "Custom3",
+            "description": "custom3",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom4",
+            "displayName": "Custom4",
+            "description": "custom4",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom5",
+            "displayName": "Custom5",
+            "description": "custom5",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom6",
+            "displayName": "Custom6",
+            "description": "custom6",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom7",
+            "displayName": "Custom7",
+            "description": "custom7",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom8",
+            "displayName": "Custom8",
+            "description": "custom8",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom9",
+            "displayName": "Custom9",
+            "description": "custom9",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        }
+    ]
+}</code></pre></div>
+                <div class="p"><strong class="ph b">Path</strong><pre class="pre codeblock"><code>{
+    "sampleData": {
+        "learningModules": null,
+        "is_default_path": false,
+        "isrecertification_track": false,
+        "name": null,
+        "id": null,
+        "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/path/track000000000000001"
+    },
+    "name": "Path",
+    "displayName": "Path",
+    "attributes": [
+        {
+            "name": "acq_within",
+            "displayName": "Acquire Within",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "avl_from",
+            "displayName": "Available From",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "certification_id",
+            "displayName": "Certification ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "disc_from",
+            "displayName": "Discontinued From",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "id",
+            "displayName": "ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "is_default_path",
+            "displayName": "Is Default Path",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "isrecertification_track",
+            "displayName": "Recertification Path",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "learningModules",
+            "displayName": "Learning Modules",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "Certification Element Groups",
+                "displayName": "Certification Element Groups",
+                "attributes": [
+                    {
+                        "name": "certification_id",
+                        "displayName": "Certification ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "is_reqd",
+                        "displayName": "Required",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "is_waiver",
+                        "displayName": "Is Waiver",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "learningInterventions",
+                        "displayName": "Learning Interventions",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "array",
+                        "isReference": false,
+                        "display": true,
+                        "component": {
+                            "name": "Education Plan",
+                            "displayName": "Education Plan",
+                            "attributes": [
+                                {
+                                    "name": "certification_id",
+                                    "displayName": "Certification ID",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "object",
+                                    "isReference": true,
+                                    "display": true
+                                },
+                                {
+                                    "name": "id",
+                                    "displayName": "ID",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": true,
+                                    "type": "string",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "is_reqd",
+                                    "displayName": "Is Required",
+                                    "description": null,
+                                    "isRequired": false,
+                                    "isAutoGenerated": false,
+                                    "type": "boolean",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "is_waiver",
+                                    "displayName": "Is Waiver",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "boolean",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                },
+                                {
+                                    "name": "owner_id",
+                                    "displayName": "Certification Track",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "object",
+                                    "isReference": true,
+                                    "display": true
+                                },
+                                {
+                                    "name": "part_id",
+                                    "displayName": "Product",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "object",
+                                    "isReference": true,
+                                    "display": true
+                                },
+                                {
+                                    "name": "sequence",
+                                    "displayName": "Sequence",
+                                    "description": null,
+                                    "isRequired": true,
+                                    "isAutoGenerated": false,
+                                    "type": "integer",
+                                    "isReference": false,
+                                    "display": true,
+                                    "isSearchFilter": false
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "displayName": "Name",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "length": 80,
+            "maximumLength": 80,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "notes",
+                        "displayName": "Notes",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "length": 255,
+            "maximumLength": 255,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "reqd_no_of_items",
+                        "displayName": "No of Choices to complete",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "sequence",
+                        "displayName": "Sequence",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "track_id",
+                        "displayName": "Track",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true
+                    }
+                ]
+            }
+        },
+        {
+            "name": "name",
+            "displayName": "Name",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        }
+    ]
+}</code></pre></div>
+                <div class="p"><strong class="ph b">Learning
+                    Intervention</strong><pre class="pre codeblock"><code>{
+    "sampleData": {
+        "is_reqd": false,
+        "owner_id": null,
+        "part_id": null,
+        "is_waiver": false,
+        "sequence": 0,
+        "id": null,
+        "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learningintervention/edupl000000000000001"
+    },
+    "name": "Education Plan",
+    "displayName": "Education Plan",
+    "attributes": [
+        {
+            "name": "certification_id",
+            "displayName": "Certification ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "id",
+            "displayName": "ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "is_reqd",
+            "displayName": "Is Required",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "is_waiver",
+            "displayName": "Is Waiver",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "owner_id",
+            "displayName": "Certification Track",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "part_id",
+            "displayName": "Product",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "sequence",
+            "displayName": "Sequence",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        }
+    ]
+}</code></pre></div>
+                <div class="p"><strong class="ph b">Learning
+                    Module</strong><pre class="pre codeblock"><code>{
+    "sampleData": {
+        "is_reqd": false,
+        "learningInterventions": null,
+        "notes": null,
+        "reqd_no_of_items": 0,
+        "is_waiver": false,
+        "track_id": null,
+        "name": null,
+        "sequence": null,
+        "id": null,
+        "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/learningmodule/cegrp000000000000001"
+    },
+    "name": "Certification Element Groups",
+    "displayName": "Certification Element Groups",
+    "attributes": [
+        {
+            "name": "certification_id",
+            "displayName": "Certification ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "id",
+            "displayName": "ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "is_reqd",
+            "displayName": "Required",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "is_waiver",
+            "displayName": "Is Waiver",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "learningInterventions",
+            "displayName": "Learning Interventions",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "Education Plan",
+                "displayName": "Education Plan",
+                "attributes": [
+                    {
+                        "name": "certification_id",
+                        "displayName": "Certification ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "is_reqd",
+                        "displayName": "Is Required",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "is_waiver",
+                        "displayName": "Is Waiver",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "owner_id",
+                        "displayName": "Certification Track",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true
+                    },
+                    {
+                        "name": "part_id",
+                        "displayName": "Product",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true
+                    },
+                    {
+                        "name": "sequence",
+                        "displayName": "Sequence",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "name",
+            "displayName": "Name",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 80,
+            "maximumLength": 80,
+            "isSearchFilter": false
+        },
+        {
+            "name": "notes",
+            "displayName": "Notes",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "reqd_no_of_items",
+            "displayName": "No of Choices to complete",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "sequence",
+            "displayName": "Sequence",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "track_id",
+            "displayName": "Track",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        }
+    ]
+}</code></pre></div>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_jnl_hnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title5">DELETE A PATH, MODULE OR INTERVENTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Deletes a path, module or intervention based on the component's ID that is passed
+                    as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/:name/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_jnl_hnx_fp__table_pnl_hnx_fp"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__2 ">The name of the component. Can be one of these:
+                                        <ul class="ul" id="reference_jnl_hnx_fp__ul_snl_hnx_fp">
+                                        <li class="li">path </li>
+                                        <li class="li">learningmodule </li>
+                                        <li class="li">learningintervention</li>
+                                    </ul></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__3 ">path</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__2 ">Component's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__3 ">crtfy000000000200021</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_jnl_hnx_fp__table_pnl_hnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

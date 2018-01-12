@@ -1,0 +1,1269 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="learning, restful web services, get the meta details of field of study, learning components, get the meta details of field of study, get all fields of study, get the details of a particular field of study, get the details of a particular field of study, find the details of the fields of study, find the details of the fields of study, find the details of field of study (using post - range based search), find the details of field of study (using post - range based search)"><meta name="keywords" content="learning, restful web services, get the meta details of field of study, learning components, get the meta details of field of study, get all fields of study, get the details of a particular field of study, get the details of a particular field of study, find the details of the fields of study, find the details of the fields of study, find the details of field of study (using post - range based search), find the details of field of study (using post - range based search)"><meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Learning-apis"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Fields of Study</title></head><body id="Learning-apis"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Fields of Study</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-learning.html">Learning</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="reference_xkf_whw_5t">
+        <h2 class="title topictitle2" id="ariaid-title2">GET META DETAILS OF FIELD OF STUDY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of the Field Of Study.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/fieldofstudy/meta:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_xkf_whw_5t__table_rlf_whw_5t"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_xkf_whw_5t__table_rlf_whw_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xkf_whw_5t__table_rlf_whw_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xkf_whw_5t__table_rlf_whw_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xkf_whw_5t__table_rlf_whw_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xkf_whw_5t__table_rlf_whw_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xkf_whw_5t__table_rlf_whw_5t__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xkf_whw_5t__table_rlf_whw_5t__entry__2 ">Indicate what additional details needs to be
+                                    returned. Acceptable values are (case-sensitive)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xkf_whw_5t__table_rlf_whw_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xkf_whw_5t__table_rlf_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xkf_whw_5t__table_rlf_whw_5t__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "sampleData": {
+    "name": "",
+    "description": "",
+    "status": "100",
+    "id": null,
+    "customValues": {
+      "custom9": null,
+      "custom0": null,
+      "custom3": null,
+      "custom4": null,
+      "custom1": null,
+      "custom2": null,
+      "custom7": null,
+      "custom8": null,
+      "custom5": null,
+      "custom6": null
+    },
+    "securityDomain": {
+      "id": "domin000000000000001",
+      "displayName": null
+    },
+    "href": "http://&lt;hostname&gt;/v1/FieldOfStudy/fldst000000000000001"
+  },
+  "name": "FieldOfStudy",
+  "displayName": "Field of Study",
+  "attributes": [
+    {
+      "name": "description",
+      "displayName": "Description",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isSearchFilter": true
+    },
+    {
+      "name": "flags",
+      "displayName": "Flags",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "id",
+      "displayName": "ID",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": true,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "name",
+      "displayName": "Name",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "securityDomain",
+      "displayName": "Domain",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "status",
+      "displayName": "Status",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "integer",
+      "isReference": false,
+      "choices": {
+        "href": "http://&lt;hostname&gt;/Saba/api/list/sysli000000000004029/values"
+      },
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom0",
+      "displayName": "Custom0",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom1",
+      "displayName": "Custom1",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom2",
+      "displayName": "Custom2",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom3",
+      "displayName": "Custom3",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom4",
+      "displayName": "Custom4",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom5",
+      "displayName": "Custom5",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom6",
+      "displayName": "Custom6",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom7",
+      "displayName": "Custom7",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom8",
+      "displayName": "Custom8",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "custom9",
+      "displayName": "Custom9",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isI18n": true,
+      "isSearchFilter": true
+    }
+  ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_vdg_whw_5t">
+        <h2 class="title topictitle2" id="ariaid-title3">GET ALL FIELDS OF STUDY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all Fields of Study for which the user has access.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/fieldofstudy?count=:count&amp;startPage=:startPage&amp;includeDetails=:includeDetails</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_vdg_whw_5t__table_wdg_whw_5t"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_vdg_whw_5t__table_wdg_whw_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vdg_whw_5t__table_wdg_whw_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vdg_whw_5t__table_wdg_whw_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vdg_whw_5t__table_wdg_whw_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vdg_whw_5t__table_wdg_whw_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__1 ">includeDetails</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__2 ">If true then returns the complete details of
+                                    Field Of Study</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vdg_whw_5t__table_wdg_whw_5t__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "facets": [],
+  "hasMoreResults": true,
+  "totalResults": 22,
+  "itemsPerPage": 10,
+  "startIndex": 1,
+  "results": [
+    {
+      "name": "HRPolicy",
+      "description": "This is HR Policy FOS",
+      "status": "100",
+      "id": "fldst000000000001044",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "quality control",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001060",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "writing skills",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001061",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS_World",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001080",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS_Domain_SabaQE",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001081",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000201396",
+        "displayName": "Domain_SabaQE"
+      }
+    },
+    {
+      "name": "FOS_Domain_SabaDev",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001082",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000201399",
+        "displayName": "Domain_SabaDev"
+      }
+    },
+    {
+      "name": "FOS1",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001000",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS2",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001001",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS3",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001002",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS4",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001003",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    }
+  ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_hvf_whw_5t">
+        <h2 class="title topictitle2" id="ariaid-title4">GET DETAILS OF A PARTICULAR FIELD OF STUDY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a field of study based on the field of study's
+                    ID that is passed as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/fieldofstudy/:id:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_hvf_whw_5t__table_rvf_whw_5t"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_hvf_whw_5t__table_rvf_whw_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hvf_whw_5t__table_rvf_whw_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hvf_whw_5t__table_rvf_whw_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hvf_whw_5t__table_rvf_whw_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hvf_whw_5t__table_rvf_whw_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hvf_whw_5t__table_rvf_whw_5t__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hvf_whw_5t__table_rvf_whw_5t__entry__2 ">Field Of Study's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hvf_whw_5t__table_rvf_whw_5t__entry__3 ">fldst000000000001123</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hvf_whw_5t__table_rvf_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hvf_whw_5t__table_rvf_whw_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hvf_whw_5t__table_rvf_whw_5t__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hvf_whw_5t__table_rvf_whw_5t__entry__2 ">Indicate what additional details needs to be
+                                    returned. Acceptable values are (case-sensitive)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hvf_whw_5t__table_rvf_whw_5t__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hvf_whw_5t__table_rvf_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hvf_whw_5t__table_rvf_whw_5t__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "name": "Default Field of Study",
+  "description": "Default field of study",
+  "status": "100",
+  "id": "fldst000000000000001",
+  "customValues": {
+    "custom9": null,
+    "custom0": null,
+    "custom3": null,
+    "custom4": null,
+    "custom1": null,
+    "custom2": null,
+    "custom7": null,
+    "custom8": null,
+    "custom5": null,
+    "custom6": null
+  },
+  "securityDomain": {
+    "id": "domin000000000000001",
+    "displayName": "world"
+  }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="get-find-the-details-of-the-fields-of-study-N105AC">
+        <h2 class="title topictitle2" id="ariaid-title5">FIND DETAILS OF FIELDS OF STUDY</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the fields of study along with the ID, Name and the
+                    Deeplink URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/fieldofstudy?q=(:criteria)&amp;count=:count&amp;startPage=:startPage&amp;includeDetails=:includeDetails</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__1 ">criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__2 ">The search criteria i.e. the criteria field name
+                                    with search value.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__3 ">status%3D%3D100</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__1 ">includeDetails</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__2 ">If true then returns the complete details of
+                                    Field Of Study</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-fields-of-study-N105AC__table_rmg_whw_5t__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "facets": [],
+  "hasMoreResults": true,
+  "totalResults": 22,
+  "itemsPerPage": 10,
+  "startIndex": 1,
+  "results": [
+    {
+      "name": "HRPolicy",
+      "description": "This is HR Policy FOS",
+      "status": "100",
+      "id": "fldst000000000001044",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "quality control",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001060",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "writing skills",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001061",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS_World",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001080",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS_Domain_SabaQE",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001081",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000201396",
+        "displayName": "Domain_SabaQE"
+      }
+    },
+    {
+      "name": "FOS_Domain_SabaDev",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001082",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000201399",
+        "displayName": "Domain_SabaDev"
+      }
+    },
+    {
+      "name": "FOS1",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001000",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS2",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001001",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS3",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001002",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS4",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001003",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    }
+  ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_s1f_whw_5t">
+        <h2 class="title topictitle2" id="ariaid-title6">FIND DETAILS OF FIELD OF STUDY (USING POST - RANGE BASED SEARCH)</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the field of study along with the ID, Name and the
+                    Deeplink URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/fieldofstudy/searchQuery?count=:count&amp;startPage=:startPage&amp;includeDetails=:includeDetails</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_s1f_whw_5t__table_cbf_whw_5t"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_s1f_whw_5t__table_cbf_whw_5t__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_s1f_whw_5t__table_cbf_whw_5t__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_s1f_whw_5t__table_cbf_whw_5t__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_s1f_whw_5t__table_cbf_whw_5t__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_s1f_whw_5t__table_cbf_whw_5t__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__1 ">conditions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__2 ">Conditions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__3 ">
+                                    <ul class="ul" id="reference_s1f_whw_5t__ul_mbf_whw_5t">
+                                        <li class="li">status<ul class="ul" id="reference_s1f_whw_5t__ul_nbf_whw_5t">
+                                                <li class="li"><strong class="ph b">Value: </strong>100</li>
+                                            </ul></li>
+                                    </ul>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__2 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__2 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__1 ">includeDetails</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__2 ">If true then returns the complete details of
+                                    Field Of Study</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_s1f_whw_5t__table_cbf_whw_5t__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "conditions" : [{"name": "status","operator": "==","value": "100"}]
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "facets": [],
+  "hasMoreResults": true,
+  "totalResults": 21,
+  "itemsPerPage": 10,
+  "startIndex": 1,
+  "results": [
+    {
+      "name": "HRPolicy",
+      "description": "This is HR Policy FOS",
+      "status": "100",
+      "id": "fldst000000000001044",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "quality control",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001060",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "writing skills",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001061",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS_World",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001080",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS_Domain_SabaQE",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001081",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000201396",
+        "displayName": "Domain_SabaQE"
+      }
+    },
+    {
+      "name": "FOS_Domain_SabaDev",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001082",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000201399",
+        "displayName": "Domain_SabaDev"
+      }
+    },
+    {
+      "name": "FOS1",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001000",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS2",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001001",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS3",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001002",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    },
+    {
+      "name": "FOS4",
+      "description": null,
+      "status": "100",
+      "id": "fldst000000000001003",
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      }
+    }
+  ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

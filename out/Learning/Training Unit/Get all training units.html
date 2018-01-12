@@ -1,0 +1,108 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all training units, learning components, find the details of the training unit, find the details of the training unit, find the details of the training unit (using post - range based search), find the details of the training unit (using post - range based search), get the meta details of the training unit, get the meta details of the training unit, get the details of a particular training unit, get the details of a particular training unit, create a new training unit, create a new training unit, update the details of a training unit, update the details of a training unit, delete a particular training unit, delete a particular training unit, get the details of a particular discount entry for the training unit, get the details of a particular discount entry for the training unit, create a new discount entry for the training unit, create a new discount entry for the training unit, delete a particular discount entry for the training unit, delete a particular discount entry for the training unit, get the details of a particular pricelist entry for the training unit, get the details of a particular pricelist entry for the training unit, create a new pricelist entry for the training unit, create a new pricelist entry for the training unit, update the details of a particular pricelist entry for the training unit, update the details of a particular pricelist entry for the training unit, delete a particular pricelist entry for the training unit, delete a particular pricelist entry for the training unit">
+  <meta name="keywords" content="learning, restful web services, get all training units, learning components, find the details of the training unit, find the details of the training unit, find the details of the training unit (using post - range based search), find the details of the training unit (using post - range based search), get the meta details of the training unit, get the meta details of the training unit, get the details of a particular training unit, get the details of a particular training unit, create a new training unit, create a new training unit, update the details of a training unit, update the details of a training unit, delete a particular training unit, delete a particular training unit, get the details of a particular discount entry for the training unit, get the details of a particular discount entry for the training unit, create a new discount entry for the training unit, create a new discount entry for the training unit, delete a particular discount entry for the training unit, delete a particular discount entry for the training unit, get the details of a particular pricelist entry for the training unit, get the details of a particular pricelist entry for the training unit, create a new pricelist entry for the training unit, create a new pricelist entry for the training unit, update the details of a particular pricelist entry for the training unit, update the details of a particular pricelist entry for the training unit, delete a particular pricelist entry for the training unit, delete a particular pricelist entry for the training unit">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Training Unit</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title2">GET ALL TRAINING UNITS</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns all Training Units for which the user does has access.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "facets": [],
+    "startIndex": 1,
+    "results": [
+        {
+            "name": "Aligning people to your business strategy, measuring progress, rewarding performance and actively developing your human capital every day drives engagement and inspires greatness. Saba helps everyone understand your business strategy and their role in it",
+            "id": "tunit000000000001101",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001101"
+        },
+        {
+            "name": "asd",
+            "id": "tunit000000000001322",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001322"
+        },
+        {
+            "name": "Books TU",
+            "id": "tunit000000000001008",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001008"
+        },
+        {
+            "name": "businessunit1_tunits",
+            "id": "tunit000000000001200",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001200"
+        },
+        {
+            "name": "da",
+            "id": "tunit000000000001154",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001154"
+        },
+        {
+            "name": "dd",
+            "id": "tunit000000000001151",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001151"
+        },
+        {
+            "name": "demo training unit",
+            "id": "tunit000000000001061",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001061"
+        },
+        {
+            "name": "demo TU 11",
+            "id": "tunit000000000001060",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001060"
+        },
+        {
+            "name": "demo TU Update 22",
+            "id": "tunit000000000001062",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001062"
+        },
+        {
+            "name": "ggg",
+            "id": "tunit000000000001149",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001149"
+        }
+    ],
+    "totalResults": 82,
+    "hasMoreResults": true,
+    "itemsPerPage": 10
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

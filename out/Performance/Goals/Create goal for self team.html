@@ -1,0 +1,1123 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="performance, restful web services, get all goals for a person, performance components, get all goals for a person, get the details of a particular goal, get the details of a particular goal, create goal for self/team, create goal for self/team, create progress of a goal, create progress of a goal, change status of a goal, change status of a goal, update approver of goal., update approver of goal., update goal for self/team, update goal for self/team">
+  <meta name="keywords" content="performance, restful web services, get all goals for a person, performance components, get all goals for a person, get the details of a particular goal, get the details of a particular goal, create goal for self/team, create goal for self/team, create progress of a goal, create progress of a goal, change status of a goal, change status of a goal, update approver of goal., update approver of goal., update goal for self/team, update goal for self/team">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-performance.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Goals</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title4">CREATE GOAL FOR SELF/TEAM</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <div class="p">
+     Creates a Goal for self/team.
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> 
+      <p class="p">To create a goal with a parent goal, set the parentGoal field, or else keep it null. </p> 
+      <p class="p">To create a goal with approval, set submitForApproval to true, or else keep it false. </p> 
+      <p class="p">To create a goal for self, set the assignee field of goalAssignmentDetail and set the assignee field of SabaGoalRestDetail as null. </p> 
+      <p class="p">To create a goal for team, set the assignee field of SabaGoalRestDetail object. </p> 
+      <div class="p">
+       The following are the available goal status ID:
+       <ul class="ul" id="post-create-goal-for-selfteam-N1000A__ul_sjv_bs5_pv"> 
+        <li class="li">ACTIVE_GOAL_STATUS = "gstts000000000001000" </li> 
+        <li class="li">INACTIVE_GOAL_STATUS = "gstts000000000001001" </li> 
+        <li class="li">COMPLETED_GOAL_STATUS = "gstts000000000001002" </li> 
+       </ul>
+      </div> 
+     </div>
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">POST</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 3. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3">Default Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 ">com.saba.rest.service.goal.SabaGoalRestDetail</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">goalAssignmentDetail</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Detail of a Goal Assignment</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">goalDefinitionDetail</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Detail of a Goal Definition</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">assignees</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Assignee of goals (Required only while creating team goal)</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">isDirectIndirect</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Whether it is direct or undirect goal</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">tasks</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Tasks to add</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">parentGoal</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Wrapper Reference of parent goal</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">associationsData</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Association Data</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">submitForApproval</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Whether to submit for approval or not</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body (Self)</h5> 
+    <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.SabaGoalRestDetail",
+   "goalAssignmentDetail":{  
+      "@type":"com.saba.rest.service.goal.RestGoalAssignmentDetail",
+      "locked":false,
+      "assignee":{  
+         "@type":"com.saba.party.person.entity.EmployeeReference",
+         "id":"emplo000000000200503"
+      },
+      "goalDefinition":null,
+      "goalAssignmentStatus":{  
+         "@type":"com.saba.goal.entity.GoalStatusReference",
+         "statusValue":"gstts000000000001000",
+         "id":"gstts000000000001000"
+      },
+      "archived":false,
+      "source":{  
+         "@type":"com.saba.party.person.entity.EmployeeReference",
+         "id":"emplo000000000001000"
+      },
+      "startDate":{  
+         "@type":"date",
+         "time":"2016-04-07",
+         "date":"2016-04-07"
+      },
+      "dueDate":{  
+         "@type":"date",
+         "time":"2016-04-30",
+         "date":"2016-04-30"
+      },
+      "originalDueDate":null
+   },
+   "goalDefinitionDetail":{  
+      "@type":"com.saba.rest.service.goal.RestGoalDefinitionDetail",
+      "owner":{  
+         "@type":"com.saba.party.person.entity.EmployeeReference",
+         "id":"emplo000000000200503"
+      },
+      "required":null,
+      "duration":null,
+      "pullInReview":false,
+      "smartGoal":null,
+      "fixedStartDate":null,
+      "fixedEndDate":null,
+      "title":"new",
+      "goalCategory":{  
+         "@type":"com.saba.goal.entity.GoalCategoryReference",
+         "id":"gcate000000000000011"
+      },
+      "goalDefinitionStatus":{  
+         "@type":"com.saba.rest.service.goal.RestGoalDefinitionStatus",
+         "listId":"sysli000000000006003",
+         "key":"Active"
+      },
+      "shared":false,
+      "template":false,
+      "pushed":null,
+      "goalMetric":{  
+         "@type":"com.saba.goal.entity.GoalMetricReference",
+         "id":"gmetr000000000001042"
+      },
+      "goalAction":{  
+         "@type":"com.saba.goal.entity.GoalActionReference",
+         "id":"gactn000000000001041"
+      },
+      "goalUnit":{  
+         "@type":"com.saba.goal.entity.GoalUnitReference",
+         "id":"gunit000000000001004"
+      },
+      "goalType":{  
+         "@type":"com.saba.goal.entity.GoalTypeReference",
+         "id":"goalt000000000000001"
+      },
+      "initialValue":1,
+      "targetValue":2,
+      "goalVisibility":"gvizr000000000001002",
+      "description":"&lt;p&gt;Hello&lt;/p&gt;",
+      "libGoalVisibilityKey":null,
+      "auditDetail":null,
+      "definitionCustomValues":[  
+         "list",
+         [  
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom0",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"1",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom1",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom2",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"3",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom3",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"4",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom4",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"5",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom5",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"6",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom6",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"7",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom7",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"8",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom8",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"9",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom9",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"",
+               "displayName":null
+            }
+         ]
+      ],
+      "isLibraryGoal":false
+   },
+   "tasks":[  
+      "list",
+      [  
+         {  
+            "@type":"com.saba.rest.service.goal.RestTaskDetail",
+            "owner":null,
+            "taskStatus":"100",
+            "title":"new task"
+         }
+      ]
+   ],
+   "parentGoal":{  
+      "@type":"com.saba.goal.GoalReferenceWrapper",
+      "goalDefinition":{  
+         "@type":"com.saba.goal.entity.GoalDefinitionReference",
+         "id":"gdefn000000000002903",
+         "displayName":null
+      },
+      "goalAssignment":{  
+         "@type":"com.saba.goal.entity.GoalAssignmentReference",
+         "id":"gasgn000000000010431",
+         "displayName":null
+      }
+   },
+   "associationsData":[  
+      "list",
+      [  
+         {  
+            "@type":"com.saba.rest.service.goal.GoalAssociationBasicDTO",
+            "activityId":"teams000000000001083",
+            "requiredLevelId":null,
+            "purpose":"Reference"
+         },
+         {  
+            "@type":"com.saba.rest.service.goal.GoalAssociationBasicDTO",
+            "activityId":"crtfy000000000200162",
+            "requiredLevelId":null,
+            "purpose":null
+         },
+         {  
+            "@type":"com.saba.rest.service.goal.GoalAssociationBasicDTO",
+            "activityId":"compt000000000001141",
+            "requiredLevelValue":1,
+            "purpose":null
+         }
+      ]
+   ],
+   "submitForApproval":true,   
+   "isDirectIndirect":false
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values (Self)</h5> 
+    <pre class="pre codeblock"><code>{  
+   "GoalResultWrapper":{  
+      "@type":"com.saba.goal.GoalResultWrapper",
+      "operationResultEnum":"SUCCESS",
+      "goalResultColl":[  
+         "list",
+         [  
+            {  
+               "@type":"com.saba.goal.GoalResult",
+               "approvalStatus":{  
+                  "@type":"com.saba.goal.GoalDefinitionApprovalStatus",
+                  "listId":"sysli000000000006030",
+                  "key":"200",
+                  "displayName":"Pending Approval"
+               },
+               "successFlag":true,
+               "successGoalReference":{  
+                  "@type":"com.saba.goal.GoalReferenceWrapper",
+                  "goalDefinition":{  
+                     "@type":"com.saba.goal.entity.GoalDefinitionReference",
+                     "sourceType":"Goal",
+                     "componentName":"Goal Definition",
+                     "activitySourceType":{  
+                        "sourceType":5,
+                        "listId":"sysli000000000003037",
+                        "key":"5",
+                        "displayName":"Goal"
+                     },
+                     "prescriptionActionType":{  
+                        "displayName":"Goal",
+                        "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+                        "name":"GoalDefinition",
+                        "key":"1"
+                     },
+                     "id":"gdefn000000000002980",
+                     "displayName":null,
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gdefn000000000002980",
+                        "prefix":"gdefn"
+                     }
+                  },
+                  "goalAssignment":{  
+                     "@type":"com.saba.goal.entity.GoalAssignmentReference",
+                     "sourceType":"Goal",
+                     "id":"gasgn000000000010556",
+                     "displayName":"gasgn000000000010556",
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gasgn000000000010556",
+                        "prefix":"gasgn"
+                     }
+                  }
+               },
+               "assignee":{  
+                  "@type":"emplo",
+                  "sourceType":"InternalPerson",
+                  "activitySourceType":{  
+                     "sourceType":0,
+                     "listId":"sysli000000000003037",
+                     "key":"0",
+                     "displayName":"Person"
+                  },
+                  "id":"emplo000000000001001",
+                  "displayName":"User Two",
+                  "locale":null
+               },
+               "goalErrorList":null,
+               "failedGoalDetail":null
+            }
+         ]
+      ]
+   }
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body (Team)</h5> 
+    <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.SabaGoalRestDetail",
+   "goalAssignmentDetail":{  
+      "@type":"com.saba.rest.service.goal.RestGoalAssignmentDetail",
+      "locked":false,
+      "assignee":{  
+         "@type":"com.saba.party.person.entity.EmployeeReference",
+         "id":"emplo000000000200503"
+      },
+      "goalDefinition":null,
+      "goalAssignmentStatus":{  
+         "@type":"com.saba.goal.entity.GoalStatusReference",
+         "statusValue":"gstts000000000001000",
+         "id":"gstts000000000001000"
+      },
+      "archived":false,
+      "source":{  
+         "@type":"com.saba.party.person.entity.EmployeeReference",
+         "id":"emplo000000000001000"
+      },
+      "startDate":{  
+         "@type":"date",
+         "time":"2016-04-07",
+         "date":"2016-04-07"
+      },
+      "dueDate":{  
+         "@type":"date",
+         "time":"2016-04-30",
+         "date":"2016-04-30"
+      },
+      "originalDueDate":null
+   },
+   "goalDefinitionDetail":{  
+      "@type":"com.saba.rest.service.goal.RestGoalDefinitionDetail",
+      "owner":{  
+         "@type":"com.saba.party.person.entity.EmployeeReference",
+         "id":"emplo000000000200503"
+      },
+      "required":null,
+      "duration":null,
+      "pullInReview":false,
+      "smartGoal":null,
+      "fixedStartDate":null,
+      "fixedEndDate":null,
+      "title":"new",
+      "goalCategory":{  
+         "@type":"com.saba.goal.entity.GoalCategoryReference",
+         "id":"gcate000000000000011"
+      },
+      "goalDefinitionStatus":{  
+         "@type":"com.saba.rest.service.goal.RestGoalDefinitionStatus",
+         "listId":"sysli000000000006003",
+         "key":"Active"
+      },
+      "shared":false,
+      "template":false,
+      "pushed":null,
+      "goalMetric":{  
+         "@type":"com.saba.goal.entity.GoalMetricReference",
+         "id":"gmetr000000000001042"
+      },
+      "goalAction":{  
+         "@type":"com.saba.goal.entity.GoalActionReference",
+         "id":"gactn000000000001041"
+      },
+      "goalUnit":{  
+         "@type":"com.saba.goal.entity.GoalUnitReference",
+         "id":"gunit000000000001004"
+      },
+      "goalType":{  
+         "@type":"com.saba.goal.entity.GoalTypeReference",
+         "id":"goalt000000000000001"
+      },
+      "initialValue":1,
+      "targetValue":2,
+      "goalVisibility":"gvizr000000000001002",
+      "description":"&lt;p&gt;Hello&lt;/p&gt;",
+      "libGoalVisibilityKey":null,
+      "auditDetail":null,
+      "definitionCustomValues":[  
+         "list",
+         [  
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom0",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"1",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom1",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom2",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"3",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom3",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"4",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom4",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"5",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom5",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"6",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom6",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"7",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom7",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"8",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom8",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"9",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom9",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"",
+               "displayName":null
+            }
+         ]
+      ],
+      "isLibraryGoal":false
+   },
+   "tasks":[  
+      "list",
+      [  
+         {  
+            "@type":"com.saba.rest.service.goal.RestTaskDetail",
+            "owner":null,
+            "taskStatus":"100",
+            "title":"new task"
+         }
+      ]
+   ],
+   "parentGoal":{  
+      "@type":"com.saba.goal.GoalReferenceWrapper",
+      "goalDefinition":{  
+         "@type":"com.saba.goal.entity.GoalDefinitionReference",
+         "id":"gdefn000000000002903",
+         "displayName":null
+      },
+      "goalAssignment":{  
+         "@type":"com.saba.goal.entity.GoalAssignmentReference",
+         "id":"gasgn000000000010431",
+         "displayName":null
+      }
+   },
+   "associationsData":[  
+      "list",
+      [  
+         {  
+            "@type":"com.saba.rest.service.goal.GoalAssociationBasicDTO",
+            "activityId":"teams000000000001083",
+            "requiredLevelId":null,
+            "purpose":"Reference"
+         },
+         {  
+            "@type":"com.saba.rest.service.goal.GoalAssociationBasicDTO",
+            "activityId":"crtfy000000000200162",
+            "requiredLevelId":null,
+            "purpose":null
+         },
+         {  
+            "@type":"com.saba.rest.service.goal.GoalAssociationBasicDTO",
+            "activityId":"compt000000000001141",
+            "requiredLevelValue":1,
+            "purpose":null
+         }
+      ]
+   ],
+   "submitForApproval":true,
+   "assignees":[  
+      "list",
+      [  
+         {  
+            "@type":"com.saba.party.person.entity.EmployeeReference",
+            "id":"emplo000000000001000"
+         },
+         {  
+            "@type":"com.saba.party.person.entity.EmployeeReference",
+            "id":"emplo000000000200088"
+         },
+         {  
+            "@type":"com.saba.party.person.entity.EmployeeReference",
+            "id":"emplo000000000200504"
+         },
+         {  
+            "@type":"com.saba.party.person.entity.EmployeeReference",
+            "id":"emplo000000000200502"
+         },
+         {  
+            "@type":"com.saba.party.person.entity.EmployeeReference",
+            "id":"emplo000000000200487"
+         }
+      ]
+   ],
+   "isDirectIndirect":false
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values (Team)</h5> 
+    <pre class="pre codeblock"><code>{  
+   "GoalResultWrapper":{  
+      "@type":"com.saba.goal.GoalResultWrapper",
+      "operationResultEnum":"SUCCESS",
+      "goalResultColl":[  
+         "list",
+         [  
+            {  
+               "@type":"com.saba.goal.GoalResult",
+               "approvalStatus":{  
+                  "@type":"com.saba.goal.GoalDefinitionApprovalStatus",
+                  "listId":"sysli000000000006030",
+                  "key":"200",
+                  "displayName":"Pending Approval"
+               },
+               "successFlag":true,
+               "successGoalReference":{  
+                  "@type":"com.saba.goal.GoalReferenceWrapper",
+                  "goalDefinition":{  
+                     "@type":"com.saba.goal.entity.GoalDefinitionReference",
+                     "sourceType":"Goal",
+                     "componentName":"Goal Definition",
+                     "activitySourceType":{  
+                        "sourceType":5,
+                        "listId":"sysli000000000003037",
+                        "key":"5",
+                        "displayName":"Goal"
+                     },
+                     "prescriptionActionType":{  
+                        "displayName":"Goal",
+                        "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+                        "name":"GoalDefinition",
+                        "key":"1"
+                     },
+                     "id":"gdefn000000000002973",
+                     "displayName":null,
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gdefn000000000002973",
+                        "prefix":"gdefn"
+                     }
+                  },
+                  "goalAssignment":{  
+                     "@type":"com.saba.goal.entity.GoalAssignmentReference",
+                     "sourceType":"Goal",
+                     "id":"gasgn000000000010541",
+                     "displayName":"gasgn000000000010541",
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gasgn000000000010541",
+                        "prefix":"gasgn"
+                     }
+                  }
+               },
+               "assignee":{  
+                  "@type":"emplo",
+                  "sourceType":"InternalPerson",
+                  "activitySourceType":{  
+                     "sourceType":0,
+                     "listId":"sysli000000000003037",
+                     "key":"0",
+                     "displayName":"Person"
+                  },
+                  "id":"emplo000000000001001",
+                  "displayName":"User Two",
+                  "locale":null
+               },
+               "goalErrorList":null,
+               "failedGoalDetail":null
+            },
+            {  
+               "@type":"com.saba.goal.GoalResult",
+               "approvalStatus":{  
+                  "@type":"com.saba.goal.GoalDefinitionApprovalStatus",
+                  "listId":"sysli000000000006030",
+                  "key":"200",
+                  "displayName":"Pending Approval"
+               },
+               "successFlag":true,
+               "successGoalReference":{  
+                  "@type":"com.saba.goal.GoalReferenceWrapper",
+                  "goalDefinition":{  
+                     "@type":"com.saba.goal.entity.GoalDefinitionReference",
+                     "sourceType":"Goal",
+                     "componentName":"Goal Definition",
+                     "activitySourceType":{  
+                        "sourceType":5,
+                        "listId":"sysli000000000003037",
+                        "key":"5",
+                        "displayName":"Goal"
+                     },
+                     "prescriptionActionType":{  
+                        "displayName":"Goal",
+                        "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+                        "name":"GoalDefinition",
+                        "key":"1"
+                     },
+                     "id":"gdefn000000000002974",
+                     "displayName":null,
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gdefn000000000002974",
+                        "prefix":"gdefn"
+                     }
+                  },
+                  "goalAssignment":{  
+                     "@type":"com.saba.goal.entity.GoalAssignmentReference",
+                     "sourceType":"Goal",
+                     "id":"gasgn000000000010542",
+                     "displayName":"gasgn000000000010542",
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gasgn000000000010542",
+                        "prefix":"gasgn"
+                     }
+                  }
+               },
+               "assignee":{  
+                  "@type":"emplo",
+                  "sourceType":"InternalPerson",
+                  "activitySourceType":{  
+                     "sourceType":0,
+                     "listId":"sysli000000000003037",
+                     "key":"0",
+                     "displayName":"Person"
+                  },
+                  "id":"emplo000000000200003",
+                  "displayName":"Human Administrator",
+                  "locale":null
+               },
+               "goalErrorList":null,
+               "failedGoalDetail":null
+            },
+            {  
+               "@type":"com.saba.goal.GoalResult",
+               "approvalStatus":{  
+                  "@type":"com.saba.goal.GoalDefinitionApprovalStatus",
+                  "listId":"sysli000000000006030",
+                  "key":"200",
+                  "displayName":"Pending Approval"
+               },
+               "successFlag":true,
+               "successGoalReference":{  
+                  "@type":"com.saba.goal.GoalReferenceWrapper",
+                  "goalDefinition":{  
+                     "@type":"com.saba.goal.entity.GoalDefinitionReference",
+                     "sourceType":"Goal",
+                     "componentName":"Goal Definition",
+                     "activitySourceType":{  
+                        "sourceType":5,
+                        "listId":"sysli000000000003037",
+                        "key":"5",
+                        "displayName":"Goal"
+                     },
+                     "prescriptionActionType":{  
+                        "displayName":"Goal",
+                        "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+                        "name":"GoalDefinition",
+                        "key":"1"
+                     },
+                     "id":"gdefn000000000002975",
+                     "displayName":null,
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gdefn000000000002975",
+                        "prefix":"gdefn"
+                     }
+                  },
+                  "goalAssignment":{  
+                     "@type":"com.saba.goal.entity.GoalAssignmentReference",
+                     "sourceType":"Goal",
+                     "id":"gasgn000000000010543",
+                     "displayName":"gasgn000000000010543",
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gasgn000000000010543",
+                        "prefix":"gasgn"
+                     }
+                  }
+               },
+               "assignee":{  
+                  "@type":"emplo",
+                  "sourceType":"InternalPerson",
+                  "activitySourceType":{  
+                     "sourceType":0,
+                     "listId":"sysli000000000003037",
+                     "key":"0",
+                     "displayName":"Person"
+                  },
+                  "id":"emplo000000000200004",
+                  "displayName":"System Administrator",
+                  "locale":null
+               },
+               "goalErrorList":null,
+               "failedGoalDetail":null
+            },
+            {  
+               "@type":"com.saba.goal.GoalResult",
+               "approvalStatus":{  
+                  "@type":"com.saba.goal.GoalDefinitionApprovalStatus",
+                  "listId":"sysli000000000006030",
+                  "key":"200",
+                  "displayName":"Pending Approval"
+               },
+               "successFlag":true,
+               "successGoalReference":{  
+                  "@type":"com.saba.goal.GoalReferenceWrapper",
+                  "goalDefinition":{  
+                     "@type":"com.saba.goal.entity.GoalDefinitionReference",
+                     "sourceType":"Goal",
+                     "componentName":"Goal Definition",
+                     "activitySourceType":{  
+                        "sourceType":5,
+                        "listId":"sysli000000000003037",
+                        "key":"5",
+                        "displayName":"Goal"
+                     },
+                     "prescriptionActionType":{  
+                        "displayName":"Goal",
+                        "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+                        "name":"GoalDefinition",
+                        "key":"1"
+                     },
+                     "id":"gdefn000000000002976",
+                     "displayName":null,
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gdefn000000000002976",
+                        "prefix":"gdefn"
+                     }
+                  },
+                  "goalAssignment":{  
+                     "@type":"com.saba.goal.entity.GoalAssignmentReference",
+                     "sourceType":"Goal",
+                     "id":"gasgn000000000010544",
+                     "displayName":"gasgn000000000010544",
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gasgn000000000010544",
+                        "prefix":"gasgn"
+                     }
+                  }
+               },
+               "assignee":{  
+                  "@type":"emplo",
+                  "sourceType":"InternalPerson",
+                  "activitySourceType":{  
+                     "sourceType":0,
+                     "listId":"sysli000000000003037",
+                     "key":"0",
+                     "displayName":"Person"
+                  },
+                  "id":"emplo000000000200120",
+                  "displayName":"B~^ O'pool\"$#@!\"",
+                  "locale":null
+               },
+               "goalErrorList":null,
+               "failedGoalDetail":null
+            },
+            {  
+               "@type":"com.saba.goal.GoalResult",
+               "approvalStatus":{  
+                  "@type":"com.saba.goal.GoalDefinitionApprovalStatus",
+                  "listId":"sysli000000000006030",
+                  "key":"200",
+                  "displayName":"Pending Approval"
+               },
+               "successFlag":true,
+               "successGoalReference":{  
+                  "@type":"com.saba.goal.GoalReferenceWrapper",
+                  "goalDefinition":{  
+                     "@type":"com.saba.goal.entity.GoalDefinitionReference",
+                     "sourceType":"Goal",
+                     "componentName":"Goal Definition",
+                     "activitySourceType":{  
+                        "sourceType":5,
+                        "listId":"sysli000000000003037",
+                        "key":"5",
+                        "displayName":"Goal"
+                     },
+                     "prescriptionActionType":{  
+                        "displayName":"Goal",
+                        "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+                        "name":"GoalDefinition",
+                        "key":"1"
+                     },
+                     "id":"gdefn000000000002977",
+                     "displayName":null,
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gdefn000000000002977",
+                        "prefix":"gdefn"
+                     }
+                  },
+                  "goalAssignment":{  
+                     "@type":"com.saba.goal.entity.GoalAssignmentReference",
+                     "sourceType":"Goal",
+                     "id":"gasgn000000000010545",
+                     "displayName":"gasgn000000000010545",
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gasgn000000000010545",
+                        "prefix":"gasgn"
+                     }
+                  }
+               },
+               "assignee":{  
+                  "@type":"emplo",
+                  "sourceType":"InternalPerson",
+                  "activitySourceType":{  
+                     "sourceType":0,
+                     "listId":"sysli000000000003037",
+                     "key":"0",
+                     "displayName":"Person"
+                  },
+                  "id":"emplo000000000200428",
+                  "displayName":"mgr01 mgr01",
+                  "locale":null
+               },
+               "goalErrorList":null,
+               "failedGoalDetail":null
+            }
+         ]
+      ]
+   }
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

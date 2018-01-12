@@ -1,0 +1,152 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2017">
+  <meta name="DC.rights.owner" content="(C) Copyright 2017">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-restwebservices.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e430">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <link href="./../../../styles.css" rel="stylesheet">
+    <style>
+	table {
+		line-height:28px;
+	}
+
+	h5 {
+		font-weight : bold;
+		color : darkcyan;
+		letter-spacing: 1px;
+	}
+	article .topic {
+		margin-top:20px;
+	}
+	tr th {
+		text-align:center;
+	}
+	tr td {
+		padding-left:10px;
+	}
+
+  </style>
+  <title>Introduction</title>
+</head>
+
+<body id="d0e430">
+  <main role="main">      
+	  <article class="topic nested1" aria-labelledby="ariaid-title9" id="topic_wzm_xyv_sw">
+        <h4 class="title topictitle2" id="ariaid-title9">Example (a typical client side program)</h4>
+        <div class="body">
+          <p class="p">The following Java program obtains the Saba Certificate and then calls the Person details REST API to fetch and
+            display his/her first and last name.</p>
+          <pre class="pre codeblock"><code>import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONObject;
+
+public class SabaRestApiClientJava {
+
+	public static void main (String args[]) {
+		//first authenticate the user to obtain SabaCertificate
+		String cert = getSabaCertificate("https://&lt;hostname-api.sabacloud.com&gt;/v1/login", "&lt;username&gt;","&lt;password&gt;", "SabaSite");
+
+		//next call the GET API with SabaCertificate received.
+		String resp = callGetApi("https://&lt;hostname-api.sabacloud.com&gt;/v1/people/&lt;person_id&gt;", cert);
+
+		//lastly parse the JSON response received to print the first &amp; last name
+		parseJsonResponse(resp);
+
+	}
+
+	private static String getSabaCertificate(String hostUrl, String username, String password, String site)
+	{
+		String certificate="";
+		try {
+
+			// connect and get the certificate with login service
+			DefaultHttpClient httpClient = new DefaultHttpClient();
+			HttpGet getRequest = new HttpGet(hostUrl);
+			getRequest.addHeader("accept", "application/json");
+			getRequest.addHeader("user", username);
+			getRequest.addHeader("password", password);
+			//getRequest.addHeader("site", site);
+			HttpResponse response = httpClient.execute(getRequest);
+			if (response.getStatusLine().getStatusCode() != 200) {
+				throw new RuntimeException("Failed : HTTP error code : " + response.getStatusLine().getStatusCode());
+			}
+			BufferedReader br = new BufferedReader(
+			new InputStreamReader((response.getEntity().getContent())));
+			String output;
+			while ((output = br.readLine()) != null) {
+				certificate += output;
+			}
+			httpClient.getConnectionManager().shutdown();
+
+			System.out.println("certificate "+certificate);
+
+			//parse the response received to get the certificate string
+			JSONObject certJson = new JSONObject(certificate);
+			certificate = certJson.getString("certificate");
+			System.out.println("Certificate obtained "+certificate);
+		} catch(Exception e){
+			e.printStackTrace();
+		}
+		return certificate;
+	}
+
+	private static String callGetApi(String apiUrl, String certificate) {
+		String jSonResponse = "";
+		DefaultHttpClient httpClient = new DefaultHttpClient();
+		HttpGet getRequest = new HttpGet(apiUrl);
+		getRequest.addHeader("accept", "application/json");
+		getRequest.addHeader("SabaCertificate", certificate);
+		try{
+			HttpResponse response = httpClient.execute(getRequest);
+			if (response.getStatusLine().getStatusCode() != 200)
+			{
+				throw new RuntimeException("Failed : HTTP error code : "+ response.getStatusLine().getStatusCode());
+			}
+			BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+			String output;
+			while ((output = br.readLine()) != null) {
+				jSonResponse = output;
+			}
+			httpClient.getConnectionManager().shutdown();
+			System.out.println("jSonResponse "+jSonResponse);
+			return jSonResponse;
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return jSonResponse;
+	}
+
+	private static void parseJsonResponse(String json)
+	{
+		try{
+			JSONObject jsonObj = new JSONObject(json);
+			String fname = jsonObj.getString("fname");
+			String lname = jsonObj.getString("lname");
+			System.out.println("Person name: "+fname + " "+lname);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}</code></pre>
+        </div>
+      </article>

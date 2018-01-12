@@ -1,0 +1,766 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get the meta details of the subscription, learning components, get the meta details of the subscription, get the details of a particular subscription, get the details of a particular subscription, get all subscriptions, find the details of the subscription, find the details of the subscription, create a new subscription, create a new subscription, update the details of a subscription, update the details of a subscription, find the details of the subscription (using post - range based search), find the details of the subscription (using post - range based search), add audience type to a subscription, add audience type to a subscription, remove audience type from a subscription, remove audience type from a subscription, add deliverytype/subscription item to a subscription, add deliverytype/subscription item to a subscription, remove delivery type / subscription item from a subscription, remove delivery type / subscription item from a subscription, add subscription price to a subscription, add subscription price to a subscription, add cost limit price to a subscription, add cost limit price to a subscription, remove subscription price / cost limit price from a subscription, remove subscription price / cost limit price from a subscription">
+  <meta name="keywords" content="learning, restful web services, get the meta details of the subscription, learning components, get the meta details of the subscription, get the details of a particular subscription, get the details of a particular subscription, get all subscriptions, find the details of the subscription, find the details of the subscription, create a new subscription, create a new subscription, update the details of a subscription, update the details of a subscription, find the details of the subscription (using post - range based search), find the details of the subscription (using post - range based search), add audience type to a subscription, add audience type to a subscription, remove audience type from a subscription, remove audience type from a subscription, add deliverytype/subscription item to a subscription, add deliverytype/subscription item to a subscription, remove delivery type / subscription item from a subscription, remove delivery type / subscription item from a subscription, add subscription price to a subscription, add subscription price to a subscription, add cost limit price to a subscription, add cost limit price to a subscription, remove subscription price / cost limit price from a subscription, remove subscription price / cost limit price from a subscription">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Subscription</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title2">GET META DETAILS OF SUBSCRIPTION</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the meta details of the subscription.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/subscription/meta:(:searchFields)</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_cxt_vnx_fp__table_b1y_pjl_3q" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 1. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__1 ">searchFields</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__2 ">You can filter data by providing fields that you require to be returned. Acceptable values are case-sensitive.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "sampleData": {
+        "description": "",
+        "days_limit": null,
+        "subscription_no": null,
+        "allAudienceTypes": {
+            "audience_type_id": null,
+            "offering_temp_id": null
+        },
+        "avail_call_center": true,
+        "updated_by": null,
+        "updated_on": null,
+        "created_by": null,
+        "avail_from": "2015-04-24T14:21:34.367+0530",
+        "disc_from": null,
+        "title": "",
+        "avail_web": true,
+        "cost_limit": null,
+        "before_expiry": null,
+        "allPrices": null,
+        "allCostLimits": null,
+        "reg_limit": null,
+        "training_units": null,
+        "entire_catalog": false,
+        "grace_period": null,
+        "allSubscriptionItems": null,
+        "id": null,
+        "customValues": {
+            "custom9": null,
+            "custom0": null,
+            "custom3": null,
+            "custom4": null,
+            "custom1": null,
+            "custom2": null,
+            "custom7": null,
+            "custom8": null,
+            "custom5": null,
+            "custom6": null
+        },
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": null
+        },
+        "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000000001"
+    },
+    "name": "Subscription",
+    "displayName": "Subscription",
+    "attributes": [
+        {
+            "name": "allAudienceTypes",
+            "displayName": "kI18nALSubscription_allAudienceTypes(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "OfferingTemplateAudienceType",
+                "displayName": "Course Audience Type",
+                "attributes": [
+                    {
+                        "name": "audience_type_id",
+                        "displayName": "Audience Type",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "kI18nALOfferingTemplateAudienceType_id(Missing resource)",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "inherit",
+                        "displayName": "kI18nALOfferingTemplateAudienceType_inherit(Missing resource)",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "inherited_from",
+                        "displayName": "kI18nALOfferingTemplateAudienceType_inherited_from(Missing resource)",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "offering_temp_id",
+                        "displayName": "Course",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "allCostLimits",
+            "displayName": "kI18nALSubscription_allCostLimits(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "Price List Entry",
+                "displayName": "Price List Entry",
+                "attributes": [
+                    {
+                        "name": "amount",
+                        "displayName": "Amount",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "real",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "charge_type",
+                        "displayName": "Charge Type",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "curr_id",
+                        "displayName": "Currency Id",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "displayValue",
+                        "displayName": "Display Name",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "part_id",
+                        "displayName": "Part Id",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "price_list_id",
+                        "displayName": "Price List ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "price_type",
+                        "displayName": "Price Type",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "allPrices",
+            "displayName": "kI18nALSubscription_allPrices(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "componentName": "Price List Entry",
+                "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/pricelistentry/meta",
+                "description": "Table: tpt_pl_list_entry.Price lists are made up of individual price list entries, each of which represents a single price for a single item in the Learning Catalog. Price list entry security is based on the domain of the object for which the price list entry was created."
+            }
+        },
+        {
+            "name": "allSubscriptionItems",
+            "displayName": "kI18nALSubscription_allSubscriptionItems(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "SubscriptionItemChoice",
+                "displayName": "kI18nCLSubscriptionItemChoice(Missing resource)",
+                "attributes": [
+                    {
+                        "name": "criteria",
+                        "displayName": "kI18nALSubscriptionItemChoice_criteria(Missing resource)",
+                        "description": "Criteria of Subscription Item",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "delivery_id",
+                        "displayName": "kI18nALSubscriptionItemChoice_delivery_id(Missing resource)",
+                        "description": "Delivery type id for the subscription",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "kI18nALSubscriptionItemChoice_id(Missing resource)",
+                        "description": "Saba internal id",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "subscription_id",
+                        "displayName": "kI18nALSubscriptionItemChoice_subscription_id(Missing resource)",
+                        "description": "Subscription Id, this owner of this object",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "type",
+                        "displayName": "kI18nALSubscriptionItemChoice_type(Missing resource)",
+                        "description": "Type of Subscription Item",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "avail_call_center",
+            "displayName": "Display for Call Center",
+            "description": "Subscription is available to registrar or not",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "avail_from",
+            "displayName": "Available From",
+            "description": "Date from which this subscription will available to user",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "avail_web",
+            "displayName": "Display for Learner",
+            "description": "Subscription is available to learner or not",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "before_expiry",
+            "displayName": "Reminder before expiration date (days)",
+            "description": "Days before expiry to send notification",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "cost_limit",
+            "displayName": "Limit in Cost",
+            "description": "Limit in cost of purchased items, till subscription will be active after purchase",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "real",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "created_by",
+            "displayName": "Created By",
+            "description": "Created by",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "created_id",
+            "displayName": "Created Id",
+            "description": "Saba id of person who created new subscription",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "created_on",
+            "displayName": "Created On",
+            "description": "Created on",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "days_limit",
+            "displayName": "Limit in Days",
+            "description": "Limit in number of days subscription will be active after purchase",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "description",
+            "displayName": "Description",
+            "description": "Description of subscription",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 2000,
+            "maximumLength": 2000,
+            "isSearchFilter": true
+        },
+        {
+            "name": "disc_from",
+            "displayName": "Discontinued From",
+            "description": "Date from which this subscription will be no longer available to user",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "entire_catalog",
+            "displayName": "Subscribe Entire Catalog",
+            "description": "Subscription is for entire learning catalog",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "grace_period",
+            "displayName": "No of Days for Grace Period(days)",
+            "description": "Number of Days",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "id",
+            "displayName": "ID",
+            "description": "Saba internal id",
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "reg_limit",
+            "displayName": "No of Maximum Registration",
+            "description": "Number of Days",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "securityDomain",
+            "displayName": "Domain",
+            "description": "Security Domain of subscription",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "subscription_no",
+            "displayName": "Subscription Number",
+            "description": "Part number of subscription",
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 25,
+            "maximumLength": 25,
+            "isSearchFilter": true
+        },
+        {
+            "name": "title",
+            "displayName": "Title",
+            "description": "Title of subscription",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "training_units",
+            "displayName": "Training Units",
+            "description": "Training units required to purchase subscription",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "updated_by",
+            "displayName": "Updated By",
+            "description": "Updated by",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "updated_on",
+            "displayName": "Updated On",
+            "description": "Updated on",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom0",
+            "displayName": "Custom0",
+            "description": "Custom0 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom1",
+            "displayName": "Custom1",
+            "description": "Custom1 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom2",
+            "displayName": "Custom2",
+            "description": "Custom2 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom3",
+            "displayName": "Custom3",
+            "description": "Custom3 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom4",
+            "displayName": "Custom4",
+            "description": "Custom4 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom5",
+            "displayName": "Custom5",
+            "description": "Custom5 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom6",
+            "displayName": "Custom6",
+            "description": "Custom6 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom7",
+            "displayName": "Custom7",
+            "description": "Custom7 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom8",
+            "displayName": "Custom8",
+            "description": "Custom8 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom9",
+            "displayName": "Custom9",
+            "description": "Custom9 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        }
+    ]
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

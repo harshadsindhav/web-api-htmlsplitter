@@ -1,0 +1,330 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, find the details of the recurring course completions, learning components, find the details of the recurring course completions, find the details of the recurring course completions (using post - range based search), find the details of the recurring course completions (using post - range based search)">
+  <meta name="keywords" content="learning, restful web services, find the details of the recurring course completions, learning components, find the details of the recurring course completions, find the details of the recurring course completions (using post - range based search), find the details of the recurring course completions (using post - range based search)">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Recurring Course Completions</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title2">FIND DETAILS OF RECURRING COURSE COMPLETIONS</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <div class="p">
+     Returns the details of the recurring course completions along with the ID, Name and the Deeplink URL based on the provided search criteria.
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> When a recurring course is assigned to a user, the corresponding enrollment entry is not created. Only when the course is completed, the transcript entry is created, due to this the API will not return detail URL as href for in-complete course in output JSON.
+     </div>
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/recurringcompletions ?q=(:criteria_field%3D%3D:field_value)&amp;count=:count&amp;startPage=:startPage&amp;f=(:csvAttributesValue)&amp;includeDetails=:includeDetails</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_fxh_lnx_fp__table_nxh_lnx_fp" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 1. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__1 ">criteria_field</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__2 ">The search criteria e.g. person Id. </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__3 ">person_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__4 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__1 ">field_value</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__2 ">The search value for the specified search criteria. </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__1 ">count</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__2 ">The number of records per page.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__3 ">10</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__1 ">startPage</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__2 ">The start page number for the list of records.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__3 ">1</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__1 ">csvAttributesValue</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__2 ">Search for attributes also</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__1 ">includeDetails</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__2 ">Returns the details of the recurring course completions in the search</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    The following are the supported search criteria and display attributes:
+    <table id="reference_fxh_lnx_fp__table_nw5_sdg_dx" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption></caption>
+     <colgroup>
+      <col style="width:11.961722488038278%">
+      <col style="width:44.25837320574163%">
+      <col style="width:43.779904306220104%">
+     </colgroup>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry"> <strong class="ph b">Field name</strong> </td> 
+       <td class="entry"> <strong class="ph b">Field description</strong> </td> 
+       <td class="entry"> <strong class="ph b">Example</strong> </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> person_id </td> 
+       <td class="entry">Will return all recurring course completions of a specified person. </td> 
+       <td class="entry"> Person_id%3D%3Demplo000000000001000 &nbsp; </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Person_no </td> 
+       <td class="entry">This search criteria will return all recurring course completions of given person. </td> 
+       <td class="entry"> person_no%3D%3D001000 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Person_username </td> 
+       <td class="entry">This search criteria will return all recurring course completions of given person. </td> 
+       <td class="entry"> Person_username%3D%3Duone </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> status </td> 
+       <td class="entry">This will return all recurring course completions of a specified status.<p class="p"> Below are the possible status values:</p>
+        <div class="p">
+         <strong class="ph b">For Recurring Completions (Completed):</strong>
+         <ul class="ul" id="reference_fxh_lnx_fp__ul_yr4_tmq_qx"> 
+          <li class="li">100 - Not evaluated </li> 
+          <li class="li">200 - Successful </li> 
+          <li class="li">300 - Suspended</li> 
+          <li class="li">400 - Unsuccessful </li> 
+          <li class="li">600 - Pending Registration</li> 
+          <li class="li">700 - Pending Approval</li> 
+         </ul>
+         <strong class="ph b">For Recurring Completions (Not Completed):</strong>
+         <ul class="ul" id="reference_fxh_lnx_fp__ul_y5c_zmq_qx"> 
+          <li class="li">100 - Completed</li> 
+          <li class="li">200 - In progress</li> 
+          <li class="li">300 - Expired</li> 
+          <li class="li">400 - Assigned</li> 
+          <li class="li">600 - Pending Registration</li> 
+          <li class="li">700 - Pending Approval</li> 
+         </ul>
+        </div></td> 
+       <td class="entry"> status%3D%3D400 &nbsp; </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> updated_on </td> 
+       <td class="entry">This will return result based on updated date of a recurring course completion. </td> 
+       <td class="entry"> updated_on%3Dge%3D2010-01-29 01:29:32 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> assigned_on </td> 
+       <td class="entry">This search criteria will return all recurring course completions based on its assigned date value. </td> 
+       <td class="entry"> assigned_on%3Dge%3D2010-01-29 01:29:32 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> course_no </td> 
+       <td class="entry">This search criteria will return recurring course completion of a given course. </td> 
+       <td class="entry"> course_no%3D%3d00201084 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Course_id </td> 
+       <td class="entry">This search criteria will return recurring course completion of a given course. </td> 
+       <td class="entry"> Course_id%3D%3D cours000000000203226 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> completed_on</td> 
+       <td class="entry">This search criteria will return all recurring course completions based on its comepleted date value. </td> 
+       <td class="entry"> completed_on%3Dge%3D2010-01-29 01:29:32 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> due_date</td> 
+       <td class="entry">This search criteria will return all recurring course completions based on its due date value. </td> 
+       <td class="entry"> due_date%3Dge%3D2010-01-29 01:29:32 </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> expiration_date</td> 
+       <td class="entry">This search criteria will return all recurring course completions based on its expiration date value. </td> 
+       <td class="entry"> expiration_date%3Dge%3D2010-01-29 01:29:32</td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> assignedStatus</td> 
+       <td class="entry">This search criteria will return all recurring course completions based on its assigned status. </td> 
+       <td class="entry"></td> 
+      </tr> 
+     </tbody>
+    </table>The output for not-yet-completed recurring courses will be very different from the output of completed recurring courses.&nbsp;
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values (Completed recurring courses using includeDetails=false)</h5> 
+    <pre class="pre codeblock"><code>{  
+   "status_description":"Not Evaluated",
+   "person":{  
+      "id":"emplo000000000019079",
+      "username":"UONE"
+   },
+   "course":{  
+      "id":"cours000000000036549",
+      "course_no":"00016460",
+      "title":"test-recurring1",
+      "version":null
+   },
+   "id":"ofapr000000000121389",
+   "status":"100",
+   "href":"https://dqlearning-api.sabacloud.com/v1/transcripts/ofapr000000000121389"
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values (Not-yet-completed recurring courses using includeDetails=false)</h5> 
+    <pre class="pre codeblock"><code>{  
+   "assignedStatusDescription":"Assigned",
+   "person":{  
+      "id":"emplo000000000019079",
+      "username":"UONE"
+   },
+   "course":{  
+      "id":"cours000000000013889",
+      "course_no":"00010274",
+      "title":"RecurCoursePR",
+      "version":"12345"
+   },
+   "assignedStatus":"400"
+}</code></pre> 
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> assignedStatus / assignedStatusDescription either of these fields in the output JSON indicate a Not-yet-completed recurring course.
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values (Completed recurring courses using includeDetails=true)</h5> 
+    <pre class="pre codeblock"><code>{  
+   "updated_by":"uone",
+   "updated_on":"2016-07-29T04:14:14.000+0000",
+   "created_on":"2016-07-29T04:14:14.000+0000",
+   "created_by":"uone",
+   "end_date":null,
+   "start_date":"2016-07-29T04:14:13.000+0000",
+   "time_interval":0,
+   "offering_temp_id":{  
+      "id":"cours000000000036549",
+      "displayName":"test-recurring1"
+   },
+   "delivery":null,
+   "delivery_type":"eqcat000000000000005",
+   "action_no":"00105488",
+   "completion_date":null,
+   "action_status":"100",
+   "grade":"",
+   "delivered_by":null,
+   "target_date":"2016-07-29T06:14:13.000+0000",
+   "flags":2,
+   "registration":null,
+   "added_to_profile_on":"2016-07-29T04:14:13.000+0000",
+   "offrng_start_date":null,
+   "archived":0,
+   "completionMode":0,
+   "learner_id":null,
+   "credits":null,
+   "location":null,
+   "party_id":{  
+      "id":"emplo000000000019079",
+      "displayName":"One User"
+   },
+   "start_time":null,
+   "end_time":null,
+   "status":100,
+   "score":0,
+   "id":"ofapr000000000121389",
+   "customValues":{  
+      "custom0":null,
+      "custom1":null,
+      "custom2":null
+   }
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values (Not-yet-completed recurring courses using includeDetails=true)</h5> 
+    <pre class="pre codeblock"><code>{  
+   "assignedBy":"One User",
+   "assigned_on":"2016-09-02T05:51:19UTC",
+   "assignedStatusDescription":"Assigned",
+   "completed_on":null,
+   "person":{  
+      "id":"emplo000000000019079",
+      "username":"UONE"
+   },
+   "due_date":"2016-09-02T00:00:00UTC",
+   "course":{  
+      "id":"cours000000000013889",
+      "course_no":"00010274",
+      "title":"RecurCoursePR",
+      "version":"12345"
+   },
+   "expiration_date":null,
+   "assignedStatus":"400"
+}</code></pre> 
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> assignedStatus / assignedStatusDescription either of these fields in the output JSON indicate a Not-yet-completed recurring course.
+    </div> 
+   </section> 
+  </div>
+ </body>
+</html>

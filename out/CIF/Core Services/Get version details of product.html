@@ -1,0 +1,63 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="cif, restful web services, get version details of the product, cif components, get version details of the product, get a list of sites, get a cif certificate, get the initial system values for contenttypes, contentformats, contentservers, get the initial system values for contenttypes, contentformats, contentservers">
+  <meta name="keywords" content="cif, restful web services, get version details of the product, cif components, get version details of the product, get a list of sites, get a cif certificate, get the initial system values for contenttypes, contentformats, contentservers, get the initial system values for contenttypes, contentformats, contentservers">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-cif.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Core Services</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title2">GET VERSION DETAILS OF PRODUCT</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Gets the major, minor, and complete version numbers of the product.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <div class="p">
+     https://
+     <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/coreservice/version/
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> 
+      <p class="p">The following is a <strong class="ph b">deprecated</strong> URL for this REST Web service and will be discontinued in the next few updates:</p>https://
+      <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/content/coreservice/version/
+     </div>
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "@type": "com.saba.services.dto.VersionDTO",
+    "version": "0605000042",
+    "minor-version": "5",
+    "major-version": "6"
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

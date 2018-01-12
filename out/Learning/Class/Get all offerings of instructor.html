@@ -1,0 +1,270 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all offerings, learning components, find the details of the offerings, find the details of the offerings, get the meta details of a blended class, get the meta details of a blended class, get the meta details of an ilt class, get the meta details of an ilt class, get the details of a class, get the details of a class, get the meta details of a virtual class, get the meta details of a virtual class, get the meta details of a wbt class, get the meta details of a wbt class, create a new blended class, create a new blended class, create a new ilt class, create a new ilt class, create a new virtual class, create a new virtual class, create a new wbt class, create a new wbt class, update a blended class, update a blended class, update a ilt class, update a virtual class, update a virtual class, update a wbt class, get all the offerings of the instructor, get all the offerings of the instructor, retrieve all learning assignments of a class, retrieves all learning assignments of an class, add learning assignments to a class, add learning assignments to a class, update learning assignments of a class, update learning assignments of a class, publish learning assignments of a class, publish learning assignments of a class, mark class as delivered/cancelled, mark class as delivered/cancelled, cancel all enrollments of a class, cancel all enrollments of a class, retrieve all sessions of an offering, retrieve all sessions of an offering, mark class registration as no_show/walk_in, mark class registration as no_show/walk_in, add drop policy to class, delete drop policy from class, delete drop policy from class">
+  <meta name="keywords" content="learning, restful web services, get all offerings, learning components, find the details of the offerings, find the details of the offerings, get the meta details of a blended class, get the meta details of a blended class, get the meta details of an ilt class, get the meta details of an ilt class, get the details of a class, get the details of a class, get the meta details of a virtual class, get the meta details of a virtual class, get the meta details of a wbt class, get the meta details of a wbt class, create a new blended class, create a new blended class, create a new ilt class, create a new ilt class, create a new virtual class, create a new virtual class, create a new wbt class, create a new wbt class, update a blended class, update a blended class, update a ilt class, update a virtual class, update a virtual class, update a wbt class, get all the offerings of the instructor, get all the offerings of the instructor, retrieve all learning assignments of a class, retrieves all learning assignments of an class, add learning assignments to a class, add learning assignments to a class, update learning assignments of a class, update learning assignments of a class, publish learning assignments of a class, publish learning assignments of a class, mark class as delivered/cancelled, mark class as delivered/cancelled, cancel all enrollments of a class, cancel all enrollments of a class, retrieve all sessions of an offering, retrieve all sessions of an offering, mark class registration as no_show/walk_in, mark class registration as no_show/walk_in, add drop policy to class, delete drop policy from class, delete drop policy from class">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Class</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title17">GET ALL OFFERINGS OF INSTRUCTOR</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the details of all the offerings of an instructor based on the employee's ID passed as the parameter value.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/instructor/:instructorId</p> 
+    <p class="p">?q=(:criteria_field%3D%3D:field_value)&amp;count=:count&amp;startPage=:startPage </p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_pdf_ygz_rt__table_h4f_ygz_rt" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 13. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:21.037037037037035%">
+      <col style="width:24.74074074074074%">
+      <col style="width:19.703703703703702%">
+      <col style="width:19.703703703703702%">
+      <col style="width:14.814814814814813%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__1 ">instructorId </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__2 ">Instructor's ID </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__3 ">emplo000000000200080 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__1 ">criteria_field</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__2 ">The search criteria i.e. the field name.
+        <div class="p">
+         The following fields can be used as the search criteria:
+         <ul class="ul" id="reference_pdf_ygz_rt__ul_zl1_gm3_j5"> 
+          <li class="li">future_session: true, false <p class="p"><strong class="ph b">Example:</strong></p><p class="p">future_session %3D%3Dtrue</p>
+           <div class="note note note_note">
+            <span class="note__title">Note:</span> Default value is true. If this field is passed as true then only the future classes of instructor will be returned otherwise all the classes are returned. 
+           </div></li> 
+          <li class="li">class_type: blended, virtual_ classroom, instructor_led, all<p class="p"><strong class="ph b">Example:</strong></p><p class="p">class_type %3D%3D instructor_led </p></li> 
+          <li class="li">status: 100, 200, 300, 400, 401, 500 <p class="p"><strong class="ph b">Example:</strong></p><p class="p">status %3D%3D 100</p><strong class="ph b">Status Description</strong><p class="p">100 - Open – Normal</p><p class="p">200 - Delivered – Normal</p><p class="p">300 - Billed – Normal</p><p class="p">400 - Archived – Normal</p><p class="p">401 - Archived – Cancelled</p><p class="p">500 - Cancelled - Normal</p></li> 
+         </ul>
+        </div>
+        <div class="note note note_note">
+         <span class="note__title">Note:</span> You can also search for a class using course_no.
+        </div>
+        <div class="p">
+         You can use any field with "isSearchFilter": true.
+         <div class="note note note_note">
+          <span class="note__title">Note:</span> To find out the fields that have "isSearchFilter": true, invoke the "Get the Meta details" REST APIs.
+         </div>
+        </div></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__3 ">future_session%3D%3Dfalse, class_type%3D%3Dinstructor_led, status%3D%3D100 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__1 ">field_value</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__2 ">The search value for the specified search criteria.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__1 ">count</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__2 ">The number of records per page.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__3 ">10</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__1 ">startPage</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__2 ">The start page number for the list of records.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__3 ">1</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_pdf_ygz_rt__table_h4f_ygz_rt__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+  "results": [
+    {
+      "id": "class000000000201583",
+      "displayName": "Audience Type Price",
+      "href": "http:///<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/class000000000201583"
+    },
+    {
+      "id": "class000000000201743",
+      "displayName": "SWYW2",
+      "href": "http:///<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/class000000000201743"
+    }
+  ],
+  "startIndex": 1,
+  "facets": [],
+  "hasMoreResults": false,
+  "totalResults": 2,
+  "itemsPerPage": 10
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Examples</h5>
+    <p class="p">To get all the offerings of the instructor:</p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/instructor/persn000000000001002
+    <p class="p"><strong class="ph b">Return Values:</strong></p>
+    <pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "hasMoreResults": false,
+  "totalResults": 1,
+  "itemsPerPage": 10,
+  "results": [
+    {
+      "id": "class000000000201583",
+      "displayName": "Audience Type Price",
+      "href": "http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/class000000000201583"
+    }
+  ]
+}</code></pre>
+    <p class="p">To get all the offerings of the instructor (query paramters included):</p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/instructor/persn000000000001002?q=(class_type%3D%3Dinstructor_led, future_session%3D%3Dtrue,status%3D%3D100)&amp;count=10&amp;startPage=1
+    <p class="p"><strong class="ph b">Return Values:</strong></p>
+    <pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "hasMoreResults": false,
+  "totalResults": 1,
+  "itemsPerPage": 10,
+  "results": [
+    {
+      "id": "class000000000201583",
+      "displayName": "Audience Type Price",
+      "href": "http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1//offering/class000000000201583"
+    }
+  ]
+}</code></pre>
+    <p class="p">To get all the offerings of the instructor (query paramters included and includeDetails as true):</p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering/instructor/persn000000000001002?q=(class_type%3D%3Dinstructor_led, future_session%3D%3Dtrue,status%3D%3D100)&amp;includeDetails=true
+    <p class="p"><strong class="ph b">Return Values:</strong></p>
+    <pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "hasMoreResults": false,
+  "totalResults": 1,
+  "itemsPerPage": 10,
+  "results": [
+    {
+      "enforced_seq": "SUGGESTED",
+      "location_id": {
+        "id": "locat000000000001000",
+        "displayName": "Location1"
+      },
+      "parent": null,
+      "duration": 480,
+      "status": 100,
+      "stud_book": 0,
+      "end_date": "2016-12-05T00:00:00.000+0530",
+      "start_date": "2016-12-05T05:00:00.000+0530",
+      "max_ct": 10,
+      "delivery_id": {
+        "id": "eqcat000000000000004",
+        "displayName": "Instructor-Led"
+      },
+      "vendor_id": null,
+      "facility_id": null,
+      "csr_id": null,
+      "min_ct": 1,
+      "training_units": 0,
+      "session_template": "Monday (8 hrs.)",
+      "open_enroll": null,
+      "stop_auto_promotion": null,
+      "open_enroll_for_all": null,
+      "enroll_close": null,
+      "offering_temp_id": {
+        "id": "cours000000000202167",
+        "displayName": "Audience Type Price"
+      },
+      "do_not_drop_post": null,
+      "post_order": null,
+      "max_book": 1,
+      "broadcast": false,
+      "post_completion": null,
+      "stud_ct": 3,
+      "rescheduled": true,
+      "language_id": {
+        "id": "lange000000000000001",
+        "displayName": "English"
+      },
+      "description": "",
+      "class_no": "DUP-CLASS-ID-TEST",
+      "disp_for_web": true,
+      "has_community": false,
+      "disp_for_call_center": true,
+      "group_id": null,
+      "customValues": {
+        "custom0": null,
+        "excustom2": null,
+        "excustom1": null,
+        "custom10": null,
+        "custom9": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      },
+      "id": "class000000000201583"
+    }
+  ]
+}</code></pre>
+   </section> 
+  </div>
+ </body>
+</html>

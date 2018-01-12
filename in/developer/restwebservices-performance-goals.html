@@ -1,0 +1,2595 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="performance, restful web services, get all goals for a person, performance components, get all goals for a person, get the details of a particular goal, get the details of a particular goal, create goal for self/team, create goal for self/team, create progress of a goal, create progress of a goal, change status of a goal, change status of a goal, update approver of goal., update approver of goal., update goal for self/team, update goal for self/team"><meta name="keywords" content="performance, restful web services, get all goals for a person, performance components, get all goals for a person, get the details of a particular goal, get the details of a particular goal, create goal for self/team, create goal for self/team, create progress of a goal, create progress of a goal, change status of a goal, change status of a goal, update approver of goal., update approver of goal., update goal for self/team, update goal for self/team"><meta name="DC.Relation" scheme="URI" content="../developer/part-performance.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Learning-apis"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Goals</title></head><body id="Learning-apis"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Goals</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-performance.html">Performance</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-get-all-goals-for-a-person-N10045">
+        <h2 class="title topictitle2" id="ariaid-title2">GET ALL GOALS FOR A PERSON</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <div class="p">Returns all the goals for a given user. <div class="note note note_note"><span class="note__title">Note:</span> An admin invoking this REST API
+                        will see the goals of all the users. <p class="p">Non-admin persons (if-logged in)
+                            invoking this REST API will see their own goals. They can also view
+                            another person's goals by specifying the assignee's ID as the search
+                            criteria, provided they have the privilege to view that assignee's
+                            goals. </p></div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals</p>
+                <p class="p">?q=(:criteria_field%3D%3D:field_value)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__1 ">criteria_field</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__2 ">The search criteria i.e. the field
+                                            name.<p class="p"><strong class="ph b">Searchable fields:</strong></p><ul class="ul" id="get-get-all-goals-for-a-person-N10045__ul_rhy_sfm_dt">
+                                        <li class="li">assignee</li>
+                                        <li class="li">status_id</li>
+                                        <li class="li">title</li>
+                                        <li class="li">start_date</li>
+                                        <li class="li">percentComplete</li>
+                                        <li class="li">category_id</li>
+                                    </ul></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__3 ">assignee</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__1 ">field_value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__2 ">The search value for the specified search
+                                    criteria.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__3 ">emplo000000000200181</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__1 ">includeDetails</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__2 ">If true, returns the complete details of the goal.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-goals-for-a-person-N10045__table_yjg_1kh_ss__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "totalResults": 0,
+    "hasMoreResults": true,
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "results": [
+        {
+            "id": "gasgn000000000001336",
+            "displayName": "2003 Goal - 02",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/performance/goals/gasgn000000000001336"
+        },
+        {
+            "id": "gasgn000000000001358",
+            "displayName": "2004 Goal - 01",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/performance/goals/gasgn000000000001358"
+        },
+        {
+            "id": "gasgn000000000004848",
+            "displayName": "2007 Shared Performance Goal for QE",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/performance/goals/gasgn000000000004848"
+        },
+        {
+            "id": "gasgn000000000004507",
+            "displayName": "2008-2009 Shared Performance Goal for QE",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/performance/goals/gasgn000000000004507"
+        },
+        {
+            "id": "gasgn000000000004089",
+            "displayName": "2008 Shared Development Goal for QE",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/performance/goals/gasgn000000000004089"
+        },
+        {
+            "id": "gasgn000000000001319",
+            "displayName": "Goal 2003 - 01",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/performance/goals/gasgn000000000001319"
+        },
+        {
+            "id": "gasgn000000000001487",
+            "displayName": "Initiative Goal for Paul Humm2",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/performance/goals/gasgn000000000001487"
+        },
+        {
+            "id": "gasgn000000000001366",
+            "displayName": "Long-Term Goal - 01",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/performance/goals/gasgn000000000001366"
+        },
+        {
+            "id": "gasgn000000000001723",
+            "displayName": "Quality Goal 1 (Paul Humm2)",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/performance/goals/gasgn000000000001723"
+        },
+        {
+            "id": "gasgn000000000001294",
+            "displayName": "Second Shared Goal for QA Headquarters Organization",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/performance/goals/gasgn000000000001294"
+        }
+    ]
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Examples</h3>
+                
+                <p class="p"><strong class="ph b">Goals of a particular person</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals?q=(assignee%3D%3Demplo000000000200181)</p>
+                <p class="p"><strong class="ph b">Goals of a learner (logged in)</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals</p>
+                <p class="p"><strong class="ph b">Goals of a person using username</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals?q=(assignee%3D%3Dsalmeida)</p>
+                <p class="p"><strong class="ph b">Goals of a person using status</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals?q=(status_id%3d%3dgstts000000000001000)</p>
+                <p class="p"><strong class="ph b">Goals of a person using multiple search options</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals?q=(status_id%3d%3dgstts000000000001000,title%3D%3Dcvbvcvbdbvfh)</p>
+                <p class="p"><strong class="ph b">Goals of a person by start_date (also supports due_date and create_date in
+                        search criteria)</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals?q=(start_date=gt=1990-07-26)</p>
+                <p class="p"><strong class="ph b">Goals of a person using percentComplete</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals?q=(percentComplete=lt=40)</p>
+                <p class="p"><strong class="ph b">Goals of a person by category_id</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals?q=(category_id%3D%3Dgcate000000000000002)</p>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_wgg_1kh_ss">
+        <h2 class="title topictitle2" id="ariaid-title3">GET DETAILS OF A PARTICULAR GOAL</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a goal based on the goal assignment ID that is
+                    passed as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_wgg_1kh_ss__table_qhg_1kh_ss"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__2 ">Goal ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__3 ">gasgn000000000001336</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__2 ">Indicate what additional details needs to be
+                                    returned: progress, progress_history, approvers, parent,
+                                    subgoals, tasks, changelog. Acceptable values are
+                                    (case-sensitive)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_wgg_1kh_ss__table_qhg_1kh_ss__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "actions": null,
+    "goalAssignmentDetail": {
+        "locked": false,
+        "source": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+                "sourceType": 0,
+                "listId": "sysli000000000003037",
+                "key": "0",
+                "displayName": "Person"
+            },
+            "id": "emplo000000000200094",
+            "displayName": "Paul Humm",
+            "locale": {
+                "id": "local000000000000001",
+                "displayName": null
+            }
+        },
+        "mandatory": false,
+        "dueDate": 1075487400000,
+        "goalDefinition": {
+            "sourceType": "Goal",
+            "componentName": "Goal Definition",
+            "prescriptionActionType": {
+                "logicClassForPrescriptionActionType": "GoalPrescriptionPush",
+                "name": "GoalDefinition",
+                "key": "1"
+            },
+            "activitySourceType": {
+                "sourceType": 5,
+                "listId": "sysli000000000003037",
+                "key": "5",
+                "displayName": "Goal"
+            },
+            "id": "gdefn000000000001179",
+            "displayName": "2003 Goal - 02",
+            "primaryKey": {
+                "id": "gdefn000000000001179",
+                "prefix": "gdefn"
+            },
+            "locale": {
+                "id": "local000000000000001",
+                "displayName": null
+            }
+        },
+        "assignee": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+                "sourceType": 0,
+                "listId": "sysli000000000003037",
+                "key": "0",
+                "displayName": "Person"
+            },
+            "id": "emplo000000000200181",
+            "displayName": "Paul Humm2",
+            "locale": {
+                "id": "local000000000000001",
+                "displayName": null
+            }
+        },
+        "assignmentId": "gasgn000000000001336",
+        "startDate": 1051727400000,
+        "originalDueDate": 1075487400000,
+        "assignmentCustomValues": [
+            {
+                "name": "custom9",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom9"
+            },
+            {
+                "name": "custom0",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom0"
+            },
+            {
+                "name": "custom3",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom3"
+            },
+            {
+                "name": "custom4",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom4"
+            },
+            {
+                "name": "custom1",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom1"
+            },
+            {
+                "name": "custom2",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom2"
+            },
+            {
+                "name": "custom7",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom7"
+            },
+            {
+                "name": "custom8",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom8"
+            },
+            {
+                "name": "custom5",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom5"
+            },
+            {
+                "name": "custom6",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom6"
+            }
+        ],
+        "assignmentMetadata": {
+            "timestamp": "228626700",
+            "primaryKey": {
+                "id": "gasgn000000000001336",
+                "prefix": "gasgn"
+            },
+            "locale": {
+                "id": "local000000000000001",
+                "displayName": null
+            }
+        },
+        "archived": false,
+        "dueDays": "01/31/2004",
+        "goalAssignmentStatus": {
+            "statusValue": "gstts000000000001000",
+            "id": "gstts000000000001000",
+            "displayName": "Active",
+            "primaryKey": {
+                "id": "gstts000000000001000",
+                "prefix": "gstts"
+            },
+            "locale": null
+        },
+        "missedGoal": true,
+        "assigneePictureURL": null
+    },
+    "goalDefinitionDetail": {
+        "id": "gdefn000000000001179",
+        "owner": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+                "sourceType": 0,
+                "listId": "sysli000000000003037",
+                "key": "0",
+                "displayName": "Person"
+            },
+            "id": "emplo000000000200181",
+            "displayName": null,
+            "locale": null
+        },
+        "description": "This is the goal description.",
+        "shared": false,
+        "duration": 0,
+        "fixedStartDate": null,
+        "required": false,
+        "initialValue": 0,
+        "isLibraryGoal": false,
+        "auditDetail": {
+            "updatedBy": "phumm",
+            "updatedOn": 1077511915000,
+            "createdBy": "phumm",
+            "createdOn": 1077510311000,
+            "createdId": "emplo000000000200094"
+        },
+        "template": false,
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": "world",
+            "primaryKey": {
+                "id": "domin000000000000001",
+                "prefix": "domin"
+            },
+            "locale": null
+        },
+        "shortDescription": "This is the goal description.",
+        "title": "2003 Goal - 02",
+        "expiryDate": null,
+        "goalCategory": {
+            "id": "gcate000000000000002",
+            "displayName": "General",
+            "primaryKey": {
+                "id": "gcate000000000000002",
+                "prefix": "gcate"
+            },
+            "locale": {
+                "id": "local000000000000001",
+                "displayName": null
+            }
+        },
+        "goalType": {
+            "id": "goalt000000000000001",
+            "displayName": "Performance Goal",
+            "primaryKey": {
+                "id": "goalt000000000000001",
+                "prefix": "goalt"
+            },
+            "locale": {
+                "id": "local000000000000001",
+                "displayName": null
+            }
+        },
+        "pushed": false,
+        "fixedEndDate": null,
+        "goalMetric": {
+            "statusValue": "gmetr000000000001004",
+            "id": "gmetr000000000001004",
+            "displayName": "General Metric 1",
+            "primaryKey": {
+                "id": "gmetr000000000001004",
+                "prefix": "gmetr"
+            },
+            "locale": {
+                "id": "local000000000000001",
+                "displayName": null
+            }
+        },
+        "goalAction": {
+            "statusValue": "gactn000000000001004",
+            "id": "gactn000000000001004",
+            "displayName": "Achieve",
+            "primaryKey": {
+                "id": "gactn000000000001004",
+                "prefix": "gactn"
+            },
+            "locale": {
+                "id": "local000000000000001",
+                "displayName": null
+            }
+        },
+        "goalUnit": null,
+        "smartGoal": false,
+        "definitionCustomValues": [
+            {
+                "name": "custom0",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom0"
+            },
+            {
+                "name": "custom1",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom1"
+            },
+            {
+                "name": "custom2",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom2"
+            },
+            {
+                "name": "custom3",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom3"
+            },
+            {
+                "name": "custom4",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom4"
+            },
+            {
+                "name": "custom5",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom5"
+            },
+            {
+                "name": "custom6",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom6"
+            },
+            {
+                "name": "custom7",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom7"
+            },
+            {
+                "name": "custom8",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom8"
+            },
+            {
+                "name": "custom9",
+                "datatype": {
+                    "value": 18
+                },
+                "value": null,
+                "displayName": "custom9"
+            }
+        ],
+        "goalDefinitionStatus": {
+            "key": "Inactive",
+            "description": "Inactive"
+        },
+        "goalVisibility": "gvizr000000000001002",
+        "parentLibGoalId": null,
+        "libGoalVisibilityKey": null,
+        "goalVisibilityName": "Everyone",
+        "definitionMetadata": {
+            "timestamp": "1583018550",
+            "primaryKey": {
+                "id": "gdefn000000000001179",
+                "prefix": "gdefn"
+            },
+            "locale": {
+                "id": "local000000000000001",
+                "displayName": null
+            }
+        },
+        "pullInReview": true,
+        "targetValue": 58
+    },
+    "goalProgressDetail": null,
+    "additionalInfo": null,
+    "partialUpdate": false,
+    "assignees": null,
+    "parentGoal": null,
+    "subGoals": null,
+    "listIds": null,
+    "progressHistory": null,
+    "tasks": null
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Examples</h3><p class="p"><strong class="ph b">To get the last progress details of the
+                    goal</strong></p><p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals/gasgn000000000001336<strong class="ph b">?searchFields=progress</strong></p><strong class="ph b">Sample
+                    progress detail attribute
+                value:</strong><pre class="pre codeblock"><code>"goalProgressDetail": {
+        "comment": "Hello coment onlydsdssadsad ddd",
+        "overwritePercentage": false,
+        "pictureURL": "http://&lt;hostname&gt;/production/employeePicture/notdc000000000201236_employeePicture.JPEG",
+        "progressId": "gprog000000000003791",
+        "goalUnit": null,
+        "sortNumber": 4,
+        "percentageCompleted": 0,
+        "observationDate": 1459499311000,
+        "assignmentId": "gasgn000000000001336",
+        "currentValue": null,
+        "metadata": null,
+        "goalStatus": {
+            "statusValue": "gstts000000000001002",
+            "id": "gstts000000000001002",
+            "displayName": "Completed",
+            "locale": null,
+            "primaryKey": {
+                "id": "gstts000000000001002",
+                "prefix": "gstts"
+            }
+        },
+        "progressReporter": {
+            "sourceType": "InternalPerson",
+            "activitySourceType": {
+                "sourceType": 0,
+                "listId": "sysli000000000003037",
+                "key": "0",
+                "displayName": "Person"
+            },
+            "id": "emplo000000000001000",
+            "displayName": "User One",
+            "locale": null
+        }
+    }</code></pre></section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="post-create-goal-for-selfteam-N1000A">
+        <h2 class="title topictitle2" id="ariaid-title4">CREATE GOAL FOR SELF/TEAM</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <div class="p">Creates a Goal for self/team.<div class="note note note_note"><span class="note__title">Note:</span> 
+                        <p class="p">To create a goal with a parent goal, set the parentGoal field, or else
+                            keep it null. </p>
+                        <p class="p">To create a goal with approval, set submitForApproval to true, or else
+                            keep it false. </p>
+                        <p class="p">To create a goal for self, set the assignee field of goalAssignmentDetail
+                            and set the assignee field of SabaGoalRestDetail as null. </p>
+                        <p class="p">To create a goal for team, set the assignee field of SabaGoalRestDetail
+                            object. </p>
+                        <div class="p">The following are the available goal status ID:<ul class="ul" id="post-create-goal-for-selfteam-N1000A__ul_sjv_bs5_pv">
+                                <li class="li">ACTIVE_GOAL_STATUS = "gstts000000000001000" </li>
+                                <li class="li">INACTIVE_GOAL_STATUS = "gstts000000000001001" </li>
+                                <li class="li">COMPLETED_GOAL_STATUS = "gstts000000000001002" </li>
+                            </ul></div>
+                    </div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 ">com.saba.rest.service.goal.SabaGoalRestDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">goalAssignmentDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Detail of a Goal Assignment</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">goalDefinitionDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Detail of a Goal Definition</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">assignees</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Assignee of goals (Required only while creating
+                                    team goal)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">isDirectIndirect</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Whether it is direct or undirect goal</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">tasks</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Tasks to add</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">parentGoal</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Wrapper Reference of parent goal</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">associationsData</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Association Data</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__1 ">submitForApproval</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__2 ">Whether to submit for approval or not</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="post-create-goal-for-selfteam-N1000A__table_vph_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body (Self)</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.SabaGoalRestDetail",
+   "goalAssignmentDetail":{  
+      "@type":"com.saba.rest.service.goal.RestGoalAssignmentDetail",
+      "locked":false,
+      "assignee":{  
+         "@type":"com.saba.party.person.entity.EmployeeReference",
+         "id":"emplo000000000200503"
+      },
+      "goalDefinition":null,
+      "goalAssignmentStatus":{  
+         "@type":"com.saba.goal.entity.GoalStatusReference",
+         "statusValue":"gstts000000000001000",
+         "id":"gstts000000000001000"
+      },
+      "archived":false,
+      "source":{  
+         "@type":"com.saba.party.person.entity.EmployeeReference",
+         "id":"emplo000000000001000"
+      },
+      "startDate":{  
+         "@type":"date",
+         "time":"2016-04-07",
+         "date":"2016-04-07"
+      },
+      "dueDate":{  
+         "@type":"date",
+         "time":"2016-04-30",
+         "date":"2016-04-30"
+      },
+      "originalDueDate":null
+   },
+   "goalDefinitionDetail":{  
+      "@type":"com.saba.rest.service.goal.RestGoalDefinitionDetail",
+      "owner":{  
+         "@type":"com.saba.party.person.entity.EmployeeReference",
+         "id":"emplo000000000200503"
+      },
+      "required":null,
+      "duration":null,
+      "pullInReview":false,
+      "smartGoal":null,
+      "fixedStartDate":null,
+      "fixedEndDate":null,
+      "title":"new",
+      "goalCategory":{  
+         "@type":"com.saba.goal.entity.GoalCategoryReference",
+         "id":"gcate000000000000011"
+      },
+      "goalDefinitionStatus":{  
+         "@type":"com.saba.rest.service.goal.RestGoalDefinitionStatus",
+         "listId":"sysli000000000006003",
+         "key":"Active"
+      },
+      "shared":false,
+      "template":false,
+      "pushed":null,
+      "goalMetric":{  
+         "@type":"com.saba.goal.entity.GoalMetricReference",
+         "id":"gmetr000000000001042"
+      },
+      "goalAction":{  
+         "@type":"com.saba.goal.entity.GoalActionReference",
+         "id":"gactn000000000001041"
+      },
+      "goalUnit":{  
+         "@type":"com.saba.goal.entity.GoalUnitReference",
+         "id":"gunit000000000001004"
+      },
+      "goalType":{  
+         "@type":"com.saba.goal.entity.GoalTypeReference",
+         "id":"goalt000000000000001"
+      },
+      "initialValue":1,
+      "targetValue":2,
+      "goalVisibility":"gvizr000000000001002",
+      "description":"&lt;p&gt;Hello&lt;/p&gt;",
+      "libGoalVisibilityKey":null,
+      "auditDetail":null,
+      "definitionCustomValues":[  
+         "list",
+         [  
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom0",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"1",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom1",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom2",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"3",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom3",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"4",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom4",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"5",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom5",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"6",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom6",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"7",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom7",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"8",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom8",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"9",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom9",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"",
+               "displayName":null
+            }
+         ]
+      ],
+      "isLibraryGoal":false
+   },
+   "tasks":[  
+      "list",
+      [  
+         {  
+            "@type":"com.saba.rest.service.goal.RestTaskDetail",
+            "owner":null,
+            "taskStatus":"100",
+            "title":"new task"
+         }
+      ]
+   ],
+   "parentGoal":{  
+      "@type":"com.saba.goal.GoalReferenceWrapper",
+      "goalDefinition":{  
+         "@type":"com.saba.goal.entity.GoalDefinitionReference",
+         "id":"gdefn000000000002903",
+         "displayName":null
+      },
+      "goalAssignment":{  
+         "@type":"com.saba.goal.entity.GoalAssignmentReference",
+         "id":"gasgn000000000010431",
+         "displayName":null
+      }
+   },
+   "associationsData":[  
+      "list",
+      [  
+         {  
+            "@type":"com.saba.rest.service.goal.GoalAssociationBasicDTO",
+            "activityId":"teams000000000001083",
+            "requiredLevelId":null,
+            "purpose":"Reference"
+         },
+         {  
+            "@type":"com.saba.rest.service.goal.GoalAssociationBasicDTO",
+            "activityId":"crtfy000000000200162",
+            "requiredLevelId":null,
+            "purpose":null
+         },
+         {  
+            "@type":"com.saba.rest.service.goal.GoalAssociationBasicDTO",
+            "activityId":"compt000000000001141",
+            "requiredLevelValue":1,
+            "purpose":null
+         }
+      ]
+   ],
+   "submitForApproval":true,   
+   "isDirectIndirect":false
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values (Self)</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "GoalResultWrapper":{  
+      "@type":"com.saba.goal.GoalResultWrapper",
+      "operationResultEnum":"SUCCESS",
+      "goalResultColl":[  
+         "list",
+         [  
+            {  
+               "@type":"com.saba.goal.GoalResult",
+               "approvalStatus":{  
+                  "@type":"com.saba.goal.GoalDefinitionApprovalStatus",
+                  "listId":"sysli000000000006030",
+                  "key":"200",
+                  "displayName":"Pending Approval"
+               },
+               "successFlag":true,
+               "successGoalReference":{  
+                  "@type":"com.saba.goal.GoalReferenceWrapper",
+                  "goalDefinition":{  
+                     "@type":"com.saba.goal.entity.GoalDefinitionReference",
+                     "sourceType":"Goal",
+                     "componentName":"Goal Definition",
+                     "activitySourceType":{  
+                        "sourceType":5,
+                        "listId":"sysli000000000003037",
+                        "key":"5",
+                        "displayName":"Goal"
+                     },
+                     "prescriptionActionType":{  
+                        "displayName":"Goal",
+                        "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+                        "name":"GoalDefinition",
+                        "key":"1"
+                     },
+                     "id":"gdefn000000000002980",
+                     "displayName":null,
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gdefn000000000002980",
+                        "prefix":"gdefn"
+                     }
+                  },
+                  "goalAssignment":{  
+                     "@type":"com.saba.goal.entity.GoalAssignmentReference",
+                     "sourceType":"Goal",
+                     "id":"gasgn000000000010556",
+                     "displayName":"gasgn000000000010556",
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gasgn000000000010556",
+                        "prefix":"gasgn"
+                     }
+                  }
+               },
+               "assignee":{  
+                  "@type":"emplo",
+                  "sourceType":"InternalPerson",
+                  "activitySourceType":{  
+                     "sourceType":0,
+                     "listId":"sysli000000000003037",
+                     "key":"0",
+                     "displayName":"Person"
+                  },
+                  "id":"emplo000000000001001",
+                  "displayName":"User Two",
+                  "locale":null
+               },
+               "goalErrorList":null,
+               "failedGoalDetail":null
+            }
+         ]
+      ]
+   }
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body (Team)</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.SabaGoalRestDetail",
+   "goalAssignmentDetail":{  
+      "@type":"com.saba.rest.service.goal.RestGoalAssignmentDetail",
+      "locked":false,
+      "assignee":{  
+         "@type":"com.saba.party.person.entity.EmployeeReference",
+         "id":"emplo000000000200503"
+      },
+      "goalDefinition":null,
+      "goalAssignmentStatus":{  
+         "@type":"com.saba.goal.entity.GoalStatusReference",
+         "statusValue":"gstts000000000001000",
+         "id":"gstts000000000001000"
+      },
+      "archived":false,
+      "source":{  
+         "@type":"com.saba.party.person.entity.EmployeeReference",
+         "id":"emplo000000000001000"
+      },
+      "startDate":{  
+         "@type":"date",
+         "time":"2016-04-07",
+         "date":"2016-04-07"
+      },
+      "dueDate":{  
+         "@type":"date",
+         "time":"2016-04-30",
+         "date":"2016-04-30"
+      },
+      "originalDueDate":null
+   },
+   "goalDefinitionDetail":{  
+      "@type":"com.saba.rest.service.goal.RestGoalDefinitionDetail",
+      "owner":{  
+         "@type":"com.saba.party.person.entity.EmployeeReference",
+         "id":"emplo000000000200503"
+      },
+      "required":null,
+      "duration":null,
+      "pullInReview":false,
+      "smartGoal":null,
+      "fixedStartDate":null,
+      "fixedEndDate":null,
+      "title":"new",
+      "goalCategory":{  
+         "@type":"com.saba.goal.entity.GoalCategoryReference",
+         "id":"gcate000000000000011"
+      },
+      "goalDefinitionStatus":{  
+         "@type":"com.saba.rest.service.goal.RestGoalDefinitionStatus",
+         "listId":"sysli000000000006003",
+         "key":"Active"
+      },
+      "shared":false,
+      "template":false,
+      "pushed":null,
+      "goalMetric":{  
+         "@type":"com.saba.goal.entity.GoalMetricReference",
+         "id":"gmetr000000000001042"
+      },
+      "goalAction":{  
+         "@type":"com.saba.goal.entity.GoalActionReference",
+         "id":"gactn000000000001041"
+      },
+      "goalUnit":{  
+         "@type":"com.saba.goal.entity.GoalUnitReference",
+         "id":"gunit000000000001004"
+      },
+      "goalType":{  
+         "@type":"com.saba.goal.entity.GoalTypeReference",
+         "id":"goalt000000000000001"
+      },
+      "initialValue":1,
+      "targetValue":2,
+      "goalVisibility":"gvizr000000000001002",
+      "description":"&lt;p&gt;Hello&lt;/p&gt;",
+      "libGoalVisibilityKey":null,
+      "auditDetail":null,
+      "definitionCustomValues":[  
+         "list",
+         [  
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom0",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"1",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom1",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom2",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"3",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom3",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"4",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom4",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"5",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom5",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"6",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom6",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"7",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom7",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"8",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom8",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"9",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom9",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"",
+               "displayName":null
+            }
+         ]
+      ],
+      "isLibraryGoal":false
+   },
+   "tasks":[  
+      "list",
+      [  
+         {  
+            "@type":"com.saba.rest.service.goal.RestTaskDetail",
+            "owner":null,
+            "taskStatus":"100",
+            "title":"new task"
+         }
+      ]
+   ],
+   "parentGoal":{  
+      "@type":"com.saba.goal.GoalReferenceWrapper",
+      "goalDefinition":{  
+         "@type":"com.saba.goal.entity.GoalDefinitionReference",
+         "id":"gdefn000000000002903",
+         "displayName":null
+      },
+      "goalAssignment":{  
+         "@type":"com.saba.goal.entity.GoalAssignmentReference",
+         "id":"gasgn000000000010431",
+         "displayName":null
+      }
+   },
+   "associationsData":[  
+      "list",
+      [  
+         {  
+            "@type":"com.saba.rest.service.goal.GoalAssociationBasicDTO",
+            "activityId":"teams000000000001083",
+            "requiredLevelId":null,
+            "purpose":"Reference"
+         },
+         {  
+            "@type":"com.saba.rest.service.goal.GoalAssociationBasicDTO",
+            "activityId":"crtfy000000000200162",
+            "requiredLevelId":null,
+            "purpose":null
+         },
+         {  
+            "@type":"com.saba.rest.service.goal.GoalAssociationBasicDTO",
+            "activityId":"compt000000000001141",
+            "requiredLevelValue":1,
+            "purpose":null
+         }
+      ]
+   ],
+   "submitForApproval":true,
+   "assignees":[  
+      "list",
+      [  
+         {  
+            "@type":"com.saba.party.person.entity.EmployeeReference",
+            "id":"emplo000000000001000"
+         },
+         {  
+            "@type":"com.saba.party.person.entity.EmployeeReference",
+            "id":"emplo000000000200088"
+         },
+         {  
+            "@type":"com.saba.party.person.entity.EmployeeReference",
+            "id":"emplo000000000200504"
+         },
+         {  
+            "@type":"com.saba.party.person.entity.EmployeeReference",
+            "id":"emplo000000000200502"
+         },
+         {  
+            "@type":"com.saba.party.person.entity.EmployeeReference",
+            "id":"emplo000000000200487"
+         }
+      ]
+   ],
+   "isDirectIndirect":false
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values (Team)</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "GoalResultWrapper":{  
+      "@type":"com.saba.goal.GoalResultWrapper",
+      "operationResultEnum":"SUCCESS",
+      "goalResultColl":[  
+         "list",
+         [  
+            {  
+               "@type":"com.saba.goal.GoalResult",
+               "approvalStatus":{  
+                  "@type":"com.saba.goal.GoalDefinitionApprovalStatus",
+                  "listId":"sysli000000000006030",
+                  "key":"200",
+                  "displayName":"Pending Approval"
+               },
+               "successFlag":true,
+               "successGoalReference":{  
+                  "@type":"com.saba.goal.GoalReferenceWrapper",
+                  "goalDefinition":{  
+                     "@type":"com.saba.goal.entity.GoalDefinitionReference",
+                     "sourceType":"Goal",
+                     "componentName":"Goal Definition",
+                     "activitySourceType":{  
+                        "sourceType":5,
+                        "listId":"sysli000000000003037",
+                        "key":"5",
+                        "displayName":"Goal"
+                     },
+                     "prescriptionActionType":{  
+                        "displayName":"Goal",
+                        "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+                        "name":"GoalDefinition",
+                        "key":"1"
+                     },
+                     "id":"gdefn000000000002973",
+                     "displayName":null,
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gdefn000000000002973",
+                        "prefix":"gdefn"
+                     }
+                  },
+                  "goalAssignment":{  
+                     "@type":"com.saba.goal.entity.GoalAssignmentReference",
+                     "sourceType":"Goal",
+                     "id":"gasgn000000000010541",
+                     "displayName":"gasgn000000000010541",
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gasgn000000000010541",
+                        "prefix":"gasgn"
+                     }
+                  }
+               },
+               "assignee":{  
+                  "@type":"emplo",
+                  "sourceType":"InternalPerson",
+                  "activitySourceType":{  
+                     "sourceType":0,
+                     "listId":"sysli000000000003037",
+                     "key":"0",
+                     "displayName":"Person"
+                  },
+                  "id":"emplo000000000001001",
+                  "displayName":"User Two",
+                  "locale":null
+               },
+               "goalErrorList":null,
+               "failedGoalDetail":null
+            },
+            {  
+               "@type":"com.saba.goal.GoalResult",
+               "approvalStatus":{  
+                  "@type":"com.saba.goal.GoalDefinitionApprovalStatus",
+                  "listId":"sysli000000000006030",
+                  "key":"200",
+                  "displayName":"Pending Approval"
+               },
+               "successFlag":true,
+               "successGoalReference":{  
+                  "@type":"com.saba.goal.GoalReferenceWrapper",
+                  "goalDefinition":{  
+                     "@type":"com.saba.goal.entity.GoalDefinitionReference",
+                     "sourceType":"Goal",
+                     "componentName":"Goal Definition",
+                     "activitySourceType":{  
+                        "sourceType":5,
+                        "listId":"sysli000000000003037",
+                        "key":"5",
+                        "displayName":"Goal"
+                     },
+                     "prescriptionActionType":{  
+                        "displayName":"Goal",
+                        "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+                        "name":"GoalDefinition",
+                        "key":"1"
+                     },
+                     "id":"gdefn000000000002974",
+                     "displayName":null,
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gdefn000000000002974",
+                        "prefix":"gdefn"
+                     }
+                  },
+                  "goalAssignment":{  
+                     "@type":"com.saba.goal.entity.GoalAssignmentReference",
+                     "sourceType":"Goal",
+                     "id":"gasgn000000000010542",
+                     "displayName":"gasgn000000000010542",
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gasgn000000000010542",
+                        "prefix":"gasgn"
+                     }
+                  }
+               },
+               "assignee":{  
+                  "@type":"emplo",
+                  "sourceType":"InternalPerson",
+                  "activitySourceType":{  
+                     "sourceType":0,
+                     "listId":"sysli000000000003037",
+                     "key":"0",
+                     "displayName":"Person"
+                  },
+                  "id":"emplo000000000200003",
+                  "displayName":"Human Administrator",
+                  "locale":null
+               },
+               "goalErrorList":null,
+               "failedGoalDetail":null
+            },
+            {  
+               "@type":"com.saba.goal.GoalResult",
+               "approvalStatus":{  
+                  "@type":"com.saba.goal.GoalDefinitionApprovalStatus",
+                  "listId":"sysli000000000006030",
+                  "key":"200",
+                  "displayName":"Pending Approval"
+               },
+               "successFlag":true,
+               "successGoalReference":{  
+                  "@type":"com.saba.goal.GoalReferenceWrapper",
+                  "goalDefinition":{  
+                     "@type":"com.saba.goal.entity.GoalDefinitionReference",
+                     "sourceType":"Goal",
+                     "componentName":"Goal Definition",
+                     "activitySourceType":{  
+                        "sourceType":5,
+                        "listId":"sysli000000000003037",
+                        "key":"5",
+                        "displayName":"Goal"
+                     },
+                     "prescriptionActionType":{  
+                        "displayName":"Goal",
+                        "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+                        "name":"GoalDefinition",
+                        "key":"1"
+                     },
+                     "id":"gdefn000000000002975",
+                     "displayName":null,
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gdefn000000000002975",
+                        "prefix":"gdefn"
+                     }
+                  },
+                  "goalAssignment":{  
+                     "@type":"com.saba.goal.entity.GoalAssignmentReference",
+                     "sourceType":"Goal",
+                     "id":"gasgn000000000010543",
+                     "displayName":"gasgn000000000010543",
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gasgn000000000010543",
+                        "prefix":"gasgn"
+                     }
+                  }
+               },
+               "assignee":{  
+                  "@type":"emplo",
+                  "sourceType":"InternalPerson",
+                  "activitySourceType":{  
+                     "sourceType":0,
+                     "listId":"sysli000000000003037",
+                     "key":"0",
+                     "displayName":"Person"
+                  },
+                  "id":"emplo000000000200004",
+                  "displayName":"System Administrator",
+                  "locale":null
+               },
+               "goalErrorList":null,
+               "failedGoalDetail":null
+            },
+            {  
+               "@type":"com.saba.goal.GoalResult",
+               "approvalStatus":{  
+                  "@type":"com.saba.goal.GoalDefinitionApprovalStatus",
+                  "listId":"sysli000000000006030",
+                  "key":"200",
+                  "displayName":"Pending Approval"
+               },
+               "successFlag":true,
+               "successGoalReference":{  
+                  "@type":"com.saba.goal.GoalReferenceWrapper",
+                  "goalDefinition":{  
+                     "@type":"com.saba.goal.entity.GoalDefinitionReference",
+                     "sourceType":"Goal",
+                     "componentName":"Goal Definition",
+                     "activitySourceType":{  
+                        "sourceType":5,
+                        "listId":"sysli000000000003037",
+                        "key":"5",
+                        "displayName":"Goal"
+                     },
+                     "prescriptionActionType":{  
+                        "displayName":"Goal",
+                        "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+                        "name":"GoalDefinition",
+                        "key":"1"
+                     },
+                     "id":"gdefn000000000002976",
+                     "displayName":null,
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gdefn000000000002976",
+                        "prefix":"gdefn"
+                     }
+                  },
+                  "goalAssignment":{  
+                     "@type":"com.saba.goal.entity.GoalAssignmentReference",
+                     "sourceType":"Goal",
+                     "id":"gasgn000000000010544",
+                     "displayName":"gasgn000000000010544",
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gasgn000000000010544",
+                        "prefix":"gasgn"
+                     }
+                  }
+               },
+               "assignee":{  
+                  "@type":"emplo",
+                  "sourceType":"InternalPerson",
+                  "activitySourceType":{  
+                     "sourceType":0,
+                     "listId":"sysli000000000003037",
+                     "key":"0",
+                     "displayName":"Person"
+                  },
+                  "id":"emplo000000000200120",
+                  "displayName":"B~^ O'pool\"$#@!\"",
+                  "locale":null
+               },
+               "goalErrorList":null,
+               "failedGoalDetail":null
+            },
+            {  
+               "@type":"com.saba.goal.GoalResult",
+               "approvalStatus":{  
+                  "@type":"com.saba.goal.GoalDefinitionApprovalStatus",
+                  "listId":"sysli000000000006030",
+                  "key":"200",
+                  "displayName":"Pending Approval"
+               },
+               "successFlag":true,
+               "successGoalReference":{  
+                  "@type":"com.saba.goal.GoalReferenceWrapper",
+                  "goalDefinition":{  
+                     "@type":"com.saba.goal.entity.GoalDefinitionReference",
+                     "sourceType":"Goal",
+                     "componentName":"Goal Definition",
+                     "activitySourceType":{  
+                        "sourceType":5,
+                        "listId":"sysli000000000003037",
+                        "key":"5",
+                        "displayName":"Goal"
+                     },
+                     "prescriptionActionType":{  
+                        "displayName":"Goal",
+                        "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+                        "name":"GoalDefinition",
+                        "key":"1"
+                     },
+                     "id":"gdefn000000000002977",
+                     "displayName":null,
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gdefn000000000002977",
+                        "prefix":"gdefn"
+                     }
+                  },
+                  "goalAssignment":{  
+                     "@type":"com.saba.goal.entity.GoalAssignmentReference",
+                     "sourceType":"Goal",
+                     "id":"gasgn000000000010545",
+                     "displayName":"gasgn000000000010545",
+                     "locale":{  
+                        "@type":"loclref",
+                        "id":"local000000000000001",
+                        "displayName":null
+                     },
+                     "primaryKey":{  
+                        "@type":"com.saba.persist.ObjectId",
+                        "id":"gasgn000000000010545",
+                        "prefix":"gasgn"
+                     }
+                  }
+               },
+               "assignee":{  
+                  "@type":"emplo",
+                  "sourceType":"InternalPerson",
+                  "activitySourceType":{  
+                     "sourceType":0,
+                     "listId":"sysli000000000003037",
+                     "key":"0",
+                     "displayName":"Person"
+                  },
+                  "id":"emplo000000000200428",
+                  "displayName":"mgr01 mgr01",
+                  "locale":null
+               },
+               "goalErrorList":null,
+               "failedGoalDetail":null
+            }
+         ]
+      ]
+   }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_xnh_nn5_pv">
+        <h2 class="title topictitle2" id="ariaid-title5">CREATE PROGRESS OF A GOAL</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Creates progress of a Goal.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals/:goalId/createProgress</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_xnh_nn5_pv__table_h4h_nn5_pv"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1 ">goalId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2 ">ID of goal</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3 ">com.saba.rest.service.goal.RestGoalProgressDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1 ">goalStatus</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2 ">Status of a Goal</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1 ">percentageCompleted</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2 ">The total percentage completed</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1 ">currentValue</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2 ">Current value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1 ">comment</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2 ">Comment</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.RestGoalProgressDetail",
+   "goalStatus":{  
+      "@type":"com.saba.goal.entity.GoalStatusReference",
+      "id":"gstts000000000001000"
+   },
+   "percentageCompleted":58,
+   "currentValue":1.58,
+   "comment":"f"
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.RestGoalProgressDetail",
+   "goalStatus":{  
+      "@type":"com.saba.goal.entity.GoalStatusReference",
+      "id":"gstts000000000001000"
+   },
+   "percentageCompleted":48,
+   "currentValue":null,
+   "comment":"asd"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_zlh_nn5_pv">
+        <h2 class="title topictitle2" id="ariaid-title6">CHANGE STATUS OF A GOAL</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Changes the status of a Goal</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals/:goalId/changeStatus</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_zlh_nn5_pv__table_jmh_nn5_pv"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__1 ">goalId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__2 ">ID of goal</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__2 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__3 ">com.saba.rest.service.goal.RestGoalProgressDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__1 ">goalStatus</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__2 ">Status of a Goal</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__1 ">comment</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__2 ">Comment</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__1 ">overwritePercentage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__2 ">Whether to overwrite percentage or not</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zlh_nn5_pv__table_jmh_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.RestGoalProgressDetail",
+   "goalStatus":{  
+      "@type":"com.saba.goal.entity.GoalStatusReference",
+      "id":"gstts000000000001002"
+   },
+   "comment":null,
+   "overwritePercentage":true
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "GoalProgressReference":{  
+      "@type":"com.saba.goal.entity.GoalProgressReference",
+      "componentName":"Goal Progress",
+      "id":"gprog000000000003959",
+      "displayName":"",
+      "locale":null,
+      "primaryKey":{  
+         "@type":"com.saba.persist.ObjectId",
+         "id":"gprog000000000003959",
+         "prefix":"gprog"
+      }
+   }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_vkh_nn5_pv">
+        <h2 class="title topictitle2" id="ariaid-title7">UPDATE APPROVER OF GOAL</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Updates the approver of a goal.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals/:goalId/approvers</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_vkh_nn5_pv__table_flh_nn5_pv"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__1 ">goalId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__2 ">Id of goal</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__2 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__3 ">com.saba.rest.service.goal.RestApprovalDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__1 ">restApprover</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__2 ">Detail of a Goal Approver</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__1 ">changeLog</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__2 ">Log of changes of attributes</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vkh_nn5_pv__table_flh_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+                <div class="note note note_note"><span class="note__title">Note:</span> Set changelog only when update of goal detail attributes requires approval,
+                    else set it to null.</div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.RestApprovalDetail",
+   "restApprover":{  
+      "@type":"com.saba.rest.service.goal.RestApprover",
+      "approverStatus":{  
+         "listId":"sysli000000000003077",
+         "key":"300"
+      },
+      "approvers":[  
+         "list",
+         [  
+            {  
+               "@type":"com.saba.party.person.entity.EmployeeReference",
+               "id":"emplo000000000200503"
+            }
+         ]
+      ],
+      "comments":"sdfs"
+   },
+   "changeLog":[  
+      "list",
+      [  
+         {  
+            "@type":"com.saba.rest.changelog.RestChangeLogDetail",
+            "id":"cclog000000000001068",
+            "changeLogApprovalStatus":{  
+               "@type":"com.saba.rest.changelog.RestChangeLogApprovalStatus",
+               "key":"300"
+            }
+         },
+         {  
+            "@type":"com.saba.rest.changelog.RestChangeLogDetail",
+            "id":"cclog000000000001069",
+            "changeLogApprovalStatus":{  
+               "@type":"com.saba.rest.changelog.RestChangeLogApprovalStatus",
+               "key":"300"
+            }
+         },
+         {  
+            "@type":"com.saba.rest.changelog.RestChangeLogDetail",
+            "id":"cclog000000000001070",
+            "changeLogApprovalStatus":{  
+               "@type":"com.saba.rest.changelog.RestChangeLogApprovalStatus",
+               "key":"300"
+            }
+         },
+         {  
+            "@type":"com.saba.rest.changelog.RestChangeLogDetail",
+            "id":"cclog000000000001071",
+            "changeLogApprovalStatus":{  
+               "@type":"com.saba.rest.changelog.RestChangeLogApprovalStatus",
+               "key":"300"
+            }
+         }
+      ]
+   ]
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>204 No Content</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="reference_djh_nn5_pv">
+        <h2 class="title topictitle2" id="ariaid-title8">UPDATE GOAL FOR SELF/TEAM</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Updates a Goal for self/team</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals/:goalId</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_djh_nn5_pv__table_mjh_nn5_pv"><caption><span class="table--title-label">Table 7. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__1 ">goalId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__2 ">ID of goal</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__2 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__3 ">com.saba.rest.service.goal.SabaGoalRestDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__1 ">goalAssignmentDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__2 ">Detail of a Goal Assignment</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__1 ">goalDefinitionDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__2 ">Detail of a Goal Defenition</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__1 ">submitForApproval</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__2 ">Whether to submit for approval or not</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__1 ">isPartialUpdate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__2 ">Whether it is partial update or not</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_djh_nn5_pv__table_mjh_nn5_pv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.SabaGoalRestDetail",
+   "goalAssignmentDetail":{  
+      "@type":"com.saba.rest.service.goal.RestGoalAssignmentDetail",
+      "locked":false,
+      "mandatory":false,
+      "source":{  
+         "@type":"emplo",
+         "activitySourceType":{  
+            "listId":"sysli000000000003037",
+            "sourceType":0,
+            "key":"0",
+            "displayName":"Person"
+         },
+         "sourceType":"InternalPerson",
+         "id":"emplo000000000001000",
+         "displayName":"User One",
+         "locale":{  
+            "@type":"loclref",
+            "id":"local000000000000001",
+            "displayName":null
+         }
+      },
+      "assignee":{  
+         "@type":"emplo",
+         "activitySourceType":{  
+            "listId":"sysli000000000003037",
+            "sourceType":0,
+            "key":"0",
+            "displayName":"Person"
+         },
+         "sourceType":"InternalPerson",
+         "id":"emplo000000000001000",
+         "displayName":"User One",
+         "locale":{  
+            "@type":"loclref",
+            "id":"local000000000000001",
+            "displayName":null
+         }
+      },
+      "dueDate":{  
+         "@type":"date",
+         "time":"2016-04-30T00:00:00",
+         "date":"2016-04-30T00:00:00"
+      },
+      "goalDefinition":{  
+         "@type":"com.saba.goal.entity.GoalDefinitionReference",
+         "prescriptionActionType":{  
+            "displayName":"Goal",
+            "logicClassForPrescriptionActionType":"GoalPrescriptionPush",
+            "name":"GoalDefinition",
+            "key":"1"
+         },
+         "activitySourceType":{  
+            "listId":"sysli000000000003037",
+            "sourceType":5,
+            "key":"5",
+            "displayName":"Goal"
+         },
+         "sourceType":"Goal",
+         "componentName":"Goal Definition",
+         "id":"gdefn000000000002965",
+         "displayName":"app2",
+         "locale":{  
+            "@type":"loclref",
+            "id":"local000000000000001",
+            "displayName":null
+         },
+         "primaryKey":{  
+            "@type":"com.saba.persist.ObjectId",
+            "id":"gdefn000000000002965",
+            "prefix":"gdefn"
+         }
+      },
+      "startDate":{  
+         "@type":"date",
+         "time":"2016-04-07T00:00:00",
+         "date":"2016-04-07T00:00:00"
+      },
+      "goalAssignmentStatus":{  
+         "@type":"com.saba.goal.entity.GoalStatusReference",
+         "statusValue":"gstts000000000001000",
+         "id":"gstts000000000001000",
+         "displayName":"Active",
+         "locale":null,
+         "primaryKey":{  
+            "@type":"com.saba.persist.ObjectId",
+            "id":"gstts000000000001000",
+            "prefix":"gstts"
+         }
+      },
+      "originalDueDate":null,
+      "archived":false,
+      "assignmentId":"gasgn000000000010513",
+      "dueDays":"30.04.2016",
+      "assigneePictureURL":"http://&lt;hostname&gt;/production/employeePicture/notdc000000000201236_employeePicture.JPEG",
+      "assignmentCustomValues":[  
+         "list",
+         [  
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom9",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":null,
+               "displayName":"custom9"
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom0",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":null,
+               "displayName":"custom0"
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom3",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":null,
+               "displayName":"custom3"
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom4",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":null,
+               "displayName":"custom4"
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom1",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":null,
+               "displayName":"custom1"
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom2",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":null,
+               "displayName":"custom2"
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom7",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":null,
+               "displayName":"custom7"
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom8",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":null,
+               "displayName":"custom8"
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom5",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":null,
+               "displayName":"custom5"
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom6",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":null,
+               "displayName":"custom6"
+            }
+         ]
+      ],
+      "assignmentMetadata":{  
+         "@type":"com.saba.ejb.UpdateMetadata",
+         "timestamp":"1349202383",
+         "locale":{  
+            "@type":"loclref",
+            "id":"local000000000000001",
+            "displayName":null
+         },
+         "primaryKey":{  
+            "@type":"com.saba.persist.ObjectId",
+            "id":"gasgn000000000010513",
+            "prefix":"gasgn"
+         }
+      },
+      "missedGoal":false
+   },
+   "goalDefinitionDetail":{  
+      "@type":"com.saba.rest.service.goal.RestGoalDefinitionDetail",
+      "id":"gdefn000000000002965",
+      "owner":{  
+         "@type":"emplo",
+         "activitySourceType":{  
+            "listId":"sysli000000000003037",
+            "sourceType":0,
+            "key":"0",
+            "displayName":"Person"
+         },
+         "sourceType":"InternalPerson",
+         "id":"emplo000000000001000",
+         "displayName":null,
+         "locale":null
+      },
+      "duration":0,
+      "description":"&lt;p&gt;adsa&lt;/p&gt;",
+      "shared":false,
+      "securityDomain":{  
+         "@type":"com.saba.domain.entity.DomainReference",
+         "id":"domin000000000000001",
+         "displayName":"world",
+         "locale":null,
+         "primaryKey":{  
+            "@type":"com.saba.persist.ObjectId",
+            "id":"domin000000000000001",
+            "prefix":"domin"
+         }
+      },
+      "auditDetail":null,
+      "pullInReview":true,
+      "title":"app2",
+      "fixedStartDate":null,
+      "definitionCustomValues":[  
+         "list",
+         [  
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom0",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom1",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom2",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom3",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom4",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom5",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom6",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom7",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom8",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            },
+            {  
+               "@type":"CustomAttributeValueDetail",
+               "name":"custom9",
+               "datatype":{  
+                  "@type":"CustomAttributeDatatype",
+                  "value":18
+               },
+               "value":"2",
+               "displayName":null
+            }
+         ]
+      ],
+      "goalApprovalStatus":{  
+         "@type":"com.saba.rest.service.goal.RestGoalDefinitionApprovalStatus",
+         "key":"300",
+         "description":"Approved"
+      },
+      "goalDefinitionStatus":{  
+         "@type":"com.saba.rest.service.goal.RestGoalDefinitionStatus",
+         "key":"Active",
+         "description":"Active"
+      },
+      "goalVisibility":"gvizr000000000001002",
+      "parentLibGoalId":null,
+      "goalVisibilityName":"Everyone",
+      "definitionMetadata":{  
+         "@type":"com.saba.ejb.UpdateMetadata",
+         "timestamp":"1591708561",
+         "locale":{  
+            "@type":"loclref",
+            "id":"local000000000000001",
+            "displayName":null
+         },
+         "primaryKey":{  
+            "@type":"com.saba.persist.ObjectId",
+            "id":"gdefn000000000002965",
+            "prefix":"gdefn"
+         }
+      },
+      "template":false,
+      "expiryDate":null,
+      "libGoalVisibilityKey":null,
+      "required":false,
+      "pushed":false,
+      "fixedEndDate":null,
+      "shortDescription":"",
+      "goalType":{  
+         "@type":"com.saba.goal.entity.GoalTypeReference",
+         "id":"goalt000000000000001",
+         "displayName":"Performance Goal",
+         "locale":{  
+            "@type":"loclref",
+            "id":"local000000000000001",
+            "displayName":null
+         },
+         "primaryKey":{  
+            "@type":"com.saba.persist.ObjectId",
+            "id":"goalt000000000000001",
+            "prefix":"goalt"
+         }
+      },
+      "goalCategory":{  
+         "@type":"com.saba.goal.entity.GoalCategoryReference",
+         "id":"gcate000000000000011"
+      },
+      "isLibraryGoal":false,
+      "initialValue":1,
+      "goalMetric":{  
+         "@type":"com.saba.goal.entity.GoalMetricReference",
+         "id":"gmetr000000000001040"
+      },
+      "goalAction":{  
+         "@type":"com.saba.goal.entity.GoalActionReference",
+         "id":"gactn000000000001040"
+      },
+      "goalUnit":{  
+         "@type":"com.saba.goal.entity.GoalUnitReference",
+         "id":"gunit000000000001004"
+      },
+      "smartGoal":false,
+      "targetValue":2
+   }
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body (Submit for approval)</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.SabaGoalRestDetail",
+   "isPartialUpdate":true,
+   "goalAssignmentDetail":{  
+      "@type":"com.saba.rest.service.goal.RestGoalAssignmentDetail"
+   },
+   "submitForApproval":true
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body (Mark as Archive or Unarchived)</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.SabaGoalRestDetail",
+   "isPartialUpdate":true,
+   "goalAssignmentDetail":{  
+      "@type":"com.saba.rest.service.goal.RestGoalAssignmentDetail",
+      "archived":true
+   }
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>204 No Content</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

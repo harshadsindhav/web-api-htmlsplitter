@@ -1,0 +1,970 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="foundation, restful web services, find the meta details of exchange rate, foundation components, find the meta details of exchange rate, get all exchange rates, get the details of a particular exchange rate, get the details of a particular exchange rate, find the details of the exchange rate, find the details of the exchange rate, find the details of exchange rate (using post - range based search), find the details of exchange rate (using post - range based search), create a new exchange rate, create a new exchange rate, update the details of a exchange rate, update the details of a exchange rate, delete a exchange rate, delete a exchange rate"><meta name="keywords" content="foundation, restful web services, find the meta details of exchange rate, foundation components, find the meta details of exchange rate, get all exchange rates, get the details of a particular exchange rate, get the details of a particular exchange rate, find the details of the exchange rate, find the details of the exchange rate, find the details of exchange rate (using post - range based search), find the details of exchange rate (using post - range based search), create a new exchange rate, create a new exchange rate, update the details of a exchange rate, update the details of a exchange rate, delete a exchange rate, delete a exchange rate"><meta name="DC.Relation" scheme="URI" content="../developer/part-foundation.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0e656"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Currency Exchange Rate</title></head><body id="d0e656"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Currency Exchange Rate</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-foundation.html">Foundation</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="reference_p42_llg_3v">
+        <h2 class="title topictitle2" id="ariaid-title2">FIND META DETAILS OF EXCHANGE RATE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of the Exchange Rate.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/exchangerate/meta:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_p42_llg_3v__table_z42_llg_3v"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_p42_llg_3v__table_z42_llg_3v__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_p42_llg_3v__table_z42_llg_3v__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_p42_llg_3v__table_z42_llg_3v__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_p42_llg_3v__table_z42_llg_3v__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_p42_llg_3v__table_z42_llg_3v__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_p42_llg_3v__table_z42_llg_3v__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_p42_llg_3v__table_z42_llg_3v__entry__2 ">Indicate what additional details needs to be
+                                    returned. Acceptable values are (case-sensitive)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_p42_llg_3v__table_z42_llg_3v__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_p42_llg_3v__table_z42_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_p42_llg_3v__table_z42_llg_3v__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "sampleData": {
+    "src_id": null,
+    "end_date": null,
+    "start_date": null,
+    "batch_id": null,
+    "dest_id": null,
+    "rate": null,
+    "id": null,
+    "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/exchangerate/ccyex000000000000001"
+  },
+  "name": "Currency Exchange Rate",
+  "displayName": "Currency Exchange Rate",
+  "attributes": [
+    {
+      "name": "batch_id",
+      "displayName": "Batch Id",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "created_by",
+      "displayName": "Created by",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isSearchFilter": false
+    },
+    {
+      "name": "created_id",
+      "displayName": "Created Id",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "created_on",
+      "displayName": "Created on",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "date",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    },
+    {
+      "name": "dest_id",
+      "displayName": "Dest Id",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "end_date",
+      "displayName": "End Date",
+      "description": null,
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "date",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "id",
+      "displayName": "Exchange Rate ID",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": true,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "rate",
+      "displayName": "Rate",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "real",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "src_id",
+      "displayName": "Src Id",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "object",
+      "isReference": true,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "start_date",
+      "displayName": "Start Date",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "date",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": true
+    },
+    {
+      "name": "updated_by",
+      "displayName": "Updated by",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "length": 255,
+            "maximumLength": 255,
+      "isSearchFilter": false
+    },
+    {
+      "name": "updated_on",
+      "displayName": "Updated on",
+      "description": null,
+      "isRequired": true,
+      "isAutoGenerated": false,
+      "type": "date",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+      "isSearchFilter": false
+    }
+  ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_rh2_llg_3v">
+        <h2 class="title topictitle2" id="ariaid-title3">GET ALL EXCHANGE RATES</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all exchange rates available in the system.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/exchangerate?count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_rh2_llg_3v__table_b32_llg_3v"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_rh2_llg_3v__table_b32_llg_3v__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rh2_llg_3v__table_b32_llg_3v__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rh2_llg_3v__table_b32_llg_3v__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rh2_llg_3v__table_b32_llg_3v__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rh2_llg_3v__table_b32_llg_3v__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rh2_llg_3v__table_b32_llg_3v__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rh2_llg_3v__table_b32_llg_3v__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rh2_llg_3v__table_b32_llg_3v__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rh2_llg_3v__table_b32_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rh2_llg_3v__table_b32_llg_3v__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rh2_llg_3v__table_b32_llg_3v__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rh2_llg_3v__table_b32_llg_3v__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rh2_llg_3v__table_b32_llg_3v__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rh2_llg_3v__table_b32_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rh2_llg_3v__table_b32_llg_3v__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "id": "ccyex000000000200020",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/exchangerate/ccyex000000000200020"
+    },
+    {
+      "id": "ccyex000000000200046",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/exchangerate/ccyex000000000200046"
+    },
+    {
+      "id": "ccyex000000000200047",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/exchangerate/ccyex000000000200047"
+    }
+  ],
+  "hasMoreResults": true,
+  "totalResults": 28,
+  "itemsPerPage": 3
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_nb2_llg_3v">
+        <h2 class="title topictitle2" id="ariaid-title4">GET DETAILS OF A PARTICULAR EXCHANGE RATE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a exchange rate based on the exchange rate's
+                    id that is passed as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/exchangerate/:id:(:searchFields)</p>
+                <p class="p"><strong class="ph b">Example:</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/exchangerate/ccyex000000000200001</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_nb2_llg_3v__table_xb2_llg_3v"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_nb2_llg_3v__table_xb2_llg_3v__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_nb2_llg_3v__table_xb2_llg_3v__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_nb2_llg_3v__table_xb2_llg_3v__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_nb2_llg_3v__table_xb2_llg_3v__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_nb2_llg_3v__table_xb2_llg_3v__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_nb2_llg_3v__table_xb2_llg_3v__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_nb2_llg_3v__table_xb2_llg_3v__entry__2 ">Exchange Rate's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_nb2_llg_3v__table_xb2_llg_3v__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_nb2_llg_3v__table_xb2_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_nb2_llg_3v__table_xb2_llg_3v__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_nb2_llg_3v__table_xb2_llg_3v__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_nb2_llg_3v__table_xb2_llg_3v__entry__2 ">Indicate what additional details needs to be
+                                    returned. Acceptable values are (case-sensitive)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_nb2_llg_3v__table_xb2_llg_3v__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_nb2_llg_3v__table_xb2_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_nb2_llg_3v__table_xb2_llg_3v__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "src_id": {
+    "id": "crncy000000000000001",
+    "displayName": "US Dollars"
+  },
+  "rate": 2,
+  "end_date": "2017-03-03T00:00:00.000+0530",
+  "start_date": "2016-03-03T00:00:00.000+0530",
+  "batch_id": {
+    "id": "exbch000000000000002",
+    "displayName": null
+  },
+  "dest_id": {
+    "id": "crncy000000000001005",
+    "displayName": "Currency1"
+  },
+  "id": "ccyex000000000200185"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="get-find-the-details-of-the-exchange-rate-N100A9">
+        <h2 class="title topictitle2" id="ariaid-title5">FIND DETAILS OF EXCHANGE RATE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the exchange rates along with the ID, Name and the
+                    Deeplink URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/exchangerate?q=(:criteria_field%3D%3D:field_value)&amp;count=:count&amp;startPage=:startPage</p>
+                <p class="p"><strong class="ph b">Examples:</strong></p>
+                <p class="p">Search exchange rate by source currency</p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/
+                    v1/exchangerate?q=(src_id%3D%3Dcrncy000000000000004)&amp;includeDetails=true </p>
+                <p class="p">Search exchange rate by destination currency</p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/
+                    v1/exchangerate?q=(dest_id%3D%3Dcrncy000000000000168)&amp;includeDetails=true </p>
+                <p class="p">Search exchange rate by start date</p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/
+                    v1/exchangerate?q=(start_date%3D%3D02/01/2016)&amp;includeDetails=false</p>
+                <p class="p">Search exchange rate by start date</p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/
+                    v1/exchangerate?q=(end_date%3D%3D02/01/2016)&amp;includeDetails=true</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__1 ">criteria_field</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__2 ">The search criteria i.e. the field name.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__3 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__1 ">field_value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__2 ">The search value for the specified search
+                                    criteria.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_t52_llg_3v__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section">The following are the fields that you can use as the <strong class="ph b">criteria_field</strong>:<div class="p">
+                    <table class="table" id="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v"><caption></caption><colgroup><col><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry" id="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__1"> Field name </th>
+                                    <th class="entry" id="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__2"> Field description </th>
+                                    <th class="entry" id="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__3"> Example </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__1 "> src_id </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__2 "> If this field is passed, exchange rates for a currency
+                                        will be returned. </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__3 "> src_id%3D%3D crncy000000000000001 &nbsp; </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__1 "> src_name </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__2 "> If this field is passed, exchange rates for a currency
+                                        will be returned. </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__3 "> src_name%3D%3DUS%20Dollar </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__1 "> src_isocode </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__2 "> If this field is passed, exchange rates for a currency
+                                        will be returned. </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__3 "> src_isocode%3D%3DUSD </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__1 "> dest_id </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__2 "> If this field is passed, exchange rates available to
+                                        currency provided will be returned. </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__3 "> dest_id%3D%3D crncy000000000200968 &nbsp; </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__1 "> dest_name </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__2 "> Exchange rate for a currency will be returned. </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__3 "> dest_name%3D%3DUS%20Dollar </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__1 "> dest_isocode </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__2 "> Exchange rate for a currency will be returned. </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__3 "> dest_isocode%3D%3DUSD </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__1 "> start_date </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__2 "> All exchange rates having a given start date will be
+                                        returned. </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__3 "> start_date%3Dge%3D2015-01-08 </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__1 "> end_date </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__2 "> All exchange rates having a given end date will be
+                                        returned. </td>
+                                    <td class="entry" headers="get-find-the-details-of-the-exchange-rate-N100A9__table_iwl_jng_3v__entry__3 "> end_date%3Dle%3D2015-01-08 </td>
+                                </tr>
+                            </tbody></table>
+                </div></section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code> {
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "end_date": null,
+      "start_date": "1900-01-01T00:00:00.000+0530",
+      "rate": 1,
+      "src_id": {
+        "id": "crncy000000000000001",
+        "displayName": "US Dollars"
+      },
+      "dest_id": {
+        "id": "crncy000000000000001",
+        "displayName": "US Dollars"
+      },
+      "batch_id": {
+        "id": "exbch000000000000002",
+        "displayName": null
+      },
+      "id": "ccyex000000000200020"
+    }
+  ],
+  "hasMoreResults": true,
+  "totalResults": 1,
+  "itemsPerPage": 1
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_b4d_llg_3v">
+        <h2 class="title topictitle2" id="ariaid-title6">FIND DETAILS OF EXCHANGE RATE (USING POST - RANGE BASED SEARCH)</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the exchange rate along with the ID, Name and the Deeplink
+                    URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/exchangerate/searchQuery?count=:count&amp;startPage=:startPage&amp;includeDetails=:includeDetails</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_b4d_llg_3v__table_v4d_llg_3v"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_b4d_llg_3v__table_v4d_llg_3v__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_b4d_llg_3v__table_v4d_llg_3v__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_b4d_llg_3v__table_v4d_llg_3v__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_b4d_llg_3v__table_v4d_llg_3v__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_b4d_llg_3v__table_v4d_llg_3v__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__1 ">conditions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__2 ">Conditions</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__3 "> [{"name": "src_isocode","operator":
+                                    "==","value": "USD"}] </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__2 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__2 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__1 ">includeDetails</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__2 ">Returns the details of the exchange rate in the
+                                    search</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_b4d_llg_3v__table_v4d_llg_3v__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section">The following are the fields that you can use as the <strong class="ph b">conditions &gt; name</strong>:<div class="p">
+                    <table class="table" id="reference_b4d_llg_3v__table_avp_4ng_3v"><caption></caption><colgroup><col><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry" id="reference_b4d_llg_3v__table_avp_4ng_3v__entry__1"> Field name </th>
+                                    <th class="entry" id="reference_b4d_llg_3v__table_avp_4ng_3v__entry__2"> Field description </th>
+                                    <th class="entry" id="reference_b4d_llg_3v__table_avp_4ng_3v__entry__3"> Example </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__1 "> src_id </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__2 "> If this field is passed, exchange rates for a currency
+                                        will be returned. </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__3 "> src_id%3D%3D crncy000000000000001 &nbsp; </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__1 "> src_name </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__2 "> If this field is passed, exchange rates for a currency
+                                        will be returned. </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__3 "> src_name%3D%3DUS%20Dollar </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__1 "> src_isocode </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__2 "> If this field is passed, exchange rates for a currency
+                                        will be returned. </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__3 "> src_isocode%3D%3DUSD </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__1 "> dest_id </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__2 "> If this field is passed, exchange rates available to
+                                        currency provided will be returned. </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__3 "> dest_id%3D%3D crncy000000000200968 &nbsp; </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__1 "> dest_name </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__2 "> Exchange rate for a currency will be returned. </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__3 "> dest_name%3D%3DUS%20Dollar </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__1 "> dest_isocode </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__2 "> Exchange rate for a currency will be returned. </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__3 "> dest_isocode%3D%3DUSD </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__1 "> start_date </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__2 "> All exchange rates having a given start date will be
+                                        returned. </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__3 "> start_date%3Dge%3D2015-01-08 </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__1 "> end_date </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__2 "> All exchange rates having a given end date will be
+                                        returned. </td>
+                                    <td class="entry" headers="reference_b4d_llg_3v__table_avp_4ng_3v__entry__3 "> end_date%3Dle%3D2015-01-08 </td>
+                                </tr>
+                            </tbody></table>
+                </div></section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "conditions" :[{
+                "name": "src_id",
+                "operator": "==",
+                "value": "crncy000000000000001"}]
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "end_date": null,
+      "start_date": "1900-01-01T00:00:00.000+0530",
+      "rate": 1,
+      "src_id": {
+        "id": "crncy000000000000001",
+        "displayName": "US Dollars"
+      },
+      "dest_id": {
+        "id": "crncy000000000000001",
+        "displayName": "US Dollars"
+      },
+      "batch_id": {
+        "id": "exbch000000000000002",
+        "displayName": null
+      },
+      "id": "ccyex000000000200020"
+    }
+  ],
+  "hasMoreResults": true,
+  "totalResults": 1,
+  "itemsPerPage": 1
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_f5d_llg_3v">
+        <h2 class="title topictitle2" id="ariaid-title7">CREATE A NEW EXCHANGE RATE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Create new currency exchange rate.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/exchangerate</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_f5d_llg_3v__table_jvd_llg_3v"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_f5d_llg_3v__table_jvd_llg_3v__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_f5d_llg_3v__table_jvd_llg_3v__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_f5d_llg_3v__table_jvd_llg_3v__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_f5d_llg_3v__table_jvd_llg_3v__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_f5d_llg_3v__table_jvd_llg_3v__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__1 ">src_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__2 ">The source currency</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__3 ">{"id": "crncy000000000202976"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__1 ">dest_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__2 ">The destination currency</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__3 ">{"id": "crncy000000000203005"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__1 ">start_date</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__2 ">Starting date of exchange rate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__3 ">2016-03-03</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__1 ">end_date</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__2 ">Ending date of exchange rate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__3 ">2019-03-03</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__1 ">rate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__2 ">Rate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__3 ">1.5</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__1 ">batch_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__2 ">Exchange rate batch</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__3 ">{"id": "exbch000000000000001"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_f5d_llg_3v__table_jvd_llg_3v__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.currency.ExchangeRateDetail",
+   "src_id": { "id": "crncy000000000000001", "displayName": "USD" 
+   },
+   "dest_id": { "id": "crncy000000000000002", "displayName": "INR" 
+   },
+   "start_date": "2016-03-03",
+   "end_date": "2017-03-03",
+   "rate":2,
+   "batch_id" : {"id": "exbch000000000000002"}
+}</code></pre>
+                <div class="p">The lookup support is available for the following REST APIs:<ol class="ol" id="reference_f5d_llg_3v__ol_zrn_g23_sx">
+                        <li class="li">CREATE A NEW EXCHANGE RATE</li>
+                        <li class="li">UPDATE DETAILS OF A EXCHANGE RATE</li>
+                    </ol><table class="table" id="reference_f5d_llg_3v__table_wdm_k23_sx"><caption></caption><colgroup><col><col><col></colgroup><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry">
+                                        <strong class="ph b">JSON Attribute</strong>
+                                    </td>
+                                    <td class="entry">
+                                        <strong class="ph b">UI Attribute</strong>
+                                    </td>
+                                    <td class="entry">
+                                        <strong class="ph b">Component Name</strong>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry"> Src_id </td>
+                                    <td class="entry"> From </td>
+                                    <td class="entry"> Currency </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry"> Dest_id </td>
+                                    <td class="entry"> To </td>
+                                    <td class="entry"> Currency </td>
+                                </tr>
+                            </tbody></table></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "id": "ccyex000000000200185",
+  "displayName": null,
+  "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/exchangerate/ccyex000000000200185"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="reference_vjd_llg_3v">
+        <h2 class="title topictitle2" id="ariaid-title8">UPDATE DETAILS OF A EXCHANGE RATE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows updating an existing exchange rate based on the Exchange Rate's ID.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/exchangerate/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_vjd_llg_3v__table_fkd_llg_3v"><caption><span class="table--title-label">Table 7. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_vjd_llg_3v__table_fkd_llg_3v__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vjd_llg_3v__table_fkd_llg_3v__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vjd_llg_3v__table_fkd_llg_3v__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vjd_llg_3v__table_fkd_llg_3v__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vjd_llg_3v__table_fkd_llg_3v__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__2 ">Exchange Rate's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__1 ">rate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__2 ">Rate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__3 ">1.5</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__1 ">start_date</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__2 ">Starting date of exchange rate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__3 ">2016-03-03</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__1 ">end_date</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__2 ">Ending date of exchange rate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__3 ">2019-03-03</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vjd_llg_3v__table_fkd_llg_3v__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.currency.ExchangeRateDetail",
+   "src_id": { "id": "crncy000000000000001", "displayName": "USD" 
+   },
+   "dest_id": { "id": "crncy000000000000002", "displayName": "INR" 
+   },
+   "start_date": "2017-12-20",
+   "end_date": "2019-03-03",
+   "rate":2.5
+}</code></pre>
+                <div class="p">The lookup support is available for the following REST APIs:<ol class="ol" id="reference_vjd_llg_3v__ol_ekf_423_sx">
+                        <li class="li">CREATE A NEW EXCHANGE RATE</li>
+                        <li class="li">UPDATE DETAILS OF A EXCHANGE RATE</li>
+                    </ol><table class="table" id="reference_vjd_llg_3v__table_fkf_423_sx"><caption></caption><colgroup><col><col><col></colgroup><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry">
+                                        <strong class="ph b">JSON Attribute</strong>
+                                    </td>
+                                    <td class="entry">
+                                        <strong class="ph b">UI Attribute</strong>
+                                    </td>
+                                    <td class="entry">
+                                        <strong class="ph b">Component Name</strong>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry"> Src_id </td>
+                                    <td class="entry"> From </td>
+                                    <td class="entry"> Currency </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry"> Dest_id </td>
+                                    <td class="entry"> To </td>
+                                    <td class="entry"> Currency </td>
+                                </tr>
+                            </tbody></table></div>
+                <div class="note note note_note"><span class="note__title">Note:</span> This API will only update the value of the "rate" attribute that is passed via
+                    the Request Body. Values of the other attributes, if passed via the Request Body
+                    will be ignored by the API.</div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>status 204</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title9" id="reference_tgd_llg_3v">
+        <h2 class="title topictitle2" id="ariaid-title9">DELETE A EXCHANGE RATE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Deletes an Exchange Rate.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/exchangerate/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_tgd_llg_3v__table_dhd_llg_3v"><caption><span class="table--title-label">Table 8. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_tgd_llg_3v__table_dhd_llg_3v__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tgd_llg_3v__table_dhd_llg_3v__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tgd_llg_3v__table_dhd_llg_3v__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tgd_llg_3v__table_dhd_llg_3v__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tgd_llg_3v__table_dhd_llg_3v__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tgd_llg_3v__table_dhd_llg_3v__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tgd_llg_3v__table_dhd_llg_3v__entry__2 ">Exchange Rate's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tgd_llg_3v__table_dhd_llg_3v__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tgd_llg_3v__table_dhd_llg_3v__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tgd_llg_3v__table_dhd_llg_3v__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>Status 200 OK</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

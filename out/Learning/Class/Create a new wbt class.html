@@ -1,0 +1,611 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all offerings, learning components, find the details of the offerings, find the details of the offerings, get the meta details of a blended class, get the meta details of a blended class, get the meta details of an ilt class, get the meta details of an ilt class, get the details of a class, get the details of a class, get the meta details of a virtual class, get the meta details of a virtual class, get the meta details of a wbt class, get the meta details of a wbt class, create a new blended class, create a new blended class, create a new ilt class, create a new ilt class, create a new virtual class, create a new virtual class, create a new wbt class, create a new wbt class, update a blended class, update a blended class, update a ilt class, update a virtual class, update a virtual class, update a wbt class, get all the offerings of the instructor, get all the offerings of the instructor, retrieve all learning assignments of a class, retrieves all learning assignments of an class, add learning assignments to a class, add learning assignments to a class, update learning assignments of a class, update learning assignments of a class, publish learning assignments of a class, publish learning assignments of a class, mark class as delivered/cancelled, mark class as delivered/cancelled, cancel all enrollments of a class, cancel all enrollments of a class, retrieve all sessions of an offering, retrieve all sessions of an offering, mark class registration as no_show/walk_in, mark class registration as no_show/walk_in, add drop policy to class, delete drop policy from class, delete drop policy from class">
+  <meta name="keywords" content="learning, restful web services, get all offerings, learning components, find the details of the offerings, find the details of the offerings, get the meta details of a blended class, get the meta details of a blended class, get the meta details of an ilt class, get the meta details of an ilt class, get the details of a class, get the details of a class, get the meta details of a virtual class, get the meta details of a virtual class, get the meta details of a wbt class, get the meta details of a wbt class, create a new blended class, create a new blended class, create a new ilt class, create a new ilt class, create a new virtual class, create a new virtual class, create a new wbt class, create a new wbt class, update a blended class, update a blended class, update a ilt class, update a virtual class, update a virtual class, update a wbt class, get all the offerings of the instructor, get all the offerings of the instructor, retrieve all learning assignments of a class, retrieves all learning assignments of an class, add learning assignments to a class, add learning assignments to a class, update learning assignments of a class, update learning assignments of a class, publish learning assignments of a class, publish learning assignments of a class, mark class as delivered/cancelled, mark class as delivered/cancelled, cancel all enrollments of a class, cancel all enrollments of a class, retrieve all sessions of an offering, retrieve all sessions of an offering, mark class registration as no_show/walk_in, mark class registration as no_show/walk_in, add drop policy to class, delete drop policy from class, delete drop policy from class">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Class</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title12">CREATE A NEW WBT CLASS</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Creates a new WBT Class.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">POST</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <div class="p">
+     https://
+     <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> 
+      <p class="p">The following is a <strong class="ph b">deprecated</strong> URL for this REST Web service and will be discontinued in the next few updates:</p>https://
+      <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/learning/offering
+     </div>
+    </div> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_jby_pnx_fp__table_bcy_pnx_fp" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 8. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 ">com.saba.learning.services.offering.OfferingDetail</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">description</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Description</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">duration</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Duration</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">avail_from</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Available from</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 "> 2013-04-29 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">disc_from</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Discontinued from</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 "> 2013-04-30 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">disp_for_web</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Display for web?</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 ">true</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">disp_for_call_center</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Display for call center?</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 ">false</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">trainingUnits</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Training Units</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 ">25</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">customFields</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Custom Fields</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">delivery_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Delivery's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 "> Web-Based eqcat000000000000005 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">language_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Language's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 "> English lange000000000000001 </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">learningAssignments</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Learning Assignments</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">manufacturer_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Manufacturer's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">name</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Course's name</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 ">testCourse</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">offering_temp_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Class temp ID. Only 20 Char Saba Id is supported for this attribute </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 ">{ "@type": "ServiceObjectReference", "id": "cours000000000006618", "displayName": "testCouse" }</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">securityDomain</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Security Domain</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 "> <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">vendor_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Vendor's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">wbt_no</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">WBT class's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 ">dowbt000000000004032</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__1 ">enforced_seq</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__2 ">Enforced SEQ. Possible values: 
+        <ul class="ul" id="reference_jby_pnx_fp__ul_jv5_zxn_3x"> 
+         <li class="li">100 - Suggested</li> 
+         <li class="li">200 - Enforced </li> 
+         <li class="li">300-Enforced with successful completion </li> 
+        </ul></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_jby_pnx_fp__table_bcy_pnx_fp__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5>
+    <pre class="pre codeblock"><code>{
+  "@type": "com.saba.learning.services.offering.OfferingDetail",
+  "description": "desc",
+  "duration": 0,
+  "wbt_no": "00005936",
+  "securityDomain": {
+    "@type": "ServiceObjectReference",
+    "id": "domin000000000000001",
+    "displayName": "world"
+  },
+  "delivery_id": {
+    "@type": "ServiceObjectReference",
+    "id": "eqcat000000000000005",
+    "displayName": "Web-Based"
+  },
+  "avail_from": {
+    "@type": "date",
+    "time": "2013-11-27"
+  },
+  "disc_from": null,
+  "offering_temp_id": {
+    "@type": "ServiceObjectReference",
+    "id": "cours000000000006773",
+    "displayName": "test"
+  },
+  "disp_for_web": true,
+  "disp_for_call_center": true,
+  "language_id": {
+    "@type": "ServiceObjectReference",
+    "id": "lange000000000000001",
+    "displayName": "English"
+  },
+  "vendor_id": null,
+  "manufacturer_id": null,
+  "learningAssignments": null,
+  "location_id": null,
+  "facility_id": null,
+  "start_date": null,
+  "endDate": null,
+  "csr_id": null,
+  "open_enroll": null,
+  "open_enroll_for_all": null,
+  "enroll_close": null,
+  "skip_days_map": "",
+  "name": "test",
+  "baseDeliveryType": "200",
+  "customFields": {
+    "@type": "map",
+    "custom0": "2013-11-27T00:00:00",
+    "custom1": 123,
+    "custom2": 333
+  }
+}</code></pre>The lookup support is now available for this REST API.
+    <table id="reference_jby_pnx_fp__table_tmf_psn_kx" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption></caption>
+     <colgroup>
+      <col>
+      <col>
+      <col>
+     </colgroup>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry"> <strong class="ph b">JSON Attribute</strong> </td> 
+       <td class="entry"> <strong class="ph b">UI Attribute</strong> </td> 
+       <td class="entry"> <strong class="ph b">Component Name</strong> </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> securityDomain </td> 
+       <td class="entry"> Domain name </td> 
+       <td class="entry"> Domain </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> vendor_id </td> 
+       <td class="entry"> Vendor </td> 
+       <td class="entry"> Organization, External </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Csr_id </td> 
+       <td class="entry"> Customer Service Representative </td> 
+       <td class="entry"> Person, Internal </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> audienceType </td> 
+       <td class="entry"> Audience Type / Audience Sub Type </td> 
+       <td class="entry"> Audience Type </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Delivery_id </td> 
+       <td class="entry"> Delivery Type </td> 
+       <td class="entry"> Category Definition </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Language_id / Language </td> 
+       <td class="entry"> Language </td> 
+       <td class="entry"> Language </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Location_id / Location </td> 
+       <td class="entry"> Location </td> 
+       <td class="entry"> Location </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Facility_id / Facility </td> 
+       <td class="entry"> Facility </td> 
+       <td class="entry"> Facility </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Session_template </td> 
+       <td class="entry"> Session Template </td> 
+       <td class="entry"> Session Template </td> 
+      </tr> 
+      <tr> 
+       <td class="entry"> Manufacturer_id </td> 
+       <td class="entry"> Manufacturer </td> 
+       <td class="entry"> Organization, External</td> 
+      </tr> 
+     </tbody>
+    </table>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "@type": "com.saba.learning.services.offering.OfferingDetail",
+    "abstract": "",
+    "endDate": null,
+    "startDate": null,
+    "customValues": [
+        "list",
+        [
+            {
+                "@type": "CustomAttributeValueDetail",
+                "name": "custom0",
+                "datatype": {
+                    "@type": "CustomAttributeDatatype",
+                    "value": 10
+                },
+                "value": {
+                    "@type": "com.saba.customtypes.DateWithLocale",
+                    "timeInLocale": "12:00 AM",
+                    "dateInUserTimeZone": "11/27/13",
+                    "timeInUserTimeZone": "10:30 AM",
+                    "date": 1385528400000,
+                    "locale": "11/27/13"
+                },
+                "tagName": "CustomAttribute",
+                "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                "displayName": "string"
+            },
+            {
+                "@type": "CustomAttributeValueDetail",
+                "name": "custom1",
+                "datatype": {
+                    "@type": "CustomAttributeDatatype",
+                    "value": 1
+                },
+                "value": 123,
+                "tagName": "CustomAttribute",
+                "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                "displayName": "int"
+            },
+            {
+                "@type": "CustomAttributeValueDetail",
+                "name": "custom2",
+                "datatype": {
+                    "@type": "CustomAttributeDatatype",
+                    "value": 2
+                },
+                "value": [
+                    "java.math.BigDecimal",
+                    333
+                ],
+                "tagName": "CustomAttribute",
+                "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                "displayName": "real wbt"
+            }
+        ]
+    ],
+    "securityDomain": {
+        "@type": "ServiceObjectReference",
+        "id": "domin000000000000001",
+        "displayName": "world"
+    },
+    "price": {
+        "@type": "com.saba.learning.services.common.Money",
+        "amount": [
+            "java.math.BigDecimal",
+            0
+        ],
+        "isocode": "USD",
+        "amountString": "0 USD",
+        "currency": {
+            "@type": "ServiceObjectReference",
+            "id": "crncy000000000000167",
+            "displayName": null
+        }
+    },
+    "baseDeliveryType": 200,
+    "deliveryType": {
+        "@type": "ServiceObjectReference",
+        "id": "eqcat000000000000005",
+        "displayName": "Web-Based"
+    },
+    "offeringTemplate": {
+        "@type": "ServiceObjectReference",
+        "id": "cours000000000006773",
+        "displayName": "test"
+    },
+    "availableSeats": -1,
+    "offeringNumber": "66555555",
+    "sessionTemplate": null,
+    "trainingUnits": null,
+    "locationDetail": null,
+    "dif": false,
+    "availabilityDetails": {
+        "@type": "com.saba.learning.services.offering.OfferingDetail$OfferingRegistrationAvailabilityDetailsSection",
+        "offeringPrice": {
+            "@type": "com.saba.learning.services.common.Money",
+            "amount": [
+                "java.math.BigDecimal",
+                0
+            ],
+            "isocode": "USD",
+            "amountString": "0 USD",
+            "currency": {
+                "@type": "ServiceObjectReference",
+                "id": "crncy000000000000167",
+                "displayName": null
+            }
+        },
+        "offeringPriceDisplay": "0 USD",
+        "availableSeats": -1
+    },
+    "offeringlocked": false,
+    "delivery_id": {
+        "@type": "ServiceObjectReference",
+        "id": "eqcat000000000000005",
+        "displayName": "Web-Based"
+    },
+    "location_id": null,
+    "csr_id": null,
+    "session_template": null,
+    "language_id": {
+        "@type": "ServiceObjectReference",
+        "id": "lange000000000000001",
+        "displayName": "English"
+    },
+    "disp_for_web": true,
+    "disp_for_call_center": true,
+    "facility_id": null,
+    "vendor_id": null,
+    "open_enroll": null,
+    "open_enroll_for_all": null,
+    "enroll_close": null,
+    "post_order": null,
+    "post_completion": null,
+    "vleInfo": null,
+    "do_not_drop_post": null,
+    "start_date": null,
+    "avail_from": {
+        "@type": "com.saba.customtypes.DateWithLocale",
+        "timeInLocale": "12:00 AM",
+        "dateInUserTimeZone": "11/27/13",
+        "timeInUserTimeZone": "10:30 AM",
+        "date": 1385528400000,
+        "locale": "11/27/13"
+    },
+    "disc_from": null,
+    "manufacturer_id": null,
+    "skip_days_map": null,
+    "learningAssignments": null,
+    "offering_temp_id": {
+        "@type": "ServiceObjectReference",
+        "id": "cours000000000006773",
+        "displayName": "test"
+    },
+    "wbt_no": "66555555",
+    "class_no": "66555555",
+    "enforced_seq": 100,
+    "diffHours": 0,
+    "endDateI18n": null,
+    "startDateI18n": null,
+    "priceDisplayString": "0 USD",
+    "dropPolicyInfo": {
+        "@type": "com.saba.learning.services.catalog.DropPolicyInfo",
+        "trainingUnitDropPolicyInfo": null,
+        "allEffectivePolicies": [
+            "list",
+            [
+                {
+                    "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+                    "chargeType": 1,
+                    "daysTo": 1,
+                    "daysFrom": 1,
+                    "charge": 10,
+                    "displayString": "Cancellation charge of 10.0 % if dropped from 1 to 1 day(s) after order.",
+                    "currency": {
+                        "@type": "ServiceObjectReference",
+                        "id": "crncy000000000000167",
+                        "displayName": null
+                    }
+                },
+                {
+                    "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+                    "chargeType": 1,
+                    "daysTo": 3,
+                    "daysFrom": 2,
+                    "charge": 22.7,
+                    "displayString": "Cancellation charge of 22.7 % if dropped from 2 to 3 day(s) after order.",
+                    "currency": {
+                        "@type": "ServiceObjectReference",
+                        "id": "crncy000000000000167",
+                        "displayName": null
+                    }
+                },
+                {
+                    "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+                    "chargeType": 1,
+                    "daysTo": 4,
+                    "daysFrom": 4,
+                    "charge": 40,
+                    "displayString": "Cancellation charge of 40.0 % if dropped from 4 to 4 day(s) after order.",
+                    "currency": {
+                        "@type": "ServiceObjectReference",
+                        "id": "crncy000000000000167",
+                        "displayName": null
+                    }
+                },
+                {
+                    "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+                    "chargeType": 1,
+                    "daysTo": 99999,
+                    "daysFrom": 5,
+                    "charge": 50,
+                    "displayString": "Cancellation charge of 50.0 % if dropped 5 day(s) after order.",
+                    "currency": {
+                        "@type": "ServiceObjectReference",
+                        "id": "crncy000000000000167",
+                        "displayName": null
+                    }
+                },
+                {
+                    "@type": "com.saba.learning.services.catalog.DropPolicyDetail",
+                    "chargeType": 1,
+                    "daysTo": 99999,
+                    "daysFrom": -99999,
+                    "charge": 45.5,
+                    "displayString": "Cancellation charge of 45.5 % for all other days.",
+                    "currency": {
+                        "@type": "ServiceObjectReference",
+                        "id": "crncy000000000000167",
+                        "displayName": null
+                    }
+                }
+            ]
+        ],
+        "lastDateToDropWithoutCharge": null
+    },
+    "courseVersion": null,
+    "customFields": {
+        "@type": "map",
+        "custom1": 123,
+        "custom2": 333,
+        "custom0": "2013-11-27"
+    },
+    "durationString": "00:00",
+    "offering_temp_no": null,
+    "publishStartDate": null,
+    "publishEndDate": null,
+    "publishStatus": null,
+    "publishStatusMessage": null,
+    "name": "test",
+    "language": {
+        "@type": "ServiceObjectReference",
+        "id": "lange000000000000001",
+        "displayName": "English"
+    },
+    "location": null,
+    "resources": [
+        "list",
+        []
+    ],
+    "id": "dowbt000000000004101",
+    "description": "desc",
+    "duration": 0
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

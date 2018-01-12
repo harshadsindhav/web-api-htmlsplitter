@@ -1,0 +1,510 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="foundation, restful web services, get a particular list value, foundation components, get a particular list value, get list value by list id and list value name, get list value by list id and list value name, search list values, add value to lov for an attribute, add value to lov for an attribute, update value of list, update value of list, delete item from list, delete item from list, delete item from list (by listid and name of the list value), delete item from list (by listid and name of the list value)"><meta name="keywords" content="foundation, restful web services, get a particular list value, foundation components, get a particular list value, get list value by list id and list value name, get list value by list id and list value name, search list values, add value to lov for an attribute, add value to lov for an attribute, update value of list, update value of list, delete item from list, delete item from list, delete item from list (by listid and name of the list value), delete item from list (by listid and name of the list value)"><meta name="DC.Relation" scheme="URI" content="../developer/part-foundation.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0er656"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>List Value</title></head><body id="d0er656"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">List Value</h1>
+    
+    <div class="body">
+        <div class="note note note_note"><span class="note__title">Note:</span> These APIs only support the user LOV and not the system LOV.</div>
+    </div>
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-foundation.html">Foundation</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-get-list-value-N1000A">
+        <h2 class="title topictitle2" id="ariaid-title2">GET A PARTICULAR LIST VALUE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of a particular list value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/lov/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-list-value-N1000A__table_ugq_52q_jv"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-list-value-N1000A__table_ugq_52q_jv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-list-value-N1000A__table_ugq_52q_jv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-list-value-N1000A__table_ugq_52q_jv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-list-value-N1000A__table_ugq_52q_jv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-list-value-N1000A__table_ugq_52q_jv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-list-value-N1000A__table_ugq_52q_jv__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-list-value-N1000A__table_ugq_52q_jv__entry__2 ">The ID of the list value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-list-value-N1000A__table_ugq_52q_jv__entry__3 ">listv000000001002987</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-list-value-N1000A__table_ugq_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-list-value-N1000A__table_ugq_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "startIndex": 1,
+  "facets": [],
+  "hasMoreResults": false,
+  "totalResults": 1,
+  "itemsPerPage": 10,
+  "results": [
+    {
+      "name": " listItem10",
+      "description": " listItem10",
+      "id": "listv000000001002989",
+      "lovList": {
+        "displayName": "custom1:WBT Offering",
+        "id": " listi000000000001006"
+      }
+    }
+  ]
+}   </code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_y1q_52q_jv">
+        <h2 class="title topictitle2" id="ariaid-title3">GET LIST VALUE BY LIST ID AND LIST VALUE NAME</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the list value details by list value's ID and name.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/lov/:id/:name</p>
+                <p class="p"><strong class="ph b">Example:</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/lov/listi000000000001006/listItem10</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_y1q_52q_jv__table_jbq_52q_jv"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_y1q_52q_jv__table_jbq_52q_jv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_y1q_52q_jv__table_jbq_52q_jv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_y1q_52q_jv__table_jbq_52q_jv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_y1q_52q_jv__table_jbq_52q_jv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_y1q_52q_jv__table_jbq_52q_jv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_y1q_52q_jv__table_jbq_52q_jv__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_y1q_52q_jv__table_jbq_52q_jv__entry__2 ">List value's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_y1q_52q_jv__table_jbq_52q_jv__entry__3 ">listi000000000001006</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_y1q_52q_jv__table_jbq_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_y1q_52q_jv__table_jbq_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_y1q_52q_jv__table_jbq_52q_jv__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_y1q_52q_jv__table_jbq_52q_jv__entry__2 ">Name of the list value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_y1q_52q_jv__table_jbq_52q_jv__entry__3 ">listItem10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_y1q_52q_jv__table_jbq_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_y1q_52q_jv__table_jbq_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "startIndex": 1,
+  "facets": [],
+  "hasMoreResults": false,
+  "totalResults": 1,
+  "itemsPerPage": 10,
+  "results": [
+    {
+      "name": " listItem10",
+      "description": " listItem10",
+      "id": "listv000000001002989",
+      "lovList": {
+        "displayName": "custom1:WBT Offering",
+        "id": " listi000000000001006"
+      }
+    }
+  ]
+}   </code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_xtp_52q_jv">
+        <h2 class="title topictitle2" id="ariaid-title4">SEARCH LIST VALUES</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <div class="p">Returns the list value details based on the search parameters.<div class="note note note_note"><span class="note__title">Note:</span> The data that
+                        is returned as a part of the search is based on the logged in user's
+                        locale.</div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/lov?q=(:criteria)&amp;count=:count&amp;startPage=:startPage&amp;includeDetails=:includeDetails</p>
+                <p class="p"><strong class="ph b">Example:</strong></p>
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/lov?q=(list_id%3D%3Dlisti000000000001006)&amp;includeDetails=true</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_xtp_52q_jv__table_h5p_52q_jv"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_xtp_52q_jv__table_h5p_52q_jv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xtp_52q_jv__table_h5p_52q_jv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xtp_52q_jv__table_h5p_52q_jv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xtp_52q_jv__table_h5p_52q_jv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xtp_52q_jv__table_h5p_52q_jv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__1 ">criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__2 ">The search criteria i.e. the criteria field name
+                                    with search value.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__3 ">id%3D%3Dlistv000000001002987</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__1 ">includeDetails</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__2 ">Returns the details of the List Values in the
+                                    search</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xtp_52q_jv__table_h5p_52q_jv__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "results":[  
+      {  
+         "id":" listv000000000200083",
+         "href":"http://&lt;hostname-api.sabacloud.com&gt;/v1/lov/listv000000000200083"
+      },
+      {  
+         "id":" listv000000000200084",
+         "href":"http://&lt;hostname-api.sabacloud.com&gt;/v1/lov/listv000000000200084"
+      }
+   ],
+   "startIndex":1,
+   "hasMoreResults":false,
+   "totalResults":2,
+   "itemsPerPage":10,
+   "facets":[ ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_k4p_52q_jv">
+        <h2 class="title topictitle2" id="ariaid-title5">ADD VALUE TO LOV FOR AN ATTRIBUTE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows adding a value to the LOV for a particular attribute.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/lov</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_k4p_52q_jv__table_u4p_52q_jv"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_k4p_52q_jv__table_u4p_52q_jv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_k4p_52q_jv__table_u4p_52q_jv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_k4p_52q_jv__table_u4p_52q_jv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_k4p_52q_jv__table_u4p_52q_jv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_k4p_52q_jv__table_u4p_52q_jv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__2 ">Type list entry detail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__3 ">com.saba.lov.ListEntryDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__2 ">The name of the list value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__3 ">TestListValue</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__1 ">description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__2 ">Description of the list value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__3 ">This is created for testing purpose</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__1 ">lovList</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__2 ">List ID and displayName</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__3 ">{\"@type\": \"java.util.HashMap\",\"id\":
+                                    \"listi000000000010141\",\"displayName\":\"custom1:WBT
+                                    Offering\"} </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_k4p_52q_jv__table_u4p_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.lov.ListEntryDetail",
+   "name":"ListItem1",
+   "description":"This is Test ListItem Value",
+   "lovList":{  
+      "@type":"java.util.HashMap",
+      "id":"listi000000000001006",
+      "displayName":"custom1:WBT Offering"
+   }
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.lov.RestLovDetail",
+   "name":"ListItem21",
+   "description":"This is Test ListItem21 Value",
+   "lovList":{  
+      "@type":"map",
+      "displayName":"custom1:WBT Offering",
+      "id":"listi000000000010141"
+   },
+   "id":"listv000000001003048"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_rjp_52q_jv">
+        <h2 class="title topictitle2" id="ariaid-title6">UPDATE VALUE OF LIST</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <div class="p">Allows updating the value of a list. <div class="note note note_note"><span class="note__title">Note:</span> Updating the value of a list is
+                        supported by either providing the list value ID or list value
+                    name.</div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (Using ID)</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/lov/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (Using Name)</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/lov/name=&lt;ListValueName&gt;</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_rjp_52q_jv__table_bkp_52q_jv"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_rjp_52q_jv__table_bkp_52q_jv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rjp_52q_jv__table_bkp_52q_jv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rjp_52q_jv__table_bkp_52q_jv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rjp_52q_jv__table_bkp_52q_jv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_rjp_52q_jv__table_bkp_52q_jv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__2 ">ID of the list value or name of the list value.
+                                        <div class="note note note_note"><span class="note__title">Note:</span> To enter the name of the list value give the input as:
+                                            <p class="p">name=&lt;listValueName&gt;</p></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__3 ">listv000000001002986</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__2 ">Type list entry detail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__3 ">com.saba.lov.ListEntryDetail</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__2 ">The name of the list value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__3 ">TestListValue</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__1 ">description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__2 ">Description of the list value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__3 ">This is created for testing purpose</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__1 ">lovList</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__2 ">List Id and displayName</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__3 ">{\"@type\": \"java.util.HashMap\",\"id\":
+                                    \"listi000000000010141\",\"displayName\":\"custom1:WBT
+                                    Offering\"}"</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_rjp_52q_jv__table_bkp_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{   
+    "@type":"com.saba.lov.ListEntryDetail",
+    "name" : "ListItem5",
+    "description" : "This is Test ListItem5 Value",
+    "lovList":{
+            "@type": "java.util.HashMap",
+            "id":"listi000000000010141",
+            "displayName":"custom1:WBT Offering"
+    }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_e2p_52q_jv">
+        <h2 class="title topictitle2" id="ariaid-title7">DELETE ITEM FROM LIST</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Deletes an item from the list using the ID of the list value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/lov/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_e2p_52q_jv__table_p2p_52q_jv"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_e2p_52q_jv__table_p2p_52q_jv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_e2p_52q_jv__table_p2p_52q_jv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_e2p_52q_jv__table_p2p_52q_jv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_e2p_52q_jv__table_p2p_52q_jv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_e2p_52q_jv__table_p2p_52q_jv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_e2p_52q_jv__table_p2p_52q_jv__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_e2p_52q_jv__table_p2p_52q_jv__entry__2 ">ID of the list value </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_e2p_52q_jv__table_p2p_52q_jv__entry__3 ">listv000000001002986</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_e2p_52q_jv__table_p2p_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_e2p_52q_jv__table_p2p_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="reference_l1p_52q_jv">
+        <h2 class="title topictitle2" id="ariaid-title8">DELETE ITEM FROM LIST (BY LISTID AND NAME OF LIST VALUE)</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Deletes an item from list using the ID and name of the list value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/lov/:id/:name</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_l1p_52q_jv__table_s1p_52q_jv"><caption><span class="table--title-label">Table 7. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_l1p_52q_jv__table_s1p_52q_jv__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_l1p_52q_jv__table_s1p_52q_jv__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_l1p_52q_jv__table_s1p_52q_jv__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_l1p_52q_jv__table_s1p_52q_jv__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_l1p_52q_jv__table_s1p_52q_jv__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_l1p_52q_jv__table_s1p_52q_jv__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_l1p_52q_jv__table_s1p_52q_jv__entry__2 ">List ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_l1p_52q_jv__table_s1p_52q_jv__entry__3 ">listi000000000010141</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_l1p_52q_jv__table_s1p_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_l1p_52q_jv__table_s1p_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_l1p_52q_jv__table_s1p_52q_jv__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_l1p_52q_jv__table_s1p_52q_jv__entry__2 ">Name of the list value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_l1p_52q_jv__table_s1p_52q_jv__entry__3 ">TestListValue</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_l1p_52q_jv__table_s1p_52q_jv__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_l1p_52q_jv__table_s1p_52q_jv__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

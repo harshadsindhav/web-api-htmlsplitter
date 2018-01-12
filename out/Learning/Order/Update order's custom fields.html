@@ -1,0 +1,551 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all orders, learning components, find the details of the orders, find the details of the orders, approve / reject an order item, approve / reject an order item, update order's custom fields, update order's custom fields, get the order details of a particular order, get the order details of a particular order">
+  <meta name="keywords" content="learning, restful web services, get all orders, learning components, find the details of the orders, find the details of the orders, approve / reject an order item, approve / reject an order item, update order's custom fields, update order's custom fields, get the order details of a particular order, get the order details of a particular order">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Order</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title5">UPDATE ORDER'S CUSTOM FIELDS</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Updates the values of the Custom fields for the given Order ID.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">PUT</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/order/:orderId/custom</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_ebr_z2f_5r__table_mcr_z2f_5r" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 4. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_ebr_z2f_5r__table_mcr_z2f_5r__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_ebr_z2f_5r__table_mcr_z2f_5r__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_ebr_z2f_5r__table_mcr_z2f_5r__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_ebr_z2f_5r__table_mcr_z2f_5r__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_ebr_z2f_5r__table_mcr_z2f_5r__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_ebr_z2f_5r__table_mcr_z2f_5r__entry__1 ">orderId</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_ebr_z2f_5r__table_mcr_z2f_5r__entry__2 ">Order's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_ebr_z2f_5r__table_mcr_z2f_5r__entry__3 ">intor000000000203218</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_ebr_z2f_5r__table_mcr_z2f_5r__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_ebr_z2f_5r__table_mcr_z2f_5r__entry__5 ">Yes</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5> 
+    <pre class="pre codeblock"><code>[
+ "java.util.List",  
+   [
+      {
+        "@type": "com.saba.customattribute.CustomAttributeValueDetail",
+        "name": "custom0",
+        "datatype": {
+          "@type": "com.saba.customattribute.CustomAttributeDatatype",
+          "value": "18"
+        },
+        "value": "RRJCustom",
+        "displayName": "Custom0",
+        "tagName": "CustomAttribute",
+        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail"
+      },
+      {
+        "@type": "com.saba.customattribute.CustomAttributeValueDetail",
+        "name": "custom1",
+        "datatype": {
+          "@type": "com.saba.customattribute.CustomAttributeDatatype",
+          "value": "18"
+        },
+        "value": "RRJCustom1",
+        "displayName": "Custom1",
+        "tagName": "CustomAttribute",
+        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail"
+      },
+      {
+        "@type": "com.saba.customattribute.CustomAttributeValueDetail",
+        "name": "custom2",
+        "datatype": {
+          "@type": "com.saba.customattribute.CustomAttributeDatatype",
+          "value": "18"
+        },
+        "value": "RRJCustom2",
+        "displayName": "Custom2",
+        "tagName": "CustomAttribute",
+        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail"
+      },
+      {
+        "@type": "com.saba.customattribute.CustomAttributeValueDetail",
+        "name": "custom3",
+        "datatype": {
+          "@type": "com.saba.customattribute.CustomAttributeDatatype",
+          "value": "18"
+        },
+        "value": "RRJCustom3",
+        "displayName": "Custom3",
+        "tagName": "CustomAttribute",
+        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail"
+      },
+      {
+        "@type": "com.saba.customattribute.CustomAttributeValueDetail",
+        "name": "custom4",
+        "datatype": {
+          "@type": "com.saba.customattribute.CustomAttributeDatatype",
+          "value": "18"
+        },
+        "value": "RRJCustom4",
+        "displayName": "Custom4",
+        "tagName": "CustomAttribute",
+        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail"
+      }
+    ]
+]</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "learner": null,
+    "baseCustomer": {
+        "id": "persn000000000220981",
+        "displayName": "Update 17 Extern"
+    },
+    "orderStatus": "Confirmed",
+    "price": {
+        "amount": 0,
+        "isocode": "USD",
+        "amountString": "0 USD",
+        "currency": {
+            "id": "crncy000000000000167",
+            "displayName": "US Dollars"
+        }
+    },
+    "trainingUnits": null,
+    "orderDiscount": {
+        "amount": 0,
+        "isocode": "USD",
+        "amountString": "0 USD",
+        "currency": {
+            "id": "crncy000000000000167",
+            "displayName": "US Dollars"
+        }
+    },
+    "paidWithPurchaseOrders": false,
+    "paidWithTrainingUnits": false,
+    "paidWithSubscriptionOrders": false,
+    "paidWithInvoiceMe": false,
+    "orderContact": "Update 17 Extern",
+    "skuOrder": null,
+    "promotionCode": null,
+    "orderItems": [
+        {
+            "learner": {
+                "id": "persn000000000220981",
+                "displayName": "Update 17 Extern"
+            },
+            "partDetail": {
+                "abstract": "",
+                "availableSeats": -1,
+                "sessionTemplate": null,
+                "facility": null,
+                "audienceTypes": null,
+                "dif": false,
+                "price": {
+                    "amount": 0,
+                    "isocode": "USD",
+                    "amountString": "0 USD",
+                    "currency": {
+                        "id": "crncy000000000000167",
+                        "displayName": null
+                    }
+                },
+                "deliveryType": {
+                    "id": "eqcat000000000000005",
+                    "displayName": "Web-Based"
+                },
+                "offeringTemplate": {
+                    "id": "cours000000000020985",
+                    "displayName": "MOBI-5808 Testing"
+                },
+                "customValues": [
+                    {
+                        "name": "custom0",
+                        "datatype": {
+                            "value": 18
+                        },
+                        "value": null,
+                        "tagName": "CustomAttribute",
+                        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                        "displayName": "string"
+                    },
+                    {
+                        "name": "custom2",
+                        "datatype": {
+                            "value": 18
+                        },
+                        "value": null,
+                        "tagName": "CustomAttribute",
+                        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                        "displayName": "real wbt"
+                    },
+                    {
+                        "name": "custom3",
+                        "datatype": {
+                            "value": 18
+                        },
+                        "value": null,
+                        "tagName": "CustomAttribute",
+                        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                        "displayName": "bool"
+                    },
+                    {
+                        "name": "custom4",
+                        "datatype": {
+                            "value": 18
+                        },
+                        "value": null,
+                        "tagName": "CustomAttribute",
+                        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                        "displayName": "date wbt"
+                    },
+                    {
+                        "name": "ExCustom1",
+                        "datatype": {
+                            "value": 18
+                        },
+                        "value": null,
+                        "tagName": "CustomAttribute",
+                        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                        "displayName": "ExCustom1"
+                    }
+                ],
+                "endDate": null,
+                "startDate": null,
+                "trainingUnits": null,
+                "locationDetail": null,
+                "offeringNumber": "5808TEST",
+                "securityDomain": {
+                    "id": "domin000000000000001",
+                    "displayName": "world"
+                },
+                "availabilityDetails": {
+                    "availableSeats": -1,
+                    "offeringPrice": {
+                        "amount": 0,
+                        "isocode": "USD",
+                        "amountString": "0 USD",
+                        "currency": {
+                            "id": "crncy000000000000167",
+                            "displayName": null
+                        }
+                    },
+                    "offeringPriceDisplay": "0 USD"
+                },
+                "groupAssociatedWithCourse": null,
+                "class_no": "5808TEST",
+                "offeringlocked": false,
+                "delivery_id": {
+                    "id": "eqcat000000000000005",
+                    "displayName": "Web-Based"
+                },
+                "location_id": null,
+                "max_ct": 0,
+                "max_book": 0,
+                "min_ct": 0,
+                "csr_id": null,
+                "session_template": null,
+                "language_id": {
+                    "id": "lange000000000000001",
+                    "displayName": "English"
+                },
+                "disp_for_web": true,
+                "disp_for_call_center": true,
+                "facility_id": null,
+                "vendor_id": null,
+                "open_enroll": null,
+                "open_enroll_for_all": null,
+                "enroll_close": null,
+                "post_order": null,
+                "post_completion": null,
+                "stop_auto_promotion": null,
+                "vleInfo": null,
+                "do_not_drop_post": null,
+                "start_date": null,
+                "avail_from": 1421730000000,
+                "disc_from": null,
+                "manufacturer_id": null,
+                "skip_days_map": null,
+                "learningAssignments": null,
+                "offering_temp_id": {
+                    "id": "cours000000000020985",
+                    "displayName": "MOBI-5808 Testing"
+                },
+                "has_community": false,
+                "wbt_no": "5808TEST",
+                "enforced_seq": null,
+                "creditsCollection": null,
+                "baseDeliveryType": 200,
+                "calendarExportURL": null,
+                "publishStartDate": null,
+                "publishEndDate": null,
+                "publishStatus": null,
+                "publishStatusMessage": null,
+                "group_id": null,
+                "endDateI18n": null,
+                "startDateI18n": null,
+                "priceDisplayString": "0 USD",
+                "dropPolicyInfo": {
+                    "lastDateToDropWithoutCharge": null,
+                    "trainingUnitDropPolicyInfo": null,
+                    "allEffectivePolicies": [
+                        {
+                            "charge": 5,
+                            "chargeType": 1,
+                            "daysFrom": 60,
+                            "daysTo": 99999,
+                            "currency": {
+                                "id": "crncy000000000000167",
+                                "displayName": null
+                            },
+                            "displayString": "Cancellation charge of 5.0 % if dropped 60 day(s) after order."
+                        },
+                        {
+                            "charge": 50,
+                            "chargeType": 1,
+                            "daysFrom": -99999,
+                            "daysTo": 99999,
+                            "currency": {
+                                "id": "crncy000000000000167",
+                                "displayName": null
+                            },
+                            "displayString": "Cancellation charge of 50.0 % for all other days."
+                        }
+                    ]
+                },
+                "courseVersion": null,
+                "diffHours": 0,
+                "customFields": [
+                    {
+                        "name": "custom0",
+                        "datatype": {
+                            "value": 18
+                        },
+                        "value": null,
+                        "tagName": "CustomAttribute",
+                        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                        "displayName": "string"
+                    },
+                    {
+                        "name": "custom2",
+                        "datatype": {
+                            "value": 18
+                        },
+                        "value": null,
+                        "tagName": "CustomAttribute",
+                        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                        "displayName": "real wbt"
+                    },
+                    {
+                        "name": "custom3",
+                        "datatype": {
+                            "value": 18
+                        },
+                        "value": null,
+                        "tagName": "CustomAttribute",
+                        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                        "displayName": "bool"
+                    },
+                    {
+                        "name": "custom4",
+                        "datatype": {
+                            "value": 18
+                        },
+                        "value": null,
+                        "tagName": "CustomAttribute",
+                        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                        "displayName": "date wbt"
+                    },
+                    {
+                        "name": "ExCustom1",
+                        "datatype": {
+                            "value": 18
+                        },
+                        "value": null,
+                        "tagName": "CustomAttribute",
+                        "factoryName": "com.saba.customattribute.CustomAttributeValueDetail",
+                        "displayName": "ExCustom1"
+                    }
+                ],
+                "durationString": "01:00",
+                "offering_temp_no": null,
+                "registeredCount": 0,
+                "waitListedCount": 0,
+                "statusNumValue": null,
+                "name": "MOBI-5808 Testing",
+                "language": {
+                    "id": "lange000000000000001",
+                    "displayName": "English"
+                },
+                "resources": [],
+                "location": null,
+                "actions": null,
+                "id": "dowbt000000000015531",
+                "duration": 60,
+                "description": "MOBI-5808 Testing",
+                "status": null
+            },
+            "registration": {
+                "id": "regdw000000000261404",
+                "displayName": ""
+            },
+            "orderItemStatus": {
+                "orderItemStatus": 100,
+                "listId": "sysli000000000000131"
+            },
+            "price": {
+                "amount": 0,
+                "isocode": "USD",
+                "amountString": "0 USD",
+                "currency": {
+                    "id": "crncy000000000000167",
+                    "displayName": "US Dollars"
+                }
+            },
+            "trainingUnits": null,
+            "regDifDetail": null,
+            "quantity": null,
+            "groupItem": null,
+            "totalDiscount": null,
+            "waivePrerequisite": false,
+            "groupOrderable": null,
+            "displayPrice": {
+                "amount": 0,
+                "isocode": "USD",
+                "amountString": "0 USD",
+                "currency": {
+                    "id": "crncy000000000000167",
+                    "displayName": "US Dollars"
+                }
+            },
+            "itemStatusDescription": "Registered",
+            "cancellationPolicyInfo": null,
+            "subDetail": null,
+            "trainingUnitAgreement": null,
+            "percentageDiscount": null,
+            "subscriber": null,
+            "mGracePeriod": null,
+            "organization": null,
+            "id": {
+                "id": "iodwn000000002217509",
+                "displayName": ""
+            },
+            "group": null,
+            "part": {
+                "id": "dowbt000000000015531",
+                "displayName": "MOBI-5808 Testing"
+            }
+        }
+    ],
+    "trainingUnitOrder": false,
+    "packageorder": false,
+    "billedTo": {
+        "id": "persn000000000220981",
+        "displayName": "U17E"
+    },
+    "orderNumber": "00242836",
+    "orderStatusObj": {
+        "tagName": "OrderStatus",
+        "orderStatus": 100,
+        "description": "Confirmed",
+        "factoryName": "com.saba.order.OrderStatus",
+        "name": "Confirmed",
+        "key": "100"
+    },
+    "orderDate": 1421735042000,
+    "totalPrice": {
+        "amount": 0,
+        "isocode": "USD",
+        "amountString": "0 USD",
+        "currency": {
+            "id": "crncy000000000000167",
+            "displayName": "US Dollars"
+        }
+    },
+    "totalDropCharges": null,
+    "payments": [],
+    "totalDiscount": {
+        "amount": 0,
+        "isocode": "USD",
+        "amountString": "0 USD",
+        "currency": {
+            "id": "crncy000000000000167",
+            "displayName": "US Dollars"
+        }
+    },
+    "canPayByTrainingUnits": false,
+    "canPayByPurchaseOrder": false,
+    "canPayBySubscriptionOrder": false,
+    "totalDropChargeInTU": null,
+    "totalRefundInTU": null,
+    "totalRefundedPayment": null,
+    "totalRefundedPaymentInTU": null,
+    "allRefundableItemsSubTotalInTU": null,
+    "allRefundableItemsSubTotal": null,
+    "finalAmountToRefund": null,
+    "finalAmountToRefundInTU": null,
+    "orderContactRef": null,
+    "currency": {
+        "id": "crncy000000000000167",
+        "displayName": "US Dollars"
+    },
+    "order": {
+        "id": "intor000000010556943",
+        "displayName": ""
+    }
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

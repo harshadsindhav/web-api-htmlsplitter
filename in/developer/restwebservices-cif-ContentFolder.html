@@ -1,0 +1,314 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="cif, restful web services, get all content folder, cif components, find the details of the content folder, find the details of the content folder, get the details of a particular content folder, root folders, or a list of all the subfolders, get the details of a particular content folder, root folders, or a list of all the subfolders, create a new content folder, create a new content folder"><meta name="keywords" content="cif, restful web services, get all content folder, cif components, find the details of the content folder, find the details of the content folder, get the details of a particular content folder, root folders, or a list of all the subfolders, get the details of a particular content folder, root folders, or a list of all the subfolders, create a new content folder, create a new content folder"><meta name="DC.Relation" scheme="URI" content="../developer/part-cif.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0e656"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Content Folder</title></head><body id="d0e656"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Content Folder</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-cif.html">CIF</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-get-all-content-folder-N1010D">
+        <h2 class="title topictitle2" id="ariaid-title2">GET ALL CONTENT FOLDER</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all content folder for which the user has access.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/contentfolder</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "hasMoreResults": false,
+    "facets": [],
+    "itemsPerPage": 10,
+    "results": [
+        {
+            "name": "001",
+            "id": "cnfld000000000001303",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/contentfolder/cnfld000000000001303"
+        }
+    ],
+    "totalResults": 1,
+    "startIndex": 1
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_z2s_4px_fp">
+        <h2 class="title topictitle2" id="ariaid-title3">FIND DETAILS OF CONTENT FOLDER</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the content folder along with the ID, Name and the
+                    Deeplink URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/contentfolder?q=(:criteria_field==:field_value)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_z2s_4px_fp__table_hfs_4px_fp"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_z2s_4px_fp__table_hfs_4px_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z2s_4px_fp__table_hfs_4px_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z2s_4px_fp__table_hfs_4px_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z2s_4px_fp__table_hfs_4px_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z2s_4px_fp__table_hfs_4px_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__1 ">criteria_field</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__2 ">The search criteria i.e. the field name.<div class="p">You
+                                        can use any field with "isSearchFilter": true.<div class="note note note_note"><span class="note__title">Note:</span> To find
+                                            out the fields that have "isSearchFilter": true, invoke
+                                            the "Get the Meta details" REST APIs.</div></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__3 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__1 ">field_value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__2 ">The search value for the specified search
+                                    criteria.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__3 ">production</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z2s_4px_fp__table_hfs_4px_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "hasMoreResults": false,
+    "facets": [],
+    "itemsPerPage": 10,
+    "results": [
+        {
+            "name": "001",
+            "id": "cnfld000000000001303",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/contentfolder/cnfld000000000001303"
+        }
+    ],
+    "totalResults": 1,
+    "startIndex": 1
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_vcs_4px_fp">
+        <h2 class="title topictitle2" id="ariaid-title4">GET DETAILS OF A PARTICULAR CONTENT FOLDER, ROOT FOLDERS, OR A LIST OF ALL THE
+            SUBFOLDERS </h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Gets the details of a particular content folder. You can also obtain additional
+                    details like the root or sub folder's name, ID or the parent ID.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/component/contentfolder/:<span class="keyword parmname">id</span>:(<span class="keyword parmname">searchFields</span>)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_vcs_4px_fp__table_cds_4px_fp"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_vcs_4px_fp__table_cds_4px_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vcs_4px_fp__table_cds_4px_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vcs_4px_fp__table_cds_4px_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vcs_4px_fp__table_cds_4px_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vcs_4px_fp__table_cds_4px_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vcs_4px_fp__table_cds_4px_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vcs_4px_fp__table_cds_4px_fp__entry__2 ">Content's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vcs_4px_fp__table_cds_4px_fp__entry__3 ">cnfld000000000000001</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vcs_4px_fp__table_cds_4px_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vcs_4px_fp__table_cds_4px_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vcs_4px_fp__table_cds_4px_fp__entry__1 ">searchFields </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vcs_4px_fp__table_cds_4px_fp__entry__2 "><p class="p">Indicate what additional details needs to be returned.
+                                    </p>Acceptable values are (case-sensitive):
+                                        id,name,parent_id,subFolder,root<p class="p">For example:
+                                        'root,id,name' would return IDs and names of the root along
+                                        with IDs and names of the content folder. Similarly,
+                                        'root,id,parent_id,subFolder' would return IDs and Parent
+                                        IDs of the root along with IDs and Parent IDs of the sub
+                                        folders and the content folder.</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vcs_4px_fp__table_cds_4px_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vcs_4px_fp__table_cds_4px_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vcs_4px_fp__table_cds_4px_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "parent_id": null,
+    "name": "Production",
+    "id": "cnfld000000000000001",
+    "subFolder": [
+        {
+            "parent_id": {
+                "id": "cnfld000000000000001",
+                "displayName": "Production"
+            },
+            "name": "Beta Program",
+            "id": "cnfld000000000001000"
+        },
+       {
+            "parent_id": {
+                "id": "cnfld000000000000001",
+                "displayName": "Production"
+            },
+            "name": "customer1 folder",
+            "id": "cnfld000000000001920"
+        }
+    ],
+    "root": {
+        "parent_id": null,
+        "name": "Production",
+        "id": "cnfld000000000000001"
+    }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_w1s_4px_fp">
+        <h2 class="title topictitle2" id="ariaid-title5">CREATE A NEW CONTENT FOLDER</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Creates a new content folder. </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/contentfolder/</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_w1s_4px_fp__table_ebs_4px_fp"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_w1s_4px_fp__table_ebs_4px_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_w1s_4px_fp__table_ebs_4px_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_w1s_4px_fp__table_ebs_4px_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_w1s_4px_fp__table_ebs_4px_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_w1s_4px_fp__table_ebs_4px_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__2 ">Name of the content folder </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__3 ">ContentFolder 1 from REST</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__1 ">securityDomain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__2 ">Security Domain for the content folder
+                                        <p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Domain).</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__1 ">auditReason</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__2 ">The audit reason</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__3 ">audit with reason</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__1 ">parent_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__2 ">The Parent ID of the content folder<p class="p">Supports
+                                            <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (ContentFolder).</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{\"id\":\"cnfld000000000000002\"}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_w1s_4px_fp__table_ebs_4px_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{   
+	"name": "RestFolder 110",   
+	"securityDomain": {
+		"id": "domin000000000000001",
+		"displayName": "world"
+		},
+	"parent_id" : {
+		"id":"cnfld000000000000002"},  
+		"folder_type":{"key":"300"
+		}
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "cnfld000000000001244",
+    "displayName": "RestFolder 110",
+    "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/contentfolder/cnfld000000000001244"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

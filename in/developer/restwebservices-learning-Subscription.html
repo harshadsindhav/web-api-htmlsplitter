@@ -1,0 +1,2198 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="learning, restful web services, get the meta details of the subscription, learning components, get the meta details of the subscription, get the details of a particular subscription, get the details of a particular subscription, get all subscriptions, find the details of the subscription, find the details of the subscription, create a new subscription, create a new subscription, update the details of a subscription, update the details of a subscription, find the details of the subscription (using post - range based search), find the details of the subscription (using post - range based search), add audience type to a subscription, add audience type to a subscription, remove audience type from a subscription, remove audience type from a subscription, add deliverytype/subscription item to a subscription, add deliverytype/subscription item to a subscription, remove delivery type / subscription item from a subscription, remove delivery type / subscription item from a subscription, add subscription price to a subscription, add subscription price to a subscription, add cost limit price to a subscription, add cost limit price to a subscription, remove subscription price / cost limit price from a subscription, remove subscription price / cost limit price from a subscription"><meta name="keywords" content="learning, restful web services, get the meta details of the subscription, learning components, get the meta details of the subscription, get the details of a particular subscription, get the details of a particular subscription, get all subscriptions, find the details of the subscription, find the details of the subscription, create a new subscription, create a new subscription, update the details of a subscription, update the details of a subscription, find the details of the subscription (using post - range based search), find the details of the subscription (using post - range based search), add audience type to a subscription, add audience type to a subscription, remove audience type from a subscription, remove audience type from a subscription, add deliverytype/subscription item to a subscription, add deliverytype/subscription item to a subscription, remove delivery type / subscription item from a subscription, remove delivery type / subscription item from a subscription, add subscription price to a subscription, add subscription price to a subscription, add cost limit price to a subscription, add cost limit price to a subscription, remove subscription price / cost limit price from a subscription, remove subscription price / cost limit price from a subscription"><meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Learning-apis"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Subscription</title></head><body id="Learning-apis"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Subscription</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-learning.html">Learning</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="reference_cxt_vnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title2">GET META DETAILS OF SUBSCRIPTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of the subscription.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/subscription/meta:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_cxt_vnx_fp__table_b1y_pjl_3q"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__2 ">You can filter data by providing fields that you
+                                    require to be returned. Acceptable values are
+                                    case-sensitive.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_cxt_vnx_fp__table_b1y_pjl_3q__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "sampleData": {
+        "description": "",
+        "days_limit": null,
+        "subscription_no": null,
+        "allAudienceTypes": {
+            "audience_type_id": null,
+            "offering_temp_id": null
+        },
+        "avail_call_center": true,
+        "updated_by": null,
+        "updated_on": null,
+        "created_by": null,
+        "avail_from": "2015-04-24T14:21:34.367+0530",
+        "disc_from": null,
+        "title": "",
+        "avail_web": true,
+        "cost_limit": null,
+        "before_expiry": null,
+        "allPrices": null,
+        "allCostLimits": null,
+        "reg_limit": null,
+        "training_units": null,
+        "entire_catalog": false,
+        "grace_period": null,
+        "allSubscriptionItems": null,
+        "id": null,
+        "customValues": {
+            "custom9": null,
+            "custom0": null,
+            "custom3": null,
+            "custom4": null,
+            "custom1": null,
+            "custom2": null,
+            "custom7": null,
+            "custom8": null,
+            "custom5": null,
+            "custom6": null
+        },
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": null
+        },
+        "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000000001"
+    },
+    "name": "Subscription",
+    "displayName": "Subscription",
+    "attributes": [
+        {
+            "name": "allAudienceTypes",
+            "displayName": "kI18nALSubscription_allAudienceTypes(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "OfferingTemplateAudienceType",
+                "displayName": "Course Audience Type",
+                "attributes": [
+                    {
+                        "name": "audience_type_id",
+                        "displayName": "Audience Type",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "kI18nALOfferingTemplateAudienceType_id(Missing resource)",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "inherit",
+                        "displayName": "kI18nALOfferingTemplateAudienceType_inherit(Missing resource)",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "inherited_from",
+                        "displayName": "kI18nALOfferingTemplateAudienceType_inherited_from(Missing resource)",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "offering_temp_id",
+                        "displayName": "Course",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "allCostLimits",
+            "displayName": "kI18nALSubscription_allCostLimits(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "Price List Entry",
+                "displayName": "Price List Entry",
+                "attributes": [
+                    {
+                        "name": "amount",
+                        "displayName": "Amount",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "real",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "charge_type",
+                        "displayName": "Charge Type",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "curr_id",
+                        "displayName": "Currency Id",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "displayValue",
+                        "displayName": "Display Name",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "part_id",
+                        "displayName": "Part Id",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "price_list_id",
+                        "displayName": "Price List ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "price_type",
+                        "displayName": "Price Type",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "allPrices",
+            "displayName": "kI18nALSubscription_allPrices(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "componentName": "Price List Entry",
+                "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/pricelistentry/meta",
+                "description": "Table: tpt_pl_list_entry.Price lists are made up of individual price list entries, each of which represents a single price for a single item in the Learning Catalog. Price list entry security is based on the domain of the object for which the price list entry was created."
+            }
+        },
+        {
+            "name": "allSubscriptionItems",
+            "displayName": "kI18nALSubscription_allSubscriptionItems(Missing resource)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "SubscriptionItemChoice",
+                "displayName": "kI18nCLSubscriptionItemChoice(Missing resource)",
+                "attributes": [
+                    {
+                        "name": "criteria",
+                        "displayName": "kI18nALSubscriptionItemChoice_criteria(Missing resource)",
+                        "description": "Criteria of Subscription Item",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "delivery_id",
+                        "displayName": "kI18nALSubscriptionItemChoice_delivery_id(Missing resource)",
+                        "description": "Delivery type id for the subscription",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "kI18nALSubscriptionItemChoice_id(Missing resource)",
+                        "description": "Saba internal id",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "subscription_id",
+                        "displayName": "kI18nALSubscriptionItemChoice_subscription_id(Missing resource)",
+                        "description": "Subscription Id, this owner of this object",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "type",
+                        "displayName": "kI18nALSubscriptionItemChoice_type(Missing resource)",
+                        "description": "Type of Subscription Item",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "avail_call_center",
+            "displayName": "Display for Call Center",
+            "description": "Subscription is available to registrar or not",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "avail_from",
+            "displayName": "Available From",
+            "description": "Date from which this subscription will available to user",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "avail_web",
+            "displayName": "Display for Learner",
+            "description": "Subscription is available to learner or not",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "before_expiry",
+            "displayName": "Reminder before expiration date (days)",
+            "description": "Days before expiry to send notification",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "cost_limit",
+            "displayName": "Limit in Cost",
+            "description": "Limit in cost of purchased items, till subscription will be active after purchase",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "real",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "created_by",
+            "displayName": "Created By",
+            "description": "Created by",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "created_id",
+            "displayName": "Created Id",
+            "description": "Saba id of person who created new subscription",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "created_on",
+            "displayName": "Created On",
+            "description": "Created on",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "days_limit",
+            "displayName": "Limit in Days",
+            "description": "Limit in number of days subscription will be active after purchase",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "description",
+            "displayName": "Description",
+            "description": "Description of subscription",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 2000,
+            "maximumLength": 2000,
+            "isSearchFilter": true
+        },
+        {
+            "name": "disc_from",
+            "displayName": "Discontinued From",
+            "description": "Date from which this subscription will be no longer available to user",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "entire_catalog",
+            "displayName": "Subscribe Entire Catalog",
+            "description": "Subscription is for entire learning catalog",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "grace_period",
+            "displayName": "No of Days for Grace Period(days)",
+            "description": "Number of Days",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "id",
+            "displayName": "ID",
+            "description": "Saba internal id",
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "reg_limit",
+            "displayName": "No of Maximum Registration",
+            "description": "Number of Days",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "securityDomain",
+            "displayName": "Domain",
+            "description": "Security Domain of subscription",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "subscription_no",
+            "displayName": "Subscription Number",
+            "description": "Part number of subscription",
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 25,
+            "maximumLength": 25,
+            "isSearchFilter": true
+        },
+        {
+            "name": "title",
+            "displayName": "Title",
+            "description": "Title of subscription",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "training_units",
+            "displayName": "Training Units",
+            "description": "Training units required to purchase subscription",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "updated_by",
+            "displayName": "Updated By",
+            "description": "Updated by",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "updated_on",
+            "displayName": "Updated On",
+            "description": "Updated on",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom0",
+            "displayName": "Custom0",
+            "description": "Custom0 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom1",
+            "displayName": "Custom1",
+            "description": "Custom1 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom2",
+            "displayName": "Custom2",
+            "description": "Custom2 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom3",
+            "displayName": "Custom3",
+            "description": "Custom3 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom4",
+            "displayName": "Custom4",
+            "description": "Custom4 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom5",
+            "displayName": "Custom5",
+            "description": "Custom5 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom6",
+            "displayName": "Custom6",
+            "description": "Custom6 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom7",
+            "displayName": "Custom7",
+            "description": "Custom7 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom8",
+            "displayName": "Custom8",
+            "description": "Custom8 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom9",
+            "displayName": "Custom9",
+            "description": "Custom9 field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_v15_vnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title3">GET DETAILS OF A PARTICULAR SUBSCRIPTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a purchase subscription based on the
+                    Subscription's ID that is passed as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/subscription/:id:(:searchFields)</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_v15_vnx_fp__table_bb5_vnx_fp"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__2 ">Subscription's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__3 ">sbscr000000000001200</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__2 ">Indicate what additional details needs to be
+                                    returned. Acceptable values are (case-sensitive)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_v15_vnx_fp__table_bb5_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   description:null,
+   avail_from:"2014-12-26T00:00:00.000+0530",
+   disc_from:null,
+   title:"Subscription 8",
+   avail_web:true,
+   allPrices:[  
+      {  
+         amount:10,
+         curr_id:{  
+            id:"crncy000000000000001",
+            displayName:"US Dollars"
+         },
+         displayValue:null,
+         id:"plent000000000203956"
+      },
+      {  
+         amount:12.3,
+         curr_id:{  
+            id:"crncy000000000001005",
+            displayName:"Currency1"
+         },
+         displayValue:null,
+         id:"plent000000000203957"
+      },
+      {  
+         amount:8.2,
+         curr_id:{  
+            id:"crncy000000000001006",
+            displayName:"Currency2"
+         },
+         displayValue:null,
+         id:"plent000000000203958"
+      },
+      {  
+         amount:20,
+         curr_id:{  
+            id:"crncy000000000200968",
+            displayName:"Rupees"
+         },
+         displayValue:null,
+         id:"plent000000000203959"
+      }
+   ],
+   training_units:0,
+   updated_by:"uone",
+   updated_on:"2014-12-26T17:10:28.000+0530",
+   created_by:"uone",
+   avail_call_center:true,
+   grace_period:null,
+   cost_limit:0,
+   before_expiry:0,
+   is_featured:true,
+   allAudienceTypes:[  
+
+   ],
+   reg_limit:null,
+   subscription_no:"00001025",
+   entire_catalog:false,
+   allSubscriptionItems:[  
+      {  
+         type:{  
+            value:300
+         },
+         subscription:{  
+            id:"sbscr000000000001045",
+            displayName:"Subscription 8"
+         },
+         criteria:false,
+         componentName:"SubscriptionItemChoice",
+         subscriptionItem:{  
+            id:"dowbt000000000001591",
+            displayName:"#12"
+         }
+      },
+      {  
+         type:{  
+            value:300
+         },
+         subscription:{  
+            id:"sbscr000000000001045",
+            displayName:"Subscription 8"
+         },
+         criteria:false,
+         componentName:"SubscriptionItemChoice",
+         subscriptionItem:{  
+            id:"dowbt000000000001592",
+            displayName:"#12#12"
+         }
+      }
+   ],
+   allCostLimits:[  
+
+   ],
+   days_limit:0,
+   create_group:false,
+   id:"sbscr000000000001045",
+   customValues:{  
+      custom9:null,
+      custom0:null,
+      custom3:null,
+      custom4:null,
+      custom1:null,
+      custom2:null,
+      custom7:null,
+      custom8:null,
+      custom5:null,
+      custom6:null
+   },
+   securityDomain:{  
+      id:"domin000000000000001",
+      displayName:"world"
+   }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="get-get-all-purchase-orders-N124B3">
+        <h2 class="title topictitle2" id="ariaid-title4">GET ALL SUBSCRIPTIONS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all Subscriptions for which the user has access.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/subscription?count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-purchase-orders-N124B3__table_x4m_3jl_3q__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "startIndex": 1,
+    "results": [
+        {
+            "id": "sbscr000000000001000",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001000"
+        },
+        {
+            "id": "sbscr000000000001020",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001020"
+        },
+        {
+            "id": "sbscr000000000001021",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001021"
+        },
+        {
+            "id": "sbscr000000000001040",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001040"
+        },
+        {
+            "id": "sbscr000000000001060",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001060"
+        },
+        {
+            "id": "sbscr000000000001061",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001061"
+        },
+        {
+            "id": "sbscr000000000001062",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001062"
+        },
+        {
+            "id": "sbscr000000000001080",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001080"
+        },
+        {
+            "id": "sbscr000000000001081",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001081"
+        },
+        {
+            "id": "sbscr000000000001100",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001100"
+        }
+    ],
+    "totalResults": 38,
+    "hasMoreResults": true,
+    "itemsPerPage": 10
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_qj5_vnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title5">FIND DETAILS OF SUBSCRIPTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the subscription along with the ID, Name and the Deeplink
+                    URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/subscription?q=(:criteria)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_qj5_vnx_fp__table_yj5_vnx_fp"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__1 ">criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__2 ">The search criteria i.e. the field name and the
+                                        values.<div class="p">You can use any fields with "isSearchFilter":
+                                            true.<div class="note note note_note"><span class="note__title">Note:</span> To find out the fields that have
+                                            "isSearchFilter": true, invoke the "Get the Meta
+                                            details" REST APIs.</div></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__3 ">subscription_no%3D%3D111</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__1 ">field_value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__2 ">The search value for the specified search
+                                    criteria.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__3 ">00001000</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_qj5_vnx_fp__table_yj5_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "hasMoreResults": false,
+    "totalResults": 1,
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "results": [
+        {
+            "description": null,
+            "updated_by": "uone",
+            "updated_on": "2015-09-08T12:52:43.000+0530",
+            "created_by": "uone",
+            "grace_period": null,
+            "subscription_no": "00001225",
+            "entire_catalog": false,
+            "reg_limit": 10,
+            "avail_call_center": false,
+            "allPrices": [
+                {
+                    "curr_id": {
+                        "id": "crncy000000000000001",
+                        "displayName": "US Dollars"
+                    },
+                    "amount": 100,
+                    "displayValue": null,
+                    "id": "plent000000000204373"
+                }
+            ],
+            "days_limit": 10,
+            "allCostLimits": [
+                {
+                    "curr_id": {
+                        "id": "crncy000000000000001",
+                        "displayName": "US Dollars"
+                    },
+                    "amount": 100,
+                    "displayValue": null,
+                    "id": "plent000000000204374"
+                }
+            ],
+            "avail_from": "2015-04-09T00:00:00.000+0530",
+            "disc_from": null,
+            "title": "new2",
+            "avail_web": false,
+            "training_units": null,
+            "allAudienceTypes": [],
+            "before_expiry": null,
+            "is_featured": true,
+            "allSubscriptionItems": [],
+            "id": "sbscr000000000001248",
+            "customValues": {
+                "custom9": null,
+                "custom0": null,
+                "custom3": null,
+                "custom4": null,
+                "custom1": null,
+                "custom2": null,
+                "custom7": null,
+                "custom8": null,
+                "custom5": null,
+                "custom6": null
+            },
+            "securityDomain": {
+                "id": "domin000000000000001",
+                "displayName": "world"
+            }
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_btt_vnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title6">CREATE A NEW SUBSCRIPTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows creating a new subscription.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/subscription</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_btt_vnx_fp__table_mtt_vnx_fp"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">title</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Title of the subscription</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Description of the subscription</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">subscription_no</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Subscription number</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">is_featured</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 ">Is Featured Or Not</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">avail_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Available from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">disc_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Discontinued from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">avail_web</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Available on web</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">avail_call_center</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Available for call center</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">training_units</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Training units</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">grace_period</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Grace period</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">reg_limit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Registration limit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">days_limit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Days limit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">entire_catalog</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Entire catalog</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">cost_limit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Cost limit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">before_expiry</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Before expiry</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">customValues</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Custom values</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">securityDomain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">The domain for the subscription</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 ">{\"id\": \"domin000000000000001\",\"name\":
+                                    \"world\"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">allCostLimits</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">All Cost Limits</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 ">[{\"curr_id\": {\"id\":
+                                    \"crncy000000000000167\",\"displayName\": \"US
+                                    Dollars\"},\"amount\": 100}]</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">allPrices</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">All Prices</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 ">[{\"curr_id\": {\"id\":
+                                    \"crncy000000000000167\",\"displayName\": \"US
+                                    Dollars\"},\"amount\": 100}]</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__1 ">create_group</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__2 ">Whether to create a group. Accepts:
+                                    true/false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_btt_vnx_fp__table_mtt_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "description":"This is test description for subcription created via REST API",
+   "avail_call_center":true,
+   "create_group":true,
+   "avail_from":"2014-12-23T00:00:00.000+0530",
+   "disc_from":null,
+   "title":"API test 1",
+   "avail_web":true,
+   "training_units":10,
+   "subscription_no":"00001004",
+   "entire_catalog":true,
+   "before_expiry":5,
+   "grace_period":20,
+   "allCostLimits":[  
+      {  
+         "curr_id":{  
+            "id":"crncy000000000000001",
+            "displayName":"US Dollars"
+         },
+         "amount":100
+      },
+      {  
+         "curr_id":{  
+            "id":"crncy000000000001006",
+            "displayName":"Currency2"
+         },
+         "amount":82
+      },
+      {  
+         "curr_id":{  
+            "id":"crncy000000000200968",
+            "displayName":"Rupees"
+         },
+         "amount":200
+      }
+   ],
+   "days_limit":null,
+   "allPrices":[  
+      {  
+         "curr_id":{  
+            "id":"crncy000000000000001",
+            "displayName":"US Dollars"
+         },
+         "amount":10
+      }
+   ],
+   "reg_limit":null,
+   "customValues":{  
+      "custom9":null,
+      "custom0":"2015-04-17 00:00:00.0",
+      "custom3":"22:30:00",
+      "custom4":null,
+      "custom1":"this is test",
+      "custom2":"123",
+      "custom7":null,
+      "custom8":null,
+      "custom5":null,
+      "custom6":null
+   },
+   "securityDomain":{  
+      "id":"domin000000000000001",
+      "displayName":"world"
+   }
+}</code></pre>
+                <div class="note note note_note"><span class="note__title">Note:</span> 
+                    <p class="p">Subscription No (<strong class="ph b">subscriptionNumber</strong>) is an autogenerated field.</p>
+                </div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+"id": "sbscr000000000001200",
+"displayName": "sub1",
+"href":
+"https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001200"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_gpt_vnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title7">UPDATE DETAILS OF A SUBSCRIPTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows updating an existing subscription based on the Subscription's ID.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/subscription/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_gpt_vnx_fp__table_rcv_b2s_yr"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Subscription's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 ">sbscr000000000001200</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">title</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Title of the subscription</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Description of the subscription</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">subscription_no</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Subscription number</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">is_featured</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 ">Is Featured Or Not</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">avail_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Available from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">disc_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Discontinued from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">avail_web</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Available on web</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">avail_call_center</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Available for call center</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">training_units</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Training units</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">grace_period</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Grace period</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">reg_limit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Registration limit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">days_limit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Days limit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">entire_catalog</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Entire catalog</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">cost_limit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Cost limit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">before_expiry</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Before expiry</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">customValues</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">Custom values</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__1 ">securityDomain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__2 ">The domain for the subscription</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__3 ">{\"id\": \"domin000000000000001\",\"name\":
+                                    \"world\"}</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_gpt_vnx_fp__table_rcv_b2s_yr__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "avail_from": "2015-03-18T00:00:00.000-0400",
+    "disc_from": "2015-04-30T00:00:00.000-0400",
+    "title": "sub1",
+    "avail_web": false,
+    "avail_call_center": false,
+    "training_units": null,
+    "grace_period": null,
+    "reg_limit": 1,
+    "days_limit": null,
+    "subscription_no": "00001000",
+    "entire_catalog": true,
+    "cost_limit": null,
+    "before_expiry": null,
+    "description": "some dscription",
+    "id": "sbscr000000000001000",
+    "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+        "custom6": null
+    },
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+    }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="reference_z25_vnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title8">FIND DETAILS OF SUBSCRIPTION (Using POST - Range based search)</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the subscription along with the ID, Name and the Deeplink
+                    URL based on the provided range based search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/subscription/searchQuery?count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_z25_vnx_fp__table_if5_vnx_fp"><caption><span class="table--title-label">Table 7. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">conditions &gt; name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The search criteria i.e. the field name.<div class="p">You
+                                        can use any field with "isSearchFilter": true.<div class="note note note_note"><span class="note__title">Note:</span> To find
+                                            out the fields that have "isSearchFilter": true, invoke
+                                            the "Get the Meta details" REST APIs.</div></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 " rowspan="3">[{\"name\": \"subscription_no\",
+                                    \"operator\": \"==\",\"value\": \"1011\"}]</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">conditions &gt; value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The search value for the specified search
+                                    criteria.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">conditions &gt; operator</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The search operator such as:<ul class="ul" id="reference_z25_vnx_fp__ul_of5_vnx_fp">
+                                        <li class="li">=gt=</li>
+                                        <li class="li">=ge=</li>
+                                        <li class="li">=lt=</li>
+                                        <li class="li">=le=</li>
+                                        <li class="li">=eq=</li>
+                                        <li class="li">=ne=</li>
+                                    </ul></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+"conditions":[{"name": "subscription_no", "operator": "==","value": "00001225"}],
+"count":10,
+"startPage":1
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "hasMoreResults": false,
+    "totalResults": 1,
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "results": [
+        {
+            "description": null,
+            "updated_by": "uone",
+            "updated_on": "2015-09-08T12:52:43.000+0530",
+            "created_by": "uone",
+            "grace_period": null,
+            "subscription_no": "00001225",
+            "entire_catalog": false,
+            "reg_limit": 10,
+            "avail_call_center": false,
+            "allPrices": [
+                {
+                    "curr_id": {
+                        "id": "crncy000000000000001",
+                        "displayName": "US Dollars"
+                    },
+                    "amount": 100,
+                    "displayValue": null,
+                    "id": "plent000000000204373"
+                }
+            ],
+            "days_limit": 10,
+            "allCostLimits": [
+                {
+                    "curr_id": {
+                        "id": "crncy000000000000001",
+                        "displayName": "US Dollars"
+                    },
+                    "amount": 100,
+                    "displayValue": null,
+                    "id": "plent000000000204374"
+                }
+            ],
+            "avail_from": "2015-04-09T00:00:00.000+0530",
+            "disc_from": null,
+            "title": "new2",
+            "avail_web": false,
+            "training_units": null,
+            "allAudienceTypes": [],
+            "before_expiry": null,
+            "is_featured": true,
+            "allSubscriptionItems": [],
+            "id": "sbscr000000000001248",
+            "customValues": {
+                "custom9": null,
+                "custom0": null,
+                "custom3": null,
+                "custom4": null,
+                "custom1": null,
+                "custom2": null,
+                "custom7": null,
+                "custom8": null,
+                "custom5": null,
+                "custom6": null
+            },
+            "securityDomain": {
+                "id": "domin000000000000001",
+                "displayName": "world"
+            }
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title9" id="reference_q43_rm5_5r">
+        <h2 class="title topictitle2" id="ariaid-title9">ADD AUDIENCE TYPE TO A SUBSCRIPTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Adds audience types to a subscription and returns a reference to the subscription
+                    to which the audience types were added.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/subscription/:id/audiencetype</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_q43_rm5_5r__table_y43_rm5_5r"><caption><span class="table--title-label">Table 8. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_q43_rm5_5r__table_y43_rm5_5r__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_q43_rm5_5r__table_y43_rm5_5r__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_q43_rm5_5r__table_y43_rm5_5r__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_q43_rm5_5r__table_y43_rm5_5r__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_q43_rm5_5r__table_y43_rm5_5r__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_q43_rm5_5r__table_y43_rm5_5r__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_q43_rm5_5r__table_y43_rm5_5r__entry__2 ">Subscription's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_q43_rm5_5r__table_y43_rm5_5r__entry__3 ">sbscr000000000001034</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_q43_rm5_5r__table_y43_rm5_5r__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_q43_rm5_5r__table_y43_rm5_5r__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>[
+  "java.util.Collection",
+  [
+    {
+      "@type": "com.saba.rest.service.RESTServiceObjectReference",
+      "id": "audie000000000200000",
+      "displayName": "CustomerType1"
+    },
+    {
+      "@type": "com.saba.rest.service.RESTServiceObjectReference",
+      "id": "audie000000000200001",
+      "displayName": "CustomerType2"
+    }
+  ]
+]</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "sbscr000000000001034",
+    "displayName": "sub1",
+    "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001034"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title10" id="reference_lxf_py4_xr">
+        <h2 class="title topictitle2" id="ariaid-title10">REMOVE AUDIENCE TYPE FROM A SUBSCRIPTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Removes audience type from a subscription.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/subscription/:id/audiencetype/:audiencetypeid</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_lxf_py4_xr__table_rxf_py4_xr"><caption><span class="table--title-label">Table 9. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_lxf_py4_xr__table_rxf_py4_xr__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_lxf_py4_xr__table_rxf_py4_xr__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_lxf_py4_xr__table_rxf_py4_xr__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_lxf_py4_xr__table_rxf_py4_xr__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_lxf_py4_xr__table_rxf_py4_xr__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lxf_py4_xr__table_rxf_py4_xr__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lxf_py4_xr__table_rxf_py4_xr__entry__2 ">Subscription's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lxf_py4_xr__table_rxf_py4_xr__entry__3 ">sbscr000000000001034</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lxf_py4_xr__table_rxf_py4_xr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lxf_py4_xr__table_rxf_py4_xr__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lxf_py4_xr__table_rxf_py4_xr__entry__1 ">audiencetypeid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lxf_py4_xr__table_rxf_py4_xr__entry__2 ">Audience Type's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lxf_py4_xr__table_rxf_py4_xr__entry__3 ">audie000000000200000</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lxf_py4_xr__table_rxf_py4_xr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lxf_py4_xr__table_rxf_py4_xr__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>OK (200) status</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title11" id="reference_awl_2vk_yr">
+        <h2 class="title topictitle2" id="ariaid-title11">ADD DELIVERY TYPE / SUBSCRIPTION ITEM TO A SUBSCRIPTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Adds delivery types / subscription items to a subscription and returns a
+                    reference to the subscription to which the delivery types / subscription items
+                    were added.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/subscription/:id/subscriptionItem</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_awl_2vk_yr__table_uwl_2vk_yr"><caption><span class="table--title-label">Table 10. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_awl_2vk_yr__table_uwl_2vk_yr__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_awl_2vk_yr__table_uwl_2vk_yr__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_awl_2vk_yr__table_uwl_2vk_yr__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_awl_2vk_yr__table_uwl_2vk_yr__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_awl_2vk_yr__table_uwl_2vk_yr__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awl_2vk_yr__table_uwl_2vk_yr__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awl_2vk_yr__table_uwl_2vk_yr__entry__2 ">Subscription's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awl_2vk_yr__table_uwl_2vk_yr__entry__3 ">sbscr000000000001034</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awl_2vk_yr__table_uwl_2vk_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awl_2vk_yr__table_uwl_2vk_yr__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>[
+  "java.util.Collection",
+  [
+    {
+      "@type": "com.saba.rest.service.RESTServiceObjectReference",
+      "id": "cours000000000200810",
+                "displayName": "1ab"
+    },
+    {
+      "@type": "com.saba.rest.service.RESTServiceObjectReference",
+      "id": "eqcat000000000200122",
+      "displayName": "new_Instructor-Leden_US"
+    }
+  ]
+]
+</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "sbscr000000000001034",
+    "displayName": "sub1",
+    "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001034"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title12" id="reference_vwl_2vk_yr">
+        <h2 class="title topictitle2" id="ariaid-title12">REMOVE DELIVERY TYPE / SUBSCRIPTION ITEM FROM A SUBSCRIPTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Removes delivery type / subscription item from a subscription.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/subscription/:id/subscriptionItem/:courseid</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_vwl_2vk_yr__table_oxl_2vk_yr"><caption><span class="table--title-label">Table 11. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__2 ">Subscription's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__3 ">sbscr000000000001034</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__1 ">courseid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__2 ">Course's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__3 ">cours000000000200811</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vwl_2vk_yr__table_oxl_2vk_yr__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>OK (200) status</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title13" id="reference_kfb_zvk_yr">
+        <h2 class="title topictitle2" id="ariaid-title13">ADD SUBSCRIPTION PRICE TO A SUBSCRIPTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Adds subscription price to a subscription and returns a reference to the
+                    subscription to which the subscription price was added.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/subscription/:id/subscriptionPrice</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_kfb_zvk_yr__table_ufb_zvk_yr"><caption><span class="table--title-label">Table 12. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_kfb_zvk_yr__table_ufb_zvk_yr__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_kfb_zvk_yr__table_ufb_zvk_yr__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_kfb_zvk_yr__table_ufb_zvk_yr__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_kfb_zvk_yr__table_ufb_zvk_yr__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_kfb_zvk_yr__table_ufb_zvk_yr__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kfb_zvk_yr__table_ufb_zvk_yr__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kfb_zvk_yr__table_ufb_zvk_yr__entry__2 ">Subscription's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kfb_zvk_yr__table_ufb_zvk_yr__entry__3 ">sbscr000000000001034</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kfb_zvk_yr__table_ufb_zvk_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kfb_zvk_yr__table_ufb_zvk_yr__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "@type": "com.saba.rest.businesscomponent.dto.PriceDTO",
+  "price" : 70,
+  "currency": {
+       "@type" : "com.saba.currency.SabaCurrencyReference",
+                "id": "crncy000000000000001",
+                "displayName": "US Dollars"
+            },
+  "currencySelectionMode" : 2
+}</code></pre>
+                <div class="note note note_note"><span class="note__title">Note:</span> <strong class="ph b">currencySelectionMode</strong> can be: DesignatedCurrency - 1,
+                    DesignatedAndDefaultCurrency - 2 or AllCurrenciesInSystem - 3</div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "sbscr000000000001034",
+    "displayName": "sub1",
+    "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001034"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title14" id="reference_lb4_jwk_yr">
+        <h2 class="title topictitle2" id="ariaid-title14">ADD COST LIMIT PRICE TO A SUBSCRIPTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Adds cost limit price to a subscription and returns a reference to the
+                    subscription to which the cost limit price was added.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/subscription/:id/subscriptionPrice?type=costLimitPrice</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_lb4_jwk_yr__table_vb4_jwk_yr"><caption><span class="table--title-label">Table 13. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_lb4_jwk_yr__table_vb4_jwk_yr__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_lb4_jwk_yr__table_vb4_jwk_yr__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_lb4_jwk_yr__table_vb4_jwk_yr__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_lb4_jwk_yr__table_vb4_jwk_yr__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_lb4_jwk_yr__table_vb4_jwk_yr__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lb4_jwk_yr__table_vb4_jwk_yr__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lb4_jwk_yr__table_vb4_jwk_yr__entry__2 ">Subscription's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lb4_jwk_yr__table_vb4_jwk_yr__entry__3 ">sbscr000000000001034</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lb4_jwk_yr__table_vb4_jwk_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_lb4_jwk_yr__table_vb4_jwk_yr__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "@type": "com.saba.rest.businesscomponent.dto.PriceDTO",
+  "price" : 70,
+  "currency": {
+       "@type" : "com.saba.currency.SabaCurrencyReference",
+                "id": "crncy000000000000001",
+                "displayName": "US Dollars"
+            },
+  "currencySelectionMode" : 2
+}</code></pre>
+                <div class="note note note_note"><span class="note__title">Note:</span> <strong class="ph b">currencySelectionMode</strong> can be: DesignatedCurrency - 1,
+                    DesignatedAndDefaultCurrency - 2 or AllCurrenciesInSystem - 3</div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "sbscr000000000001034",
+    "displayName": "sub1",
+    "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/subscription/sbscr000000000001034"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title15" id="reference_zst_qwk_yr">
+        <h2 class="title topictitle2" id="ariaid-title15">REMOVE SUBSCRIPTION PRICE / COST LIMIT PRICE FROM A SUBSCRIPTION</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Removes subscription price / cost limit price from a subscription.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learning/subscription/:id/subscriptionPrice/:priceid</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_zst_qwk_yr__table_ttt_qwk_yr"><caption><span class="table--title-label">Table 14. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__2 ">Subscription's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__3 ">sbscr000000000001034</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__1 ">priceid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__2 ">Price List Entry's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__3 ">plent000000000203890</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_zst_qwk_yr__table_ttt_qwk_yr__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>OK (200) status</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

@@ -1,0 +1,1615 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="foundation, restful web services, get all the smartlists, foundation components, find the meta details of smartlists, find the meta details of smartlists, get the details of a particular smartlist, get the details of a particular smartlist, get the person's matching criteria of a particular smartlist, get the person's matching criteria of a particular smartlist, create a new smartlist, create a new smartlist, update the details of a smartlist, update the details of a smartlist, delete a smartlist"><meta name="keywords" content="foundation, restful web services, get all the smartlists, foundation components, find the meta details of smartlists, find the meta details of smartlists, get the details of a particular smartlist, get the details of a particular smartlist, get the person's matching criteria of a particular smartlist, get the person's matching criteria of a particular smartlist, create a new smartlist, create a new smartlist, update the details of a smartlist, update the details of a smartlist, delete a smartlist"><meta name="DC.Relation" scheme="URI" content="../developer/part-foundation.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0e656"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Smart List</title></head><body id="d0e656"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Smart List</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-foundation.html">Foundation</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-get-all-the-smartlists-N1000A">
+        <h2 class="title topictitle2" id="ariaid-title2">GET ALL SMARTLISTS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all the smartlists for which the user has access.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https:///<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/smartlists?count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-all-the-smartlists-N1000A__table_t4l_54z_rt__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "hasMoreResults": false,
+    "totalResults": 1,
+    "itemsPerPage": 10,
+    "results": [
+        {
+            "id": "stlst000000000001080",
+            "href": "https:///<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/smartlists/stlst000000000001080"
+        }
+    ],
+    "startIndex": 1,
+    "facets": []
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_uxz_slx_fp">
+        <h2 class="title topictitle2" id="ariaid-title3">FIND META DETAILS OF SMARTLISTS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of the key and the operator of smartlists.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/smartlists/meta</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+ "allOperators": {
+  "all": {
+   "key": "all",
+   "label": "All of"
+  },
+  "startswith": {
+   "key": "startswith",
+   "label": "Begins with"
+  },
+  "bef": {
+   "key": "bef",
+   "label": "Before"
+  },
+  "OR": {
+   "key": "OR",
+   "label": "Or"
+  },
+  "in": {
+   "key": "in",
+   "label": "Any of"
+  },
+  "lt": {
+   "key": "lt",
+   "label": "Less than"
+  },
+  "eq": {
+   "key": "eq",
+   "label": "Exactly matching"
+  },
+  "gt": {
+   "key": "gt",
+   "label": "Greater than"
+  },
+  "aft": {
+   "key": "aft",
+   "label": "After"
+  },
+  "NOT": {
+   "key": "NOT",
+   "label": "Not"
+  },
+  "nin": {
+   "key": "nin",
+   "label": "Not any of"
+  },
+  "onafter": {
+   "key": "onafter",
+   "label": "On or after"
+  },
+  "befdays": {
+   "key": "befdays",
+   "label": "Days Before"
+  },
+  "onbefore": {
+   "key": "onbefore",
+   "label": "On or before"
+  },
+  "betnext": {
+   "key": "betnext",
+   "label": "Within the next"
+  },
+  "betlast": {
+   "key": "betlast",
+   "label": "Within the last"
+  },
+  "AND": {
+   "key": "AND",
+   "label": "And"
+  },
+  "gte": {
+   "key": "gte",
+   "label": "Greater than or equals"
+  },
+  "aftdays": {
+   "key": "aftdays",
+   "label": "Days After"
+  },
+  "neq": {
+   "key": "neq",
+   "label": "Not exactly matching"
+  },
+  "lte": {
+   "key": "lte",
+   "label": "Less than or equals"
+  }
+ },
+ "context": {
+  "key": "security"
+ },
+ "entities": [{
+  "key": {
+   "key": "location"
+  },
+  "attributes": [{
+   "nestedDocument": false,
+   "childAttrsName": null,
+   "caseInsensitive": true,
+   "smartListOwnerCondition": false,
+   "presentation": {
+    "misc": {},
+    "type": {
+     "key": "TextBox"
+    }
+   },
+   "operators": [{
+    "key": "eq",
+    "label": "Exactly matching"
+   }, {
+    "key": "neq",
+    "label": "Not exactly matching"
+   }, {
+    "key": "startswith",
+    "label": "Begins with"
+   }],
+   "overrideOperators": null,
+   "autoExpandChildren": false,
+   "attrLabel": "Custom0",
+   "hasChildren": false,
+   "csvInput": false,
+   "infoLabel": "",
+   "attrName": {
+    "key": "Location_custom0"
+   },
+   "defaultValue": null
+  }]
+ }]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="get-get-the-details-of-a-particular-smartlist-N10046">
+        <h2 class="title topictitle2" id="ariaid-title4">GET DETAILS OF A PARTICULAR SMARTLIST</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of a particular smartlist.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https:///<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/smartlists/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-the-details-of-a-particular-smartlist-N10046__table_x4l_54z_rt"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-smartlist-N10046__table_x4l_54z_rt__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-smartlist-N10046__table_x4l_54z_rt__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-smartlist-N10046__table_x4l_54z_rt__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-smartlist-N10046__table_x4l_54z_rt__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-details-of-a-particular-smartlist-N10046__table_x4l_54z_rt__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-smartlist-N10046__table_x4l_54z_rt__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-smartlist-N10046__table_x4l_54z_rt__entry__2 ">smartlist's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-smartlist-N10046__table_x4l_54z_rt__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-smartlist-N10046__table_x4l_54z_rt__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-details-of-a-particular-smartlist-N10046__table_x4l_54z_rt__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "name" : "test",
+  "parent" : null,
+  "owner" : null,
+  "description" : "sdfs wrer",
+  "split" : "world",
+  "criteria" : {
+    "query" : {
+      "sortFields" : [ {
+        "field" : "person_fname",
+        "descending" : false
+      }, {
+        "field" : "person_lname",
+        "descending" : false
+      } ],
+      "displayFields" : [ "per_id", "_class", "person_fname", "person_lname", "person_username", "person_email", "business_title", "manager_fname", "manager_lname", "person_domain_class", "person_domain_text", "org_text", "org_id", "_class" ],
+      "criteria" : {
+        "description" : null,
+        "entity" : null,
+        "weight" : 1,
+        "segments" : [ {
+          "description" : null,
+          "entity" : "Group 1",
+          "weight" : 1,
+          "segments" : [ {
+            "key" : "edu_institute",
+            "operator" : {
+              "key" : "in",
+              "label" : "Any of"
+            },
+            "displayValues" : {
+              "Pune University" : "Pune"
+            },
+            "excluded" : false,
+            "value" : [ "Pune University" ]
+          }, {
+            "key" : "OR",
+            "label" : "Or"
+          }, {
+            "key" : "Location_custom0",
+            "operator" : {
+              "key" : "eq",
+              "label" : "Exactly matching"
+            },
+            "displayValues" : {
+              "test" : "test"
+            },
+            "excluded" : false,
+            "value" : "test"
+          } ],
+          "excluded" : false
+        } ],
+        "excluded" : false
+      }
+    },
+    "displayName" : null,
+    "owner" : null,
+    "optionalQuery" : null,
+    "queryVersion" : 6,
+    "deltaMembers" : null,
+    "staticMembers" : [ ],
+    "personSnapshotContext" : null,
+    "autoUpdateOnExecute" : true,
+    "externalSource" : null,
+    "listId" : "stlst000000000001080",
+    "id" : "stlst000000000001080",
+    "createdOn" : 1440509250455,
+    "updatedBy" : "uone",
+    "updatedOn" : 1443447032353,
+    "createdBy" : "uone",
+    "versionNo" : 1
+  },
+  "id" : "stlst000000000001080",
+  "displayName" : null
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F">
+        <h2 class="title topictitle2" id="ariaid-title5">GET PERSON'S MATCHING CRITERIA OF A PARTICULAR SMARTLIST</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the person's matching criteria of a particular smartlist.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https:///<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/smartlists/:id/member</p>
+                <p class="p">?f=:searchFields&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__3">Default Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__2 ">smartlist's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__1 ">searchFields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__2 ">The fields to be displayed in output.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__3 ">fname,lname,person_no</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-get-the-persons-matching-criteria-of-a-particular-smartlist-N1006F__table_ipl_54z_rt__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": null,
+    "hasMoreResults": false,
+    "totalResults": 25,
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "results": [
+        {
+            "fname": "Akhlesh",
+            "lname": "Pandey",
+            "person_no": "00200493  ",
+            "id": "emplo000000000200493",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/person/emplo000000000200493"
+        },
+        {
+            "fname": "Person A",
+            "lname": "Person A",
+            "person_no": "00200628  ",
+            "id": "emplo000000000200628",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/person/emplo000000000200628"
+        },
+        {
+            "fname": "Pranjali",
+            "lname": "Ganorkar",
+            "person_no": "00200489  ",
+            "id": "emplo000000000200489",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/person/emplo000000000200489"
+        },
+        {
+            "fname": "Reena",
+            "lname": "Kadam",
+            "person_no": "00200499  ",
+            "id": "emplo000000000200499",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/person/emplo000000000200499"
+        },
+        {
+            "fname": "Sandeep",
+            "lname": "Thorat",
+            "person_no": "00200498  ",
+            "id": "emplo000000000200498",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/person/emplo000000000200498"
+        },
+        {
+            "fname": "Talent",
+            "lname": "User",
+            "person_no": "00200407  ",
+            "id": "emplo000000000200407",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/person/emplo000000000200407"
+        },
+        {
+            "fname": "User",
+            "lname": "One",
+            "person_no": "001000",
+            "id": "emplo000000000001000",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/person/emplo000000000001000"
+        },
+        {
+            "fname": "User1",
+            "lname": "Three1",
+            "person_no": "001036    ",
+            "id": "emplo000000000001036",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/person/emplo000000000001036"
+        },
+        {
+            "fname": "a",
+            "lname": "one",
+            "person_no": "00200147",
+            "id": "persn000000000200147",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/person/persn000000000200147"
+        },
+        {
+            "fname": "a1",
+            "lname": "one1",
+            "person_no": "00200148",
+            "id": "persn000000000200148",
+            "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/person/persn000000000200148"
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_njw_qlx_fp">
+        <h2 class="title topictitle2" id="ariaid-title6">CREATE A NEW SMARTLIST</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <div class="p">Allows creating a new smart list.<div class="note note note_note"><span class="note__title">Note:</span> Only users with the People admin privilege
+                        will be able to create, update or delete Smarlists using these
+                    APIs.</div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/smartlists</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_njw_qlx_fp__table_ujw_qlx_fp"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__2 ">The name of the Smartlist</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__3 ">Test Smartlist</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__1 ">description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__2 ">The short description about the Smartlist</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__1 ">split</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__2 ">The domain for the Smartlist<p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Domain).</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__1 ">criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__2 ">Criteria of Smartlist</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_njw_qlx_fp__table_ujw_qlx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+	"name": "test SL",
+	"description": "Test smartlist creation using API",
+	"split": {
+		"id": "domin000000000000001",
+		“displayName”:”world”
+	},
+	"criteria": {
+		"segments": [{
+			"entity": "Group 1",
+			"segments": [{
+				"excluded": false,
+				"key": "language",
+				"operator": {
+					"key": "in"
+				},
+				"value": ["lange000000000000001"]
+			}, {
+				"key": "OR"
+			}, {
+				"excluded": false,
+				"key": "curricula_id",
+				"operator": {
+					"key": "in"
+				},
+				"value": ["curra000000000001141"]
+			}]
+		}, {
+			"key": "AND"
+		}, {
+			"entity": "Group 2",
+			"segments": [{
+				"excluded": false,
+				"key": "Location_custom2",
+				"operator": {
+					"key": "eq"
+				},
+				"value": "test"
+			}]
+		}]
+	}
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">UI representation of the Request Body</h3>
+                
+                <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>UI representation of the Request Body</figcaption>
+                    
+                    <br><div class="imageleft"><img class="image imageleft" id="reference_njw_qlx_fp__image_jlb_lwg_bx" longdesc="" src="images/smartlistUIRep.png"></div><br>
+                </figure>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Supported Operator Key</h3>
+                
+                <p class="p">The following table lists the operator keys that this API supports.</p>
+            </section>
+            <table class="table" id="reference_njw_qlx_fp__table_tlb_lwg_bx"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry" id="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1"> Key </th>
+                            <th class="entry" id="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2"> Description (UI Label) </th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> AND </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> AND </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> OR </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> OR </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> NOT </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> NOT </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> eq </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> MATCHES </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> neq </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> NOT_MATCHES </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> all </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> ALL_OF </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> in </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> ANY_OF </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> nin </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> NOT_ANY_OF </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> bef </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> BEFORE </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> onbefore </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> ON_OR_BEFORE </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> aft </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> AFTER </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> onafter </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> ON_OR_AFTER </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> lt </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> LESS_THAN </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> lte </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> LESS_THAN_EQUALS </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> gt </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> GREATER_THAN </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> gte </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> GREATER_THAN_EQUALS </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> betnext </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> WITHIN_NEXT </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> betlast </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> WITHIN_LAST </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> startswith </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> STARTS_WITH </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> befdays </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> BEFORE_DAYS </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__1 "> aftdays </td>
+                            <td class="entry" headers="reference_njw_qlx_fp__table_tlb_lwg_bx__entry__2 "> AFTER_DAYS </td>
+                        </tr>
+                    </tbody></table>
+            <section class="section"><h3 class="title sectiontitle">Supported Segment Key</h3>
+                
+                <p class="p">The following table lists the segment keys that this API supports.</p>
+                <table class="table" id="reference_njw_qlx_fp__table_ulb_lwg_bx"><caption></caption><colgroup><col><col><col></colgroup><thead class="thead">
+                            <tr class="row">
+                                <th class="entry" id="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1"> Component </th>
+                                <th class="entry" id="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2"> Key </th>
+                                <th class="entry" id="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3"> Description (UI Label) </th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 " rowspan="21"> Profile &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> per_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Person </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> person_domain_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Domain </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> person_manager_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Manager </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> person_start_date </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Start Date </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> prsn_status </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Status </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> prsn_gender </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Gender </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> prsn_dob </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Date of Birth </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> prsn_ethnicity </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Ethnicity </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> prsn_religion </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Religion </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> prsn_pq </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> PQ Score </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> prsn_prof_compl </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Percent Profile Completed </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> prsn_alt_mgr </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Alternate Manager </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> person_emp_type </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Employee Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> person_locale </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Locale </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> person_type </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Person Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> person_mgr </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Manager Access </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> per_city </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> City </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> per_state </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> State </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> per_country </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Country </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> per_zip_code </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Zip / Postal code </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "><pre class="pre">Person, Internal_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 "> Language </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> language </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Language </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 " rowspan="4"> External Certification &nbsp; &nbsp; &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> ext_cert_name </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Name </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> ext_cert_inst </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Accrediting Institution </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> ext_cert_acqon </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Acquired on Date </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> ext_cert_expon </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Expired on Date </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 "> Internal Certification </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> int_cert_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Certification </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 " rowspan="9"> Job / Career &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> job_current_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Current Jobtype </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> job_desired_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Next Jobtype </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> job_family_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Job Family </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> job_potential_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Potential Job </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> int_wrkhis_job_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Internal Work History </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> int_wrkhis_org_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Previous Internal Organization </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> int_wrkhis_loc </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Previous work location </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> ext_wrkhis_employer </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> External work history </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "><pre class="pre">JobType_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 " rowspan="2"> Role &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "><pre class="pre">Role_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> Job_role_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Role </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 " rowspan="2"> Skill / Experties &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> skill_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Skill </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "><pre class="pre">Competency_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 " rowspan="3"> Performance &nbsp; &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> pot_rating </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Potential rating </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> ret_risk </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Retirement Risk </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> flt_risk </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Flight Risk </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 " rowspan="5"> Organization &nbsp; &nbsp; &nbsp; &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> org_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Organization </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> org_zip_code </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Zip / Postal Code </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> org_number </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Internal Organization Number </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> org_type </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Organization Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "><pre class="pre">Organization, Internal_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 "> Inprogress learning </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> inp_cours_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Course </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 " rowspan="2"> Group / Audience &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> aud_typ </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Audience Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "><pre class="pre">Audience Type_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 " rowspan="6"> Education &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> degree </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Degree </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> major </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Major </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> edu_institute </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Institution </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> edu_institute_type </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Institute Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> edu_comp_date </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Completion Date </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> edu_pc_completion </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Percent Completed </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 "> Curriculam </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> curricula_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Curriculam </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 " rowspan="2"> Competed Learning &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> cmpl_cours_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Course </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "><pre class="pre">Offering Action Profile_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 " rowspan="3"> Address / Location &nbsp; &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> location_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Location </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> relocate </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Will Relocate </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "><pre class="pre">Location_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 "> CustomSection1 to CustomSection20 </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> CustomSection1_custom0 &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__1 " rowspan="7"> TalentPool &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> tp_candidate_status </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Candidate Status </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> readiness_id </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Candidate Readiness </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> pool_owner </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Pool Owner </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> pool_domain </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Pool Domain </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> percent_match </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Candidate percent match </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> candidate_rank </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Candidate Rank </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__2 "> talent_pool_name </td>
+                                <td class="entry" headers="reference_njw_qlx_fp__table_ulb_lwg_bx__entry__3 "> Pool Name </td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+	"id": "stlst000000000001410",
+	"displayName": "test SL 7",
+    "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/smartlists/stlst000000000001080"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_ghw_qlx_fp">
+        <h2 class="title topictitle2" id="ariaid-title7">UPDATE DETAILS OF A SMARTLIST</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <div class="p">Allows updating an existing smartlist based on the Smartlist ID.<div class="note note note_note"><span class="note__title">Note:</span> Only users
+                        with the People admin privilege will be able to create, update or delete
+                        Smarlists using these APIs.</div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/smartlists/:id</p>
+            </section>
+            <table class="table frame-all" id="reference_ghw_qlx_fp__table_vcs_1r4_sv"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20.27027027027027%"><col style="width:24.774774774774773%"><col style="width:19.96996996996997%"><col style="width:19.96996996996997%"><col style="width:15.015015015015015%"></colgroup><thead class="thead">
+                        <tr class="row rowsep-1">
+                            <th class="entry colsep-1 rowsep-1" id="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__1">Name</th>
+                            <th class="entry colsep-1 rowsep-1" id="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__2">Description</th>
+                            <th class="entry colsep-1 rowsep-1" id="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__3">Sample Value</th>
+                            <th class="entry colsep-1 rowsep-1" id="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__4">Data Type</th>
+                            <th class="entry colsep-1 rowsep-1" id="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__5">Required?</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                        <tr class="row rowsep-1">
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__1 ">id</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__2 ">Smartlist's ID</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__3 ">stlst000000000001000</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__4 ">string</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__5 ">Yes</td>
+                        </tr>
+                        <tr class="row rowsep-1">
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__1 ">name</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__2 ">The name of the Smartlist</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__3 ">Test Smartlist</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__4 ">string</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__5 ">No</td>
+                        </tr>
+                        <tr class="row rowsep-1">
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__1 ">description</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__2 ">The short description about the Smartlist</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__3 "></td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__4 ">string</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__5 ">No</td>
+                        </tr>
+                        <tr class="row rowsep-1">
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__1 ">split</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__2 ">The domain for the Smartlist<p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Domain).</p></td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__3 ">
+                                <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre>
+                            </td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__4 ">string</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__5 ">Yes</td>
+                        </tr>
+                        <tr class="row rowsep-1">
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__1 ">criteria</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__2 ">Criteria of Smartlist</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__3 "></td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__4 ">string</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_ghw_qlx_fp__table_vcs_1r4_sv__entry__5 ">No</td>
+                        </tr>
+                    </tbody></table>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+	"name": "test SL",
+	"description": "Test smartlist creation using API",
+	"split": {
+		"id": "domin000000000000001",
+		“displayName”:”world”
+	},
+	"criteria": {
+		"segments": [{
+			"entity": "Group 1",
+			"segments": [{
+				"excluded": false,
+				"key": "language",
+				"operator": {
+					"key": "in"
+				},
+				"value": ["lange000000000000001"]
+			}, {
+				"key": "OR"
+			}, {
+				"excluded": false,
+				"key": "curricula_id",
+				"operator": {
+					"key": "in"
+				},
+				"value": ["curra000000000001141"]
+			}]
+		}, {
+			"key": "AND"
+		}, {
+			"entity": "Group 2",
+			"segments": [{
+				"excluded": false,
+				"key": "Location_custom2",
+				"operator": {
+					"key": "eq"
+				},
+				"value": "test"
+			}]
+		}]
+	}
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">UI representation of the Request Body</h3>
+                
+                <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 2. </span>UI representation of the Request Body</figcaption>
+                    
+                    <br><div class="imageleft"><img class="image imageleft" id="reference_ghw_qlx_fp__image_tqy_2wg_bx" longdesc="" src="images/smartlistUIRep.png"></div><br>
+                </figure>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Supported Operator Key</h3>
+                
+                <p class="p">The following table lists the operator keys that this API supports.</p>
+            </section>
+            <table class="table" id="reference_ghw_qlx_fp__table_dtw_1vg_bx"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry" id="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1"> Key </th>
+                            <th class="entry" id="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2"> Description (UI Label) </th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> AND </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> AND </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> OR </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> OR </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> NOT </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> NOT </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> eq </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> MATCHES </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> neq </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> NOT_MATCHES </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> all </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> ALL_OF </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> in </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> ANY_OF </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> nin </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> NOT_ANY_OF </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> bef </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> BEFORE </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> onbefore </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> ON_OR_BEFORE </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> aft </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> AFTER </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> onafter </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> ON_OR_AFTER </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> lt </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> LESS_THAN </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> lte </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> LESS_THAN_EQUALS </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> gt </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> GREATER_THAN </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> gte </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> GREATER_THAN_EQUALS </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> betnext </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> WITHIN_NEXT </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> betlast </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> WITHIN_LAST </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> startswith </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> STARTS_WITH </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> befdays </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> BEFORE_DAYS </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__1 "> aftdays </td>
+                            <td class="entry" headers="reference_ghw_qlx_fp__table_dtw_1vg_bx__entry__2 "> AFTER_DAYS </td>
+                        </tr>
+                    </tbody></table>
+            <section class="section"><h3 class="title sectiontitle">Supported Segment Key</h3>
+                
+                <p class="p">The following table lists the segment keys that this API supports.</p>
+                <table class="table" id="reference_ghw_qlx_fp__table_ihl_3vg_bx"><caption></caption><colgroup><col><col><col></colgroup><thead class="thead">
+                            <tr class="row">
+                                <th class="entry" id="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1"> Component </th>
+                                <th class="entry" id="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2"> Key </th>
+                                <th class="entry" id="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3"> Description (UI Label) </th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 " rowspan="21"> Profile  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                                    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> per_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Person </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> person_domain_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Domain </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> person_manager_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Manager </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> person_start_date </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Start Date </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> prsn_status </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Status </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> prsn_gender </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Gender </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> prsn_dob </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Date of Birth </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> prsn_ethnicity </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Ethnicity </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> prsn_religion </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Religion </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> prsn_pq </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> PQ Score </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> prsn_prof_compl </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Percent Profile Completed </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> prsn_alt_mgr </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Alternate Manager </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> person_emp_type </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Employee Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> person_locale </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Locale </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> person_type </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Person Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> person_mgr </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Manager Access </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> per_city </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> City </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> per_state </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> State </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> per_country </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Country </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> per_zip_code </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Zip / Postal code </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "><pre class="pre">Person, Internal_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 "> Language </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> language </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Language </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 " rowspan="4"> External Certification  &nbsp;  &nbsp;  &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> ext_cert_name </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Name </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> ext_cert_inst </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Accrediting Institution </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> ext_cert_acqon </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Acquired on Date </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> ext_cert_expon </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Expired on Date </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 "> Internal Certification </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> int_cert_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Certification </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 " rowspan="9"> Job / Career  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> job_current_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Current Jobtype </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> job_desired_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Next Jobtype </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> job_family_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Job Family </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> job_potential_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Potential Job </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> int_wrkhis_job_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Internal Work History </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> int_wrkhis_org_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Previous Internal Organization </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> int_wrkhis_loc </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Previous work location </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> ext_wrkhis_employer </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> External work history </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "><pre class="pre">JobType_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 " rowspan="2"> Role  &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "><pre class="pre">Role_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> Job_role_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Role </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 " rowspan="2"> Skill / Experties  &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> skill_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Skill </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "><pre class="pre">Competency_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 " rowspan="3"> Performance  &nbsp;  &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> pot_rating </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Potential rating </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> ret_risk </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Retirement Risk </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> flt_risk </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Flight Risk </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 " rowspan="5"> Organization  &nbsp;  &nbsp;  &nbsp;  &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> org_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Organization </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> org_zip_code </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Zip / Postal Code </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> org_number </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Internal Organization Number </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> org_type </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Organization Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "><pre class="pre">Organization, Internal_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 "> Inprogress learning </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> inp_cours_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Course </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 " rowspan="2"> Group / Audience  &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> aud_typ </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Audience Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "><pre class="pre">Audience Type_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 " rowspan="6"> Education  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> degree </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Degree </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> major </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Major </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> edu_institute </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Institution </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> edu_institute_type </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Institute Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> edu_comp_date </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Completion Date </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> edu_pc_completion </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Percent Completed </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 "> Curriculam </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> curricula_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Curriculam </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 " rowspan="2"> Competed Learning  &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> cmpl_cours_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Course </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "><pre class="pre">Offering Action Profile_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 " rowspan="3"> Address / Location  &nbsp;  &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> location_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Location </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> relocate </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Will Relocate </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "><pre class="pre">Location_custom0</pre> &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 "> CustomSection1 to CustomSection20 </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> CustomSection1_custom0 &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Custom 0 </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__1 " rowspan="7"> TalentPool  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> tp_candidate_status </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Candidate Status </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> readiness_id </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Candidate Readiness </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> pool_owner </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Pool Owner </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> pool_domain </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Pool Domain </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> percent_match </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Candidate percent match </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> candidate_rank </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Candidate Rank </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__2 "> talent_pool_name </td>
+                                <td class="entry" headers="reference_ghw_qlx_fp__table_ihl_3vg_bx__entry__3 "> Pool Name </td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+	"id": "stlst000000000001410",
+	"displayName": "test SL 7",
+    "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/smartlists/stlst000000000001080"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="reference_jd1_r5g_bx">
+        <h2 class="title topictitle2" id="ariaid-title8">DELETE A SMARTLIST</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <div class="p">Allows deleting an existing smartlist that is not associated to other objects
+                    based on the Smartlist ID.<div class="note note note_note"><span class="note__title">Note:</span> Only users with the People admin privilege will
+                        be able to create, update or delete Smarlists using these APIs.</div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/smartlists/:id</p>
+            </section>
+            <table class="table frame-all" id="reference_jd1_r5g_bx__table_td1_r5g_bx"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20.27027027027027%"><col style="width:24.774774774774773%"><col style="width:19.96996996996997%"><col style="width:19.96996996996997%"><col style="width:15.015015015015015%"></colgroup><thead class="thead">
+                        <tr class="row rowsep-1">
+                            <th class="entry colsep-1 rowsep-1" id="reference_jd1_r5g_bx__table_td1_r5g_bx__entry__1">Name</th>
+                            <th class="entry colsep-1 rowsep-1" id="reference_jd1_r5g_bx__table_td1_r5g_bx__entry__2">Description</th>
+                            <th class="entry colsep-1 rowsep-1" id="reference_jd1_r5g_bx__table_td1_r5g_bx__entry__3">Sample Value</th>
+                            <th class="entry colsep-1 rowsep-1" id="reference_jd1_r5g_bx__table_td1_r5g_bx__entry__4">Data Type</th>
+                            <th class="entry colsep-1 rowsep-1" id="reference_jd1_r5g_bx__table_td1_r5g_bx__entry__5">Required?</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                        <tr class="row rowsep-1">
+                            <td class="entry colsep-1 rowsep-1" headers="reference_jd1_r5g_bx__table_td1_r5g_bx__entry__1 ">id</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_jd1_r5g_bx__table_td1_r5g_bx__entry__2 ">Smartlist's ID</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_jd1_r5g_bx__table_td1_r5g_bx__entry__3 ">stlst000000000001000</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_jd1_r5g_bx__table_td1_r5g_bx__entry__4 ">string</td>
+                            <td class="entry colsep-1 rowsep-1" headers="reference_jd1_r5g_bx__table_td1_r5g_bx__entry__5 ">Yes</td>
+                        </tr>
+                    </tbody></table>
+        </div>
+    </article>
+</article></main></body></html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="foundation, restful web services, find the details of the attachment for a given id, foundation components, find the details of the attachment for a given id, get actual content of an attachment, get actual content of an attachment, find all attachments, find all public/private attachments, find all public/private attachments, create a new attachment, create a new attachment, create a new attachment (url), create a new attachment (url), update an attachment, update an attachment"><meta name="keywords" content="foundation, restful web services, find the details of the attachment for a given id, foundation components, find the details of the attachment for a given id, get actual content of an attachment, get actual content of an attachment, find all attachments, find all public/private attachments, find all public/private attachments, create a new attachment, create a new attachment, create a new attachment (url), create a new attachment (url), update an attachment, update an attachment"><meta name="DC.Relation" scheme="URI" content="../developer/part-foundation.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0e656"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Attachment</title></head><body id="d0e656"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Attachment</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-foundation.html">Foundation</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC">
+        <h2 class="title topictitle2" id="ariaid-title2">FIND DETAILS OF ATTACHMENT FOR A GIVEN ID</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the attachments along with the IDs. You can filter the
+                    results using the attachment's reference ID.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/attachments/attachment/:id/detail<div class="note note note_note"><span class="note__title">Note:</span> <p class="p">This
+                            API does not support retrieving additional details using Field
+                            Selectors.</p><p class="p">The following is a <strong class="ph b">deprecated</strong> URL for this REST
+                            Web service and will be discontinued in the next few
+                            updates:</p>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/platform/attachments/attachment/:id/detail</div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2 ">Attachment's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "@type": "com.saba.rest.dto.AttachmentDTO",
+    "id": "notdc000000000203149",
+    "file-name": "1.png",
+    "locale": {
+        "@type": "com.saba.rest.dto.LocaleDTO",
+        "name": "English",
+        "id": "local000000000000001"
+    },
+    "is-private": true,
+    "audit-reason": null,
+    "mime-type": "image/png",
+    "category": "Map",
+    "owner-id": "locat000000000200040",
+    "url": null,
+    "is-url": false,
+    "attachment-name": "tulipFileTest104"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_e1x_5lx_fp">
+        <h2 class="title topictitle2" id="ariaid-title3">GET ACTUAL CONTENT OF AN ATTACHMENT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the contents of the attachment based on the Attachment's ID.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/attachments/attachment/:id</p>
+                <div class="note note note_note"><span class="note__title">Note:</span> <p class="p">The following is a <strong class="ph b">deprecated</strong> URL for this REST Web service and will
+                        be discontinued in the next few
+                        updates:</p>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/platform/attachments/attachment/:id</div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_e1x_5lx_fp__table_k1x_5lx_fp"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_e1x_5lx_fp__table_k1x_5lx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_e1x_5lx_fp__table_k1x_5lx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_e1x_5lx_fp__table_k1x_5lx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_e1x_5lx_fp__table_k1x_5lx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_e1x_5lx_fp__table_k1x_5lx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_e1x_5lx_fp__table_k1x_5lx_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_e1x_5lx_fp__table_k1x_5lx_fp__entry__2 ">Attachment's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_e1x_5lx_fp__table_k1x_5lx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_e1x_5lx_fp__table_k1x_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_e1x_5lx_fp__table_k1x_5lx_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>Renders the content of the actual attachment.</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_hxw_5lx_fp">
+        <h2 class="title topictitle2" id="ariaid-title4">FIND ALL ATTACHMENTS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all attachments for a given owner ID.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/attachments?ownerName=:ownerName&amp;ownerId=:ownerId</p>
+                <div class="note note note_note"><span class="note__title">Note:</span> <p class="p">The following is a <strong class="ph b">deprecated</strong> URL for this REST Web service and will
+                        be discontinued in the next few
+                        updates:</p>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/platform/attachments?ownerId=:ownerId</div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_hxw_5lx_fp__table_nxw_5lx_fp"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__1 ">ownerId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__2 ">Reference's ID of the attachment</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__3 ">locat000000000200040</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__1 ">ownerName</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__2 ">Component Name of Owner</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__3 ">location</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hxw_5lx_fp__table_nxw_5lx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+                <div class="note note note_note"><span class="note__title">Note:</span> The startPage and count parameters are not listed here since this REST Web
+                    service does not support pagination.</div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>[
+    "list",
+    [
+        {
+            "@type": "com.saba.rest.dto.AttachmentDTO",
+            "id": "notdc000000000203268",
+            "file-name": "Map",
+            "locale": {
+                "@type": "com.saba.rest.dto.LocaleDTO",
+                "name": "English",
+                "id": "local000000000000001"
+            },
+            "category": "Map",
+            "mime-type": "text/html",
+            "owner-id": "pordr000000000200182",
+            "url": "www.saba.com",
+            "audit-reason": null,
+            "is-private": false,
+            "is-url": true,
+            "attachment-name": "RESTAttaTest101"
+        },
+        {
+            "@type": "com.saba.rest.dto.AttachmentDTO",
+            "id": "notdc000000000203269",
+            "file-name": "Setup",
+            "locale": {
+                "@type": "com.saba.rest.dto.LocaleDTO",
+                "name": "English",
+                "id": "local000000000000001"
+            },
+            "category": "Setup",
+            "mime-type": "text/html",
+            "owner-id": "pordr000000000200182",
+            "url": "www.google.com",
+            "audit-reason": null,
+            "is-private": true,
+            "is-url": true,
+            "attachment-name": "RESTAttaTest102"
+        }
+    ]
+]</code></pre>
+                <div class="note note note_note"><span class="note__title">Note:</span> For file attachments: The URL (in the JSON) is the download URL for the
+                    attachment.&nbsp;Clicking this URL will download the file attachment directly. <p class="p">For
+                        URL attachments: The URL (in the JSON) points to the actual URL added while
+                        creating the attachment.</p></div>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_hs2_hfc_xw">
+        <h2 class="title topictitle2" id="ariaid-title5">FIND ALL PUBLIC/PRIVATE ATTACHMENTS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all public/private attachments for a given owner ID.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/attachments?ownerName=:ownerName&amp;ownerId=:ownerId&amp;isPrivate=:isPrivate</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">location</strong> instead of the internal Owner's
+                        ID.<p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/attachments/?ownerId=location%3D<em class="ph i">&lt;LocationName&gt;</em></p></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_hs2_hfc_xw__table_rs2_hfc_xw"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__1 ">ownerId</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__2 ">Reference's ID of the attachment</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__3 ">locat000000000200040</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__1 ">ownerName</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__2 ">Component Name of Owner</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__3 ">location</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__1 ">isPrivate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__2 ">Flag to get public/private attachments.
+                                        <p class="p">"EnumeratedList": [ "true", "false" ]</p><p class="p">If a value is
+                                        not provided for this parameter, the API will fetch all
+                                        (public and private) the attachments for the given owner
+                                        ID.</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__4 ">enumerated</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_hs2_hfc_xw__table_rs2_hfc_xw__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>[
+  "list",
+  [
+    {
+      "@type": "com.saba.rest.dto.AttachmentDTO",
+      "id": "notdc000000000224745",
+      "file-name": "Penguins",
+      "locale": {
+        "@type": "com.saba.rest.dto.LocaleDTO",
+        "name": "English",
+        "id": "local000000000000001"
+      },
+      "createdBy": "emplo000000000001000",
+      "createdId": "uone",
+      "owner-id": "locat000000000200040",
+      "mime-type": "image/jpeg",
+      "attachment-name": "Publicattachment",
+      "fileExtension": ".jpg",
+      "url": "http://&lt;hostname&gt;/Saba/Web/Main?ssp=pageIsIgnored
+            &amp;doIt=showAttachment&amp;showbinary=true&amp;attachId
+            =.-.CB7D9D9C6E847507EE9693C641297AD88E23482C4B65A40527E479
+            56338840ED-.-&amp;mimeType=image/jpeg&amp;deepLinkCertificate=3135363
+            6386337653832345E235E756F6E655E235E53616261536974655E235E656E
+            5F55535E235E536162615E235E24414240302C02146974AD81F8144FBEDD9
+            905420AE3DD07BB2FECBE02145670EEA450861BB6C9AE67AB3FB6C56E9B4A163B
+            &amp;isAttachment=true",
+      "category": "Map",
+      "is-url": false,
+      "audit-reason": null,
+      "is-private": false
+    }
+  ]
+]</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_n5w_5lx_fp">
+        <h2 class="title topictitle2" id="ariaid-title6">CREATE A NEW ATTACHMENT (FILE) </h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows creating a new attachment using a file using multipart/form-data as the
+                    content-type.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/attachments<div class="note note note_note"><span class="note__title">Note:</span> <p class="p">The
+                            following is a <strong class="ph b">deprecated</strong> URL for this REST Web service and will
+                            be discontinued in the next few
+                            updates:</p>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/platform/attachments</div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_n5w_5lx_fp__table_u5w_5lx_fp"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__1 ">metadata</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__2 ">Accepts JSON as the metadata. Please refer to the Request
+                                    Body.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__1 ">file1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__2 ">
+                                    <p class="p">For uploading the file.</p>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__4 ">file</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_n5w_5lx_fp__table_u5w_5lx_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+   "file-name":"Tulips.jpg",
+   "locale":{
+      "id":"local000000000000001",
+      "name":"English"
+   },
+   "category":"Map",
+   "mime-type":"image/jpeg",
+   "url":null,
+   "is-private":true,
+   "audit-reason":null,
+   "is-url":false,
+   "attachment-name":"tulipFileTest103",
+   "owner-id":"locat000000000200040"
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "@type": "com.saba.rest.dto.AttachmentDTO",
+    "id": "notdc000000000203151",
+    "file-name": "1.png",
+    "locale": {
+        "@type": "com.saba.rest.dto.LocaleDTO",
+        "name": "English",
+        "id": "local000000000000001"
+    },
+    "is-private": true,
+    "audit-reason": null,
+    "mime-type": "image/jpeg",
+    "category": "Map",
+    "owner-id": "locat000000000200040",
+    "url": null,
+    "is-url": false,
+    "attachment-name": "tulipFileTest105"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_asw_5lx_fp">
+        <h2 class="title topictitle2" id="ariaid-title7">CREATE A NEW ATTACHMENT (URL) </h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows creating a new attachment using a URL.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/attachments<div class="note note note_note"><span class="note__title">Note:</span> <p class="p">The
+                            following is a <strong class="ph b">deprecated</strong> URL for this REST Web service and will
+                            be discontinued in the next few
+                            updates:</p>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/platform/attachments</div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_asw_5lx_fp__table_fsw_5lx_fp"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_asw_5lx_fp__table_fsw_5lx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_asw_5lx_fp__table_fsw_5lx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_asw_5lx_fp__table_fsw_5lx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_asw_5lx_fp__table_fsw_5lx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_asw_5lx_fp__table_fsw_5lx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_asw_5lx_fp__table_fsw_5lx_fp__entry__1 ">metadata</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_asw_5lx_fp__table_fsw_5lx_fp__entry__2 ">Accepts JSON as the metadata. Please refer to the Request
+                                    Body.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_asw_5lx_fp__table_fsw_5lx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_asw_5lx_fp__table_fsw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_asw_5lx_fp__table_fsw_5lx_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+   "locale":{
+      "id":"local000000000000001",
+      "name":"English"
+   },
+   "category":"Map",
+   "mime-type":"image/jpeg",
+   "url":null,
+   "is-private":true,
+   "audit-reason":null,
+   "is-url":true,
+   "attachment-name":"urlTest103",
+   "owner-id":"locat000000000200040"
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "@type": "com.saba.rest.dto.AttachmentDTO",
+    "id": "notdc000000000203152",
+    "file-name": null,
+    "locale": {
+        "@type": "com.saba.rest.dto.LocaleDTO",
+        "name": "English",
+        "id": "local000000000000001"
+    },
+    "is-private": true,
+    "audit-reason": null,
+    "mime-type": "image/jpeg",
+    "category": "Map",
+    "owner-id": "locat000000000200040",
+    "url": "www.saba.com",
+    "is-url": true,
+    "attachment-name": "urlTest105"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="reference_ipw_5lx_fp">
+        <h2 class="title topictitle2" id="ariaid-title8">UPDATE AN ATTACHMENT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Updates an attachment</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/attachments/:id<div class="note note note_note"><span class="note__title">Note:</span> <p class="p">The
+                            following is a <strong class="ph b">deprecated</strong> URL for this REST Web service and will
+                            be discontinued in the next few
+                            updates:</p>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/Saba/api/platform/attachments/:id</div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_ipw_5lx_fp__table_spw_5lx_fp"><caption><span class="table--title-label">Table 7. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__1 ">@type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__2 ">Type of class</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__3 ">com.saba.rest.dto.AttachmentDTO</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__2 ">Attachement's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__1 ">owner-id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__2 ">Owner's ID Or Lookup is also possible like
+                                    Location=locat000000000200020</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__3 ">locat000000000200040</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__1 ">is-private</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__2 ">Whether the attachment is private</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__1 ">attachment-name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__2 ">Name of the attachment</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__1 ">category</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__2 ">Category</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__1 ">file-name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__2 ">Filename of the attachment</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__1 ">mime-type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__2 ">Mime-type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__1 ">url</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__2 ">URL</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__1 ">is-url</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__2 ">Whether the attachment is a URL
+                                    (true/false)</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__1 ">locale</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__2 ">Locale</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__3 ">{"@type": "com.saba.rest.dto.LocaleDTO","name":
+                                    "English","id": "local000000000000001"} </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ipw_5lx_fp__table_spw_5lx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "@type": "com.saba.rest.dto.AttachmentDTO",
+    "id": "notdc000000000203115",
+    "file-name": "Tulips.jpg",
+    "locale": {
+        "@type": "com.saba.rest.dto.LocaleDTO",
+        "name": "English",
+        "id": "local000000000000001"
+    },
+    "is-private": true,
+    "mime-type": "image/jpeg",
+    "category": "Map",
+    "url": null,
+    "owner-id": "locat000000000200040",
+    "is-url": false,
+    "attachment-name": "tulipFileTest103 moddiffied using RESTTTT",
+    "audit-reason": null
+}</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

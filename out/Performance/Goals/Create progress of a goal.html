@@ -1,0 +1,142 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="performance, restful web services, get all goals for a person, performance components, get all goals for a person, get the details of a particular goal, get the details of a particular goal, create goal for self/team, create goal for self/team, create progress of a goal, create progress of a goal, change status of a goal, change status of a goal, update approver of goal., update approver of goal., update goal for self/team, update goal for self/team">
+  <meta name="keywords" content="performance, restful web services, get all goals for a person, performance components, get all goals for a person, get the details of a particular goal, get the details of a particular goal, create goal for self/team, create goal for self/team, create progress of a goal, create progress of a goal, change status of a goal, change status of a goal, update approver of goal., update approver of goal., update goal for self/team, update goal for self/team">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-performance.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Goals</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title5">CREATE PROGRESS OF A GOAL</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Creates progress of a Goal.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">POST</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/performance/goals/:goalId/createProgress</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_xnh_nn5_pv__table_h4h_nn5_pv" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 4. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3">Default Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1 ">goalId</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2 ">ID of goal</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2 ">@type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3 ">com.saba.rest.service.goal.RestGoalProgressDetail</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1 ">goalStatus</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2 ">Status of a Goal</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1 ">percentageCompleted</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2 ">The total percentage completed</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1 ">currentValue</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2 ">Current value</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__1 ">comment</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__2 ">Comment</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_xnh_nn5_pv__table_h4h_nn5_pv__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5> 
+    <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.RestGoalProgressDetail",
+   "goalStatus":{  
+      "@type":"com.saba.goal.entity.GoalStatusReference",
+      "id":"gstts000000000001000"
+   },
+   "percentageCompleted":58,
+   "currentValue":1.58,
+   "comment":"f"
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{  
+   "@type":"com.saba.rest.service.goal.RestGoalProgressDetail",
+   "goalStatus":{  
+      "@type":"com.saba.goal.entity.GoalStatusReference",
+      "id":"gstts000000000001000"
+   },
+   "percentageCompleted":48,
+   "currentValue":null,
+   "comment":"asd"
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

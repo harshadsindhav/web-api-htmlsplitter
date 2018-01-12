@@ -1,0 +1,3486 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="learning, restful web services, get all courses, learning components, find the details of the courses, find the details of the courses, find the details of the course (using post - range based search), find the details of the course (using post - range based search), get the details of a particular course, get the details of a particular course, get the meta details of course, get the meta details of course, create a new course, update the details of a course, update the details of a course"><meta name="keywords" content="learning, restful web services, get all courses, learning components, find the details of the courses, find the details of the courses, find the details of the course (using post - range based search), find the details of the course (using post - range based search), get the details of a particular course, get the details of a particular course, get the meta details of course, get the meta details of course, create a new course, update the details of a course, update the details of a course"><meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Learning-apis"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Course</title></head><body id="Learning-apis"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Course</h1>
+    <div class="abstract">The deeplinks that the web services return will be based on the URL of the default
+        (SabaCloud) microsite. For
+        example:<pre class="pre codeblock"><code>https://&lt;hostname&gt;.sabacloud.com/Saba/Web_spf/ATHDB1/common/learningeventdetail/crtfy000000000200180  </code></pre></div>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-learning.html">Learning</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-get-all-courses-N1088E">
+        <h2 class="title topictitle2" id="ariaid-title2">GET ALL COURSES</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all Courses for which the user has access. </p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <div class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course<div class="note note note_note"><span class="note__title">Note:</span> To
+                        enable Audience Type check as part of the course search, add
+                            <strong class="ph b">at_check%3D%3Dtrue</strong> in the <strong class="ph b">q</strong> param list. This means if a
+                        learner searches the catalog, then this API will return only those courses
+                        whose Audience Type aligns with Audience Type of the
+                            learner:<pre class="pre codeblock"><code>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course?q=(<strong class="ph b">at_check%3D%3Dtrue</strong>)</code></pre><p class="p">Do
+                            not include this query parameter, if you do need filtering based on the
+                            Audience Type.</p></div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "facets": [],
+  "startIndex": 1,
+  "results": [
+    {
+      "title": "@@@@@@@@@ ##### $$$123 @@@@@@@@@ ##### $$$123@@@@@@@@@ ##### $$$123 @@@@@@@@@ ##### $$$123 @@@@@@@@@ ##### $$$123 @@@@@@@@@ ##### $$$123 @@@@@@@@@ ##### $$$123 dshsdkljfkdshf",
+      "id": "cours000000000002857",
+      "href": "https://dqathdb1-api.sabacloud.com/v1/course/cours000000000002857"
+    },
+    {
+      "title": "@$# $ 8-updated name_00000000000000",
+      "id": "cours000000000041480",
+      "href": "https://dqathdb1-api.sabacloud.com/v1/course/cours000000000041480"
+    },
+    {
+      "title": "@$# $ 8-updated name_3",
+      "id": "cours000000000037600",
+      "href": "https://dqathdb1-api.sabacloud.com/v1/course/cours000000000037600"
+    },
+    {
+      "title": "@$# $ 8-updated name_3",
+      "id": "cours000000000002860",
+      "href": "https://dqathdb1-api.sabacloud.com/v1/course/cours000000000002860"
+    },
+    {
+      "title": "@$# $ 8-updated name_3_Test",
+      "id": "cours000000000040627",
+      "href": "https://dqathdb1-api.sabacloud.com/v1/course/cours000000000040627"
+    },
+    {
+      "title": "@$# $ 8-updated name_3_Test",
+      "id": "cours000000000040619",
+      "href": "https://dqathdb1-api.sabacloud.com/v1/course/cours000000000040619"
+    },
+    {
+      "title": "@$# $ 8-updated name_3_Test1",
+      "id": "cours000000000040628",
+      "href": "https://dqathdb1-api.sabacloud.com/v1/course/cours000000000040628"
+    },
+    {
+      "title": "@$# $ 8-updated name_3_Testingw",
+      "id": "cours000000000040633",
+      "href": "https://dqathdb1-api.sabacloud.com/v1/course/cours000000000040633"
+    },
+    {
+      "title": "@$# $ 8-updated name_3_Testingw1",
+      "id": "cours000000000040636",
+      "href": "https://dqathdb1-api.sabacloud.com/v1/course/cours000000000040636"
+    },
+    {
+      "title": "!@#$%^*&amp;()???°??ïéê\"",
+      "id": "cours000000000006559",
+      "href": "https://dqathdb1-api.sabacloud.com/v1/course/cours000000000006559"
+    }
+  ],
+  "hasMoreResults": true,
+  "itemsPerPage": 10,
+  "totalResults": 30451
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_fxh_lnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title3">FIND DETAILS OF COURSES</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the Courses along with the ID, Name and the Deeplink URL
+                    based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course?q=(:criteria)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_fxh_lnx_fp__table_nxh_lnx_fp"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__1 ">criteria</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__2 ">The search criteria i.e. the criteria field name
+                                    with search value.<div class="p">You can use any field with
+                                        "isSearchFilter": true.<div class="note note note_note"><span class="note__title">Note:</span> To find out the fields that
+                                            have "isSearchFilter": true, invoke the "Get the Meta
+                                            details" REST APIs.</div></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__3 ">updated_on%3Dge%3D2011-01-29 01:29:32
+                                    AM,updated_on%3Dle%3D2012-01-29 01:29:32 AM</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_fxh_lnx_fp__table_nxh_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "results": [
+    {
+      "title": "8th oct",
+      "id": "cours000000000202788",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202788"
+    },
+    {
+      "title": "8th oct",
+      "id": "cours000000000202791",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202791"
+    },
+    {
+      "title": "8thOct2",
+      "id": "cours000000000202792",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202792"
+    },
+    {
+      "title": "8thOct2",
+      "id": "cours000000000202793",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202793"
+    },
+    {
+      "title": "New_sept15",
+      "id": "cours000000000202648",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202648"
+    },
+    {
+      "title": "New_sept15",
+      "id": "cours000000000202649",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202649"
+    },
+    {
+      "title": "New_sept15",
+      "id": "cours000000000202650",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202650"
+    },
+    {
+      "title": "New_sept15",
+      "id": "cours000000000202651",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202651"
+    },
+    {
+      "title": "New_sept15",
+      "id": "cours000000000202652",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202652"
+    },
+    {
+      "title": "New_sept15",
+      "id": "cours000000000202654",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202654"
+    }
+  ],
+  "facets": [],
+  "hasMoreResults": true,
+  "totalResults": 191,
+  "itemsPerPage": 10,
+  "startIndex": 1
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Example (Courses that have changed between two timestamps)</h3><p class="p">To
+                    find out all the courses that have changed between two timestamps (for example
+                    based on
+                    <strong class="ph b">created_on</strong>):</p>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course?q=(created_on%3Dge%3D2010-01-29
+                01:29:32 AM,created_on%3Dle%3D2012-01-29 01:29:32 AM)<p class="p"><strong class="ph b">Return
+                    Values:</strong></p><pre class="pre codeblock"><code>{
+  "results": [
+    {
+      "title": "course_with_locale",
+      "id": "cours000000000202086",
+      "href": "http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course/cours000000000202086"
+    }
+  ],
+  "facets": [],
+  "startIndex": 1,
+  "totalResults": 1,
+  "hasMoreResults": false,
+  "itemsPerPage": 10
+}</code></pre><p class="p">To
+                    find out all the courses that have changed between two timestamps (for example
+                    based on
+                    <strong class="ph b">updated_on</strong>):</p>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course?q=(updated_on%3Dge%3D2010-01-29
+                01:29:32 AM,updated_on%3Dle%3D2012-01-29 01:29:32 AM)<p class="p"><strong class="ph b">Return
+                Values:</strong></p><pre class="pre codeblock"><code>{
+  "results": [
+    {
+      "title": "course_with_locale",
+      "id": "cours000000000202086",
+      "href": "http://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course/cours000000000202086"
+    }
+  ],
+  "facets": [],
+  "startIndex": 1,
+  "totalResults": 1,
+  "hasMoreResults": false,
+  "itemsPerPage": 10
+}</code></pre></section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_z25_vnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title4">FIND DETAILS OF COURSE (Using POST - Range based search)</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the course along with the ID, Name and the Deeplink URL
+                    based on the provided range based search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course/searchQuery?count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_z25_vnx_fp__table_if5_vnx_fp"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">conditions &gt; name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The search conditions.<div class="p">You can use any field
+                                        with "isSearchFilter": true.<div class="note note note_note"><span class="note__title">Note:</span> To find out the fields
+                                            that have "isSearchFilter": true, invoke the "Get the
+                                            Meta details" REST APIs.</div>You can use search
+                                        operators such as:<ul class="ul" id="reference_z25_vnx_fp__ul_of5_vnx_fp">
+                                            <li class="li">=gt= - Greater than</li>
+                                            <li class="li">=ge= - Greater or Equal</li>
+                                            <li class="li">=lt= - Less than</li>
+                                            <li class="li">=le= - Less or Equal</li>
+                                            <li class="li">== - Equal</li>
+                                            <li class="li">!= - Not Equal</li>
+                                            <li class="li">; - AND</li>
+                                            <li class="li">, - OR</li>
+                                        </ul></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">[{\"name\": \"updated_on\",\"operator\":
+                                    \"=gt=\",\"value\": \"2010-01-29 01:29:32 AM\"},{\"name\":
+                                    \"updated_on\",\"operator\": \"=lt=\",\"value\": \"2012-01-29
+                                    01:29:32 AM\"}]</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_z25_vnx_fp__table_if5_vnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "conditions": [
+  {
+      "name": "created_on",
+      "operator": "=gt=",
+       "value": "2010-01-29 01:29:32 AM"
+    },
+     {
+      "name": "created_on",
+      "operator": "=lt=",
+       "value": "2012-01-29 01:29:32 AM"
+    }
+    
+  ]
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "results": [
+    {
+      "title": "8th oct",
+      "id": "cours000000000202788",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202788"
+    },
+    {
+      "title": "8th oct",
+      "id": "cours000000000202791",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202791"
+    },
+    {
+      "title": "8thOct2",
+      "id": "cours000000000202792",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202792"
+    },
+    {
+      "title": "8thOct2",
+      "id": "cours000000000202793",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202793"
+    },
+    {
+      "title": "New_sept15",
+      "id": "cours000000000202648",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202648"
+    },
+    {
+      "title": "New_sept15",
+      "id": "cours000000000202649",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202649"
+    },
+    {
+      "title": "New_sept15",
+      "id": "cours000000000202650",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202650"
+    },
+    {
+      "title": "New_sept15",
+      "id": "cours000000000202651",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202651"
+    },
+    {
+      "title": "New_sept15",
+      "id": "cours000000000202652",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202652"
+    },
+    {
+      "title": "New_sept15",
+      "id": "cours000000000202654",
+      "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000202654"
+    }
+  ],
+  "facets": [],
+  "hasMoreResults": true,
+  "totalResults": 191,
+  "itemsPerPage": 10,
+  "startIndex": 1
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_snh_lnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title5">GET DETAILS OF A PARTICULAR COURSE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a course based on the course's ID that is
+                    passed as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_snh_lnx_fp__table_b4h_lnx_fp"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__2 ">Course's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__3 ">cours000000000202106</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_snh_lnx_fp__table_b4h_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "language": [
+    {
+      "language_id": {
+        "id": "lange000000000000001",
+        "displayName": "English"
+      },
+      "str1": "0000000000",
+      "id": "g12rc000000000203785"
+    }
+  ],
+  "parent_id": null,
+  "type": 0,
+  "owner": [],
+  "version": "v16",
+  "avail_from": "2013-08-12T00:00:00.000+0530",
+  "disc_from": "2018-11-12T00:00:00.000+0530",
+  "title": "New_sept15",
+  "validtill_type": 0,
+  "avail_web": true,
+  "published": false,
+  "is_sensitive": false,
+  "course_no": "00006729",
+  "validtill_unit": 0,
+  "vendor_id": null,
+  "hide_classmates": false,
+  "training_units": 0,
+  "tags": [],
+  "suppress_score": false,
+  "abstrac": "null",
+  "category": [],
+  "test": false,
+  "validtill_frequency": null,
+  "validtill_daymonth": null,
+  "validtill_start_daymonth": null,
+  "avail_call_center": true,
+  "field_of_study": [
+    {
+      "fosId": {
+        "id": "fldst000000000001001",
+        "displayName": "FOS2"
+      },
+      "credits": "2"
+    },
+    {
+      "fosId": {
+        "id": "fldst000000000001000",
+        "displayName": "FOS1"
+      },
+      "credits": "5"
+    }
+  ],
+  "allPrices": [
+    {
+      "displayValue": "0 USD",
+      "curr_id": {
+        "id": "crncy000000000000001",
+        "displayName": "US Dollars"
+      },
+      "amount": 0,
+      "id": "plent000000000205268"
+    }
+  ],
+  "image": "http://&lt;hostname-api.sabacloud.com&gt;/assets/spf/skin/wireframe/media/images/CoursesEcommerce.png",
+  "recommended_prerequisites": [
+    {
+      "version": null,
+      "title": "NETg and Skillsoft testing - Introduction1",
+      "courseNumber": "NSI001",
+      "courseId": {
+        "id": "cours000000000200026",
+        "displayName": null
+      }
+    },
+    {
+      "version": null,
+      "title": "wbt_basic",
+      "courseNumber": "WBT_BASE",
+      "courseId": {
+        "id": "cours000000000200060",
+        "displayName": null
+      }
+    },
+    {
+      "version": null,
+      "title": "EWJ Offering",
+      "courseNumber": "EMAY",
+      "courseId": {
+        "id": "cours000000000200061",
+        "displayName": null
+      }
+    }
+  ],
+  "required_prerequisites": [
+    {
+      "version": "v321",
+      "title": "new1",
+      "courseNumber": "00200932",
+      "courseId": {
+        "id": "cours000000000202785",
+        "displayName": null
+      }
+    },
+    {
+      "version": null,
+      "title": "alla_sb_data",
+      "courseNumber": "A",
+      "courseId": {
+        "id": "cours000000000200030",
+        "displayName": null
+      }
+    }
+  ],
+  "created_on": "2015-10-08T17:41:46.000+0530",
+  "updated_by": "uone",
+  "updated_on": "2015-10-08T17:45:14.000+0530",
+  "created_by": "uone",
+  "created_id": "emplo000000000001000",
+  "reAssignedTargetDays": null,
+  "consume_within_cert": false,
+  "recertwindow_unit": 0,
+  "audienceType": [
+    {
+      "audience_type_id": {
+        "id": "audie000000000200000",
+        "displayName": "CustomerType1"
+      },
+      "offering_temp_id": {
+        "id": "cours000000000202858",
+        "displayName": "New_sept15"
+      }
+    }
+  ],
+  "subscribed": false,
+  "max_ct": null,
+  "min_ct": null,
+  "waitlist_max": null,
+  "deepLinkUrls": [
+    "http://localhost/Saba/Web_spf/Social/common/ledetail/cours000000000202858",
+    "http://localhost/Saba/Web_spf/Social/common/ledetail/00006729"
+  ],
+  "description": "hi, this is interesting",
+  "valid_till": null,
+  "notify_before": null,
+  "status": "INEFFECT",
+  "recert_window": null,
+  "featured": false,
+  "createGroupPolicyVal": false,
+  "target_days": 0,
+  "customValues": {
+    "custom0": "1",
+    "custom11": null,
+    "custom10": null,
+    "custom9": null,
+    "custom13": null,
+    "custom12": null,
+    "custom14": null,
+    "custom3": null,
+    "custom4": null,
+    "custom1": null,
+    "custom2": null,
+    "custom7": null,
+    "custom8": null,
+    "custom5": null,
+    "custom6": null
+  },
+  "securityDomain": {
+    "id": "domin000000000001001",
+    "displayName": "Domain2"
+  },
+  "showRegCustom": "false",
+  "showDropCustom": "false",
+  "id": "cours000000000202858"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_lch_lnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title6">GET META DETAILS OF COURSE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of the course.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course/meta</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "sampleData": {
+        "language": null,
+        "parent_id": null,
+        "type": 0,
+        "owner": [
+            {
+                "parent": null,
+                "type": "100",
+                "owner": {
+                    "id": "emplo000000000001000",
+                    "displayName": "User One"
+                },
+                "ownerType": "100",
+                "hasEdit": false,
+                "hasView": false,
+                "sequence": 0,
+                "id": null
+            }
+        ],
+        "version": "",
+        "field_of_study": null,
+        "test": false,
+        "consume_within_cert": false,
+        "show_web2_0_actions": true,
+        "tags": null,
+        "audienceType": null,
+        "subscribed": false,
+        "avail_from": "2016-02-19T14:28:33.991+0530",
+        "disc_from": null,
+        "title": "",
+        "validtill_type": 0,
+        "avail_web": true,
+        "published": false,
+        "is_sensitive": false,
+        "course_no": "00201089",
+        "validtill_unit": 0,
+        "vendor_id": null,
+        "hide_classmates": false,
+        "training_units": 0,
+        "suppress_score": false,
+        "allPrices": null,
+        "abstrac": "",
+        "category": null,
+        "image": null,
+        "recommended_prerequisites": null,
+        "required_prerequisites": null,
+        "validtill_frequency": null,
+        "validtill_daymonth": null,
+        "validtill_start_daymonth": null,
+        "avail_call_center": true,
+        "created_on": null,
+        "updated_by": null,
+        "updated_on": null,
+        "created_by": null,
+        "created_id": null,
+        "reAssignedTargetDays": null,
+        "max_ct": null,
+        "min_ct": null,
+        "waitlist_max": null,
+        "deepLinkUrls": null,
+        "recertwindow_unit": 0,
+        "description": "",
+        "status": "INEFFECT",
+        "valid_till": null,
+        "notify_before": null,
+        "recert_window": null,
+        "featured": false,
+        "createGroupPolicyVal": true,
+        "target_days": 0,
+        "customValues": {
+            "custom0": null,
+            "excustom2": null,
+            "excustom1": null,
+            "custom11": null,
+            "custom10": null,
+            "custom9": null,
+            "custom13": null,
+            "custom12": null,
+            "custom14": null,
+            "custom3": null,
+            "custom4": null,
+            "custom1": null,
+            "custom2": null,
+            "custom7": null,
+            "custom8": null,
+            "custom5": null,
+            "custom6": null
+        },
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": null
+        },
+        "id": null,
+        "href": "https://&lt;hostname-api.sabacloud.com/v1/course/cours000000000000001"
+    },
+    "name": "Offering Template",
+    "displayName": "Course",
+    "attributes": [
+        {
+            "name": "abstrac",
+            "displayName": "Abstract",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 1000,
+            "maximumLength": 1000,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "allPrices",
+            "displayName": "All prices",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "component": {
+                "name": "Price List Entry",
+                "displayName": "Price List Entry",
+                "attributes": [
+                    {
+                        "name": "amount",
+                        "displayName": "Amount",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "real",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": true
+                    },
+                    {
+                        "name": "charge_type",
+                        "displayName": "Charge Type",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "curr_id",
+                        "displayName": "Currency Id",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "displayValue",
+                        "displayName": "Display Name",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "ID",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "part_id",
+                        "displayName": "Part Id",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "price_list_id",
+                        "displayName": "Price List ID",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "price_type",
+                        "displayName": "Price Type",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "audienceType",
+            "displayName": "Audience Type",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "component": {
+                "name": "OfferingTemplateAudienceType",
+                "displayName": "Course Audience Type",
+                "attributes": [
+                    {
+                        "name": "audience_type_id",
+                        "displayName": "Audience Type",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": true
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "kI18nALOfferingTemplateAudienceType_id(Missing resource)",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "inherit",
+                        "displayName": "kI18nALOfferingTemplateAudienceType_inherit(Missing resource)",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "inherited_from",
+                        "displayName": "kI18nALOfferingTemplateAudienceType_inherited_from(Missing resource)",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "offering_temp_id",
+                        "displayName": "Course",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "avail_call_center",
+            "displayName": "Display for Call Center",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "avail_from",
+            "displayName": "Available From",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "avail_web",
+            "displayName": "Display for Learner",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "category",
+            "displayName": "Category",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "component": {
+                "name": "Category",
+                "displayName": "Category",
+                "attributes": [
+                    {
+                        "name": "context_id",
+                        "displayName": "Context",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "context_type",
+                        "displayName": "Context Type",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "createdId",
+                        "displayName": "CreatedId",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "description",
+                        "displayName": "Description",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "length": 1000,
+            "maximumLength": 1000,
+                        "isSearchFilter": true
+                    },
+                    {
+                        "name": "featured",
+                        "displayName": "Featured",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "flag",
+                        "displayName": "Flag",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "kI18nALCategory_id(Missing resource)",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "language_id",
+                        "displayName": "Language",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "isProtected": false,
+                        "display": true,
+                        "component": {
+                            "componentName": "Language",
+                            "href": "https://&lt;hostname-api.sabacloud.com/v1/Language/meta",
+                            "description": "Language"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "displayName": "Name",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "length": 255,
+            "maximumLength": 255,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "owner_id",
+                        "displayName": "Owner",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "parent_id",
+                        "displayName": "Parent",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "recommendable",
+                        "displayName": "Recommendable",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "securityDomain",
+                        "displayName": "Split",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "isProtected": false,
+                        "display": true,
+                        "component": {
+                            "componentName": "Domain",
+                            "href": "https://&lt;hostname-api.sabacloud.com/v1/domain/meta",
+                            "description": "Domain table"
+                        }
+                    },
+                    {
+                        "name": "state",
+                        "displayName": "State",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "length": 50,
+            "maximumLength": 50,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "supported_types",
+                        "displayName": "Supported Types",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "length": 50,
+            "maximumLength": 50,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "visibility",
+                        "displayName": "Visibility",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "length": 50,
+            "maximumLength": 50,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "competency_name",
+            "displayName": "Competency Name",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "consume_within_cert",
+            "displayName": "Consumable only within Certification/Curriculum",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "course_no",
+            "displayName": "Course ID",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 25,
+            "maximumLength": 25,
+            "isSearchFilter": true
+        },
+        {
+            "name": "created_by",
+            "displayName": "Created By ",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "created_id",
+            "displayName": "Created Id",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "created_on",
+            "displayName": "Created On",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "createGroupPolicyVal",
+            "displayName": "Create Group",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "csr_id",
+            "displayName": "Customer Service Representative",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "deepLinkUrls",
+            "displayName": "Deelink Urls",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "description",
+            "displayName": "Description",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 5000,
+            "maximumLength": 5000,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "disc_from",
+            "displayName": "Discontinued From",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "featured",
+            "displayName": "Featured",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "field_of_study",
+            "displayName": "Field of Study",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "hide_classmates",
+            "displayName": "Hide Classmates",
+            "description": "If true, then classmates portlet and course statistics portlet will be hidden on end user detail pages.",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "id",
+            "displayName": "Course ID",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "image",
+            "displayName": "Image",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "is_sensitive",
+            "displayName": "Is Sensitive",
+            "description": "If true,the course can be consumed by a learner but the registration and completion is not visible to non qualified persons.",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "keywordName",
+            "displayName": "Keyword Name",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "language",
+            "displayName": "Language",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "component": {
+                "name": "Languages for a Course",
+                "displayName": "Languages for a Course",
+                "attributes": [
+                    {
+                        "name": "course_id",
+                        "displayName": "Course",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "kI18nALLanguagesforaCourse_id(Missing resource)",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "language_id",
+                        "displayName": "Language",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "str1",
+                        "displayName": "Flags",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "length": 25,
+            "maximumLength": 25,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "str2",
+                        "displayName": "Course Title",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "length": 255,
+            "maximumLength": 255,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "lr_manager_id",
+            "displayName": "Learning Request Manager",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "max_ct",
+            "displayName": "Max Count",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "minimumValue": 0,
+            "isSearchFilter": true
+        },
+        {
+            "name": "min_ct",
+            "displayName": "Min Count",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "minimumValue": 0,
+            "isSearchFilter": true
+        },
+        {
+            "name": "notify_before",
+            "displayName": "Notify Before (Days)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "owner",
+            "displayName": "Owner",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "component": {
+                "name": "Governance",
+                "displayName": "Owner",
+                "attributes": [
+                    {
+                        "name": "hasEdit",
+                        "displayName": "kI18nALGovernance_hasEdit(Missing resource)",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "hasView",
+                        "displayName": "kI18nALGovernance_hasView(Missing resource)",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "boolean",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "kI18nALGovernance_id(Missing resource)",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "owner",
+                        "displayName": "kI18nALGovernance_owner(Missing resource)",
+                        "description": "The owner for e.g. either a person or a organization. ",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": true
+                    },
+                    {
+                        "name": "ownerType",
+                        "displayName": "kI18nALGovernance_ownerType(Missing resource)",
+                        "description": "Type of the owner who is associated i.e. either a person is associated or organization.",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "parent",
+                        "displayName": "kI18nALGovernance_parent(Missing resource)",
+                        "description": "The parent of the association, a component which is being governed.",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "sequence",
+                        "displayName": "kI18nALGovernance_sequence(Missing resource)",
+                        "description": "Sequence of the owner with respect to other owner s in a governance.",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "type",
+                        "displayName": "kI18nALGovernance_type(Missing resource)",
+                        "description": "Type of governance.",
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": true
+                    }
+                ]
+            }
+        },
+        {
+            "name": "parent_id",
+            "displayName": "Parent",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "priceband_id",
+            "displayName": "Price Band Name",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "priceband_unit",
+            "displayName": "Price Band Unit",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "published",
+            "displayName": "Is Published",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "reAssignedTargetDays",
+            "displayName": "Reassignment Target Days",
+            "description": "Number of days after which the recurring course should be reacquired by the learner on Reassignment. If the recurring course is not reacquired, its status moves to overdue.",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "recert_window",
+            "displayName": "Re-acquisition Window",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "recertwindow_unit",
+            "displayName": "kI18nALOfferingTemplate_recertwindow_unit(Missing resource)",
+            "description": "Recertification window Unit",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+                "href": "https://&lt;hostname-api.sabacloud.com/v1/list/sysli000000000004072/values"
+            },
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "recommended_prerequisites",
+            "displayName": "Recommended Prerequisites",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "required_prerequisites",
+            "displayName": "Required Prerequisites",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "show_web2_0_actions",
+            "displayName": "Show Web 2.0 functions",
+            "description": "If true,the web 2.0 functions will be shown",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "securityDomain",
+            "displayName": "Domain",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "status",
+            "displayName": "Status",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "choices": {
+                "href": "https://&lt;hostname-api.sabacloud.com/v1/list/sysli000000000000182/values"
+            },
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "subscribed",
+            "displayName": "Subscribed",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "suppress_score",
+            "displayName": "Hide Score",
+            "description": "If true,the transcript score will not be visible from anywhere to learners,managers,admins",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "tags",
+            "displayName": "Tags",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "component": {
+                "name": "Tag",
+                "displayName": "Tag",
+                "attributes": [
+                    {
+                        "name": "color",
+                        "displayName": "kI18nALTag_color(Missing resource)",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "description",
+                        "displayName": "kI18nALTag_description(Missing resource)",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": true
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "kI18nALTag_id(Missing resource)",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "name",
+                        "displayName": "kI18nALTag_name(Missing resource)",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "isProtected": false,
+                        "display": true,
+                        "length": 25,
+            "maximumLength": 25,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "target_days",
+            "displayName": "Target Days",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "test",
+            "displayName": "Test",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "title",
+            "displayName": "Title",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "training_units",
+            "displayName": "Training Units",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "real",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "type",
+            "displayName": "Type",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "updated_by",
+            "displayName": "Updated By",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "updated_on",
+            "displayName": "Updated On",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "valid_till",
+            "displayName": "Expires In (Days)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validtill_daymonth",
+            "displayName": "Expires On",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validtill_frequency",
+            "displayName": "Frequency (Yearly)",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validtill_start_daymonth",
+            "displayName": "New Expiry Cycle Starts On",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validtill_type",
+            "displayName": "Expiry Type",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validtill_unit",
+            "displayName": "kI18nALOfferingTemplate_validtill_unit(Missing resource)",
+            "description": "Valid Till Unit",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+                "href": "https://&lt;hostname-api.sabacloud.com/v1/list/sysli000000000004072/values"
+            },
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "vendor_id",
+            "displayName": "Vendor",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "version",
+            "displayName": "Version",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 25,
+            "maximumLength": 25,
+            "isSearchFilter": true
+        },
+        {
+            "name": "waitlist_max",
+            "displayName": "Waitlist Max",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "minimumValue": 0,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom0",
+            "displayName": "Custom0",
+            "description": "custom0",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom1",
+            "displayName": "Custom1",
+            "description": "custom1",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom2",
+            "displayName": "Custom2",
+            "description": "custom2",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom3",
+            "displayName": "Custom3",
+            "description": "custom3",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom4",
+            "displayName": "Custom4",
+            "description": "custom4",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom5",
+            "displayName": "Custom5",
+            "description": "custom5",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom6",
+            "displayName": "Custom6",
+            "description": "custom6",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom7",
+            "displayName": "Custom7",
+            "description": "custom7",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom8",
+            "displayName": "Custom8",
+            "description": "custom8",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom9",
+            "displayName": "Custom9",
+            "description": "custom9",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom10",
+            "displayName": "Custom10",
+            "description": "custom10",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom11",
+            "displayName": "Custom11",
+            "description": "custom11",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom12",
+            "displayName": "Custom12",
+            "description": "custom12",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom13",
+            "displayName": "Custom13",
+            "description": "custom13",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom14",
+            "displayName": "Custom14",
+            "description": "custom14",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "excustom1",
+            "displayName": "kI18nALOfferingTemplate_69a72eeb-2dfb-40bb-b9b0-72207136aaac(Missing resource)",
+            "description": "excustom1",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+                "href": "https://&lt;hostname-api.sabacloud.com/v1/list/listi000000000010000/values"
+            },
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "excustom2",
+            "displayName": "kI18nALOfferingTemplate_1c6203a0-273e-42bd-bebc-f49048f5c76e(Missing resource)",
+            "description": "excustom2",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        }
+    ],
+    {
+            "name": "showDropCustom", 
+            "displayName": "Show custom fields during cancellation",
+            "description": "If true,then the custom fields on the cancellation will be shown , provided the BR is also on for the same", 
+            "isRequired": false, 
+            "isAutoGenerated": false, 
+            "type": "boolean", 
+            "isReference": false, 
+            "isProtected": false, 
+            "display": true,
+            "isSearchFilter": false 
+    }, 
+    { 
+            "name": "showRegCustom", 
+            "displayName": "Show custom fields during registration",
+            "description": "If true,then the custom fields on the registration will be shown , provided the BR is also on for the same", 
+            "isRequired": false, 
+            "isAutoGenerated": false, 
+            "type": "boolean", 
+            "isReference": false, 
+            "isProtected": false, 
+            "display": true,
+            "isSearchFilter": false 
+    }  
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_xsg_lnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title7">CREATE A NEW COURSE </h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Creates a new course</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_xsg_lnx_fp__table_otg_lnx_fp"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">featured</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Whether featured?</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">validTill</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Valid till</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">TestCourse12</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">avail_web</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Available for web?</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">training_units</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Training Units</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">notifyBefore</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Notify Before</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">avail_call_center</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Available for Call Center?</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">price</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Price</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">"null"</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">avail_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Available From</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">2013-11-12T00:00:00</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">recertWindow</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Recertification window</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">disc_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Discontinued from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">2017-11-12T00:00:00</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">min_ct</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Min Count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">version</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Version</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">title</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Title</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">tets</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">published</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Published</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">max_ct</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Max Count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">abstrac</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Abstract</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">"null"</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">audienceType</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Audience Type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">target_days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Target Days As Int</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">course_no</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Course No</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">00006713</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">discontinued</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Discontinued</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">displayName</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Display Name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">"null"</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">domain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Security Domain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">field_of_study</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Field of study</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+        "fosId": {
+            "id": "fldst000000000001001"
+        },
+        "credits": "2"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">required_prerequisites</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Required prerequisites</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+        "courseId": {
+            "id": "cours000000000202785"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">recommended_prerequisites</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Recommended prerequisites</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+        "courseId": {
+            "id": "cours000000000202785"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">customValues</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Custom fields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">"custom0": "1"</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">csr_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Customer Service Representative</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">{ "id": "emplo000000000533317", "displayName": "user one"
+                                    }</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">training_units</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Training Units</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">notifyBefore</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Notify Before</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">csr_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Customer Service Representative</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">{ "id": "emplo000000000533317", "displayName": "user one"
+                                    }</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">showRegCustom</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Allows you to determine if custom fields must be displayed to
+                                    users during registration of a particular course. Accepts
+                                    true/false.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">showDropCustom</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Allows you to determine if custom fields must be displayed to
+                                    users during cancellation of a particular course. Accepts
+                                    true/false.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__1 ">language</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__2 ">Allows adding associated languages.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__3 ">"language":[      {         "language_id":{
+                                    "id":"lange000000000000029",          "displayName":"Arabic"
+                                    }    },    {         "language_id":{
+                                    "id":"lange000000000000001",          "displayName":"English"
+                                    }    }]</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xsg_lnx_fp__table_otg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section">Enabling fields on registration and cancellation and making them required is
+                only supported, if a default value is present in the field. <div class="note note note_note"><span class="note__title">Note:</span> Enabling required
+                    fields on courses that previously did not require additional information will
+                    result in errors when dropping classes registered for prior to
+                    enablement.</div></section>
+            <section class="section"><h3 class="title sectiontitle">Request
+                Body</h3><pre class="pre codeblock"><code>{  
+   "featured":"false",
+   "validTill":"0",
+   "type":"0",
+   "domain":{  
+      "displayName":"Domain2"
+   },
+   "audienceType":[  
+      {  
+         "audience_type_id":{  
+            "id":"audie000000000200000",
+            "displayName":"CustomerType1"
+         }
+      }
+   ],
+   "required_prerequisites":[  
+      {  
+         "courseId":{  
+            "id":"cours000000000202785"
+         }
+      },
+      {  
+         "courseNumber":"A"
+      }
+   ],
+   "recommended_prerequisites":[  
+      {  
+         "courseNumber":"WBT_BASE"
+      },
+      {  
+         "courseId":{  
+            "id":"cours000000000200026"
+         }
+      },
+      {  
+         "courseNumber":"EMAY"
+      }
+   ],
+   "field_of_study":[  
+      {  
+         "fosId":{  
+            "id":"fldst000000000001001"
+         },
+         "credits":"2"
+      },
+      {  
+         "fosId":{  
+            "displayName":"FOS1"
+         },
+         "credits":"5"
+      }
+   ],
+   "version":"v15",
+   "customValues":{  
+      "@type":"map",
+      "custom0":"1",
+      "custom11":null,
+      "custom10":null,
+      "custom9":null,
+      "custom13":null,
+      "custom12":null,
+      "custom14":null,
+      "custom3":null,
+      "custom4":null,
+      "custom1":null,
+      "custom2":null,
+      "custom7":null,
+      "custom8":null,
+      "custom5":null,
+      "custom6":null
+   },
+   "language":[  
+   {  
+      "language_id":{  
+         "id":"lange000000000000029",
+         "displayName":"Arabic"
+      }
+   },
+   {  
+      "language_id":{  
+         "id":"lange000000000000001",
+         "displayName":"English"
+      }
+   }],
+   "description":"hi, this is interesting",
+   "avail_web":"true",
+   "traininig_units":"12",
+   "avail_call_center":"true",
+   "avail_from":"2013-08-12T00:00:00",
+   "recertWindow":"0",
+   "disc_from":"2018-11-12T00:00:00",
+   "title":"New_sept15",
+   "abstrac":"null",
+   "target_days":"0",
+   "course_no":"00006728",
+   "published":"false",
+   "discontinued":"false",
+   "allPrices":[  
+      {  
+         "amount":200,
+         "curr_id":{  
+            "id":"crncy000000000000070",
+            "displayName":"Indian Rupees"
+         }
+      },
+      {  
+         "amount":10,
+         "curr_id":{  
+            "id":"crncy000000000001189",
+            "displayName":"Currency1"
+         }
+      }
+   ],
+   "showRegCustom": "false",
+   "showDropCustom": "false"
+}</code></pre>The
+                lookup support is now available for this REST API.<table class="table" id="reference_xsg_lnx_fp__table_dgh_zrn_kx"><caption></caption><colgroup><col><col><col></colgroup><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry">
+                                    <strong class="ph b">JSON Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">UI Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">Component Name</strong>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> securityDomain </td>
+                                <td class="entry"> Domain name </td>
+                                <td class="entry"> Domain </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> vendor_id </td>
+                                <td class="entry"> Vendor </td>
+                                <td class="entry"> Organization, External </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> Field_of_study </td>
+                                <td class="entry"> Field Of Study </td>
+                                <td class="entry"> FieldOfStudy </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> required_prerequisites </td>
+                                <td class="entry"> Catalog Prerequisites </td>
+                                <td class="entry"> Course </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> Csr_id </td>
+                                <td class="entry"> Customer Service Representative </td>
+                                <td class="entry"> Person, Internal </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> Recommended_prerequisites </td>
+                                <td class="entry"> Catalog Prerequisites </td>
+                                <td class="entry"> Course </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> audienceType </td>
+                                <td class="entry"> Audience Type / Audience Sub Type </td>
+                                <td class="entry"> Audience Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> allPrices </td>
+                                <td class="entry"> Price </td>
+                                <td class="entry"> Currency </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> language_id</td>
+                                <td class="entry"> Language</td>
+                                <td class="entry"> Language</td>
+                            </tr>
+                        </tbody></table></section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "tags": [],
+    "abstrac": "",
+    "category": [],
+    "avail_from": "2016-03-21T00:00:00.000-0400",
+    "title": "dfgfdgdf",
+    "validtill_type": 0,
+    "validtill_frequency": null,
+    "validtill_daymonth": null,
+    "validtill_start_daymonth": null,
+    "avail_web": true,
+    "avail_call_center": false,
+    "published": true,
+    "course_no": "DDDDSDAS",
+    "validtill_unit": 0,
+    "vendor_id": null,
+    "csr_id": {
+        "id": "emplo000000000533317",
+        "displayName": "user one"
+    },
+    "subscribed": false,
+    "audienceType": [],
+    "updated_on": "2016-03-21T06:38:30.000-0400",
+    "created_by": "uone",
+    "updated_by": "uone",
+    "created_on": "2016-03-21T06:38:30.000-0400",
+    "created_id": "emplo000000000533317",
+    "training_units": 0,
+    "test": false,
+    "field_of_study": [],
+    "recommended_prerequisites": [],
+    "required_prerequisites": [],
+    "allPrices": [
+        {
+            "amount": 0,
+            "displayValue": "0 USD",
+            "curr_id": {
+                "id": "crncy000000000000167",
+                "displayName": "US Dollars"
+            },
+            "id": "plent000000000069938"
+        }
+    ],
+    "image": "https://static-&lt;hostname&gt;/assets/s/1jydso303bos4/spf/skin/wireframe/media/images/CoursesEcommerce.png",
+    "consume_within_cert": false,
+    "show_web2_0_actions": true,
+    "max_ct": null,
+    "min_ct": null,
+    "waitlist_max": null,
+    "recertwindow_unit": 0,
+    "deepLinkUrls": [
+        "https://&lt;hostname&gt;/Saba/Web_spf/ATHDB1/common/ledetail/cours000000000040770",
+        "https://&lt;hostname&gt;/Saba/Web_spf/ATHDB1/common/ledetail/DDDDSDAS"
+    ],
+    "version": null,
+    "language": [
+        {
+            "str1": "0000000000",
+            "language_id": {
+                "id": "lange000000000000001",
+                "displayName": "English"
+            },
+            "id": "g12rc000000000079263"
+        }
+    ],
+    "parent_id": null,
+    "type": 0,
+    "owner": [],
+    "valid_till": null,
+    "notify_before": null,
+    "recert_window": null,
+    "featured": false,
+    "createGroupPolicyVal": false,
+    "target_days": 0,
+    "description": "TestCourse12",
+    "status": "INEFFECT",
+    "customValues": {
+        "ExCustom4": null,
+        "ExCustom5": null,
+        "custom0": null,
+        "ExCustom8": null,
+        "ExCustom9": null,
+        "custom1": null,
+        "ExCustom3": null,
+        "ExCustom1": null
+    },
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world,domain"
+    },
+    "showRegCustom": "false",
+    "showDropCustom": "false",
+    "id": "cours000000000040770",
+    "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/course/cours000000000040770"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="reference_vlg_lnx_fp">
+        <h2 class="title topictitle2" id="ariaid-title8">UPDATE DETAILS OF A COURSE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Update a course</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course/:courseid</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_vlg_lnx_fp__table_nmg_lnx_fp"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">courseid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Course's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">cours000000000202108</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">featured</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Whether featured?</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">validTill</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Valid till</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Description</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">TestCourse12</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">avail_web</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Available for web?</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">training_units</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Training Units</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">notifyBefore</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Notify Before</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">avail_call_center</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Available for Call Center?</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">price</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Price</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">"null"</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">avail_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Available From</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">2013-11-12T00:00:00</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">recertWindow</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Recertification window</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">disc_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Discontinued from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">2017-11-12T00:00:00</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">min_ct</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Min Count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">version</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Version</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">title</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Title</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">tets</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">published</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Published?</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">max_ct</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Max Count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">abstrac</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Abstract</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">"null"</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">audienceType</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Audience Type</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">target_days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Target Days As Int</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">0</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">course_no</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Course No</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">00006713</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">discontinued</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Discontinued?</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">displayName</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Display Name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">"null"</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">domain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Security Domain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">field_of_study</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Field of study</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+        "fosId": {
+            "id": "fldst000000000001001"
+        },
+        "credits": "2"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">required_prerequisites</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Required prerequisites</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+        "courseId": {
+            "id": "cours000000000202785"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">recommended_prerequisites</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Recommended prerequisites</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+        "courseId": {
+            "id": "cours000000000202785"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">customValues</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Custom fields</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">"custom0": "1"</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">csr_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Customer Service Representative</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">{ "id": "emplo000000000533317", "displayName": "user one"
+                                    }</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">showRegCustom</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Allows you to determine if custom fields must be displayed to
+                                    users during registration of a particular course. Accepts
+                                    true/false.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">showDropCustom</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Allows you to determine if custom fields must be displayed to
+                                    users during cancellation of a particular course. Accepts
+                                    true/false.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__1 ">language</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__2 ">Allows adding associated languages.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__3 ">"language":[      {         "language_id":{
+                                    "id":"lange000000000000029",          "displayName":"Arabic"
+                                    }    },    {         "language_id":{
+                                    "id":"lange000000000000001",          "displayName":"English"
+                                    }    }]</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vlg_lnx_fp__table_nmg_lnx_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section">Enabling fields on registration and cancellation and making them required is
+                only supported, if a default value is present in the field. <div class="note note note_note"><span class="note__title">Note:</span> Enabling required
+                    fields on courses that previously did not require additional information will
+                    result in errors when dropping classes registered for prior to
+                    enablement.</div></section>
+            <section class="section"><h3 class="title sectiontitle">Request
+                Body</h3><pre class="pre codeblock"><code>{  
+   "featured":"false",
+   "validTill":"0",
+   "type":"0",
+   "domain":{  
+      "displayName":"Domain2"
+   },
+   "audienceType":[  
+      {  
+         "audience_type_id":{  
+            "id":"audie000000000200000",
+            "displayName":"CustomerType1"
+         }
+      }
+   ],
+   "required_prerequisites":[  
+      {  
+         "courseId":{  
+            "id":"cours000000000202785"
+         }
+      },
+      {  
+         "courseNumber":"A"
+      }
+   ],
+   "recommended_prerequisites":[  
+      {  
+         "courseNumber":"WBT_BASE"
+      },
+      {  
+         "courseId":{  
+            "id":"cours000000000200026"
+         }
+      },
+      {  
+         "courseNumber":"EMAY"
+      }
+   ],
+   "field_of_study":[  
+      {  
+         "fosId":{  
+            "id":"fldst000000000001001"
+         },
+         "credits":"2"
+      },
+      {  
+         "fosId":{  
+            "displayName":"FOS1"
+         },
+         "credits":"5"
+      }
+   ],
+   "version":"v15",
+   "customValues":{  
+      "@type":"map",
+      "custom0":"1",
+      "custom11":null,
+      "custom10":null,
+      "custom9":null,
+      "custom13":null,
+      "custom12":null,
+      "custom14":null,
+      "custom3":null,
+      "custom4":null,
+      "custom1":null,
+      "custom2":null,
+      "custom7":null,
+      "custom8":null,
+      "custom5":null,
+      "custom6":null
+   },
+   "language":[  
+   {  
+      "language_id":{  
+         "id":"lange000000000000029",
+         "displayName":"Arabic"
+      }
+   },
+   {  
+      "language_id":{  
+         "id":"lange000000000000001",
+         "displayName":"English"
+      }
+   }],
+   "description":"hi, this is interesting",
+   "avail_web":"true",
+   "traininig_units":"12",
+   "avail_call_center":"true",
+   "avail_from":"2013-08-12T00:00:00",
+   "recertWindow":"0",
+   "disc_from":"2018-11-12T00:00:00",
+   "title":"New_sept15",
+   "abstrac":"null",
+   "target_days":"0",
+   "course_no":"00006728",
+   "published":"false",
+   "discontinued":"false",
+   "allPrices":[  
+      {  
+         "amount":200,
+         "curr_id":{  
+            "id":"crncy000000000000070",
+            "displayName":"Indian Rupees"
+         }
+      },
+      {  
+         "amount":10,
+         "curr_id":{  
+            "id":"crncy000000000001189",
+            "displayName":"Currency1"
+         }
+      }
+   ],
+   "showRegCustom": "false",
+   "showDropCustom": "false"
+}</code></pre>The
+                lookup support is now available for this REST API.<table class="table" id="reference_vlg_lnx_fp__table_jbt_yrn_kx"><caption></caption><colgroup><col><col><col></colgroup><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry">
+                                    <strong class="ph b">JSON Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">UI Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">Component Name</strong>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> securityDomain </td>
+                                <td class="entry"> Domain name </td>
+                                <td class="entry"> Domain </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> vendor_id </td>
+                                <td class="entry"> Vendor </td>
+                                <td class="entry"> Organization, External </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> Field_of_study </td>
+                                <td class="entry"> Field Of Study </td>
+                                <td class="entry"> FieldOfStudy </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> required_prerequisites </td>
+                                <td class="entry"> Catalog Prerequisites </td>
+                                <td class="entry"> Course </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> Csr_id </td>
+                                <td class="entry"> Customer Service Representative </td>
+                                <td class="entry"> Person, Internal </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> Recommended_prerequisites </td>
+                                <td class="entry"> Catalog Prerequisites </td>
+                                <td class="entry"> Course </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> audienceType </td>
+                                <td class="entry"> Audience Type / Audience Sub Type </td>
+                                <td class="entry"> Audience Type </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> allPrices </td>
+                                <td class="entry"> Price </td>
+                                <td class="entry"> Currency </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> language_id</td>
+                                <td class="entry"> Language</td>
+                                <td class="entry"> Language</td>
+                            </tr>
+                        </tbody></table><div class="note note note_note"><span class="note__title">Note:</span> Even if the <strong class="ph b">suppress_score</strong> field is passed as part of the
+                    Request Body, it will not be updated. This also does not raise any exception.
+                </div></section>
+        </div>
+    </article>
+</article></main></body></html>

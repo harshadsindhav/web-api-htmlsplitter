@@ -1,0 +1,63 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="foundation, restful web services, get all jobtypes, foundation components, find the details of the jobtypes, find the details of the jobtypes, find the meta details of the job types, find the meta details of the job types, get the details of the job type, get the details of the job type, create a new job type, create a new job type, update the details of a job type, update the details of a job type">
+  <meta name="keywords" content="foundation, restful web services, get all jobtypes, foundation components, find the details of the jobtypes, find the details of the jobtypes, find the meta details of the job types, find the meta details of the job types, get the details of the job type, get the details of the job type, create a new job type, create a new job type, update the details of a job type, update the details of a job type">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-foundation.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Job Type</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title2">GET ALL JOBTYPES</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns all JobTypes for which the user has access.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/jobs</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "facets": [],
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "results": [
+        {
+            "name": "Advogada",
+            "id": "jobtp000000000001100",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/jobs/jobtp000000000001100"
+        }
+    ],
+    "totalResults": 1,
+    "hasMoreResults": false
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

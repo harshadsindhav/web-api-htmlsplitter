@@ -1,0 +1,979 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="performance, restful web services, find all reviews, performance components, find the details of the review cycles, find the details of the review cycles, find the details of the reviews, find the details of the reviews, get all review cycles, get the details of a particular review, get the details of a particular review, get the details of a particular review cycle, get the details of a particular review cycle, get the extended details of a particular review, get the extended details of a particular review, get the extended details of a particular review cycle, get the extended details of a particular review cycle, get the meta details of a review-cycle, get the meta details of a review-cycle, get the meta details of a component, get the meta details of a component, find the details of the reviews with post based search, find the details of the reviews with post based search">
+  <meta name="keywords" content="performance, restful web services, find all reviews, performance components, find the details of the review cycles, find the details of the review cycles, find the details of the reviews, find the details of the reviews, get all review cycles, get the details of a particular review, get the details of a particular review, get the details of a particular review cycle, get the details of a particular review cycle, get the extended details of a particular review, get the extended details of a particular review, get the extended details of a particular review cycle, get the extended details of a particular review cycle, get the meta details of a review-cycle, get the meta details of a review-cycle, get the meta details of a component, get the meta details of a component, find the details of the reviews with post based search, find the details of the reviews with post based search">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-performance.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Review</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title10">GET META DETAILS OF A REVIEW-CYCLE</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the meta details of the review-detail component.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/review-cycle/meta:(:searchFields)</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_ed1_v42_yv__table_od1_v42_yv" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 9. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_ed1_v42_yv__table_od1_v42_yv__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_ed1_v42_yv__table_od1_v42_yv__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_ed1_v42_yv__table_od1_v42_yv__entry__3">Default Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_ed1_v42_yv__table_od1_v42_yv__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_ed1_v42_yv__table_od1_v42_yv__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_ed1_v42_yv__table_od1_v42_yv__entry__1 ">searchFields</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_ed1_v42_yv__table_od1_v42_yv__entry__2 ">Indicate what additional details needs to be returned. Acceptable values are (case-sensitive)</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_ed1_v42_yv__table_od1_v42_yv__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_ed1_v42_yv__table_od1_v42_yv__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_ed1_v42_yv__table_od1_v42_yv__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "sampleData": {
+        "name": null,
+        "type": null,
+        "description": null,
+        "status": null,
+        "subType": null,
+        "planName": null,
+        "systemList": null,
+        "canCreatePlan": false,
+        "reviewMode": "200",
+        "inverseCase": false,
+        "syncHeldLevel": false,
+        "flags": null,
+        "allowExtendDueDate": false,
+        "reviewScoreMethod": "CALCULATED",
+        "autoSetRevOwner": null,
+        "enforceRaterSequence": false,
+        "due_date": null,
+        "period_start": null,
+        "period_end": null,
+        "showNARatingScale": true,
+        "minUsersPerAudience": 0,
+        "userCanInitiateReview": false,
+        "managersCanInitiateReview": true,
+        "approvalReqdToBeginRev": false,
+        "autoCloseAdhocReview": false,
+        "review_trigger_no_of_days": null,
+        "review_due_no_of_days": null,
+        "review_finalization_no_of_days": null,
+        "review_activation_no_of_days": null,
+        "review_approval_no_of_days": null,
+        "review_release_no_of_days": null,
+        "adminCanInitiateReview": true,
+        "userCanReAssignReview": false,
+        "calcMethodOnRater": false,
+        "allowMultipleReviews": false,
+        "startType": false,
+        "validUpto": null,
+        "validFrom": null,
+        "customValues": {
+            "custom9": null,
+            "custom0": null,
+            "custom3": null,
+            "custom4": null,
+            "custom1": null,
+            "custom2": null,
+            "custom7": null,
+            "custom8": null,
+            "custom5": null,
+            "custom6": null
+        },
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": "world"
+        },
+        "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/review-cycle/rcycl000000000000001"
+    },
+    "name": "Review Cycle",
+    "displayName": "Review Cycle",
+    "attributes": [
+        {
+            "name": "acknowledgement_due_date",
+            "displayName": "Acknowledgement Due Date",
+            "description": "Ack Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "activation_date",
+            "displayName": "Activation Date",
+            "description": "Activation Date of cycle",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "activation_due_date",
+            "displayName": "Review Activation Due Date",
+            "description": "Activation Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "adminCanInitiateReview",
+            "displayName": "Administrator",
+            "description": "If true, admin(performance admin/HRBP) can use this cycle to create review(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "allowExtendDueDate",
+            "displayName": "Allow review owner to extend the due date.",
+            "description": "Allow review owner to extend due date of review(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "allowMultipleReviews",
+            "displayName": "Allow multiple reviews to be generated from this review cycle.",
+            "description": "Allow multiple reviews to be created from this review cycle(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "approval_due_date",
+            "displayName": "Review Approval",
+            "description": "Approval Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "approvalReqdToBeginRev",
+            "displayName": "Approval required to being review",
+            "description": "If true, review owner need to approve to begin review",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "autoCloseAdhocReview",
+            "displayName": "Auto-close review once all the reviewers finish their reviews.",
+            "description": "If true, close review automatically based on all raters submission(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "autoSetRevOwner",
+            "displayName": "Automatically set review owner",
+            "description": "Auto set review owner to Manager, Mentor or a specific person",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "calcMethodOnRater",
+            "displayName": "Calculation method on rater",
+            "description": "True - indicates newly created cycles for which calculation method is attached with required rater",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "canCreatePlan",
+            "displayName": "Create a To-Do List based on this review",
+            "description": "User can create plan based on the review",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "collect_date",
+            "displayName": "Feedback Due Date",
+            "description": "Review Feedback  Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "created_by",
+            "displayName": "Created By",
+            "description": "Created By",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 25,
+            "maximumLength": 25,
+            "isSearchFilter": true
+        },
+        {
+            "name": "created_on",
+            "displayName": "kI18nALReviewCycle_created_on(Missing resource)",
+            "description": "Created On",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "description",
+            "displayName": "Review Instructions",
+            "description": "Description for the review cycle",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 2000,
+            "maximumLength": 2000,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "due_date",
+            "displayName": "Review Finalization",
+            "description": "Due Date for cycle",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "enforceRaterSequence",
+            "displayName": "Enforce Reviewer Sequence",
+            "description": "If true, rater sequence is enforced",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "flags",
+            "displayName": "Flags",
+            "description": "Flags for policies introduced later",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 10,
+            "maximumLength": 10,
+            "isSearchFilter": false
+        },
+        {
+            "name": "goal_setting_due_date",
+            "displayName": "Goal Setting Due Date",
+            "description": "Goal Setting Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "id",
+            "displayName": "ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "inverseCase",
+            "displayName": "Inverse Case",
+            "description": "If true, rating scale has 1 as highest value",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "manager_eval_due_date",
+            "displayName": "Manager Evaluation Due Date",
+            "description": "Manager Eval Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "managersCanInitiateReview",
+            "displayName": "Managers / Alternate Managers",
+            "description": "If true, managers can use this cycle to create review(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "minUsersPerAudience",
+            "displayName": "Minimum number of users required per audience to display results",
+            "description": "A minimum of users required per audience to display results",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "name",
+            "displayName": "Review Name",
+            "description": "Unique name of the review cycle",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "owner_submission_due_date",
+            "displayName": "Review Owner Submission",
+            "description": "Owner Submission Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "period_end",
+            "displayName": "End Date",
+            "description": "Review Period End Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "period_start",
+            "displayName": "Start Date",
+            "description": "Review Period Start Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "planName",
+            "displayName": "System To-Do List Name",
+            "description": "Name for the plan created based on the review",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "release_due_date",
+            "displayName": "Review Release",
+            "description": "Release Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "review_activation_no_of_days",
+            "displayName": "Review Activation",
+            "description": "Number of days to ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "review_approval_no_of_days",
+            "displayName": "Review Approval",
+            "description": "Number of days to ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "review_due_no_of_days",
+            "displayName": "Review Owner Submission",
+            "description": "Number of days to ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "review_finalization_no_of_days",
+            "displayName": "Review Finalization",
+            "description": "Number of days to ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "reviewMode",
+            "displayName": "Mode",
+            "description": "Review Cycle Mode",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+                "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/list/sysli000000000006026/values"
+            },
+            "display": true,
+            "length": 50,
+            "maximumLength": 50,
+            "isSearchFilter": false
+        },
+        {
+            "name": "review_release_no_of_days",
+            "displayName": "Review Release",
+            "description": "Number of days to ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "reviewScoreMethod",
+            "displayName": "Generate Final Score",
+            "description": "1 = Calculated or overridden score; 2 = Manually set by owner; 3 = No overall score",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "review_trigger_no_of_days",
+            "displayName": "Review Trigger After",
+            "description": "Number of days to ",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "self_eval_due_date",
+            "displayName": "Self Evaluation Due Date",
+            "description": "Self Eval Due Date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "showNARatingScale",
+            "displayName": "Show N/A in the rating scale",
+            "description": "Show NA rating scale policy.",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "securityDomain",
+            "displayName": "Domain",
+            "description": "Domain for the review cycle",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "startType",
+            "displayName": "Trigger Based On",
+            "description": "Review Start type by hire or job start date",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "status",
+            "displayName": "Status",
+            "description": "Status of Cycle",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+                "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/list/sysli000000000006018/values"
+            },
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "subType",
+            "displayName": "Sub Type",
+            "description": "Sub type of review cycle",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+                "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/list/sysli000000000006024/values"
+            },
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": false
+        },
+        {
+            "name": "syncHeldLevel",
+            "displayName": "Synchronize held skill level with review score",
+            "description": "Synchronize the held level of skill",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "systemList",
+            "displayName": "kI18nALReviewCycle_systemList(Missing resource)",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "type",
+            "displayName": "Type",
+            "description": "Type of Cycle",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "choices": {
+                "href": "http://&lt;hostname-api.sabacloud.com&gt;/v1/list/sysli000000000006019/values"
+            },
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "updated_by",
+            "displayName": "kI18nALReviewCycle_updated_by(Missing resource)",
+            "description": "Updated By",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 25,
+            "maximumLength": 25,
+            "isSearchFilter": false
+        },
+        {
+            "name": "updated_on",
+            "displayName": "kI18nALReviewCycle_updated_on(Missing resource)",
+            "description": "Updated On",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "userCanInitiateReview",
+            "displayName": "User",
+            "description": "If true, reviewee can use this cycle to create review(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "userCanReAssignReview",
+            "displayName": "User can re-assign",
+            "description": "If true, reviewee can reassign review(for ad hoc review only)",
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "boolean",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validFrom",
+            "displayName": "Available from",
+            "description": "Date from which the review is valid(for ad hoc review only)",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "validUpto",
+            "displayName": "Available to",
+            "description": "Date upto which the review is valid(for ad hoc review only)",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom0",
+            "displayName": "Custom0",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom1",
+            "displayName": "Custom1",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom2",
+            "displayName": "Custom2",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom3",
+            "displayName": "Custom3",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom4",
+            "displayName": "Custom4",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom5",
+            "displayName": "Custom5",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom6",
+            "displayName": "Custom6",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom7",
+            "displayName": "Custom7",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom8",
+            "displayName": "Custom8",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "custom9",
+            "displayName": "Custom9",
+            "description": "Custom Field",
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "isProtected": false,
+            "display": true,
+            "length": 255,
+            "maximumLength": 255,
+            "isI18n": true,
+            "isSearchFilter": false
+        }
+    ]
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

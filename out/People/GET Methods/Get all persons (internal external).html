@@ -1,0 +1,153 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="people, restful web services, find profile information, people components, get all persons(internal/external), get all persons(internal/external), get certifications/enrollments/transcripts for a person, get certifications/enrollments/transcripts for a person, get details of the desired component for a person., get details of the desired component for a person., get the metadata of specific people attributes, get the metadata of specific people attributes, get the required profile details of a particular person, get the required profile details of a particular person, get the job / security roles of a particular person, get the job / security roles of a particular person, get the audience type / audience sub types assigned to a person, get the audience type / audience sub types assigned to a person, get profile pic url, get profile pic, get person's resource details, get person's resource details, get the required profile details of a particular person (internal/external), get the required profile details of a particular person (internal/external)">
+  <meta name="keywords" content="people, restful web services, find profile information, people components, get all persons(internal/external), get all persons(internal/external), get certifications/enrollments/transcripts for a person, get certifications/enrollments/transcripts for a person, get details of the desired component for a person., get details of the desired component for a person., get the metadata of specific people attributes, get the metadata of specific people attributes, get the required profile details of a particular person, get the required profile details of a particular person, get the job / security roles of a particular person, get the job / security roles of a particular person, get the audience type / audience sub types assigned to a person, get the audience type / audience sub types assigned to a person, get profile pic url, get profile pic, get person's resource details, get person's resource details, get the required profile details of a particular person (internal/external), get the required profile details of a particular person (internal/external)">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-people.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>GET Methods</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title3">GET ALL PERSONS (INTERNAL/EXTERNAL)</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns all Persons(Internal/External) for which the user has access.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/people?type=:type</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="get-get-all-persons-internalexternal-N1000A__table_fzc_4mv_z4" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 2. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="get-get-all-persons-internalexternal-N1000A__table_fzc_4mv_z4__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-get-all-persons-internalexternal-N1000A__table_fzc_4mv_z4__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-get-all-persons-internalexternal-N1000A__table_fzc_4mv_z4__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-get-all-persons-internalexternal-N1000A__table_fzc_4mv_z4__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="get-get-all-persons-internalexternal-N1000A__table_fzc_4mv_z4__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="get-get-all-persons-internalexternal-N1000A__table_fzc_4mv_z4__entry__1 ">type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-get-all-persons-internalexternal-N1000A__table_fzc_4mv_z4__entry__2 ">User type [internal or external]</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-get-all-persons-internalexternal-N1000A__table_fzc_4mv_z4__entry__3 ">internal</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-get-all-persons-internalexternal-N1000A__table_fzc_4mv_z4__entry__4 ">enumerated</td> 
+       <td class="entry colsep-1 rowsep-1" headers="get-get-all-persons-internalexternal-N1000A__table_fzc_4mv_z4__entry__5 ">Yes</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "facets": [],
+    "startIndex": 1,
+    "results": [
+        {
+            "fname": "1",
+            "lname": "01",
+            "id": "emplo000000000027470",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000027470"
+        },
+        {
+            "fname": "1",
+            "lname": "1",
+            "id": "emplo000000000007651",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000007651"
+        },
+        {
+            "fname": "1 02f",
+            "lname": "1 02l",
+            "id": "emplo000000000260005",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000260005"
+        },
+        {
+            "fname": "123",
+            "lname": "123",
+            "id": "emplo000000000001672",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000001672"
+        },
+        {
+            "fname": "1@blklist7.com",
+            "lname": "1@blklist7.com",
+            "id": "emplo000000000008678",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000008678"
+        },
+        {
+            "fname": "1S1hantaram",
+            "lname": "Waingankar",
+            "id": "emplo000000000001540",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000001540"
+        },
+        {
+            "fname": "2",
+            "lname": "2",
+            "id": "emplo000000000256846",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000256846"
+        },
+        {
+            "fname": "23aug",
+            "lname": "23aug",
+            "id": "emplo000000000036602",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000036602"
+        },
+        {
+            "fname": "24aug",
+            "lname": "24aug",
+            "id": "emplo000000000036604",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000036604"
+        },
+        {
+            "fname": "2562",
+            "lname": "Jones",
+            "id": "emplo000000000006420",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000006420"
+        }
+    ],
+    "totalResults": 3120,
+    "hasMoreResults": true,
+    "itemsPerPage": 10
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

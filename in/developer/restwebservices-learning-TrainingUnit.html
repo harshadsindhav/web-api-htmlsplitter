@@ -1,0 +1,1677 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="learning, restful web services, get all training units, learning components, find the details of the training unit, find the details of the training unit, find the details of the training unit (using post - range based search), find the details of the training unit (using post - range based search), get the meta details of the training unit, get the meta details of the training unit, get the details of a particular training unit, get the details of a particular training unit, create a new training unit, create a new training unit, update the details of a training unit, update the details of a training unit, delete a particular training unit, delete a particular training unit, get the details of a particular discount entry for the training unit, get the details of a particular discount entry for the training unit, create a new discount entry for the training unit, create a new discount entry for the training unit, delete a particular discount entry for the training unit, delete a particular discount entry for the training unit, get the details of a particular pricelist entry for the training unit, get the details of a particular pricelist entry for the training unit, create a new pricelist entry for the training unit, create a new pricelist entry for the training unit, update the details of a particular pricelist entry for the training unit, update the details of a particular pricelist entry for the training unit, delete a particular pricelist entry for the training unit, delete a particular pricelist entry for the training unit"><meta name="keywords" content="learning, restful web services, get all training units, learning components, find the details of the training unit, find the details of the training unit, find the details of the training unit (using post - range based search), find the details of the training unit (using post - range based search), get the meta details of the training unit, get the meta details of the training unit, get the details of a particular training unit, get the details of a particular training unit, create a new training unit, create a new training unit, update the details of a training unit, update the details of a training unit, delete a particular training unit, delete a particular training unit, get the details of a particular discount entry for the training unit, get the details of a particular discount entry for the training unit, create a new discount entry for the training unit, create a new discount entry for the training unit, delete a particular discount entry for the training unit, delete a particular discount entry for the training unit, get the details of a particular pricelist entry for the training unit, get the details of a particular pricelist entry for the training unit, create a new pricelist entry for the training unit, create a new pricelist entry for the training unit, update the details of a particular pricelist entry for the training unit, update the details of a particular pricelist entry for the training unit, delete a particular pricelist entry for the training unit, delete a particular pricelist entry for the training unit"><meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Learning-apis"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Training Unit</title></head><body id="Learning-apis"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Training Unit</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-learning.html">Learning</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-get-all-training-units-N127F3">
+        <h2 class="title topictitle2" id="ariaid-title2">GET ALL TRAINING UNITS</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns all Training Units for which the user does has access.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "startIndex": 1,
+    "results": [
+        {
+            "name": "Aligning people to your business strategy, measuring progress, rewarding performance and actively developing your human capital every day drives engagement and inspires greatness. Saba helps everyone understand your business strategy and their role in it",
+            "id": "tunit000000000001101",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001101"
+        },
+        {
+            "name": "asd",
+            "id": "tunit000000000001322",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001322"
+        },
+        {
+            "name": "Books TU",
+            "id": "tunit000000000001008",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001008"
+        },
+        {
+            "name": "businessunit1_tunits",
+            "id": "tunit000000000001200",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001200"
+        },
+        {
+            "name": "da",
+            "id": "tunit000000000001154",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001154"
+        },
+        {
+            "name": "dd",
+            "id": "tunit000000000001151",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001151"
+        },
+        {
+            "name": "demo training unit",
+            "id": "tunit000000000001061",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001061"
+        },
+        {
+            "name": "demo TU 11",
+            "id": "tunit000000000001060",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001060"
+        },
+        {
+            "name": "demo TU Update 22",
+            "id": "tunit000000000001062",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001062"
+        },
+        {
+            "name": "ggg",
+            "id": "tunit000000000001149",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001149"
+        }
+    ],
+    "totalResults": 82,
+    "hasMoreResults": true,
+    "itemsPerPage": 10
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title3" id="reference_ghn_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title3">FIND DETAILS OF TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the training unit along with the ID, Name and the Deeplink
+                    URL based on the provided search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit?q=(:criteria_field==:field_value)&amp;count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_ghn_24x_fp__table_nhn_24x_fp"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_ghn_24x_fp__table_nhn_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ghn_24x_fp__table_nhn_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ghn_24x_fp__table_nhn_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ghn_24x_fp__table_nhn_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_ghn_24x_fp__table_nhn_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__1 ">criteria_field</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__2 ">The search criteria i.e. the field name.<div class="p">You
+                                        can use any field with "isSearchFilter": true.<div class="note note note_note"><span class="note__title">Note:</span> To find
+                                            out the fields that have "isSearchFilter": true, invoke
+                                            the "Get the Meta details" REST APIs.</div></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__3 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__1 ">field_value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__2 ">The search value for the specified search
+                                    criteria.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__3 ">abc</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_ghn_24x_fp__table_nhn_24x_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "results": [
+        {
+            "name": "TU REST Test 104",
+            "id": "tunit000000000001280",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001280"
+        }
+    ],
+    "totalResults": 1,
+    "hasMoreResults": false
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title4" id="reference_tzm_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title4">FIND DETAILS OF TRAINING UNIT (Using POST - Range based search)</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the details of the training unit along with the ID, Name and the Deeplink
+                    URL based on the provided range based search criteria.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/searchQuery?count=:count&amp;startPage=:startPage</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_tzm_24x_fp__table_c1n_24x_fp"><caption><span class="table--title-label">Table 2. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_tzm_24x_fp__table_c1n_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tzm_24x_fp__table_c1n_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tzm_24x_fp__table_c1n_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tzm_24x_fp__table_c1n_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tzm_24x_fp__table_c1n_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__1 ">conditions &gt; name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__2 ">The search criteria i.e. the field name.<div class="p">You
+                                        can use any field with "isSearchFilter": true.<div class="note note note_note"><span class="note__title">Note:</span> To find
+                                            out the fields that have "isSearchFilter": true, invoke
+                                            the "Get the Meta details" REST APIs.</div></div></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__1 ">conditions &gt; value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__2 ">The search value for the specified search
+                                    criteria.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__1 ">conditions &gt; operator</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__2 ">The search operator such as:<ul class="ul" id="reference_tzm_24x_fp__ul_i1n_24x_fp">
+                                        <li class="li">=gt=</li>
+                                        <li class="li">=ge=</li>
+                                        <li class="li">=lt=</li>
+                                        <li class="li">=le=</li>
+                                        <li class="li">=eq=</li>
+                                        <li class="li">=ne=</li>
+                                    </ul></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__1 ">count</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__2 ">The number of records per page.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__1 ">startPage</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__2 ">The start page number for the list of
+                                    records.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tzm_24x_fp__table_c1n_24x_fp__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+  "conditions": [
+    {
+      "name": "available_from",
+      "operator": "=gt=",
+      "value": "2013-05-09"
+    }
+  ]
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "facets": [],
+    "itemsPerPage": 10,
+    "startIndex": 1,
+    "results": [
+        {
+            "name": ",",
+            "id": "tunit000000000001311",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001311"
+        },
+        {
+            "name": "&lt;",
+            "id": "tunit000000000001309",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001309"
+        },
+        {
+            "name": "&gt;",
+            "id": "tunit000000000001310",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001310"
+        },
+        {
+            "name": "!@#$%^&amp;*()_+=-}{][:';|/",
+            "id": "tunit000000000001308",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001308"
+        },
+        {
+            "name": "!@#$%^&amp;*()_+=-}{][:';|\\?&gt;&lt;,./",
+            "id": "tunit000000000001307",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001307"
+        },
+        {
+            "name": "11",
+            "id": "tunit000000000001240",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001240"
+        },
+        {
+            "name": "aaa",
+            "id": "tunit000000000001100",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001100"
+        },
+        {
+            "name": "abcdefghijklmnopqrstuvwxyz123456789123456789123456789123456789123456789123456789123456789123456789123456789",
+            "id": "tunit000000000001302",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001302"
+        },
+        {
+            "name": "As a pioneer in learning management, Saba has grown in the past 16",
+            "id": "tunit000000000001306",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001306"
+        },
+        {
+            "name": "Kedar TU Storefront",
+            "id": "tunit000000000001261",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001261"
+        }
+    ],
+    "totalResults": 53,
+    "hasMoreResults": true
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title5" id="reference_cqm_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title5">GET META DETAILS OF TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns the meta details of the Training Unit.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/meta</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "sampleData": {
+        "priceList": null,
+        "available_from": "2014-08-08T02:46:16.976-0400",
+        "discontinued_from": null,
+        "validtill_days": null,
+        "discountEntries": null,
+        "name": null,
+        "id": null,
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": null
+        },
+        "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000000001"
+    },
+    "name": "TrainingUnit",
+    "displayName": "Training Unit",
+    "attributes": [
+        {
+            "name": "available_from",
+            "displayName": "Available From",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "currencySelectionMode",
+            "displayName": "Currency Selection Mode",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "discontinued_from",
+            "displayName": "Discontinued From",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "discountEntries",
+            "displayName": "Discount Entries",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "DiscountEntries",
+                "displayName": "Discount Entries",
+                "attributes": [
+                    {
+                        "name": "currency_id",
+                        "displayName": "Currency",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true
+                    },
+                    {
+                        "name": "discount",
+                        "displayName": "Discount",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "real",
+                        "isReference": false,
+                        "display": true,
+                        "minimumValue": 1,
+                        "maximumValue": 100,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "high_value",
+                        "displayName": "High Value",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "minimumValue": 1,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "low_value",
+                        "displayName": "Low Value",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "minimumValue": 1,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "trainingunit_id",
+                        "displayName": "Training Unit",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true
+                    }
+                ]
+            }
+        },
+        {
+            "name": "id",
+            "displayName": "ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "name",
+            "displayName": "Name",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "priceband_id",
+            "displayName": "Priceband",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "priceband_units",
+            "displayName": "Priceband Units",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "real",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "priceList",
+            "displayName": "Price List Entry",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "Price List Entry",
+                "displayName": "Price List Entry",
+                "attributes": [
+                    {
+                        "name": "amount",
+                        "displayName": "Amount",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "real",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "charge_type",
+                        "displayName": "Charge Type",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "curr_id",
+                        "displayName": "Currency Id",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "displayValue",
+                        "displayName": "Display Name",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "part_id",
+                        "displayName": "Part Id",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "price_list_id",
+                        "displayName": "Price List ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "price_type",
+                        "displayName": "Price Type",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "securityDomain",
+            "displayName": "Security Domain",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "validtill_days",
+            "displayName": "Valid Till Days",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom0",
+            "displayName": "Custom0",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom1",
+            "displayName": "Custom1",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom2",
+            "displayName": "Custom2",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom3",
+            "displayName": "Custom3",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom4",
+            "displayName": "Custom4",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom5",
+            "displayName": "Custom5",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom6",
+            "displayName": "Custom6",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom7",
+            "displayName": "Custom7",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom8",
+            "displayName": "Custom8",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom9",
+            "displayName": "Custom9",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        }
+    ]
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title6" id="reference_mjm_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title6">GET DETAILS OF A PARTICULAR TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a training unit based on the Training Unit's
+                    ID that is passed as a parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">name</strong> instead of the internal Training Unit's
+                        ID.<p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/name%3D<em class="ph i">&lt;TrainingUnitsName&gt;</em></p></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_mjm_24x_fp__table_sjm_24x_fp"><caption><span class="table--title-label">Table 3. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_mjm_24x_fp__table_sjm_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_mjm_24x_fp__table_sjm_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_mjm_24x_fp__table_sjm_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_mjm_24x_fp__table_sjm_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_mjm_24x_fp__table_sjm_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mjm_24x_fp__table_sjm_24x_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mjm_24x_fp__table_sjm_24x_fp__entry__2 ">Training Unit's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mjm_24x_fp__table_sjm_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mjm_24x_fp__table_sjm_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_mjm_24x_fp__table_sjm_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "priceList": [
+        {
+            "displayValue": "10 USD",
+            "curr_id": {
+                "id": "crncy000000000000167",
+                "displayName": "US Dollars"
+            },
+            "amount": 10,
+            "id": "plent000000000003236"
+        }
+    ],
+    "available_from": "2014-02-28T00:00:00.000-0500",
+    "discontinued_from": null,
+    "validtill_days": null,
+    "discountEntries": [
+        {
+            "discount": 5,
+            "low_value": 1,
+            "high_value": 100,
+            "id": "tdisc000000000001020"
+        }
+    ],
+    "name": "TU for company1",
+    "id": "tunit000000000001020",
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+    }
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title7" id="reference_xcm_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title7">CREATE A NEW TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows creating a new training unit.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_xcm_24x_fp__table_hdm_24x_fp"><caption><span class="table--title-label">Table 4. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_xcm_24x_fp__table_hdm_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xcm_24x_fp__table_hdm_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xcm_24x_fp__table_hdm_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xcm_24x_fp__table_hdm_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_xcm_24x_fp__table_hdm_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__2 ">Name of Training Unit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__3 ">abc</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__1 ">priceList</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__2 ">Currency with price for Training Unit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__1 ">currencySelectionMode</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__2 ">Currency selection mode for Training Unit. This
+                                    can be one of the following: <ul class="ul" id="reference_xcm_24x_fp__ul_odm_24x_fp">
+                                        <li class="li">DesignatedCurrency</li>
+                                        <li class="li">DesignatedAndDefaultCurrency</li>
+                                        <li class="li">AllCurrenciesInSystem</li>
+                                    </ul></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__3 ">DesignatedCurrency</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__1 ">available_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__2 ">Available from date for Training Unit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__3 ">2009-07-28T00:00:00.000+0530</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__1 ">discontinued_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__2 ">Discontinued from date for Training Unit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__3 ">2014-07-28T00:00:00.000+0530</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__1 ">validtill_days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__2 ">Valid till days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__3 ">3000</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__1 ">discountEntries</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__2 ">Discounts for Training Unit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__1 ">customValues</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__2 ">Custom values</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__1 ">securityDomain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__2 ">The domain for the Training Unit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_xcm_24x_fp__table_hdm_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request
+                Body</h3><pre class="pre codeblock"><code>{
+    "priceList": [
+        {
+            "displayValue": "10 USD",
+            "amount": 10,
+            "curr_id": {
+                "id": "crncy000000000000167",
+                "displayName": "US Dollars"
+            },
+            "id": "plent000000000003236"
+        }
+    ],
+    "available_from": "2014-02-28T00:00:00.000-0500",
+    "discontinued_from": null,
+    "validtill_days": null,
+    "discountEntries": [
+        {
+            "discount": 5,
+            "low_value": 1,
+            "high_value": 100,
+            "id": "tdisc000000000001020"
+        }
+    ],
+    "name": "TU REST Test 102",
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+    }
+}</code></pre>The
+                lookup support is now available for this REST API.<table class="table" id="reference_xcm_24x_fp__table_hlf_qtn_kx"><caption></caption><colgroup><col><col><col></colgroup><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry">
+                                    <strong class="ph b">JSON Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">UI Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">Component Name</strong>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> priceList.curr_id </td>
+                                <td class="entry"> Currency </td>
+                                <td class="entry"> Currency </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> securityDomain </td>
+                                <td class="entry"> Sercurity Domain </td>
+                                <td class="entry"> Domain </td>
+                            </tr>
+                        </tbody></table></section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "tunit000000000001142",
+    "displayName": "TU REST Test 102",
+    "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001142"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title8" id="reference_pwl_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title8">UPDATE DETAILS OF A TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows updating an existing training unit based on the Training Unit's ID.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">name</strong> instead of the internal Training Unit's
+                        ID.<p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/name%3D<em class="ph i">&lt;TrainingUnitsName&gt;</em></p></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_pwl_24x_fp__table_xwl_24x_fp"><caption><span class="table--title-label">Table 5. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_pwl_24x_fp__table_xwl_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_pwl_24x_fp__table_xwl_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_pwl_24x_fp__table_xwl_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_pwl_24x_fp__table_xwl_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_pwl_24x_fp__table_xwl_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__2 ">Training Unit's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__2 ">Name of Training Unit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__3 ">abc</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__1 ">available_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__2 ">Available from date for Training Unit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__3 ">2009-07-28T00:00:00.000+0530</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__1 ">discontinued_from</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__2 ">Discontinued from date for Training Unit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__3 ">2014-07-28T00:00:00.000+0530</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__1 ">validtill_days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__2 ">Valid till days</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__3 ">3000</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__1 ">customValues</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__2 ">Custom values</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__1 ">securityDomain</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__2 ">The domain for the Training Unit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__3 ">
+                                    <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre>
+                                </td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_pwl_24x_fp__table_xwl_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request
+                Body</h3><pre class="pre codeblock"><code>{
+    "name": "TraningUnit Test101 modified",
+    "currencySelectionMode": null,
+    "available_from": "2009-07-27T18:30:00.000+0530",
+    "discontinued_from": "2029-07-30T18:30:00.000+0530",
+    "validtill_days":1000,
+    "discountEntries": null,
+    "id": "tunit000000000001127",
+    "customValues": {
+        "custom1": "qasw",
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom0": null
+    },
+    "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "Domain_IndiaDev"
+    }
+}</code></pre>The
+                lookup support is now available for this REST API.<table class="table" id="reference_pwl_24x_fp__table_hzq_ptn_kx"><caption></caption><colgroup><col><col><col></colgroup><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry">
+                                    <strong class="ph b">JSON Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">UI Attribute</strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">Component Name</strong>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> priceList.curr_id </td>
+                                <td class="entry"> Currency </td>
+                                <td class="entry"> Currency </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> securityDomain </td>
+                                <td class="entry"> Sercurity Domain </td>
+                                <td class="entry"> Domain </td>
+                            </tr>
+                        </tbody></table></section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title9" id="reference_vql_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title9">DELETE A PARTICULAR TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Delete a training unit based on the Training Unit's ID that is passed as a
+                    parameter value.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL (User-friendly)</h3>You can use a user-friendly URL which accepts
+                the <strong class="ph b">name</strong> instead of the internal Training Unit's
+                        ID.<p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/name%3D<em class="ph i">&lt;TrainingUnitsName&gt;</em></p></section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_vql_24x_fp__table_brl_24x_fp"><caption><span class="table--title-label">Table 6. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_vql_24x_fp__table_brl_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vql_24x_fp__table_brl_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vql_24x_fp__table_brl_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vql_24x_fp__table_brl_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_vql_24x_fp__table_brl_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vql_24x_fp__table_brl_24x_fp__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vql_24x_fp__table_brl_24x_fp__entry__2 ">Training Unit's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vql_24x_fp__table_brl_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vql_24x_fp__table_brl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_vql_24x_fp__table_brl_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title10" id="reference_kll_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title10">GET DETAILS OF A PARTICULAR DISCOUNT ENTRY FOR TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a discount entry for the training unit based
+                    on the Training Unit's ID and the Discount Entry's ID that are passed as
+                    parameter values.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/:tuid/discountEntries/:deid</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_kll_24x_fp__table_qll_24x_fp"><caption><span class="table--title-label">Table 7. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_kll_24x_fp__table_qll_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_kll_24x_fp__table_qll_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_kll_24x_fp__table_qll_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_kll_24x_fp__table_qll_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_kll_24x_fp__table_qll_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kll_24x_fp__table_qll_24x_fp__entry__1 ">tuid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kll_24x_fp__table_qll_24x_fp__entry__2 ">Training Unit's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kll_24x_fp__table_qll_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kll_24x_fp__table_qll_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kll_24x_fp__table_qll_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kll_24x_fp__table_qll_24x_fp__entry__1 ">deid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kll_24x_fp__table_qll_24x_fp__entry__2 ">Discount Entries's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kll_24x_fp__table_qll_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kll_24x_fp__table_qll_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_kll_24x_fp__table_qll_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "discount": 5,
+    "low_value": 1,
+    "high_value": 5,
+    "id": "tdisc000000000001122"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title11" id="reference_agl_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title11">CREATE A NEW DISCOUNT ENTRY FOR TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows creating a new discount entry for the training unit.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/:tuid/discountEntries</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_agl_24x_fp__table_hgl_24x_fp"><caption><span class="table--title-label">Table 8. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_agl_24x_fp__table_hgl_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_agl_24x_fp__table_hgl_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_agl_24x_fp__table_hgl_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_agl_24x_fp__table_hgl_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_agl_24x_fp__table_hgl_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__1 ">tuid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__2 ">Training Unit's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__1 ">low_value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__2 ">Low value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__3 ">1</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__1 ">high_value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__2 ">High value</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__3 ">100</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__1 ">discount</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__2 ">Discount</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_agl_24x_fp__table_hgl_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+        "discount": 5,
+        "low_value": 1,
+        "high_value":5
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "tdisc000000000001122",
+    "displayName": null,
+    "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001331/discountEntries/tdisc000000000001122"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title12" id="reference_x1l_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title12">DELETE A PARTICULAR DISCOUNT ENTRY FOR TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Delete a discount entry for the training unit based on the Discount Entry's ID
+                    and Training Unit's ID that are passed as parameter values.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/:tuid/discountEntries/:deid</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_x1l_24x_fp__table_dbl_24x_fp"><caption><span class="table--title-label">Table 9. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_x1l_24x_fp__table_dbl_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_x1l_24x_fp__table_dbl_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_x1l_24x_fp__table_dbl_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_x1l_24x_fp__table_dbl_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_x1l_24x_fp__table_dbl_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_x1l_24x_fp__table_dbl_24x_fp__entry__1 ">tuid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_x1l_24x_fp__table_dbl_24x_fp__entry__2 ">Training Unit's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_x1l_24x_fp__table_dbl_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_x1l_24x_fp__table_dbl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_x1l_24x_fp__table_dbl_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_x1l_24x_fp__table_dbl_24x_fp__entry__1 ">deid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_x1l_24x_fp__table_dbl_24x_fp__entry__2 ">Discount Entries's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_x1l_24x_fp__table_dbl_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_x1l_24x_fp__table_dbl_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_x1l_24x_fp__table_dbl_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title13" id="reference_awk_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title13">GET DETAILS OF A PARTICULAR PRICELIST ENTRY FOR TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Returns complete information about a pricelist entry for the training unit based
+                    on the Training Unit's ID and the pricelist Entry's ID that are passed as
+                    parameter values.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">GET</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/:tuid/priceList/:plid</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_awk_24x_fp__table_fwk_24x_fp"><caption><span class="table--title-label">Table 10. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_awk_24x_fp__table_fwk_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_awk_24x_fp__table_fwk_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_awk_24x_fp__table_fwk_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_awk_24x_fp__table_fwk_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_awk_24x_fp__table_fwk_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awk_24x_fp__table_fwk_24x_fp__entry__1 ">tuid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awk_24x_fp__table_fwk_24x_fp__entry__2 ">TrainingUnit's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awk_24x_fp__table_fwk_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awk_24x_fp__table_fwk_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awk_24x_fp__table_fwk_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awk_24x_fp__table_fwk_24x_fp__entry__1 ">plid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awk_24x_fp__table_fwk_24x_fp__entry__2 ">Pricelist's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awk_24x_fp__table_fwk_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awk_24x_fp__table_fwk_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_awk_24x_fp__table_fwk_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "amount": 10,
+    "displayValue": "10 PND",
+    "curr_id": {
+        "id": "crncy000000000002353",
+        "displayName": null
+    },
+    "id": "plent000000000003347"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title14" id="reference_grk_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title14">CREATE A NEW PRICELIST ENTRY FOR TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Allows creating a new pricelist entry for the training unit.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/:tuid/priceList</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_grk_24x_fp__table_nrk_24x_fp"><caption><span class="table--title-label">Table 11. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_grk_24x_fp__table_nrk_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_grk_24x_fp__table_nrk_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_grk_24x_fp__table_nrk_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_grk_24x_fp__table_nrk_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_grk_24x_fp__table_nrk_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__1 ">tuid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__2 ">TrainingUnit's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__1 ">curr_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__2 ">Currency for pricelist<p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Currency).</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__3 "><pre class="pre codeblock"><code>{"id": "crncy000000000000167", "displayName": "US Dollars"}</code></pre></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__1 ">amount</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__2 ">Amount per training unit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_grk_24x_fp__table_nrk_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+            "curr_id": {
+                "id": "crncy000000000002353",
+                "displayName": null
+            },
+            "amount":10
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{
+    "id": "plent000000000003347",
+    "displayName": null,
+    "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000001221/priceList/plent000000000003347"
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title15" id="reference_bbj_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title15">UPDATE DETAILS OF A PARTICULAR PRICELIST ENTRY FOR TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Updates a pricelist entry for the training unit based on the Price list entry's
+                    ID and Training Unit's ID that are passed as parameter values.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/:tuid/priceList/:plid</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_bbj_24x_fp__table_ibj_24x_fp"><caption><span class="table--title-label">Table 12. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_bbj_24x_fp__table_ibj_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_bbj_24x_fp__table_ibj_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_bbj_24x_fp__table_ibj_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_bbj_24x_fp__table_ibj_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_bbj_24x_fp__table_ibj_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__1 ">tuid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__2 ">TrainingUnit's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__1 ">plid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__2 ">Price list entry's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__1 ">curr_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__2 ">Currency for pricelist<p class="p">Supports <a class="xref" href="restwebservicesnew-introduction-concepts.html#topic_ryt_1hy_1q">lookup</a> (Currency).</p></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__3 "><pre class="pre codeblock"><code>{"id": "crncy000000000000167", "displayName": "US Dollars"}</code></pre></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__1 ">amount</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__2 ">Amount per training unit</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__3 ">10</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_bbj_24x_fp__table_ibj_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+            "curr_id": {
+                "id": "crncy000000000002353",
+                "displayName": null
+            },
+            "amount":45
+}</code></pre>
+            </section>
+        </div>
+    </article>
+    <article class="topic reference nested1" aria-labelledby="ariaid-title16" id="reference_tw3_24x_fp">
+        <h2 class="title topictitle2" id="ariaid-title16">DELETE A PARTICULAR PRICELIST ENTRY FOR TRAINING UNIT</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Deletes a pricelist entry for the training unit based on the Price list entry's
+                    ID and Training Unit's ID that are passed as parameter values.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">DELETE</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/:tuid/pricelist/:plid</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="reference_tw3_24x_fp__table_zw3_24x_fp"><caption><span class="table--title-label">Table 13. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="reference_tw3_24x_fp__table_zw3_24x_fp__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tw3_24x_fp__table_zw3_24x_fp__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tw3_24x_fp__table_zw3_24x_fp__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tw3_24x_fp__table_zw3_24x_fp__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="reference_tw3_24x_fp__table_zw3_24x_fp__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tw3_24x_fp__table_zw3_24x_fp__entry__1 ">tuid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tw3_24x_fp__table_zw3_24x_fp__entry__2 ">TrainingUnit's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tw3_24x_fp__table_zw3_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tw3_24x_fp__table_zw3_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tw3_24x_fp__table_zw3_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tw3_24x_fp__table_zw3_24x_fp__entry__1 ">plid</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tw3_24x_fp__table_zw3_24x_fp__entry__2 ">Price list entry's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tw3_24x_fp__table_zw3_24x_fp__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tw3_24x_fp__table_zw3_24x_fp__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="reference_tw3_24x_fp__table_zw3_24x_fp__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

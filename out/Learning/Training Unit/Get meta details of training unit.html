@@ -1,0 +1,483 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all training units, learning components, find the details of the training unit, find the details of the training unit, find the details of the training unit (using post - range based search), find the details of the training unit (using post - range based search), get the meta details of the training unit, get the meta details of the training unit, get the details of a particular training unit, get the details of a particular training unit, create a new training unit, create a new training unit, update the details of a training unit, update the details of a training unit, delete a particular training unit, delete a particular training unit, get the details of a particular discount entry for the training unit, get the details of a particular discount entry for the training unit, create a new discount entry for the training unit, create a new discount entry for the training unit, delete a particular discount entry for the training unit, delete a particular discount entry for the training unit, get the details of a particular pricelist entry for the training unit, get the details of a particular pricelist entry for the training unit, create a new pricelist entry for the training unit, create a new pricelist entry for the training unit, update the details of a particular pricelist entry for the training unit, update the details of a particular pricelist entry for the training unit, delete a particular pricelist entry for the training unit, delete a particular pricelist entry for the training unit">
+  <meta name="keywords" content="learning, restful web services, get all training units, learning components, find the details of the training unit, find the details of the training unit, find the details of the training unit (using post - range based search), find the details of the training unit (using post - range based search), get the meta details of the training unit, get the meta details of the training unit, get the details of a particular training unit, get the details of a particular training unit, create a new training unit, create a new training unit, update the details of a training unit, update the details of a training unit, delete a particular training unit, delete a particular training unit, get the details of a particular discount entry for the training unit, get the details of a particular discount entry for the training unit, create a new discount entry for the training unit, create a new discount entry for the training unit, delete a particular discount entry for the training unit, delete a particular discount entry for the training unit, get the details of a particular pricelist entry for the training unit, get the details of a particular pricelist entry for the training unit, create a new pricelist entry for the training unit, create a new pricelist entry for the training unit, update the details of a particular pricelist entry for the training unit, update the details of a particular pricelist entry for the training unit, delete a particular pricelist entry for the training unit, delete a particular pricelist entry for the training unit">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Training Unit</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title5">GET META DETAILS OF TRAINING UNIT</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the meta details of the Training Unit.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/trainingunit/meta</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "sampleData": {
+        "priceList": null,
+        "available_from": "2014-08-08T02:46:16.976-0400",
+        "discontinued_from": null,
+        "validtill_days": null,
+        "discountEntries": null,
+        "name": null,
+        "id": null,
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": null
+        },
+        "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/trainingunit/tunit000000000000001"
+    },
+    "name": "TrainingUnit",
+    "displayName": "Training Unit",
+    "attributes": [
+        {
+            "name": "available_from",
+            "displayName": "Available From",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "currencySelectionMode",
+            "displayName": "Currency Selection Mode",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "discontinued_from",
+            "displayName": "Discontinued From",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "date",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "discountEntries",
+            "displayName": "Discount Entries",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "DiscountEntries",
+                "displayName": "Discount Entries",
+                "attributes": [
+                    {
+                        "name": "currency_id",
+                        "displayName": "Currency",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true
+                    },
+                    {
+                        "name": "discount",
+                        "displayName": "Discount",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "real",
+                        "isReference": false,
+                        "display": true,
+                        "minimumValue": 1,
+                        "maximumValue": 100,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "high_value",
+                        "displayName": "High Value",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "minimumValue": 1,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "low_value",
+                        "displayName": "Low Value",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "minimumValue": 1,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "trainingunit_id",
+                        "displayName": "Training Unit",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "object",
+                        "isReference": true,
+                        "display": true
+                    }
+                ]
+            }
+        },
+        {
+            "name": "id",
+            "displayName": "ID",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": true,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "name",
+            "displayName": "Name",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "priceband_id",
+            "displayName": "Priceband",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "priceband_units",
+            "displayName": "Priceband Units",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "real",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": false
+        },
+        {
+            "name": "priceList",
+            "displayName": "Price List Entry",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "array",
+            "isReference": false,
+            "display": true,
+            "component": {
+                "name": "Price List Entry",
+                "displayName": "Price List Entry",
+                "attributes": [
+                    {
+                        "name": "amount",
+                        "displayName": "Amount",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "real",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "charge_type",
+                        "displayName": "Charge Type",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "curr_id",
+                        "displayName": "Currency Id",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "displayValue",
+                        "displayName": "Display Name",
+                        "description": null,
+                        "isRequired": false,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "id",
+                        "displayName": "ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": true,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "part_id",
+                        "displayName": "Part Id",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "price_list_id",
+                        "displayName": "Price List ID",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "string",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    },
+                    {
+                        "name": "price_type",
+                        "displayName": "Price Type",
+                        "description": null,
+                        "isRequired": true,
+                        "isAutoGenerated": false,
+                        "type": "integer",
+                        "isReference": false,
+                        "display": true,
+                        "isSearchFilter": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "securityDomain",
+            "displayName": "Security Domain",
+            "description": null,
+            "isRequired": true,
+            "isAutoGenerated": false,
+            "type": "object",
+            "isReference": true,
+            "display": true
+        },
+        {
+            "name": "validtill_days",
+            "displayName": "Valid Till Days",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "integer",
+            "isReference": false,
+            "display": true,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom0",
+            "displayName": "Custom0",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom1",
+            "displayName": "Custom1",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom2",
+            "displayName": "Custom2",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom3",
+            "displayName": "Custom3",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom4",
+            "displayName": "Custom4",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom5",
+            "displayName": "Custom5",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom6",
+            "displayName": "Custom6",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom7",
+            "displayName": "Custom7",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom8",
+            "displayName": "Custom8",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        },
+        {
+            "name": "custom9",
+            "displayName": "Custom9",
+            "description": null,
+            "isRequired": false,
+            "isAutoGenerated": false,
+            "type": "string",
+            "isReference": false,
+            "display": false,
+            "length": 255,
+            "maximumLength": 255,
+            "isSearchFilter": true
+        }
+    ]
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="reference"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="learning, restful web services, update the details of a learning module, learning components, update the details of a learning module"><meta name="keywords" content="learning, restful web services, update the details of a learning module, learning components, update the details of a learning module"><meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Learning-apis"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Learning Module</title></head><body id="Learning-apis"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Learning Module</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-learning.html">Learning</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="put-update-the-details-of-a-learning-module-N106FE">
+        <h2 class="title topictitle2" id="ariaid-title2">UPDATE DETAILS OF A LEARNING MODULE</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <p class="p">Updates the details of a learning module based on the Module's ID and
+                    Certification's ID passed as parameter values.</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">PUT</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/learningmodule/:id</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__1 ">id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__2 ">Module's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__1 ">certification_id</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__2 ">Certification's ID</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__1 ">name</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__2 ">Name of the learning module</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__3 ">module modified</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__1 ">waiver</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__2 ">Waiver of the learning module</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__3 ">false</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__1 ">sequence</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__2 ">Sequence of the learning module</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__1 ">notes</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__2 ">Notes for the learning module</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__3 ">note101</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__1 ">required</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__2 ">Whether the learning module is required</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__3 ">true</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__1 ">customValues</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__2 ">Custom Values</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__1 ">reqd_no_of_items</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__2 ">The required number of items</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="put-update-the-details-of-a-learning-module-N106FE__table_ovy_phf_xl__entry__5 ">Yes</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+   "name": "Module B mmmoddiiffiieedd",
+   "is_waiver": true,
+   "sequence": 2,
+   "notes": "hello yuppiiii",
+   "is_reqd": true,           
+   "reqd_no_of_items":1,
+   "id": "cegrp000000000200049",
+   "certification_id": "crtfy000000000200784
+}</code></pre>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

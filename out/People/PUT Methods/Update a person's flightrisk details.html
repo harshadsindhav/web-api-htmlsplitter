@@ -1,0 +1,149 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="people, restful web services, update a person's flightrisk details, people components, update a person's flightrisk details, update person's resource and rate details, update person's resource and rate details, update a profile for given person id [external], update a profile for given person id [external], update a profile for given person id [internal], update a profile for given person id [internal], update a profile for given person name [external], update a profile for given person name [external], update a profile for given person name [internal], update a profile for given person name [internal], update coreprofile details of a person, update coreprofile details of a person, update languages details of a person, update languages details of a person, update the career interests details of a person, update the career interests details of a person, update the education details of a person, update the education details of a person, update the external certifications details of a person, update the external certifications details of a person, update the im profile details of a person, update the im profile details of a person, update the interests details of a person, update the interests details of a person, update the internal work history details of a peson, update the internal work history details of a peson, update the external work history details of a peson, update the external work history details of a peson, update the mobility details of a person, update the mobility details of a person, update the network info details of a person, update the network info details of a person, update the potential positions details of a person, update the potential positions details of a person, update the potential rating details of a person, update the potential rating details of a person, update the retirement risk details of a person, update the retirement risk details of a person, update the saba meeting profile details of a person, update the saba meeting profile details of a person, update the secondary address details of a person, update the secondary address details of a person, update audience types / audience sub types assigned to a person, update audience types / audience sub types assigned to a person, remove/update the job / security roles of a person, remove/update the job / security roles of a person, update the team details of a person, update the team details of a person, mark the currency active/inactive, mark the currency active/inactive, merge person's profile">
+  <meta name="keywords" content="people, restful web services, update a person's flightrisk details, people components, update a person's flightrisk details, update person's resource and rate details, update person's resource and rate details, update a profile for given person id [external], update a profile for given person id [external], update a profile for given person id [internal], update a profile for given person id [internal], update a profile for given person name [external], update a profile for given person name [external], update a profile for given person name [internal], update a profile for given person name [internal], update coreprofile details of a person, update coreprofile details of a person, update languages details of a person, update languages details of a person, update the career interests details of a person, update the career interests details of a person, update the education details of a person, update the education details of a person, update the external certifications details of a person, update the external certifications details of a person, update the im profile details of a person, update the im profile details of a person, update the interests details of a person, update the interests details of a person, update the internal work history details of a peson, update the internal work history details of a peson, update the external work history details of a peson, update the external work history details of a peson, update the mobility details of a person, update the mobility details of a person, update the network info details of a person, update the network info details of a person, update the potential positions details of a person, update the potential positions details of a person, update the potential rating details of a person, update the potential rating details of a person, update the retirement risk details of a person, update the retirement risk details of a person, update the saba meeting profile details of a person, update the saba meeting profile details of a person, update the secondary address details of a person, update the secondary address details of a person, update audience types / audience sub types assigned to a person, update audience types / audience sub types assigned to a person, remove/update the job / security roles of a person, remove/update the job / security roles of a person, update the team details of a person, update the team details of a person, mark the currency active/inactive, mark the currency active/inactive, merge person's profile">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-people.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>PUT Methods</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title2">UPDATE A PERSON'S FLIGHTRISK DETAILS</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Updates the FlightRisk details of a person based on the Person's ID.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">PUT</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/people/:person_id/flightRisk/:id</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL (User-friendly)</h5>You can use a user-friendly URL which accepts the 
+    <strong class="ph b">username</strong> instead of the internal Flight Risk's ID.
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/people/username%3D&lt;Username&gt;/flightRisk/username%3D&lt;Username&gt;?type=:type</p>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 1. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__1 ">person_id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__2 ">Person's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__3 ">persn000000000001000</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__1 ">id</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__2 ">FlightRisk's ID</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__3 ">ppflr000000000022492</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__1 ">flight_risk</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__2 ">Flight risk</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__3 ">Undetermined</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__1 ">locale</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__2 ">Locale</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__3 "> <pre class="pre codeblock"><code>{"id": "local000000000000001", "displayName": "English"}</code></pre> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__1 ">profiled</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__2 ">Profiled</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__1 ">securityDomain</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__2 ">Security Domain</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__3 "> <pre class="pre codeblock"><code>{
+"id": "domin000000000000001",
+"name": "world"
+}</code></pre> </td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__1 ">customValues</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__2 ">Custom Values</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__1 ">auditReason</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__2 ">Audit Reason</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__3 ">audit with reason</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="put-update-a-persons-flightrisk-details-N12107__table_z3d_4mv_z4__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Request Body</h5> 
+    <pre class="pre codeblock"><code>{
+        "flight_risk": "Medium",
+        "id": "ppflr000000002273345",
+        "securityDomain": {
+            "id": "domin000000000000001",
+            "displayName": "world"
+        }
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

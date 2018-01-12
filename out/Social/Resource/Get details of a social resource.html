@@ -1,0 +1,211 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="foundation, restful web services, get details of a social resource, foundation components, get details of a social resource, find social resources, find social resources (using post - range based search), find social resources (using post - range based search), find social resource of a group, find social resource of a group, find social resource of a group (using post - range based search), find social resource of a group (using post - range based search), post idea to saba activity stream., post idea to saba activity stream., post issue to saba activity stream., post issue to saba activity stream., post link to saba activity stream., post link to saba activity stream., post file to saba activity stream., post file to saba activity stream., update idea posted on saba activity stream., update idea posted on saba activity stream., update issue posted on saba activity stream., update issue posted on saba activity stream., update link posted on saba activity stream., update link posted on saba activity stream., update file posted on saba activity stream., update file posted on saba activity stream., delete idea posted on saba activity stream., delete idea posted on saba activity stream., delete issue posted on saba activity stream., delete issue posted on saba activity stream., delete link posted on saba activity stream., delete link posted on saba activity stream., delete file posted on saba activity stream., delete file posted on saba activity stream.">
+  <meta name="keywords" content="foundation, restful web services, get details of a social resource, foundation components, get details of a social resource, find social resources, find social resources (using post - range based search), find social resources (using post - range based search), find social resource of a group, find social resource of a group, find social resource of a group (using post - range based search), find social resource of a group (using post - range based search), post idea to saba activity stream., post idea to saba activity stream., post issue to saba activity stream., post issue to saba activity stream., post link to saba activity stream., post link to saba activity stream., post file to saba activity stream., post file to saba activity stream., update idea posted on saba activity stream., update idea posted on saba activity stream., update issue posted on saba activity stream., update issue posted on saba activity stream., update link posted on saba activity stream., update link posted on saba activity stream., update file posted on saba activity stream., update file posted on saba activity stream., delete idea posted on saba activity stream., delete idea posted on saba activity stream., delete issue posted on saba activity stream., delete issue posted on saba activity stream., delete link posted on saba activity stream., delete link posted on saba activity stream., delete file posted on saba activity stream., delete file posted on saba activity stream.">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-social.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Resource</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title2">GET DETAILS OF A SOCIAL RESOURCE</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Gets details of a social resource. This API enables the user to retrieve the details of a given social resource based on the Resource ID which is passed in the URL. </p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5> 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/:resourceId</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Examples</h5>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/idear000000000001170 
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/issue000000000001180 </p>
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/simrs000000000001149 </p>
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/pgcnt000000000001045 </p>
+    <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/social/resource/spage000000000001065 </p>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_txc_5jc_jy__table_pyc_5jc_jy" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 1. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:20%">
+      <col style="width:25%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:15%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_txc_5jc_jy__table_pyc_5jc_jy__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_txc_5jc_jy__table_pyc_5jc_jy__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_txc_5jc_jy__table_pyc_5jc_jy__entry__3">Default Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_txc_5jc_jy__table_pyc_5jc_jy__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_txc_5jc_jy__table_pyc_5jc_jy__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_txc_5jc_jy__table_pyc_5jc_jy__entry__1 ">resourceId </td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_txc_5jc_jy__table_pyc_5jc_jy__entry__2 ">ID of the social resource. 
+        <div class="note note note_note">
+         <span class="note__title">Note:</span> This API will only accept the Resource ID of the following 
+         <strong class="ph b">supported resource types</strong>. An appropriate error message will be returned, if an invalid resource ID is provided.
+         <table id="reference_txc_5jc_jy__table_bn2_skc_jy" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+          <caption></caption>
+          <colgroup>
+           <col>
+          </colgroup>
+          <tbody class="tbody"> 
+           <tr> 
+            <td class="entry"><strong class="ph b"> Supported Resource Types </strong></td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> Idea </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> Link </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> BlogPost </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> Video </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> Issue </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> File </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> Page </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> KAList </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> Blog </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> Workspace </td> 
+           </tr> 
+           <tr> 
+            <td class="entry"> VideoContent </td> 
+           </tr> 
+          </tbody>
+         </table>
+        </div></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_txc_5jc_jy__table_pyc_5jc_jy__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_txc_5jc_jy__table_pyc_5jc_jy__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_txc_5jc_jy__table_pyc_5jc_jy__entry__5 ">Yes</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+  "socialProfile": null,
+  "issueDetail": {
+    "recommendable": true,
+    "author": null,
+    "implementationLead": {
+      "name": null,
+      "id": null,
+      "type": null
+    },
+    "recommendationList": null,
+    "peopleListed": true,
+    "groupMemberListed": false,
+    "statusDisplayName": "New",
+    "stateDisplayName": "New",
+    "extendedAttributes": {
+      "shareWith": [
+        {
+          "role": "Viewer",
+          "displayName": "Everyone",
+          "id": "teams000000000001000"
+        },
+        {
+          "role": "Viewer",
+          "displayName": "Migration Community",
+          "id": "teams000000000011981"
+        },
+        {
+          "role": "Co-owner",
+          "displayName": "UONE",
+          "id": "emplo000000000533317"
+        }
+      ],
+      "tags": []
+    },
+    "language": {
+      "name": "English",
+      "id": "lange000000000000001",
+      "type": "LANGUAGE"
+    },
+    "state": "new",
+    "owner": {
+      "name": "User Öztürk",
+      "id": "emplo000000000533317",
+      "type": "PERSON"
+    },
+    "timestamp": "0",
+    "description": "&lt;p&gt;&amp;lt;&lt;span data-mce-bogus=\"1\" class=\"nanospell-typo\"&gt;iframe&lt;/span&gt; &lt;span data-mce-bogus=\"1\" class=\"nanospell-typo\"&gt;src&lt;/span&gt;='&lt;span data-mce-bogus=\"1\" class=\"nanospell-typo\"&gt;javascript&lt;/span&gt;:alert(9);' &amp;gt;&amp;lt;/&lt;span data-mce-bogus=\"1\" class=\"nanospell-typo\"&gt;iframe&lt;/span&gt;&amp;gt;&lt;br data-mce-bogus=\"1\"&gt;&lt;/p&gt;",
+    "domain": {
+      "name": "world",
+      "id": "domin000000000000001",
+      "type": "DOMAIN"
+    },
+    "status": "1",
+    "createdBy": {
+      "name": "User Öztürk",
+      "id": "emplo000000000533317",
+      "type": "PERSON"
+    },
+    "updatedBy": "uone",
+    "updatedOn": "2016-05-23T07:02:22.000+0000",
+    "createdOn": "2016-05-23T07:02:22.000+0000",
+    "name": "&amp;lt;iframe src='javascript:alert(9);' &amp;gt;&amp;lt;/iframe&amp;gt;PCAKHO",
+    "id": "issue000000000004706",
+    "type": "ISSUE"
+  },
+  "pictureURL": null,
+  "tagList": null,
+  "socialActions": null,
+  "categoryList": null
+}</code></pre> 
+   </section> 
+  </div>
+ </body>
+</html>

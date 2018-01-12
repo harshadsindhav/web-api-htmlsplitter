@@ -1,0 +1,706 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="reference">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="learning, restful web services, get all offerings, learning components, find the details of the offerings, find the details of the offerings, get the meta details of a blended class, get the meta details of a blended class, get the meta details of an ilt class, get the meta details of an ilt class, get the details of a class, get the details of a class, get the meta details of a virtual class, get the meta details of a virtual class, get the meta details of a wbt class, get the meta details of a wbt class, create a new blended class, create a new blended class, create a new ilt class, create a new ilt class, create a new virtual class, create a new virtual class, create a new wbt class, create a new wbt class, update a blended class, update a blended class, update a ilt class, update a virtual class, update a virtual class, update a wbt class, get all the offerings of the instructor, get all the offerings of the instructor, retrieve all learning assignments of a class, retrieves all learning assignments of an class, add learning assignments to a class, add learning assignments to a class, update learning assignments of a class, update learning assignments of a class, publish learning assignments of a class, publish learning assignments of a class, mark class as delivered/cancelled, mark class as delivered/cancelled, cancel all enrollments of a class, cancel all enrollments of a class, retrieve all sessions of an offering, retrieve all sessions of an offering, mark class registration as no_show/walk_in, mark class registration as no_show/walk_in, add drop policy to class, delete drop policy from class, delete drop policy from class">
+  <meta name="keywords" content="learning, restful web services, get all offerings, learning components, find the details of the offerings, find the details of the offerings, get the meta details of a blended class, get the meta details of a blended class, get the meta details of an ilt class, get the meta details of an ilt class, get the details of a class, get the details of a class, get the meta details of a virtual class, get the meta details of a virtual class, get the meta details of a wbt class, get the meta details of a wbt class, create a new blended class, create a new blended class, create a new ilt class, create a new ilt class, create a new virtual class, create a new virtual class, create a new wbt class, create a new wbt class, update a blended class, update a blended class, update a ilt class, update a virtual class, update a virtual class, update a wbt class, get all the offerings of the instructor, get all the offerings of the instructor, retrieve all learning assignments of a class, retrieves all learning assignments of an class, add learning assignments to a class, add learning assignments to a class, update learning assignments of a class, update learning assignments of a class, publish learning assignments of a class, publish learning assignments of a class, mark class as delivered/cancelled, mark class as delivered/cancelled, cancel all enrollments of a class, cancel all enrollments of a class, retrieve all sessions of an offering, retrieve all sessions of an offering, mark class registration as no_show/walk_in, mark class registration as no_show/walk_in, add drop policy to class, delete drop policy from class, delete drop policy from class">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-learning.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="Learning-apis">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Class</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title3">FIND DETAILS OF CLASSES</h4>
+  <div class="body refbody"> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Overview</h5> 
+    <p class="p">Returns the details of the offerings along with the ID and the Deeplink URL based on the provided search criteria.</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Requires OAuth</h5> 
+    <p class="p">No</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Method</h5> 
+    <p class="p">GET</p> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">URL</h5>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering?type=:type&amp;q=(:criteria_field%3D%3D:field_value)&amp;count=:count&amp;startPage=:startPage
+    <p class="p">In order to search for the offerings with custom delivery type, the id/name of the custom delivery type should be given as an input to the <strong class="ph b">type</strong> parameter in the URL:</p>
+    <div class="p">
+     https://
+     <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering
+     <strong class="ph b">?type=<em class="ph i">&lt;CustomDeliveryTypeName&gt;</em></strong>&amp;count=:count&amp;startPage=:startPage
+     <div class="note note note_note">
+      <span class="note__title">Note:</span> In addition to this, this Web service also returns the deeplink URL of the class details along with the other existing attributes with 
+      <strong class="ph b">includedetails=true</strong>
+     </div>
+    </div>
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Calling Options</h5> 
+    <table id="reference_er2_qnx_fp__table_qsv_zx1_q5" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+     <caption>
+      <span class="table--title-label">Table 2. </span>
+      <span class="title">Calling Options</span>
+      <span class="desc tabledesc">Calling Options</span>
+     </caption>
+     <colgroup>
+      <col style="width:21.037037037037035%">
+      <col style="width:24.74074074074074%">
+      <col style="width:19.703703703703702%">
+      <col style="width:19.703703703703702%">
+      <col style="width:14.814814814814813%">
+     </colgroup>
+     <thead class="thead"> 
+      <tr> 
+       <th class="entry colsep-1 rowsep-1" id="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__1">Name</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__2">Description</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__3">Sample Value</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__4">Data Type</th> 
+       <th class="entry colsep-1 rowsep-1" id="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__5">Required?</th> 
+      </tr> 
+     </thead>
+     <tbody class="tbody"> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__1 ">type</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__2 ">The type of desired class.
+        <div class="note note note_note">
+         <span class="note__title">Note:</span> In order to search for the offerings with custom delivery type, the id/name of the custom delivery type should be given as an input to the 
+         <strong class="ph b">type</strong> parameter in the URL
+        </div></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__3 ">Such as:
+        <ul class="ul" id="reference_er2_qnx_fp__ul_hx4_1xb_v5"> 
+         <li class="li">instructor_led</li> 
+         <li class="li">blended</li> 
+         <li class="li">web_based</li> 
+         <li class="li">virtual_class</li> 
+        </ul></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__1 ">criteria_field</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__2 ">The search criteria i.e. the field name.
+        <div class="note note note_note">
+         <span class="note__title">Note:</span> You can also search for a class using course_no.
+        </div></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__3 ">class_no</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__1 ">field_value</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__2 ">The search value for the specified search criteria.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__3 "></td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__5 ">Yes</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__1 ">count</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__2 ">The number of records per page.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__3 ">10</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__5 ">No</td> 
+      </tr> 
+      <tr> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__1 ">startPage</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__2 ">The start page number for the list of records.</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__3 ">1</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__4 ">string</td> 
+       <td class="entry colsep-1 rowsep-1" headers="reference_er2_qnx_fp__table_qsv_zx1_q5__entry__5 ">No</td> 
+      </tr> 
+     </tbody>
+    </table> 
+   </section> 
+   <table id="reference_er2_qnx_fp__table_dbq_jh5_q5" border="1px" style="line-height:28px;border:1px solid #c1baba;">
+    <caption>
+     <span class="table--title-label">Table 3. </span>
+     <span class="title">Fields that can be used in criteria_field</span>
+    </caption>
+    <colgroup>
+     <col>
+     <col>
+     <col>
+     <col>
+    </colgroup>
+    <thead class="thead"> 
+     <tr> 
+      <th class="entry" id="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1"> Field Name </th> 
+      <th class="entry" id="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2"> Applicability </th> 
+      <th class="entry" id="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3"> Field Description </th> 
+      <th class="entry" id="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4"> Example </th> 
+     </tr> 
+    </thead>
+    <tbody class="tbody"> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> class_no </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session based offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Part no. of the offering (ILT) </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> class_no%3D%3D00102 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> wbt_no </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> WBT offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Part No. of the offering (WBT) </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> wbt_no%3D%3D00101 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> location_id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session based offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Location id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> location_id%3D%3D locat000000000200042 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> offer_title </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Title of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> offer_title%3D%3D testcourse1 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> start_date </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Start date of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> start_date%3D%3D 2000-02-28 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> avail_from </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session based offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Availability date of the self paced offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> avail_from%3D%3D2000-02-28 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> end_date </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session based offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> End date of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> end_date%3D%3D 2000-02-28 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> disc_from </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session based offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Discontinued date of the self paced offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> disc_from%3D%3D2000-02-28 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> max_ct </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Maximum registration count of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> max_ct%3D%3D10 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> server_path </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Server path of the self paced offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> &nbsp; </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> url </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> url of the self paced offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> url%3D%3Dhttp://www.saba.com </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> Availability </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Availability status of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> availability%3D%3D100 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> max_book </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session based offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Maximum wait listed registrations </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> max_book%3D%3D5 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> min_ct </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session based offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Minimum registration count of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> min_ct%3D%3D10 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> stud_ct </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session based offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Student count of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> stud_ct%3D%3D12 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> stud_book </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session based offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> (Student bookings) – (student count) </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> stud_book%3D%3D2 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> manufacturer </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Manufacturer associated to the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> manufacturer%3D%3D intorganization </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> status </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Status of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> status%3D%3D100 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> created_by </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Creator of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> created_by%3D%3Duone </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> created_on </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Date of creation of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> created_on%3D%3D 2000-02-28 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> updated_by </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> User who has updated the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> updated_by%3D%3Dadmin </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> updated_on </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Date when the offering has been updated </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> updated_on%3D%3D 2000-02-28 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> csr_id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session Based Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Customer Service Representative </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> csr_id%3D%3DUONE </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> parent </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session Based Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Parent class of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> parent%3D%3D class000000000001000 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> session_template </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session Based Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Session template of the session based offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> session_template%3D%3D SesTemplate1 M-F/40hr </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> when_cancel </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session Based Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Cancellation date of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> when_cancel%3D%3D2000-02-28 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> custom0 </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Custom 0 value of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Custom0%3D%3Dtest </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> custom1 </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Custom 1 value of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Custom1%3D%3Dtest </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> custom2 </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Custom 2 value of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Custom2%3D%3Dtest </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> custom3 </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Custom 3 value of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Custom3%3D%3Dtest </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> custom4 </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Custom 4 value of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Custom4%3D%3Dtest </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> custom5 </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Custom 5 value of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Custom5%3D%3Dtest </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> custom6 </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Custom 6 value of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Custom6%3D%3Dtest </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> custom7 </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Custom 7 value of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Custom7%3D%3Dtest </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> custom8 </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Custom 8 value of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Custom8%3D%3Dtest </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> custom9 </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Custom 9 value of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Custom9%3D%3Dtest </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> language_id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session Based Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Language of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> language_id%3D%3Dlange000000000000006 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> test </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session Based Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Test flag for the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> test%3D%3Dtrue </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> disp_for_web </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Display for web flag </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> disp_for_web%3D%3Dtrue </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> disp_for_call_center </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Display for call center flag </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> disp_for_call_center%3D%3Dtrue </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> training_units </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Training units of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> training_units%3D%3D15 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> facility_id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session Based Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Facility of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> falicity%3D%3Dfacility1 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> rescheduled </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session Based Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Rescheduled flag of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> rescheduled%3D%3Dtrue </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> vendor_id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Vendor associated to the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> vendor_id%3D%3Deorg2 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> enroll_close </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session Based Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Enrollment close date </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> enroll_close%3D%3D2000-02-28 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> offer_title_1 </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session Based Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Offering&nbsp; Template No. </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> offer_title_1%3D%3D BP200-ILT2-00200142 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> offer_split </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Domain Id of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> offer_split %3D%3Ddomin000000000200122 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> offer_audience_type_id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Audience Type </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> offer_audience_type_id%3D%3D audie000000000001107 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> broadcast </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Session Based Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> &nbsp; </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> broadcast%3D%3Dtrue </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> open_enroll </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Only session based </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Enrollment open date of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> open_enroll%3D%3D2000-02-28 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> duration </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Duration of the session based of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> duration%3D%3D240 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> amount </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Price of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> amount%3D%3D100 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> is_private </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Only session based </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Private flag of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> is_private%3D%3Dtrue </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> contact_id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Only session based </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Order contact id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> contact_id%3D%3D emplo000000000200021 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> order_no </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Only session based </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Order no </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> order_no%3D%3D 00200020 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> company_id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Only session based </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> The company id of the order contact </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> company_id%3D%3D bisut000000000001001 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> gov_owner </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Offering owner id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> gov_owner%3D%3D emplo000000000001000 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> offering_template_id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Offering Template Id of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> offering_template_id%3D%3D cours000000000200040 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> program_offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Package id of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> program_offering%3D%3D pckge000000000001087 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> future_offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Only session based </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> &nbsp; </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> &nbsp; </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> hide_discontinued_offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Only session based </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> &nbsp; </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> &nbsp; </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> delivery_id </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Delivery Id of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> delivery_id%3D%3D eqcat000000000000002 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> at_check </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> all </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Audience type check for the learner </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> at_check%3D%3Dtrue </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> offering_template_no </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self Paced Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Offering template no </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> offering_template_no%3D%3D SEED_WBT </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> check_disc_from </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self Paced Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> The expiry (discontinuation) date of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> check_disc_from%3D%3D2000-02-28 </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> description </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Description of the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> description%3D%3Dtest_course </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> language_name </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self Paced Offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Language associated to the offering </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> &nbsp; </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> mastery_score </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Not Applicable </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Not Applicable </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> total_attempts_allowed </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Not Applicable </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Not Applicable </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> max_time_allowed </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Not Applicable </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Not Applicable </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> time_limit_action </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Not Applicable </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Not Applicable </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> time_limit_action_flag </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Not Applicable </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Not Applicable </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> vendor_file </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Not Applicable </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Not Applicable </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> lesson_file </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Not Applicable </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Not Applicable </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> comments_file </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Not Applicable </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Not Applicable </td> 
+     </tr> 
+     <tr> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__1 "> max_downloads </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__2 "> Self paced offerings </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__3 "> Not Applicable </td> 
+      <td class="entry" headers="reference_er2_qnx_fp__table_dbq_jh5_q5__entry__4 "> Not Applicable </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values</h5> 
+    <pre class="pre codeblock"><code>{
+    "hasMoreResults": false,
+    "facets": [],
+    "itemsPerPage": 10,
+    "results": [
+        {
+            "id": "class000000000001505",
+            "href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/offering/class000000000001505"
+        }
+    ],
+    "totalResults": 1,
+    "startIndex": 1
+}</code></pre> 
+   </section> 
+   <section class="section">
+    <h5 class="title sectiontitle" style="color : darkcyan;letter-spacing: 1px;margin-bottom:5px;">Return Values (with includedetails=true)</h5>
+    <pre class="pre codeblock"><code>{
+  "startIndex": 1,
+  "results": [
+    {
+      "enforced_seq": "SUGGESTED",
+      "duration": 600,
+      "delivery_id": {
+        "id": "eqcat000000000200260",
+        "displayName": "test_delivery"
+      },
+      "training_units": 15,
+      "post_completion": 0,
+      "language_id": {
+        "id": "lange000000000000001",
+        "displayName": "English"
+      },
+      "description": "good for testing",
+      "avail_from": "2015-11-26T00:00:00.000+0530",
+      "wbt_no": "00200828",
+      "offering_temp_id": {
+        "id": "cours000000000202542",
+        "displayName": "test_new_del"
+      },
+      "disp_for_call_center": true,
+      "customValues": {
+        "custom9": null,
+        "custom0": null,
+        "custom3": null,
+        "custom4": null,
+        "custom1": null,
+        "custom2": null,
+        "custom7": null,
+        "custom8": null,
+        "custom5": null,
+      },
+      "securityDomain": {
+        "id": "domin000000000000001",
+        "displayName": "world"
+      },
+      "id": "dowbt000000000002763"
+"deepLinkURL": http://localhost/Saba/Web_spf/Social/common/leclassview/dowbt000000000002763
+}</code></pre>
+    <p class="p">To retrieve all web-based classes for a course ("ABC"):</p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering?type=web_based&amp;q=(offer_title=ABC) 
+    <div class="p">
+     <strong class="ph b">Return Values:</strong>
+     <pre class="pre codeblock"><code>{
+   "facets":[ ],
+   "startIndex":1,
+   "results":[
+      {
+         "id":"dowbt000000000002428",
+         "href":"http://&lt;hostname-api.sabacloud.com&gt;/v1/offering/dowbt000000000002428"
+      }
+   ],
+   "hasMoreResults":false,
+   "totalResults":1,
+   "itemsPerPage":10
+}</code></pre>
+    </div>
+    <p class="p">To retrieve all web-based classes for a course using course no. ("DEF"):</p>https://
+    <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/offering?type=web_based&amp;q=(course_no==00019413)
+    <div class="p">
+     <strong class="ph b">Return Values:</strong>
+     <pre class="pre codeblock"><code>{
+"facets": [0]
+"startIndex": 1
+"results": [1]
+0:  {
+"id": "dowbt000000000019812"
+"href": "https://&lt;hostname-api.sabacloud.com&gt;/v1/offering/dowbt000000000019812"
+}
+"hasMoreResults": false
+"totalResults": 1
+"itemsPerPage": 10
+}</code></pre>
+    </div>
+   </section> 
+  </div>
+ </body>
+</html>

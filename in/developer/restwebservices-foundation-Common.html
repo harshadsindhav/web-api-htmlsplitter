@@ -1,0 +1,376 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2018"><meta name="DC.rights.owner" content="(C) Copyright 2018"><meta name="DC.Type" content="topic"><meta name="DC.Coverage" content="DRAFT"><meta name="DC.subject" content="foundation, restful web services, global search, foundation components"><meta name="keywords" content="foundation, restful web services, global search, foundation components"><meta name="DC.Relation" scheme="URI" content="../developer/part-foundation.html"><meta name="prodname" content="REST API Reference"><meta name="version" content=""><meta name="release" content=""><meta name="modification" content=""><meta name="DC.Creator" content=""><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="d0e656"><link rel="stylesheet" type="text/css" href="../commonltr.css"><title>Common</title></head><body id="d0e656"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Common</h1>
+    
+    <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../developer/part-foundation.html">Foundation</a></div></div></nav><article class="topic reference nested1" aria-labelledby="ariaid-title2" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC">
+        <h2 class="title topictitle2" id="ariaid-title2">GLOBAL SEARCH</h2>
+        
+        <div class="body refbody">
+            <section class="section"><h3 class="title sectiontitle">Overview</h3>
+                
+                <div class="p">This API is very similar to the global search functionality available on UI. It
+                    helps locating resources in Saba and returns result details similar to those on
+                    UI based on the resource type.&nbsp;<div class="note note note_note"><span class="note__title">Note:</span> The maximum page size will be restricted to
+                        100 records. At max 500 records can be fetched using this API.</div></div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Requires OAuth</h3>
+                
+                <p class="p">No</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Method</h3>
+                
+                <p class="p">POST</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">URL</h3>
+                
+                <p class="p">https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/globalsearch?count=&lt;count&gt;&amp;startpage=&lt;startpage&gt;</p>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Calling Options</h3>
+                
+                <table class="table frame-all" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl"><caption><span class="table--title-label">Table 1. </span><span class="title">Calling Options</span><span class="desc tabledesc">Calling Options</span></caption><colgroup><col style="width:20%"><col style="width:25%"><col style="width:20%"><col style="width:20%"><col style="width:15%"></colgroup><thead class="thead">
+                            <tr class="row rowsep-1">
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1">Name</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2">Description</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3">Sample Value</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4">Data Type</th>
+                                <th class="entry colsep-1 rowsep-1" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5">Required?</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row rowsep-1">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1 ">searchText</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2 ">Required in case searchContext is set as
+                                    ALL</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1 ">searchContext</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2 ">Name of resource type for which search needs to
+                                    be performed. Possible values are listed in the <strong class="ph b">Possible
+                                        values of search context attribute</strong> table below.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5 ">Yes</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1 ">learningEventType</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2 ">Used for learning advance search. Possible value
+                                    are listed in the <strong class="ph b">Possible values of learning event type
+                                        attribute</strong> table below. </td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1 ">deliveryType</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2 ">Used for learning advance search.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1 ">startDate</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2 ">Used for learning advance search.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1 ">location</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2 ">Used for learning / job requisition advance
+                                    search.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1 ">category</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2 ">Used for learning / social object search as
+                                    advance filter.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1 ">tag</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2 ">Used for learning / social object search as
+                                    advance filter. </td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1 ">owner</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2 ">Used for learning / social object search as
+                                    advance filter.</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5 ">No</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__1 ">sortBy</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__2 ">Used for sorting result. Possible values are
+                                    listed in the <strong class="ph b">Possible value of sort by attribute</strong> table
+                                    below. </td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__3 "></td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__4 ">string</td>
+                                <td class="entry colsep-1 rowsep-1" headers="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_sk4_zkc_rl__entry__5 ">No</td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section">
+                <p class="p"><strong class="ph b">Possible values of search context attribute</strong></p>
+                <table class="table" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_pz2_bk4_3y"><caption></caption><colgroup><col><col></colgroup><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry">
+                                    <strong class="ph b">Possible value </strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">UI field Name</strong>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> ALL</td>
+                                <td class="entry"> All </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> BLOGS</td>
+                                <td class="entry"> Blogs </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> BOOKMARKLIST </td>
+                                <td class="entry"> Bookmarks </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> CENTRAEVENT </td>
+                                <td class="entry"> Meetings </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> CHANNELS</td>
+                                <td class="entry"> Video Channels </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> VIDEOCONTENT</td>
+                                <td class="entry"> Videos </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> DISCUSSIONMESSAGE </td>
+                                <td class="entry"> Discussions </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> EVENT</td>
+                                <td class="entry"> Conferences </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> FILE</td>
+                                <td class="entry"> Files </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> GROUP</td>
+                                <td class="entry"> Groups </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> IDEA</td>
+                                <td class="entry"> Ideas </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> ISSUE</td>
+                                <td class="entry"> Issues </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> URL</td>
+                                <td class="entry"> Links </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> PAGE</td>
+                                <td class="entry"> Pages</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> JOBREQUISITION</td>
+                                <td class="entry"> Job Openings </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> LEARNINGEVENT</td>
+                                <td class="entry"> Learning Catalog </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> SUBSCRIPTION</td>
+                                <td class="entry"> Subscription </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> PERSON</td>
+                                <td class="entry"> People </td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section">
+                <p class="p"><strong class="ph b">Possible values of learning event type attribute</strong></p>
+                <table class="table" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_dtt_2k4_3y"><caption></caption><colgroup><col><col></colgroup><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry">
+                                    <strong class="ph b">Possible value </strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">UI field Name</strong>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> CURRICULUM </td>
+                                <td class="entry"> Course </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> CERTIFICATION </td>
+                                <td class="entry"> Certification </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> COURSE </td>
+                                <td class="entry"> Curriculum </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> OFFERING </td>
+                                <td class="entry"> Offering / Class </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> PACKAGE </td>
+                                <td class="entry"> Package </td>
+                            </tr>
+                        </tbody></table>
+            </section>
+            <section class="section">
+                <p class="p"><strong class="ph b">Possible value of sort by attribute</strong></p>
+                <table class="table" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__table_y5k_fk4_3y"><caption></caption><colgroup><col><col></colgroup><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry">
+                                    <strong class="ph b">Possible value </strong>
+                                </td>
+                                <td class="entry">
+                                    <strong class="ph b">UI field Name</strong>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> RatingHighToLow </td>
+                                <td class="entry"> RatingHighToLow </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> RatingLowToHigh </td>
+                                <td class="entry"> RatingLowToHigh </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> RecentlyAdded </td>
+                                <td class="entry"> RecentlyAdded </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> RecentlyModified </td>
+                                <td class="entry"> RecentlyModified </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> AlphaAZ </td>
+                                <td class="entry"> AlphaAZ </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> AlphaZA </td>
+                                <td class="entry"> AlphaZA </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> MostCommented </td>
+                                <td class="entry"> MostCommented </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry"> MostShared </td>
+                                <td class="entry"> MostShared </td>
+                            </tr>
+                        </tbody></table>
+                <div class="note note note_note"><span class="note__title">Note:</span> 
+                    <p class="p">The default sort value will be <strong class="ph b">Relevance</strong>.</p>
+                </div>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Request Body</h3>
+                
+                <pre class="pre codeblock"><code>{
+	"searchText": "test",
+	"searchContext": "LEARNINGEVENT",
+	"learningEventType": "CERTIFICATION ",
+	"deliveryType": {"id":"eqcat000000000000014","displayName":"blended"},
+	"startDate": "2015-10-10 THH:mm:ssZ ",
+	"location": [{"id":"locat000000000200100","displayName":"location1"}],
+	"category": [{"id":"categ000000000001001","displayName":"category1"}],
+	"tag": ["tag1",”tag2”],
+	"owner": [{"id":"emplo000000000200100","displayName":"user1"}],
+	"sortBy":"AlphaAZ"
+}</code></pre>
+            </section>
+            <section class="section"><h3 class="title sectiontitle">Return Values</h3>
+                
+                <pre class="pre codeblock"><code>{  
+   "hasMoreResults":true,
+   "itemsPerPage":2,
+   "results":[  
+      {  
+         "displayName":"Multiple Classes 2",
+         "rating":"0.0",
+         "description":"Multiple Classes with delivery type Blended.",
+         "id":"cours000000000037525",
+         "href":"https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course/cours000000000037525",
+         "type":"COURSE"
+      },
+      {  
+         "displayName":"test1",
+         "rating":"0.0",
+         "description":null,
+         "id":"cours000000000004147",
+         "href":"https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course/cours000000000004147",
+         "type":"COURSE"
+      }
+   ]
+}</code></pre>
+                <div class="note note note_note"><span class="note__title">Note:</span> 
+                    <p class="p">The <strong class="ph b">href</strong> attribute in the output JSON will be populated for the below
+                        listed objects. For rest of object it's value will be null:</p>
+                    <ul class="ul" id="get-find-the-details-of-the-attachment-for-a-given-id-N116AC__ul_mqf_lk4_3y">
+                        <li class="li">
+                            <p class="p">IDEA</p>
+                        </li>
+                        <li class="li">
+                            <p class="p">ISSUE</p>
+                        </li>
+                        <li class="li">
+                            <p class="p">FILE</p>
+                        </li>
+                        <li class="li">
+                            <p class="p">BOOKMARKLIST</p>
+                        </li>
+                        <li class="li">
+                            <p class="p">GROUP</p>
+                        </li>
+                        <li class="li">
+                            <p class="p">DISCUSSIONMESSAGE</p>
+                        </li>
+                        <li class="li">
+                            <p class="p">PERSON</p>
+                        </li>
+                        <li class="li">
+                            <p class="p">OFFERING</p>
+                        </li>
+                        <li class="li">
+                            <p class="p">CERTIFICATION</p>
+                        </li>
+                        <li class="li">
+                            <p class="p">COURSE</p>
+                        </li>
+                        <li class="li">
+                            <p class="p">CURRICULUM</p>
+                        </li>
+                        <li class="li">
+                            <p class="p">SUBSCRIPTION</p>
+                        </li>
+                        <li class="li">
+                            <p class="p">JOBREQUISITION</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </article>
+</article></main></body></html>

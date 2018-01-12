@@ -1,0 +1,89 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2018">
+  <meta name="DC.rights.owner" content="(C) Copyright 2018">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.subject" content="people, restful web services">
+  <meta name="keywords" content="people, restful web services">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-people.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e656">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+  <title>Getting started with the People web services</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <style>table tbody tr td { padding-left:10px; }table thead tr th {padding-left:10px;}table {border:1px solid #c1baba; width:100%;}section { padding-top:10px;}section p { margin:0px;}table thead {border-bottom: 2px solid #c1baba}</style>
+ </head>
+ <body>
+  <h4 class="title topictitle2" id="ariaid-title4">Searching People data</h4>
+  <div class="body"> 
+   <p class="p">The following URLs allow searching for people data using the <strong class="ph b">GET</strong> method:</p> 
+   <p class="p">https://<span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>/v1/people?type=internal</p> 
+   <p class="p">https://<span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>/v1/people?type=external</p> 
+   <div class="p">
+    The default fields that this URL returns are fname, lname, id, href. 
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> You can use the Id that this REST web service returns as an input parameter for all the other People REST web service that require it.
+    </div>
+   </div> 
+   <p class="p">You can indicate the additional fields to be returned using the <strong class="ph b">f</strong> parameter and the search conditions using the <strong class="ph b">q</strong> parameter as:</p> 
+   <div class="p">
+    q=(param1=value,param2=value) 
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> This REST web service will not return data for those fields that are not visible attributes to the logged in user which means access to those fields is restricted by access control configurations. 
+    </div>
+   </div> 
+   <p class="p">The value in the <strong class="ph b">q</strong> parameter needs to be encoded.</p> 
+   <div class="p"> 
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> The following comparison operators are supported in the 
+     <strong class="ph b">q</strong> parameter: 
+     <ul class="ul" id="topic_egq_zmv_z4__ul_ngq_zmv_z4"> 
+      <li class="li">==(equals)</li> 
+      <li class="li">!=(not equals)</li> 
+      <li class="li">=lt=(less than)</li> 
+      <li class="li">=gt=(greater than)</li> 
+      <li class="li">=le=(less equal)</li> 
+      <li class="li">=ge=(greater equal)</li> 
+     </ul>
+    </div> 
+   </div> 
+   <div class="p">
+    In addition to the fields that you can mention in the 
+    <strong class="ph b">f</strong> parameter. This URL also supports the following optional fields:
+    <ul class="ul" id="topic_egq_zmv_z4__ul_sgq_zmv_z4"> 
+     <li class="li"><strong class="ph b">count:</strong> The number of records returned. Default is 10.</li> 
+     <li class="li"><strong class="ph b">startPage:</strong> The page at which to start, if there are more than <span class="keyword parmname">&lt;count&gt;</span> number of records. Default is 1.</li> 
+     <li class="li"><strong class="ph b">sort_asc</strong> or <strong class="ph b">sort_desc:</strong> Defines sorting of the results. Either one should be passed in.</li> 
+    </ul>
+   </div> 
+   <div class="p"> 
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> Refer to 
+     <a class="xref" href="#topic_lzm_zmv_z4">Attributes for the People end point</a> for attributes that can be used to form the search conditions using the 
+     <strong class="ph b">q</strong> parameter. The 
+     <strong class="ph b">isSearchFilter=true</strong> indicates that this attribute can be used to the 
+     <strong class="ph b">q</strong> parameter.
+     <p class="p">Attributes of type reference or component are not supported as searchable fields.</p>
+    </div> 
+   </div> 
+   <p class="p"><strong class="ph b">For example:</strong></p> 
+   <p class="p">The following URL returns all those attributes which are mentioned in <strong class="ph b">f</strong> bracket for the conditions mentioned using the q parameter. </p> 
+   <p class="p">https://<span class="keyword parmname">&lt;hostname-api.sabacloud.com&gt;</span>//v1/people/searchQuery?type=internal&amp;f=(username,city,state)&amp; q=(is_manager=true) </p> 
+   <div class="p"> 
+    <div class="note note note_note">
+     <span class="note__title">Note:</span> The results returned meet all the specified conditions passed in the 
+     <strong class="ph b">q</strong> parameter. All the conditions are AND-ed together. 
+    </div> 
+   </div> 
+  </div>
+ </body>
+</html>

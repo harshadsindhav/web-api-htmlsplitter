@@ -1,0 +1,1099 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="copyright" content="(C) Copyright 2017">
+  <meta name="DC.rights.owner" content="(C) Copyright 2017">
+  <meta name="DC.Type" content="topic">
+  <meta name="DC.Coverage" content="DRAFT">
+  <meta name="DC.Relation" scheme="URI" content="../developer/part-restwebservices.html">
+  <meta name="prodname" content="REST API Reference">
+  <meta name="version" content="">
+  <meta name="release" content="">
+  <meta name="modification" content="">
+  <meta name="DC.Creator" content="">
+  <meta name="DC.Format" content="XHTML">
+  <meta name="DC.Identifier" content="d0e430">
+  <link rel="stylesheet" type="text/css" href="../commonltr.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <link href="./../../../styles.css" rel="stylesheet">
+    <style>
+	table {
+		line-height:28px;
+	}
+
+	h5 {
+		font-weight : bold;
+		color : darkcyan;
+		letter-spacing: 1px;
+	}
+	article .topic {
+		margin-top:20px;
+	}
+	tr th {
+		padding-left:10px;
+	}
+	tr td {
+		padding-left:10px;
+	}
+	table {
+		margin-bottom:20px;
+	}
+
+  </style>
+  <title>Introduction</title>
+</head>
+
+<body id="d0e430">
+  <main role="main">
+    <article role="article" aria-labelledby="ariaid-title1">
+<article class="topic nested1" aria-labelledby="ariaid-title10" id="topic_k4y_wt4_cq">
+        <h4 class="title topictitle2" id="ariaid-title10">Some Quick Info</h4>
+        <article class="topic nested2" aria-labelledby="ariaid-title11" id="topic_qjc_4yv_cn">
+          <h5 class="title topictitle3" id="ariaid-title11">Status Codes</h5>
+          <div class="body">
+            <div class="p">The following are the status codes that the REST web services listed in this document return.
+              <table id="topic_qjc_4yv_cn__table_shx_rvw_rh">
+                <caption>
+                  <span class="table--title-label">Table 1. </span>
+                  <span class="title">Status Codes</span>
+                </caption>
+                <colgroup>
+                  <col style="width:26%">
+                  <col style="width:74%">
+                </colgroup>
+                <thead class="thead">
+                  <tr>
+                    <th class="entry colsep-1 rowsep-1" id="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__1">Status Code</th>
+                    <th class="entry colsep-1 rowsep-1" id="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__2">Description</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody">
+                  <tr>
+                    <td class="entry colsep-1 rowsep-1" headers="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__1 ">
+                      <p class="p">200</p>
+                    </td>
+                    <td class="entry colsep-1 rowsep-1" headers="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__2 ">
+                      <p class="p">
+                        <strong class="ph b">OK</strong> - The request has succeeded.&nbsp; </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="entry colsep-1 rowsep-1" headers="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__1 ">201</td>
+                    <td class="entry colsep-1 rowsep-1" headers="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__2 ">
+                      <strong class="ph b">Created</strong> - The request has been fulfilled and resulted in a new resource being created. </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__1 ">204</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__2 ">
+                      <strong class="ph b">No Content</strong> - The server has fulfilled the request but does not need to return an entity-body.</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__1 ">401</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__2 ">
+                      <strong class="ph b">Unauthorized</strong> - The request requires user authentication.&nbsp; </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__1 ">403</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__2 ">
+                      <strong class="ph b">Forbidden</strong> - The server understood the request, but is refusing to fulfill it.&nbsp; </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__1 ">500</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_qjc_4yv_cn__table_shx_rvw_rh__entry__2 ">
+                      <strong class="ph b">Internal Server Error</strong> - The server encountered an unexpected condition which prevented it
+                      from fulfilling the request. </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="note note note_note">
+                <span class="note__title">Note:</span> For any REST web service that uses the
+                <strong class="ph b">PUT</strong> method, you can pass an additional GET param
+                <strong class="ph b">?return_body=true</strong> when invoking it to force that REST web service to return the content. For example:
+                <pre class="pre codeblock"><code>https://<var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/course/:courseid<strong class="ph b">?return_body=true</strong></code></pre>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title12" id="topic_tqy_xt4_cq">
+          <h5 class="title topictitle3" id="ariaid-title12">Search REST APIs</h5>
+          <div class="body">
+            <p class="p">
+              <strong class="ph b">Date fields</strong>
+            </p>
+            <p class="p">For the Search REST API calls, if you're searching data using the date fields, ensure that you use
+              <strong class="ph b">yyyy-mm-dd</strong> as the date format.</p>
+            <p class="p">
+              <strong class="ph b">Using multiple search criteria</strong>
+            </p>
+            <p class="p">You can search using multiple search criteria by seperating each criteria using a comma.
+            </p>
+            <div class="p">For example:
+              <pre class="pre codeblock"><code>https://&lt;hostname-api.sabacloud.com&gt;/v1/enrollment
+	 ?q=(student_id%3D%3Demplo000000000001001,status%3D%3D101)&amp;includeDetails=TRUE  </code></pre>
+              <strong class="ph b">Include Details
+              </strong>
+            </div>
+            <p class="p">You can use the
+              <strong class="ph b">includeDetails</strong> flag to get records with all the fields. This way you no longer need to call the REST
+              APIs for getting details for specific objects. </p>
+            <div class="p">For example:
+              <pre class="pre codeblock"><code>https://&lt;hostname-api.sabacloud.com&gt;/v1/people/emplo000000000007651/transcripts
+               /search?q=(offering_temp_id%3D%3DCourse100002)&amp;<strong class="ph b">includeDetails</strong>=true</code></pre>
+            </div>
+            <p class="p">
+              <strong class="ph b">Fields not supported</strong>
+            </p>
+            <div class="p">The Search APIs do not support searching using the following fields in the
+              <strong class="ph b">searchFields</strong> attribute:
+              <ul class="ul" id="topic_tqy_xt4_cq__ul_ory_xt4_cq">
+                <li class="li">Timezone
+                  <table class="table" id="topic_tqy_xt4_cq__table_gsy_xt4_cq">
+                    <caption></caption>
+                    <colgroup>
+                      <col>
+                    </colgroup>
+                    <tbody class="tbody">
+                      <tr class="">
+                        <td class="entry">name</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li class="li">Competency
+                  <table class="table" id="topic_tqy_xt4_cq__table_h4q_vwz_kq">
+                    <caption></caption>
+                    <colgroup>
+                      <col>
+                    </colgroup>
+                    <tbody class="tbody">
+                      <tr class="">
+                        <td class="entry">Job Role&nbsp;</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Skill Group&nbsp;</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Exclude skill</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li class="li">All components
+                  <table class="table" id="topic_tqy_xt4_cq__table_lsy_xt4_cq">
+                    <caption></caption>
+                    <colgroup>
+                      <col>
+                    </colgroup>
+                    <tbody class="tbody">
+                      <tr class="">
+                        <td class="entry">CreatedOn</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">CreatedBy</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">UpdatedOn</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">UpdatedBy</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li class="li">Course
+                  <table class="table" id="topic_tqy_xt4_cq__table_psy_xt4_cq">
+                    <caption></caption>
+                    <colgroup>
+                      <col>
+                    </colgroup>
+                    <tbody class="tbody">
+                      <tr class="">
+                        <td class="entry">Only show courses with no skills assigned&nbsp;: is_competency
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Price&nbsp;: amount</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Skill Name</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li class="li">Offering-Blended
+                  <table class="table" id="topic_tqy_xt4_cq__table_ssy_xt4_cq">
+                    <caption></caption>
+                    <colgroup>
+                      <col>
+                    </colgroup>
+                    <tbody class="tbody">
+                      <tr class="">
+                        <td class="entry">Audience Type/Sub Type&nbsp;</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Owner</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">hide_discontinued_offerings</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Program</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Session Template&nbsp;</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Price</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li class="li">Web-based
+                  <table class="table" id="topic_tqy_xt4_cq__table_wsy_xt4_cq">
+                    <caption></caption>
+                    <colgroup>
+                      <col>
+                    </colgroup>
+                    <tbody class="tbody">
+                      <tr class="">
+                        <td class="entry">Price : amount</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Comments File&nbsp;: comments_file</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Lesson File&nbsp;: lesson_file</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Mastery Score&nbsp;: mastery_score</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Max Download Count&nbsp;: max_downloads</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Maximum Time Allowed&nbsp;: max_time_allowed</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">WBT Server Path&nbsp;: server_path</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Time Limit Action&nbsp;: time_limit_action</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Time Limit Action Flag&nbsp;: time_limit_action_flag
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Total Attempts Allowed : total_attempts_allowed
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">URL&nbsp;: url</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">Vendor File : vendor_file</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">owner: gov_owner</td>
+                      </tr>
+                      <tr class="">
+                        <td class="entry">hide_discontinued_offerings</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title13" id="topic_y4y_xt4_cq">
+          <h5 class="title topictitle3" id="ariaid-title13">Special Characters</h5>
+          <div class="body">
+            <p class="p">REST APIs will not return data with , and ; or any other special characters in their names or class IDs. Some
+              Web bsers do not support special characters. Special characters need to encoded before passing as a q param
+              value.</p>
+          </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title14" id="topic_qjv_vby_v5">
+          <h5 class="title topictitle3" id="ariaid-title14">Encoding space for the criteria parameter value</h5>
+          <div class="body">
+            <p class="p">Space need to encoded before passing as a param value using %20. For example: 25
+              <strong class="ph b">%20</strong>Cert instead of 25 Cert.</p>
+          </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title15" id="topic_fny_xt4_cq">
+          <h5 class="title topictitle3" id="ariaid-title15">POST methods - Duplicate records</h5>
+          <div class="body">
+            <p class="p">For components where instead of name _no is the unique key&nbsp;[For example: loc_no for Location, Facility_no
+              for Facility], in such cases REST APIs will create multiple records, if you use the same INPUT JSON (Request
+              Body) for multiple REST calls.</p>
+          </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title16" id="topic_ryt_1hy_1q">
+          <h5 class="title topictitle3" id="ariaid-title16">Using Lookup fields</h5>
+          <div class="body">
+            <p class="p">You can use lookup fields for all the components. The lookup feature allows using a more user friendly name instead
+              of internal IDs.&nbsp;</p>
+            <div class="p">Lookup is made up of two components: A lookup field name and a lookup field value. For example, while creating
+              a location, securityDomain in the input JSON can be given as:
+              <pre class="pre codeblock"><code>"securityDomain":
+{
+	"displayName": "Common"
+}</code></pre>Here, the lookup field name is "displayName" and the lookup field value is "Common", which is the name of the
+              domain.</div>
+            <p class="p">
+              <strong class="ph b">Example:</strong>
+            </p>
+            <p class="p">The following example shows how lookup can be used to assign security roles to a person. </p>
+            <p class="p">
+              <strong class="ph b">Method:</strong> PUT </p>
+            <p class="p">
+              <strong class="ph b">URL:</strong>
+              http://
+              <var class="keyword varname">&lt;hostname-api.sabacloud.com&gt;</var>/v1/people/emplo000000000001022 </p>
+            <p class="p">
+              <strong class="ph b">Request Body:</strong>
+            </p>
+            <div class="p">
+              <pre class="pre codeblock"><code>{
+   "securityRoles":[
+      {
+         "name":"External Person Basic Privileges",
+         "securityDomain":{
+            "displayName":"common"
+         }
+      },
+      {
+         "name":"Common Privileges in world domain",
+         "securityDomain":{
+            "displayName":"world"
+         }
+      }
+   ],
+   "id":"emplo000000000001022"
+}</code></pre>
+            </div>
+            <p class="p">Here, both i.e. the security role and the security domain are identified by their names. </p>
+            <p class="p">These lookup fields are defined and implemented for all the components.</p>
+            <p class="p">The following table lists the components that support lookup fields:</p>
+            <div class="p">
+              <table class="table frame-all" id="topic_ryt_1hy_1q__table_hly_xt4_cq">
+                <caption>
+                  <span class="table--title-label">Table 2. </span>
+                  <span class="title">Lookup fields</span>
+                  <span class="desc tabledesc">Lookup fields</span>
+                </caption>
+                <colgroup>
+                  <col style="width:100%">
+                </colgroup>
+                <thead class="thead">
+                  <tr class=" sep-1">
+                    <th class="entry colsep-1 sep-1" id="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1">Component</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody">
+                  <tr class=" sep-1">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">Currency
+                      <div class="note note note_note">
+                        <span class="note__title">Note:</span> Lookup values examples:
+                        <ul class="ul" id="topic_ryt_1hy_1q__ul_hxx_d3z_kq">
+                          <li class="li">For currency - US Dollars, the lookup value is : USD </li>
+                          <li class="li">For currency - Currency1, the lookup value is : CY1 </li>
+                          <li class="li">For currency - Currency2, the lookup value is : CY2 </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">TimeZone</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">Domain</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">Locale
+                      <div class="note note note_note">
+                        <span class="note__title">Note:</span> Lookup values examples:
+                        <ul class="ul" id="topic_ryt_1hy_1q__ul_c1p_b3z_kq">
+                          <li class="li">For English locale, the lookup value is: en_US </li>
+                          <li class="li">For Deutsch (German) locale, the lookup value is: de_DE </li>
+                          <li class="li">For Français (French) locale, the lookup value is : fr_FR </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">Facility</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">Location</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">JobType</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">JobFamily</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">Role</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">Competency</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">Organization -Internal </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">Organization -External </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">AudienceType </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">Course</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">Certification</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">Curriculum </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">PurchaseOrder </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">TrainingUnit </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">TrainingUnitAgreement </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_hly_xt4_cq__entry__1 ">ContentFolder </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="p">The following table lists the components and the lookup fields for those components:</p>
+            <table class="table frame-all" id="topic_ryt_1hy_1q__table_rly_xt4_cq">
+              <caption>
+                <span class="table--title-label">Table 3. </span>
+                <span class="title">Lookup fields</span>
+                <span class="desc tabledesc">Lookup fields</span>
+              </caption>
+              <colgroup>
+                <col style="width:33.33333333333333%">
+                <col style="width:33.33333333333333%">
+                <col style="width:33.33333333333333%">
+                <col>
+                <col>
+              </colgroup>
+              <thead class="thead">
+                <tr class=" sep-1">
+                  <th class="entry colsep-1 sep-1" id="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1">Component</th>
+                  <th class="entry colsep-1 sep-1" id="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2" colspan="2">Fields mapped for lookup
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="tbody">
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">AudienceType </td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Attachments</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">location</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class=" sep-1">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Currency
+                    <div class="note note note_note">
+                      <span class="note__title">Note:</span> Lookup value examples:
+                      <ul class="ul" id="topic_ryt_1hy_1q__ul_hzw_hzb_1r">
+                        <li class="li">For currency - US Dollars, the lookup value is : USD
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">iso_code</td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">CEPlan</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Checklist</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">CompetencyGroup</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">CompetencyLevel</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Competency Evidence</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">description</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Categories</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Certification</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Curriculum </td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">ContentFolder </td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Course</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">course_no</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">title</td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Competency</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Domain</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Enrollments</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">reg_no</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Facility</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">facility_no</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">JobType</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">JobFamily</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Locale
+                    <div class="note note note_note">
+                      <span class="note__title">Note:</span> Lookup value examples:
+                      <ul class="ul" id="topic_ryt_1hy_1q__ul_oqn_hzb_1r">
+                        <li class="li">For English locale, the lookup value is: en_US </li>
+                        <li class="li">For Deutsch (German) locale, the lookup value is: de_DE </li>
+                        <li class="li">For Français (French) locale, the lookup value is : fr_FR </li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Location</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">loc_no</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">loc_name</td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Language</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">language_id</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Offering</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">wbt_no/class_no</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Organization -External </td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">number</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Organization -Internal </td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">number</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Person</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">username</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">PurchaseOrder </td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">po_no</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">external_po_no</td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Role</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">TimeZone</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">TrainingUnitAgreement </td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">agreement_no</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">TrainingUnit </td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">name</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+                <tr class="">
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__1 ">Transcripts</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 ">action_no</td>
+                  <td class="entry colsep-1 sep-1" headers="topic_ryt_1hy_1q__table_rly_xt4_cq__entry__2 "></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <article class="topic nested3" aria-labelledby="ariaid-title17" id="topic_rgp_dr1_vq">
+            <h4 class="title topictitle4" id="ariaid-title17">REST APIs that do not support Lookup fields</h4>
+            <div class="body">
+              <div class="p">The following REST APIs do not support using Lookup fields:
+                <ul class="ul" id="topic_rgp_dr1_vq__ul_hvv_hr1_vq">
+                  <li class="li">
+                    <a class="xref" href="restwebservices-cif-ContentInventory%20.html#reference_orc_npx_fp">PUBLISH CONTENT</a>
+                  </li>
+                  <li class="li">
+                    <a class="xref" href="restwebservices-foundation-Attachment.html#reference_n5w_5lx_fp">CREATE A NEW ATTACHMENT (FILE)</a>
+                  </li>
+                  <li class="li">
+                    <a class="xref" href="restwebservices-foundation-Attachment.html#reference_asw_5lx_fp">CREATE A NEW ATTACHMENT (URL)</a>
+                  </li>
+                  <li class="li">
+                    <a class="xref" href="restwebservices-foundation-Attachment.html#reference_ipw_5lx_fp">UPDATE AN ATTACHMENT</a>
+                  </li>
+                  <li class="li">
+                    <a class="xref" href="restwebservices-learning-Offering.html#reference_ab1_qnx_fp">CREATE A NEW BLENDED OFFERING</a>
+                  </li>
+                  <li class="li">
+                    <a class="xref" href="restwebservices-learning-Offering.html#reference_t3z_pnx_fp">CREATE A NEW ILT OFFERING</a>
+                  </li>
+                  <li class="li">
+                    <a class="xref" href="restwebservices-learning-Offering.html#reference_gry_pnx_fp">CREATE A NEW VIRTUAL CLASS OFFERING</a>
+                  </li>
+                  <li class="li">
+                    <a class="xref" href="restwebservices-learning-Offering.html#reference_jby_pnx_fp">CREATE A NEW WBT OFFERING</a>
+                  </li>
+                  <li class="li">
+                    <a class="xref" href="restwebservices-learning-Transcript.html#reference_r45_xnx_fp">CREATE A NEW TRANSCRIPT</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title18" id="topic_qt3_jhx_qr">
+          <h5 class="title topictitle3" id="ariaid-title18">Retrieving additional details using Field Selectors</h5>
+          <div class="body">
+            <p class="p">Most of the GET REST APIs have a standard output. For example, a GET call to retrieve the details of a particular
+              employee ( https://&lt;hostname&gt;/v1/people/emplo000000000049029) returns the company details via the company_id
+              object as an ID and displayName. </p>
+            <p class="p">You can use Field Selectors to specify additional fields that you want the GET call to retrive. </p>
+            <p class="p">
+              <strong class="ph b">URL:</strong>
+            </p>
+            <div class="p">
+              <pre class="pre codeblock"><code>https://&lt;hostname&gt;/v1/people/emplo000000000049029:(company_id<strong class="ph b">(addr1+name+state+country
+                   +description+number)</strong>, username, fname, lname, jobtype_id<strong class="ph b">(name
+                   +description+is_critical+status+family_id)</strong>)</code></pre>
+            </div>
+            <div class="p">This URL uses Field Selectors to select the following addtional fields for company_id:
+              <ul class="ul" id="topic_qt3_jhx_qr__ul_dq3_dmx_qr">
+                <li class="li">addr1</li>
+                <li class="li">name</li>
+                <li class="li">state</li>
+                <li class="li">country</li>
+                <li class="li">description</li>
+                <li class="li">number</li>
+              </ul>
+            </div>
+            <p class="p">Similarly, additional fields are selected for
+              <strong class="ph b">jobtype_id</strong>.</p>
+            <div class="p">Provide the Inner fields for an outer field within
+              <strong class="ph b">()</strong> braces. Use
+              <strong class="ph b">+</strong>
+              to separate the inner fields
+              <strong class="ph b">(addr1+name+state+country+description+number)</strong>.
+              <div class="note note note_note">
+                <span class="note__title">Note:</span> For the inner fields, if the outer and the inner attributes are of the same type, the inner
+                attribute fields will be considered for both the outer as well as the inner fields.</div>
+            </div>
+            <p class="p">
+              <strong class="ph b">Output JSON:</strong>
+            </p>
+            <div class="p">
+              <pre class="pre codeblock"><code>{
+   "company_id":{
+      "addr1":"",
+      "description":null,
+      "name":"Benefits",
+      "state":"",
+      "number":"2506.77",
+      "country":"",
+      "id":"bisut000000000001577"
+   },
+   "jobtype_id":null,
+   "fname":"rajal",
+   "lname":"bhammar",
+   "username":"RBHAMMAR",
+   "id":"emplo000000000049029"
+}</code></pre>
+            </div>
+            <div class="p">The Output JSON contains company_id, username, fname, lname, jobtype_id fields of the person/profile object.
+              Using Field Selectors inner fields of the company_id and jobtype_id objects are also part of this output.
+              <div
+                class="note note note_note">
+                <span class="note__title">Note:</span> Field Selectors is only supported for those objects that have id and displayName fields. To
+                find out which objects have id and displayName fields, make a GET call.
+                <p class="p">
+                  <strong class="ph b">For example:</strong>
+                </p>
+                <div class="p">
+                  <pre class="pre codeblock"><code>{
+   "is_manager":true,
+   "terminated_on":null,
+   "city":"",
+   "zip":"",
+   "location":"Mumbai",
+   "<strong class="ph b">home_company_id</strong>":{
+      "<strong class="ph b">id</strong>":"bisut000000000001000",
+      "<strong class="ph b">displayName</strong>":"Corporate Operations"
+   }
+}</code></pre>
+                </div>In this case,
+                <ul class="ul" id="topic_qt3_jhx_qr__ul_tjg_pnx_qr">
+                  <li class="li">
+                    <strong class="ph b">home_company_id</strong> is an object with id and displayName fields and hence supports Field Selectors.</li>
+                  <li class="li">
+                    <strong class="ph b">location</strong> is used as a string field and hence does not support Field Selectors.</li>
+                </ul>
+            </div>
+            <u class="ph u">Field Selectors is not supported on the Attachment, Enrollment, Class and LearningEvent components.</u>
+          </div>
+          </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title19" id="topic_wmx_kk1_lt">
+          <h5 class="title topictitle3" id="ariaid-title19">Restricting the number of records returned by a REST API</h5>
+          <div class="body">
+            <div class="p">Too many records returned by the Search REST APIs results in multiple REST API calls and frequent timeouts. To
+              improve the performance of the REST APIs, you can set a limit on the number of records the Search REST APIs
+              return.
+              <div class="note note note_note">
+                <span class="note__title">Note:</span>
+                <p class="p">To enable this feature and configure the limit, submit a support request. For assistance, contact Saba support.
+                  </p>
+              </div>By default this feature is disabled. It can be enabled for a site by setting
+              <strong class="ph b">Allow search REST call result limit</strong> to true under under
+              <strong class="ph b">System</strong> &gt;
+              <strong class="ph b">Sites</strong> &gt;
+              <strong class="ph b">
+                <em class="ph i">&lt;Sitename&gt;</em>
+              </strong> &gt;
+              <strong class="ph b">Web Variables
+              </strong>.</div>
+            <p class="p">This limit is configurable on a per site basis.&nbsp;The following site level properties are available under
+              <strong class="ph b">System</strong> &gt;
+              <strong class="ph b">Sites</strong> &gt;
+              <strong class="ph b">
+                <em class="ph i">&lt;Sitename&gt;</em>
+              </strong> &gt;
+              <strong class="ph b">Web Variables</strong> that allow configuring the record limits for the Search REST APIs: </p>
+            <ul class="ul" id="topic_wmx_kk1_lt__ul_t11_lh1_lt">
+              <li class="li">Search REST call records limit
+                <div class="note note note_note">
+                  <span class="note__title">Note:</span> The default value is 50000. If you set this to zero or a negative value, the default value
+                  is considered.
+                </div>
+              </li>
+              <li class="li">Search REST call with details records limit
+                <div class="note note note_note">
+                  <span class="note__title">Note:</span> The default value is 10000. If you set this to zero or a negative value, the default value
+                  is considered. </div>
+              </li>
+            </ul>
+            <p class="p">The behavior of the Search REST APIs remains the same when the resulted records size is less than the provided
+              default value.</p>
+            <p class="p">When the
+              <strong class="ph b">count</strong> parameter (passed to the REST API) is greater than the limit set on the number of records,
+              <strong
+                class="ph b">itemsPerPage</strong> in the REST call response will based on the limit otherwise on the
+                <strong class="ph b">count</strong>. </p>
+            <p class="p">If the resulted record size is greater than the default size limit and the
+              <strong class="ph b">startPage</strong> (passed to the REST API) is greater than the maximum page number of the specified record
+              limit, the Search REST API returns records of the maximum page number based on the specified record limit.
+              For example:</p>
+            <div class="p">
+              <table class="table frame-all" id="topic_wmx_kk1_lt__table_tfn_5cp_ls">
+                <caption>
+                  <span class="table--title-label">Table 4. </span>
+                  <span class="title">Scenario - Calls to Search REST API </span>
+                  <span class="desc tabledesc">Scenario - Calls to Search REST API</span>
+                </caption>
+                <colgroup>
+                  <col style="width:19.12568306010929%">
+                  <col style="width:44.44444444444444%">
+                  <col style="width:18.21493624772313%">
+                  <col style="width:18.21493624772313%">
+                </colgroup>
+                <thead class="thead">
+                  <tr class=" sep-1">
+                    <th class="entry colsep-1 sep-1" id="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__1">Scenario</th>
+                    <th class="entry colsep-1 sep-1" id="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__2">Record Limit/Count</th>
+                    <th class="entry colsep-1 sep-1" id="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__3">Requested Page</th>
+                    <th class="entry colsep-1 sep-1" id="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4">Expected Result</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody">
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__1 topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">
+                      <p class="p">includeDetails - false</p>
+                    </td>
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">
+                      <p class="p">5000/50 (
+                        <strong class="ph b">100</strong> max page) </p>
+                    </td>
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__2 topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">
+                      <p class="p">51 </p>
+                    </td>
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__3 topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">
+                      <p class="p">Returns 50 records from page
+                        <strong class="ph b">51</strong>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__1 topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">includeDetails - false</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">5000/50 (
+                      <strong class="ph b">100</strong> max page) </td>
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__2 topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">101</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__3 topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">Returns 50 records from page
+                      <strong class="ph b">100</strong>
+                    </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__1 topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">includeDetails - true</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">1000/10 (
+                      <strong class="ph b">100</strong> max page) </td>
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__2 topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">51</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__3 topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">Returns 10 records from page
+                      <strong class="ph b">51</strong>
+                    </td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__1 topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">includeDetails - true</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">1000/10 (
+                      <strong class="ph b">100</strong> max page) </td>
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__2 topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">101</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__3 topic_wmx_kk1_lt__table_tfn_5cp_ls__entry__4 ">Returns 10 records from page
+                      <strong class="ph b">100</strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title20" id="topic_ob1_v2r_yq">
+          <h5 class="title topictitle3" id="ariaid-title20">Deprecated URLs</h5>
+          <div class="body">
+            <div class="p">The following URLs are deprecated and will be discontinued in the next few updates. Hence it is advisable to
+              use the new URL.
+              <table class="table frame-all" id="topic_ob1_v2r_yq__table_qzm_tfr_yq">
+                <caption>
+                  <span class="table--title-label">Table 5. </span>
+                  <span class="title">Deprecated / New URLs </span>
+                </caption>
+                <colgroup>
+                  <col style="width:50%">
+                  <col style="width:50%">
+                  <col>
+                </colgroup>
+                <thead class="thead">
+                  <tr class=" sep-1">
+                    <th class="entry colsep-1 sep-1" id="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1">Deprecated URL </th>
+                    <th class="entry colsep-1 sep-1" id="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2">New URL </th>
+                    <th class="entry colsep-1 sep-1" id="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3">Operations</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody">
+                  <tr class=" sep-0">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">
+                      <p class="p">https://&lt;hostname-api.sabacloud.com&gt;/
+                        <strong class="ph b">Saba/api/platform</strong>/attachments/attachment/:id/detail</p>
+                    </td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">
+                      <p class="p">https://&lt;hostname-api.sabacloud.com&gt;/
+                        <strong class="ph b">v1</strong>/attachments/attachment/:id/detail</p>
+                    </td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">GET</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">Saba/api/platform</strong>/attachments?ownerId=:ownerId</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">v1</strong>/attachments?ownerId=:ownerId</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">GET</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">Saba/api/platform</strong>/attachments</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">v1</strong>/attachments</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">POST</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">Saba/api/platform</strong>/attachments/:id</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">v1</strong>/attachments/:id</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">PUT</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">Saba/api/learning</strong>/offering/:offeringId</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">v1</strong>/offering/:offeringId</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">GET, PUT</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">Saba/api/learning</strong>/offering/</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">v1</strong>/offering/</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">POST</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">Saba/api/learning</strong>/transcript/:transcriptId</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">v1</strong>/transcript/:transcriptId</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">GET, PUT</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">Saba/api/learning</strong>/transcript/</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">v1</strong>/transcript/</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">POST</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">Saba/api/content</strong>/contentinventory/contentimport</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">v1</strong>/contentinventory/contentimport</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">POST</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">Saba/api/content</strong>/coreservice/version/</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">v1</strong>/coreservice/version/</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">GET</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">Saba/api/content</strong>/coreservice/sites/</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">v1</strong>/coreservice/sites/</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">GET</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">Saba/api/content</strong>/coreservice/certificate/</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">v1</strong>/coreservice/certificate/</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">GET</td>
+                  </tr>
+                  <tr class="">
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__1 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">Saba/api/component</strong>/people/meta/privileges?type=internal&amp;domain=:domainId</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__2 ">https://&lt;hostname-api.sabacloud.com&gt;/
+                      <strong class="ph b">v1</strong>/people/meta/privileges?type=internal&amp;domain=:domainId</td>
+                    <td class="entry colsep-1 sep-1" headers="topic_ob1_v2r_yq__table_qzm_tfr_yq__entry__3 ">GET</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+        <article class="topic nested2" aria-labelledby="ariaid-title21" id="topic_x5y_s2n_pw">
+          <h5 class="title topictitle3" id="ariaid-title21">Field length of the data fields</h5>
+          <div class="body">
+            <div class="p">You can find out the field length/size of the data fields returned by the REST APIs by looking at the attributes
+              listing under
+              <strong class="ph b">System &gt; Configure System &gt; Services &gt;
+                <em class="ph i">&lt;Service Name&gt;</em> &gt; Components &gt;
+                <em class="ph i">&lt;Component Name&gt;</em> &gt; Attributes tab on main</strong>.
+              <div class="note note note_note">
+                <span class="note__title">Note:</span> Length is available for only those attributes whose type is 'String'.</div>
+              <figure class="fig fignone">
+                <figcaption>
+                  <span class="fig--title-label">Figure 1. </span>Details of a field</figcaption>
+
+                <br>
+                <div class="imageleft">
+                  <img class="image imageleft" id="topic_x5y_s2n_pw__image_mgb_g4k_hw" longdesc="" src="images/fieldetails.png"
+                    width="600" alt="Details of a field">
+                </div>
+                <br>
+              </figure>
+            </div>
+            <div class="p">Alternatively, even the meta APIs return some information related to size:
+              <pre class="pre codeblock"><code>{
+      "name": "addr1",
+      "displayName": "Address 1",
+      "description": "First line of the address for the person",
+      "isRequired": false,
+      "isAutoGenerated": false,
+      "type": "string",
+      "isReference": false,
+      "isProtected": false,
+      "display": true,
+<strong class="ph b">     "length": 400,</strong>
+	  "maximumLength": 400,
+      "isSearchFilter": true
+}</code></pre>
+            </div>
+          </div>
+        </article>
+      </article>
+    </article>
+  </main>
+</body>
+
+</html>
